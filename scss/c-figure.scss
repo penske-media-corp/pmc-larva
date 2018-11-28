@@ -1,0 +1,14 @@
+// Figure
+//
+// v1.0
+//
+// This pattern should be applied to containers of `img` elements that use the .u-crop
+// pattern. It will assume the width of it's parent. Any layout styles should be applied 
+// to the parent element.
+//
+// Style guide: Components.Figure
+
+.pmc-c-figure {
+	width: 100%;
+	display: block;
+}

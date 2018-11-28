@@ -1,0 +1,15 @@
+@import '../../../scss/setup.scss';
+
+[data-tabs] [data-tabs-panel] {
+	transition-property: opacity;
+	transition-duration: 600ms;
+	transition-timing-function: ease-in-out;
+}
+
+[data-tabs] [data-tabs-panel]:not(.is-active) {
+	display: none;
+}
+
+[data-tabs].is-changing [data-tabs-panel] {
+	opacity: 0.4;
+}

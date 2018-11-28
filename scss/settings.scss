@@ -1,0 +1,39 @@
+
+// Colors
+$pmc-color-black: #000000;
+$pmc-color-white: #FFFFFF;
+$pmc-color-grey-medium: #999999;
+
+// Font Variables
+$pmc-font-family-sans-serif-basic: 'Helvetica', sans-serif;
+
+// Font Weights
+$pmc-font-weight-normal: 400;
+$pmc-font-weight-strong: 700;
+
+// Screen sizes
+$pmc-screen-l-min: 1024px;
+$pmc-screen-m-min: 801px; 
+$pmc-screen-s-min: 415px;
+$pmc-screen-xs-max: 414px;
+
+// Easing
+//
+// Material design easing values.
+//
+// $ease-out-cubic - Used in $transition-transform.
+// $ease-in-out-cubic - Used in $transition-button.
+// $ease-standard-curve - ease-in-out, elements quickly accelerate and slowly decelerate between on-screen locations. It applies to growing and shrinking material, among other property changes.
+// $ease-deceleration-curve - ease-out, used by elements entering the screen at full velocity and slowly decelerate to a resting point
+// $ease-acceleration-curve - ease-in, used by elements leaving the screen at full velocity. They do not decelerate when off-screen
+// $ease-sharp-curve - ease-in-out, used by exiting elements that may return to the screen at any time
+//
+// Style guide: Settings.Decor.Easing
+
+$ease-out-cubic:          cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+$ease-in-out-cubic:       cubic-bezier( 0.645, 0.045, 0.355, 1.000 );
+$ease-standard-curve:     cubic-bezier( 0.4, 0.0, 0.2, 1 );
+$ease-deceleration-curve: cubic-bezier( 0.0, 0.0, 0.2, 1 );
+$ease-acceleration-curve: cubic-bezier( 0.4, 0.0, 1, 1 );
+$ease-sharp-curve:        cubic-bezier( 0.4, 0.0, 0.6, 1 );
+
