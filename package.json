@@ -8,9 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-js-modules.git"
+    "url": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git"
   },
   "author": "Lara Schenck",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/penskemediacorp/pmc-js-modules#readme"
+  "homepage": "https://bitbucket.org/penskemediacorp/pmc-packages#readme",
+  "devDependencies": {
+    "lerna": "^3.5.0"
+  }
 }
