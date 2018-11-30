@@ -1,23 +1,10 @@
-
-@mixin pmc-breakpoint($point) {
-
-	@if $point == xl-min {
-		@media (min-width: $pmc-screen-xl-min) { @content; }
-	} @else if $point == large-min {
-		@media (min-width: $pmc-screen-l-min) { @content; }
-	} @else if $point == medium-min {
-		@media (min-width: $pmc-screen-m-min) { @content; }
-	} @else if $point == small-max {
-		@media (max-width: $pmc-screen-s-max) { @content; }
-	}
-}
+@import 'mixins';
 
 // Remove bullet from lists.
 @mixin pmc-no-bullet {
 	list-style-type: none;
 	padding-left: 0;
 }
-
 
 /**
  * Mixin to output chevron

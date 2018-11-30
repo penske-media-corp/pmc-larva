@@ -4,7 +4,7 @@
 //
 // The cropping pattern uses padding and an absolutely positioned image to impose an aspect ratio on an image. 
 //
-// **Naming:** `.u-crop-[WxH]`
+// **Naming:** `.pmc-u-crop-[WxH]`
 //
 // .pmc-u-crop-1x1 - Crop the image at a 1x1 aspect ratio.
 // .pmc-u-crop-3x2 - Crop the image at a 3x2 aspect ratio.
@@ -16,7 +16,7 @@
 
 @mixin pmc-u-crop( $width, $height ) {
 	position: relative;
-	padding-bottom: calc( ( #{$height / $width} ) * 100% );
+	padding-bottom: calc( ( #{$height} / #{$width} ) * 100% );
 
 	img {
 		position: absolute;

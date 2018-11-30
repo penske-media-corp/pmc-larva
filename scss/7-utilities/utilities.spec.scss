@@ -1,0 +1,25 @@
+@import "true";
+@import "u-crop.scss";
+@import "../setup.scss";
+
+// Module Group
+@include test-module('Utilities') {
+	
+	// pmc-u-crop mixin.
+	@include test('@mixin pmc-u-crop') {
+		@include assert {
+			@include output {
+				@include pmc-u-crop( $height: 2, $width: 3 );
+			};
+	  
+			@include contains {
+				padding-bottom: calc( ( 2 / 3 ) * 100% );
+			
+				img {
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+}

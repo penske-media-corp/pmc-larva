@@ -4,7 +4,7 @@
   "description": "Front-end packages for PMC.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,11 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/penskemediacorp/pmc-packages#readme",
   "devDependencies": {
-    "lerna": "^3.5.0"
+    "jest": "^23.6.0",
+    "lerna": "^3.5.0",
+    "sass-true": "^4.0.0"
+  },
+  "dependencies": {
+    "pmc-build-utils": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-build-utils.git#v0.1.1"
   }
 }
