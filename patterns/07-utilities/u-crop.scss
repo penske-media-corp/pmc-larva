@@ -27,14 +27,14 @@
 	}
 }
 
-.u-crop-1x1 {
+.pmc-u-crop-1x1 {
 	@include pmc-u-crop( $width: 1, $height: 1 );
 }
 
-.u-crop-2x3 {
+.pmc-u-crop-2x3 {
 	@include pmc-u-crop( $width: 3, $height: 2 );
 }
 
-.u-crop-16x9 {
+.pmc-u-crop-16x9 {
 	@include pmc-u-crop( $width: 16, $height: 9 );
 }
