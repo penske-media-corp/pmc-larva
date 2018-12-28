@@ -1,0 +1,29 @@
+
+//  * Copied from IW @todo: review this.
+//  *
+//  * Convert a list of unitless values (or px) to rem or em
+//  *
+//  * $values: single value or list of values
+//  * $em: should output be in em units?
+//  * $base-value: font size from which calculations are made
+
+ @function pmc-rem($values, $em: false, $base-value: 16) {
+	$num: length($values);
+	$rem-values: ();
+
+	@if $num == 1 {
+		@return px-to-rem(nth($values, 1), $em, $base-value);
+	}
+
+	@for $i from 1 through $num {
+		$value: nth($values, $i);
+		// It's 'auto'
+		@if (string == type-of($value)) {
+			$rem-values: append($rem-values, $value);
+		} @else if (number == type-of($value)) {
+			$rem-values: append($rem-values, px-to-rem(nth($values, $i), $em, $base-value));
+		}
+	}
+
+	@return $rem-values;
+}

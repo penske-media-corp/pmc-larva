@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'functions/rem';
 
 // Remove bullet from lists.
 @mixin pmc-no-bullet {

@@ -1,13 +1,2 @@
 
-@mixin pmc-breakpoint($point) {
 
-	@if $point == xl-min {
-		@media (min-width: $pmc-screen-xl-min) { @content; }
-	} @else if $point == desktop-min {
-		@media (min-width: $pmc-screen-l-min) { @content; }
-	} @else if $point == tablet-min {
-		@media (min-width: $pmc-screen-m-min) { @content; }
-	} @else if $point == phone-max {
-		@media (max-width: $pmc-screen-s-max) { @content; }
-	}
-}
