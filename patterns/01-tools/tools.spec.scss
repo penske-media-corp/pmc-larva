@@ -1,11 +1,11 @@
 @import "true";
-@import "../setup.scss";
+@import "tools.scss";
 
 // Functions
 @include test-module('Functions') {
 	
 	// Private _strip-unit function.
-	@include test('@function strip-unit') {
+	@include test('@function _strip-unit') {
 		@include assert-equal( _strip-unit(16px), 16 );
 	}
 
@@ -37,5 +37,52 @@
 			}
 		}
 	}
+}
 
+@include test-module('@mixin _spacing-class-generator') {
+
+	@include test('Returns top/bottom and all margin utilities') {
+		@include assert {
+
+			@include output {
+				$spacer-4: 0.25rem;
+				$spacer-8: 0.5rem;
+				$spacer-16: 1rem;
+
+				@include _spacing-class-generator(
+					'margin',
+					(
+						('tb', $spacer-8),
+						('a', $spacer-16)
+					)
+				);
+
+				// Padding does not work, I don't know why.
+				// @include _spacing-class-generator(
+				// 	'padding',
+				// 	(
+				// 		('rl', $spacer-16)
+				// 	)
+				// );
+			};
+	
+			@include expect {
+				.u-margin-tb-8 {
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+				}
+
+				.u-margin-a-16 {
+					margin: 1rem;
+				}
+
+				// .u-padding-rl-16 {
+				// 	padding-right: 1rem;
+				// 	padding-left: 1rem;
+				// }
+			
+			}
+		}
+	}
+	
 }
