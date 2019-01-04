@@ -3,7 +3,7 @@
 //
 // @param $property: CSS property accepting top/right/bottom/left extensions.
 // @param $desired-classes: Nested Sass map containing key: value pairs of 
-// sides e.g. 'tr' and a spacing token.
+// sides: token e.g. 'tr' and a spacing token.
 //
 
 @mixin _spacing-class-generator( $property, $tokens ) {
@@ -11,8 +11,8 @@
 	@if $property != 'margin' and $property != 'padding' {
 		@error "`#{$property}` is not a valid value for $property. It must be either 'margin' or 'padding'.";
 	}
-
-	@if type-of($tokens) == 'map' {
+	
+	@if type-of($tokens) != 'map' {
 		@error "`#{$tokens}` is not a valid value for $tokens. It must be map.";
 	}
 
@@ -45,9 +45,9 @@
 }
 
 @mixin _crop-class-generator( $aspect-ratios ) {
-	// @if type-of($aspect-ratios) != 'map' {
-	// 	@error "`#{$aspect-ratios}` is not a valid value for $aspect-ratios. It must be map.";
-	// }
+	@if type-of($aspect-ratios) != 'map' {
+		@error "`#{$aspect-ratios}` is not a valid value for $aspect-ratios. It must be map.";
+	}
 
 	@each $name, $sizes in $aspect-ratios {
 		.u-crop-#{$name} {
