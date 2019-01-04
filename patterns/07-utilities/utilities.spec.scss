@@ -1,11 +1,9 @@
 @import "true";
-@import "u-crop.scss";
 @import "../setup.scss";
+@import "utilities.scss";
 
-// Module Group
 @include test-module('Utilities') {
 	
-	// pmc-u-crop mixin.
 	@include test('@mixin pmc-u-crop') {
 		@include assert {
 			@include output {
@@ -21,5 +19,4 @@
 			}
 		}
 	}
-
 }

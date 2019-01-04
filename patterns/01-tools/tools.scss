@@ -1,31 +1,7 @@
-@import 'mixins';
+// Functions
 @import 'functions/rem';
 
-
-/**
- * Mixin to output chevron
- * Set position at component level.
- *
- * @todo: The chevron might be useful as it's own utility pattern that can be applied on the element level vs. as a mixin within a specific component.
- * -consider moving the chevron to it's own pattern if it is used consistently.
- */
- @mixin pmc-chevron( $width: 12px, $height: 12px, $border-width: 2px ) {
-
-	// Chevron.
-	&::after {
-		content: '';
-		position: absolute;
-		top: 20px;
-		right: 15px;
-		width: $width;
-		height: $height;
-		transform: scaleY(0.85) translate(-50%, -75%) rotateZ(45deg);
-		border: $border-width solid;
-		border-left: none;
-		border-top: none;
-		transition: transform 225ms $ease-standard-curve;
-	}
-
-	// Use below style to rotate chevron, not added as mixin so you can have control over it's rotation.
-	// transform: scaleY(-0.85) translate(-50%, 25%) rotateZ(45deg);
-}
+// Mixins
+@import 'mixins/breakpoint';
+@import 'mixins/unstyle-list';
+@import 'mixins/_class-generators';
