@@ -1,0 +1,41 @@
+//
+// Spacing class generator
+//
+// @param $property: CSS property accepting top/right/bottom/left extensions.
+// @param $desired-classes: Nested Sass map containing key: value pairs of 
+// sides e.g. 'tr' and a spacing token.
+//
+
+@mixin _spacing-class-generator( $property, $tokens ) {
+	
+	@if $property != 'margin' and $property != 'padding' {
+		@error "`#{$property}` is not a valid value for $property. It must be either 'margin' or 'padding'.";
+	}
+
+	@each $sides, $token in $tokens {
+		$name-in-px: _strip-unit($token) * 16;
+		
+		.u-#{$property}-#{$sides}-#{$name-in-px} {
+	
+			@if (str-index($sides, 't')) {
+				#{$property}-top: $token;
+			}
+
+			@if (str-index($sides, 'r')) {
+				#{$property}-right: $token;
+			}
+
+			@if (str-index($sides, 'b')) {
+				#{$property}-bottom: $token;
+			}
+
+			@if (str-index($sides, 'l')) {
+				#{$property}-left: $token;
+			}
+
+			@if (str-index($sides, 'a')) {
+				#{$property}: $token;
+			}
+		}
+	}
+}
