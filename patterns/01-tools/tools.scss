@@ -1,11 +1,6 @@
 @import 'mixins';
 @import 'functions/rem';
 
-// Remove bullet from lists.
-@mixin pmc-no-bullet {
-	list-style-type: none;
-	padding-left: 0;
-}
 
 /**
  * Mixin to output chevron
