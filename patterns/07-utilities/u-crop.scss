@@ -3,6 +3,7 @@
 // v1.0
 //
 // The cropping pattern uses padding and an absolutely positioned image to impose an aspect ratio on an image. 
+// @todo: This could be abstracted into a map of aspect ratio tokens.
 //
 // **Naming:** `.pmc-u-crop-[WxH]`
 //
