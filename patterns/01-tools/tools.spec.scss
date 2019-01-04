@@ -51,18 +51,18 @@
 				@include _spacing-class-generator(
 					'margin',
 					(
-						('tb', $spacer-8),
-						('a', $spacer-16)
+						'tb': $spacer-8,
+						'a': $spacer-16
 					)
 				);
 
 				// Padding does not work, I don't know why.
-				// @include _spacing-class-generator(
-				// 	'padding',
-				// 	(
-				// 		('rl', $spacer-16)
-				// 	)
-				// );
+				@include _spacing-class-generator(
+					'padding',
+					(
+						'rl': $spacer-16
+					)
+				);
 			}
 	
 			@include expect {
@@ -75,10 +75,10 @@
 					margin: 1rem;
 				}
 
-				// .u-padding-rl-16 {
-				// 	padding-right: 1rem;
-				// 	padding-left: 1rem;
-				// }
+				.u-padding-rl-16 {
+					padding-right: 1rem;
+					padding-left: 1rem;
+				}
 			
 			}
 		}
