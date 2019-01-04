@@ -1,8 +1,18 @@
 @import "true";
 @import "../setup.scss";
 
+// Functions
+@include test-module('Functions') {
+	
+	// pmc-rem function.
+	@include test('@function pmc-rem') {
+		@include assert-equal( pmc-rem(16), 1rem );
+	}
+
+}
+
 // Module Group
-@include test-module('Tools') {
+@include test-module('Mixins') {
 	
 	// pmc-breakpoint mixin.
 	@include test('@mixin pmc-breakpoint') {
@@ -10,13 +20,13 @@
 		@include assert {
 
 			@include output {
-				@include pmc-breakpoint( tablet-min ) {
+				@include pmc-breakpoint( desktop ) {
 					font-size: 1rem;
 				}
 			};
 	  
 			@include contains {
-				@media( min-width: $pmc-screen-m-min ) { 
+				@media( min-width: $pmc-screen-desktop ) { 
 					font-size: 1rem;
 				}
 			}
