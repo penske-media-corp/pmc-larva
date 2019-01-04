@@ -1,3 +1,5 @@
+// Rem Converter
+// Example: font-size: pmc-rem(12);
 
 @function _strip-unit($num) {
 	@return $num / ($num * 0 + 1);
