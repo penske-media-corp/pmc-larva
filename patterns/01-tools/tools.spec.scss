@@ -1,12 +1,17 @@
 @import "true";
-@import "../setup.scss";
+@import "tools.scss";
 
 // Functions
 @include test-module('Functions') {
 	
+	// Private _strip-unit function.
+	@include test('@function _strip-unit') {
+		@include assert-equal( _strip-unit(16px), 16 );
+	}
+
 	// pmc-rem function.
 	@include test('@function pmc-rem') {
-		@include assert-equal( pmc-rem(16), 1rem );
+		@include assert-equal( pmc-rem(16), '1rem' );
 	}
 
 }
@@ -23,7 +28,7 @@
 				@include pmc-breakpoint( desktop ) {
 					font-size: 1rem;
 				}
-			};
+			}
 	  
 			@include contains {
 				@media( min-width: $pmc-screen-desktop ) { 
@@ -32,5 +37,72 @@
 			}
 		}
 	}
+}
 
+@include test-module('Class Generators') {
+
+	@include test('@mixin _spacing-class-generator') {
+		@include assert {
+
+			@include output {
+				$spacer-8: 0.5rem;
+				$spacer-16: 1rem;
+
+				@include _spacing-class-generator(
+					'margin',
+					(
+						'tb': $spacer-8,
+						'a': $spacer-16
+					)
+				);
+
+				// Padding does not work, I don't know why.
+				@include _spacing-class-generator(
+					'padding',
+					(
+						'rl': $spacer-16
+					)
+				);
+			}
+	
+			@include expect {
+				.u-margin-tb-8 {
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+				}
+
+				.u-margin-a-16 {
+					margin: 1rem;
+				}
+
+				.u-padding-rl-16 {
+					padding-right: 1rem;
+					padding-left: 1rem;
+				}
+			
+			}
+		}
+	}
+	
+	@include test('@mixin _crop-class-generator') {
+		
+		@include assert {
+
+			@include output {
+				@include _crop-class-generator( (
+					'2x3': (2, 3)
+				) );
+			}
+	  
+			@include contains {
+				.u-crop-2x3 {
+					padding-bottom: calc( ( 2 / 3 ) * 100% ); 
+				}
+
+				.u-crop-2x3 img {
+					object-fit: cover; 
+				}
+			}
+		}
+	}
 }

@@ -1,49 +1,12 @@
+// Rem Converter
+// Example: font-size: pmc-rem(12);
 
-//  * Copied from IW @todo: review this.
-//  *
-//  * Convert a list of unitless values (or px) to rem or em
-//  *
-//  * $values: single value or list of values
-//  * $em: should output be in em units?
-//  * $base-value: font size from which calculations are made
-
-/**
- * Convert px to rem or em
- * Unitless values are assumed to be in px
- */
- @function px-to-rem( $px, $em: false, $base-size: 16 ) {
-	@if ( 'em' == unit( $px ) or 'rem' == unit( $px ) ) {
-		@return $px;
-	}
-
-	@if ( 'px' == unit( $px ) ) {
-		$px: $px / 1px;
-	}
-
-	@if $em == true {
-		@return $px / $base-size * 1em;
-	} @else {
-		@return $px / $base-size * 1rem;
-	}
+@function _strip-unit($num) {
+	@return $num / ($num * 0 + 1);
 }
 
-@function pmc-rem($values, $em: false, $base-value: 16) {
-	$num: length($values);
-	$rem-values: ();
-
-	@if $num == 1 {
-		@return px-to-rem(nth($values, 1), $em, $base-value);
-	}
-
-	@for $i from 1 through $num {
-		$value: nth($values, $i);
-		// It's 'auto'
-		@if (string == type-of($value)) {
-			$rem-values: append($rem-values, $value);
-		} @else if (number == type-of($value)) {
-			$rem-values: append($rem-values, px-to-rem(nth($values, $i), $em, $base-value));
-		}
-	}
-
-	@return $rem-values;
+@function pmc-rem($value) {
+	$int: _strip-unit($value);
+	$rems: #{$int / 16};
+	@return $rems + rem;
 }

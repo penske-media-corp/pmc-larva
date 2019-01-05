@@ -1,41 +1,5 @@
-// Crop
-//
-// v1.0
-//
-// The cropping pattern uses padding and an absolutely positioned image to impose an aspect ratio on an image. 
-// @todo: This could be abstracted into a map of aspect ratio tokens.
-//
-// **Naming:** `.pmc-u-crop-[WxH]`
-//
-// .pmc-u-crop-1x1 - Crop the image at a 1x1 aspect ratio.
-// .pmc-u-crop-3x2 - Crop the image at a 3x2 aspect ratio.
-// .pmc-u-crop-16x9 - Crop the image at a 16x9 aspect ratio.
-//
-// Markup: _u-crop.twig
-//
-// Style guide: Utilities.Cropping
+@import '../setup';
 
-// In an npm package
-@mixin pmc-u-crop( $width, $height ) {
-	position: relative;
-	padding-bottom: calc( ( #{$height} / #{$width} ) * 100% );
-
-	img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-}
-
-.pmc-u-crop-1x1 {
-	@include pmc-u-crop( $width: 1, $height: 1 );
-}
-
-.pmc-u-crop-2x3 {
-	@include pmc-u-crop( $width: 3, $height: 2 );
-}
-
-.pmc-u-crop-16x9 {
-	@include pmc-u-crop( $width: 16, $height: 9 );
+@mixin pmc-u-crop( $aspect-ratios ) {
+	@include _crop-class-generator( $aspect-ratios );
 }
