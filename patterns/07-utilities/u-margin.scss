@@ -3,7 +3,3 @@
 @mixin pmc-u-margin( $margins ) {
 	@include _spacing-class-generator( 'margin', $margins );
 }
-
-@mixin pmc-u-padding( $paddings ) {
-	@include _spacing-class-generator( 'padding', $paddings );
-}

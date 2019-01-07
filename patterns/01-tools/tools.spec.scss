@@ -66,16 +66,16 @@
 			}
 	
 			@include expect {
-				.u-margin-tb-8 {
+				.pmc-u-margin-tb-8 {
 					margin-top: 0.5rem;
 					margin-bottom: 0.5rem;
 				}
 
-				.u-margin-a-16 {
+				.pmc-u-margin-a-16 {
 					margin: 1rem;
 				}
 
-				.u-padding-rl-16 {
+				.pmc-u-padding-rl-16 {
 					padding-right: 1rem;
 					padding-left: 1rem;
 				}
@@ -95,11 +95,11 @@
 			}
 	  
 			@include contains {
-				.u-crop-2x3 {
+				.pmc-u-crop-2x3 {
 					padding-bottom: calc( ( 2 / 3 ) * 100% ); 
 				}
 
-				.u-crop-2x3 img {
+				.pmc-u-crop-2x3 img {
 					object-fit: cover; 
 				}
 			}
