@@ -17,9 +17,13 @@
 	}
 
 	@each $sides, $token in $tokens {
-		$name-in-px: _strip-unit($token) * 16;
+		$name: _strip-unit($token);
 
-		.pmc-u-#{$property}-#{$sides}-#{$name-in-px} {
+    @if ($name < 1) {
+      $name: '0' + $name * 100;
+    }
+
+		.pmc-u-#{$property}-#{$sides}-#{$name} {
 
 			@if (str-index($sides, 't')) {
 				#{$property}-top: $token;

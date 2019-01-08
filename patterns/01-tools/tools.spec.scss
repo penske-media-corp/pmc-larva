@@ -3,7 +3,7 @@
 
 // Functions
 @include test-module('Functions') {
-	
+
 	// Private _strip-unit function.
 	@include test('@function _strip-unit') {
 		@include assert-equal( _strip-unit(16px), 16 );
@@ -18,10 +18,10 @@
 
 // Module Group
 @include test-module('Mixins') {
-	
+
 	// pmc-breakpoint mixin.
 	@include test('@mixin pmc-breakpoint') {
-		
+
 		@include assert {
 
 			@include output {
@@ -29,9 +29,9 @@
 					font-size: 1rem;
 				}
 			}
-	  
+
 			@include contains {
-				@media( min-width: $pmc-screen-desktop ) { 
+				@media( min-width: $pmc-screen-desktop ) {
 					font-size: 1rem;
 				}
 			}
@@ -45,47 +45,46 @@
 		@include assert {
 
 			@include output {
-				$spacer-8: 0.5rem;
-				$spacer-16: 1rem;
+				$spacer-050: 0.5rem;
+				$spacer-1: 1rem;
 
 				@include _spacing-class-generator(
 					'margin',
 					(
-						'tb': $spacer-8,
-						'a': $spacer-16
+						'tb': $spacer-050,
+						'a': $spacer-1
 					)
 				);
 
-				// Padding does not work, I don't know why.
 				@include _spacing-class-generator(
 					'padding',
 					(
-						'rl': $spacer-16
+						'rl': $spacer-1
 					)
 				);
 			}
-	
+
 			@include expect {
-				.pmc-u-margin-tb-8 {
+				.pmc-u-margin-tb-050 {
 					margin-top: 0.5rem;
 					margin-bottom: 0.5rem;
 				}
 
-				.pmc-u-margin-a-16 {
+				.pmc-u-margin-a-1 {
 					margin: 1rem;
 				}
 
-				.pmc-u-padding-rl-16 {
+				.pmc-u-padding-rl-1 {
 					padding-right: 1rem;
 					padding-left: 1rem;
 				}
-			
+
 			}
 		}
 	}
-	
+
 	@include test('@mixin _crop-class-generator') {
-		
+
 		@include assert {
 
 			@include output {
@@ -93,14 +92,14 @@
 					'2x3': (2, 3)
 				) );
 			}
-	  
+
 			@include contains {
 				.pmc-u-crop-2x3 {
-					padding-bottom: calc( ( 2 / 3 ) * 100% ); 
+					padding-bottom: calc( ( 2 / 3 ) * 100% );
 				}
 
 				.pmc-u-crop-2x3 img {
-					object-fit: cover; 
+					object-fit: cover;
 				}
 			}
 		}
