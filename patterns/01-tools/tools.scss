@@ -4,4 +4,5 @@
 // Mixins
 @import 'mixins/breakpoint';
 @import 'mixins/unstyle-list';
-@import 'mixins/_class-generators';
+@import 'mixins/generators/crop-class-generator';
+@import 'mixins/generators/spacing-class-generator';
