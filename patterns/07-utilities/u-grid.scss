@@ -1,48 +1,52 @@
 $gutter: 1.25rem;
 
-
 @mixin _u-grid-base {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+
+	> * {
+		flex: auto;
+		margin-left: $gutter / 2;
+		margin-right: $gutter / 2;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	> * + * {
+		margin-top: 0;
+	}
 
 	@supports ( display: grid ) {
 		--cols: 1;
 
 		display: grid;
 		grid-gap: $gutter;
-		grid-template-columns: repeat( var(--cols), 1fr);
+		grid-template-columns: repeat(var(--cols), 1fr);
+
+		> * {
+			// Specificity problem that could be solved.
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			margin-top: 0 !important;
+		}
+		
 	}
 }
 
 @mixin _u-grid\@breakpoint( $breakpoint ) {
 	
-	@include pmc-breakpoint( $breakpoint ) {
-		@include _u-grid-base;
+	// Spacing between rows when stacked.
+	> * + * {
+		margin-top: $gutter;
 	}
-}
-
-@mixin _u-grid-item-base( $cols, $total-columns ) {
-	flex-basis: calc( ( #{$cols} / #{$total-columns} * 100% ) - #{($gutter * $total-columns - 1) / ($total-columns) } );
-			
-	@supports (display: grid) {
-		grid-column: span $cols;
-	}
-}
-
-@mixin _u-grid-item( $cols, $total-columns, $breakpoint: '' ) {
-	margin-bottom: $gutter;
 	
-	@if $breakpoint != '' {
-		@include pmc-breakpoint( $breakpoint ) {
-			@include _u-grid-item-base( $cols, $total-columns );
-		}
-	} @else {
-		@include _u-grid-item-base( $cols, $total-columns );
-	}
-
-	@supports (display: grid) {
-		margin-bottom: 0;
+	@include pmc-breakpoint( $breakpoint ) {
+		@include _u-grid-base;	
 	}
 }
 
@@ -50,96 +54,48 @@ $gutter: 1.25rem;
 	@include _u-grid-base;
 }
 
-.pmc-u-grid--1-col {
-
-	> * + * {
-		margin-top: $gutter;
-	}
-
-	@supports ( display: grid ) {
-		--cols: 1;
-
-		display: grid;
-		grid-gap: $gutter;
-		grid-template-columns: repeat( var(--cols), 1fr);
-		
-		> * + * {
-			margin-top: 0;
-		}
-
-	}
-}
-
 %u-grid-base\@tablet {
-	@include _u-grid\@breakpoint( tablet );
+	@include _u-grid\@breakpoint( tablet )
 }
 
 %u-grid-base\@desktop {
-	@include _u-grid\@breakpoint( desktop );
+	@include _u-grid\@breakpoint( desktop )
 }
 
 .pmc-u-grid--2-cols {
 	@extend %u-grid-base;
 
 	--cols: 2;
-	
-	.pmc-u-grid-item {
-		@include _u-grid-item( 1, 2 );
-	}
 }
 
 .pmc-u-grid--3-cols\@tablet {
 	@extend %u-grid-base\@tablet;
-	
+
 	@include pmc-breakpoint( tablet ) {
 		--cols: 3;
 	}
-	
-	.pmc-u-grid-item {
-		@include _u-grid-item( 1, 3, tablet );
-	}
 }
 
-.pmc-u-grid--4-cols\@desktop {
-	@extend %u-grid-base\@desktop;
+.pmc-u-grid--5-cols\@tablet {
+	@extend %u-grid-base\@tablet;
 
-	.pmc-u-grid-item {
-		@include _u-grid-item( 1, 4, desktop );
-	}
-	
-	@include pmc-breakpoint( desktop ) {
-		@include _u-grid\@breakpoint( desktop );
-		
-		--cols: 4 !important;
-	}
-}
-
-.pmc-u-grid--5-cols\@desktop {
-	@extend %u-grid-base\@desktop;
-	
-	.pmc-u-grid-item {
-		@include _u-grid-item( 1, 5, desktop );
-	}
-
-	@include pmc-breakpoint( desktop ) {
-		@include _u-grid\@breakpoint( desktop );
-
-		--cols: 5 !important;
-	}
-}
-
-
-.pmc-u-grid-item {
-	margin-bottom: $gutter;
-
-	@supports ( display: grid ) {
-		margin-bottom: 0;
+	@include pmc-breakpoint( tablet ) {
+		--cols: 5;
 	}
 }
 
 .pmc-u-grid-item--span-2\@tablet {
-	@include _u-grid-item( 2, 3, tablet );
+
+	@include pmc-breakpoint( tablet ) {
+		[class*="3-cols"] & {
+			flex-basis: calc( 2 / 3 * 100% );
+			flex-grow: 0;
+		}
+		
+		grid-column: span 2;
+	}
 }
+
 
 
 
@@ -215,7 +171,6 @@ body::after {
 }
 
 .u-display-block\@tablet {
-
 	@media( min-width: $pmc-screen-tablet ) {
 		display: block;
 	}
