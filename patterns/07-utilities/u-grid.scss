@@ -1,0 +1,178 @@
+$gutter: 1.25rem;
+
+@mixin _u-grid-base {
+	display: flex;
+
+	> * {
+		flex: auto;
+		margin-left: $gutter / 2;
+		margin-right: $gutter / 2;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	> * + * {
+		margin-top: 0;
+	}
+
+	@supports ( display: grid ) {
+		--cols: 1;
+
+		display: grid;
+		grid-gap: $gutter;
+		grid-template-columns: repeat(var(--cols), 1fr);
+
+		> * {
+			// Specificity problem that could be solved.
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			margin-top: 0 !important;
+		}
+		
+	}
+}
+
+@mixin _u-grid\@breakpoint( $breakpoint ) {
+	
+	// Spacing between rows when stacked.
+	> * + * {
+		margin-top: $gutter;
+	}
+	
+	@include pmc-breakpoint( $breakpoint ) {
+		@include _u-grid-base;	
+	}
+}
+
+%u-grid-base {
+	@include _u-grid-base;
+}
+
+%u-grid-base\@tablet {
+	@include _u-grid\@breakpoint( tablet )
+}
+
+%u-grid-base\@desktop {
+	@include _u-grid\@breakpoint( desktop )
+}
+
+.pmc-u-grid--2-cols {
+	@extend %u-grid-base;
+
+	--cols: 2;
+}
+
+.pmc-u-grid--3-cols\@tablet {
+	@extend %u-grid-base\@tablet;
+
+	@include pmc-breakpoint( tablet ) {
+		--cols: 3;
+	}
+}
+
+.pmc-u-grid--5-cols\@tablet {
+	@extend %u-grid-base\@tablet;
+
+	@include pmc-breakpoint( tablet ) {
+		--cols: 5;
+	}
+}
+
+.pmc-u-grid-item--span-2\@tablet {
+
+	@include pmc-breakpoint( tablet ) {
+		[class*="3-cols"] & {
+			flex-basis: calc( 2 / 3 * 100% );
+			flex-grow: 0;
+		}
+		
+		grid-column: span 2;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.box {
+	position: relative;
+	background-color: skyblue;
+	border: 1px dotted coral;
+	min-height: 100px;
+}
+
+.box-inner {
+	background-color: coral;
+	border: 1px dotted lemonchiffon;
+}
+
+.box::after {
+	font-size: 10vw;
+	position: absolute;
+	color: aquamarine;
+	top: 0;
+	left: 0;
+}
+
+.box1::after {
+	content: '1';
+}
+
+.box2::after {
+	content: '2';	
+}
+
+body {
+	margin: 1rem;
+}
+
+// This might be useful to enable/disable in pattern library
+
+body::after {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1rem 2rem;
+	background-color: navy;
+	color: yellow;
+	content: 'between mobile and tablet';
+	
+	@media( max-width: $pmc-screen-mobile ) {
+		content: 'mobile-max';
+		background-color: dodgerblue;
+	}
+	
+	@media( min-width: $pmc-screen-tablet ) {
+		content: 'tablet';
+		background-color: indianred;
+	}
+	
+	@media( min-width: $pmc-screen-desktop ) {
+		content: 'desktop';
+		background-color: green;
+	}
+}
+
+// Display utility - need to make this.
+
+.u-display-none {
+	display: none;
+}
+
+.u-display-block\@tablet {
+	@media( min-width: $pmc-screen-tablet ) {
+		display: block;
+	}
+}
+
