@@ -1,9 +1,6 @@
 // Rem Converter
+// @note: Ideally this is removed. Everything should be in rems and in a token.
 // Example: font-size: pmc-rem(12);
-
-@function _strip-unit($num) {
-	@return $num / ($num * 0 + 1);
-}
 
 @function pmc-rem($value) {
 	$int: _strip-unit($value);
