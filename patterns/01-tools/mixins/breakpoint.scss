@@ -4,14 +4,13 @@ $pmc-screen-tablet:     #{pmc-rem(768)};
 $pmc-screen-mobile:     #{pmc-rem(375)};
 
 @mixin pmc-breakpoint($point) {
-
 	@if $point == desktop-xl {
 		@media (min-width: $pmc-screen-desktop-xl) { @content; }
 	} @else if $point == desktop {
 		@media (min-width: $pmc-screen-desktop) { @content; }
 	} @else if $point == tablet {
 		@media (min-width: $pmc-screen-tablet) { @content; }
-	} @else if $point == phone-max {
+	} @else if $point == mobile-max {
 		@media (max-width: $pmc-screen-mobile) { @content; }
 	}
 }
