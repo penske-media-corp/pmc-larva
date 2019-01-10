@@ -1,0 +1,64 @@
+//
+// Spacing class generator
+//
+// @param $property: CSS property accepting top/right/bottom/left extensions.
+// @param $desired-classes: Nested Sass map containing key: value pairs of
+// sides: token e.g. 'tr' and a spacing token.
+//
+@import "../breakpoint";
+
+@mixin _spacing-class-generator( $property, $tokens ) {
+	@if $property != 'margin' and $property != 'padding' {
+		@error "`#{$property}` is not a valid value for $property. It must be either 'margin' or 'padding'.";
+	}
+
+	@if type-of($tokens) != 'list' {
+		@error "`#{$tokens}` is not a valid value for $tokens. It must be a list of lists.";
+	}
+
+	@each $token in $tokens {
+		$value: _strip-unit(nth($token, 2));
+		$sides: nth($token, 1);
+
+		@if ($value < 1) {
+			// Multiply by 100 to turn values less than 1 (e.g. 0.25)
+			// into non-decimals with a leading zero (e.g. 025).
+			$value: '0' + $value * 100;
+		}
+
+		.pmc-u-#{$property}-#{$sides}-#{$value} {
+			@if (length($token) == 3) {
+				$bp: nth($token, 3);
+
+				@include pmc-breakpoint($bp) {
+					@include _size-logic($sides, $property, nth($token, 2));
+				}
+			} @else {
+				@include _size-logic($sides, $property, nth($token, 2));
+			}
+		}
+	}
+}
+
+@mixin _size-logic($sides, $property, $token) {
+
+	@if (str-index($sides, 't')) {
+		#{$property}-top: $token;
+	}
+
+	@if (str-index($sides, 'r')) {
+		#{$property}-right: $token;
+	}
+
+	@if (str-index($sides, 'b')) {
+		#{$property}-bottom: $token;
+	}
+
+	@if (str-index($sides, 'l')) {
+		#{$property}-left: $token;
+	}
+
+	@if (str-index($sides, 'a')) {
+		#{$property}: $token;
+	}
+}
