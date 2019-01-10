@@ -51,15 +51,15 @@
 				@include _spacing-class-generator(
 					'margin',
 					(
-            ('tb', $spacer-050),
-            ('a', $spacer-1, desktop)
+						('tb', $spacer-050),
+						('a', $spacer-1, desktop)
 					)
 				);
 
 				@include _spacing-class-generator(
 					'padding',
 					(
-            ('a', $spacer-1),
+						('a', $spacer-1),
 					)
 				);
 			}
@@ -70,11 +70,11 @@
 					margin-bottom: 0.5rem;
 				}
 
-        @media (min-width: 62.5rem) {
-          .pmc-u-margin-a-1 {
-            margin: 1rem;
-          }
-        }
+				@media (min-width: 62.5rem) {
+					.pmc-u-margin-a-1 {
+						margin: 1rem;
+					}
+				}
 
 				.pmc-u-padding-a-1 {
 					padding: 1rem;
