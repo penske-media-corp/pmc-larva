@@ -16,7 +16,7 @@ $gutter: 1.25rem;
 			margin-right: 0;
 		}
 	}
-	
+
 	> * + * {
 		margin-top: 0;
 	}
@@ -34,19 +34,19 @@ $gutter: 1.25rem;
 			margin-right: 0 !important;
 			margin-top: 0 !important;
 		}
-		
+
 	}
 }
 
 @mixin _u-grid\@breakpoint( $breakpoint ) {
-	
+
 	// Spacing between rows when stacked.
 	> * + * {
 		margin-top: $gutter;
 	}
-	
+
 	@include pmc-breakpoint( $breakpoint ) {
-		@include _u-grid-base;	
+		@include _u-grid-base;
 	}
 }
 
@@ -91,7 +91,7 @@ $gutter: 1.25rem;
 			flex-basis: calc( 2 / 3 * 100% );
 			flex-grow: 0;
 		}
-		
+
 		grid-column: span 2;
 	}
 }
@@ -130,39 +130,9 @@ $gutter: 1.25rem;
 }
 
 .box2::after {
-	content: '2';	
+	content: '2';
 }
 
-body {
-	margin: 1rem;
-}
-
-// This might be useful to enable/disable in pattern library
-
-body::after {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	padding: 1rem 2rem;
-	background-color: navy;
-	color: yellow;
-	content: 'between mobile and tablet';
-	
-	@media( max-width: $pmc-screen-mobile ) {
-		content: 'mobile-max';
-		background-color: dodgerblue;
-	}
-	
-	@media( min-width: $pmc-screen-tablet ) {
-		content: 'tablet';
-		background-color: indianred;
-	}
-	
-	@media( min-width: $pmc-screen-desktop ) {
-		content: 'desktop';
-		background-color: green;
-	}
-}
 
 // Display utility - need to make this.
 
