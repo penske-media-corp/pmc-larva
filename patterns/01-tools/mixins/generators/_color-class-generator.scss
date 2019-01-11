@@ -1,0 +1,15 @@
+@mixin _color-class-generator( $property, $colors ) {
+	@if $property != 'background' and $property != 'color' and $property != 'background-color' {
+		@error "`#{$property}` is not a valid value for $property. It must be either 'background', 'color', or 'background-color'.";
+	}
+
+	@if type-of($colors) != 'map' {
+		@error "`#{$colors}` is not a valid value for $colors. It must be a map.";
+	}
+
+	@each $name, $color in $colors {
+		.pmc-u-#{$property}-#{$name} {
+			#{$property}: $color;
+		}
+	}
+}

@@ -105,3 +105,26 @@
 		}
 	}
 }
+
+@include test-module('Color Generators') {
+
+	@include test('@mixin _color-class-generator') {
+		@include assert {
+
+			@include output {
+				@include _color-class-generator(
+					'background',
+					(
+						brand-red: red,
+					)
+				);
+			}
+
+			@include expect {
+				.pmc-u-background-brand-red {
+					background: red;
+				}
+			}
+		}
+	}
+}
