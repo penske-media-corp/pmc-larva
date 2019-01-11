@@ -1,7 +1,7 @@
-$pmc-screen-desktop-xl: 1400px;
-$pmc-screen-desktop:    1000px;
-$pmc-screen-tablet:     768px;
-$pmc-screen-mobile:     375px;
+$pmc-screen-desktop-xl: 87.5rem;
+$pmc-screen-desktop:    62.5rem;
+$pmc-screen-tablet:     48rem;
+$pmc-screen-mobile:     23.4rem;
 
 @mixin pmc-breakpoint($point) {
 	@if $point == desktop-xl {
