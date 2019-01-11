@@ -112,17 +112,22 @@
 		@include assert {
 
 			@include output {
+				$semantic_list: (
+					brand-red: red,
+				);
+
 				@include _color-class-generator(
-					'background',
+					'background-color',
 					(
-						brand-red: red,
-					)
+						brand-red,
+					),
+					$semantic_list,
 				);
 			}
 
 			@include expect {
 				.pmc-u-background-brand-red {
-					background: red;
+					background-color: red;
 				}
 			}
 		}
