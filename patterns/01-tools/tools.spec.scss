@@ -127,11 +127,15 @@
 					.pmc-cols3\@tablet {
 						--cols: 3;
 					}
+					
+					.pmc-cols3\@tablet > * {
+						flex-basis: 33.33333%;
+					}
 				}
 
 				@media( min-width: 48rem ) {
 					.pmc-span2\@tablet {
-						float: left;
+						flex-basis: 66.66667%;
 
 						@supports ( display: grid ) {
 							grid-column: span 2;

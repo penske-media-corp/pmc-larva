@@ -1,11 +1,22 @@
-
 @import '../setup';
 
 .pmc-grid {
-	@supports( display: grid ) {
+	display: flex;
+	flex-wrap: wrap;
+
+	@supports ( display: grid ) {
 		display: grid;
 		grid-gap: 1.25rem;
 		grid-template-columns: repeat( var( --cols, 1 ), 1fr );
+	}
+}
+
+.pmc-grid-item {
+	flex-shrink: 0;
+	padding: 0.625;
+
+	@supports ( display: grid ) {
+		padding: 0;
 	}
 }
 
