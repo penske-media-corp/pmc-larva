@@ -5,15 +5,17 @@
 	flex-wrap: wrap;
 
 	@supports ( display: grid ) {
+		--cols: 1;
+
 		display: grid;
 		grid-gap: 1.25rem;
-		grid-template-columns: repeat( var( --cols, 1 ), 1fr );
+		grid-template-columns: repeat( var( --cols ), 1fr );
 	}
 }
 
 .pmc-grid-item {
 	flex-shrink: 0;
-	padding: 0.625;
+	padding: 0.625rem;
 
 	@supports ( display: grid ) {
 		padding: 0;

@@ -1,43 +1,47 @@
 @import "../pmc-breakpoint";
 
-@mixin _grid-base( $total-columns, $breakpoint: false ) {
+@mixin _grid( $columns ) {
+	--cols: #{$columns};
 
+	> * {
+		flex-basis: ( ( 1 / $columns ) * 100% );
+	}
+
+}
+
+@mixin _grid-selector( $columns, $breakpoint: false ) {
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
-			.pmc-cols#{$total-columns}\@#{$breakpoint} {
-				--cols: #{$total-columns};
-
-				> * {
-					flex-basis: ( ( 1 / $total-columns ) * 100% );
-				}
+			.pmc-cols#{$columns}\@#{$breakpoint} {
+				@include _grid( $columns );
 			}
 		}
 	} @else {
-		.pmc-cols#{$total-columns} {
-			--cols: #{$total-columns};
+		.pmc-cols#{$columns} {
+			@include _grid( $columns );
 		}
 	}
 }
 
-@mixin _grid-column( $span, $total-columns ) {
-	flex-basis: ( $span / $total-columns * 100% );
+@mixin _grid-column( $span, $columns ) {
+	flex-basis: ( $span / $columns * 100% );
 
 	@supports ( display: grid ) {
 		grid-column: span #{$span};
 	}
 }
 
-@mixin _grid-span-selector( $total-columns, $span: 1, $breakpoint: false ) {
+@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false ) {
 
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
 			.pmc-span#{$span}\@#{$breakpoint} {
-				@include _grid-column( $span, $total-columns );
+				@include _grid-column( $span, $columns );
 			}
 		}
 	} @else {
 		.pmc-span#{$span} {
-			@include _grid-column( $span, $total-columns );
+			@include _grid-column( $span, $columns );
 		}
 	}
 
@@ -55,7 +59,7 @@
 		$spans: map-get( $grid, spans );
 
 		// Outputs pmc-colsX selector to be used in conjunction with .pmc-grid.
-		@include _grid-base( $columns, $breakpoint );
+		@include _grid-selector( $columns, $breakpoint );
 
 		@if $spans {
 

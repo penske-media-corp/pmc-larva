@@ -112,9 +112,13 @@
 			@include output {
 				$grids: (
 					(
+						columns: 2,
+						spans: ( 2, ),
+					),
+					(
 						columns: 3,
 						breakpoint: tablet,
-						spans: ( 2, )
+						spans: ( 2, ),
 					),
 				);
 
@@ -123,6 +127,24 @@
 			}
 
 			@include expect {
+				.pmc-cols2 {
+					--cols: 2;
+				}
+
+				.pmc-cols2 > * {
+					flex-basis: 50%;
+				}
+
+				.pmc-span2 {
+					flex-basis: 100%;
+				}
+
+				@supports (display: grid) {
+					.pmc-span2 {
+						grid-column: span 2;
+					}
+				}
+
 				@media( min-width: 48rem ) {
 					.pmc-cols3\@tablet {
 						--cols: 3;
