@@ -104,4 +104,41 @@
 			}
 		}
 	}
+
+	@include test('@mixin _grid-class-generator') {
+
+		@include assert {
+
+			@include output {
+				$grids: (
+					(
+						columns: 3,
+						breakpoint: tablet,
+						spans: ( 2, )
+					),
+				);
+
+				@include _grid-class-generator( $grids );
+
+			}
+
+			@include expect {
+				@media( min-width: 48rem ) {
+					.pmc-cols3\@tablet {
+						--cols: 3;
+					}
+				}
+
+				@media( min-width: 48rem ) {
+					.pmc-span2\@tablet {
+						float: left;
+
+						@supports ( display: grid ) {
+							grid-column: span 2;
+						}
+					}
+				}
+			}
+		}
+	}
 }
