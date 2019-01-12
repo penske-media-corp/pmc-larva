@@ -23,25 +23,38 @@
 	}
 }
 
-@mixin _grid-column( $span, $columns ) {
-	flex-basis: ( $span / $columns * 100% );
-
+@mixin _grid-column( $columns, $span ) {
 	@supports ( display: grid ) {
 		grid-column: span #{$span};
 	}
+}
+
+@mixin _grid-column-fallback( $columns, $span ) {
+	flex-basis: ( $span / $columns * 100% );
 }
 
 @mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false ) {
 
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
+			
 			.pmc-span#{$span}\@#{$breakpoint} {
-				@include _grid-column( $span, $columns );
+				@include _grid-column( $columns, $span );
 			}
+			
+			// Higher specificity to account for nested grids.
+			.pmc-cols#{$columns}\@#{$breakpoint} > .pmc-span#{$span}\@#{$breakpoint} {
+				@include _grid-column-fallback( $columns, $span );
+			}
+
 		}
 	} @else {
 		.pmc-span#{$span} {
-			@include _grid-column( $span, $columns );
+			@include _grid-column( $columns, $span );
+		}
+
+		.pmc-cols#{$columns} > .pmc-span#{$span} {
+			@include _grid-column-fallback( $columns, $span );
 		}
 	}
 

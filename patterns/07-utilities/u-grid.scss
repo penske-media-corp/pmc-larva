@@ -3,6 +3,7 @@
 .pmc-grid {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: start;
 
 	@supports ( display: grid ) {
 		--cols: 1;
@@ -14,7 +15,8 @@
 }
 
 .pmc-grid-item {
-	flex-shrink: 0;
+	// Remove flex charactaristics to honor flex-basis value.
+	flex: none;
 	padding: 0.625rem;
 
 	@supports ( display: grid ) {
@@ -22,7 +24,6 @@
 	}
 }
 
-// This would actually be in this file.
 @mixin pmc-grid( $grids ) {
 	@include _grid-class-generator( $grids );
 };
