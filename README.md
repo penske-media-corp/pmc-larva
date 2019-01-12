@@ -1,6 +1,7 @@
 # PMC Packages
 
-`npm install git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git#v0.1`
+Replace the {$VERSION} below with the desired version:
+`npm install git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git#v{$VERSION}`
 
 Add the following aliases to `assets/pmc.config.js`:
 
@@ -29,7 +30,7 @@ Which would generate the classes `.pmc-u-crop-2x3` and `.pmc-u-crop-9x16`.
 
 ### Important Note
 
-All CSS output from pmc-packages should be namespaces with both ITCSS namespaces and the system namespace, e.g. `.pmc-u-*`. At the moment, pmc-packages should only output utilities, or the `u-` namespace.
+All CSS output from pmc-packages should be namespaces with both ITCSS namespaces (excluding Grid utilities) and the system namespace, e.g. `.pmc-u-*`. At the moment, pmc-packages should only output grid  utilities and traditional utilities with the `u-` namespace.
 
 ### JavaScript
 
