@@ -11,8 +11,8 @@
 @import '../breakpoint';
 
 @mixin _text-class-generator( $property, $tokens, $available_tokens: () ) {
-	@if $property != 'font-size' and $property != 'line-height' and $property != 'font-family' {
-		@error "`#{$property}` is not a valid value for $property. It must be either 'font-size', 'line-height', or 'font-family'.";
+	@if $property != 'font-size' and $property != 'line-height' and $property != 'font-family' and $property != 'font-weight' {
+		@error "`#{$property}` is not a valid value for $property. It must be either 'font-size', 'line-height', 'font-family', 'font-weight'.";
 	}
 
 	@if type-of($tokens) != 'list' {
@@ -45,7 +45,7 @@
 
 		}
 
-		@if ($property == 'line-height') {
+		@if ($property == 'line-height' or $property == 'font-weight') {
 			$selector: ".pmc-u-#{$property}-#{$token}";
 			$value: map-get($available_tokens, $token);
 		}
