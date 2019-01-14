@@ -26,14 +26,16 @@
 			$value: '0' + $value * 100;
 		}
 
-		.pmc-u-#{$property}-#{$sides}-#{$value} {
-			@if (length($token) == 3) {
-				$bp: nth($token, 3);
+		@if (length($token) == 3) {
+			$bp: nth($token, 3);
 
+			.pmc-u-#{$property}-#{$sides}-#{$value}\@#{$bp} {
 				@include pmc-breakpoint($bp) {
 					@include _size-logic($sides, $property, nth($token, 2));
 				}
-			} @else {
+			}
+		} @else {
+			.pmc-u-#{$property}-#{$sides}-#{$value} {
 				@include _size-logic($sides, $property, nth($token, 2));
 			}
 		}
