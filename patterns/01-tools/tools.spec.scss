@@ -113,11 +113,38 @@
 
 				$font-size-1: 1rem;
 
+				$line-heights: (
+					sm: 1,
+					md: 2,
+					lg: 3,
+				);
+
+				$font-families: (
+					balto: Balto,
+				);
+
+
 				@include _text-class-generator(
 					'font-size',
 					(
 						$font-size-1,
 					)
+				);
+
+				@include _text-class-generator(
+					'line-height',
+					(
+						sm,
+					),
+					$line-heights
+				);
+
+				@include _text-class-generator(
+					'font-family',
+					(
+						balto,
+					),
+					$font-families
 				);
 			}
 
@@ -125,6 +152,15 @@
 				.pmc-u-font-size-16 {
 					font-size: 1rem;
 				}
+
+				.pmc-u-line-height-sm {
+					line-height: 1;
+				}
+
+				.wf-loaded .pmc-u-font-family-balto {
+					font-family: Balto;
+				}
+
 			}
 		}
 	}

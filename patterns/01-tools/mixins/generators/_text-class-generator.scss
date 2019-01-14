@@ -3,14 +3,15 @@
 //
 // @param $property: CSS property
 // @param $tokens
+// @param $available_tokens: list of token values
 //
 
 // @todo: update this path to include strip-unit from helpers once PMCP-1077 is merged.
 @import '../../functions/rem';
 
-@mixin _text-class-generator( $property, $tokens ) {
-	@if $property != 'font-size' and $property != 'line-height' and $property != 'font-family' and $property != 'text-align' {
-		@error "`#{$property}` is not a valid value for $property. It must be either 'font-size', 'line-height', 'font-family', or 'text-align'.";
+@mixin _text-class-generator( $property, $tokens, $available_tokens: () ) {
+	@if $property != 'font-size' and $property != 'line-height' and $property != 'font-family' {
+		@error "`#{$property}` is not a valid value for $property. It must be either 'font-size', 'line-height', or 'font-family'.";
 	}
 
 	@if type-of($tokens) != 'list' {
@@ -18,9 +19,23 @@
 	}
 
 	@each $token in $tokens {
-		$name: _strip-unit($token) * 16;
+		$selector: '';
 
-		.pmc-u-#{$property}-#{$name} {
+		@if ($property == 'font-size') {
+			$selector: ".pmc-u-#{$property}-#{_strip-unit($token) * 16}";
+		}
+
+		@if ($property == 'line-height') {
+			$selector: ".pmc-u-#{$property}-#{$token}";
+			$token: map-get($available_tokens, $token);
+		}
+
+		@if ($property == 'font-family') {
+			$selector: ".wf-loaded .pmc-u-#{$property}-#{$token}";
+			$token: map-get($available_tokens, $token);
+		}
+
+		#{$selector} {
 			#{$property}: #{$token};
 		}
 	}
