@@ -1,9 +1,33 @@
 @import '../setup';
 
-.u-text-transform-uppercase {
+.pmc-u-text-transform-uppercase {
 	text-transform: uppercase;
 }
 
-@mixin pmc-u-text( $property, $tokens ) {
-	@include _text-class-generator($property, $tokens);
+.pmc-u-text-align-center {
+	text-align: center;
+}
+
+.pmc-u-text-align-right {
+	text-align: right;
+}
+
+.pmc-u-text-align-left {
+	text-align: left;
+}
+
+@mixin pmc-u-font-family( $tokens ) {
+	@include _text-class-generator('font-family', $tokens, $available_tokens);
+}
+
+@mixin pmc-u-line-height( $tokens ) {
+	@include _text-class-generator('line-height', $tokens, $available_tokens);
+}
+
+@mixin pmc-u-font-size( $tokens ) {
+	@include _text-class-generator('font-size', $tokens);
+}
+
+@mixin pmc-u-font-weight( $tokens ) {
+	@include _text-class-generator('font-weight', $tokens, $available_tokens);
 }
