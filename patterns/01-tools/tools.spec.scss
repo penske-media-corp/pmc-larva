@@ -112,22 +112,27 @@
 			@include output {
 
 				$font-size-1: 1rem;
+				$font-size-2: 2rem;
 
 				$line-heights: (
 					sm: 1,
 					md: 2,
 					lg: 3,
 				);
+				
+				$font-family-balto: Balto, sans-serif;
 
 				$font-families: (
-					balto: Balto,
+					balto: ($font-family-balto, 'web',),
+					helvetica: (Helvetica, 'system',),
 				);
 
 
 				@include _text-class-generator(
 					'font-size',
 					(
-						$font-size-1,
+						( $font-size-1, ),
+						( $font-size-2, desktop, )
 					)
 				);
 
@@ -143,6 +148,7 @@
 					'font-family',
 					(
 						balto,
+						helvetica
 					),
 					$font-families
 				);
@@ -153,12 +159,22 @@
 					font-size: 1rem;
 				}
 
+				@media( min-width: 62.5rem ) {
+					.pmc-u-font-size-32\@desktop {
+						font-size: 2rem;
+					}
+				}
+
 				.pmc-u-line-height-sm {
 					line-height: 1;
 				}
 
-				.wf-loaded .pmc-u-font-family-balto {
-					font-family: Balto;
+				.wf-active .pmc-u-font-family-balto {
+					font-family: Balto, sans-serif;
+				}
+
+				.pmc-u-font-family-helvetica {
+					font-family: Helvetica;
 				}
 
 			}
