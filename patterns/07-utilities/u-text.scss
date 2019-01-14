@@ -1,3 +1,9 @@
+@import '../setup';
+
 .u-text-transform-uppercase {
 	text-transform: uppercase;
-}	
+}
+
+@mixin pmc-u-text( $property, $tokens ) {
+	@include _text-class-generator($property, $tokens);
+}

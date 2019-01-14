@@ -18,7 +18,9 @@
 	}
 
 	@each $token in $tokens {
-		.pmc-u-#{$property}-#{_strip-unit($token)} {
+		$name: _strip-unit($token) * 16;
+
+		.pmc-u-#{$property}-#{$name} {
 			#{$property}: #{$token};
 		}
 	}
