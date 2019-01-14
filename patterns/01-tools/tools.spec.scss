@@ -104,4 +104,28 @@
 			}
 		}
 	}
+
+	@include test('@mixin _text-class-generator') {
+
+		@include assert {
+
+			@include output {
+
+				$font-size-1: 1rem;
+
+				@include _text-class-generator(
+					'font-size',
+					(
+						$font-size-1,
+					)
+				);
+			}
+
+			@include expect {
+				.pmc-u-font-size-1 {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
 }
