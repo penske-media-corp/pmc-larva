@@ -1,0 +1,5 @@
+@import '../setup';
+
+@mixin pmc-u-color( $colors, $color_list ) {
+	@include _color-class-generator( 'color', $colors, $color_list );
+}
