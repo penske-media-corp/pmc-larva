@@ -1,0 +1,6 @@
+// Strip Unit
+// @param number with or without units
+// @return integer
+@function _strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}

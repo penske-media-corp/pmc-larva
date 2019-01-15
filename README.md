@@ -1,6 +1,7 @@
 # PMC Packages
 
-`npm install git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git#v0.1`
+Replace the {$VERSION} below with the desired version:
+`npm install git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git#v{$VERSION}`
 
 Add the following aliases to `assets/pmc.config.js`:
 
@@ -14,7 +15,7 @@ Add the following aliases to `assets/pmc.config.js`:
 Then, import an SCSS pattern into an SCSS file with the same name:
 `@import '~@pmc/utilities/u-crop.scss';`
 
-And generate utility classes by calling the namespaced mixin along with the appropriate parameters. In a themes's u-crop.scss, for example, you would call:
+And generate utility classes by calling the namespaced mixin along with the appropriate parameters. In a themes's u-crop.scss, for example, you would call something like:
 
 ```
 @include pmc-u-crop(
@@ -25,9 +26,15 @@ And generate utility classes by calling the namespaced mixin along with the appr
 );
 ```
 
-Which would generate the classes `.u-crop-2x3` and `.u-crop-9x16`.
+Which would generate the classes `.pmc-u-crop-2x3` and `.pmc-u-crop-9x16`.
+
+### Important Note
+
+All CSS output from pmc-packages should be namespaces with both ITCSS namespaces (excluding Grid utilities) and the system namespace, e.g. `.pmc-u-*`. At the moment, pmc-packages should only output grid  utilities and traditional utilities with the `u-` namespace.
+
+### JavaScript
 
 When importing JS patterns, you would do so like this:
 `@import '@pmc/js/Dropdown';`
 
-This will initialize the selector query for whatever the data attribute is for the JavaScript, in this case, `data-dropdown`. Be sure to refer to the pattern's documentation (which is coming soon...) to make sure you have implemented the `data-*` attributes appropriately.
+This will initialize the selector query for whatever the data attribute is for the JavaScript, in this case, `data-pmc-dropdown`. Be sure to refer to the pattern's documentation (which is coming soon...) to make sure you have implemented the `data-*` attributes appropriately. Like the CSS selectors, the JS selectors should also contain the `pmc-*` namespace.

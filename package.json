@@ -15,7 +15,6 @@
   "homepage": "https://bitbucket.org/penskemediacorp/pmc-packages#readme",
   "devDependencies": {
     "jest": "^23.6.0",
-    "lerna": "^3.5.0",
     "sass-true": "^4.0.0"
   },
   "dependencies": {
