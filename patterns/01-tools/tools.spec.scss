@@ -71,7 +71,7 @@
 				}
 
 				@media (min-width: 62.5rem) {
-					.pmc-u-margin-a-1 {
+					.pmc-u-margin-a-1\@desktop {
 						margin: 1rem;
 					}
 				}
@@ -193,6 +193,34 @@
 					font-family: Helvetica;
 				}
 
+			}
+		}
+	}
+}
+
+@include test-module('Color Generators') {
+
+	@include test('@mixin _color-class-generator') {
+		@include assert {
+
+			@include output {
+				$semantic_list: (
+					brand-red: red,
+				);
+
+				@include _color-class-generator(
+					'background-color',
+					(
+						brand-red,
+					),
+					$semantic_list,
+				);
+			}
+
+			@include expect {
+				.pmc-u-background-brand-red {
+					background-color: red;
+				}
 			}
 		}
 	}
