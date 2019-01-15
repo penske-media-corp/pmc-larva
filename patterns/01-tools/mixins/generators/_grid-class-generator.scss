@@ -1,0 +1,90 @@
+@import "../pmc-breakpoint";
+
+@mixin _grid( $columns ) {
+	--cols: #{$columns};
+
+	> * {
+		flex-basis: ( ( 1 / $columns ) * 100% );
+	}
+
+}
+
+@mixin _grid-selector( $columns, $breakpoint: false ) {
+	@if $breakpoint {
+		@include pmc-breakpoint( $breakpoint ) {
+			.pmc-a-cols#{$columns}\@#{$breakpoint} {
+				@include _grid( $columns );
+			}
+		}
+	} @else {
+		.pmc-a-cols#{$columns} {
+			@include _grid( $columns );
+		}
+	}
+}
+
+@mixin _grid-column( $columns, $span ) {
+	@supports ( display: grid ) {
+		grid-column: span #{$span};
+	}
+}
+
+@mixin _grid-column-fallback( $columns, $span ) {
+	flex-basis: ( $span / $columns * 100% );
+}
+
+@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false ) {
+
+	@if $breakpoint {
+		@include pmc-breakpoint( $breakpoint ) {
+			
+			.pmc-a-span#{$span}\@#{$breakpoint} {
+				@include _grid-column( $columns, $span );
+			}
+			
+			// Higher specificity to account for nested grids.
+			.pmc-a-cols#{$columns}\@#{$breakpoint} > .pmc-span#{$span}\@#{$breakpoint} {
+				@include _grid-column-fallback( $columns, $span );
+			}
+
+		}
+	} @else {
+		.pmc-a-span#{$span} {
+			@include _grid-column( $columns, $span );
+		}
+
+		.pmc-a-cols#{$columns} > .pmc-span#{$span} {
+			@include _grid-column-fallback( $columns, $span );
+		}
+	}
+
+}
+
+@mixin _grid-class-generator( $tokens ) {
+
+	@if type-of($tokens) != 'list' {
+		@error "`#{$tokens}` is not a valid value for $tokens. It must be a list of maps.";
+	}
+
+	@each $grid in $tokens {
+		$breakpoint: map-get( $grid, breakpoint );
+		$columns: map-get( $grid, columns );
+		$spans: map-get( $grid, spans );
+
+		// Outputs pmc-colsX selector to be used in conjunction with .pmc-grid.
+		@include _grid-selector( $columns, $breakpoint );
+
+		@if $spans {
+
+			@each $span in $spans {
+
+				// Outputs pmc-spanX selector to be used in conjunction with .pmc-grid-item.
+				@include _grid-span-selector( 
+					$columns,
+					$span, 
+					map-get( $grid, breakpoint )
+				);
+			}
+		}
+	}
+}

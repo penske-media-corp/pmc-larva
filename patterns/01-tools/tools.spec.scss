@@ -105,6 +105,73 @@
 		}
 	}
 
+	@include test('@mixin _grid-class-generator') {
+
+		@include assert {
+
+			@include output {
+				$grids: (
+					(
+						columns: 2,
+						spans: ( 2, ),
+					),
+					(
+						columns: 3,
+						breakpoint: tablet,
+						spans: ( 2, ),
+					),
+				);
+
+				@include _grid-class-generator( $grids );
+			}
+
+			@include expect {
+				.pmc-a-cols2 {
+					--cols: 2;
+				}
+
+				.pmc-a-cols2 > * {
+					flex-basis: 50%;
+				}
+
+				@supports (display: grid) {
+					.pmc-a-span2 {
+						grid-column: span 2;
+					}
+				}
+
+				.pmc-a-cols2 > .pmc-a-span2 {
+					flex-basis: 100%;
+				}
+
+				@media( min-width: 48rem ) {
+					.pmc-a-cols3\@tablet {
+						--cols: 3;
+					}
+
+					.pmc-a-cols3\@tablet > * {
+						flex-basis: 33.33333%;
+					}
+				}
+
+				@media( min-width: 48rem ) {
+
+					.pmc-a-span2\@tablet {
+						@supports ( display: grid ) {
+							grid-column: span 2;
+						}
+					}
+
+					.pmc-a-cols3\@tablet > .pmc-a-span2\@tablet {
+						flex-basis: 66.66667%;
+					}
+				}
+			}
+
+		}
+	}
+
+
 	@include test('@mixin _text-class-generator') {
 
 		@include assert {
@@ -113,7 +180,7 @@
 
 				$font-size-1: 1rem;
 				$font-size-2: 2rem;
-				
+
 				$font-weights: (
 					bold: 600,
 				);
@@ -123,7 +190,7 @@
 					md: 2,
 					lg: 3,
 				);
-				
+
 				$font-family-balto: Balto, sans-serif;
 
 				$font-families: (
@@ -192,8 +259,8 @@
 				.pmc-u-font-family-helvetica {
 					font-family: Helvetica;
 				}
-
 			}
+
 		}
 	}
 }

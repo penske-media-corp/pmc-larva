@@ -1,0 +1,29 @@
+@import '../setup';
+
+.pmc-a-grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+
+	@supports ( display: grid ) {
+		--cols: 1;
+
+		display: grid;
+		grid-gap: 1.25rem;
+		grid-template-columns: repeat( var( --cols ), 1fr );
+	}
+}
+
+.pmc-a-grid-item {
+	// Remove flex charactaristics to honor flex-basis value.
+	flex: none;
+	padding: 0.625rem;
+
+	@supports ( display: grid ) {
+		padding: 0;
+	}
+}
+
+@mixin pmc-a-grid( $grids ) {
+	@include _grid-class-generator( $grids );
+};
