@@ -1,5 +1,18 @@
 # PMC Packages
 
+## Updating pmc-packages in a consuming project
+
+pmc-packages uses Git tags and [Semantic Versioning](https://semver.org/) for versioning. After merging a PR with new functionality, do the following to update both pmc-packages and a consuming project:
+
+1. Add a tag to master in this repo with `git tag -a v{$VERSION} -m 'Description of update'`
+2. In the consuming project, create a branch called update/pmc-packages-{$VERSION}
+3. Update the tag hash in the pmc-packages Git URL in the consuming project's package.json to reflect the new version number
+4. Run `npm install` from theme-name/assets/. 
+5. Commit the package.json and package-lock.json updates with the message `chore: update pmc-packages to v{$VERSION}`
+6. Open a pull request.
+
+## Installing for the first time
+
 Replace the {$VERSION} below with the desired version:
 `npm install git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git#v{$VERSION}`
 
