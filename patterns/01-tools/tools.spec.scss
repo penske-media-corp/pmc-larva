@@ -123,51 +123,144 @@
 				);
 
 				@include _grid-class-generator( $grids );
-
 			}
 
 			@include expect {
-				.pmc-cols2 {
+				.pmc-a-cols2 {
 					--cols: 2;
 				}
 
-				.pmc-cols2 > * {
+				.pmc-a-cols2 > * {
 					flex-basis: 50%;
 				}
 
 				@supports (display: grid) {
-					.pmc-span2 {
+					.pmc-a-span2 {
 						grid-column: span 2;
 					}
 				}
 
-				.pmc-cols2 > .pmc-span2 {
+				.pmc-a-cols2 > .pmc-a-span2 {
 					flex-basis: 100%;
 				}
 
 				@media( min-width: 48rem ) {
-					.pmc-cols3\@tablet {
+					.pmc-a-cols3\@tablet {
 						--cols: 3;
 					}
-					
-					.pmc-cols3\@tablet > * {
+
+					.pmc-a-cols3\@tablet > * {
 						flex-basis: 33.33333%;
 					}
 				}
 
 				@media( min-width: 48rem ) {
-					
-					.pmc-span2\@tablet {
+
+					.pmc-a-span2\@tablet {
 						@supports ( display: grid ) {
 							grid-column: span 2;
 						}
 					}
-					
-					.pmc-cols3\@tablet > .pmc-span2\@tablet {
+
+					.pmc-a-cols3\@tablet > .pmc-a-span2\@tablet {
 						flex-basis: 66.66667%;
 					}
 				}
 			}
+
+		}
+	}
+
+
+	@include test('@mixin _text-class-generator') {
+
+		@include assert {
+
+			@include output {
+
+				$font-size-1: 1rem;
+				$font-size-2: 2rem;
+
+				$font-weights: (
+					bold: 600,
+				);
+
+				$line-heights: (
+					sm: 1,
+					md: 2,
+					lg: 3,
+				);
+
+				$font-family-balto: Balto, sans-serif;
+
+				$font-families: (
+					balto: ($font-family-balto, 'web',),
+					helvetica: (Helvetica, 'system',),
+				);
+
+
+				@include _text-class-generator(
+					'font-size',
+					(
+						( $font-size-1, ),
+						( $font-size-2, desktop, )
+					)
+				);
+
+				@include _text-class-generator(
+					'line-height',
+					(
+						sm,
+					),
+					$line-heights
+				);
+
+				@include _text-class-generator(
+					'font-weight',
+					(
+						bold,
+					),
+					$font-weights
+				);
+
+				@include _text-class-generator(
+					'font-family',
+					(
+						balto,
+						helvetica
+					),
+					$font-families
+				);
+			}
+
+			@include expect {
+				.pmc-u-font-size-16 {
+					font-size: 1rem;
+				}
+
+				@media( min-width: 62.5rem ) {
+					.pmc-u-font-size-32\@desktop {
+						font-size: 2rem;
+					}
+				}
+
+				.pmc-u-line-height-sm {
+					line-height: 1;
+				}
+
+				.pmc-u-font-weight-bold {
+					font-weight: 600;
+				}
+
+				.wf-active .pmc-u-font-family-balto {
+					font-family: Balto, sans-serif;
+				}
+
+				.pmc-u-font-family-helvetica {
+					font-family: Helvetica;
+				}
+			}
+
 		}
 	}
 }

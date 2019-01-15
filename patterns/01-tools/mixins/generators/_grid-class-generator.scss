@@ -37,13 +37,13 @@
 
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
-			
+
 			.pmc-a-span#{$span}\@#{$breakpoint} {
 				@include _grid-column( $columns, $span );
 			}
-			
+
 			// Higher specificity to account for nested grids.
-			.pmc-a-cols#{$columns}\@#{$breakpoint} > .pmc-span#{$span}\@#{$breakpoint} {
+			.pmc-a-cols#{$columns}\@#{$breakpoint} > .pmc-a-span#{$span}\@#{$breakpoint} {
 				@include _grid-column-fallback( $columns, $span );
 			}
 
@@ -53,7 +53,7 @@
 			@include _grid-column( $columns, $span );
 		}
 
-		.pmc-a-cols#{$columns} > .pmc-span#{$span} {
+		.pmc-a-cols#{$columns} > .pmc-a-span#{$span} {
 			@include _grid-column-fallback( $columns, $span );
 		}
 	}
@@ -79,9 +79,9 @@
 			@each $span in $spans {
 
 				// Outputs pmc-spanX selector to be used in conjunction with .pmc-grid-item.
-				@include _grid-span-selector( 
+				@include _grid-span-selector(
 					$columns,
-					$span, 
+					$span,
 					map-get( $grid, breakpoint )
 				);
 			}

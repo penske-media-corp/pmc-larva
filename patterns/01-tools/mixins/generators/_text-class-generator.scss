@@ -1,0 +1,79 @@
+//
+// Text class generator
+//
+// @param $property: CSS property
+// @param $tokens
+// @param $available_tokens: list of token values
+//
+
+@import '../../functions/pmc-rem';
+@import '../pmc-breakpoint';
+
+@mixin _text-class-generator( $property, $tokens, $available_tokens: () ) {
+	@if $property != 'font-size' and $property != 'line-height' and $property != 'font-family' and $property != 'font-weight' {
+		@error "`#{$property}` is not a valid value for $property. It must be either 'font-size', 'line-height', 'font-family', 'font-weight'.";
+	}
+
+	@if type-of($tokens) != 'list' {
+		@error "`#{$tokens}` is not a valid value for $tokens. It must be a list.";
+	}
+
+	@each $token in $tokens {
+		$selector: '';
+		$breakpoint: '';
+		$value: '';
+
+		@if (length($token) == 2) {
+			$breakpoint: nth($token, 2);
+		}
+
+		@if ($property == 'font-size') {
+
+			@if type-of($token) != 'list' {
+				@error "`#{$token}` is not a valid value for $tokens for the `font-size` property. It must be a list of lists.";
+			}
+
+			$value: nth($token, 1);
+
+			@if (length($token) == 2) {
+				$at: \@;
+				$selector: ".pmc-u-#{$property}-#{_strip-unit($value) * 16}#{$at}#{$breakpoint}";
+			} @else {
+				$selector: ".pmc-u-#{$property}-#{_strip-unit($value) * 16}";
+			}
+
+		}
+
+		@if ($property == 'line-height' or $property == 'font-weight') {
+			$selector: ".pmc-u-#{$property}-#{$token}";
+			$value: map-get($available_tokens, $token);
+		}
+
+		@if ($property == 'font-family') {
+			$token_name: $token;
+			$token: map-get($available_tokens, $token);
+			$value: nth($token, 1);
+			$type: nth($token, 2);
+			$selector: ".pmc-u-#{$property}-#{$token_name}";
+
+			@if ($type == 'web') {
+				$selector: ".wf-active #{$selector}";
+			}
+		}
+
+		@if (length($token) == 2 and $property == 'font-size') {
+			$value: nth($token, 1);
+
+			@include pmc-breakpoint( $breakpoint ) {
+				#{$selector} {
+					#{$property}: $value;
+				}
+			}
+
+		} @else {
+			#{$selector} {
+				#{$property}: $value;
+			}
+		}
+	}
+}
