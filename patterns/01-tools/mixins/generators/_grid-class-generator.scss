@@ -12,12 +12,12 @@
 @mixin _grid-selector( $columns, $breakpoint: false ) {
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
-			.pmc-cols#{$columns}\@#{$breakpoint} {
+			.pmc-a-cols#{$columns}\@#{$breakpoint} {
 				@include _grid( $columns );
 			}
 		}
 	} @else {
-		.pmc-cols#{$columns} {
+		.pmc-a-cols#{$columns} {
 			@include _grid( $columns );
 		}
 	}
@@ -38,22 +38,22 @@
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
 			
-			.pmc-span#{$span}\@#{$breakpoint} {
+			.pmc-a-span#{$span}\@#{$breakpoint} {
 				@include _grid-column( $columns, $span );
 			}
 			
 			// Higher specificity to account for nested grids.
-			.pmc-cols#{$columns}\@#{$breakpoint} > .pmc-span#{$span}\@#{$breakpoint} {
+			.pmc-a-cols#{$columns}\@#{$breakpoint} > .pmc-span#{$span}\@#{$breakpoint} {
 				@include _grid-column-fallback( $columns, $span );
 			}
 
 		}
 	} @else {
-		.pmc-span#{$span} {
+		.pmc-a-span#{$span} {
 			@include _grid-column( $columns, $span );
 		}
 
-		.pmc-cols#{$columns} > .pmc-span#{$span} {
+		.pmc-a-cols#{$columns} > .pmc-span#{$span} {
 			@include _grid-column-fallback( $columns, $span );
 		}
 	}

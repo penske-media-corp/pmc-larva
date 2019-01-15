@@ -1,6 +1,6 @@
 @import '../setup';
 
-.pmc-grid {
+.pmc-a-grid {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: start;
@@ -14,7 +14,7 @@
 	}
 }
 
-.pmc-grid-item {
+.pmc-a-grid-item {
 	// Remove flex charactaristics to honor flex-basis value.
 	flex: none;
 	padding: 0.625rem;
@@ -24,6 +24,6 @@
 	}
 }
 
-@mixin pmc-grid( $grids ) {
+@mixin pmc-a-grid( $grids ) {
 	@include _grid-class-generator( $grids );
 };
