@@ -16,11 +16,11 @@
 	text-align: left;
 }
 
-@mixin pmc-u-font-family( $tokens ) {
+@mixin pmc-u-font-family( $tokens, $available_tokens ) {
 	@include _text-class-generator('font-family', $tokens, $available_tokens);
 }
 
-@mixin pmc-u-line-height( $tokens ) {
+@mixin pmc-u-line-height( $tokens, $available_tokens ) {
 	@include _text-class-generator('line-height', $tokens, $available_tokens);
 }
 
@@ -28,6 +28,6 @@
 	@include _text-class-generator('font-size', $tokens);
 }
 
-@mixin pmc-u-font-weight( $tokens ) {
+@mixin pmc-u-font-weight( $tokens, $available_tokens ) {
 	@include _text-class-generator('font-weight', $tokens, $available_tokens);
 }
