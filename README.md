@@ -1,21 +1,23 @@
 # PMC Packages
 
+Note: replace the $VERSION in the below notes with the desired version, e.g. `1.1.0-alpha`
+
 ## Updating pmc-packages in a consuming project
 
 pmc-packages uses Git tags and [Semantic Versioning](https://semver.org/) for versioning. After merging a PR with new functionality, do the following to update both pmc-packages and a consuming project:
 
-1. Add a tag to master in this repo with `git tag -a v{$VERSION} -m 'Description of update'`
+1. Add a tag to master in this repo with `git tag -a v$VERSION -m 'Description of update'`
 2. Update the `version` entry in pmc-packages package.json
-3. In the consuming project, create a branch called update/pmc-packages-{$VERSION}
+3. In the consuming project, create a branch called update/pmc-packages-v$VERSION
 4. Update the tag hash in the pmc-packages Git URL in the consuming project's package.json to reflect the new version number
-5. Run `npm install` from theme-name/assets/. 
-6. Commit the package.json and package-lock.json updates with the message `chore: update pmc-packages to v{$VERSION}`
+5. Run `npm install` from theme-name/assets/.
+6. Commit the package.json and package-lock.json updates with the message `chore: update pmc-packages to v$VERSION`
 7. Open a pull request.
 
 ## Installing for the first time
 
-Replace the {$VERSION} below with the desired version:
-`npm install git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git#v{$VERSION}`
+From within the assets/ directory already containing a package.json, run:
+`npm install git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git#v$VERSION`
 
 Add the following aliases to `assets/pmc.config.js`:
 
