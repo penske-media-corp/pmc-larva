@@ -12,6 +12,6 @@ $pmc-screen-mobile-max:     47.999rem;
 	} @else if $point == tablet {
 		@media (min-width: $pmc-screen-tablet) { @content; }
 	} @else if $point == mobile-max {
-		@media (max-width: $pmc-screen-mobile) { @content; }
+		@media (max-width: $pmc-screen-mobile-max) { @content; }
 	}
 }
