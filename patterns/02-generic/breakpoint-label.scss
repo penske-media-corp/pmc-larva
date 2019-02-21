@@ -25,4 +25,9 @@ body::after {
 		content: 'desktop';
 		background-color: rebeccapurple;
 	}
+
+	@media( min-width: $pmc-screen-desktop-xl ) {
+		content: 'desktop-xl';
+		background-color: orangered;
+	}
 }
