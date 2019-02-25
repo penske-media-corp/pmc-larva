@@ -1,6 +1,6 @@
 {
   "name": "pmc-packages",
-  "version": "2.4.2-alpha",
+  "version": "2.4.3-alpha",
   "description": "Front-end packages for PMC.",
   "main": "index.js",
   "scripts": {
