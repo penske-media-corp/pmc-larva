@@ -1,0 +1,92 @@
+// Typography
+//
+// Markup: typography.html
+//
+// Style guide: Settings.Typography
+
+// ---------------------------- //
+// Font Families
+// ---------------------------- //
+
+$font-family-sans-serif-basic: Helvetica;
+$font-family-serif-basic:      Georgia;
+$font-family-sans-serif-fancy: Balto, Helvetica, sans-serif;
+$font-family-serif-fancy:      Eksell, Georgia, serif;
+
+// The second argument indicated whether this is a webfont or system font
+// so that the appropriate parent classes are added for async webfont loading.
+// The third argument is a fallback font that is only referenced in the
+// font-family mixin, not in the text generator (yet).
+$semantic-font-families: (
+	'balto':     ($font-family-sans-serif-fancy, 'web', $font-family-sans-serif-basic),
+	'helvetica': ($font-family-sans-serif-basic, 'system'),
+	'georgia':   ($font-family-serif-basic, 'system'),
+	'eksell':    ($font-family-serif-fancy, 'web', $font-family-serif-basic),
+);
+
+
+// ---------------------------- //
+// Font Sizes
+// ---------------------------- //
+
+// Note that font sizes do not read from a map unlike other typography
+// values. Until we have more of a system for the actual designs,
+// these will one dimensional variables.
+//
+// Font size variables are names as follows:
+// $font-size-{px}: {rem};
+
+$font-size-8: 0.5rem;
+$font-size-10: 0.625rem;
+$font-size-12: 0.75rem;
+$font-size-13: 0.812rem;
+$font-size-14: 0.875rem;
+$font-size-16: 1rem;
+$font-size-18: 1.125rem;
+$font-size-20: 1.25rem;
+$font-size-22: 1.375rem;
+$font-size-24: 1.5rem;
+$font-size-26: 1.625rem;
+$font-size-28: 1.75rem;
+$font-size-30: 1.875rem;
+$font-size-32: 2rem;
+$font-size-36: 2.25rem;
+$font-size-38: 2.375rem;
+$font-size-40: 2.5rem;
+$font-size-46: 2.875rem;
+$font-size-50: 3.125rem;
+$font-size-56: 3.5rem;
+$font-size-74: 4.625rem;
+$font-size-86: 5.375rem;
+
+
+// ---------------------------- //
+// Font Weights($font-size-56,)
+// ---------------------------- //
+
+$font-weight-light:  300;
+$font-weight-normal: 400;
+$font-weight-bold:   700;
+
+$semantic-font-weights: (
+	light:  $font-weight-light,
+	normal: $font-weight-normal,
+	bold:   $font-weight-bold,
+);
+
+
+// ---------------------------- //
+// Line Heights
+// ---------------------------- //
+
+$line-height-small:  1.1;
+$line-height-normal: 1.35;
+$line-height-copy:   1.5;
+$line-height-large:  1.85;
+
+$semantic-line-heights: (
+	small:  $line-height-small,
+	normal: $line-height-normal,
+	copy:   $line-height-copy,
+	large:  $line-height-large,
+);
