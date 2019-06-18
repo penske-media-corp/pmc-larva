@@ -1,18 +1,18 @@
 {
-  "name": "pmc-packages",
-  "version": "2.4.3-alpha",
-  "description": "Front-end packages for PMC.",
+  "name": "larva",
+  "version": "0.0.0-alpha",
+  "description": "PMC's embryonic design system.",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-packages.git"
+    "url": "git+ssh://git@github.com:Penske-Media-Corp/larva.git"
   },
   "author": "Lara Schenck",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/penskemediacorp/pmc-packages#readme",
+  "homepage": "https://github.com/Penske-Media-Corp/larva",
   "devDependencies": {
     "jest": "^23.6.0",
     "sass-true": "^4.0.0"
