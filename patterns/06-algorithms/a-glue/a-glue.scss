@@ -39,9 +39,6 @@
 	@include _pmc-a-glue-base;
 }
 
-// @TODO: Consolidate these, perhaps make naming shorter
-// so you add each value piece-meal instead of in a single selector.
-
 .pmc-a-glue--l-0 {
 	--a-glue-left: 0;
 }
