@@ -7,10 +7,10 @@
   "license": "MIT",
   "main": "lib/larva.js",
   "directories": {
-    "settings": "00-settings",
-    "tools": "01-tools",
-    "components": "04-components",
-    "objects": "05-components",
+    "00-settings": "settings",
+    "01-tools": "tools",
+    "04-components": "components",
+    "05-objects": "objects",
     "test": "__tests__"
   },
   "files": [
