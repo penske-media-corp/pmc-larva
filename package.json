@@ -19,6 +19,6 @@
     "sass-true": "^4.0.0"
   },
   "dependencies": {
-    "pmc-build-utils": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-build-utils.git#v0.1.1"
+    "pmc-build-utils": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-build-utils.git#v1.5.0-beta"
   }
 }
