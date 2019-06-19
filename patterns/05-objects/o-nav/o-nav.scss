@@ -13,6 +13,10 @@
 
 .o-nav__title {}
 
+.o-nav__list {
+	@include pmc-unstyle-list;
+}
+
 .o-nav--flexy .o-nav__list {
 	display: flex;
 	justify-content: center;
