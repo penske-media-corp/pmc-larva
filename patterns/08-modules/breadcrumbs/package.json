@@ -1,8 +1,0 @@
-{
-	"name": "@penskemediacorp/breadcrumbs",
-	"version": "1.0.1-alpha.0",
-	"dependencies": {
-		"@penskemediacorp/o-nav": "^2.0.0-alpha.0"
-	},
-	"gitHead": "726158eaf111a2d4aed485896668f408759e74b1"
-}
