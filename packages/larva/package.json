@@ -13,9 +13,6 @@
     "05-objects": "objects",
     "test": "__tests__"
   },
-  "files": [
-    "*.twig"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Penske-Media-Corp/larva.git"
