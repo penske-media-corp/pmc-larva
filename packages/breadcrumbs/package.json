@@ -1,6 +1,6 @@
 {
   "name": "breadcrumbs",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.1-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/larva/tree/master/packages/breadcrumbs#readme",
@@ -17,6 +17,6 @@
     "url": "https://github.com/Penske-Media-Corp/larva/issues"
   },
   "dependencies": {
-    "larva": "^1.0.0-alpha.0"
+    "larva": "^1.0.1-alpha.0"
   }
 }
