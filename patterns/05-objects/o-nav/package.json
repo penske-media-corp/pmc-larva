@@ -1,8 +1,8 @@
 {
 	"name": "@penskemediacorp/o-nav",
-	"version": "0.0.7-alpha.0",
+	"version": "1.0.0-alpha.0",
 	"dependencies": {
-		"@penskemediacorp/c-nav-link": "^0.0.7-alpha.0"
+		"@penskemediacorp/c-nav-link": "^1.0.0-alpha.0"
 	},
 	"gitHead": "726158eaf111a2d4aed485896668f408759e74b1"
 }
