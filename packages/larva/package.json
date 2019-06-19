@@ -1,11 +1,21 @@
 {
   "name": "larva",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.0-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/larva/tree/master/packages/larva#readme",
   "license": "MIT",
   "main": "lib/larva.js",
+  "directories": {
+	"settings": "00-settings",
+	"tools": "01-tools",
+	"components": "04-components",
+	"objects": "05-components",
+    "test": "__tests__"
+  },
+  "files": [
+    "*.twig"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Penske-Media-Corp/larva.git"
