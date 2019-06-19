@@ -2,6 +2,6 @@
 	"name": "@larva/o-nav",
 	"version": "1.0.0",
 	"dependencies": {
-		"@larva/c-nav-link": ""
+		"@larva/c-nav-link": "1.0.0"
 	}
 }
