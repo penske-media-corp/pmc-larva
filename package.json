@@ -1,5 +1,5 @@
 {
-  "name": "larva",
+  "name": "@penskemediacorp/larva",
   "version": "0.0.0-alpha",
   "description": "PMC's embryonic design system.",
   "main": "index.js",
