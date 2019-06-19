@@ -14,6 +14,7 @@
   "license": "ISC",
   "homepage": "https://github.com/Penske-Media-Corp/larva",
   "devDependencies": {
+    "@lerna/otplease": "^3.14.0",
     "jest": "^23.6.0",
     "lerna": "^3.5.0",
     "sass-true": "^4.0.0"
