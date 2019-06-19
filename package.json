@@ -1,5 +1,5 @@
 {
-  "name": "larva",
+  "name": "@larva/larva",
   "version": "0.0.0-alpha",
   "description": "PMC's embryonic design system.",
   "main": "index.js",
@@ -16,9 +16,7 @@
   "devDependencies": {
     "jest": "^23.6.0",
     "lerna": "^3.15.0",
-    "sass-true": "^4.0.0"
-  },
-  "dependencies": {
-    "pmc-build-utils": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-build-utils.git#v1.5.0-beta"
+    "sass-true": "^4.0.0",
+	"pmc-build-utils": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-build-utils.git#v1.5.0-beta"
   }
 }
