@@ -6,13 +6,10 @@
   "homepage": "https://github.com/Penske-Media-Corp/larva/tree/master/packages/larva#readme",
   "license": "MIT",
   "main": "lib/larva.js",
-  "directories": {
-    "00-settings": "settings",
-    "01-tools": "tools",
-    "04-components": "components",
-    "05-objects": "objects",
-    "test": "__tests__"
-  },
+  "files": [
+    "*.twig",
+    "*.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Penske-Media-Corp/larva.git"
