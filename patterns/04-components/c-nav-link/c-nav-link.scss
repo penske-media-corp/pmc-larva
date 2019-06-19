@@ -6,11 +6,9 @@
 //
 // Style Guide: Components.NavLink
 
-@import '@setup';
-
 // @TODO: It should be named `c-link` because it is used in other locations besides navs.
 .c-nav-link,
 .c-nav-link:hover {
 	text-decoration: none;
-	color: currentColor;
+	color: green;
 }
