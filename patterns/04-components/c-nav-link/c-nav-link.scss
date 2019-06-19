@@ -1,0 +1,16 @@
+// Nav Link
+//
+// The nav link assumes the color and hover color applied to its container via utilities.
+//
+// Markup: c-nav-link.twig
+//
+// Style Guide: Components.NavLink
+
+@import '@setup';
+
+// @TODO: It should be named `c-link` because it is used in other locations besides navs.
+.c-nav-link,
+.c-nav-link:hover {
+	text-decoration: none;
+	color: currentColor;
+}

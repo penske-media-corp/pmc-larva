@@ -1,0 +1,7 @@
+{
+	"name": "@larva/breadcrumbs",
+	"version": "1.0.0",
+	"dependencies": {
+		"@larva/o-nav": "git@github.com:Penske-Media-Corp/larva.git"
+	}
+}

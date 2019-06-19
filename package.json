@@ -15,6 +15,7 @@
   "homepage": "https://github.com/Penske-Media-Corp/larva",
   "devDependencies": {
     "jest": "^23.6.0",
+    "lerna": "^3.5.0",
     "sass-true": "^4.0.0"
   },
   "dependencies": {
