@@ -1,7 +1,7 @@
 {
 	"name": "@larva/breadcrumbs",
-	"version": "1.0.0",
+	"version": "0.0.1-alpha.0",
 	"dependencies": {
-		"@larva/o-nav": "1.0.0"
+		"@larva/o-nav": "^0.0.1-alpha.0"
 	}
 }
