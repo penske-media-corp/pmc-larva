@@ -1,11 +1,11 @@
 {
-  "name": "breadcrumbs",
+  "name": "larva",
   "version": "0.0.2-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
-  "homepage": "https://github.com/Penske-Media-Corp/larva/tree/master/packages/breadcrumbs#readme",
+  "homepage": "https://github.com/Penske-Media-Corp/larva/tree/master/packages/larva#readme",
   "license": "MIT",
-  "main": "lib/breadcrumbs.js",
+  "main": "lib/larva.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -22,8 +22,5 @@
   },
   "bugs": {
     "url": "https://github.com/Penske-Media-Corp/larva/issues"
-  },
-  "dependencies": {
-    "larva": "0.0.2-alpha.0"
   }
 }
