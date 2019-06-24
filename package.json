@@ -1,22 +1,7 @@
 {
-  "name": "@larva/larva",
-  "version": "0.0.0-alpha",
-  "description": "PMC's embryonic design system.",
-  "main": "index.js",
-  "scripts": {
-    "test": "node_modules/.bin/jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:Penske-Media-Corp/larva.git"
-  },
-  "author": "Lara Schenck",
-  "license": "MIT",
-  "homepage": "https://github.com/Penske-Media-Corp/larva",
+  "name": "larva mono-repo",
+  "private": true,
   "devDependencies": {
-    "jest": "^23.6.0",
-    "lerna": "^3.15.0",
-    "sass-true": "^4.0.0",
-	"pmc-build-utils": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-build-utils.git#v1.5.0-beta"
+    "lerna": "^3.15.0"
   }
 }
