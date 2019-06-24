@@ -18,5 +18,8 @@
   },
   "bugs": {
     "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
+  },
+  "dependencies": {
+	  "@penskemediacorp/larva-patterns": "0.0.2-alpha.0"
   }
 }
