@@ -6,8 +6,6 @@ const o_nav_list_items = [
 	c_nav_link
 ];
 
-console.log( o_nav_list_items );
-
 module.exports = {
 	"modifier_class": "",
 	"o_nav_data_attributes": "",
@@ -19,4 +17,4 @@ module.exports = {
 	"o_nav_list_item_data_attributes": "",
 	"o_nav_list_item_classes": "",
 	"o_nav_list_items": o_nav_list_items
-}
+};
