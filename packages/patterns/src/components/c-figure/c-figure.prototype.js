@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"c_figure_permalink_url": "https://notlaura.com",
 	"c_figure_alt_attr": "Thumbnail image",
 	"c_figure_placeholder_image_url": "https://picsum.photos/300/300",

@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"o_heading_classes": "u-flex u-align-items-center pmc-u-background-black pmc-u-padding-a-1",
 	"c_heading": {
 		"c_heading_classes": "pmc-u-color-white",
@@ -9,4 +9,4 @@
 		"c_button_url": "#",
 		"c_button_text": "Link"
 	}
-}
+};
