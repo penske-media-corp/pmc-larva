@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	</head>
+	<body>
+		<main>
+			<h1>{{ pattern }}</h1>
+			{% include "@larva/objects/" ~ pattern ~ "/" ~ pattern ~ ".twig" with data %}
+			<pre>
+				{{ data|json_encode() }}
+			</pre>
+		</main>
+	</body>
+</html>
