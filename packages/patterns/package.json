@@ -7,11 +7,12 @@
   "license": "ISC",
   "main": "lib/patterns.js",
   "directories": {
-    "lib": "lib",
+    "lib": "scripts",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+	"src/components/**/*",
+	"src/objects/**/*"
   ],
   "repository": {
     "type": "git",
