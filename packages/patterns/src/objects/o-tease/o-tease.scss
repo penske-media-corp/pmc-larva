@@ -1,0 +1,30 @@
+// Tease
+//
+// The tease is a side by side image with a title and additional, optional lines of text beneath.
+//
+// .o-tease--flipped - Order of primary and secondary are reversed.
+//
+// Markup: o-tease.twig
+//
+// Style guide: Objects.Tease
+
+@import '@setup';
+
+.o-tease {
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.o-tease--flipped {
+	flex-direction: row;
+}
+
+.o-tease__primary {
+	flex-grow: 1;
+}
+
+.o-tease__secondary {
+	width: 30%;
+	flex-shrink: 0;
+}

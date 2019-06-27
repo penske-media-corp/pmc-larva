@@ -1,0 +1,20 @@
+{% if c_heading_is_primary_heading %}
+	<h1 class="c-heading {{ modifier_class }} {{ c_heading_classes }}">
+{% else %}
+	<h2 class="c-heading {{ modifier_class }} {{ c_heading_classes }}">
+{% endif %}
+
+	{% if c_heading_url %}
+		<a href="{{ c_heading_url }}" class="{{ c_heading_link_classes }}">
+	{% endif %}
+
+		{{ c_heading_text }}
+
+	{% if c_heading_url %}
+		</a>
+	{% endif %}
+{% if c_heading_is_primary_heading %}
+	</h1>
+{% else %}
+	</h2>
+{% endif %}

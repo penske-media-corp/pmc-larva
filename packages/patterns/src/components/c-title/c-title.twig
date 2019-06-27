@@ -1,0 +1,23 @@
+<h3 class="c-title {{ modifier_class }} {{ c_title_classes }}">
+
+	{% if c_title_above_url %}
+		<a href="{{ c_title_above_url }}" class="{{ c_title_above_link_classes }}">
+			{{ c_title_above_text }}
+		</a>
+	{% endif %}
+
+	{% if c_title_url %}
+		<a href="{{ c_title_url }}" class="c-title__link {{ c_title_link_classes }}"  {{ c_title_link_data_attr }}>
+	{% endif %}
+
+		{% if c_title_before_text %}
+			<span class="c-title__before {{ c_title_before_classes }}">{{ c_title_before_text }}</span>
+		{% endif %}
+
+		{{ c_title_text }}
+
+	{% if c_title_url %}
+		</a>
+	{% endif %}
+
+</h3>

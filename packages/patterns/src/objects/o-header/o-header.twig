@@ -1,0 +1,17 @@
+<header class="o-heading {{ modifier_class }} {{ o_heading_classes }}">
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	{% if c_figure %}
+		{% include "@larva/components/c-figure/c-figure.twig" with c_figure %}
+	{% endif %}
+
+	{% if c_button %}
+		{% include "@larva/components/c-button/c-button.twig" with c_button %}
+	{% endif %}
+
+	{% if o_sponsored_by %}
+		{% include "@larva/objects/o-sponsored-by/o-sponsored-by.twig" with o_sponsored_by %}
+	{% endif %}
+</header>

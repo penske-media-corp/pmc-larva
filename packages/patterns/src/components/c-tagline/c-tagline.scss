@@ -1,0 +1,19 @@
+// Tagline
+//
+// Tagline supports both escaped text data as `c_tagline_text` and markup from `wp_kses_post` as `c_tagline_markup`.
+//
+// Markup: c-tagline.twig
+//
+// Style Guide: Components.Tagline
+
+@import '~@setup';
+
+.c-tagline,
+.c-tagline > p {
+	margin-top: 0;
+	margin-bottom: $spacer-050;
+}
+
+.c-tagline--a-content__link a {
+	@include a-content__link( inherit );
+}
