@@ -1,1 +1,23 @@
-node_modules/
+# Version control
+.svn
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+nbproject/
+*/tests/build/
+
+# Compass/SASS/SCSS
+.sass-cache
+
+*.map
+
+/test-errors.log
+node_modules
