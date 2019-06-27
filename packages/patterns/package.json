@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-patterns",
-  "version": "0.0.4-alpha.0",
+  "version": "0.0.5-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/patterns#readme",
@@ -11,8 +11,8 @@
     "test": "__tests__"
   },
   "files": [
-	"src/components/**/*",
-	"src/objects/**/*"
+    "src/components/**/*",
+    "src/objects/**/*"
   ],
   "repository": {
     "type": "git",
