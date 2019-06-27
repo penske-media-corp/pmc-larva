@@ -1,5 +1,5 @@
-{
-	"o_story_list_teases": [
+module.exports = {
+	"o_tease_list_items": [
 		{
 			"c_title": {
 				"c_title_text": "Story list item 1"

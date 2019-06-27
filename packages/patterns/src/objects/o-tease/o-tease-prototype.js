@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"o_tease_url": "#",
 	"o_tease_primary_classes": "",
 	"o_tease_secondary_classes": "",
@@ -19,4 +19,4 @@
 		"c_figure_image_url": "https://picsum.photos/100/100",
 		"c_figure_caption_text": "Here in o-tease"
 	}
-}
+};
