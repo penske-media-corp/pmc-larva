@@ -4,8 +4,8 @@
 	</head>
 	<body>
 		<main>
-			<h1>{{ pattern }}</h1>
-			{% include "@larva/objects/" ~ pattern ~ "/" ~ pattern ~ ".twig" with data %}
+			<h1>{{ type ~ ': ' ~ name }}</h1>
+			{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
 			<pre>
 				{{ data|json_encode() }}
 			</pre>

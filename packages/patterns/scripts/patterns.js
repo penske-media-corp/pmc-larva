@@ -36,9 +36,9 @@ app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.twig', { data: data, 'pattern': 'Welcome' } ) );
 })
 
-app.get( '/pattern/:pattern', function (req, res) {
+app.get( '/:type/:name', function (req, res) {
 
-	let data = require( '../src/objects/' + req.params.pattern +'/' + req.params.pattern + '-prototype' );
+	let data = require( '../src/' + req.params.type + '/' + req.params.name +'/' + req.params.name + '-prototype' );
 	req.params[ 'data' ] = data;
 	res.end( twing.render( 'index.twig', req.params ) );
 })
