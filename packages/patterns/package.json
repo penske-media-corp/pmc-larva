@@ -26,5 +26,11 @@
   },
   "bugs": {
     "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
+  },
+  "dependencies": {
+	  "@penskemediacorp/larva-scss": "0.0.5-alpha.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
