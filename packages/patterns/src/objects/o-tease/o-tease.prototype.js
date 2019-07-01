@@ -13,10 +13,10 @@ module.exports = {
 		"c_tagline_classes": "",
 		"c_tagline_markup": "here is title text from o-tease.json"
 	},
-	"c_figure": {
-		"c_figure_crop_class": "pmc-u-crop-2x3",
-		"c_figure_alt_attr": "Thumbnail image",
-		"c_figure_image_url": "https://picsum.photos/100/100",
-		"c_figure_caption_text": "Here in o-tease"
+	"o_figure": {
+		"o_figure_crop_class": "pmc-u-crop-2x3",
+		"o_figure_alt_attr": "Thumbnail image",
+		"o_figure_image_url": "https://picsum.photos/100/100",
+		"o_figure_caption_text": "Here in o-tease"
 	}
 };

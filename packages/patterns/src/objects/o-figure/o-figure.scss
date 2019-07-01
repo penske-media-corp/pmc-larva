@@ -4,33 +4,33 @@
 // pattern. It will assume the width of it's parent and supports an optional cropping class,
 // link wrapper, and a caption.
 //
-// .c-figure--circle - Should be used in conjunction with pmc-u-crop-1x1 for the crop class.
+// .o-figure--circle - Should be used in conjunction with pmc-u-crop-1x1 for the crop class.
 //
-// Markup: c-figure.twig
+// Markup: o-figure.twig
 //
 // Style guide: Components.Figure
 
 @import '~@setup';
 
-.c-figure {
+.o-figure {
 	width: 100%;
 	display: block;
 }
 
-.c-figure--circle {
+.o-figure--circle {
 	border-radius: 50%;
 	overflow: hidden;
 }
 
-.c-figure--embedded {
+.o-figure--embedded {
 	width: auto;
 }
 
-.c-figure__link {
+.o-figure__link {
 	@include pmc-unstyle-link;
 }
 
-.c-figure__image {
+.o-figure__image {
 	width: 100%;
 	height: auto;
 	display: block;
@@ -41,6 +41,6 @@
 	transform: translate3d( 0px, 0px, 0px ); // stylelint-disable-line unit-blacklist
 }
 
-.c-figure__link:hover .c-figure__image {
+.o-figure__link:hover .o-figure__image {
 	opacity: 0.75;
 }
