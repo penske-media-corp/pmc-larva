@@ -1,0 +1,57 @@
+{% if o_figure_permalink_url %}
+	<a href="{{ o_figure_permalink_url }}" class="c-figure__link {{ o_figure_link_classes }}">
+{% endif %}
+
+{% if o_figure_screen_reader_text %}
+	<span class="a-screen-reader-only">{{ o_figure_screen_reader_text }}</span>
+{% endif %}
+
+{% if has_toaster %}
+	<figure class="c-figure {{ modifier_class }} {{ o_figure_classes }}" data-toaster-activate-trigger>
+{% else %}
+	<figure class="c-figure {{ modifier_class }} {{ o_figure_classes }}" style="{{ o_figure_width_attr }}">
+{% endif %}
+
+{% if o_figure_crop_class %}
+	<div class="{{ o_figure_crop_class }}">
+{% endif %}
+
+{% if o_figure_image_markup %}
+	{{ o_figure_image_markup }}
+{% else %}
+	<img class="c-figure__image {{ o_figure_image_classes }}" src="{{ o_figure_placeholder_image_url }}" data-lazy-src="{{ o_figure_image_url }}" alt="{{ o_figure_alt_attr }}">
+{% endif %}
+
+{% if c_button %}
+	{% include "@larva/components/c-button/c-button.twig" with c_button %}
+{% endif %}
+
+{% if o_figure_crop_class %}
+	</div>
+{% endif %}
+
+{# Backwards Compatibility #}
+{% if o_figure_caption_text %}
+	<figcaption class="c-figure__caption {{ o_figure_caption_classes }}">{{ o_figure_caption_text }}</figcaption>
+{% endif %}
+
+{% if o_figure_show_figcaption %}
+	<figcaption class="c-figure__caption {{ o_figure_figcaption_classes }}">
+		{% if o_figure_caption_markup %}
+			<span class="{{ o_figure_caption_classes }}">{{ o_figure_caption_markup }}</span>
+		{% endif %}
+		{% if o_figure_credit_text %}
+			<span class="{{ o_figure_credit_classes }}">{{ o_figure_credit_text }}</span>
+		{% endif %}
+	</figcaption>
+{% endif %}
+
+{% if c_play_badge %}
+	{% include "@larva/components/c-play-badge/c-play-badge.twig" with c_play_badge %}
+{% endif %}
+
+</figure>
+
+{% if o_figure_permalink_url %}
+	</a>
+{% endif %}
