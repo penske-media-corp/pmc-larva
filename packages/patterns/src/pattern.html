@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="/css/critical-css.css">
+		<link rel="stylesheet" href="/css/common.css">
+	</head>
+	<body>
+		<main>
+			<h1>{{ type ~ ': ' ~ name }}</h1>
+			{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
+			<div style="width: 500px; overflow: scroll; margin-top: 20px;">
+				<pre>
+					{{ data|json_encode() }}
+				</pre>
+			</div>
+		</main>
+	</body>
+</html>
