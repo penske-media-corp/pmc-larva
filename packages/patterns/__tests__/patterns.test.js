@@ -1,7 +1,9 @@
 'use strict';
 
-const patterns = require('..');
+// const patterns = require('..');
 
 describe('patterns', () => {
-    tests.todo( 'should exist' );
+	test( 'test stuff', () => {
+		expect( 1 ).toBe( 1 );
+	})
 });

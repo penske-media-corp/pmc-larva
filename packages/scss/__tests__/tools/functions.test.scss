@@ -1,0 +1,17 @@
+@import "true";
+@import "../../src/tools/tools.scss";
+
+// Functions
+@include test-module('Functions') {
+
+	// Private _strip-unit function.
+	@include test('@function _strip-unit') {
+		@include assert-equal( _strip-unit(16px), 16 );
+	}
+
+	// pmc-rem function.
+	@include test('@function pmc-rem') {
+		@include assert-equal( pmc-rem(16), '1rem' );
+	}
+
+}

@@ -1,0 +1,25 @@
+@import "true";
+@import "../../src/tools/tools.scss";
+
+// Module Group
+@include test-module('Mixins') {
+
+	// pmc-breakpoint mixin.
+	@include test('@mixin pmc-breakpoint') {
+
+		@include assert {
+
+			@include output {
+				@include pmc-breakpoint( desktop ) {
+					font-size: 1rem;
+				}
+			}
+
+			@include contains {
+				@media( min-width: $pmc-screen-desktop ) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

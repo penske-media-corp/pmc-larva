@@ -1,43 +1,5 @@
 @import "true";
-@import "tools.scss";
-
-// Functions
-@include test-module('Functions') {
-
-	// Private _strip-unit function.
-	@include test('@function _strip-unit') {
-		@include assert-equal( _strip-unit(16px), 16 );
-	}
-
-	// pmc-rem function.
-	@include test('@function pmc-rem') {
-		@include assert-equal( pmc-rem(16), '1rem' );
-	}
-
-}
-
-// Module Group
-@include test-module('Mixins') {
-
-	// pmc-breakpoint mixin.
-	@include test('@mixin pmc-breakpoint') {
-
-		@include assert {
-
-			@include output {
-				@include pmc-breakpoint( desktop ) {
-					font-size: 1rem;
-				}
-			}
-
-			@include contains {
-				@media( min-width: $pmc-screen-desktop ) {
-					font-size: 1rem;
-				}
-			}
-		}
-	}
-}
+@import "../../src/tools/tools.scss";
 
 @include test-module('Class Generators') {
 

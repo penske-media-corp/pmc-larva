@@ -1,4 +1,4 @@
-@import "../pmc-breakpoint";
+@import "../mixins/pmc-breakpoint";
 
 @mixin _grid( $columns ) {
 	--cols: #{$columns};

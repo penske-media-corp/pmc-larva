@@ -6,8 +6,8 @@
 // @param $available_tokens: list of token values
 //
 
-@import '../../functions/pmc-rem';
-@import '../pmc-breakpoint';
+@import '../functions/pmc-rem';
+@import '../mixins/pmc-breakpoint';
 
 @mixin _text-class-generator( $property, $tokens, $available_tokens: () ) {
 	@if $property != 'font-size' and $property != 'line-height' and $property != 'font-family' and $property != 'font-weight' {

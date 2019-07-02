@@ -6,7 +6,7 @@
 // sides: token e.g. 'tr' and a spacing token.
 //
 
-@import "../pmc-breakpoint";
+@import "../mixins/pmc-breakpoint";
 
 @mixin _spacing-class-generator( $property, $tokens ) {
 	@if $property != 'margin' and $property != 'padding' {
