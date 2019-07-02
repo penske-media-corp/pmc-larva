@@ -22,7 +22,7 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "../../node_modules/.bin/jest"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
