@@ -1,5 +1,6 @@
-@import './settings/sizing.scss';
-@import './settings/colors.scss';
+@import './tools/tools.scss';
+@import './tokens/sizing.scss';
+@import './tokens/colors.scss';
 
 @mixin pmc-unstyle-list {
 	list-style-type: none;

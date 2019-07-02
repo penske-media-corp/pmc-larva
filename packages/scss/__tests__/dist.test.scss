@@ -1,0 +1,51 @@
+@import "true";
+@import "../dist/tokens.scss";
+@import "../dist/pmc-u-background.scss";
+@import "../dist/pmc-u-padding.scss";
+
+// Module Group
+@include test-module('Distributed') {
+
+	@include test('@mixin pmc-u-background') {
+
+		@include assert {
+
+			@include output {
+				$color_list: (
+					blue: #B1CAFB,
+				);
+
+				@include pmc-u-background( (
+					blue,
+				), $color_list );
+			}
+
+			@include contains {
+				.pmc-u-background-blue {
+					background-color: #B1CAFB;
+				}
+			}
+		}
+	}
+
+	@include test('@mixin pmc-u-padding') {
+
+		@include assert {
+
+			@include output {
+
+				@include pmc-u-padding( (
+					('tb', $spacer-050),
+				) );
+			}
+
+			@include contains {
+				.pmc-u-padding-tb-050 {
+					padding-top: 0.5rem;
+					padding-bottom: 0.5rem;
+				}
+
+			}
+		}
+	}
+}
