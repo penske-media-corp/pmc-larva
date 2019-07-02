@@ -3,5 +3,5 @@
 const patterns = require('..');
 
 describe('patterns', () => {
-    it('needs tests');
+    tests.todo( 'should exist' );
 });

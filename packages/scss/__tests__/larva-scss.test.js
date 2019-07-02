@@ -3,5 +3,5 @@
 const larvaScss = require('..');
 
 describe('@penskemediacorp/larva-scss', () => {
-    it('needs tests');
+    tests.todo( 'should exist' );
 });
