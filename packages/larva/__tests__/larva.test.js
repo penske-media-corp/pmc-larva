@@ -3,5 +3,5 @@
 const larva = require('@larva/patterns');
 
 describe('larva', () => {
-    it('needs tests');
+    tests.todo( 'should exist' );
 });
