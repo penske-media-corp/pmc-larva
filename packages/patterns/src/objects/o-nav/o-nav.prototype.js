@@ -1,4 +1,4 @@
-const c_nav_link = require( '../../components/c-nav-link/c-nav-link-prototype' );
+const c_nav_link = require( '../../components/c-nav-link/c-nav-link.prototype' );
 
 const o_nav_list_items = [
 	c_nav_link,

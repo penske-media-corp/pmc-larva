@@ -7,7 +7,7 @@
 //
 // Style Guide: Objects.Nav
 
-@import '@setup';
+@import '../../../node_modules/@penskemediacorp/larva-scss/src/setup.scss';
 
 .o-nav {}
 
@@ -31,7 +31,6 @@
 .o-nav--flexy .o-nav__list-item {
 	padding-left: $spacer-050;
 	padding-right: $spacer-050;
-	border-right: 1px solid map-get( $semantic-color-list, grey-medium );
 }
 
 .o-nav__list-item:last-child {

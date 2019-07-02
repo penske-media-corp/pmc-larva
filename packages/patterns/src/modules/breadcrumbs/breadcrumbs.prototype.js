@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"o_nav": {
 		"modifier_class": "o-nav--horizontal",
 		"o_nav_list_classes": "u-justify-content-center@mobile-max",

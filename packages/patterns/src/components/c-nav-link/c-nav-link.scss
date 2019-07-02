@@ -6,9 +6,9 @@
 //
 // Style Guide: Components.NavLink
 
-// @TODO: It should be named `c-link` because it is used in other locations besides navs.
+@import '../../../node_modules/@penskemediacorp/larva-scss/src/setup.scss';
+
 .c-nav-link,
 .c-nav-link:hover {
-	text-decoration: none;
-	color: green;
+	@include pmc-unstyle-link;
 }
