@@ -1,0 +1,33 @@
+{
+  "name": "@penskemediacorp/larva-patterns",
+  "version": "1.0.0-alpha.0",
+  "description": "> TODO: description",
+  "author": "laras126 <laras126@gmail.com>",
+  "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/patterns#readme",
+  "license": "ISC",
+  "main": "lib/patterns.js",
+  "directories": {
+    "lib": "scripts",
+    "test": "__tests__"
+  },
+  "files": [
+    "src/components/**/*",
+    "src/objects/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
+  },
+  "dependencies": {
+    "@penskemediacorp/larva-scss": "^1.0.0-alpha.0"
+  }
+}

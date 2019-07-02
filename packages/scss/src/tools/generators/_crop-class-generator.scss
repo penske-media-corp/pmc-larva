@@ -1,0 +1,20 @@
+@mixin _crop-class-generator( $aspect-ratios ) {
+
+	@if type-of($aspect-ratios) != 'map' {
+		@error "`#{$aspect-ratios}` is not a valid value for $aspect-ratios. It must be map.";
+	}
+
+	@each $name, $sizes in $aspect-ratios {
+		.pmc-a-crop-#{$name} {
+			position: relative;
+			padding-bottom: calc( ( #{nth($sizes, 1)} / #{nth($sizes, 2)} ) * 100% );
+
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

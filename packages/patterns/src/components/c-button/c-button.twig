@@ -1,0 +1,13 @@
+{% if c_button_use_button_element %}
+	<button class="c-button {{ modifier_class }} {{ c_button_classes }}">
+{% else %}
+	<a class="c-button {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}">
+{% endif %}
+
+	{{ c_button_text }}
+
+{% if c_button_use_button_element %}
+	</button>
+{% else %}
+	</a>
+{% endif %}

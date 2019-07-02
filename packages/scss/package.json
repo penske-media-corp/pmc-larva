@@ -1,0 +1,35 @@
+{
+  "name": "@penskemediacorp/larva-scss",
+  "version": "1.0.0-alpha.0",
+  "description": "> TODO: description",
+  "author": "laras126 <laras126@gmail.com>",
+  "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
+  "license": "ISC",
+  "main": "lib/larva-scss.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/penske-media-corp/pmc-larva/issues"
+  },
+  "devDependencies": {
+    "sass-true": "^5.0.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

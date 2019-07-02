@@ -1,0 +1,11 @@
+// Story List
+//
+// Markup: o-tease-list.twig
+//
+// Style guide: Objects.StoryList
+
+@import '@setup';
+
+.o-tease-list {
+	@include pmc-unstyle-list;
+}

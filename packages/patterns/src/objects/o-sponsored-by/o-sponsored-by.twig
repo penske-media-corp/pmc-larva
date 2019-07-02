@@ -1,0 +1,7 @@
+<div class="o-sponsored-by {{ modifier_class }} {{ o_sponsored_by_classes }}">
+	<span class="{{ o_sponsored_by_title_classes }}">{{ o_sponsored_by_text }}</span>
+
+	{% if o_figure %}
+		{% include "@larva/objects/o-figure/o-figure.twig" with o_figure %}
+	{% endif %}
+</div>

@@ -1,0 +1,46 @@
+// Figure
+//
+// This pattern should be applied to containers of `img` elements that use the .u-crop
+// pattern. It will assume the width of it's parent and supports an optional cropping class,
+// link wrapper, and a caption.
+//
+// .o-figure--circle - Should be used in conjunction with pmc-u-crop-1x1 for the crop class.
+//
+// Markup: o-figure.twig
+//
+// Style guide: Components.Figure
+
+@import '../../../node_modules/@penskemediacorp/larva-scss/src/setup.scss';
+
+.o-figure {
+	width: 100%;
+	display: block;
+}
+
+.o-figure--circle {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.o-figure--embedded {
+	width: auto;
+}
+
+.o-figure__link {
+	@include pmc-unstyle-link;
+}
+
+.o-figure__image {
+	width: 100%;
+	height: auto;
+	display: block;
+	background-color: map-get( $semantic-color-list, grey-light );
+	transition: opacity $transition-thumbnail-hover;
+
+	// Prevent small movement when opacity changes on hover.
+	transform: translate3d( 0px, 0px, 0px ); // stylelint-disable-line unit-blacklist
+}
+
+.o-figure__link:hover .o-figure__image {
+	opacity: 0.75;
+}

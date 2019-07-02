@@ -1,0 +1,21 @@
+.o-nav__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.o-nav--flexy .o-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.o-nav--horizontal .o-nav__list {
+  display: flex;
+  align-items: center; }
+
+.o-nav--flexy .o-nav__list-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+
+.o-nav--flexy .o-nav__list-item:last-child {
+  border-right: 0; }

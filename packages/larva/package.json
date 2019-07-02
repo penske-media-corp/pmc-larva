@@ -1,0 +1,25 @@
+{
+  "name": "@penskemediacorp/larva",
+  "version": "1.0.0-alpha.0",
+  "description": "> TODO: description",
+  "author": "laras126 <laras126@gmail.com>",
+  "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
+  "license": "MIT",
+  "main": "lib/larva.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
+  },
+  "dependencies": {
+    "@penskemediacorp/larva-patterns": "^1.0.0-alpha.0"
+  }
+}
