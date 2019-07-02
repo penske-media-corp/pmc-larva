@@ -1,7 +1,7 @@
 {
   "name": "@penskemediacorp/larva-patterns",
   "version": "1.2.0-alpha.0",
-  "description": "> TODO: description",
+  "description": "Larva Twig markup patterns.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/patterns#readme",
   "license": "ISC",
