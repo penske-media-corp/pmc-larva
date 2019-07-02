@@ -94,11 +94,11 @@
 			}
 
 			@include contains {
-				.pmc-u-crop-2x3 {
+				.pmc-a-crop-2x3 {
 					padding-bottom: calc( ( 2 / 3 ) * 100% );
 				}
 
-				.pmc-u-crop-2x3 img {
+				.pmc-a-crop-2x3 img {
 					object-fit: cover;
 				}
 			}
