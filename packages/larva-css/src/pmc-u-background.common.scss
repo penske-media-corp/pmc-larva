@@ -1,0 +1,9 @@
+@import '../node_modules/@penskemediacorp/larva-scss/dist/pmc-u-background.scss';
+
+$color_list: (
+	blue: #429AE7,
+);
+
+@include pmc-u-background( (
+	blue,
+), $color_list );

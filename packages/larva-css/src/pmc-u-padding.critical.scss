@@ -1,0 +1,16 @@
+@import '../node_modules/@penskemediacorp/larva-scss/dist/tokens.scss';
+@import '../node_modules/@penskemediacorp/larva-scss/dist/pmc-u-padding.scss';
+
+$paddings_without_breakpoints: (
+	('tb', $spacer-025),
+	('tb', $spacer-050),
+);
+
+@include pmc-u-padding( $paddings_without_breakpoints );
+
+$paddings_with_breakpoints: (
+	('tb', $spacer-025, mobile-max ),
+	('tb', $spacer-050, desktop ),
+);
+
+@include pmc-u-padding( $paddings_with_breakpoints );
