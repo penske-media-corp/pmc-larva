@@ -57,7 +57,6 @@ function renderSass( sassData ) {
 	});
 }
 
-
 function run( extension ) {
 
 	getUtilityPathsWithExtension( extension )
@@ -71,8 +70,6 @@ function run( extension ) {
 	.catch( err => console.log( err ) );
 
 }
-
-run( 'critical' );
 
 module.exports = {
 	getUtilityPathsWithExtension: getUtilityPathsWithExtension,
