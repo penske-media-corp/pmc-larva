@@ -11,14 +11,15 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+	"dist",
+	"build"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "../../node_modules/.bin/jest"
+	"test": "../../node_modules/.bin/jest"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
