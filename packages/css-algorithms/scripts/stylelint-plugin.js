@@ -7,16 +7,17 @@ var messages =  stylelint.utils.ruleMessages(ruleName, {
 	expected: "Expected ...",
 })
 
-module.exports = stylelint.createPlugin(ruleName, function( primaryOption ) {
+module.exports = stylelint.createPlugin(ruleName, function( options ) {
 	return function( cssRoot, result ) {
 
 		var validOptions = stylelint.utils.validateOptions( 
 			result, 
 			ruleName, 
 			{
-				actual: primaryOption,
+				actual: options,
 				possible: {
-					'allowed-properties': [ 'margin-top' ]
+					'name': 'a-space-children',
+					'allowed-properties': [ 'margin-top', 'margin-left', 'display', 'flex-wrap', '--a-space-children-spacer' ]
 				}
 			}
 		);
@@ -24,23 +25,22 @@ module.exports = stylelint.createPlugin(ruleName, function( primaryOption ) {
 		if (!validOptions) { 
 			return; 
 		}
-		
-		cssRoot.walkDecls( 'margin-top', function( decl ) {
-			if ( 'margin-top' === decl.prop ) {
-				stylelint.utils.report({
-					ruleName,
-					result,
-					node: decl,
-					message: 'you used a margin-top, good job'
-				});
-			}
+
+		cssRoot.walkRules( /^.a-space-children.*/, function( rule ) {
+
+			rule.walkDecls( function( decl ) {
+				if ( ! options['allowed-properties'].includes( decl.prop ) ) {
+					stylelint.utils.report({
+						ruleName,
+						result,
+						node: decl,
+						message: 'bad job, you can\'t use the property ' + decl.prop
+					});
+				}
+			});
+
 		});
 
-		// stylelint.utils.report({
-		// 	ruleName,
-		// 	result,
-		// 	message: 'bad job'
-		// });
 	}
 })
 
