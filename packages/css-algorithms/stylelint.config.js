@@ -2,7 +2,7 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 
 const rules = {
-	'plugins': './scripts/stylelint-plugin.js',
+	'plugins': './scripts/stylelint-css-algorithms.js',
 	'rules': {
 		'block-opening-brace-space-before': 'always',
 		'declaration-block-no-shorthand-property-overrides': true,

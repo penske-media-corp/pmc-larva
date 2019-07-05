@@ -49,5 +49,3 @@ module.exports = stylelint.createPlugin(ruleName, function( options ) {
 
 module.exports.ruleName = ruleName
 module.exports.messages = messages
-
-
