@@ -1,5 +1,5 @@
 var stylelint = require("stylelint")
-var algo = require("./css-algorithms")
+var chalk = require( "chalk")
 
 var ruleName = "plugin/css-algorithms"
 
@@ -25,8 +25,11 @@ module.exports = stylelint.createPlugin(ruleName, function( options ) {
 		if (!validOptions) { 
 			return; 
 		}
-
-		cssRoot.walkRules( /^.a-space-children.*/, function( rule ) {
+		
+		// should be /^.a-space-children.*/
+		var selector = new RegExp( '^.' + options['name'] + '.*' );
+		
+		cssRoot.walkRules( selector, function( rule ) {
 
 			rule.walkDecls( function( decl ) {
 				if ( ! options['allowed-properties'].includes( decl.prop ) ) {
@@ -34,7 +37,7 @@ module.exports = stylelint.createPlugin(ruleName, function( options ) {
 						ruleName,
 						result,
 						node: decl,
-						message: 'bad job, you can\'t use the property ' + decl.prop
+						message: decl.prop + ' is not allowed in ' + options['name']
 					});
 				}
 			});
