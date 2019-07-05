@@ -6,36 +6,29 @@
 
 	display: flex;
 	flex-wrap: wrap;
+}
 
-	> * + * { // stylelint-disable-line selector-max-compound-selectors
-		margin-left: $spacer-050; // Fallback.
-		margin-left: var( --a-space-children-spacer );
-	}
+.a-space-children-horizontal > * + * { // stylelint-disable-line selector-max-compound-selectors
+	margin-left: $spacer-050; // Fallback.
+	margin-left: var( --a-space-children-spacer );
+}
 
-	@supports( column-gap: 1rem ) {
-		column-gap: var( --a-space-children-spacer );
+.a-space-children-vertical > * + * { // stylelint-disable-line selector-max-compound-selectors
+	margin-top: $spacer-050; // Fallback.
+	margin-top: var( --a-space-children-spacer, initial );
 
-		> * {
-			margin-bottom: initial;
-		}
+	&:not(iframe):empty { // stylelint-disable-line selector-max-compound-selectors
+		display: none;
 	}
 }
 
-.a-space-children-vertical {
-
-	> * + * { // stylelint-disable-line selector-max-compound-selectors
-		margin-top: $spacer-050; // Fallback.
-		margin-top: var( --a-space-children-spacer, initial );
-
-		&:not(iframe):empty { // stylelint-disable-line selector-max-compound-selectors
-			display: none;
-		}
-	}
-}
+// 050
 
 .a-space-children--050 {
 	--a-space-children-spacer: #{$spacer-050};
 }
+
+// 1
 
 .a-space-children--1 {
 	--a-space-children-spacer: #{$spacer-1};
@@ -47,13 +40,8 @@
 	}
 }
 
+// 2
+
 .a-space-children--2 {
 	--a-space-children-spacer: #{$spacer-2};
 }
-
-// Breakpoints can be added like this:
-// .a-space-children--2\@desktop {
-// 	@include breakpoint( desktop ) {
-// 		--a-space-children-spacer: #{$spacer-2};
-// 	}
-// }
