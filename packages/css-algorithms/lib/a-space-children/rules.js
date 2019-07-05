@@ -7,9 +7,10 @@ var postscss = require( 'postcss-scss' );
 var processor = postcss();
 
 const source = fs.readFileSync( path.join( __dirname, './a-space-children.critical.scss' ) ).toString();
-const nodes =  processor.process( source, {
+
+const root =  processor.process( source, {
 	parser: postscss
-} ).root.nodes;
+} ).root;
 
 const rules = {
 	algorithm: 'a-space-children',
@@ -22,24 +23,15 @@ const rules = {
 	]
 };
 
-nodes.forEach( ( node ) => {
-	if ( 'rule' !== node.type ) {
-		return;
-	}
-
-	if ( -1 === node.selector.indexOf( rules.algorithm ) ) {
-		return;
-	}
-
-	let ruleNodes = node.nodes;
-
-	ruleNodes.forEach( ( node ) => {
-		if ( 'decl' !== node.type ) {
+root.walkDecls( ( decl ) => {
+	
+	if ( 'rule' === decl.parent.type ) {
+		if ( -1 === decl.parent.selector.indexOf( rules.algorithm ) ) {
 			return;
 		}
+	}
 
-		if ( ! rules.allowedProperties.includes( node.prop ) ) {
-			console.error( chalk.red( 'The use of ' + node.prop + ' is not permitted in the ' + rules.algorithm + ' algorithm.' ) );
-		}
-	});
+	if ( ! rules.allowedProperties.includes( decl.prop ) ) {
+		console.error( chalk.red( 'The use of ' + chalk.bold( decl.prop ) + ' is not permitted in the ' + rules.algorithm + ' algorithm.' ) );
+	}
 });
