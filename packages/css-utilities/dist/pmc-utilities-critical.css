@@ -1,0 +1,29 @@
+.pmc-u-display-block {
+  display: block; }
+
+.pmc-u-display-flex {
+  display: flex; }
+
+.pmc-u-display-inline {
+  display: inline; }
+
+.pmc-u-display-inline-block {
+  display: inline-block; }
+
+.pmc-u-padding-tb-025 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem; }
+
+.pmc-u-padding-tb-050 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+@media (max-width: 47.999rem) {
+  .pmc-u-padding-tb-025\@mobile-max {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; } }
+
+@media (min-width: 62.5rem) {
+  .pmc-u-padding-tb-050\@desktop {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; } }
