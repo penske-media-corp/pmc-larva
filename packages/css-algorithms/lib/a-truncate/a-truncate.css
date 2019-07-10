@@ -1,0 +1,7 @@
+.a-truncate-children {
+  max-width: 500px; }
+
+.a-truncate-children > * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
