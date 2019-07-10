@@ -1,0 +1,47 @@
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/tokens.scss';
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/tools.scss';
+
+.a-space-children-horizontal {
+	--a-space-children-spacer: initial;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.a-space-children-horizontal > * + * { // stylelint-disable-line selector-max-compound-selectors
+	margin-left: $spacer-050; // Fallback.
+	margin-left: var( --a-space-children-spacer );
+}
+
+.a-space-children-vertical > * + * { // stylelint-disable-line selector-max-compound-selectors
+	margin-top: $spacer-050; // Fallback.
+	margin-top: var( --a-space-children-spacer, initial );
+
+	&:not(iframe):empty { // stylelint-disable-line selector-max-compound-selectors
+		display: none;
+	}
+}
+
+// 050
+
+.a-space-children--050 {
+	--a-space-children-spacer: #{$spacer-050};
+}
+
+// 1
+
+.a-space-children--1 {
+	--a-space-children-spacer: #{$spacer-1};
+}
+
+.a-space-children--1\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		--a-space-children-spacer: #{$spacer-1};
+	}
+}
+
+// 2
+
+.a-space-children--2 {
+	--a-space-children-spacer: #{$spacer-2};
+}
