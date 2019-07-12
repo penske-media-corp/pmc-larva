@@ -8,7 +8,7 @@ $spacer-1:   1;
 $spacer-2:   2;
 
 :root {
-	--a-space-children-spacer: initial;
+	--a-space-children-spacer: 0;
 }
 
 // This is the basic version with margins
@@ -24,7 +24,7 @@ $spacer-2:   2;
 
 .a-space-children-vertical > * + * { 
 	margin-top: $spacer-050 + rem;
-	margin-top: calc( var( --a-space-children-spacer, initial ) * 1rem );
+	margin-top: calc( var( --a-space-children-spacer ) * 1rem );
 }
 
 // This is the enhanced version
@@ -36,7 +36,7 @@ $spacer-2:   2;
 		// Redundant declarations here so that the enhanced verison is not dependent on the basic version above
 		display: flex;
 		flex-wrap: wrap;
-		gap: calc( var( --a-space-children-spacer, initial ) * 1rem );
+		gap: calc( var( --a-space-children-spacer ) * 1rem );
 	}
 	
 	.a-space-children-vertical {
