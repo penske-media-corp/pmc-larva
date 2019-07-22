@@ -2,6 +2,6 @@
 
 const stylelint = require('..');
 
-describe('@penskemediacorp/stylelint', () => {
+describe('@penskemediacorp/stylelint-config', () => {
     it('needs tests');
 });
