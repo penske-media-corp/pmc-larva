@@ -27,31 +27,30 @@ $spacer-2:   2;
 	margin-top: calc( var( --a-space-children-spacer ) * 1rem );
 }
 
-// This is the enhanced version
-// Blink browsers (tested Chrome 75.0.3770.100 and Safari 12.1) render this version as if they support gap, but the gap does not apply.
-@supports ( gap: 1rem ) {
+// This is the enhanced version, but due to the partial implementation in Blink it's a no-go for now.
+// More info: https://notlaura.com/beware-the-gap-property/
+// @supports ( gap: 1rem ) {
 
-	.a-space-children-vertical,
-	.a-space-children-horizontal {
-		// Redundant declarations here so that the enhanced verison is not dependent on the basic version above
-		display: flex;
-		flex-wrap: wrap;
-		gap: calc( var( --a-space-children-spacer ) * 1rem );
-	}
+// 	.a-space-children-vertical,
+// 	.a-space-children-horizontal {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		gap: calc( var( --a-space-children-spacer ) * 1rem );
+// 	}
 	
-	.a-space-children-vertical {
-		flex-direction: column;
-	}
+// 	.a-space-children-vertical {
+// 		flex-direction: column;
+// 	}
 	
-	.a-space-children-vertical > * + * {
-		margin-top: unset;
-	}
+// 	.a-space-children-vertical > * + * {
+// 		margin-top: unset;
+// 	}
 
-	.a-space-children-horizontal > * + * {
-		margin-left: unset;
-	}
+// 	.a-space-children-horizontal > * + * {
+// 		margin-left: unset;
+// 	}
 
-}
+// }
 
 .a-space-children--050 {
 	--a-space-children-spacer: #{$spacer-050};
