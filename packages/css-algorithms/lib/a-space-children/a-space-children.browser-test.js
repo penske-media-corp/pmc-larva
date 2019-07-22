@@ -39,26 +39,26 @@ function tests() {
 
 				console.log( 'Node:', parent );
 
-it( 'does not apply a space above the first item', () => {
-	let kid = children[0];
+				it( 'does not apply a space above the first item', () => {
+					let kid = children[0];
 
-	return assertEquals( parentBox.top, kid.getBoundingClientRect().top );
-});
+					return assertEquals( parentBox.top, kid.getBoundingClientRect().top );
+				});
 
-it( 'spaces children', () => {
-	let kid1Box = children[0].getBoundingClientRect();
-	let kid2Box = children[1].getBoundingClientRect();
-	let parentStyles = window.getComputedStyle( parent );
-	let spaceInPixels = parseInt( parentStyles.getPropertyValue( '--a-space-children-spacer' ) ) * 16;
-	
-	return assertEquals( kid1Box.bottom, ( kid2Box.top - spaceInPixels ) );
-});
+				it( 'spaces children', () => {
+					let kid1Box = children[0].getBoundingClientRect();
+					let kid2Box = children[1].getBoundingClientRect();
+					let parentStyles = window.getComputedStyle( parent );
+					let spaceInPixels = parseInt( parentStyles.getPropertyValue( '--a-space-children-spacer' ) ) * 16;
+					
+					return assertEquals( kid1Box.bottom, ( kid2Box.top - spaceInPixels ) );
+				});
 
-it( 'does not apply a space below the last item', () => {
-	let kid = children[ children.length - 1 ];
+				it( 'does not apply a space below the last item', () => {
+					let kid = children[ children.length - 1 ];
 
-	return assertEquals( parentBox.bottom, kid.getBoundingClientRect().bottom );
-});
+					return assertEquals( parentBox.bottom, kid.getBoundingClientRect().bottom );
+				});
 		
 			});
 		}
