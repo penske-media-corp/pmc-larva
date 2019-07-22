@@ -1,7 +1,7 @@
-const path = require( 'path' );
-const fs = require( 'fs' );
+// const path = require( 'path' );
+// const fs = require( 'fs' );
 
-const rules = {
+module.exports = {
 	'rules': {
 		'block-opening-brace-space-before': 'always',
 		'declaration-block-no-shorthand-property-overrides': true,
@@ -80,17 +80,17 @@ const rules = {
 	}
 };
 
-const config = () => {
-	const styleLintPath = path.resolve( `${process.cwd()}/pmc.stylelintrc.json` );
-	const additionalStyleLint = fs.existsSync( styleLintPath );
-	if ( additionalStyleLint ) {
-		const updatedRules = Object.assign( rules.rules, JSON.parse( fs.readFileSync( styleLintPath ) ).rules );
-		return {
-			rules: updatedRules
-		};
-	} else {
-		return rules;
-	}
-};
+// const config = () => {
+// 	const styleLintPath = path.resolve( `${process.cwd()}/pmc.stylelintrc.json` );
+// 	const additionalStyleLint = fs.existsSync( styleLintPath );
+// 	if ( additionalStyleLint ) {
+// 		const updatedRules = Object.assign( rules.rules, JSON.parse( fs.readFileSync( styleLintPath ) ).rules );
+// 		return {
+// 			rules: updatedRules
+// 		};
+// 	} else {
+// 		return rules;
+// 	}
+// };
 
-module.exports = config();
+// module.exports = config();

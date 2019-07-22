@@ -1,5 +1,5 @@
 {
-  "name": "@penskemediacorp/larva-stylelint",
+  "name": "@penskemediacorp/stylelint-config",
   "version": "1.3.1-alpha.0",
   "description": "Stylelint base config and customizations.",
   "keywords": [
@@ -9,13 +9,13 @@
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
-  "main": "lib/stylelint.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "index.js"
   ],
   "publishConfig": {
     "access": "public"
