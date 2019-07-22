@@ -28,8 +28,8 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
-	"sass-true": "^5.0.0",
-	"stylelint": "^10.1.0"
+    "sass-true": "^5.0.0",
+    "stylelint": "^10.1.0"
   },
   "dependencies": {
     "node-sass": "^4.12.0"
