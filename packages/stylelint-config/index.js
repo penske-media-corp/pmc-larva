@@ -1,6 +1,3 @@
-// const path = require( 'path' );
-// const fs = require( 'fs' );
-
 module.exports = {
 	'rules': {
 		'block-opening-brace-space-before': 'always',
@@ -79,18 +76,3 @@ module.exports = {
 		'selector-nested-pattern': '^(?!&__|&--).*', // Disallow BEM concatenation - https://regex101.com/r/yZWeYK/3
 	}
 };
-
-// const config = () => {
-// 	const styleLintPath = path.resolve( `${process.cwd()}/pmc.stylelintrc.json` );
-// 	const additionalStyleLint = fs.existsSync( styleLintPath );
-// 	if ( additionalStyleLint ) {
-// 		const updatedRules = Object.assign( rules.rules, JSON.parse( fs.readFileSync( styleLintPath ) ).rules );
-// 		return {
-// 			rules: updatedRules
-// 		};
-// 	} else {
-// 		return rules;
-// 	}
-// };
-
-// module.exports = config();
