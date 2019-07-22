@@ -1,17 +1,8 @@
 const stylelint = require( "stylelint" );
 const chalk = require( "chalk" );
 const path = require( "path" );
+const { rule, name, messages } = require( './lib/rule' );
 
-const rule = path.resolve( __dirname, 'lib/rule' ).rule;
-const ruleName = path.resolve( __dirname, 'lib/rule' ).name;
-
-const messages =  stylelint.utils.ruleMessages(ruleName, {
-	expected: "Expected ...",
-})
-
-module.exports = stylelint.createPlugin(ruleName, function( options ) {
-	return rule;
-})
-
-module.exports.ruleName = ruleName
-module.exports.messages = messages
+module.exports = stylelint.createPlugin( name, rule );
+module.exports.ruleName = name;
+module.exports.messages = messages;
