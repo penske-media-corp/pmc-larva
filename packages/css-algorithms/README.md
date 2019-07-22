@@ -4,15 +4,18 @@ This package contains Larva's CSS algorithms or, CSS patterns that perform a spe
 
 ## Anatomy of an Algorithm
 
+Each algorithm should contain the following files:
+
 ```
-lib/
--- a-name/
----- a-name.scss
----- a-name.css
----- a-name.html
----- a-name.browser-test.js
----- README.md
+|-- a-name
+	|-- a-name.scss
+	|-- a-name.css
+	|-- a-name.html
+	|-- a-name.browser-test.js
+	|-- README.md
 ```
+
+The HTML file should contain the minimum HTML required to reflect the functionality.
 
 ## Usage
 
