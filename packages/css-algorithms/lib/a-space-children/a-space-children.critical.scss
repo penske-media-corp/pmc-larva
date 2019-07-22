@@ -1,46 +1,64 @@
 @import '../../node_modules/@penskemediacorp/larva-scss/dist/tokens.scss';
 @import '../../node_modules/@penskemediacorp/larva-scss/dist/tools.scss';
 
-.a-space-children-horizontal {
-	--a-space-children-spacer: initial;
 
+// Tokens Stub
+$spacer-050: 0.5;
+$spacer-1:   1;
+$spacer-2:   2;
+
+:root {
+	--a-space-children-spacer: 0;
+}
+
+// This is the basic version with margins
+.a-space-children-horizontal {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.a-space-children-horizontal > * + * { // stylelint-disable-line selector-max-compound-selectors
-	margin-left: $spacer-050; // Fallback.
-	margin-left: var( --a-space-children-spacer );
+.a-space-children-horizontal > * + * {
+	margin-left: $spacer-050 + rem;
+	margin-left: calc( var( --a-space-children-spacer ) * 1rem );
 }
 
-.a-space-children-vertical > * + * { // stylelint-disable-line selector-max-compound-selectors
-	margin-top: $spacer-050; // Fallback.
-	margin-top: var( --a-space-children-spacer, initial );
-
-	&:not(iframe):empty { // stylelint-disable-line selector-max-compound-selectors
-		display: none;
-	}
+.a-space-children-vertical > * + * { 
+	margin-top: $spacer-050 + rem;
+	margin-top: calc( var( --a-space-children-spacer ) * 1rem );
 }
 
-// 050
+// This is the enhanced version, but due to the partial implementation in Blink it's a no-go for now.
+// More info: https://notlaura.com/beware-the-gap-property/
+// @supports ( gap: 1rem ) {
+
+// 	.a-space-children-vertical,
+// 	.a-space-children-horizontal {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		gap: calc( var( --a-space-children-spacer ) * 1rem );
+// 	}
+	
+// 	.a-space-children-vertical {
+// 		flex-direction: column;
+// 	}
+	
+// 	.a-space-children-vertical > * + * {
+// 		margin-top: unset;
+// 	}
+
+// 	.a-space-children-horizontal > * + * {
+// 		margin-left: unset;
+// 	}
+
+// }
 
 .a-space-children--050 {
 	--a-space-children-spacer: #{$spacer-050};
 }
 
-// 1
-
 .a-space-children--1 {
 	--a-space-children-spacer: #{$spacer-1};
 }
-
-.a-space-children--1\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
-		--a-space-children-spacer: #{$spacer-1};
-	}
-}
-
-// 2
 
 .a-space-children--2 {
 	--a-space-children-spacer: #{$spacer-2};
