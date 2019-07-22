@@ -5,11 +5,11 @@ const RULE_NAME = 'plugin/css-algorithms';
 
 module.exports = {
 
+	name: RULE_NAME,
+	
 	messages: stylelint.utils.ruleMessages( RULE_NAME, {
 		expected: "Expected ...",
 	}),
-
-	name: RULE_NAME,
 
 	rule: function( options ) {
 		return function( cssRoot, result ) {
