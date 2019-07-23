@@ -28,5 +28,11 @@
 },
 "dependencies": {
 	"stylelint": "^10.1.0"
+},
+"jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./jest-setup.js"
+    ]
   }
 }
