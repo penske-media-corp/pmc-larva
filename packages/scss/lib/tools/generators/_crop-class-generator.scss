@@ -7,7 +7,7 @@
 	@each $name, $sizes in $aspect-ratios {
 		.pmc-a-crop-#{$name} {
 			position: relative;
-			padding-bottom: calc( ( #{nth($sizes, 1)} / #{nth($sizes, 2)} ) * 100% );
+			padding-bottom: calc( ( #{nth($sizes, 2)} / #{nth($sizes, 1)} ) * 100% );
 
 			img {
 				position: absolute;
