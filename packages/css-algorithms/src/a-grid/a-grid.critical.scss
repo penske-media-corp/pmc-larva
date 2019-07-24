@@ -1,4 +1,4 @@
-@import '../setup';
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/pmc-a-grid.scss';
 
 .pmc-a-grid {
 	display: flex;
@@ -24,6 +24,19 @@
 	}
 }
 
-@mixin pmc-a-grid( $grids ) {
-	@include _grid-class-generator( $grids );
-};
+$grids: (
+	(
+		columns: 2,
+	),
+	(
+		columns: 3,
+		spans: ( 2 ),
+	),
+	(
+		columns: 4,
+		spans: ( 2 ),
+		breakpoint: tablet,
+	),
+);
+
+@include pmc-a-grid( $grids );
