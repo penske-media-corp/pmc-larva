@@ -6,7 +6,6 @@ module.exports = {
 		'declaration-colon-space-after': 'always',
 		'declaration-no-important': true,
 		'font-family-no-missing-generic-family-keyword': true,
-		'font-weight-notation': 'numeric',
 		'function-calc-no-unspaced-operator': true,
 		'max-empty-lines': 2,
 		'property-no-unknown': true,
@@ -57,6 +56,7 @@ module.exports = {
 		'selector-list-comma-newline-after': 'always',
 		'selector-combinator-space-after': 'always',
 		'selector-list-comma-space-after': 'always-single-line',
+		"selector-no-qualifying-type": true,
 		'comment-no-empty': true,
 		'at-rule-empty-line-before': [
 			'always', {
@@ -67,6 +67,13 @@ module.exports = {
 		'rule-empty-line-before': [
 			'always-multi-line', {
 				'ignore': [ 'first-nested', 'after-comment' ]
+			}
+		],
+		'unit-blacklist': [
+			'px', {
+				'ignoreProperties': {
+					'px': [ 'box-shadow', '/^border/' ]
+				}
 			}
 		],
 		'max-nesting-depth': [ 2, {
