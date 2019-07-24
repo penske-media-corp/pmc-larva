@@ -12,9 +12,9 @@ To apply a grid to an element, i.e. an element's children, add the `pmc-a-grid`
 class to initiate a single column grid, then additional utility classes to
 adjust the grid e.g.
 
-`<section class="pmc-a-grid pmc-a-grid--cols2 pmc-a-grid--cols4@desktop">`
+`<section class="pmc-a-grid pmc-a-cols2 pmc-a-cols4@desktop">`
 
 Similarly, each grid item should have the class `pmc-a-grid-item`. Span utilities
 can be added in a similar fashion:
 
-`<div class="pmc-a-grid-item pmc-a-grid-item--span2@tablet">`.
+`<div class="pmc-a-grid-item pmc-a-span2@tablet">`.
