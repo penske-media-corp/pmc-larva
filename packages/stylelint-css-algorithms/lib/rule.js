@@ -2,9 +2,7 @@ const stylelint = require( 'stylelint' );
 const path = require( 'path' );
 
 const ruleName = 'plugin/css-algorithms';
-
 const isString = s => typeof s === "string";
-const isArray = a => typeof a === "array";
 const messages = {
 	rejected: ( prop, algorithmName ) => `The property '${prop}' is not permitted in the algorithm '${algorithmName}'.`
 };
@@ -26,7 +24,7 @@ module.exports = {
 					actual: options,
 					possible: {
 						'name': [isString],
-						'allowed-properties': [isArray]
+						'allowed-properties': [isString]
 					}
 				}
 			);
@@ -35,7 +33,7 @@ module.exports = {
 				console.error( 'Invalid options', validOptions );
 			}
 			
-			// should be /^.a-space-children.*/
+			// Regex for finding classes matching the name option
 			var selector = new RegExp( '^.' + options['name'] + '.*' );
 
 			cssRoot.walkRules( selector, function( ruleset ) {
