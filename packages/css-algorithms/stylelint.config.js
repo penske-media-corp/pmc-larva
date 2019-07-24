@@ -13,7 +13,7 @@ const rules = {
 				'--a-space-children-spacer',
 				'flex-wrap'
 			],
-			'pmc-a-glue': [
+			'a-glue': [
 				'top',
 				'right',
 				'bottom',

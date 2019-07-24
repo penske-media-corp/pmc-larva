@@ -1,7 +1,7 @@
 @import '../../node_modules/@penskemediacorp/larva-scss/dist/_tokens.scss';
 @import '../../node_modules/@penskemediacorp/larva-scss/dist/tools.scss';
 
-@mixin _pmc-a-glue-base {
+@mixin _a-glue-base {
 	position: absolute;
 	z-index: $z-index-middle-bottom;
 	top: var( --a-glue-top, initial );
@@ -10,30 +10,30 @@
 	left: var( --a-glue-left, initial );
 }
 
-.pmc-a-glue-parent {
+.a-glue-parent {
 	position: relative;
 }
 
-.pmc-a-glue {
+.a-glue {
 	// Fallback is top left for everything.
 	top: 0;
 	left: 0;
 
-	@include _pmc-a-glue-base;
+	@include _a-glue-base;
 }
 
-.pmc-a-glue--l-0 {
+.a-glue--l-0 {
 	--a-glue-left: 0;
 }
 
-.pmc-a-glue--r-0 {
+.a-glue--r-0 {
 	--a-glue-right: 0;
 }
 
-.pmc-a-glue--t-0 {
+.a-glue--t-0 {
 	--a-glue-top: 0;
 }
 
-.pmc-a-glue--b-0 {
+.a-glue--b-0 {
 	--a-glue-bottom: 0;
 }
