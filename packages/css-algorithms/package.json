@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "../../node_modules/.bin/jest",
-    "sass": "node_modules/.bin/node-sass --watch src -o dist"
+    "sass": "node_modules/.bin/node-sass --watch src -o src"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
