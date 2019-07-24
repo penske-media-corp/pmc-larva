@@ -1,7 +1,7 @@
 const stylelint = require( 'stylelint' );
 const path = require( 'path' );
 
-const ruleName = 'plugin/selector-property-whitelist';
+const ruleName = 'plugin/css-algorithms';
 const isString = s => typeof s === 'string';
 const isObject = o => typeof o === 'object';
 
