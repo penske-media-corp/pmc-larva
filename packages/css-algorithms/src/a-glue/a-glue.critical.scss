@@ -1,5 +1,5 @@
-@import '../../node_modules/@penskemediacorp/larva-scss/dist/_tokens.scss';
-@import '../../node_modules/@penskemediacorp/larva-scss/dist/tools.scss';
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/tokens';
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/tools';
 
 @mixin _a-glue-base {
 	position: absolute;

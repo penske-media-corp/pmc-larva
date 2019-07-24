@@ -1,0 +1,24 @@
+.a-glue-parent {
+  position: relative; }
+
+.a-glue {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  top: var(--a-glue-top, initial);
+  bottom: var(--a-glue-bottom, initial);
+  right: var(--a-glue-right, initial);
+  left: var(--a-glue-left, initial); }
+
+.a-glue--l-0 {
+  --a-glue-left: 0; }
+
+.a-glue--r-0 {
+  --a-glue-right: 0; }
+
+.a-glue--t-0 {
+  --a-glue-top: 0; }
+
+.a-glue--b-0 {
+  --a-glue-bottom: 0; }
