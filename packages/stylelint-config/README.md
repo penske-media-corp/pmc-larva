@@ -18,3 +18,43 @@ In a consuming projects stylelint.config.js, add:
 	'rules: { }
 }
 ```
+
+## Custom Formatter
+
+This package also includes a custom formatter for Stylelint where you can additional messages to the Stylelint output for certain properties.
+
+The custom formatter must be included in the configuration for running the Stylelint command. In webpack, this would be part of the plugin configuration:
+
+```
+// webpack.config.js
+plugins: [
+	new StyleLintPlugin({
+		configFile: 'stylelint.config.json',
+		formatter: path.resolve( '/path/to/custom-formatter.js' ),
+		syntax: 'scss',
+		context: path.resolve( './src' )
+	}),
+]
+```
+
+To use it, you can add an array of messages to the Stylelint config object, like so:
+
+```language-json
+{
+	"rules": {},
+	"messages": [
+		{
+			"property": "font-size",
+			"message": "Do not use font-size directly, use a utility class generated from u-text.scss instead."
+		},
+		{
+			"property": "font-family",
+			"message": "Do not use font-family directly, a utility class from u-text.scss or the font-family mixin located in tools/mixins."
+		},
+	]
+}
+```
+
+### In the Future
+
+This should likely be a separate repository since it has its own usage instructions, and the formatter itself needs some re-evaluating.
