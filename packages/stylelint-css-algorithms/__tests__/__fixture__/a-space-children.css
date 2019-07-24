@@ -1,0 +1,14 @@
+.a-space-children-horizontal {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.a-space-children-horizontal>*+* {
+	margin-left: 0.5rem;
+	margin-left: calc(var(--a-space-children-spacer) * 1rem);
+}
+
+.a-space-children-vertical>*+* {
+	margin-top: 0.5rem;
+	margin-top: calc(var(--a-space-children-spacer) * 1rem);
+}

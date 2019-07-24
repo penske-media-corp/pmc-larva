@@ -1,5 +1,0 @@
-.a-glue {
-	background: green;
-	color: yellow;
-	margin-top: var( --thing, 0 );
-}
