@@ -1,8 +1,10 @@
 const stylelint = require( 'stylelint' );
 const path = require( 'path' );
 
-const ruleName = 'plugin/css-algorithms';
-const isString = s => typeof s === "string";
+const ruleName = 'plugin/selector-property-whitelist';
+const isString = s => typeof s === 'string';
+const isObject = o => typeof o === 'object';
+
 const messages = {
 	rejected: ( prop, algorithmName ) => `The property '${prop}' is not permitted in the algorithm '${algorithmName}'.`
 };
@@ -22,10 +24,7 @@ module.exports = {
 				ruleName, 
 				{
 					actual: options,
-					possible: {
-						'name': [isString],
-						'allowed-properties': [isString]
-					}
+					possible: [isObject]
 				}
 			);
 
@@ -33,23 +32,27 @@ module.exports = {
 				console.error( 'Invalid options', validOptions );
 			}
 			
-			// Regex for finding classes matching the name option
-			var selector = new RegExp( '^.' + options['name'] + '.*' );
+			Object.keys( options ).map( function( key, index ) {
 
-			cssRoot.walkRules( selector, function( ruleset ) {
-
-				ruleset.walkDecls( function( decl ) {
-					if ( ! options['allowed-properties'].includes( decl.prop ) ) {
-						stylelint.utils.report({
-							ruleName,
-							result,
-							node: decl,
-							message: `${messages.rejected( decl.prop, options['name'] )} (${ruleName})`
-						});
-					}
+				var selector = new RegExp( '^.' + key + '.*' );
+				var allowedProperties = options[ key ];
+				
+				cssRoot.walkRules( selector, function( ruleset ) {
+	
+					ruleset.walkDecls( function( decl ) {
+						if ( ! allowedProperties.includes( decl.prop ) ) {
+							stylelint.utils.report({
+								ruleName,
+								result,
+								node: decl,
+								message: `${messages.rejected( decl.prop, key )} (${ruleName})`
+							});
+						}
+					});
+	
 				});
-
 			});
+
 		}
 	}
 };

@@ -1,13 +1,13 @@
 'use strict';
 
+const fs = require( 'fs' );
 const rule = require( '../lib/rule.js' );
 
 testRule( rule.rule, {
 	ruleName: rule.name,
 	skipBasicChecks: true,
 	config: {
-		'name': 'a-space-children',
-		'allowed-properties': [ 'margin-top', 'margin-left', 'display', 'flex-wrap', '--a-space-children-spacer' ]
+		'a-space-children': [ 'margin-top', 'margin-left', 'display', 'flex-wrap', '--a-space-children-spacer' ]
 	},
 	accept: [
 		{
@@ -28,8 +28,7 @@ testRule( rule.rule, {
 	ruleName: rule.name,
 	skipBasicChecks: true,
 	config: {
-		'name': 'pmc-a-glue',
-		'allowed-properties': [ 'margin-top' ]
+		'pmc-a-glue': [ 'margin-top' ]
 	},
 	reject: [
 		{
@@ -44,8 +43,7 @@ testRule( rule.rule, {
 	ruleName: rule.name,
 	skipBasicChecks: true,
 	config: {
-		'name': 'card',
-		'allowed-properties': [ 'margin-top' ]
+		'card': [ 'margin-top' ]
 	},
 	reject: [
 		{
@@ -60,8 +58,7 @@ testRule( rule.rule, {
 	ruleName: rule.name,
 	skipBasicChecks: true,
 	config: {
-		'name': 'a-icon',
-		'allowed-properties': [ 'height', 'width' ]
+		'a-icon': [ 'height', 'width' ]
 	},
 	accept: [
 		{
@@ -78,3 +75,41 @@ testRule( rule.rule, {
 		}
 	]
 });
+
+testRule( rule.rule, {
+	ruleName: rule.name,
+	skipBasicChecks: true,
+	config: {
+		'a-space-children': [ 'margin-left', 'margin-right' ],
+		'pmc-a-glue': [ 'position', 'top', 'left' ]
+	},
+	reject: [
+		{
+			code: fs.readFileSync( __dirname + '/__fixture__/a-space-children.css' ).toString(),
+			description: 'works with multiple rules',
+			message: rule.messages.rejected( 'display', 'a-space-children' ),
+		},
+		{
+			code: fs.readFileSync( __dirname + '/__fixture__/a-glue.css' ).toString(),
+			description: 'works with multiple rules',
+			message: rule.messages.rejected( 'z-index', 'pmc-a-glue' ),
+		}
+	]
+});
+
+// Note: this is for a future iteration when this becomes selector-property-whitelist
+// and supports regex in the key.
+// testRule( rule.rule, {
+// 	ruleName: rule.name,
+// 	skipBasicChecks: true,
+// 	config: {
+// 		'/^.a-space-children.*/': [ 'margin-left', 'margin-right' ]
+// 	},
+// 	reject: [
+// 		{
+// 			code: fs.readFileSync( __dirname + '/__fixture__/a-space-children.css' ).toString(),
+// 			description: 'works with regex keys',
+// 			message: rule.messages.rejected( 'display', 'a-space-children' ),
+// 		}
+// 	]
+// });
