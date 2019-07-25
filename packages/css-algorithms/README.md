@@ -35,7 +35,7 @@ For example, `a-card-title` is a very poor algorithm name because it does not te
 The algorithm's CSS file should be named according to the chunk it will be included in when used in an actual product. Example, full file names (note that these may have originated as SCSS files):
 
 * `a-minmax-font-size.common.inline.css`
-* `a-dots-behind.single.async.css`
+* `a-offset-dots-behind.single.async.css`
 * `a-gradient-after.common.async.css`
 * `a-archive-grid.archive.inline.css`
 
