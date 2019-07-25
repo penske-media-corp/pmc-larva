@@ -1,7 +1,7 @@
-'use strict';
+// 'use strict';
 
-const larva = require('@larva/patterns');
+// const larva = require('@larva/patterns');
 
-describe('larva', () => {
-    tests.todo( 'should exist' );
-});
+// describe('larva', () => {
+//     tests.todo( 'should exist' );
+// });
