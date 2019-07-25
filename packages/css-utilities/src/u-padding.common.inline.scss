@@ -1,5 +1,5 @@
-@import '../node_modules/@penskemediacorp/larva-scss/dist/_tokens.scss';
-@import '../node_modules/@penskemediacorp/larva-scss/dist/pmc-u-padding.scss';
+@import '../node_modules/@penskemediacorp/larva-scss/dist/tokens';
+@import '../node_modules/@penskemediacorp/larva-scss/dist/generators';
 
 $paddings_without_breakpoints: (
 	('tb', $spacer-025),

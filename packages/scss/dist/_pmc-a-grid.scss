@@ -1,5 +1,0 @@
-@import '../lib/tools/tools';
-
-@mixin pmc-a-grid( $grids ) {
-	@include _grid-class-generator( $grids );
-};

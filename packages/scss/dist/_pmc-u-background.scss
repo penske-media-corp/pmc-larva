@@ -1,5 +1,0 @@
-@import '../lib/tools/tools';
-
-@mixin pmc-u-background( $colors, $color_list ) {
-	@include _color-class-generator( 'background-color', $colors, $color_list );
-}
