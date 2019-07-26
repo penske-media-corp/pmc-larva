@@ -8,14 +8,16 @@ Each algorithm should contain the following files:
 
 ```
 |-- a-name
-	|-- a-name.scss
-	|-- a-name.css
+	|-- a-name.{async|critical}.scss
+	|-- a-name.{async|critical}.css
 	|-- a-name.html
 	|-- a-name.browser-test.js
 	|-- README.md
 ```
 
-The HTML file should contain the minimum HTML required to reflect the functionality.
+The HTML file should contain the minimum HTML required to reflect the functionality. 
+
+`async|critical` refers to whether or not the algorithm should be included in critical CSS, or loaded asynchronously. A consuming project should have a build step that handles the concatenation.
 
 ## Usage
 

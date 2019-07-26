@@ -30,6 +30,7 @@
   "devDependencies": {
     "@penskemediacorp/larva-scss": "^1.3.0-alpha.0",
     "globby": "^10.0.0",
-    "node-sass": "^4.12.0"
+	"node-sass": "^4.12.0",
+	"stylelint": "^10.1.0"
   }
 }

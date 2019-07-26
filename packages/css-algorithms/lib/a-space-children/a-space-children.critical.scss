@@ -1,6 +1,5 @@
-@import '../../node_modules/@penskemediacorp/larva-scss/dist/tokens.scss';
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/_tokens.scss';
 @import '../../node_modules/@penskemediacorp/larva-scss/dist/tools.scss';
-
 
 // Tokens Stub
 $spacer-050: 0.5;
@@ -17,12 +16,12 @@ $spacer-2:   2;
 	flex-wrap: wrap;
 }
 
-.a-space-children-horizontal > * + * {
+.a-space-children-horizontal > * + * { // stylelint-disable-line selector-max-compound-selectors
 	margin-left: $spacer-050 + rem;
 	margin-left: calc( var( --a-space-children-spacer ) * 1rem );
 }
 
-.a-space-children-vertical > * + * { 
+.a-space-children-vertical > * + * { // stylelint-disable-line selector-max-compound-selectors
 	margin-top: $spacer-050 + rem;
 	margin-top: calc( var( --a-space-children-spacer ) * 1rem );
 }

@@ -1,0 +1,39 @@
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/_tokens.scss';
+@import '../../node_modules/@penskemediacorp/larva-scss/dist/tools.scss';
+
+@mixin _a-glue-base {
+	position: absolute;
+	z-index: $z-index-middle-bottom;
+	top: var( --a-glue-top, initial );
+	bottom: var( --a-glue-bottom, initial );
+	right: var( --a-glue-right, initial );
+	left: var( --a-glue-left, initial );
+}
+
+.a-glue-parent {
+	position: relative;
+}
+
+.a-glue {
+	// Fallback is top left for everything.
+	top: 0;
+	left: 0;
+
+	@include _a-glue-base;
+}
+
+.a-glue--l-0 {
+	--a-glue-left: 0;
+}
+
+.a-glue--r-0 {
+	--a-glue-right: 0;
+}
+
+.a-glue--t-0 {
+	--a-glue-top: 0;
+}
+
+.a-glue--b-0 {
+	--a-glue-bottom: 0;
+}
