@@ -13,8 +13,8 @@ describe( 'patternPathsToLoad', () => {
 	it( 'returns the theme path if it is not the core theme', () => {
 		let appConfigModified = Object.assign( {}, appConfiguration );
 		appConfigModified = {
-			larvaDir: '/path/to/larva',
-			themeDir: '/path/to/theme/patterns',
+			larvaPatternsDir: '/path/to/larva',
+			themePatternsDir: '/path/to/theme/patterns',
 		};
 
 		assert.equal( patternPathsToLoad( appConfigModified )[1].includes( 'theme' ), true );

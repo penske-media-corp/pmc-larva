@@ -24,10 +24,11 @@ module.exports = {
 	},
 
 	parser: {
-		isCore: true,
+		isCore: false,
 	},
 	
 	patterns: {
-		larvaDir: '/path/to/larva'
+		themePatternsDir: path.resolve( './src/patterns' ),
+		larvaPatternsDir: path.resolve( __dirname, '../../node_modules/@penskemediacorp/larva-patterns' )
 	}
 };

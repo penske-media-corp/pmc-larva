@@ -4,7 +4,7 @@ module.exports = function patternPathsToLoad( config ) {
 	let paths = [];
 	
 	try {
-		paths.push( config.larvaDir );
+		paths.push( config.larvaPatternsDir );
 	} catch( error ) {
 		console.log( error );
 	}
@@ -15,7 +15,7 @@ module.exports = function patternPathsToLoad( config ) {
 	}
 	
 	try {
-		paths.push( config.themeDir );
+		paths.push( config.themePatternsDir );
 	} catch( error ) {
 		console.log( error );
 	}
