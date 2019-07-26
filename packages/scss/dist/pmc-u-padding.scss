@@ -1,5 +1,0 @@
-@import '../lib/tools/tools.scss';
-
-@mixin pmc-u-padding( $paddings ) {
-	@include _spacing-class-generator( 'padding', $paddings );
-}

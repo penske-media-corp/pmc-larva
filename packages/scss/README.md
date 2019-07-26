@@ -3,7 +3,7 @@
 This repository holds core SCSS tools and tokens for Larva.  These include:
 
 - Tokens (e.g. spacing, color, z-index, and transition values)
-- Mixins to generate CSS utilities and algorithms according to a list of tokens
+- Generators (i.e. mixins that generate classes according to a list of tokens)
 - Breakpoint mixin
 
 This repository provides **Sass files only**. The consuming project is responsible for building the assets.

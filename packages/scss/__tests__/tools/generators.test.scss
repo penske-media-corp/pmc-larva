@@ -1,5 +1,5 @@
 @import "true";
-@import "../../lib/tools/tools.scss";
+@import "../../lib/tools/tools";
 
 @include test-module('Class Generators') {
 
@@ -51,16 +51,16 @@
 
 			@include output {
 				@include _crop-class-generator( (
-					'2x3': (2, 3)
+					'3x2': (3, 2)
 				) );
 			}
 
 			@include contains {
-				.pmc-a-crop-2x3 {
+				.pmc-a-crop-3x2 {
 					padding-bottom: calc( ( 2 / 3 ) * 100% );
 				}
 
-				.pmc-a-crop-2x3 img {
+				.pmc-a-crop-3x2 img {
 					object-fit: cover;
 				}
 			}
