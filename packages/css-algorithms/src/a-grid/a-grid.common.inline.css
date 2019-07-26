@@ -1,0 +1,47 @@
+.pmc-a-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start; }
+  @supports (display: grid) {
+    .pmc-a-grid {
+      --cols: 1;
+      display: grid;
+      grid-gap: 1.25rem;
+      grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
+
+.pmc-a-grid-item {
+  flex: none;
+  padding: 0.625rem; }
+  @supports (display: grid) {
+    .pmc-a-grid-item {
+      padding: 0; } }
+
+.pmc-a-cols2 {
+  --cols: 2; }
+  .pmc-a-cols2 > * {
+    flex-basis: 50%; }
+
+.pmc-a-cols3 {
+  --cols: 3; }
+  .pmc-a-cols3 > * {
+    flex-basis: 33.33333%; }
+
+@supports (display: grid) {
+  .pmc-a-span2 {
+    grid-column: span 2; } }
+
+.pmc-a-cols3 > .pmc-a-span2 {
+  flex-basis: 66.66667%; }
+
+@media (min-width: 48rem) {
+  .pmc-a-cols4\@tablet {
+    --cols: 4; }
+    .pmc-a-cols4\@tablet > * {
+      flex-basis: 25%; } }
+
+@media (min-width: 48rem) {
+  @supports (display: grid) {
+    .pmc-a-span2\@tablet {
+      grid-column: span 2; } }
+  .pmc-a-cols4\@tablet > .pmc-a-span2\@tablet {
+    flex-basis: 50%; } }
