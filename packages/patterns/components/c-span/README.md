@@ -7,22 +7,3 @@
 // Markup: c-label.twig
 //
 // Style guide: Components.Text.Label
-
-@import '~@setup';
-
-.c-label {
-	font-weight: $font-weight-bold;
-	letter-spacing: 0.05rem;
-	padding: 0.4rem $spacer-050 $spacer-025 ; // Very specific padding provided by design feedback.
-	text-transform: uppercase;
-	white-space: nowrap;
-}
-
-.c-label--plain {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.c-label__link {
-	@include pmc-unstyle-link;
-}
