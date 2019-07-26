@@ -1,7 +1,6 @@
 @import "true";
-@import "../dist/_tokens.scss";
-@import "../dist/pmc-u-background.scss";
-@import "../dist/pmc-u-padding.scss";
+@import "../dist/tokens";
+@import "../dist/generators";
 
 // Module Group
 @include test-module('Distributed') {
