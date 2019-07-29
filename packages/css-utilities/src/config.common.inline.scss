@@ -1,0 +1,8 @@
+@import '../node_modules/@penskemediacorp/larva-scss/dist/tokens';
+
+:root {
+	--font-family-primary: #{map-get( $semantic-font-families, 'helvetica' )};
+	--font-family-primary-fancy: #{map-get( $semantic-font-families, 'balto' )};
+	--font-family-secondary: #{map-get( $semantic-font-families, 'georgia' )};
+	--font-family-secondary-fancy: #{map-get( $semantic-font-families, 'eksell' )};
+}

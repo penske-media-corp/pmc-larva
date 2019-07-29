@@ -1,0 +1,12 @@
+.wf-active {
+	--font-family-primary: var( --font-family-primary-fancy );
+	--font-family-secondary: var( --font-family-secondary-fancy );
+}
+
+.pmc-u-font-family-primary {
+	font-family: var( --font-family-primary );
+}
+
+.pmc-u-font-family-secondary {
+	font-family: var( --font-family-secondary );
+}
