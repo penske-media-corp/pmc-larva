@@ -1,5 +1,6 @@
-const getScssPathsWithExtension = require( './getScssPathsWithExtension' );
 
 module.exports = {
-	getScssPathsWithExtension: getScssPathsWithExtension
+	getScssPathsWithExtension: require( './getScssPathsWithExtension' ),
+	concatenateFileData: require( './concatenateFileData' ),
+	renderSass: require( './renderSass' ),
 }

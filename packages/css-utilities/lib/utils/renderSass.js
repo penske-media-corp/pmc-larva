@@ -6,7 +6,7 @@ module.exports = function renderSass( sassData ) {
 		sass.render( {
 			data: sassData,
 			includePaths: [
-				path.join(__dirname, '../node_modules') // npm
+				path.join(__dirname, '../../node_modules') // npm
 			]
 		}, ( err, result ) => {
 			if ( err ) {

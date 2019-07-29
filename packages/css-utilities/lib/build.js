@@ -2,10 +2,12 @@
 
 const chalk = require( 'chalk' );
 const fs = require( 'fs' );
+const path = require( 'path' );
+const { getScssPathsWithExtension, concatenateFileData, renderSass } = require( './utils/utils' );
 
-function run( extension ) {
+module.exports = function build( extension, srcPath ) {
 
-	getScssPathsWithExtension( extension )
+	getScssPathsWithExtension( extension, srcPath )
 	.then( resultPaths => concatenateFileData( resultPaths ) )
 	.then( resultSass => renderSass( resultSass ) )
 	.then( ( resultCss ) => {
@@ -16,7 +18,3 @@ function run( extension ) {
 	.catch( err => console.log( err ) );
 
 }
-
-module.exports = {
-	run: run
-};
