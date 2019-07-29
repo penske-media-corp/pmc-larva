@@ -7,7 +7,7 @@ describe( 'getPatternDigit', () => {
 		assert.equal( getPatternDigit( 'o-nav' ), '05-' );
 	});
 
-	it( 'returns 08 for no namespace', () => {
+	it( 'returns 08 for no namespace (modules)', () => {
 		assert.equal( getPatternDigit( 'breadcrumbs' ), '08-' );
 	});
 });
