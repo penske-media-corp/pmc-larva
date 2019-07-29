@@ -1,31 +1,9 @@
 'use strict';
 
 const path = require( 'path' ); 
-const { getUtilityPathsWithExtension, concatenateFileData, renderSass, run } = require( '../lib/css-utilities' );
-const fixture = path.resolve( __dirname, './__fixture__' );
+const { getScssPathsWithExtension, concatenateFileData, renderSass, run } = require( '../lib/css-utilities' );
+const fixture = path.resolve( __dirname, './fixtures' );
 const fixtureBuildPath = path.join( fixture, 'build' );
-
-describe('getUtilityPathsWithExtension', () => {
-
-	it( 'gets all files with the .common.css extension', () => {
-		return getUtilityPathsWithExtension( 'common', fixtureBuildPath )
-		.then( ( result ) => {
-
-			result.forEach( string => {
-				expect( path.parse( string ).name ).toContain( 'common' );
-			});
-		});
-	});
-
-	it('gets all files with the .critical.css extension', () => {
-		return getUtilityPathsWithExtension( 'critical', fixtureBuildPath )
-		.then( ( result ) => {
-			result.forEach( string => {
-				expect( path.parse( string ).name ).toContain( 'critical' );
-			});
-		});
-	});
-});
 
 describe( 'concatenateFileData', () => {
 	it( 'concats data from files in array', () => {
