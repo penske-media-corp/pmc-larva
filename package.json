@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
 	"test": "./node_modules/.bin/jest",
-	"server": "nodemon -e twig,js,html packages/larva/lib/server.js"
+	"larva": "nodemon -e twig,js,html packages/larva/lib/server.js"
   },
   "devDependencies": {
     "express": "^4.17.1",

@@ -4,11 +4,15 @@
 	</head>
 	<body>
 		<main>
-			<h1>{{ type ~ ': ' ~ name }}</h1>
-			{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
-			<pre>
-				{{ data|json_encode() }}
-			</pre>
+			<h1>Welcome to Larva!</h1>
+			<p>This is a baby server site for building patterns. To navigate to a pattern, provide the route:</p>
+			<pre>http://localhost:3000/{patternType}/{patternName}/{patternVariation}</pre>
+			<p>For example:</p>
+			<pre>http://localhost:3000/objects/o-nav</pre>
+			<p>or</p>
+			<pre>http://localhost:3000/modules/breadcrumbs</pre>
+			<p>To view a variation of a main pattern, add a third parameter:</p>
+			<pre>http://localhost:3000/modules/breadcrumbs/featured-article</pre>
 		</main>
 	</body>
 </html>
