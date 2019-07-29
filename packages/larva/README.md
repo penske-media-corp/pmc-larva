@@ -36,15 +36,10 @@ Create the following directories in your-theme/assets/src/patterns:
 
 (yes, there will be a scaffold task, someday)
 
-The `larva-patterns` node_module and the patterns directory in the child theme assets/ directory act in the same fashion as the parent and child theme relationship in WordPress, where the `larva-patterns` is the parent theme...maybe?
+To start the server, you must be in the same directory as `larva.config.js` or, in other words, working within a "host" project. The Larva mono-repo is set up to be a "host" project, and the server can be started from within the root of the repository with the following command:
 
-To start the server, you must be in the same directory as `larva.config.js` or, in other words, working within a "host" project. The Larva mono-repo is set up to be a "host" project, and the server can be started from within the root of the repository.
-
-There is no actual command for starting the server, yet. It can be started by executing server.js with nodemon which will restart the server when files are changed. From the root of the larva, run the following command:
 ```
-nodemon -e twig,js,html packages/larva/lib/server.js
+➜ pmc-larva$ npm run larva
 ```
 
-## Configuration
-
-This command should create a configuration file called `larva.config.js`.
+This will bring up the server for developing patterns at localhost:3000.
