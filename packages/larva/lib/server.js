@@ -22,8 +22,10 @@ loader.addPath( appConfiguration.larvaPatternsDir, 'larva' );
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 app.use( express.static('build' ) );
+// TODO: these will be updated to paths not on Lara's computer...
 app.use( '/static' , express.static( '/Users/laraschenck/Sites/pmc/pmc-larva/packages/larva/static' ) );
-
+app.use( '/utils' , express.static( '/Users/laraschenck/Sites/pmc/pmc-larva/packages/css-utilities/dist' ) );
+app.use( '/algos' , express.static( '/Users/laraschenck/Sites/pmc/pmc-larva/packages/css-algorithms' ) );
 app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.html', { name: 'Welcome' } ) );
 });
