@@ -25,3 +25,19 @@
 	@include _color-class-generator( 'background-color', $colors, $color_list );
 }
 
+// Not using.
+// @mixin pmc-u-font-family( $tokens, $available_tokens ) {
+// 	@include _text-class-generator('font-family', $tokens, $available_tokens);
+// }
+
+@mixin pmc-u-line-height( $tokens, $available_tokens ) {
+	@include _text-class-generator('line-height', $tokens, $available_tokens);
+}
+
+@mixin pmc-u-font-size( $tokens ) {
+	@include _text-class-generator('font-size', $tokens);
+}
+
+@mixin pmc-u-font-weight( $tokens, $available_tokens ) {
+	@include _text-class-generator('font-weight', $tokens, $available_tokens);
+}
