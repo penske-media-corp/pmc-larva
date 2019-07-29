@@ -38,6 +38,9 @@
 .pmc-u-font-family-secondary {
   font-family: var(--font-family-secondary); }
 
+.pmc-u-padding-r-1 {
+  padding-right: 1rem; }
+
 .pmc-u-padding-tb-025 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem; }

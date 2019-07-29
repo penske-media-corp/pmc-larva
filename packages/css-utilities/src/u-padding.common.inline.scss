@@ -2,6 +2,7 @@
 @import '../node_modules/@penskemediacorp/larva-scss/dist/generators';
 
 $paddings_without_breakpoints: (
+	('r', $spacer-1),
 	('tb', $spacer-025),
 	('tb', $spacer-050),
 );

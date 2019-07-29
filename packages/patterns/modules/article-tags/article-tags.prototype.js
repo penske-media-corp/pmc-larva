@@ -8,8 +8,11 @@ const tags = [ "Art Gallery", "Retrospective", "Mapplethorpe" ];
 
 o_nav.o_nav_list_items.forEach( ( item, i ) => {
 	item.c_link_text = tags[i];
+	item.c_link_classes += ' pmc-u-text-transform-uppercase';
 });
 
+o_nav.o_nav_title_classes = "pmc-u-padding-r-1 pmc-u-font-family-secondary";
+
 module.exports = {
-	"o_nav": o_nav
+	"o_nav": o_nav,
 }
