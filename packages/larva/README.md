@@ -6,6 +6,33 @@ This package is essentially a wrapper that brings all of the other packages toge
 
 ## Usage
 
+### Absolutely required directory structure
+
+Any project consuming Larva, must have the following directory structure:
+
+```
+|- pmc-consuming-project/
+	|- assets/
+		|- build/
+			|- css/
+			|- js/
+			|- images/
+		|- node_modules/
+		|- src/
+			|- patterns/
+				|- 04-components/
+				|- 05-objects/
+				|- 06-algorithms/
+				|- 07-utilities/
+				|- 08-modules/
+				|- 09-one-offs/
+		|- public
+			|- {fonts}
+		|- package.json
+		|- larva.config.js
+	|- template-parts/ (only if there are parsed patterns)
+		|- patterns/
+```
 ### In a brand new project
 
 To install Larva, run the following command from the asset directory of a consuming project:
@@ -27,12 +54,7 @@ module.exports = {
 ```
 
 Create the following directories in your-theme/assets/src/patterns: 
-* `04-components/`
-* `05-objects/`
-* `06-algorithms/`
-* `07-utilities/`
-* `08-modules/`
-* `09-one-offs/`
+
 
 (yes, there will be a scaffold task, someday)
 
