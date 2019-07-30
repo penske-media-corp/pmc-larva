@@ -3,18 +3,19 @@
 const chalk = require( 'chalk' );
 const fs = require( 'fs' );
 const path = require( 'path' );
-const { getScssPathsWithExtension, concatenateFileData, renderSass } = require( './utils/utils' );
+const { getScssPathsWithExtension, concatenateFileData, renderSass, getSassResultFilePath } = require( './utils/utils' );
 
-module.exports = function build( extension, srcPath ) {
+module.exports = function build( extension, filepath ) {
 
-	getScssPathsWithExtension( extension, srcPath )
+	let resultFile = getSassResultFilePath( filepath, extension );
+
+	getScssPathsWithExtension( extension, path.dirname( filepath ) )
 	.then( resultPaths => concatenateFileData( resultPaths ) )
 	.then( resultSass => renderSass( resultSass ) )
 	.then( ( resultCss ) => {
-		fs.writeFileSync( path.resolve( __dirname, '../dist/pmc-utilities.' + extension + '.css' ), resultCss.css.toString() );
-		console.log( chalk.green( 'Compiled ' + extension + ' CSS.' ) );
-		
+		fs.writeFileSync( resultFile, resultCss.css.toString() );
+		console.log( chalk.green( 'Compiled ' + resultFile + ' CSS.' ) );
 	})
-	.catch( err => console.log( err ) );
+	.catch( err => console.error( err ) );
 
 }
