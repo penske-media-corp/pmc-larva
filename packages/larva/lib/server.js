@@ -25,7 +25,7 @@ let twing = new TwingEnvironment( loader, { debug: true } );
 app.use( express.static('build' ) );
 // TODO: these will be updated to paths that point to a node module for use out of the mono-repo
 app.use( '/utils' , express.static( path.join( appConfiguration.larvaPatternsDir, '../css-utilities/build/css' ) ) );
-app.use( '/algos' , express.static( path.join( appConfiguration.larvaPatternsDir, '../css-algorithms/src' ) ) );
+app.use( '/algos' , express.static( path.join( appConfiguration.larvaPatternsDir, '../css-algorithms/build/css' ) ) );
 app.use( '/static' , express.static( path.join( __dirname, '../static' ) ) );
 
 app.get( '/', function (req, res) {
