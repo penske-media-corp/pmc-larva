@@ -1,6 +1,6 @@
 const isCoreTheme = require( './isCoreTheme.js' );
 
-module.exports = function patternPathsToLoad( config ) {
+module.exports = function getPatternPathsToLoad( config ) {
 	let paths = [];
 	
 	try {

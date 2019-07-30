@@ -4,10 +4,10 @@ const fs = require( 'fs' );
 const express = require('express');
 const app = express();
 const port = process.env.NODE_PORT || 3000;
-const { getAppConfiguration, patternPathsToLoad, getPatternsIndexPath, isCoreTheme, getPatternData, getPatternType } = require( './utils/utils' );
+const { getAppConfiguration, getPatternPathsToLoad, getPatternsIndexPath, isCoreTheme, getPatternData, getPatternType } = require( './utils/utils' );
 
 const appConfiguration = getAppConfiguration( 'patterns' );
-const twigPaths = patternPathsToLoad( appConfiguration );
+const twigPaths = getPatternPathsToLoad( appConfiguration );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
 
