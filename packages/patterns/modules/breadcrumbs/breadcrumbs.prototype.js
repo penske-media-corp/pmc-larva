@@ -4,5 +4,5 @@ const clone = require( '../../../larva/lib/utils/clonePatternData' );// This sho
 const o_nav = clone( path.resolve( __dirname, '../../objects/o-nav/o-nav.prototype' ) );
 
 module.exports = {
-	"o_nav": o_nav
+	'o_nav': o_nav
 }
