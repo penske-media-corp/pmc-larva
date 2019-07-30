@@ -3,7 +3,7 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 const fixture = path.join( __dirname, '../../fixtures' );
 
-const getProjectNodeModulesPath = require( '../../../lib/utils/getProjectNodeModulesPath' );
+const { getProjectNodeModulesPath } = require( '../../../lib/utils/utils' );
 
 describe( 'getProjectNodeModulesPath', () => {
 	it( 'gets the absolute path of node_modules in the project', () => {
