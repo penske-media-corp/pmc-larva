@@ -11,6 +11,7 @@ const twigPaths = getPatternPathsToLoad( appConfiguration );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
 
+// TODO: make this an array / iterator combo
 if ( ! isCoreTheme( appConfiguration) ) {
 	loader.addPath( path.resolve( appConfiguration.themePatternsDir, './04-components' ), 'components' );
 	loader.addPath( path.resolve( appConfiguration.themePatternsDir, './05-objects' ), 'objects' );
@@ -22,9 +23,9 @@ loader.addPath( appConfiguration.larvaPatternsDir, 'larva' );
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 app.use( express.static('build' ) );
-// TODO: these will be updated to paths not on Lara's computer...
-app.use( '/utils' , express.static( '/Users/laraschenck/Sites/pmc/pmc-larva/packages/css-utilities/dist' ) );
-app.use( '/algos' , express.static( '/Users/laraschenck/Sites/pmc/pmc-larva/packages/css-algorithms' ) );
+// TODO: these will be updated to paths that point to a node module for use out of the mono-repo
+app.use( '/utils' , express.static( path.join( appConfiguration.larvaPatternsDir, '../css-utilities/build/css' ) ) );
+app.use( '/algos' , express.static( path.join( appConfiguration.larvaPatternsDir, '../css-algorithms/src' ) ) );
 app.use( '/static' , express.static( path.join( __dirname, '../static' ) ) );
 
 app.get( '/', function (req, res) {
