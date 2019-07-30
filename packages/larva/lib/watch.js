@@ -13,11 +13,10 @@ gaze( process.cwd() + '/**/*.scss', (err, watcher) => {
 		build( 'common.async', filepath );
 	});
 
+	// TODO: need to configure these...
 	// On file added
 	watcher.on('added', filepath => {
 		console.log(filepath + ' was added');
-		// build( 'common.inline', srcPath );
-		// build( 'common.async', srcPath );
 	});
 
 	// On file deleted
