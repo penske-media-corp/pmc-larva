@@ -20,7 +20,8 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "../../node_modules/.bin/jest"
+	"test": "../../node_modules/.bin/jest",
+	"watch": "node node_modules/@penskemediacorp/larva/lib/watch"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
