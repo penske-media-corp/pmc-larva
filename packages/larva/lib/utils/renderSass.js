@@ -6,7 +6,7 @@ module.exports = function renderSass( sassData ) {
 		sass.render( {
 			data: sassData,
 			includePaths: [
-				path.join(__dirname, '../../node_modules') // npm
+				path.resolve( '/Users/laraschenck/Sites/pmc/pmc-larva/packages/css-utilities/node_modules') // command should be run from same directory as node_modules
 			]
 		}, ( err, result ) => {
 			if ( err ) {
