@@ -3,11 +3,11 @@
 const chalk = require( 'chalk' );
 const fs = require( 'fs' );
 const path = require( 'path' );
-const { getScssPathsWithExtension, concatenateFileData, renderSass, getSassResultFilePath } = require( './utils/utils' );
+const { getScssPathsWithExtension, concatenateFileData, renderSass, getScssResultFilePath } = require( './utils/utils' );
 
 module.exports = function build( extension, filepath ) {
 
-	let resultFile = getSassResultFilePath( filepath, extension );
+	let resultFile = getScssResultFilePath( filepath, extension );
 
 	getScssPathsWithExtension( extension, path.dirname( filepath ) )
 	.then( resultPaths => concatenateFileData( resultPaths ) )
