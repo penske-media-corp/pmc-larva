@@ -8,4 +8,7 @@ module.exports = {
 	getPatternType: require( './getPatternType' ),
 	isCoreTheme: require( './isCoreTheme' ),
 	patternPathsToLoad: require( './patternPathsToLoad' ),
+	getScssPathsWithExtension: require( './getScssPathsWithExtension' ),
+	concatenateFileData: require( './concatenateFileData' ),
+	renderSass: require( './renderSass' ),
 }
