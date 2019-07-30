@@ -22,7 +22,7 @@ loader.addPath( appConfiguration.larvaPatternsDir, 'larva' );
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 app.use( express.static('build' ) );
-app.use( '/static' , express.static( '/Users/laraschenck/Sites/pmc/pmc-larva/packages/larva/static' ) );
+app.use( '/static' , express.static( path.join( __dirname, '../static' ) ) );
 
 app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.html', { name: 'Welcome' } ) );
