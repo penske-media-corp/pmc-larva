@@ -1,26 +1,23 @@
 const build = require( './build' );
 const gaze = require('gaze');
 const path = require('path');
-const srcPath = path.join( __dirname, './src' );
 
-gaze('./**/*.scss', (err, watcher) => {
+gaze( process.cwd() + '/**/*.scss', (err, watcher) => {
 	const watched = watcher.watched();
 
-	// On file changed
 	watcher.on('changed', filepath => {
 		console.log(filepath + ' was changed');
-		// Regex to get chunk
-		// build( chunk );
 
-		build( 'common.inline', srcPath );
-		build( 'common.async', srcPath );
+		// TODO: Build should determine the extension with a regex.
+		build( 'common.inline', filepath );
+		build( 'common.async', filepath );
 	});
 
 	// On file added
 	watcher.on('added', filepath => {
 		console.log(filepath + ' was added');
-		build( 'common.inline', srcPath );
-		build( 'common.async', srcPath );
+		// build( 'common.inline', srcPath );
+		// build( 'common.async', srcPath );
 	});
 
 	// On file deleted
