@@ -18,7 +18,6 @@ module.exports = function getAppConfiguration( tool ) {
 		return config;
 
 	} catch ( error ) {
-		console.error( chalk.red( chalk.bold( 'There was a problem getting the project level configuration.\n' ) + error ) );
-		console.log( chalk.yellow( 'Call stack below.' ) );
+		console.error( chalk.red( chalk.bold( 'There is no larva.config.js in this directory.\n' ) + error ) );
 	}
 };
