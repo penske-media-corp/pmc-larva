@@ -1,9 +1,9 @@
-'use strict';
+// 'use strict';
 
-// const patterns = require('..');
+// // const patterns = require('..');
 
-describe('patterns', () => {
-	test( 'test stuff', () => {
-		expect( 1 ).toBe( 1 );
-	})
-});
+// describe('patterns', () => {
+// 	test( 'test stuff', () => {
+// 		expect( 1 ).toBe( 1 );
+// 	})
+// });

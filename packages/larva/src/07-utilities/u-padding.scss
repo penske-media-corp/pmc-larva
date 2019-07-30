@@ -1,5 +1,0 @@
-@import '../setup';
-
-@mixin pmc-u-padding( $paddings ) {
-	@include _spacing-class-generator( 'padding', $paddings );
-}

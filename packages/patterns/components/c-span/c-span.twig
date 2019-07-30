@@ -1,0 +1,11 @@
+<span class="c-span {{ modifier_class }} {{ c_span_classes }}">
+{% if c_span_url %}
+	<a href="{{ c_span_url }}" class="c-span__link {{ c_span_link_classes }}">
+{% endif %}
+
+	{{ c_span_text }}
+
+{% if c_span_url %}
+	</a>
+{% endif %}
+</span>
