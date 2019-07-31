@@ -5,11 +5,11 @@ const fs = require( 'fs' );
 const path = require( 'path' );
 const { getScssPathsWithExtension, concatenateFileData, renderSass, getScssResultFilePath } = require( './utils/utils' );
 
-module.exports = function build( extension, filepath ) {
+module.exports = function build( extension, changedFilePath ) {
 
-	let resultFile = getScssResultFilePath( filepath, extension );
+	let resultFile = getScssResultFilePath( changedFilePath, extension );
 
-	getScssPathsWithExtension( extension, path.dirname( filepath ) )
+	getScssPathsWithExtension( extension, path.dirname( changedFilePath ) )
 	.then( resultPaths => concatenateFileData( resultPaths ) )
 	.then( resultSass => renderSass( resultSass ) )
 	.then( ( resultCss ) => {
