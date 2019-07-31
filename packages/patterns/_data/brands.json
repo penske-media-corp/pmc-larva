@@ -1,0 +1,20 @@
+{
+	"brands": [
+		{
+		"name": "Variety",
+		"url": "https://variety.com/"
+		},
+		{
+			"name": "Rolling Stone",
+			"url": "https://rollingstone.com/"
+		},
+		{
+			"name": "Deadline",
+			"url": "https://deadline.com/"
+		},
+		{
+			"name": "RobbReport",
+			"url": "https://robbreport.com/"
+		}
+	]
+}

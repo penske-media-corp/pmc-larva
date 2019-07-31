@@ -2,46 +2,12 @@ const clone = require( '@penskemediacorp/larva' ).clone;
 const path = require( 'path' );
 const o_nav = clone( path.resolve( __dirname, '../../objects/o-nav/o-nav.prototype' ) );
 const c_link_path = path.resolve( __dirname, '../../components/c-link/c-link.prototype' );
+const data = require( '../../_data/brands.json' );
 
-// TODO: move this to a pmc plugin when it exists.
-const brands = [
-	{
-		"name": "Variety",
-		"url": "https://variety.com/"
-	},
-	{
-		"name": "Rolling Stone",
-		"url": "https://rollingstone.com/"
-	}
-];
-
-// const c_tagline = 
-/**
- * {
-		"o_nav_classes": "pmc-u-text-transform-uppercase u-width-300 u-max-width-100p u-flex-order-2@mobile-max u-display-none@mobile pmc-u-padding-a-1 u-border-a-1@mobile-max u-border-color-grey-medium-light pmc-u-margin-b-1@mobile-max",
-		"o_nav_title_classes": "pmc-u-font-size-12@mobile-max pmc-u-margin-b-050 is-active is-heading a-icon-after-down a-icon-after-down-r-0 a-icon-after-down-hide@mobile a-icon-bottom-arrow pmc-u-margin-a-00@mobile-max pmc-u-justify-content-center u-justify-content-left@mobile-max",
-		"o_nav_list_classes": "pmc-u-margin-a-00@mobile-max pmc-u-color-grey-medium-light u-color-black@mobile-max",
-		"o_nav_list_item_classes": "pmc-u-color-grey-medium pmc-u-font-size-12@mobile-max pmc-u-margin-t-1@mobile-max pmc-u-line-height-large",
-		"o_nav_title_text": "Our Sites",
-		"o_nav_list_items": [
-			{
-				"c_link_url": "https://variety.com/",
-				"c_link_text": "Variety"
-			},
-			{
-				"c_link_url": "https://deadline.com",
-				"c_link_text": "Deadline"
-			},
-		]
-	}
- */
-
-o_nav.o_nav_list_classes = '';
-o_nav.o_nav_list_item_classes = '';
 o_nav.o_nav_title_text = 'Our Sites';
 o_nav.o_nav_list_items = [];
 
-brands.forEach( ( brand ) => {
+data.brands.forEach( ( brand ) => {
 	let c_link = clone( c_link_path );
 
 	c_link.c_link_text = brand.name;
@@ -82,4 +48,4 @@ module.exports = {
 		]
 	},
 	"o_nav": o_nav
-}
+};
