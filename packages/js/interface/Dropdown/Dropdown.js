@@ -19,11 +19,11 @@ export default class Dropdown {
 	}
 
 	get items() {
-		return [ ... this.el.querySelectorAll( '[data-dropdown-list-item]' ) ];
+		return [ ... this.el.querySelectorAll( '.js-Dropdown-list-item' ) ];
 	}
 
 	get list() {
-		return this.el.querySelector( '[data-dropdown-list]' );
+		return this.el.querySelector( '.js-Dropdown-list' );
 	}
 
 	/**

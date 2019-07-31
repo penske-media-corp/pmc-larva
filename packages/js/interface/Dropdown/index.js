@@ -3,7 +3,7 @@ import Dropdown from './Dropdown.js';
 // Initialize all Dropdowns.
 
 export default function() {
-	const dropdowns = [ ... document.querySelectorAll( '[data-dropdown]' ) ];
+	const dropdowns = [ ... document.querySelectorAll( '.js-Dropdown' ) ];
 	const width     = window.innerWidth;
 
 	dropdowns.forEach( el => {
