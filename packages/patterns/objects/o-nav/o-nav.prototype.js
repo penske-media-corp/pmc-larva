@@ -10,10 +10,10 @@ const o_nav_list_items = [
 
 module.exports = {
 	"modifier_class": "",
-	"o_nav_classes": "pmc-u-display-flex",
+	"o_nav_classes": "",
 	"o_nav_title_text": "",
 	"o_nav_title_classes": "",
-	"o_nav_list_classes" : "pmc-u-display-flex pmc-a-space-children-horizontal pmc-a-space-children--1 pmc-u-align-items-center pmc-u-font-family-primary pmc-u-a-unstyle-list",
+	"o_nav_list_classes" : "",
 	"o_nav_list_item_classes": "",
 	"o_nav_list_items": o_nav_list_items
 };
