@@ -15,7 +15,7 @@ module.exports = function getPatternPathsToLoad( config ) {
 	}
 	
 	try {
-		paths.push( config.themePatternsDir );
+		paths.push( config.projectPatternsDir );
 	} catch( error ) {
 		console.log( error );
 	}

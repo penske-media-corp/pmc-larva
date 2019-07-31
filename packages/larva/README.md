@@ -48,7 +48,7 @@ const path = require( 'path' );
 module.exports = {
 	patterns: {
 		larvaPatternsDir: path.resolve( __dirname, 'node_modules/@penksemediacorp/larva-patterns' ),
-		themePatternsDir: path.resolve( __dirname, './src/patterns' )
+		projectPatternsDir: path.resolve( __dirname, './src/patterns' )
 	}
 }
 ```

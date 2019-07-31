@@ -14,7 +14,7 @@ describe( 'getPatternPathsToLoad', () => {
 		let appConfigModified = Object.assign( {}, appConfiguration );
 		appConfigModified = {
 			larvaPatternsDir: '/path/to/larva',
-			themePatternsDir: '/path/to/theme/patterns',
+			projectPatternsDir: '/path/to/theme/patterns',
 		};
 
 		assert.equal( getPatternPathsToLoad( appConfigModified )[1].includes( 'theme' ), true );
