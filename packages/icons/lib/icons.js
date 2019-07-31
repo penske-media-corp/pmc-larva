@@ -1,32 +1,47 @@
 'use strict';
 
-var SVGSpriter    = require('svg-sprite'),
-path              = require('path'),
-mkdirp            = require('mkdirp'),
-fs                = require('fs'),
-config            = {
-    "dest": "../build"
-},
-spriter           = new SVGSpriter(config);
+const SVGSpriter = require('svg-sprite');
+const path = require('path');
+const mkdirp = require('mkdirp');
+const globby = require('globby');
+const fs = require('fs');
 
-// Register some SVG files with the spriter
-var file          = 'src/svg-sprite/arrow.svg'; // <-- Replace with your local file path
-var file1          = 'src/svg-sprite/byline-plus.svg'; // <-- Replace with your local file path
-spriter.add(path.resolve(file), file, fs.readFileSync(path.resolve(file), {encoding: 'utf-8'}));
-spriter.add(path.resolve(file1), file1, fs.readFileSync(path.resolve(file1), {encoding: 'utf-8'}));
+const config = {
+	dest: 'build',
+	log: null, // Logging verbosity (default: no logging)
+	mode: {
+		defs: true, // Create a «defs» sprite
+	},
+	shape: {
+		id: {
+			separator: '',
+		}
+	}
+};
 
-// ...
+const svgPath = path.join( __dirname, '../src/svg-sprite' );
+
+const spriter = new SVGSpriter(config);
+const svgFiles = globby.sync( svgPath, {
+	expandDirectories: {
+		extensions: [ 'svg' ],
+	}
+});
+
+svgFiles.forEach( file => {
+	spriter.add( file, path.basename( file ), fs.readFileSync( file, { encoding: 'utf-8' } ) );
+});
 
 // Compile the sprite
-spriter.compile(function(error, result, cssData) {
-    
-    // Run through all configured output modes
-    for (var mode in result) {
-        
-        // Run through all created resources and write them to disk
-        for (var type in result[mode]) {
-            mkdirp.sync(path.dirname(result[mode][type].path));
-            fs.writeFileSync(result[mode][type].path, result[mode][type].contents);
-        }
-    }
+spriter.compile( function( error, result, cssData ) {
+	
+	// Run through all configured output modes
+	for ( var mode in result ) {
+
+		// Run through all created resources and write them to disk
+		for ( var type in result[mode] ) {
+			mkdirp.sync(path.dirname(result[mode][type].path));
+			fs.writeFileSync(result[mode][type].path, result[mode][type].contents);
+		}
+	}
 });
