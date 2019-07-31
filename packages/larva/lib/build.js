@@ -9,13 +9,15 @@ module.exports = function build( extension, changedFilePath ) {
 
 	let resultFile = getScssResultFilePath( changedFilePath, extension );
 
-	getScssPathsWithExtension( extension, path.dirname( changedFilePath ) )
-	.then( resultPaths => concatenateFileData( resultPaths ) )
-	.then( resultSass => renderSass( resultSass ) )
-	.then( ( resultCss ) => {
-		fs.writeFileSync( resultFile, resultCss.css.toString() );
-		console.log( chalk.green( 'Compiled ' + resultFile + ' CSS.' ) );
-	})
-	.catch( err => console.error( err ) );
+	return new Promise( ( resolve, reject ) => {
 
-}
+		getScssPathsWithExtension( extension, path.dirname( changedFilePath ) )
+		.then( resultPaths => concatenateFileData( resultPaths ) )
+		.then( resultSass => renderSass( resultSass ) )
+		.then( ( resultCss ) => {
+			resolve( resultCss );
+		})
+		.catch( err => reject( err ) );
+	})
+
+};
