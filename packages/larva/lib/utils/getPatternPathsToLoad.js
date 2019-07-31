@@ -1,23 +1,19 @@
 const isCoreTheme = require( './isCoreTheme.js' );
+const fs = require( 'fs' );
 
 module.exports = function getPatternPathsToLoad( config ) {
 	let paths = [];
 	
-	try {
+	if( fs.existsSync( config.larvaPatternsDir ) ) {
 		paths.push( config.larvaPatternsDir );
-	} catch( error ) {
-		console.log( error );
 	}
-	
-	// No theme path if it is the core theme.
-	if ( isCoreTheme( config ) ) {
-		return paths;
+
+	if( fs.existsSync( config.themePatternsDir ) ) {
+		paths.push( config.themePatternsDir );
 	}
-	
-	try {
-		paths.push( config.projectPatternsDir );
-	} catch( error ) {
-		console.log( error );
+
+	if ( 0 === paths.length ) {
+		throw new Error( `Could not locate pattern paths.` );
 	}
 
 	return paths;

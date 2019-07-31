@@ -6,18 +6,8 @@ const appConfiguration = require( '../../../lib/utils/getAppConfiguration' )('pa
 
 describe( 'getPatternPathsToLoad', () => {
 
-	it( 'only loads larvaPath if it is the core theme', () => {
-		assert.equal( getPatternPathsToLoad( appConfiguration )[0].includes( 'larva' ), true );
-	});
-
-	it( 'returns the theme path if it is not the core theme', () => {
-		let appConfigModified = Object.assign( {}, appConfiguration );
-		appConfigModified = {
-			larvaPatternsDir: '/path/to/larva',
-			projectPatternsDir: '/path/to/theme/patterns',
-		};
-
-		assert.equal( getPatternPathsToLoad( appConfigModified )[1].includes( 'theme' ), true );
+	it( 'returns an array of paths loads larvaPath if it is the core theme', () => {
+		assert.equal( getPatternPathsToLoad( appConfiguration ).length, 2 );
 	});
 
 });
