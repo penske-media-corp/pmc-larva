@@ -13,6 +13,9 @@
 		<script async src="/static/js/prism.js"></script>
 	</head>
 	<body>
+		<div style="display: none;">
+			{{ sprite_data|raw }}
+		</div>
 		<main>
 			<h1>{{ type ~ ': ' ~ name }}</h1>
 			{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}

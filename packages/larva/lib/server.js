@@ -37,6 +37,7 @@ app.get( '/:type/:name', function (req, res) {
 	let patternsPath = getPatternsIndexPath( appConfiguration );
 	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
+	req.params[ 'sprite_data' ] = fs.readFileSync( path.join( __dirname, '../../icons/build/defs/svg/sprite.defs.svg' ) );
 	res.end( twing.render( 'pattern.html', req.params ) );
 })
 
