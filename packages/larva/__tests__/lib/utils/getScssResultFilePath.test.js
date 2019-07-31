@@ -5,7 +5,7 @@ const getScssResultFilePath = require( '../../../lib/utils/getScssResultFilePath
 
 const stubSassFilePath = '/path/to/css-utilities/src/07-utilities/u-thing/u-display.common.inline.scss';
 
-const expectedResultFilePath = '/path/to/css-utilities/build/css/utilities.common.inline.css';
+const expectedResultFilePath = '/path/to/css-utilities/build/css/common.inline.css';
 
 describe( 'getScssResultFilePath', () => {
 	it( 'gets the path of the output CSS file path', () => {
