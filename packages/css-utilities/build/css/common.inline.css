@@ -200,6 +200,9 @@
 .pmc-u-font-weight-bold {
   font-weight: 700; }
 
+.pmc-u-height-100p {
+  height: 100%; }
+
 .pmc-u-line-height-small {
   line-height: 1.1; }
 
@@ -399,3 +402,9 @@
 
 .pmc-u-text-transform-uppercase {
   text-transform: uppercase; }
+
+.pmc-u-width-100p {
+  width: 100%; }
+
+.pmc-u-max-width-150 {
+  max-width: 9.375rem; }
