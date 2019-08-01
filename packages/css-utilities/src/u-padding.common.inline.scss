@@ -1,8 +1,10 @@
-@import '../node_modules/@penskemediacorp/larva-scss/dist/tokens';
-@import '../node_modules/@penskemediacorp/larva-scss/dist/generators';
+@import '@penskemediacorp/larva-scss/dist/tokens';
+@import '@penskemediacorp/larva-scss/dist/generators';
 
 $paddings_without_breakpoints: (
+	('r', $spacer-1),
 	('tb', $spacer-025),
+	('b', $spacer-025),
 	('tb', $spacer-050),
 );
 

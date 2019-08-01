@@ -1,5 +1,4 @@
-.a-unstyle-link,
-.a-unstyle-link:hover {
-	color: currentColor;
-	text-decoration: none;
-}
+.pmc-a-unstyle-link,
+.pmc-a-unstyle-link:hover {
+  color: currentColor;
+  text-decoration: none; }

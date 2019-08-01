@@ -7,5 +7,10 @@ module.exports = {
 	getPatternsIndexPath: require( './getPatternsIndexPath' ),
 	getPatternType: require( './getPatternType' ),
 	isCoreTheme: require( './isCoreTheme' ),
-	patternPathsToLoad: require( './patternPathsToLoad' ),
+	getPatternPathsToLoad: require( './getPatternPathsToLoad' ),
+	getScssPathsWithExtension: require( './getScssPathsWithExtension' ),
+	concatenateFileData: require( './concatenateFileData' ),
+	renderSass: require( './renderSass' ),
+	getScssResultFilePath: require( './getScssResultFilePath' ),
+	getProjectNodeModulesPath: require( './getProjectNodeModulesPath' ),
 }

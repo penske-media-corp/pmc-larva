@@ -5,9 +5,10 @@
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
-  "main": "lib/larva-css-utilities.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
+    "dist": "dist",
     "test": "__tests__"
   },
   "files": [
@@ -19,7 +20,8 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "../../node_modules/.bin/jest"
+	"test": "../../node_modules/.bin/jest",
+	"watch": "node node_modules/@penskemediacorp/larva/lib/watch"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
@@ -28,9 +30,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@penskemediacorp/larva-scss": "^1.3.0-alpha.0",
-    "globby": "^10.0.0",
-	"node-sass": "^4.12.0",
-	"stylelint": "^10.1.0"
+    "@penskemediacorp/larva": "^1.3.0-alpha.0",
+    "@penskemediacorp/larva-scss": "^1.3.0-alpha.0"
   }
 }

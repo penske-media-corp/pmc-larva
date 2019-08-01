@@ -20,12 +20,13 @@
   },
   "scripts": {
     "test": "../../node_modules/.bin/jest",
-    "sass": "node_modules/.bin/node-sass --watch src -o src"
+    "watch": "node node_modules/@penskemediacorp/larva/lib/watch.js"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
+	"@penskemediacorp/larva": "^1.3.0-alpha.0",
     "@penskemediacorp/larva-scss": "^1.3.0-alpha.0",
 	"node-sass": "^4.12.0",
 	"stylelint": "^10.1.0"
