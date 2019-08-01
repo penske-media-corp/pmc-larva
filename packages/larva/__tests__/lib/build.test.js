@@ -1,19 +1,20 @@
-const Promise = require( 'bluebird' );
-const assert = require( 'assert' );
 const fs = require( 'fs' );
+const assert = require( 'assert' );
 const path = require( 'path' );
-const fixture = path.join( __dirname, '../fixtures' );
-
 const build = require( '../../lib/build' );
-const changedFilePath = path.join( fixture, './src/patterns/06-algorithms/a-wrapper/a-wrapper.common.inline.scss' );
+const fixture = path.join( __dirname, '../fixtures' );
+const getScssResultFilePath = require( '../../lib/utils/getScssResultFilePath' );
 
-const buildPromise = Promise.promisify( build );
+const changedFilePathStub = path.join( fixture, './src/patterns/06-algorithms/a-wrapper/a-wrapper.common.inline.scss' );
+const resultFileStub = getScssResultFilePath( changedFilePathStub, 'common.inline' );
+
+const beforeStat = fs.statSync( resultFileStub ).atime;
 
 describe( 'build', () => {
-	it( 'builds sass files', () => {
-		return build( 'common.inline', changedFilePath ).then( ( result ) => {
-			assert.equal( result.css.toString().indexOf( '.pmc-a-wrapper' ), 1 );
-			assert.equal( result.css.toString().indexOf( '.pmc-a-icon' ), 1 );
-		});
+	
+	// Not a great test, but better than nothing?
+	it( 'accesses the file to build', () => {
+		build( 'common.inline', changedFilePathStub );
+		assert.notEqual( fs.statSync( resultFileStub ).atime, beforeStat );
 	});
 });
