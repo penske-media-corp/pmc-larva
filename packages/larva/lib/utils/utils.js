@@ -11,5 +11,6 @@ module.exports = {
 	getScssPathsWithExtension: require( './getScssPathsWithExtension' ),
 	concatenateFileData: require( './concatenateFileData' ),
 	renderSass: require( './renderSass' ),
-	getScssResultFilePath: require( './getScssResultFilePath' )
+	getScssResultFilePath: require( './getScssResultFilePath' ),
+	getScssResultCss: require( './getScssResultCss' )
 }

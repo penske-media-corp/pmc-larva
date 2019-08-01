@@ -10,7 +10,7 @@ gaze( process.cwd() + '/**/*.scss', (err, watcher) => {
 
 		// TODO: Build should determine the extension with a regex.
 		build( 'common.inline', filepath );
-		build( 'common.async', filepath );
+		// build( 'common.async', filepath );
 	});
 
 	// TODO: need to configure these...
