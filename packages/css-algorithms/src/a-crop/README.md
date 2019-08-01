@@ -14,3 +14,18 @@ The available aspect ratios output from this package are:
 .pmc-a-crop-16x9
 .pmc-a-crop-3x4
 ```
+
+The source for the cropping algorithm is:
+```
+.pmc-a-crop-16x9 {
+	position: relative;
+	padding-bottom: calc( ( 9 / 16 ) * 100%); 
+}
+
+.pmc-a-crop-16x9 img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; 
+}
+```
