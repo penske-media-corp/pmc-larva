@@ -3,7 +3,8 @@
   --font-family-primary-fancy: Balto, Helvetica, sans-serif, web, Helvetica;
   --font-family-secondary: Georgia, system;
   --font-family-secondary-fancy: Eksell, Georgia, serif, web, Georgia;
-  --site-max-width: 78.75rem; }
+  --site-max-width: 78.75rem;
+  --color-grey-medium-dark: #595959; }
 
 .pmc-u-align-items-center {
   align-items: center; }
@@ -28,6 +29,9 @@
 
 .pmc-u-flex {
   display: flex; }
+
+.pmc-u-flex-grow-1 {
+  flex-grow: 1; }
 
 .pmc-u-flex-direction-column {
   flex-direction: column; }
@@ -203,6 +207,9 @@
 .pmc-u-height-100p {
   height: 100%; }
 
+.pmc-u-max-height-50 {
+  max-height: 3.125rem; }
+
 .pmc-u-line-height-small {
   line-height: 1.1; }
 
@@ -293,6 +300,9 @@
 
 .pmc-u-margin-a-00 {
   margin: 0; }
+
+.pmc-u-margin-l-auto {
+  margin-left: auto; }
 
 .pmc-u-padding-t-050 {
   padding-top: 0.5rem; }
@@ -399,6 +409,13 @@
   .pmc-u-padding-tb-050\@desktop {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; } }
+
+.pmc-u-text-align-center {
+  text-align: center; }
+
+@media (max-width: 47.999rem) {
+  .pmc-u-text-align-center\@mobile-max {
+    text-align: center; } }
 
 .pmc-u-text-transform-uppercase {
   text-transform: uppercase; }

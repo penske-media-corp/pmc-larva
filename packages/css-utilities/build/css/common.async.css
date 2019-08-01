@@ -1,2 +1,5 @@
 .pmc-u-background-blue {
   background-color: #429AE7; }
+
+.pmc-u-color-grey-medium-dark {
+  color: var(--color-grey-medium-dark); }
