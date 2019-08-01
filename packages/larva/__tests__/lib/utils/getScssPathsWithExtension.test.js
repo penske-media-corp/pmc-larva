@@ -8,7 +8,7 @@ describe('getScssPathsWithExtension', () => {
 	it( 'gets all files with the .common.inline.scss extension', () => {
 		return getScssPathsWithExtension( 'common.inline', fixtureSrcPath )
 		.then( ( result ) => {
-			expect( result.length ).toBe( 2 );
+			expect( result.length ).toBe( 4 );
 			result.forEach( string => {
 				expect( path.parse( string ).name ).toContain( 'common.inline' );
 			});
