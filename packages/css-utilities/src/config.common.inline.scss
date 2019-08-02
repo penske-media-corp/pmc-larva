@@ -1,5 +1,11 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 
+
+// NOTE / TODO: this is a reminder to add generic and element styles on Monday
+* {
+	box-sizing: border-box;
+}
+
 :root {
 	--font-family-primary: #{map-get( $semantic-font-families, 'helvetica' )};
 	--font-family-primary-fancy: #{map-get( $semantic-font-families, 'balto' )};
