@@ -10,8 +10,7 @@ const config = {
 	dest: 'build',
 	log: null, // Logging verbosity (default: no logging)
 	mode: {
-		// defs: true,
-		// symbol: true,
+		defs: true,
 		stack: {
 			example: true
 		}
@@ -19,7 +18,8 @@ const config = {
 	shape: {
 		id: {
 			separator: '',
-		}
+		},
+		transform: [ 'svgo' ]
 	},
 	svg: {
 		dimensionAttributes: false,
