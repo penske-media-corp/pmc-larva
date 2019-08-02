@@ -1,0 +1,8 @@
+@import '@penskemediacorp/larva-scss/dist/tools';
+
+.pmc-u-order-100\@mobile-max {
+
+	@include pmc-breakpoint( mobile-max ) {
+		order: 100;
+	}
+}
