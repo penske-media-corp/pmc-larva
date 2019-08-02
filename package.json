@@ -7,6 +7,8 @@
     "watch": "node packages/larva/lib/watch.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "bluebird": "^3.5.5",
     "express": "^4.17.1",
     "gaze": "^1.1.3",
@@ -18,6 +20,8 @@
     "lerna": "^3.15.0",
     "node-sass": "^4.12.0",
     "stylelint": "^10.1.0",
-    "twing": "^2.2.7"
+    "twing": "^2.2.7",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }
