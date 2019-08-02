@@ -53,6 +53,9 @@ $ICONS_BUILD_PATH: '/icons';
 	}
 }
 
+.a-icon-after\:margin-l-auto::after {
+	margin-left: auto;
+}
 
 // Specific Icons
 
@@ -66,10 +69,6 @@ $ICONS_BUILD_PATH: '/icons';
 
 .a-icon-right-arrow {
 	--a-icon-transform: rotate(-90deg);
-}
-
-.a-icon-down-arrow {
-	// --a-icon-transform: rotate(-90deg);
 }
 
 .a-icon-left-arrow {
