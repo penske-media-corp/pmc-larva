@@ -14,8 +14,6 @@ c_icon.c_icon_name = 'pmc-logo-black';
 c_icon.c_icon_url = 'https://pmc.com';
 c_icon.c_icon_rel_name = 'noopener noreferrer';
 
-// pmc-u-margin-r-2 pmc-u-margin-r-00@mobile-max pmc-u-margin-b-1@mobile-max u-flex-order-1@mobile-max
-
 data.brands.forEach( ( brand ) => {
 	let c_link = clone( c_link_path );
 
@@ -25,10 +23,10 @@ data.brands.forEach( ( brand ) => {
 	o_nav.o_nav_list_items.push( c_link );
 });
 
-o_nav.o_nav_classes = 'pmc-u-text-transform-uppercase pmc-u-padding-lr-1 pmc-u-font-size-12 pmc-js-MobileHeightToggle';
-o_nav.o_nav_title_classes = 'pmc-u-margin-tb-00 pmc-u-padding-t-1 pmc-u-padding-b-050 pmc-u-width-100p a-icon-after a-icon-down-arrow a-icon-after:margin-l-auto pmc-u-cursor-pointer pmc-js-MobileHeightToggle-trigger';
-o_nav.o_nav_list_classes = 'pmc-js-MobileHeightToggle-target pmc-u-padding-b-050';
-o_nav.o_nav_list_item_classes = 'pmc-u-padding-tb-050 pmc-u-color-grey-medium-dark pmc-js-MobileHeightToggle-list-item';
+o_nav.o_nav_classes = 'pmc-u-text-transform-uppercase pmc-u-font-size-12  pmc-u-border-a-1 pmc-u-border-color-grey-medium-light pmc-u-flex@tablet pmc-js-MobileHeightToggle pmc-a-hover-dropup@tablet';
+o_nav.o_nav_title_classes = 'pmc-u-padding-lr-1 pmc-u-margin-tb-00 pmc-u-padding-t-1 pmc-u-padding-b-050 pmc-u-width-100p a-icon-after a-icon-down-arrow a-icon-after:margin-l-auto pmc-u-cursor-pointer pmc-js-MobileHeightToggle-trigger pmc-a-hover-dropup-trigger@tablet';
+o_nav.o_nav_list_classes = 'pmc-u-padding-lr-1 pmc-u-background-white pmc-u-padding-b-050 pmc-js-MobileHeightToggle-target pmc-a-hover-dropup-target@tablet';
+o_nav.o_nav_list_item_classes = 'pmc-u-padding-tb-050 pmc-u-color-grey-medium-dark';
 
 module.exports = {
 	"c_icon": c_icon,
