@@ -1,5 +1,16 @@
 "use strict";
 
+// JSDOM
+
+const { JSDOM } = require('jsdom');
+
+const jsdom = new JSDOM('<!doctype html><html><body><div class="test"></div></body></html>');
+const { window } = jsdom;
+
+global.window = window;
+global.document = window.document;
+
+
 // Please note, this is copy pasta from: https://github.com/kristerkari/stylelint-high-performance-animation/blob/master/jest-setup.js
 // Styleint does not provide a tester for Jest: https://github.com/stylelint/stylelint/issues/815
 
