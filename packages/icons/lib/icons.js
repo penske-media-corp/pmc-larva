@@ -10,12 +10,19 @@ const config = {
 	dest: 'build',
 	log: null, // Logging verbosity (default: no logging)
 	mode: {
-		defs: true, // Create a «defs» sprite
+		// defs: true,
+		// symbol: true,
+		stack: {
+			example: true
+		}
 	},
 	shape: {
 		id: {
 			separator: '',
 		}
+	},
+	svg: {
+		dimensionAttributes: false,
 	}
 };
 
