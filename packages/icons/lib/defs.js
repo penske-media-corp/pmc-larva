@@ -10,7 +10,9 @@ const config = {
 	dest: 'build',
 	log: null, // Logging verbosity (default: no logging)
 	mode: {
-		defs: true
+		defs: {
+			example: true
+		}
 	},
 	shape: {
 		id: {
