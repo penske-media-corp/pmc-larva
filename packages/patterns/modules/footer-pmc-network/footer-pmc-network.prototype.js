@@ -21,12 +21,13 @@ data.brands.forEach( ( brand ) => {
 
 	c_link.c_link_text = brand.name;
 	c_link.c_link_url = brand.url;
-	c_link.c_link_classes += ' pmc-u-text-transform-uppercase';
 
 	o_nav.o_nav_list_items.push( c_link );
 });
 
-// o_nav.o_nav_list_classes += ' ';
+o_nav.o_nav_classes = 'pmc-u-text-transform-uppercase pmc-u-padding-a-1 pmc-u-font-size-12';
+o_nav.o_nav_title_classes = 'pmc-u-margin-tb-00 pmc-u-padding-tb-050';
+o_nav.o_nav_list_item_classes = 'pmc-u-padding-tb-050 pmc-u-color-grey-medium-dark'
 
 module.exports = {
 	"c_icon": c_icon,
