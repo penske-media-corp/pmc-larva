@@ -1,11 +1,13 @@
-import initDropdowns from './interface/Dropdown/index';
+import initDropdowns from './interface/MobileHeightToggle/index';
 
 const onSafeResize = function() {
-	const width = window.innerWidth;
-
-	initDropdowns( width );
+	initDropdowns( window.innerWidth );
 };
 
 window.addEventListener( 'load', () => {
+	onSafeResize();
+});
+
+window.addEventListener( 'resize', () => {
 	onSafeResize();
 });
