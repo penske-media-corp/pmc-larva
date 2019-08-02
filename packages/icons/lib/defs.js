@@ -10,10 +10,7 @@ const config = {
 	dest: 'build',
 	log: null, // Logging verbosity (default: no logging)
 	mode: {
-		defs: true,
-		stack: {
-			example: true
-		}
+		defs: true
 	},
 	shape: {
 		id: {
@@ -26,7 +23,7 @@ const config = {
 	}
 };
 
-const svgPath = path.join( __dirname, '../src/svg-sprite' );
+const svgPath = path.join( __dirname, '../src/' );
 
 const spriter = new SVGSpriter(config);
 const svgFiles = globby.sync( svgPath, {
