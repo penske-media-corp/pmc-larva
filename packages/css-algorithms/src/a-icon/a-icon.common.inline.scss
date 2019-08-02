@@ -1,6 +1,8 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-scss/dist/tools';
 
+$ICONS_BUILD_PATH: '/icons';
+
 @mixin _a-icon-base {
 	content: var(--a-icon-content, '');
 	background: var(--a-icon-url, '') no-repeat;
@@ -55,8 +57,10 @@
 // Specific Icons
 
 .a-icon-left-arrow,
-.a-icon-right-arrow {
-	--a-icon-url: url( '../../../icons/build/stack/svg/sprite.stack.svg#arrow' );
+.a-icon-right-arrow,
+.a-icon-down-arrow,
+.a-icon-up-arrow {
+	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#arrow'} );
 	--a-icon-height: #{ $font-size-12 };
 }
 
@@ -64,12 +68,16 @@
 	--a-icon-transform: rotate(-90deg);
 }
 
+.a-icon-down-arrow {
+	// --a-icon-transform: rotate(-90deg);
+}
+
 .a-icon-left-arrow {
 	--a-icon-transform: rotate(90deg);
 }
 
 .a-icon-envelope {
-	--a-icon-url: url( '../../../icons/build/stack/svg/sprite.stack.svg#envelope' )
+	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#envelope'} );
 }
 
 .a-icon-forward-slash {
