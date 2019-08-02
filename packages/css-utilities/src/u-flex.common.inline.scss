@@ -4,6 +4,13 @@
 	display: flex;
 }
 
+.pmc-u-flex\@tablet {
+
+	@include pmc-breakpoint( tablet ) {
+		display: flex;
+	}
+}
+
 .pmc-u-flex-grow-1 {
 	flex-grow: 1;
 }
