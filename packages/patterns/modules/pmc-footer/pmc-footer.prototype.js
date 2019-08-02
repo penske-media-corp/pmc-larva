@@ -41,18 +41,5 @@ module.exports = {
 		"c_link_text": "Powered by WordPress.com VIP",
 		"c_link_url": "#"
 	},
-	"o_dropdown": {
-		"o_dropdown_classes": "pmc-u-font-size-12 pmc-u-font-weight-bold pmc-u-margin-l-auto u-width-300 u-max-width-100p u-flex-order-2@mobile-max u-display-none@mobile-max a-icon-after-down a-icon-after-down--has-hover pmc-u-display-block",
-		"o_dropdown_heading_classes": "u-flex u-align-items-center pmc-u-padding-l-1 pmc-u-text-transform-uppercase",
-		"o_dropdown_heading_text": "Our Sites",
-		"o_dropdown_list_classes": "pmc-u-background-white pmc-u-margin-a-00",
-		"o_dropdown_list_items": [
-			{
-				"c_link_classes": "pmc-u-padding-l-1 pmc-u-line-height-large pmc-u-text-transform-uppercase u-display-block u-color-white:hover pmc-u-background-brand-red:hover",
-				"c_link_url": "https://variety.com/",
-				"c_link_text": "Variety"
-			},
-		]
-	},
 	"o_nav": o_nav
 };
