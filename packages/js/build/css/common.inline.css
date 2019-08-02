@@ -1,0 +1,10 @@
+.pmc-js-Dropdown .pmc-js-Dropdown-target {
+  height: 0;
+  visibility: hidden; }
+
+.pmc-js-Dropdown.is-expanded .pmc-js-Dropdown-target {
+  height: auto;
+  visibility: visible; }
+
+.pmc-js-Dropdown.is-expanded .a-icon-after::after {
+  --a-icon-transform: rotate(180deg); }

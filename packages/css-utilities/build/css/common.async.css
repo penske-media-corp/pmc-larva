@@ -16,3 +16,6 @@
 .pmc-u-color-grey-medium-dark {
   color: #595959;
   color: var(--color-grey-medium-dark); }
+
+.pmc-u-cursor-pointer {
+  cursor: pointer; }
