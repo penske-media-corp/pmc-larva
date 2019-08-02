@@ -4,7 +4,12 @@
   --font-family-secondary: Georgia, system;
   --font-family-secondary-fancy: Eksell, Georgia, serif, web, Georgia;
   --site-max-width: 78.75rem;
+  --color-grey-medium-light: #CCCCCC;
+  --color-grey: #8C8C8C;
   --color-grey-medium-dark: #595959; }
+
+.pmc-u-border-a-1 {
+  border: 1px solid; }
 
 .pmc-u-align-items-center {
   align-items: center; }
@@ -29,6 +34,10 @@
 
 .pmc-u-flex {
   display: flex; }
+
+@media (min-width: 48rem) {
+  .pmc-u-flex\@tablet {
+    display: flex; } }
 
 .pmc-u-flex-grow-1 {
   flex-grow: 1; }
@@ -304,6 +313,10 @@
 .pmc-u-margin-l-auto {
   margin-left: auto; }
 
+@media (min-width: 48rem) {
+  .pmc-u-margin-l-auto\@tablet {
+    margin-left: auto; } }
+
 .pmc-u-padding-t-050 {
   padding-top: 0.5rem; }
 
@@ -422,6 +435,10 @@
 
 .pmc-u-width-100p {
   width: 100%; }
+
+@media (max-width: 47.999rem) {
+  .pmc-u-width-100p\@mobile-max {
+    width: 100%; } }
 
 .pmc-u-max-width-150 {
   max-width: 9.375rem; }

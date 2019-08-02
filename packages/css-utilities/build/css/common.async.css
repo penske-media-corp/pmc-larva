@@ -1,5 +1,18 @@
 .pmc-u-background-blue {
   background-color: #429AE7; }
 
+.pmc-u-border-color-grey-medium-light {
+  border-color: #CCCCCC;
+  border-color: var(--color-grey-medium-light); }
+
+.pmc-u-color-grey-medium-light {
+  color: #CCCCCC;
+  color: var(--color-grey-medium-light); }
+
+.pmc-u-color-grey {
+  color: #8C8C8C;
+  color: var(--color-grey); }
+
 .pmc-u-color-grey-medium-dark {
+  color: #595959;
   color: var(--color-grey-medium-dark); }
