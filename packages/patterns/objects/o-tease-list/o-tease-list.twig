@@ -1,4 +1,4 @@
-<ul class="o-tease-list {{ modifier_class }}">
+<ul class="o-tease-list {{ modifier_class }} {{ o_tease_list_classes }}">
 	{% for item in o_tease_list_items %}
 		<li class="o-tease-list__item {{ o_tease_list_item_classes }}">
 			{% include "@larva/objects/o-tease/o-tease.twig" with item %}
