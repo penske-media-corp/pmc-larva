@@ -59,19 +59,19 @@ $ICONS_BUILD_PATH: '/icons';
 
 // Specific Icons
 
-.a-icon-left-arrow,
-.a-icon-right-arrow,
-.a-icon-down-arrow,
-.a-icon-up-arrow {
+.a-icon-arrow-left,
+.a-icon-arrow-right,
+.a-icon-arrow-down,
+.a-icon-arrow-up {
 	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#arrow'} );
 	--a-icon-height: #{ $font-size-12 };
 }
 
-.a-icon-right-arrow {
+.a-icon-arrow-right {
 	--a-icon-transform: rotate(-90deg);
 }
 
-.a-icon-left-arrow {
+.a-icon-arrow-left {
 	--a-icon-transform: rotate(90deg);
 }
 

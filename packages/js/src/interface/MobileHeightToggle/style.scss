@@ -10,8 +10,8 @@
 		height: auto;
 		visibility: visible;
 	}
-	
-	.pmc-js-MobileHeightToggle.is-expanded .a-icon-after::after {
+
+	.pmc-js-MobileHeightToggle.is-expanded .a-icon-arrow-down.a-icon-after::after { // stylelint-disable-line selector-max-specificity
 		--a-icon-transform: rotate(180deg);
 	}
 }

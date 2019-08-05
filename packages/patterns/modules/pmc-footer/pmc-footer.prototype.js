@@ -24,7 +24,7 @@ data.brands.forEach( ( brand ) => {
 });
 
 o_nav.o_nav_classes = 'pmc-u-text-transform-uppercase pmc-u-font-size-12  pmc-u-border-a-1 pmc-u-border-color-grey-medium-light pmc-u-flex@tablet pmc-js-MobileHeightToggle pmc-a-hover-dropup@tablet';
-o_nav.o_nav_title_classes = 'pmc-u-padding-lr-1 pmc-u-margin-tb-00 pmc-u-padding-t-1 pmc-u-padding-b-050 pmc-u-width-100p a-icon-after a-icon-down-arrow a-icon-after:margin-l-auto pmc-u-cursor-pointer pmc-js-MobileHeightToggle-trigger pmc-a-hover-dropup-trigger@tablet';
+o_nav.o_nav_title_classes = 'pmc-u-padding-lr-1 pmc-u-margin-tb-00 pmc-u-padding-t-1 pmc-u-padding-b-050 pmc-u-width-100p a-icon-after a-icon-arrow-down a-icon-after:margin-l-auto pmc-u-cursor-pointer pmc-js-MobileHeightToggle-trigger pmc-a-hover-dropup-trigger@tablet';
 o_nav.o_nav_list_classes = 'pmc-u-padding-lr-1 pmc-u-background-white pmc-u-padding-b-050 pmc-js-MobileHeightToggle-target pmc-a-hover-dropup-target@tablet';
 o_nav.o_nav_list_item_classes = 'pmc-u-padding-tb-050 pmc-u-color-grey-medium-dark';
 
