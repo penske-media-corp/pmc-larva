@@ -29,8 +29,8 @@
 	"publishConfig": {
 	  "access": "public"
 	},
-	"devDependencies": {
-	  "@penskemediacorp/larva-scss": "^1.3.0-alpha.0"
+	"dependencies": {
+	  "@penskemediacorp/larva-css-algorithms": "^1.3.0-alpha.0"
 	}
   }
   
