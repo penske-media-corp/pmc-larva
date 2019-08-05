@@ -30,6 +30,6 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@penskemediacorp/larva-css": "^1.3.0-alpha.0"
+		"@penskemediacorp/larva-css": "^1.5.0-alpha.0"
 	}
 }
