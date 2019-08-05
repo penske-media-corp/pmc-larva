@@ -1,0 +1,45 @@
+@import '@penskemediacorp/larva-scss/dist/tokens';
+
+body {
+
+	// @todo: this is outside the system and it should use the font-family mixin.
+	// That mixin needs to support `&.wf-active`, right now it only supports `.wf-active &`.
+	// stylelint-disable property-blacklist
+	font-family: Helvetica, sans-serif;
+
+	margin: $spacer-0;
+
+	// stylelint-enable property-blacklist
+
+	line-height: $line-height-normal;
+}
+
+strong {
+	font-weight: $font-weight-bold;
+}
+
+a {
+	color: map-get( $semantic-color-list, brand-red );
+	text-decoration: none;
+
+	&:hover {
+		color: map-get( $semantic-color-list, brand-red-dark );
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+ol,
+ul {
+	margin-top: 0;
+}
