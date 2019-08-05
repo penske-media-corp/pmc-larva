@@ -1,6 +1,32 @@
-# CSS Algorithms
+# Larva CSS
 
-This package contains Larva's CSS algorithms or, CSS patterns that perform a specific task and are named according to that task.
+This package contains Larva's base CSS, CSS algorithms, utlities, and CSS for JS patterns from larva-js.
+
+## Concepts
+
+_Coming soon_
+
+## Terminology
+
+*Generic* styles are the any basic reset styles. Larva does not use a formal reset, rather, any property overrides are added to this directory as needed. For example, removing margins from headings and adding box-sizing: border-box to all elements.
+
+A *utility* is a (mostly) single declaration ruleset that is named accordingly and prefixed with a `u-*`. These sometimes come from SCSS generators, but many are authored by hand. A few examples (namespaced with pmc-* to indicate they come from this repository):
+
+* pmc-u-display-block
+* pmc-u-color-brand-primary
+* pmc-u-margin-tb-1@tablet
+
+An *algorithm* is a more involved ruleset or set of rulesets that accomplished a specific styling goal that is not reasonable to accomplish with utilties, and generally makes use of browser algorithms or familiar CSS programming patterns. A few examples:
+
+* pmc-a-space-children - utilized the owl selector pattern to apply space between child elements.
+* pmc-a-glue - an algorithm for "glueing" one element onto another with absolute positioning.
+* pmc-a-unstyle-list – a straightforward set of declarations that remove basic list styling.
+
+The *js* directory contains CSS corresponding to interactivity from larva-js.
+
+## The Ordering of Directories
+
+Directories are ordered in terms of intended specificty, inspired by ITCSS. Generic CSS will almost always be overridden, so it is first. Unless selector specificty says otherwise (e.g. a-space-children or the image in a-crop), CSS algorithms can be overridden by utilities. The CSS related to JS interactivity comes last because it should be the most important in the cascade.
 
 ## Anatomy of an Algorithm
 
