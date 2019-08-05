@@ -412,6 +412,10 @@
     padding-top: 0.25rem;
     padding-bottom: 0.25rem; } }
 
+@media (min-width: 48rem) {
+  .pmc-u-padding-t-050\@tablet {
+    padding-top: 0.5rem; } }
+
 @media (min-width: 62.5rem) {
   .pmc-u-padding-tb-050\@desktop {
     padding-top: 0.5rem;
@@ -426,6 +430,9 @@
 
 .pmc-u-text-transform-uppercase {
   text-transform: uppercase; }
+
+.pmc-u-whitespace-nowrap {
+  white-space: nowrap; }
 
 .pmc-u-width-100p {
   width: 100%; }
