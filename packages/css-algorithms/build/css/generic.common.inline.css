@@ -1,6 +1,19 @@
 * {
   box-sizing: border-box; }
 
+:root {
+  --font-family-primary: Helvetica, system;
+  --font-family-primary-fancy: Balto, Helvetica, sans-serif, web, Helvetica;
+  --font-family-secondary: Georgia, system;
+  --font-family-secondary-fancy: Eksell, Georgia, serif, web, Georgia;
+  --site-max-width: 78.75rem;
+  --color-grey-medium-light: #CCCCCC;
+  --color-grey: #8C8C8C;
+  --color-grey-medium-dark: #595959; }
+
+* {
+  box-sizing: border-box; }
+
 img {
   max-width: 100%;
   height: auto; }
