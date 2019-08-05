@@ -14,6 +14,9 @@
     "src",
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
@@ -30,5 +33,6 @@
     "@penskemediacorp/larva-scss": "^1.5.0-alpha.0",
     "node-sass": "^4.12.0",
     "stylelint": "^10.1.0"
-  }
+  },
+  "gitHead": "81e44e19c2f1b63291b27fbfd6fd146321686c78"
 }
