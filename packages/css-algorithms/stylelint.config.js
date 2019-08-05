@@ -2,11 +2,11 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 
 const rules = {
-	'extends': '/Users/laraschenck/Sites/pmc/pmc-larva/packages/stylelint-config/index.js',
+	'extends': path.resolve( __dirname, '../stylelint-config/index.js' ),
 	'plugins': path.resolve( __dirname, '../stylelint-css-algorithms/index.js' ),
 	'rules': {
 		'plugin/css-algorithms': {
-			'a-space-children': [
+			'pmc-a-space-children': [
 				'margin-top',
 				'margin-left',
 				'display',
@@ -24,6 +24,18 @@ const rules = {
 				'--a-glue-top',
 				'--a-glue-right',
 				'--a-glue-left'
+			],
+			'pmc-a-hover-dropup': [
+				'min-width',
+				'position',
+				'visibility',
+				'opacity',
+				'width',
+				'left',
+				'bottom',
+				'overflow-y',
+				'cursor',
+				'--a-icon-transform'
 			]
 		}
 	}
