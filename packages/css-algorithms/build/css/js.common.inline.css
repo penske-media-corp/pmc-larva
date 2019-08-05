@@ -5,5 +5,5 @@
   .pmc-js-MobileHeightToggle.is-expanded .pmc-js-MobileHeightToggle-target {
     height: auto;
     visibility: visible; }
-  .pmc-js-MobileHeightToggle.is-expanded .a-icon-after::after {
+  .pmc-js-MobileHeightToggle.is-expanded .a-icon-arrow-down.a-icon-after::after {
     --a-icon-transform: rotate(180deg); } }
