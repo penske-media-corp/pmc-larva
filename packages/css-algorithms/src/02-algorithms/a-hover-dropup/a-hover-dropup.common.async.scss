@@ -22,15 +22,16 @@
 		left: 0;
 		overflow-y: scroll;
 		max-height: 8.438rem;
-		// box-shadow: 0 -0.313rem 0.313rem rgba( 0, 0, 0, 0.15 );
 	}
 
-	.pmc-a-hover-dropup\@tablet:hover .pmc-a-hover-dropup-target\@tablet {
+	.pmc-a-hover-dropup\@tablet:hover .pmc-a-hover-dropup-target\@tablet,
+	.pmc-a-hover-dropup\@tablet:focus .pmc-a-hover-dropup-target\@tablet {
 		visibility: visible;
 		opacity: 1;
 	}
 
-	.pmc-a-hover-dropup\@tablet:hover .pmc-a-hover-dropup-trigger\@tablet::after {
+	.pmc-a-hover-dropup\@tablet:hover .pmc-a-hover-dropup-trigger\@tablet::after,
+	.pmc-a-hover-dropup\@tablet:focus .pmc-a-hover-dropup-target\@tablet {
 		--a-icon-transform: rotate(180deg);
 	}
 }

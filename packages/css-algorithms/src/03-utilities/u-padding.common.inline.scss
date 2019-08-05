@@ -50,8 +50,12 @@ $paddings_without_breakpoints: (
 
 @include pmc-u-padding( $paddings_without_breakpoints );
 
+// Ordered by breakpoint.
 $paddings_with_breakpoints: (
 	('tb', $spacer-025, mobile-max ),
+
+	('t', $spacer-050, tablet ),
+	
 	('tb', $spacer-050, desktop ),
 );
 

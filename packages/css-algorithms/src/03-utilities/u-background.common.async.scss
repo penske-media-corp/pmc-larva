@@ -1,4 +1,5 @@
 @import '@penskemediacorp/larva-scss/dist/generators';
+@import '@penskemediacorp/larva-scss/dist/tokens';
 
 $color_list: (
 	white: white,
@@ -7,3 +8,7 @@ $color_list: (
 @include pmc-u-background( (
 	white,
 ), $color_list );
+
+.pmc-u-background-brand-red\:hover:hover {
+	background-color: map-get( $semantic-color-list, brand-red );
+}
