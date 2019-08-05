@@ -35,7 +35,9 @@ const rules = {
 				'bottom',
 				'overflow-y',
 				'cursor',
-				'--a-icon-transform'
+				'--a-icon-transform',
+				'z-index',
+				'max-height'
 			]
 		}
 	}

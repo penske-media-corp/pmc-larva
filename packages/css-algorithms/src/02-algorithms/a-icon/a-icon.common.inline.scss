@@ -5,7 +5,8 @@ $ICONS_BUILD_PATH: '/icons';
 
 @mixin _a-icon-base {
 	content: var(--a-icon-content, '');
-	background: var(--a-icon-url, '') no-repeat;
+	background-image: var(--a-icon-url, '');
+	background-repeat: no-repeat;
 	background-size: contain;
 	height: var(--a-icon-height, #{ $spacer-1 });
 	width: var(--a-icon-width, #{ $spacer-1 });
@@ -28,7 +29,8 @@ $ICONS_BUILD_PATH: '/icons';
 	&::#{$pseudo-el} {
 		height: initial;
 		width: initial;
-		background: initial;
+		// background okay for reset.
+		background: initial; // stylelint-disable-line property-blacklist
 		font-size: inherit;
 		color: currentColor;
 		margin: 0;
@@ -90,13 +92,6 @@ $ICONS_BUILD_PATH: '/icons';
 		padding-left: $spacer-025;
 	};
 }
-
-
-
-
-
-
-
 
 // // ----------
 // // Special Instance for Footer Dropdown Toggle Arrow

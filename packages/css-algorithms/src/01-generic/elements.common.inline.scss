@@ -18,6 +18,6 @@ figure {
 	height: 0;
 }
 
-#icon-sprite { // stylelint-disable
+#icon-sprite { // stylelint-disable-line selector-max-specificity
 	display: none;
 }

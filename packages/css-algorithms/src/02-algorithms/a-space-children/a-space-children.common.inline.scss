@@ -22,16 +22,16 @@ $spacer-2:   2;
 
 // stylelint-disable selector-max-compound-selectors
 .pmc-a-space-children-horizontal > * + * {
-	@include _a-space-children-horizontal();	
+	@include _a-space-children-horizontal();
 }
 
-.pmc-a-space-children-horizontal\@tablet > * + * { // stylelint-disable-line selector-max-compound-selectors
+.pmc-a-space-children-horizontal\@tablet > * + * {
 	@include pmc-breakpoint( tablet ) {
 		@include _a-space-children-horizontal();
 	}
 }
 
-.pmc-a-space-children-vertical > * + * { // stylelint-disable-line selector-max-compound-selectors
+.pmc-a-space-children-vertical > * + * {
 	@include _a-space-children-vertical();
 }
 

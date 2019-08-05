@@ -33,7 +33,6 @@ function styles( done ) {
 	// Algorithms
 	// TODO: make this more DRY
 	src('./src/**/a-*.common.inline.scss')
-		.pipe(sass( sassOpts ).on('error', sass.logError))
 		.pipe(gulpStylelint({
 			failAfterError: false,
 			reporters: [{
@@ -41,6 +40,7 @@ function styles( done ) {
 				console: true,
 			}]
 		}))
+		.pipe(sass( sassOpts ).on('error', sass.logError))
 		.pipe(concat('algorithms.common.inline.css'))
 		.pipe(dest('./build/css/'));
 
