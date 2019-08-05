@@ -15,6 +15,26 @@
 		{
 			"name": "RobbReport",
 			"url": "https://robbreport.com/"
+		},
+		{
+			"name": "IndieWire",
+			"url": "https://indiewire.com/"
+		},
+		{
+			"name": "Hollywood Life",
+			"url": "https://hollywoodlife.com/"
+		},
+		{
+			"name": "TVLine",
+			"url": "https://tvline.com/"
+		},
+		{
+			"name": "WWD",
+			"url": "https://wwd.com/"
+		},
+		{
+			"name": "SheKnows",
+			"url": "https://sheknows.com/"
 		}
 	]
 }
