@@ -199,7 +199,7 @@
 .a-icon-arrow-right,
 .a-icon-arrow-down,
 .a-icon-arrow-up {
-  --a-icon-url: url( /icons/stack/svg/sprite.stack.svg#arrow );
+  --a-icon-url: url( /svgs/stack/svg/sprite.stack.svg#arrow );
   --a-icon-height: 0.75rem; }
 
 .a-icon-arrow-right {
@@ -209,7 +209,7 @@
   --a-icon-transform: rotate(90deg); }
 
 .a-icon-envelope {
-  --a-icon-url: url( /icons/stack/svg/sprite.stack.svg#envelope ); }
+  --a-icon-url: url( /svgs/stack/svg/sprite.stack.svg#envelope ); }
 
 .a-icon-forward-slash {
   --a-icon-content: '/'; }

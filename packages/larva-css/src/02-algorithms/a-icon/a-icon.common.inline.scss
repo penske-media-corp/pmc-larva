@@ -1,7 +1,7 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-$ICONS_BUILD_PATH: '/icons';
+$ICONS_BUILD_PATH: '/svgs';
 
 @mixin _a-icon-base {
 	content: var(--a-icon-content, '');

@@ -25,7 +25,7 @@ const config = {
 	}
 };
 
-const svgPath = path.join( __dirname, '../src/icons' );
+const svgPath = path.join( __dirname, '../src/svgs' );
 
 const spriter = new SVGSpriter(config);
 const svgFiles = globby.sync( svgPath, {
