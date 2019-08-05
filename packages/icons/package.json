@@ -13,6 +13,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
@@ -26,5 +29,6 @@
   "devDependencies": {
     "globby": "^10.0.1",
     "svg-sprite": "^1.5.0"
-  }
+  },
+  "gitHead": "02c11b980ae2eb79459f880be1f058f83cea9bdc"
 }
