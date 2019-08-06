@@ -47,6 +47,11 @@
 	margin-left: auto;
 }
 
+.pmc-u-margin-lr-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .pmc-u-margin-l-auto\@tablet {
 	@include pmc-breakpoint( tablet ) {
 		margin-left: auto;
