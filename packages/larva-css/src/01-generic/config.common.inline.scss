@@ -13,8 +13,10 @@
 	--font-family-secondary-fancy: #{map-get( $semantic-font-families, 'eksell' )};
 
 	--site-max-width: #{$screen-desktop-xl};
-
-	--color-grey-medium-light: #{map-get( $semantic-color-list, grey-medium-light )};
+	
+	--color-grey-lightest: #{map-get( $semantic-color-list, grey-lightest )};
+	--color-grey-light: #{map-get( $semantic-color-list, grey-light )};
+	--color-grey-light: #{map-get( $semantic-color-list, grey-medium-light )};
 	--color-grey: #{map-get( $semantic-color-list, grey )};
 	--color-grey-medium-dark: #{map-get( $semantic-color-list, grey-medium-dark )};
 }

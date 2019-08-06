@@ -1,7 +1,7 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.pmc-u-border-color-grey-medium-light {
+.pmc-u-border-color-grey-light {
 	border-color: #{map-get( $semantic-color-list, grey-medium-light )};
-	border-color: var( --color-grey-medium-light );
+	border-color: var( --color-grey-light );
 }

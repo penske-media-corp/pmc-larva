@@ -1,9 +1,8 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
-@import '@penskemediacorp/larva-scss/dist/tools';
 
-.pmc-u-color-grey-medium-light {
+.pmc-u-color-grey-light {
 	color: #{map-get( $semantic-color-list, grey-medium-light )};
-	color: var( --color-grey-medium-light );
+	color: var( --color-grey-light );
 }
 
 .pmc-u-color-grey {
@@ -18,5 +17,4 @@
 
 .pmc-u-color-white\:hover:hover {
 	color: map-get( $semantic-color-list, white );
-	// background-color: var( --color-brand-red );
 }
