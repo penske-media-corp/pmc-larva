@@ -6,14 +6,6 @@
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
   "main": "lib/larva-scss.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib",
-    "dist"
-  ],
   "publishConfig": {
     "access": "public"
   },

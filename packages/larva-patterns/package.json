@@ -6,14 +6,6 @@
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/patterns#readme",
   "license": "ISC",
   "main": "lib/patterns.js",
-  "directories": {
-    "lib": "scripts",
-    "test": "__tests__"
-  },
-  "files": [
-    "src/components/**/*",
-    "src/objects/**/*"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
