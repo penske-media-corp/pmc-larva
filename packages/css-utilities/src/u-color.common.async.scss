@@ -1,0 +1,17 @@
+@import '@penskemediacorp/larva-scss/dist/tokens';
+@import '@penskemediacorp/larva-scss/dist/tools';
+
+.pmc-u-color-grey-medium-light {
+	color: #{map-get( $semantic-color-list, grey-medium-light )};
+	color: var( --color-grey-medium-light );
+}
+
+.pmc-u-color-grey {
+	color: #{map-get( $semantic-color-list, grey )};
+	color: var( --color-grey );
+}
+
+.pmc-u-color-grey-medium-dark {
+	color: #{map-get( $semantic-color-list, grey-medium-dark )};
+	color: var( --color-grey-medium-dark );
+}

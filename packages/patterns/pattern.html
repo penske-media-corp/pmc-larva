@@ -11,15 +11,19 @@
 		<link rel="stylesheet" href="/algos/common.inline.css">
 		<link rel="stylesheet" href="/algos/common.async.css">
 		<script async src="/static/js/prism.js"></script>
+		<script async src="/js/common.js"></script>
+		<link rel="stylesheet" href="/js/css/common.inline.css">
 	</head>
-	<body>
+	<body class="pmc-u-margin-a-00">
 		<div style="display: none;">
 			{{ sprite_data|raw }}
 		</div>
-		<main>
-			<h1>{{ type ~ ': ' ~ name }}</h1>
-			{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
-			<pre class="language-json pmc-u-font-size-12"><code>{{ json_pretty|raw }}</code></pre>
+		<main style="background-color: #EEE;">
+			<h1 class="pmc-u-font-family-basic pmc-u-padding-a-1 pmc-u-margin-a-00">{{ type ~ ': ' ~ name }}</h1>
+			<div style="background-color: white">
+				{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
+				<pre class="language-json pmc-u-font-size-12"><code>{{ json_pretty|raw }}</code></pre>
+			</div>
 		</main>
 	</body>
 </html>

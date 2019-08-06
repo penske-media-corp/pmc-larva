@@ -10,46 +10,38 @@ $spacer-2:   2;
 	--a-space-children-spacer: 0;
 }
 
-// This is the basic version with margins
-.pmc-a-space-children-horizontal {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.pmc-a-space-children-horizontal > * + * { // stylelint-disable-line selector-max-compound-selectors
+@mixin _a-space-children-horizontal {
 	margin-left: $spacer-050 + rem;
 	margin-left: calc( var( --a-space-children-spacer ) * 1rem );
 }
 
-.pmc-a-space-children-vertical > * + * { // stylelint-disable-line selector-max-compound-selectors
+@mixin _a-space-children-vertical {
 	margin-top: $spacer-050 + rem;
 	margin-top: calc( var( --a-space-children-spacer ) * 1rem );
 }
 
-// This is the enhanced version, but due to the partial implementation in Blink it's a no-go for now.
-// More info: https://notlaura.com/beware-the-gap-property/
-// @supports ( gap: 1rem ) {
+// stylelint-disable selector-max-compound-selectors
+.pmc-a-space-children-horizontal > * + * {
+	@include _a-space-children-horizontal();	
+}
 
-// 	.a-space-children-vertical,
-// 	.a-space-children-horizontal {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		gap: calc( var( --a-space-children-spacer ) * 1rem );
-// 	}
-	
-// 	.a-space-children-vertical {
-// 		flex-direction: column;
-// 	}
-	
-// 	.a-space-children-vertical > * + * {
-// 		margin-top: unset;
-// 	}
+.pmc-a-space-children-horizontal\@tablet > * + * { // stylelint-disable-line selector-max-compound-selectors
+	@include pmc-breakpoint( tablet ) {
+		@include _a-space-children-horizontal();
+	}
+}
 
-// 	.a-space-children-horizontal > * + * {
-// 		margin-left: unset;
-// 	}
+.pmc-a-space-children-vertical > * + * { // stylelint-disable-line selector-max-compound-selectors
+	@include _a-space-children-vertical();
+}
 
-// }
+.pmc-a-space-children-vertical\@mobile-max > * + * {
+	@include pmc-breakpoint( mobile-max ) {
+		@include _a-space-children-vertical();
+	}
+}
+
+// stylelint-enable selector-max-compound-selectors
 
 .pmc-a-space-children--050 {
 	--a-space-children-spacer: #{$spacer-050};

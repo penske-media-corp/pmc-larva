@@ -1,5 +1,14 @@
+@import '@penskemediacorp/larva-scss/dist/tools';
+
 .pmc-u-width-100p {
 	width: 100%;
+}
+
+.pmc-u-width-100p\@mobile-max {
+
+	@include pmc-breakpoint( mobile-max ) {
+		width: 100%;
+	}
 }
 
 .pmc-u-max-width-150 {
