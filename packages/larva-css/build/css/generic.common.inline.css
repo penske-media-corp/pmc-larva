@@ -7,7 +7,9 @@
   --font-family-secondary: Georgia, system;
   --font-family-secondary-fancy: Eksell, Georgia, serif, web, Georgia;
   --site-max-width: 78.75rem;
-  --color-grey-medium-light: #CCCCCC;
+  --color-grey-lightest: #FAFAFA;
+  --color-grey-light: #E6E6E6;
+  --color-grey-light: #CCCCCC;
   --color-grey: #8C8C8C;
   --color-grey-medium-dark: #595959; }
 

@@ -22,6 +22,9 @@
 .pmc-u-display-inline-block {
   display: inline-block; }
 
+.pmc-u-display-none {
+  display: none; }
+
 .pmc-u-flex {
   display: flex; }
 
@@ -303,6 +306,10 @@
 .pmc-u-margin-l-auto {
   margin-left: auto; }
 
+.pmc-u-margin-lr-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
 @media (min-width: 48rem) {
   .pmc-u-margin-l-auto\@tablet {
     margin-left: auto; } }
@@ -310,6 +317,9 @@
 @media (max-width: 47.999rem) {
   .pmc-u-order-100\@mobile-max {
     order: 100; } }
+
+.pmc-u-overflow-auto {
+  overflow: auto; }
 
 .pmc-u-padding-t-050 {
   padding-top: 0.5rem; }
@@ -436,6 +446,9 @@
 
 .pmc-u-width-100p {
   width: 100%; }
+
+.pmc-u-max-width-100p {
+  max-width: 100%; }
 
 @media (max-width: 47.999rem) {
   .pmc-u-width-100p\@mobile-max {

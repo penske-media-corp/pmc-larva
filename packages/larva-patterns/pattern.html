@@ -1,32 +1,14 @@
-<!doctype html>
-<html lang="en" class="wf-active">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="/patterns/scratch-pad.css">
-		<link rel="stylesheet" href="/static/css/prism.css">
-		
-		<link rel="stylesheet" href="/css/generic.common.inline.css">
-		{# <link rel="stylesheet" href="/css/generic.common.async.css"> #}
-		<link rel="stylesheet" href="/css/algorithms.common.inline.css">
-		<link rel="stylesheet" href="/css/algorithms.common.async.css">
-		<link rel="stylesheet" href="/css/utilities.common.inline.css">
-		<link rel="stylesheet" href="/css/utilities.common.async.css">
-		<link rel="stylesheet" href="/css/js.common.inline.css">
-		<link rel="stylesheet" href="/css/js.common.async.css">
-		
-		<script async src="/static/js/prism.js"></script>
-		<script async src="/js/common.js"></script>
-	</head>
-	<body class="pmc-u-margin-a-00">
-		<div style="display: none;">
-			{{ sprite_data|raw }}
-		</div>
-		<main style="background-color: #EEE;">
-			<h1 class="pmc-u-font-family-basic pmc-u-padding-a-1 pmc-u-margin-a-00">{{ type ~ ': ' ~ name }}</h1>
-			<div style="background-color: white">
-				{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
-				<pre class="language-json pmc-u-font-size-12"><code>{{ json_pretty|raw }}</code></pre>
-			</div>
-		</main>
-	</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="pmc-u-display-none">
+		{{ sprite_data|raw }}
+	</div>
+	<div class="pmc-u-background-grey-light">
+		<h1 class="pmc-u-font-family-basic pmc-u-padding-a-1 pmc-u-margin-a-00">{{ type ~ ': ' ~ name }}</h1>
+	</div>
+	{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
+	<div class="pmc-u-background-grey-light pmc-a-grid pmc-u-font-size-12 pmc-u-border-t-1 pmc-u-border-color-grey pmc-u-padding-a-2">
+		<pre class="pmc-a-wrapper language-json"><code>{{ json_pretty|raw }}</code></pre>
+	</div>
+{% endblock %}

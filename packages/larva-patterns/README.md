@@ -1,11 +1,14 @@
-# `patterns`
+# Larva Patterns
 
-> TODO: description
+This package contains markup patterns, written in Twig, that are configured with Larva CSS and JS classes to form fully functioning user interface.
+
+## Concepts
+
+## Terminology
+
+## Anatomy of a Pattern
 
 ## Usage
 
-```
-const patterns = require('patterns');
+## Extending a Pattern
 
-// TODO: DEMONSTRATE API
-```

@@ -29,9 +29,10 @@
 		visibility: visible;
 		opacity: 1;
 	}
-
-	.pmc-a-hover-dropup\@tablet:hover .pmc-a-hover-dropup-trigger\@tablet::after,
-	.pmc-a-hover-dropup\@tablet:focus .pmc-a-hover-dropup-target\@tablet {
+	
+	// Transform a-icon
+	.pmc-a-hover-dropup\@tablet:hover .a-icon-arrow-down::after,
+	.pmc-a-hover-dropup\@tablet:focus .a-icon-arrow-down {
 		--a-icon-transform: rotate(180deg);
 	}
 }
