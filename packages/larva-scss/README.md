@@ -10,9 +10,11 @@ This repository provides **Sass files only**. The consuming project is responsib
 
 ## Usage
 
-Import a SCSS file from the dist directory. 
+Import a SCSS file for tools or tokens to use them in your project. 
 
-### Breakpoint Mixin
+### Available Tools
+
+#### Breakpoint Mixin
 
 The breakpoint mixin includes breakpoints for the following:
 
@@ -32,6 +34,17 @@ The breakpoint mixin includes breakpoints for the following:
 }
 ```
 
+### Rem Mixin
+
+```language:scss
+// assets/src/patterns/07-utilities/u-width.scss
+@import '@penskemediacorp/larva-scss/dist/tools';
+
+.u-max-width-600 {
+	max-width: pmc-rem(600);
+}
+```
+
 ### Tokens
 
 Refer to the directory lib/tokens in this package to see what tokens (a.k.a. Sass variables) are available to use.
@@ -48,8 +61,9 @@ You can import the file in a Larva project and use the tokens like this:
 	grid-gap: $spacer-150;
 }
 
-.a-specific-grid__sidebar {
+.a-specific-grid__top-bar {
 	margin-top: $spacer-2;
+	grid-column: 1 / -1;
 }
 ```
 
