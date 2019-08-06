@@ -14,16 +14,16 @@ Packages pre-fixes with larva-* are intended to go together. General purpose pac
 
 The core Larva packages are:
 
-@penskemediacorp/larva - Provides a server for viewing patterns and scripts for working with patterns.
-@penskemediacorp/larva-scss - SCSS tools e.g. mixins, design tokens, and class generators. Can be used independently.
-@penskemediacorp/larva-css - Compiled, ready to go CSS utilities, algorithms, and CSS corresponding to JS files. 
-@penskemediacorp/larva-js - JS for interactivity and utilities for tasks like font loading. 
-@penskemediacorp/larva-svgs - SVG icons and logos available as an SVG stack for use in CSS with `a-icon`, and as defs for usage inline with markup with `c-icon`.
-@penskemediacorp/larva-patterns - Markup patterns (components, objects, and modules) that are configured with assets provided by the above packages. Written in Twig.
+* @penskemediacorp/larva - Provides a server for viewing patterns and scripts for working with patterns.
+* @penskemediacorp/larva-scss - SCSS tools e.g. mixins, design tokens, and class generators. Can be used independently.
+* @penskemediacorp/larva-css - Compiled, ready to go CSS utilities, algorithms, and CSS corresponding to JS files. 
+* @penskemediacorp/larva-js - JS for interactivity and utilities for tasks like font loading. 
+* @penskemediacorp/larva-svgs - SVG icons and logos available as an SVG stack for use in CSS with `a-icon`, and as defs for usage inline with markup with `c-icon`.
+* @penskemediacorp/larva-patterns - Markup patterns (components, objects, and modules) that are configured with assets provided by the above packages. Written in Twig.
 
 Possible future packages:
 
-@penskemediacorp/larva-fontloader - JS for interactivity and utilities for tasks like font loading. 
+* @penskemediacorp/larva-fontloader - JS for interactivity and utilities for tasks like font loading. 
 
 ## Usage
 
