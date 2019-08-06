@@ -1,4 +1,7 @@
+@import '@penskemediacorp/larva-scss/dist/tools';
 
 .pmc-u-box-shadow-medium\@tablet {
-	box-shadow: 0 -0.313rem 0.313rem rgba( 0, 0, 0, 0.15 );
+	@include pmc-breakpoint( tablet ) {
+		box-shadow: 0 -0.313rem 0.313rem rgba( 0, 0, 0, 0.15 );
+	}
 }
