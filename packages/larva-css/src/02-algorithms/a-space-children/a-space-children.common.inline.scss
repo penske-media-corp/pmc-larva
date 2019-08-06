@@ -1,0 +1,56 @@
+@import '@penskemediacorp/larva-scss/dist/tokens';
+@import '@penskemediacorp/larva-scss/dist/tools';
+
+// Tokens Stub
+$spacer-050: 0.5;
+$spacer-1:   1;
+$spacer-2:   2;
+
+:root {
+	--a-space-children-spacer: 0;
+}
+
+@mixin _a-space-children-horizontal {
+	margin-left: $spacer-050 + rem;
+	margin-left: calc( var( --a-space-children-spacer ) * 1rem );
+}
+
+@mixin _a-space-children-vertical {
+	margin-top: $spacer-050 + rem;
+	margin-top: calc( var( --a-space-children-spacer ) * 1rem );
+}
+
+// stylelint-disable selector-max-compound-selectors
+.pmc-a-space-children-horizontal > * + * {
+	@include _a-space-children-horizontal();
+}
+
+.pmc-a-space-children-horizontal\@tablet > * + * {
+	@include pmc-breakpoint( tablet ) {
+		@include _a-space-children-horizontal();
+	}
+}
+
+.pmc-a-space-children-vertical > * + * {
+	@include _a-space-children-vertical();
+}
+
+.pmc-a-space-children-vertical\@mobile-max > * + * {
+	@include pmc-breakpoint( mobile-max ) {
+		@include _a-space-children-vertical();
+	}
+}
+
+// stylelint-enable selector-max-compound-selectors
+
+.pmc-a-space-children--050 {
+	--a-space-children-spacer: #{$spacer-050};
+}
+
+.pmc-a-space-children--1 {
+	--a-space-children-spacer: #{$spacer-1};
+}
+
+.pmc-a-space-children--2 {
+	--a-space-children-spacer: #{$spacer-2};
+}

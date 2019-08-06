@@ -1,0 +1,23 @@
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+
+[hidden] {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+#icon-sprite { // stylelint-disable-line selector-max-specificity
+	display: none;
+}

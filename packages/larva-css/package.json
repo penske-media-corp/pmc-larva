@@ -1,21 +1,18 @@
 {
-  "name": "@penskemediacorp/stylelint-config",
+  "name": "@penskemediacorp/larva-css",
   "version": "1.5.0-alpha.0",
-  "description": "Stylelint base config and customizations.",
-  "keywords": [
-    "stylelint",
-    "css"
-  ],
+  "description": "Larva CSS.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
-  "main": "index.js",
+  "main": "lib/css-algorithms.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "index.js"
+    "src",
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -25,12 +22,17 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "../../node_modules/.bin/jest",
+    "watch": "node node_modules/@penskemediacorp/larva/lib/watch.js"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@penskemediacorp/larva": "^1.5.0-alpha.0",
+    "@penskemediacorp/larva-scss": "^1.5.0-alpha.0",
+    "node-sass": "^4.12.0",
     "stylelint": "^10.1.0"
-  }
+  },
+  "gitHead": "81e44e19c2f1b63291b27fbfd6fd146321686c78"
 }

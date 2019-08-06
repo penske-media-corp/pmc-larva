@@ -1,9 +1,0 @@
-@import '@penskemediacorp/larva-scss/dist/generators';
-
-$color_list: (
-	white: white,
-);
-
-@include pmc-u-background( (
-	white,
-), $color_list );
