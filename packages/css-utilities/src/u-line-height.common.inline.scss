@@ -1,0 +1,13 @@
+@import '@penskemediacorp/larva-scss/dist/tokens';
+@import '@penskemediacorp/larva-scss/dist/generators';
+
+// TODO: refactor to custom property version, if we need to change the line height values.
+@include pmc-u-line-height(
+	(
+		small,
+		normal,
+		copy,
+		large,
+	),
+	$semantic-line-heights
+);

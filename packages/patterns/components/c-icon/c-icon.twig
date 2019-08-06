@@ -1,0 +1,14 @@
+{% if c_icon_url %}
+<a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}" aria-label="{{ c_icon_name }}" {% if c_icon_rel_name %}rel="{{ c_icon_rel_name }}"{% endif %} target="_blank">
+{% endif %}
+
+<svg class="c-icon {{ modifier_class }} {{ c_icon_classes }}">
+	<use xlink:href="#{{ c_icon_name }}" />
+	{% if c_icon_secondary_name %}
+		<use xlink:href="#{{ c_icon_secondary_name }}" />
+	{% endif %}
+</svg>
+
+{% if c_icon_url %}
+</a>
+{% endif %}

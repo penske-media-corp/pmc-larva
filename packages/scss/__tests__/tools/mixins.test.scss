@@ -16,7 +16,7 @@
 			}
 
 			@include contains {
-				@media( min-width: $pmc-screen-desktop ) {
+				@media( min-width: $screen-desktop ) {
 					font-size: 1rem;
 				}
 			}

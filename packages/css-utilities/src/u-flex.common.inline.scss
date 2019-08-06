@@ -1,0 +1,16 @@
+@import '@penskemediacorp/larva-scss/dist/tools';
+
+.pmc-u-flex {
+	display: flex;
+}
+
+.pmc-u-flex-direction-column {
+	flex-direction: column;
+}
+
+.pmc-u-flex-direction-column\@mobile-max {
+
+	@include pmc-breakpoint( mobile-max ) {
+		flex-direction: column;
+	}
+}

@@ -1,18 +1,13 @@
-$pmc-screen-desktop-xxl: 87.5rem; // 1400
-$pmc-screen-desktop-xl:  78.75rem; // 1260
-$pmc-screen-desktop:     62.5rem;
-$pmc-screen-tablet:      48rem;
-$pmc-screen-mobile:      48rem; // 768
-$pmc-screen-mobile-max:  47.999rem;
+@import '../../tokens/sizing';
 
 @mixin pmc-breakpoint($point) {
 	@if $point == desktop-xl {
-		@media (min-width: $pmc-screen-desktop-xl) { @content; }
+		@media (min-width: $screen-desktop-xl) { @content; }
 	} @else if $point == desktop {
-		@media (min-width: $pmc-screen-desktop) { @content; }
+		@media (min-width: $screen-desktop) { @content; }
 	} @else if $point == tablet {
-		@media (min-width: $pmc-screen-tablet) { @content; }
+		@media (min-width: $screen-tablet) { @content; }
 	} @else if $point == mobile-max {
-		@media (max-width: $pmc-screen-mobile-max) { @content; }
+		@media (max-width: $screen-mobile-max) { @content; }
 	}
 }

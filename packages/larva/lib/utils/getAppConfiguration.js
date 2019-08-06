@@ -1,4 +1,5 @@
 const chalk = require( 'chalk' );
+const path = require( 'path' );
 
 module.exports = function getAppConfiguration( tool ) {
 
@@ -6,7 +7,7 @@ module.exports = function getAppConfiguration( tool ) {
 		let appRoot = process.cwd();
 
 		if ( 'test' === process.env.NODE_ENV ) {
-			appRoot = appRoot + '/__tests__/fixtures';
+			appRoot = path.join( __dirname, '../../__tests__/fixtures/' );
 		}
 
 		let config = require( `${appRoot}/larva.config.js` )[ tool ];
