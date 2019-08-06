@@ -81,9 +81,8 @@ $ICONS_BUILD_PATH: '/svgs';
 	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#envelope'} );
 }
 
-.a-icon-forward-slash {
-	--a-icon-content: '/';
-
+.a-icon-forward-slash,
+.a-icon-bullet {
 	@include _a-icon-reset( before ) {
 		padding-right: $spacer-050;
 	};
@@ -93,7 +92,15 @@ $ICONS_BUILD_PATH: '/svgs';
 	};
 }
 
-// // ----------
+.a-icon-forward-slash {
+	--a-icon-content: '/';
+}
+
+.a-icon-bullet {
+	--a-icon-content: '\02022';
+}
+
+	// // ----------
 // // Special Instance for Footer Dropdown Toggle Arrow
 // // ----------
 
