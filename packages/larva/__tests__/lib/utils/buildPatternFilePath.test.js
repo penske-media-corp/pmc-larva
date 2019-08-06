@@ -4,7 +4,7 @@ const fixture = path.resolve( __dirname, '../../fixtures' );
 const buildPatternFilePath = require( '../../../lib/utils/buildPatternFilePath' );
 
 const expectedPathForLarva = fixture + '/src/patterns/objects/o-nav/o-nav.json';
-const expectedPathForProject = '/assets/src/patterns/05-objects/o-nav/o-nav.json';
+const expectedPathForProject = '/assets/src/patterns/objects/o-nav/o-nav.json';
 
 describe( 'buildPatternFilePath', () => {
 
