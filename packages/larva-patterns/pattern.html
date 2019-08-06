@@ -5,9 +5,11 @@
 		{{ sprite_data|raw }}
 	</div>
 	<div class="pmc-u-background-grey-light">
-		<h1 class="pmc-u-font-family-basic pmc-u-padding-a-1 pmc-u-margin-a-00">{{ type ~ ': ' ~ name }}</h1>
+		<h1 class="pmc-u-font-family-basic pmc-u-padding-a-1 pmc-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' ~ name }}</h1>
 	</div>
-	{% include "@larva/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
+
+	{% include "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
+
 	<div class="pmc-u-background-grey-light pmc-a-grid pmc-u-font-size-12 pmc-u-border-t-1 pmc-u-border-color-grey pmc-u-padding-a-2">
 		<pre class="pmc-a-wrapper language-json"><code>{{ json_pretty|raw }}</code></pre>
 	</div>
