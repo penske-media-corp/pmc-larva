@@ -164,9 +164,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 		$twig_markup_replace_main     = str_replace( $all_matches, $all_replacements, $twig_markup );
 		$twig_markup_replace_complete = str_replace( array_keys( (array) $general_replacers ), array_values( $general_replacers ), $twig_markup_replace_main );
 
-		$twig_relative_path = $patterns_dir_path . implode( '/', $path_info );
-
-		$php_markup  = "<?php\n// This is a generated file. Refer to the file located at $twig_relative_path for adjusting this markup.\n?>\n";
+		$php_markup  = "<?php\n// This is a generated file. Refer to the relevant Twig file for adjusting this markup.\n?>\n";
 		$php_markup .= $twig_markup_replace_complete;
 
 		if ( ! file_exists( $template_dir ) ) {
