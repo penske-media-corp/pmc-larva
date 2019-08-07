@@ -1,5 +1,5 @@
 <div class="footer-links // pmc-u-background-black pmc-a-grid pmc-a-cols3@tablet">
-	{% for fl_o_nav in o_navs %}
-		{% include "@larva/objects/o-nav/o-nav.twig" with fl_o_nav %}
+	{% for item in o_navs %}
+		{% include "@larva/objects/o-nav/o-nav.twig" with item %}
 	{% endfor %}
 </div>
