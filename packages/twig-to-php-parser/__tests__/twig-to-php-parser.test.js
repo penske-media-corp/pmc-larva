@@ -14,8 +14,10 @@ const pathConfig = {
 describe( 'twig to php parser', function() {
 
 	beforeEach( () => {
-		exec( 'mkdir ' + pathConfig.phpDir, ( err, stdout, stderr ) => {
-			console.log( 'created template-parts dir.' );
+		exec( 'mkdir ' + pathConfig.phpDir, ( err  ) => {
+			if ( err ) {
+				console.error( err );
+			}
 		});
 	});
 
@@ -33,8 +35,10 @@ describe( 'twig to php parser', function() {
 	});
 
 	afterEach( () => {
-		exec( 'rm -r ' + pathConfig.phpDir, ( err, stdout, stderr ) => {
-			console.log( 'cleaned up generated files.' );
+		exec( 'rm -r ' + pathConfig.phpDir, ( err ) => {
+			if ( err ) {
+				console.error( err );
+			}
 		});
 	});
 
