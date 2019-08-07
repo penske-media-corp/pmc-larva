@@ -6,6 +6,9 @@
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
   "license": "MIT",
   "main": "index.js",
+  "bin": {
+	"larva": "bin/larva.js"
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
