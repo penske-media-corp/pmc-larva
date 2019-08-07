@@ -5,6 +5,7 @@ $ICONS_BUILD_PATH: '/svgs';
 
 @mixin _a-icon-base {
 	content: var(--a-icon-content, '');
+	filter: var(--a-icon-filter, none);
 	background-image: var(--a-icon-url, '');
 	background-repeat: no-repeat;
 	background-size: contain;

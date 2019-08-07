@@ -1,6 +1,5 @@
 const build = require( './build' );
-const gaze = require('gaze');
-const path = require('path');
+const gaze = require( 'gaze' );
 
 gaze( process.cwd() + '/**/*.scss', (err, watcher) => {
 	const watched = watcher.watched();

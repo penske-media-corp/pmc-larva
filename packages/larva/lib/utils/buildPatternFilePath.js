@@ -1,14 +1,13 @@
 const getPatternType = require( './getPatternType' );
 const getPatternDigit = require( './getPatternDigit' );
-const getAppConfiguration = require( './getAppConfiguration' )( 'patterns' );
 
-module.exports = function buildPatternFilePath( patternsIndexPath, name, ext ) {
+module.exports = function buildPatternFilePath( patternsPath, name, ext ) {
 	const patternType = getPatternType( name );
 	let patternDigit = getPatternDigit( name );
 
-	if ( patternsIndexPath.includes( 'larva' ) ) {
+	// if ( patternsPath.includes( 'larva' ) ) {
 		patternDigit = '';
-	}
+	// }
 
-	return patternsIndexPath + '/' + patternDigit + patternType + '/' + name +'/' + name + ext;
+	return patternsPath + '/' + patternDigit + patternType + '/' + name +'/' + name + ext;
 }

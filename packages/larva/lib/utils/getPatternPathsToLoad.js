@@ -3,13 +3,14 @@ const fs = require( 'fs' );
 
 module.exports = function getPatternPathsToLoad( config ) {
 	let paths = [];
+
+	// Look in projectPatternsDir first.
+	if( fs.existsSync( config.projectPatternsDir ) ) {
+		paths.push( config.projectPatternsDir );
+	}
 	
 	if( fs.existsSync( config.larvaPatternsDir ) ) {
 		paths.push( config.larvaPatternsDir );
-	}
-
-	if( fs.existsSync( config.themePatternsDir ) ) {
-		paths.push( config.themePatternsDir );
 	}
 
 	if ( 0 === paths.length ) {

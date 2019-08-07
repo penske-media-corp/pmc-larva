@@ -1,5 +1,8 @@
 .pmc-u-background-white {
-  background-color: white; }
+  background-color: #FFFFFF; }
+
+.pmc-u-background-black {
+  background-color: #000000; }
 
 .pmc-u-background-grey-lightest {
   background-color: #FAFAFA;
@@ -16,6 +19,9 @@
   border-color: #CCCCCC;
   border-color: var(--color-grey-light); }
 
+.pmc-u-border-color-white {
+  border-color: #FFFFFF; }
+
 @media (min-width: 48rem) {
   .pmc-u-box-shadow-medium\@tablet {
     box-shadow: 0 -0.313rem 0.313rem rgba(0, 0, 0, 0.15); } }
@@ -31,6 +37,9 @@
 .pmc-u-color-grey-medium-dark {
   color: #595959;
   color: var(--color-grey-medium-dark); }
+
+.pmc-u-color-white {
+  color: #FFFFFF; }
 
 .pmc-u-color-white\:hover:hover {
   color: #FFFFFF; }

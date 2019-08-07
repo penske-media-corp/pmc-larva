@@ -18,8 +18,9 @@
 	</head>
 	<body class="pmc-u-margin-a-00">
 		<main>
-			<div class="pmc-u-padding-a-1">
-				{% include "_templates/pattern-nav.html" %}
+			<div class="pmc-u-padding-a-1 pmc-a-glue-parent">
+				{% include "@larva/_templates/pattern-nav.html" with source %}
+				{% include "@project/_templates/pattern-nav.html" with source %}
 			</div>
 			<div>
 				{% block content %}{% endblock %}

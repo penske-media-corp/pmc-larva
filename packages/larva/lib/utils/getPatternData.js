@@ -1,8 +1,8 @@
 const getPatternDataPath = require( './getPatternDataPath' );
 const chalk = require( 'chalk' );
 
-module.exports = function getPatternData( patternsIndexPath, params ) {
-	const path = getPatternDataPath( patternsIndexPath, params.name );
+module.exports = function getPatternData( patternsPath, params ) {
+	const path = getPatternDataPath( patternsPath, params.name );
 
 	try {
 		let pathData = require( path );

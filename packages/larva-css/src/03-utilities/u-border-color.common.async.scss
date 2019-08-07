@@ -5,3 +5,7 @@
 	border-color: #{map-get( $semantic-color-list, grey-medium-light )};
 	border-color: var( --color-grey-light );
 }
+
+.pmc-u-border-color-white {
+	border-color: #{map-get( $semantic-color-list, white )};
+}

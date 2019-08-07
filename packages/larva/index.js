@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-	build: require( './lib/build' ),
-	watch: require( './lib/watch' ),
+	server: require( './lib/server' ),
 	clone: require( './lib/utils/clonePatternData' )
 };

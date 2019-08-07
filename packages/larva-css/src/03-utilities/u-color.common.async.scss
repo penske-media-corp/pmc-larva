@@ -15,6 +15,10 @@
 	color: var( --color-grey-medium-dark );
 }
 
+.pmc-u-color-white {
+	color: map-get( $semantic-color-list, white );
+}
+
 .pmc-u-color-white\:hover:hover {
 	color: map-get( $semantic-color-list, white );
 }

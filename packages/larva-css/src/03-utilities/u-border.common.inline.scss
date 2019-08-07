@@ -1,3 +1,11 @@
+@import '@penskemediacorp/larva-scss/dist/tools';
+
 .pmc-u-border-a-1 {
 	border: 1px solid;
+}
+
+.pmc-u-border-a-1\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		border: 1px solid;
+	}
 }

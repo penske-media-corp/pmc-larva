@@ -9,3 +9,9 @@
 		text-align: center;
 	}
 }
+
+.pmc-u-text-align-center\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		text-align: center;
+	}
+}
