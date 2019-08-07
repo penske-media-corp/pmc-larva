@@ -1,0 +1,14 @@
+<nav class="o-nav {{ modifier_class }} {{ o_nav_classes }}" data-dropdown="{{ o_nav_data_attributes }}">
+
+	{% if o_nav_title_text %}
+		<h4 class="o-nav__title {{ o_nav_title_classes }}" data-dropdown-list-item="{{ o_nav_title_data_attributes }}"> {{ o_nav_title_text }}</h4>
+	{% endif %}
+
+	<ul class="o-nav__list {{ o_nav_list_classes }}" data-dropdown-list="{{ o_nav_list_data_attributes }}">
+		{% for item in o_nav_list_items %}
+			<li class="o-nav__list-item {{ o_nav_list_item_classes }}" data-dropdown-list-item="{{ o_nav_list_item_data_attributes }}">
+				{% include "../../04-components/c-nav-link/c-nav-link.twig" with item %}
+			</li>
+		{% endfor %}
+	</ul>
+</nav>

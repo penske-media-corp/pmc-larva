@@ -1,11 +1,14 @@
 {
-  "name": "@penskemediacorp/larva-css",
+  "name": "@penskemediacorp/twig-to-php-parser",
   "version": "1.6.0-alpha.0",
-  "description": "Larva CSS.",
+  "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
-  "main": "lib/css-algorithms.js",
+  "main": "index.js",
+  "bin": {
+    "twig-to-php-parser": "bin/twig-to-php-parser.js"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -14,16 +17,13 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "../../node_modules/.bin/jest",
-    "watch": "node node_modules/@penskemediacorp/larva/lib/watch.js"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
-  "devDependencies": {
-    "@penskemediacorp/larva-scss": "^1.5.3-alpha.0",
-    "node-sass": "^4.12.0",
-    "stylelint": "^10.1.0"
-  },
-  "gitHead": "81e44e19c2f1b63291b27fbfd6fd146321686c78"
+  "dependencies": {
+    "@penskemediacorp/larva": "^1.6.0-alpha.0",
+    "exec-php": "0.0.5"
+  }
 }
