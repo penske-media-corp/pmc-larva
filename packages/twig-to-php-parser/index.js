@@ -5,6 +5,7 @@ const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 const RELATIVE_OUPUT_PATH = '../template-parts/patterns'; // Not permitted to override this because it will break the include paths.
 
 /**
+ * Twig to PHP Parser
  * 
  * @param {string} twigDirPath Absolute path to Twig patterns
  * @param {string} phpDirPath Absolute path to PHP output
