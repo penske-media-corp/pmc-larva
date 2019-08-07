@@ -4,7 +4,10 @@ const fs = require( 'fs' );
 const express = require('express');
 const app = express();
 const port = process.env.NODE_PORT || 3000;
-const { getAppConfiguration, getPatternPathsToLoad, getPatternsIndexPath, isCoreTheme, getPatternData, getPatternType } = require( './utils/utils' );
+
+const getAppConfiguration = require( './utils/getAppConfiguration' );
+const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
+const getPatternData = require( './utils/getPatternData' );
 
 const appConfiguration = getAppConfiguration( 'patterns' );
 const twigPaths = getPatternPathsToLoad( appConfiguration );
