@@ -1,0 +1,25 @@
+{
+  "name": "@penskemediacorp/twig-to-php-parser",
+  "version": "1.5.3-alpha.0",
+  "description": "> TODO: description",
+  "author": "laras126 <laras126@gmail.com>",
+  "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
+  "license": "ISC",
+  "main": "lib/twig-to-php-parser.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/penske-media-corp/pmc-larva/issues"
+  },
+  "dependencies": {
+    "exec-php": "0.0.5"
+  }
+}
