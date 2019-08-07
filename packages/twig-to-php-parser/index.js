@@ -1,7 +1,7 @@
 const execPhp = require( 'exec-php' );
 const path = require( 'path' );
 const chalk = require( 'chalk' );
-
+const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 const RELATIVE_OUPUT_PATH = '../template-parts/patterns'; // Not permitted to override this because it will break the include paths.
 
 /**
@@ -37,11 +37,11 @@ function twigToPhpParser( twigDirPath, phpDirPath, config ) {
 
 };
 
-function parseIncludePath( twigIncludeStr, patternName, dataName ) {
+function parseIncludePath( twigIncludeStr, patternName, dataName, config = {} ) {
 
 	return new Promise( ( resolve, reject ) => {
 
-		execPhp( path.resolve( __dirname, '../lib/twig-to-php-parser.php' ), config.phpBinaryPath, function( error, php, output ) {
+		execPhp( path.resolve( __dirname, './lib/twig-to-php-parser.php' ), config.phpBinaryPath, function( error, php, output ) {
 
 			if ( error ) {
 				reject( error );
@@ -69,10 +69,10 @@ module.exports = {
 		parseIncludePath: parseIncludePath
 	},
 	run: () => {
-
+		let config = getAppConfiguration( 'parser' );
 		let relativeSrcPath = config.relativeSrcOverride || './src/patterns';
 
-		twigToPhpParser( path.resolve( process.cwd(), relativeSrcPath ), path.resolve( process.cwd(), RELATIVE_OUPUT_PATH ) )
+		twigToPhpParser( path.resolve( process.cwd(), relativeSrcPath ), path.resolve( process.cwd(), RELATIVE_OUPUT_PATH ), config )
 		.catch( e => console.log( e ) ) // PHP errors
 		.then( result => console.log( chalk.green( 'Completed parsing Twig templates to PHP.' ) ) )
 		.catch( e => console.log( e ) );
