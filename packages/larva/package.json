@@ -20,6 +20,7 @@
     "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "express": "^4.17.1",
     "twing": "^2.3.2"
   }
