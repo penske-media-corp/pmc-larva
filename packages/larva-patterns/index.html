@@ -1,21 +1,27 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Larva Homepage</title>
+</head>
+<body>
 
-{% block content %}
-<div class="pmc-a-wrapper pmc-u-margin-t-1">
-	<h1>Welcome to Larva!</h1>
-	<p>This is a baby server site for building patterns. To navigate to a pattern, provide the route:</p>
-	<pre>http://localhost:3000/{patternType}/{patternName}/{patternVariation}</pre>
+	<div class="pmc-a-wrapper pmc-u-margin-t-1">
+		<h1>Welcome to Larva!</h1>
+		<p>This is a little baby server for building patterns. To navigate to a pattern, provide the route:</p>
+		<pre>http://localhost:3000/{project|larva}/{patternType}/{patternName}</pre>
+	
+		<p>For example:</p>
+		<a href="http://localhost:3000/larva/objects/o-nav">
+			<pre>http://localhost:3000/larva/objects/o-nav</pre>
+		</a>
+		<p>or, if you are working in a project, point to the local project with:</p>
+		<a href="http://localhost:3000/project/modules/breadcrumbs">
+			<pre>http://localhost:3000/project/modules/breadcrumbs</pre>
+		</a>
+	</div>
 
-	<p>For example:</p>
-	<a href="http://localhost:3000/objects/o-nav">
-		<pre>http://localhost:3000/objects/o-nav</pre>
-	</a>
-	<p>or</p>
-	<a href="http://localhost:3000/modules/breadcrumbs">
-		<pre>http://localhost:3000/modules/breadcrumbs</pre>
-	</a>
-	<p>To view a variation of a main pattern, add a third parameter:</p>
-	<pre>http://localhost:3000/modules/breadcrumbs/featured-article</pre>
-	<p>^^ not yet implemented.</p>
-</div>
-{% endblock %}
+</body>
+</html>
