@@ -5,7 +5,10 @@
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
-  "main": "lib/twig-to-php-parser.js",
+  "main": "index.js",
+  "bin": {
+	"twig-to-php-parser": "bin/twig-to-php-parser.js"
+	},
   "publishConfig": {
     "access": "public"
   },
@@ -20,6 +23,7 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "exec-php": "0.0.5"
+	"exec-php": "0.0.5",
+	"@penskemediacorp/larva": "^1.5.6-alpha.0"
   }
 }
