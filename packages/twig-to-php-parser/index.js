@@ -11,11 +11,11 @@ const RELATIVE_OUPUT_PATH = '../template-parts/patterns'; // Not permitted to ov
  * @param {object} config Containing 
  */
 
-function twigToPhpParser( twigDirPath, phpDirPath, config ) {
+function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
 
 	return new Promise( ( resolve, reject ) => {
 
-		execPhp( path.resolve( __dirname, '../lib/twig-to-php-parser.php' ), config.phpBinaryPath, function( error, php, output ) {
+		execPhp( path.resolve( __dirname, './lib/twig-to-php-parser.php' ), config.phpBinaryPath, function( error, php, output ) {
 
 			if ( error ) {
 				reject( error );
