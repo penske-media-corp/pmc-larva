@@ -1,7 +1,13 @@
+@import '@penskemediacorp/larva-scss/dist/tools';
+
 .pmc-u-height-100p {
 	height: 100%;
 }
 
 .pmc-u-max-height-50 {
-	max-height: 3.125rem;
+	max-height: pmc-rem(50);
+}
+
+.pmc-u-height-16 {
+	height: pmc-rem(16);
 }

@@ -11,6 +11,8 @@
 	--font-family-primary-fancy: #{map-get( $semantic-font-families, 'balto' )};
 	--font-family-secondary: #{map-get( $semantic-font-families, 'georgia' )};
 	--font-family-secondary-fancy: #{map-get( $semantic-font-families, 'eksell' )};
+	
+	--font-family-basic: #{map-get( $semantic-font-families, 'helvetica' )};
 
 	--site-max-width: #{$screen-desktop-xl};
 	
