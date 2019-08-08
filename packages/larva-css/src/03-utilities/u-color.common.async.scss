@@ -5,6 +5,11 @@
 	color: var( --color-grey-light );
 }
 
+.pmc-u-color-grey-light\:hover:hover {
+	color: #{map-get( $semantic-color-list, grey-medium-light )};
+	color: var( --color-grey-light );
+}
+
 .pmc-u-color-grey {
 	color: #{map-get( $semantic-color-list, grey )};
 	color: var( --color-grey );

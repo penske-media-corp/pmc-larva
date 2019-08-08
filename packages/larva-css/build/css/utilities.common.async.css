@@ -33,6 +33,10 @@
   color: #CCCCCC;
   color: var(--color-grey-light); }
 
+.pmc-u-color-grey-light\:hover:hover {
+  color: #CCCCCC;
+  color: var(--color-grey-light); }
+
 .pmc-u-color-grey {
   color: #8C8C8C;
   color: var(--color-grey); }

@@ -52,31 +52,6 @@
     height: 100%;
     object-fit: cover; }
 
-.pmc-a-glue-parent {
-  position: relative; }
-
-.pmc-a-glue {
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 2;
-  top: var(--a-glue-top, initial);
-  bottom: var(--a-glue-bottom, initial);
-  right: var(--a-glue-right, initial);
-  left: var(--a-glue-left, initial); }
-
-.pmc-a-glue--l-0 {
-  --a-glue-left: 0; }
-
-.pmc-a-glue--r-0 {
-  --a-glue-right: 0; }
-
-.pmc-a-glue--t-0 {
-  --a-glue-top: 0; }
-
-.pmc-a-glue--b-0 {
-  --a-glue-bottom: 0; }
-
 .pmc-a-grid {
   display: flex;
   flex-wrap: wrap;
@@ -137,6 +112,31 @@
       grid-column: span 3; } }
   .pmc-a-cols4\@tablet > .pmc-a-span3\@tablet {
     flex-basis: 75%; } }
+
+.pmc-a-glue-parent {
+  position: relative; }
+
+.pmc-a-glue {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  top: var(--a-glue-top, initial);
+  bottom: var(--a-glue-bottom, initial);
+  right: var(--a-glue-right, initial);
+  left: var(--a-glue-left, initial); }
+
+.pmc-a-glue--l-0 {
+  --a-glue-left: 0; }
+
+.pmc-a-glue--r-0 {
+  --a-glue-right: 0; }
+
+.pmc-a-glue--t-0 {
+  --a-glue-top: 0; }
+
+.pmc-a-glue--b-0 {
+  --a-glue-bottom: 0; }
 
 .a-icon {
   content: var(--a-icon-content, "");
