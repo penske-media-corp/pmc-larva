@@ -1,4 +1,5 @@
 const path = require( 'path' );
+const chalk = require( 'chalk' );
 
 const getPatternData = require( './utils/getPatternData' );
 const getAppConfiguration = require( './utils/getAppConfiguration' );
@@ -6,15 +7,16 @@ const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const writeJsonToFile = require( './utils/writeJsonToFile' );
 
 const appConfiguration = getAppConfiguration( 'patterns' );
+const args = process.argv;
 
-// Get this to happen either in gulp or as a promise based script with globby in here!
-// Should loop through all modules in larvaPatternsDir and output a json file for each
 const params = {
-	type: 'modules',
-	name: 'pmc-footer'
+	type: args[2],
+	name: args[3]
 };
 
-const data = getPatternData( appConfiguration.larvaPatternsDir, params );
-const jsonDestPath = path.resolve( appConfiguration.projectPatternsDir, '../../build/json/' + params.type + '/' + params.name + '.json' );
 
+const data = getPatternData( appConfiguration.larvaPatternsDir, params );
+const jsonDestPath = path.resolve( appConfiguration.projectPatternsDir, '../../build/json/' + params.type + '/' + params.name + '.prototype.json' );
+
+console.log( chalk.green( 'Writing JSON for: ' + params.type + ' –> ' + params.name ) );
 writeJsonToFile( jsonDestPath, data );
