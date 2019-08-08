@@ -6,6 +6,7 @@
   --font-family-primary-fancy: Balto, Helvetica, sans-serif, web, Helvetica;
   --font-family-secondary: Georgia, system;
   --font-family-secondary-fancy: Eksell, Georgia, serif, web, Georgia;
+  --font-family-basic: Helvetica, system;
   --site-max-width: 78.75rem;
   --color-grey-lightest: #FAFAFA;
   --color-grey-light: #E6E6E6;
@@ -30,6 +31,9 @@ figure {
 
 #icon-sprite {
   display: none; }
+
+svg {
+  fill: currentColor; }
 
 
 body {
