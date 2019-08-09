@@ -30,8 +30,12 @@ app.use( express.static( 'build' ) );
 app.use( '/svgs' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-svg/build' ) ) );
 app.use( '/js' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-js/build' ) ) );
 app.use( '/css' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-css/build/css' ) ) );
-app.use( '/patterns' , express.static( appConfiguration.larvaPatternsDir ) ); // should point to consuming project dir
+app.use( '/patterns' , express.static( appConfiguration.larvaPatternsDir ) );
 app.use( '/static' , express.static( path.join( __dirname, '../static' ) ) );
+
+if( appConfiguration.projectPatternsDir ) {
+	app.use( '/project' , express.static( path.join( appConfiguration.projectPatternsDir, '../../build/' ) ) );
+}
 
 app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.html', { name: 'Welcome' } ) );
