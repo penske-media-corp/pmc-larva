@@ -8,6 +8,7 @@
   --font-family-secondary-fancy: Eksell, Georgia, serif, web, Georgia;
   --font-family-basic: Helvetica, system;
   --site-max-width: 78.75rem;
+  --color-brand-primary: #920200;
   --color-grey-lightest: #FAFAFA;
   --color-grey-light: #E6E6E6;
   --color-grey-light: #CCCCCC;
@@ -45,7 +46,6 @@ strong {
   font-weight: 700; }
 
 a {
-  color: #920200;
   text-decoration: none; }
   a:hover {
     color: #550100; }

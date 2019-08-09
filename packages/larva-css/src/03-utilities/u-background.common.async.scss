@@ -7,8 +7,14 @@ $color_list: (
 
 @include pmc-u-background( (
 	white,
-	black
+	black,
 ), $semantic-color-list );
+
+
+.pmc-u-background-brand-primary {
+	background-color: map-get( $semantic-color-list, brand-primary );
+	background-color: var( --color-brand-primary );
+}
 
 .pmc-u-background-grey-lightest {
 	background-color: map-get( $semantic-color-list, grey-lightest );
