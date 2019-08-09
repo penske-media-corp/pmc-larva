@@ -2,9 +2,19 @@
 
 This package contains Larva's base CSS, CSS algorithms, utlities, and CSS for JS patterns from larva-js.
 
+## Usage
+
+```
+npm install @penskemediacorp/larva-css --save
+```
+
+Then include the CSS from @penskemediacorp/larva-css/build/css in your asset pipeline. Make sure that the CSS files containing `inline` and `async` are loaded accordingly.
+
 ## Concepts
 
 ### "Atomic" or "Functional" CSS
+
+Coming soon!
 
 ### Removing the Burden of Naming
 
