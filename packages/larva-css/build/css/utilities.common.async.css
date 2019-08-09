@@ -22,11 +22,18 @@
 .pmc-u-border-color-white {
   border-color: #FFFFFF; }
 
+.pmc-u-border-radius-50p {
+  border-radius: 50%; }
+
 @media (min-width: 48rem) {
   .pmc-u-box-shadow-medium\@tablet {
     box-shadow: 0 -0.313rem 0.313rem rgba(0, 0, 0, 0.15); } }
 
 .pmc-u-color-grey-light {
+  color: #CCCCCC;
+  color: var(--color-grey-light); }
+
+.pmc-u-color-grey-light\:hover:hover {
   color: #CCCCCC;
   color: var(--color-grey-light); }
 

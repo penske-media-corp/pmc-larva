@@ -57,7 +57,8 @@
   font-family: var(--font-family-secondary); }
 
 .pmc-u-font-family-basic {
-  font-family: Helvetica, sans-serif; }
+  font-family: Helvetica, sans-serif;
+  font-family: var(--font-family-basic); }
 
 .pmc-u-font-size-8 {
   font-size: 0.5rem; }
@@ -215,6 +216,9 @@
 
 .pmc-u-max-height-50 {
   max-height: 3.125rem; }
+
+.pmc-u-height-16 {
+  height: 1rem; }
 
 .pmc-u-line-height-small {
   line-height: 1.1; }
@@ -451,6 +455,9 @@
 
 .pmc-u-whitespace-nowrap {
   white-space: nowrap; }
+
+.pmc-u-width-16 {
+  width: 1rem; }
 
 .pmc-u-width-100p {
   width: 100%; }

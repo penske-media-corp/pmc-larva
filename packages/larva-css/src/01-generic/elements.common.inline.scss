@@ -21,3 +21,7 @@ figure {
 #icon-sprite { // stylelint-disable-line selector-max-specificity
 	display: none;
 }
+
+svg {
+	fill: currentColor;
+}

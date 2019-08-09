@@ -189,9 +189,10 @@ function parse_include_path( $twig_include, $pattern_name, $data_name ) {
 	$theme_dir = 'CHILD_THEME_PATH';
 	$start_name = substr( $pattern_name, 0, 2 );
 
-	if ( strpos( $twig_include, "@larva" ) ) {
-		$theme_dir = 'PMC_CORE_PATH';
-	}
+	// 08/09/19 - Disabling larva/core theme logic
+	// if ( strpos( $twig_include, "@larva" ) ) {
+	// 	$theme_dir = 'PMC_CORE_PATH';
+	// }
 
 	if ( 'c-' === $start_name ) {
 		$directory = 'components';
