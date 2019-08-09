@@ -15,7 +15,8 @@
 	--font-family-basic: #{map-get( $semantic-font-families, 'helvetica' )};
 
 	--site-max-width: #{$screen-desktop-xl};
-	
+
+	--color-brand-primary: #{map-get( $semantic-color-list, brand-primary )};
 	--color-grey-lightest: #{map-get( $semantic-color-list, grey-lightest )};
 	--color-grey-light: #{map-get( $semantic-color-list, grey-light )};
 	--color-grey-light: #{map-get( $semantic-color-list, grey-medium-light )};
