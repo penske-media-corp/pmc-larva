@@ -4,6 +4,10 @@
 .pmc-u-background-black {
   background-color: #000000; }
 
+.pmc-u-background-brand-primary {
+  background-color: #920200;
+  background-color: var(--color-brand-primary); }
+
 .pmc-u-background-grey-lightest {
   background-color: #FAFAFA;
   background-color: var(--color-grey-lightest); }
@@ -11,9 +15,6 @@
 .pmc-u-background-grey-light {
   background-color: #E6E6E6;
   background-color: var(--color-grey-light); }
-
-.pmc-u-background-brand-red\:hover:hover {
-  background-color: #920200; }
 
 .pmc-u-border-color-grey-light {
   border-color: #CCCCCC;
