@@ -10,13 +10,22 @@ const appConfiguration = getAppConfiguration( 'patterns' );
 const args = process.argv;
 
 const params = {
-	type: args[2],
-	name: args[3]
+	type: args[3],
+	name: args[4]
 };
 
+let jsonSrcPath = '';
 
-const data = getPatternData( appConfiguration.larvaPatternsDir, params );
+if ( 'larva' === args[2] ) {
+	jsonSrcPath = appConfiguration.larvaPatternsDir;
+}
+
+if ( 'project' === args[2] ) {
+ 	jsonSrcPath = appConfiguration.projectPatternsDir;
+}
+
+const data = getPatternData( jsonSrcPath, params );
 const jsonDestPath = path.resolve( appConfiguration.projectPatternsDir, '../../build/json/' + params.type + '/' + params.name + '.prototype.json' );
 
-console.log( chalk.green( 'Writing JSON for: ' + params.type + ' –> ' + params.name ) );
+console.log( chalk.green( 'Writing JSON for: ' + args[2] + ' –> ' + params.type + ' –> ' + params.name ) );
 writeJsonToFile( jsonDestPath, data );
