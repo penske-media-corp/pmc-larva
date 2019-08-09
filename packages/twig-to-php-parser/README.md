@@ -18,7 +18,7 @@ This package is intended to work with Larva Patterns to both parse patterns into
 
 ## Very Important To Know
 
-When parsing includes, the parser looks for the `@larva` namespace, and will point includes to `PMC_CORE_PATH` when it finds it. Otherwise, includes will point to CHILD_THEME_PATH.
+~When parsing includes, the parser looks for the `@larva` namespace, and will point includes to `PMC_CORE_PATH` when it finds it. Otherwise, includes will point to CHILD_THEME_PATH.~ This is not in effect yet. Everything is contained to the child theme.
 
 The parser supports a *very limited amount of Twig* and relies on keywords in data names in order to parse escaping correctly. Please refer to the Confluence documentation for Twig authoring guidelies: https://confluence.pmcdev.io/x/JoGJAg
 
