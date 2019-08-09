@@ -1,0 +1,7 @@
+<ul class="o-story-list {{ modifier_class }} {{ o_story_list_classes }}">
+	{% for item in o_story_list_teases %}
+		<li class="o-story-list__item {{ o_story_list_item_classes }}">
+			{% include "../o-tease/o-tease.twig" with item %}
+		</li>
+	{% endfor %}
+</ul>
