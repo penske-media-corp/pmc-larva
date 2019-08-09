@@ -19,7 +19,7 @@ data.brands.forEach( ( brand ) => {
 
 	c_link.c_link_text = brand.name;
 	c_link.c_link_url = brand.url;
-	c_link.c_link_classes += ' pmc-u-display-block pmc-u-background-brand-red:hover pmc-u-color-white:hover pmc-u-font-weight-bold pmc-u-padding-lr-1 pmc-u-padding-tb-050';
+	c_link.c_link_classes += ' pmc-u-display-block pmc-u-background-brand-primary:hover pmc-u-color-white:hover pmc-u-font-weight-bold pmc-u-padding-lr-1 pmc-u-padding-tb-050';
 
 	o_nav.o_nav_list_items.push( c_link );
 });
