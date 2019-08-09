@@ -22,7 +22,7 @@ function styles( done ) {
 			}]
 		}))
 		.pipe(sass( sassOpts ).on( 'error', sass.logError) )
-		.pipe(concat('generic.common.inline.css'))
+		.pipe(concat('generic.common.inline.scss'))
 		.pipe(dest('./build/css/'));
 
 	src('./src/*generic/*.common.async.scss')
@@ -41,7 +41,7 @@ function styles( done ) {
 			}]
 		}))
 		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('algorithms.common.inline.css'))
+		.pipe(concat('algorithms.common.inline.scss'))
 		.pipe(dest('./build/css/'));
 
 	src('./src/**/a-*.common.async.scss')
@@ -53,29 +53,29 @@ function styles( done ) {
 			}]
 		}))
 		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('algorithms.common.async.css'))
+		.pipe(concat('algorithms.common.async.scss'))
 		.pipe(dest('./build/css/'));
 
 	// Utilities
 	src('./src/**/u-*.common.inline.scss')
 		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('utilities.common.inline.css'))
+		.pipe(concat('utilities.common.inline.scss'))
 		.pipe(dest('./build/css/'));
 
 	src('./src/**/u-*.common.async.scss')
 		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('utilities.common.async.css'))
+		.pipe(concat('utilities.common.async.scss'))
 		.pipe(dest('./build/css/'));
 
 	// JS
 	src('./src/**/js-*.common.inline.scss')
 		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('js.common.inline.css'))
+		.pipe(concat('js.common.inline.scss'))
 		.pipe(dest('./build/css/'));
 
 	src('./src/**/js-*.common.async.scss')
 		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('js.common.async.css'))
+		.pipe(concat('js.common.async.scss'))
 		.pipe(dest('./build/css/'));
 
 	
