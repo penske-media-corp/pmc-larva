@@ -1,5 +1,5 @@
 module.exports = {
-	"footer_tip_classes": "",
+	"footer_tip_classes": "pmc-u-text-align-center pmc-u-color-white pmc-u-background-black",
 	"c_title": {
 		"c_title_classes": "pmc-u-margin-b-025 pmc-u-font-family-primary",
 		"c_title_text": "Have a Tip?"
