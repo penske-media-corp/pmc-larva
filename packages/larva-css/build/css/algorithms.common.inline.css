@@ -138,6 +138,12 @@
   .pmc-a-cols4\@tablet > .pmc-a-span3\@tablet {
     flex-basis: 75%; } }
 
+@media (min-width: 62.5rem) {
+  .pmc-a-cols3\@desktop {
+    --cols: 3; }
+    .pmc-a-cols3\@desktop > * {
+      flex-basis: 33.33333%; } }
+
 .a-icon {
   content: var(--a-icon-content, "");
   filter: var(--a-icon-filter, none);

@@ -41,6 +41,10 @@ $grids: (
 		spans: ( 2, 3, ),
 		breakpoint: tablet,
 	),
+	(
+		columns: 3,
+		breakpoint: desktop,
+	),
 );
 
 @include pmc-a-grid( $grids );
