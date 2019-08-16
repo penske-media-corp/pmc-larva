@@ -59,6 +59,10 @@
 .pmc-u-color-white {
   color: #FFFFFF; }
 
+.pmc-u-color-brand-primary {
+  color: #920200;
+  color: var(--color-brand-primary); }
+
 .pmc-u-color-currentColor {
   color: currentColor; }
 
