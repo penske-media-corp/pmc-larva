@@ -1,7 +1,15 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
+.pmc-u-border-b-1 {
+	border-bottom: 1px solid;
+}
+
 .pmc-u-border-a-1 {
 	border: 1px solid;
+}
+
+.pmc-u-border-a-0 {
+	border: 0;
 }
 
 .pmc-u-border-a-1\@mobile-max {

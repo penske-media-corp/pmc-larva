@@ -27,3 +27,7 @@
 .pmc-u-color-white\:hover:hover {
 	color: map-get( $semantic-color-list, white );
 }
+
+.pmc-u-color-currentColor {
+	color: currentColor;
+}

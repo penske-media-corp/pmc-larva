@@ -9,3 +9,7 @@
 .pmc-u-border-color-white {
 	border-color: #{map-get( $semantic-color-list, white )};
 }
+
+.pmc-u-border-color-currentColor {
+	border-color: currentColor;
+}
