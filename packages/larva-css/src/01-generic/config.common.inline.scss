@@ -1,11 +1,5 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 
-
-// NOTE / TODO: this is a reminder to add generic and element styles on Monday
-* {
-	box-sizing: border-box;
-}
-
 :root {
 	--font-family-primary: #{map-get( $semantic-font-families, 'helvetica' )};
 	--font-family-primary-fancy: #{map-get( $semantic-font-families, 'balto' )};
@@ -19,7 +13,6 @@
 	--color-brand-primary: #{map-get( $semantic-color-list, brand-primary )};
 	--color-grey-lightest: #{map-get( $semantic-color-list, grey-lightest )};
 	--color-grey-light: #{map-get( $semantic-color-list, grey-light )};
-	--color-grey-light: #{map-get( $semantic-color-list, grey-medium-light )};
 	--color-grey: #{map-get( $semantic-color-list, grey )};
 	--color-grey-medium-dark: #{map-get( $semantic-color-list, grey-medium-dark )};
 }

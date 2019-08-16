@@ -1,1 +1,0 @@
-import './a-glue.scss';

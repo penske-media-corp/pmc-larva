@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box; }
-
 :root {
   --font-family-primary: Helvetica, system;
   --font-family-primary-fancy: Balto, Helvetica, sans-serif, web, Helvetica;
@@ -11,7 +8,6 @@
   --color-brand-primary: #920200;
   --color-grey-lightest: #FAFAFA;
   --color-grey-light: #E6E6E6;
-  --color-grey-light: #CCCCCC;
   --color-grey: #8C8C8C;
   --color-grey-medium-dark: #595959; }
 
@@ -46,9 +42,12 @@ strong {
   font-weight: 700; }
 
 a {
+  color: #920200;
+  color: var(--color-brand-primary, #920200);
   text-decoration: none; }
   a:hover {
-    color: #550100; }
+    color: #920200;
+    color: var(--color-brand-primary, #920200); }
 
 h1,
 h2,

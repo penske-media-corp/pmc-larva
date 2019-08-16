@@ -1,4 +1,0 @@
-.a-truncate-children > * {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }

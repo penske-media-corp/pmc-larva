@@ -43,3 +43,42 @@ An *algorithm* is a more involved ruleset or set of rulesets that accomplished a
 * pmc-a-unstyle-list – a straightforward set of declarations that remove basic list styling.
 
 The *js* directory contains CSS corresponding to interactivity from larva-js. These styles could be kept alongside the JS, but in order to minimize build tool dependencies, there are kept here, in the larva-css package.
+
+## Naming SCSS Files
+
+The SCSS file should be named according to the chunk it will be included in when used in an actual product, and whether it should be loaded asynchronously or inline. The formular for naming a file:
+
+`{a|u|js}-{baseName}.{chunkName}.{inline|async}.scss`
+
+Example, full file names:
+
+* u-background.common.async.scss
+* u-font-size.single.async.scss
+* a-gradient-after.common.async.scss
+* a-archive-grid.archive.inline.scss
+* js-MobileHeightToggle.common.async.scss
+
+### Namespace {a|u|js}
+
+- a, for algorithm
+- u, for utility
+- js, styling paired with a JS pattern
+- No namespace for generic or reset styles
+
+### baseName
+
+The baseName of a pattern is the consistent name that is included before all responsive suffixes and BEM elements or modifiers.
+
+For example, `a-article-grid` could contain `a-article-grid__sidebar` or `a-article-grid--3col`, but the name of the file only contains a-article-grid.
+
+### chunkName
+
+The name of the chunk where this algorithm should be included. Most algorithms will be common, but there will certainly be cases when algorithms are written for specifc projects that may have their own chunk naming convention. When naming chunks in a WordPress theme, they should map directly 1 to 1 with the queried template where the CSS is equeued or inlined.
+
+### Async or Inline
+
+These terms refer to whether or not the algorithm should be included in inlined, or "critical CSS", or in a file loaded asynchronously.
+
+inline should be used for CSS that is applied to elements that are both "above the fold" and contain properties that come into play at the layout phase in rendering. In other words, they are crucial for the first paint of the page. Examples are any properties part of the box model, positioning, layout APIs like Grid and Flexbox, font sizing, and more.
+
+async should be used for CSS that is not critical to the first paint i.e. to making the page content readable, and that apply during the paint and composite phases of rendering. These are properties like color, background, transition, and box-shadow.
