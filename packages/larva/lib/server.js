@@ -41,7 +41,7 @@ app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.html', { name: 'Welcome' } ) );
 });
 
-app.get( '/:source/:type/:name', function (req, res) {
+app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	let patternsPath = 'larva' === req.params.source ? appConfiguration.larvaPatternsDir : appConfiguration.projectPatternsDir;
 	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
