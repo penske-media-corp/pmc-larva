@@ -26,3 +26,7 @@ $color_list: (
 	background-color: map-get( $semantic-color-list, grey-light );
 	background-color: var( --color-grey-light );
 }
+
+.pmc-u-background-transparent {
+	background-color: transparent;
+}

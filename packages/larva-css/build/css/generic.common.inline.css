@@ -32,6 +32,9 @@ figure {
 svg {
   fill: currentColor; }
 
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #E6E6E6; }
 
 body {
   font-family: Helvetica, sans-serif;

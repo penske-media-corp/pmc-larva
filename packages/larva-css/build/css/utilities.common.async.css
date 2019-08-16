@@ -17,12 +17,22 @@
   background-color: #E6E6E6;
   background-color: var(--color-grey-light); }
 
+.pmc-u-background-transparent {
+  background-color: transparent; }
+
 .pmc-u-border-color-grey-light {
   border-color: #CCCCCC;
   border-color: var(--color-grey-light); }
 
+.pmc-u-border-color-grey {
+  border-color: #8C8C8C;
+  border-color: var(--color-grey); }
+
 .pmc-u-border-color-white {
   border-color: #FFFFFF; }
+
+.pmc-u-border-color-currentColor {
+  border-color: currentColor; }
 
 .pmc-u-border-radius-50p {
   border-radius: 50%; }
@@ -32,10 +42,6 @@
     box-shadow: 0 -0.313rem 0.313rem rgba(0, 0, 0, 0.15); } }
 
 .pmc-u-color-grey-light {
-  color: #CCCCCC;
-  color: var(--color-grey-light); }
-
-.pmc-u-color-grey-light\:hover:hover {
   color: #CCCCCC;
   color: var(--color-grey-light); }
 
@@ -50,8 +56,15 @@
 .pmc-u-color-white {
   color: #FFFFFF; }
 
+.pmc-u-color-currentColor {
+  color: currentColor; }
+
 .pmc-u-color-white\:hover:hover {
   color: #FFFFFF; }
+
+.pmc-u-color-grey-light\:hover:hover {
+  color: #CCCCCC;
+  color: var(--color-grey-light); }
 
 .pmc-u-cursor-pointer {
   cursor: pointer; }

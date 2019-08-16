@@ -1,9 +1,26 @@
+.pmc-u-border-b-1 {
+  border-bottom: 1px solid; }
+
+.pmc-u-border-t-1 {
+  border-top: 1px solid; }
+
 .pmc-u-border-a-1 {
   border: 1px solid; }
+
+.pmc-u-border-a-0 {
+  border: 0; }
 
 @media (max-width: 47.999rem) {
   .pmc-u-border-a-1\@mobile-max {
     border: 1px solid; } }
+
+@media (min-width: 62.5rem) {
+  .pmc-u-border-t-0\@desktop {
+    border-top: 0px solid; } }
+
+@media (min-width: 62.5rem) {
+  .pmc-u-border-r-1\@desktop {
+    border-right: 1px solid; } }
 
 .pmc-u-align-items-center {
   align-items: center; }
