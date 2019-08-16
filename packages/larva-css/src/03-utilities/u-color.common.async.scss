@@ -19,6 +19,11 @@
 	color: map-get( $semantic-color-list, white );
 }
 
+.pmc-u-color-brand-primary {
+	color: #{map-get( $semantic-color-list, brand-primary )};
+	color: var( --color-brand-primary );
+}
+
 .pmc-u-color-currentColor {
 	color: currentColor;
 }
