@@ -1,7 +1,7 @@
 const path = require( 'path' );
 const clone = require( '@penskemediacorp/larva' ).clone;// This should be in this repo, probably
 const o_email_capture_form = clone( path.resolve( __dirname, './o-email-capture-form.prototype' ) );
-const c_button = clone( path.resolve( __dirname, '../../components/c-button/c-button.plain' ) );
+const c_button = clone( path.resolve( __dirname, '../../components/c-button/c-button.stripped' ) );
 const c_email_field = clone( path.resolve( __dirname, '../../components/c-email-field/c-email-field.ghost' ) );
 
 c_button.c_button_classes += " a-icon-after a-icon-arrow-right";
