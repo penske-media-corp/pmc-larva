@@ -1,11 +1,4 @@
 @media (min-width: 48rem) {
-  .a-icon-after-remove\@tablet::after {
-    display: none; } }
-
-.a-icon-invert {
-  --a-icon-filter: invert(1); }
-
-@media (min-width: 48rem) {
   .pmc-a-hover-dropup\@tablet {
     position: relative;
     min-width: 14rem; }
@@ -29,6 +22,13 @@
   .pmc-a-hover-dropup\@tablet:hover .a-icon-arrow-down::after,
   .pmc-a-hover-dropup\@tablet:focus .a-icon-arrow-down {
     --a-icon-transform: rotate(180deg); } }
+
+@media (min-width: 48rem) {
+  .a-icon-after-remove\@tablet::after {
+    display: none; } }
+
+.a-icon-invert {
+  --a-icon-filter: invert(1); }
 
 .pmc-a-unstyle-link,
 .pmc-a-unstyle-link:hover {

@@ -448,6 +448,10 @@
     padding-bottom: 0.25rem; } }
 
 @media (min-width: 48rem) {
+  .pmc-u-padding-r-1\@tablet {
+    padding-right: 1rem; } }
+
+@media (min-width: 48rem) {
   .pmc-u-padding-t-050\@tablet {
     padding-top: 0.5rem; } }
 

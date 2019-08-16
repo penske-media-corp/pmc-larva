@@ -1,0 +1,26 @@
+@import '@penskemediacorp/larva-scss/dist/tools';
+
+.a-floated-parent::before,
+.a-floated-parent::after {
+	content: '';
+	display: table;
+}
+
+.a-floated-parent::after {
+	clear: both;
+}
+
+.a-floated-parent {
+	zoom: 1;
+}
+
+.a-floated-left {
+	float: left;
+}
+
+.a-floated-left\@tablet {
+
+	@include pmc-breakpoint( tablet ) {
+		float: left;
+	}
+}
