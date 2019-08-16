@@ -17,12 +17,18 @@
   background-color: #E6E6E6;
   background-color: var(--color-grey-light); }
 
+.pmc-u-background-transparent {
+  background-color: transparent; }
+
 .pmc-u-border-color-grey-light {
   border-color: #CCCCCC;
   border-color: var(--color-grey-light); }
 
 .pmc-u-border-color-white {
   border-color: #FFFFFF; }
+
+.pmc-u-border-color-currentColor {
+  border-color: currentColor; }
 
 .pmc-u-border-radius-50p {
   border-radius: 50%; }
@@ -52,6 +58,9 @@
 
 .pmc-u-color-white\:hover:hover {
   color: #FFFFFF; }
+
+.pmc-u-color-currentColor {
+  color: currentColor; }
 
 .pmc-u-cursor-pointer {
   cursor: pointer; }
