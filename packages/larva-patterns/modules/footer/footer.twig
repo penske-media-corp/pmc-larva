@@ -1,0 +1,17 @@
+<footer class="footer // {{ footer_classes }}">
+	<div class="pmc-a-wrapper">
+		{% include "@larva/modules/footer-menus/footer-menus.twig" with footer_menus %}
+
+		<div class="pmc-a-grid pmc-a-cols3@desktop pmc-u-border-t-1 pmc-u-border-color-grey pmc-u-padding-tb-1">
+			<div class="pmc-u-border-r-1 pmc-u-border-color-grey pmc-u-padding-a-1 pmc-u-border-r-1@desktop">
+				{% include "@larva/modules/footer-social/footer-social.twig" with footer_social %}
+			</div>
+			<div class="pmc-u-border-r-1 pmc-u-border-color-grey pmc-u-padding-a-1 pmc-u-border-t-1 pmc-u-border-t-0@desktop pmc-u-border-r-1@desktop">
+				{% include "@larva/modules/footer-tip/footer-tip.twig" with footer_tip %}
+			</div>
+			<div class="pmc-u-border-r-1 pmc-u-border-color-grey pmc-u-padding-a-1 pmc-u-border-t-1 pmc-u-border-t-0@desktop">
+				{% include "@larva/modules/footer-newsletter/footer-newsletter.twig" with footer_newsletter %}
+			</div>
+		</div>
+	</div>
+</footer>
