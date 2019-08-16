@@ -14,6 +14,7 @@ for (let i = 0; i < social.length; i++) {
 }
 
 module.exports = {
+	"footer_social_classes": "",
 	"c_title": {
 		"c_title_classes": "pmc-u-margin-b-025 pmc-u-font-family-primary pmc-u-text-align-center",
 		"c_title_text": "Connect with Us"

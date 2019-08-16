@@ -10,6 +10,7 @@ o_nav.o_nav_list_classes += ' pmc-js-MobileHeightToggle-target pmc-u-padding-b-0
 o_nav.o_nav_list_item_classes = 'pmc-u-padding-lr-1 pmc-u-padding-tb-050 pmc-u-font-size-18@mobile-max pmc-u-font-size-12 pmc-u-color-grey-light pmc-u-color-white:hover';
 
 module.exports = {
+	footer_menu_classes: "pmc-a-grid pmc-a-cols3@tablet",
 	o_navs: [
 		o_nav,
 		o_nav,
