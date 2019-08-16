@@ -28,6 +28,11 @@
 }
 
 .pmc-u-color-grey-light\:hover:hover {
-	color: #{map-get( $semantic-color-list, grey-medium-light )};
+	color: #{map-get( $semantic-color-list, grey-light )};
 	color: var( --color-grey-light );
+}
+
+.pmc-u-color-grey-dark\:hover:hover {
+	color: #{map-get( $semantic-color-list, grey-dark )};
+	color: var( --color-grey-dark );
 }
