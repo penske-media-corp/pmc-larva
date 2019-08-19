@@ -11,7 +11,8 @@ const args = process.argv;
 
 const params = {
 	type: args[3],
-	name: args[4]
+	name: args[4],
+	variant: args[5] ? args[5] : 'prototype'
 };
 
 let jsonSrcPath = '';
@@ -25,7 +26,7 @@ if ( 'project' === args[2] ) {
 }
 
 const data = getPatternData( jsonSrcPath, params );
-const jsonDestPath = path.resolve( appConfiguration.projectPatternsDir, '../../build/json/' + params.type + '/' + params.name + '.prototype.json' );
+const jsonDestPath = path.resolve( appConfiguration.projectPatternsDir, '../../build/json/' + params.type + '/' + params.name + '.' + params.variant + '.json' );
 
 console.log( chalk.green( 'Writing JSON for: ' + args[2] + ' –> ' + params.type + ' –> ' + params.name ) );
 writeJsonToFile( jsonDestPath, data );
