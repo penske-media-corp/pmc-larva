@@ -1,0 +1,24 @@
+{
+	"imports": [
+		"../base/colors.json",
+		"../base/fonts.json"
+	],
+	"aliases": {
+		"color_brand_primary": {
+			"value": "{!TEAL_31}",
+			"type": "color"
+		},
+		"color_brand_secondary": {
+			"value": "{!BLUE_61}",
+			"type": "color"
+		},
+		"font_family_primary": {
+			"value": "{!CANELA}",
+			"type": "color"
+		},
+		"font_family_secondary": {
+			"value": "{!OVERPASS}",
+			"type": "font-family"
+		}
+	}
+}
