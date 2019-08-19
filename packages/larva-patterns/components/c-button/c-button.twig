@@ -1,17 +1,15 @@
-<button class="c-button {{ modifier_class }} {{ c_button_classes }}" type="{{ c_button_type_attr }}">
-
 {% if c_button_url %}
-	<a class="c-button__inner {{ modifier_class }} {{ c_button_inner_classes }}" href="{{ c_button_link_url }}">
+	<a class="c-button {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}">
 {% else %}
-	<span class="c-button__inner {{ c_button_inner_classes }}">
+	<button class="c-button {{ modifier_class }} {{ c_button_classes }}" type="{{ c_button_type_attr }}">
 {% endif %}
 
-	{{ c_button_text }}
-
+	<span class="c-button__inner {{ c_button_inner_classes }}">
+		{{ c_button_text }}
+	</span>
+	
 {% if c_button_url %}
 	</a>
 {% else %}
-	</span>
+	</button>
 {% endif %}
-
-</button>

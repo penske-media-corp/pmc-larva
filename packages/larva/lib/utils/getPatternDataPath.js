@@ -2,9 +2,11 @@ const fs = require( 'fs' );
 const chalk = require( 'chalk' );
 const buildPatternFilePath = require( './buildPatternFilePath' );
 
-module.exports = function getPatternDataPath( patternsPath, patternName ) {
-	const protoPath = buildPatternFilePath( patternsPath, patternName, '.prototype.js' ).toString();
-	const jsonPath = buildPatternFilePath( patternsPath, patternName, '.json' ).toString();
+module.exports = function getPatternDataPath( patternsPath, params ) {
+	let ext = params.variant ? params.variant : 'prototype';
+
+	const protoPath = buildPatternFilePath( patternsPath, params.name, '.' + ext + '.js' ).toString();
+	const jsonPath = buildPatternFilePath( patternsPath, params.name, '.json' ).toString();
 
 	if ( fs.existsSync( protoPath ) ) {
 		return protoPath;
@@ -12,5 +14,5 @@ module.exports = function getPatternDataPath( patternsPath, patternName ) {
 		return jsonPath;
 	}
 
-	throw new Error( chalk.red( `Couldn\'t find a .prototype.js or .json file for ${patternName}.\nLooked in ${patternsPath}.` ) );
+	throw new Error( chalk.red( `Couldn\'t find a .prototype.js or .json file for ${params.name}.\nLooked in ${patternsPath}.` ) );
 }

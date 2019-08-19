@@ -8,7 +8,7 @@ const chalk = require( 'chalk' );
  * @param {object} params Object containing name of pattern
  */
 function getPatternData( patternsPath, params ) {
-	const patternPath = getPatternDataPath( patternsPath, params.name );
+	const patternPath = getPatternDataPath( patternsPath, params );
 
 	try {
 		let patternData = require( patternPath );

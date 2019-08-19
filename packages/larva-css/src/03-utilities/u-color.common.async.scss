@@ -19,6 +19,11 @@
 	color: map-get( $semantic-color-list, white );
 }
 
+.pmc-u-color-brand-primary {
+	color: #{map-get( $semantic-color-list, brand-primary )};
+	color: var( --color-brand-primary );
+}
+
 .pmc-u-color-currentColor {
 	color: currentColor;
 }
@@ -28,6 +33,11 @@
 }
 
 .pmc-u-color-grey-light\:hover:hover {
-	color: #{map-get( $semantic-color-list, grey-medium-light )};
+	color: #{map-get( $semantic-color-list, grey-light )};
 	color: var( --color-grey-light );
+}
+
+.pmc-u-color-grey-dark\:hover:hover {
+	color: #{map-get( $semantic-color-list, grey-dark )};
+	color: var( --color-grey-dark );
 }

@@ -37,6 +37,9 @@
 .pmc-u-border-radius-50p {
   border-radius: 50%; }
 
+.pmc-u-border-radius-5 {
+  border-radius: 5px; }
+
 @media (min-width: 48rem) {
   .pmc-u-box-shadow-medium\@tablet {
     box-shadow: 0 -0.313rem 0.313rem rgba(0, 0, 0, 0.15); } }
@@ -56,6 +59,10 @@
 .pmc-u-color-white {
   color: #FFFFFF; }
 
+.pmc-u-color-brand-primary {
+  color: #920200;
+  color: var(--color-brand-primary); }
+
 .pmc-u-color-currentColor {
   color: currentColor; }
 
@@ -63,8 +70,12 @@
   color: #FFFFFF; }
 
 .pmc-u-color-grey-light\:hover:hover {
-  color: #CCCCCC;
+  color: #E6E6E6;
   color: var(--color-grey-light); }
+
+.pmc-u-color-grey-dark\:hover:hover {
+  color: #323232;
+  color: var(--color-grey-dark); }
 
 .pmc-u-cursor-pointer {
   cursor: pointer; }

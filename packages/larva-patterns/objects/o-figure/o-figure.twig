@@ -6,11 +6,7 @@
 	<span class="a-screen-reader-only">{{ o_figure_screen_reader_text }}</span>
 {% endif %}
 
-{% if has_toaster %}
-	<figure class="o-figure {{ modifier_class }} {{ o_figure_classes }}" data-toaster-activate-trigger>
-{% else %}
-	<figure class="o-figure {{ modifier_class }} {{ o_figure_classes }}" style="{{ o_figure_width_attr }}">
-{% endif %}
+<figure class="o-figure {{ modifier_class }} {{ o_figure_classes }}" style="{{ o_figure_width_attr }}">
 
 {% if o_figure_crop_class %}
 	<div class="{{ o_figure_crop_class }}">
@@ -30,12 +26,7 @@
 	</div>
 {% endif %}
 
-{# Backwards Compatibility #}
-{% if o_figure_caption_text %}
-	<figcaption class="o-figure__caption {{ o_figure_caption_classes }}">{{ o_figure_caption_text }}</figcaption>
-{% endif %}
-
-{% if o_figure_show_figcaption %}
+{% if o_figure_credit_text %}
 	<figcaption class="o-figure__caption {{ o_figure_figcaption_classes }}">
 		{% if o_figure_caption_markup %}
 			<span class="{{ o_figure_caption_classes }}">{{ o_figure_caption_markup }}</span>

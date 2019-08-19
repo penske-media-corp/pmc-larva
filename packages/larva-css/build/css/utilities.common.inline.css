@@ -7,6 +7,9 @@
 .pmc-u-border-a-1 {
   border: 1px solid; }
 
+.pmc-u-border-a-3 {
+  border: 3px solid; }
+
 .pmc-u-border-a-0 {
   border: 0; }
 
@@ -446,6 +449,10 @@
   .pmc-u-padding-tb-025\@mobile-max {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem; } }
+
+@media (min-width: 48rem) {
+  .pmc-u-padding-r-1\@tablet {
+    padding-right: 1rem; } }
 
 @media (min-width: 48rem) {
   .pmc-u-padding-t-050\@tablet {
