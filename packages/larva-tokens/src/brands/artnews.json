@@ -3,7 +3,7 @@
 		"../base/all.json"
 	],
 	"props": {
-		"BACKGROUND_BRAND_PRIMARY": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
 			"value": "{!BLUE_61}",
 			"type": "color",
 			"category": "background-color"
