@@ -8,14 +8,14 @@ gulp.task('default', ( done ) => {
 			transform: { type: 'web' },
 			format: { type: 'map.scss' }
 		}))
-		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest('./build'));
 	
 	gulp.src('src/brands/*.json')
 		.pipe(theo({
 			transform: { type: 'web' },
 			format: { type: 'custom-properties.css' }
 		}))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('./build'));
 
 	gulp.src('src/brands/*.json')
 		.pipe(theo({
@@ -42,7 +42,7 @@ gulp.task('default', ( done ) => {
 				} 
 			}
 		}))
-		.pipe(gulp.dest('style-guides'))
+		.pipe(gulp.dest('./style-guides'));
 
 	done();
 });
