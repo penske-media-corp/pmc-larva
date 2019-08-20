@@ -1,7 +1,7 @@
 {
 	"imports": [
 		"../base/aliases.json",
-		"../base/text-color.json",
+		"../base/color.json",
 		"../base/font-family.json",
 		"../base/background-color.json"
 	],
