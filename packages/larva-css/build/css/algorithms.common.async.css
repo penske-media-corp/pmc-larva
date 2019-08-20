@@ -1,10 +1,10 @@
 @media (min-width: 48rem) {
-  .pmc-a-hover-dropup\@tablet {
+  .a-hover-dropup\@tablet {
     position: relative;
     min-width: 14rem; }
-  .pmc-a-hover-dropup-trigger\@tablet {
+  .a-hover-dropup-trigger\@tablet {
     cursor: pointer; }
-  .pmc-a-hover-dropup-target\@tablet {
+  .a-hover-dropup-target\@tablet {
     width: 100%;
     visibility: hidden;
     opacity: 0;
@@ -15,12 +15,12 @@
     left: 0;
     overflow-y: scroll;
     max-height: 8.438rem; }
-  .pmc-a-hover-dropup\@tablet:hover .pmc-a-hover-dropup-target\@tablet,
-  .pmc-a-hover-dropup\@tablet:focus .pmc-a-hover-dropup-target\@tablet {
+  .a-hover-dropup\@tablet:hover .a-hover-dropup-target\@tablet,
+  .a-hover-dropup\@tablet:focus .a-hover-dropup-target\@tablet {
     visibility: visible;
     opacity: 1; }
-  .pmc-a-hover-dropup\@tablet:hover .a-icon-arrow-down::after,
-  .pmc-a-hover-dropup\@tablet:focus .a-icon-arrow-down {
+  .a-hover-dropup\@tablet:hover .a-icon-arrow-down::after,
+  .a-hover-dropup\@tablet:focus .a-icon-arrow-down {
     --a-icon-transform: rotate(180deg); } }
 
 @media (min-width: 48rem) {
@@ -30,7 +30,7 @@
 .a-icon-invert {
   --a-icon-filter: invert(1); }
 
-.pmc-a-unstyle-link,
-.pmc-a-unstyle-link:hover {
+.a-unstyle-link,
+.a-unstyle-link:hover {
   color: currentColor;
   text-decoration: none; }

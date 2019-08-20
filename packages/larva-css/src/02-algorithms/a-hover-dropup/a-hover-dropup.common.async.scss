@@ -2,16 +2,16 @@
 
 @include pmc-breakpoint( tablet ) {
 
-	.pmc-a-hover-dropup\@tablet {
+	.a-hover-dropup\@tablet {
 		position: relative;
 		min-width: 14rem;
 	}
 
-	.pmc-a-hover-dropup-trigger\@tablet {
+	.a-hover-dropup-trigger\@tablet {
 		cursor: pointer;
 	}
 
-	.pmc-a-hover-dropup-target\@tablet {
+	.a-hover-dropup-target\@tablet {
 		width: 100%;
 		visibility: hidden;
 		opacity: 0;
@@ -24,15 +24,15 @@
 		max-height: 8.438rem;
 	}
 
-	.pmc-a-hover-dropup\@tablet:hover .pmc-a-hover-dropup-target\@tablet,
-	.pmc-a-hover-dropup\@tablet:focus .pmc-a-hover-dropup-target\@tablet {
+	.a-hover-dropup\@tablet:hover .a-hover-dropup-target\@tablet,
+	.a-hover-dropup\@tablet:focus .a-hover-dropup-target\@tablet {
 		visibility: visible;
 		opacity: 1;
 	}
 	
 	// Transform a-icon
-	.pmc-a-hover-dropup\@tablet:hover .a-icon-arrow-down::after,
-	.pmc-a-hover-dropup\@tablet:focus .a-icon-arrow-down {
+	.a-hover-dropup\@tablet:hover .a-icon-arrow-down::after,
+	.a-hover-dropup\@tablet:focus .a-icon-arrow-down {
 		--a-icon-transform: rotate(180deg);
 	}
 }

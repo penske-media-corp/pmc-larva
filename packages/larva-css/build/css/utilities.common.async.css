@@ -1,81 +1,81 @@
-.pmc-u-background-white {
+.u-background-white {
   background-color: #FFFFFF; }
 
-.pmc-u-background-black {
+.u-background-black {
   background-color: #000000; }
 
-.pmc-u-background-brand-primary,
-.pmc-u-background-brand-primary\:hover:hover {
+.u-background-brand-primary,
+.u-background-brand-primary\:hover:hover {
   background-color: #920200;
   background-color: var(--color-brand-primary); }
 
-.pmc-u-background-grey-lightest {
+.u-background-grey-lightest {
   background-color: #FAFAFA;
   background-color: var(--color-grey-lightest); }
 
-.pmc-u-background-grey-light {
+.u-background-grey-light {
   background-color: #E6E6E6;
   background-color: var(--color-grey-light); }
 
-.pmc-u-background-transparent {
+.u-background-transparent {
   background-color: transparent; }
 
-.pmc-u-border-color-grey-light {
+.u-border-color-grey-light {
   border-color: #CCCCCC;
   border-color: var(--color-grey-light); }
 
-.pmc-u-border-color-grey {
+.u-border-color-grey {
   border-color: #8C8C8C;
   border-color: var(--color-grey); }
 
-.pmc-u-border-color-white {
+.u-border-color-white {
   border-color: #FFFFFF; }
 
-.pmc-u-border-color-currentColor {
+.u-border-color-currentColor {
   border-color: currentColor; }
 
-.pmc-u-border-radius-50p {
+.u-border-radius-50p {
   border-radius: 50%; }
 
-.pmc-u-border-radius-5 {
+.u-border-radius-5 {
   border-radius: 5px; }
 
 @media (min-width: 48rem) {
-  .pmc-u-box-shadow-medium\@tablet {
+  .u-box-shadow-medium\@tablet {
     box-shadow: 0 -0.313rem 0.313rem rgba(0, 0, 0, 0.15); } }
 
-.pmc-u-color-grey-light {
+.u-color-grey-light {
   color: #CCCCCC;
   color: var(--color-grey-light); }
 
-.pmc-u-color-grey {
+.u-color-grey {
   color: #8C8C8C;
   color: var(--color-grey); }
 
-.pmc-u-color-grey-medium-dark {
+.u-color-grey-medium-dark {
   color: #595959;
   color: var(--color-grey-medium-dark); }
 
-.pmc-u-color-white {
+.u-color-white {
   color: #FFFFFF; }
 
-.pmc-u-color-brand-primary {
+.u-color-brand-primary {
   color: #920200;
   color: var(--color-brand-primary); }
 
-.pmc-u-color-currentColor {
+.u-color-currentColor {
   color: currentColor; }
 
-.pmc-u-color-white\:hover:hover {
+.u-color-white\:hover:hover {
   color: #FFFFFF; }
 
-.pmc-u-color-grey-light\:hover:hover {
+.u-color-grey-light\:hover:hover {
   color: #E6E6E6;
   color: var(--color-grey-light); }
 
-.pmc-u-color-grey-dark\:hover:hover {
+.u-color-grey-dark\:hover:hover {
   color: #323232;
   color: var(--color-grey-dark); }
 
-.pmc-u-cursor-pointer {
+.u-cursor-pointer {
   cursor: pointer; }

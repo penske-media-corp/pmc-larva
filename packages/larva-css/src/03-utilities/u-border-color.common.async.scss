@@ -1,20 +1,20 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.pmc-u-border-color-grey-light {
+.u-border-color-grey-light {
 	border-color: #{map-get( $semantic-color-list, grey-medium-light )};
 	border-color: var( --color-grey-light );
 }
 
-.pmc-u-border-color-grey {
+.u-border-color-grey {
 	border-color: #{map-get( $semantic-color-list, grey )};
 	border-color: var( --color-grey );
 }
 
-.pmc-u-border-color-white {
+.u-border-color-white {
 	border-color: #{map-get( $semantic-color-list, white )};
 }
 
-.pmc-u-border-color-currentColor {
+.u-border-color-currentColor {
 	border-color: currentColor;
 }

@@ -1,7 +1,7 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-scss/dist/generators';
 
-// Generates classes .pmc-u-font-weight-#.
+// Generates classes .u-font-weight-#.
 @include pmc-u-font-weight(
 	(
 		light,
