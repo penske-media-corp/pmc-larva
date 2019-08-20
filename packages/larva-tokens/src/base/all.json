@@ -5,6 +5,7 @@
 		"./font-family.json",
 		"./background-color.json",
 		"./line-height.json",
-		"./font-weight.json"
+		"./font-weight.json",
+		"./border-color.json"
 	]
 }

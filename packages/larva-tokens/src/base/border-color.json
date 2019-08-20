@@ -1,0 +1,23 @@
+{
+	"imports": [
+		"./aliases.json"
+	],
+	"global": {
+		"category": "hr-color",
+		"type": "color"
+	},
+	"props": {
+		"BORDER_COLOR_WHITE": {
+			"value": "{!WHITE}"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "{!GREY_80}"
+		},
+		"BORDER_COLOR_GREY": {
+			"value": "{!GREY_50}"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "{!GREY_35}"
+		}
+	}
+}
