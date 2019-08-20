@@ -43,7 +43,7 @@ export default class MobileHeightToggle {
 		if ( undefined !== this.el.pmcMobileHeightToggle ) {
 
 			// Bubble event
-			if ( e.target.classList.contains( 'pmc-js-MobileHeightToggle-trigger' ) ) {
+			if ( e.target.classList.contains( 'lrv-js-MobileHeightToggle-trigger' ) ) {
 				this.toggle( e );
 			}
 		}

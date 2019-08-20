@@ -3,7 +3,7 @@ import MobileHeightToggle from './MobileHeightToggle';
 // Initialize all Dropdowns.
 
 export default function( width ) {
-	const dropdowns = [ ... document.querySelectorAll( '.pmc-js-MobileHeightToggle' ) ];
+	const dropdowns = [ ... document.querySelectorAll( '.lrv-js-MobileHeightToggle' ) ];
 
 	dropdowns.forEach( el => {
 

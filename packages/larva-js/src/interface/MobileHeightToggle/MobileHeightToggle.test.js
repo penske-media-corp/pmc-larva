@@ -15,17 +15,17 @@ describe( 'MobileHeightToggle', () => {
 	it( 'adds the class is expanded when trigger is clicked', () => {
 
 		document.querySelector('.test').innerHTML = `
-			<div class="pmc-js-MobileHeightToggle">
-				<div class="pmc-js-MobileHeightToggle-trigger"></div>
-				<div class="pmc-js-MobileHeightToggle-target"></div>
+			<div class="lrv-js-MobileHeightToggle">
+				<div class="lrv-js-MobileHeightToggle-trigger"></div>
+				<div class="lrv-js-MobileHeightToggle-target"></div>
 			</div>
 		`;
 
-		const dropdown = new MobileHeightToggle( document.querySelector( '.pmc-js-MobileHeightToggle' ) ); 
+		const dropdown = new MobileHeightToggle( document.querySelector( '.lrv-js-MobileHeightToggle' ) ); 
 
 		dropdown.toggle({ 
 			preventDefault: () => {}, 
-			target: document.querySelector( '.pmc-js-MobileHeightToggle-trigger' ) 
+			target: document.querySelector( '.lrv-js-MobileHeightToggle-trigger' ) 
 		});
 
 		assert.equal( dropdown.el.classList.contains( 'is-expanded' ), true );
@@ -34,15 +34,15 @@ describe( 'MobileHeightToggle', () => {
 	it( 'does not initialize MobileHeightToggles on tablet', () => {
 
 		document.querySelector('.test').innerHTML = `
-			<div class="pmc-js-MobileHeightToggle">
-				<div class="pmc-js-MobileHeightToggle-trigger"></div>
-				<div class="pmc-js-MobileHeightToggle-target"></div>
+			<div class="lrv-js-MobileHeightToggle">
+				<div class="lrv-js-MobileHeightToggle-trigger"></div>
+				<div class="lrv-js-MobileHeightToggle-target"></div>
 			</div>
 		`;
 
 		initMobileHeightToggles( TABLET + 1 );
 
-		const el = document.querySelector( '.pmc-js-MobileHeightToggle' );
+		const el = document.querySelector( '.lrv-js-MobileHeightToggle' );
 		
 		assert.equal( el.pmcMobileHeightToggle, undefined );
 	});
@@ -50,15 +50,15 @@ describe( 'MobileHeightToggle', () => {
 	it( 'does initialize MobileHeightToggles on below tablet', () => {
 
 		document.querySelector('.test').innerHTML = `
-			<div class="pmc-js-MobileHeightToggle">
-				<div class="pmc-js-MobileHeightToggle-trigger"></div>
-				<div class="pmc-js-MobileHeightToggle-target"></div>
+			<div class="lrv-js-MobileHeightToggle">
+				<div class="lrv-js-MobileHeightToggle-trigger"></div>
+				<div class="lrv-js-MobileHeightToggle-target"></div>
 			</div>
 		`;
 
 		initMobileHeightToggles( 500 );
 
-		const el = document.querySelector( '.pmc-js-MobileHeightToggle' );
+		const el = document.querySelector( '.lrv-js-MobileHeightToggle' );
 
 		assert.notEqual( el.pmcMobileHeightToggle, undefined );
 	});
