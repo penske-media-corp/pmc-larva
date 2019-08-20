@@ -1,9 +1,6 @@
 {
 	"imports": [
-		"../base/aliases.json",
-		"../base/color.json",
-		"../base/font-family.json",
-		"../base/background-color.json"
+		"../base/all.json"
 	],
 	"props": {
 		"BACKGROUND_BRAND_PRIMARY": {
