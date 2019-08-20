@@ -1,0 +1,30 @@
+{
+	"imports": [
+		"../base/aliases.json",
+		"../base/text-color.json",
+		"../base/font-family.json",
+		"../base/background-color.json"
+	],
+	"props": {
+		"BACKGROUND_BRAND_PRIMARY": {
+			"value": "{!TEAL_31}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!TEAL_31}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!CANELA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!OVERPASS}",
+			"type": "font-family",
+			"category": "font-family"
+		}
+	}
+}
