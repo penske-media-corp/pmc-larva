@@ -1,0 +1,22 @@
+
+:root {
+  --color-white: #FFFFFF;
+  --color-grey-light: #E6E6E6;
+  --color-grey-dark: #323232;
+  --font-family-primary: Source Sans Pro, sans-serif;
+  /* The web-safe fallback for primary */
+  --font-family-primary-fallback: Georgia, serif;
+  --font-family-secondary: Bonnie, Georgia, serif;
+  --font-family-secondary-fallback: Papyrus, serif;
+  --font-family-body: 'Times New Roman', serif;
+  --font-family-basic: Helvetica, sans-serifs;
+  --background-white: #FFFFFF;
+  --background-grey-lightest: #F7F7F7;
+  --background-grey-light: #CCCCCC;
+  --background-grey: #8C8C8C;
+  --background-grey-dark: #6A6A6A;
+  --background-grey-darkest: #323232;
+  --background-black: #000000;
+  --background-brand-primary: #417EF4;
+  --color-brand-primary: #417EF4;
+}
