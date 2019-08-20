@@ -8,23 +8,23 @@ const o_social_list_icons = [];
 for (let i = 0; i < social.length; i++) {
 	let c_icon = clone( c_icon_path );
 	c_icon.c_icon_name = social[i];
-	c_icon.c_icon_link_classes += ' pmc-u-display-block pmc-u-border-radius-50p pmc-u-color-grey pmc-u-margin-lr-025 pmc-u-padding-a-050 pmc-u-background-white pmc-u-color-grey:hover';
+	c_icon.c_icon_link_classes += ' lrv-u-display-block lrv-u-border-radius-50p lrv-u-color-grey lrv-u-margin-lr-025 lrv-u-padding-a-050 lrv-u-background-white lrv-u-color-grey:hover';
 
 	o_social_list_icons.push( c_icon );
 }
 
 module.exports = {
-	"footer_social_classes": "pmc-u-text-align-center pmc-u-color-white pmc-u-background-black",
+	"footer_social_classes": "lrv-u-text-align-center lrv-u-color-white lrv-u-background-black",
 	"c_title": {
-		"c_title_classes": "pmc-u-margin-b-025 pmc-u-font-family-primary pmc-u-text-align-center",
+		"c_title_classes": "lrv-u-margin-b-025 lrv-u-font-family-primary lrv-u-text-align-center",
 		"c_title_text": "Connect with Us"
 	},
 	"c_tagline": {
-		"c_tagline_classes": "pmc-u-font-size-14 u-font-style-italic pmc-u-font-family-basic pmc-u-text-align-center",
+		"c_tagline_classes": "lrv-u-font-size-14 u-font-style-italic lrv-u-font-family-basic lrv-u-text-align-center",
 		"c_tagline_text": "Get our latest stories in the feed of your favorite networks"
 	},
 	"o_social_list": {
-		"o_social_list_classes": "pmc-a-unstyle-list pmc-u-flex pmc-u-align-items-center pmc-u-justify-content-center",
+		"o_social_list_classes": "lrv-a-unstyle-list lrv-u-flex lrv-u-align-items-center lrv-u-justify-content-center",
 		"o_social_list_icons": o_social_list_icons
 	}
 };
