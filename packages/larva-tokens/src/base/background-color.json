@@ -6,34 +6,27 @@
 		"category": "background-color",
 		"type": "color"
 	},
-	"props": [
-		{
-			"name": "BACKGROUND_WHITE",
+	"props": {
+		"BACKGROUND_COLOR_WHITE": {
 			"value": "{!WHITE}"
 		},
-		{
-			"name": "BACKGROUND_GREY_LIGHTEST",
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
 			"value": "{!GREY_96}"
 		},
-		{
-			"name": "BACKGROUND_GREY_LIGHT",
+		"BACKGROUND_COLOR_GREY_LIGHT": {
 			"value": "{!GREY_80}"
 		},
-		{
-			"name": "BACKGROUND_GREY",
+		"BACKGROUND_COLOR_GREY": {
 			"value": "{!GREY_50}"
 		},
-		{
-			"name": "BACKGROUND_GREY_DARK",
+		"BACKGROUND_COLOR_GREY_DARK": {
 			"value": "{!GREY_35}"
 		},
-		{
-			"name": "BACKGROUND_GREY_DARKEST",
+		"BACKGROUND_COLOR_GREY_DARKEST": {
 			"value": "{!GREY_20}"
 		},
-		{
-			"name": "BACKGROUND_BLACK",
+		"BACKGROUND_COLOR_BLACK": {
 			"value": "{!BLACK}"
 		}
-	]
+	}
 }
