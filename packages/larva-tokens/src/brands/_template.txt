@@ -1,12 +1,12 @@
 {
 	"imports": [
 		"../base/aliases.json",
-		"../base/text-color.json",
+		"../base/color.json",
 		"../base/font-family.json",
 		"../base/background-color.json"
 	],
 	"props": {
-		"BACKGROUND_BRAND_PRIMARY": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
 			"value": "{!BLUE_61}",
 			"type": "color",
 			"category": "background-color"
