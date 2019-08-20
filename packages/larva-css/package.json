@@ -21,7 +21,8 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
-    "@penskemediacorp/larva-scss": "^1.10.0-alpha.0",
+	"@penskemediacorp/larva-scss": "^1.10.0-alpha.0",
+	"@penskemediacorp/larva-tokens": "^1.10.0-alpha.0",
     "node-sass": "^4.12.0",
     "stylelint": "^10.1.0"
   },
