@@ -1,24 +1,24 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.u-width-16 {
+.lrv-u-width-16 {
 	width: pmc-rem(16);
 }
 
-.u-width-100p {
+.lrv-u-width-100p {
 	width: 100%;
 }
 
-.u-max-width-100p {
+.lrv-u-max-width-100p {
 	max-width: 100%;
 }
 
-.u-width-100p\@mobile-max {
+.lrv-u-width-100p\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
 		width: 100%;
 	}
 }
 
-.u-max-width-150 {
+.lrv-u-max-width-150 {
 	max-width: 9.375rem;
 }

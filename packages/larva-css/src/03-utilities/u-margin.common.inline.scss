@@ -43,16 +43,16 @@
 	)
 );
 
-.u-margin-l-auto {
+.lrv-u-margin-l-auto {
 	margin-left: auto;
 }
 
-.u-margin-lr-auto {
+.lrv-u-margin-lr-auto {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.u-margin-l-auto\@tablet {
+.lrv-u-margin-l-auto\@tablet {
 	@include pmc-breakpoint( tablet ) {
 		margin-left: auto;
 	}

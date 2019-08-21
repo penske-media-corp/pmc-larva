@@ -1,6 +1,6 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.u-order-100\@mobile-max {
+.lrv-u-order-100\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
 		order: 100;

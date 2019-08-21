@@ -11,22 +11,22 @@ $color_list: (
 ), $semantic-color-list );
 
 
-.u-background-brand-primary,
-.u-background-brand-primary\:hover:hover {
+.lrv-u-background-brand-primary,
+.lrv-u-background-brand-primary\:hover:hover {
 	background-color: map-get( $semantic-color-list, brand-primary );
 	background-color: var( --color-brand-primary );
 }
 
-.u-background-grey-lightest {
+.lrv-u-background-grey-lightest {
 	background-color: map-get( $semantic-color-list, grey-lightest );
 	background-color: var( --color-grey-lightest );
 }
 
-.u-background-grey-light {
+.lrv-u-background-grey-light {
 	background-color: map-get( $semantic-color-list, grey-light );
 	background-color: var( --color-grey-light );
 }
 
-.u-background-transparent {
+.lrv-u-background-transparent {
 	background-color: transparent;
 }
