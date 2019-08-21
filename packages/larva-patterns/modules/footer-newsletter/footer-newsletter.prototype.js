@@ -2,7 +2,7 @@ const path = require( 'path' );
 const clone = require( '@penskemediacorp/larva' ).clone;// This should be in this repo, probably
 const o_email_capture_form = clone( path.resolve( __dirname, '../../objects/o-email-capture-form/o-email-capture-form.minimal' ) );
 
-o_email_capture_form.c_button.c_button_classes += ' a-icon-invert';
+o_email_capture_form.c_button.c_button_classes += ' lrv-a-icon-invert';
 
 module.exports = {
 	"footer_newsletter_classes": "lrv-u-text-align-center lrv-u-color-white lrv-u-background-black lrv-u-flex lrv-u-flex-direction-column lrv-u-align-items-center",

@@ -4,8 +4,8 @@ const o_email_capture_form = clone( path.resolve( __dirname, './o-email-capture-
 const c_button = clone( path.resolve( __dirname, '../../components/c-button/c-button.stripped' ) );
 const c_email_field = clone( path.resolve( __dirname, '../../components/c-email-field/c-email-field.ghost' ) );
 
-c_button.c_button_classes += " a-icon-after a-icon-arrow-right";
-c_button.c_button_inner_classes = "a-screen-reader-only";
+c_button.c_button_classes += " lrv-a-icon-after lrv-a-icon-arrow-right";
+c_button.c_button_inner_classes = "lrv-a-screen-reader-only";
 c_button.c_button_type_attr = "submit";
 
 o_email_capture_form.c_button = c_button;

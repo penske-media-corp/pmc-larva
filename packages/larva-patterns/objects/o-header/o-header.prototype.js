@@ -5,7 +5,7 @@ module.exports = {
 		"c_heading_text": "Section Heading"
 	},
 	"c_button": {
-		"modifier_class": "c-button--plain lrv-u-font-size-12 lrv-u-color-white lrv-u-text-transform-uppercase a-icon-after a-icon-arrow-right u-margin-l-auto",
+		"modifier_class": "c-button--plain lrv-u-font-size-12 lrv-u-color-white lrv-u-text-transform-uppercase lrv-a-icon-after lrv-a-icon-arrow-right u-margin-l-auto",
 		"c_button_url": "#",
 		"c_button_text": "Link"
 	}
