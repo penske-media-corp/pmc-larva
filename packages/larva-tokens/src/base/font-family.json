@@ -1,0 +1,36 @@
+{
+	"imports": [
+		"./aliases.json"
+	],
+	"global": {
+		"category": "font-family"
+	},
+	"props": {
+		"FONT_FAMILY_PRIMARY": {
+			"value": "Georgia, serif",
+			"type": "font",
+			"comment": "Usually for headings, a font defining the brand"
+		},
+		"FONT_FAMILY_PRIMARY_FALLBACK": {
+			"value": "Georgia, serif",
+			"type": "font",
+			"comment": "The web-safe fallback for primary"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "Papyrus, serif",
+			"type": "font"
+		},
+		"FONT_FAMILY_SECONDARY_FALLBACK": {
+			"value": "Papyrus, serif",
+			"type": "font"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "Georgia, serif",
+			"type": "font"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "Helvetica, sans-serifs",
+			"type": "font-family"
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"imports": [
+		"./aliases.json"
+	],
+	"global": {
+		"category": "text-color",
+		"type": "color"
+	},
+	"props": {
+		"COLOR_WHITE": {
+			"value": "{!WHITE}"
+		},
+		"COLOR_GREY_LIGHT": {
+			"value": "{!GREY_90}"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "{!GREY_35}"
+		},
+		"COLOR_GREY_BLACK": {
+			"value": "{!GREY_20}"
+		}
+	}
+}

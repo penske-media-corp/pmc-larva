@@ -1,0 +1,32 @@
+{
+	"imports": [
+		"./aliases.json"
+	],
+	"global": {
+		"category": "background-color",
+		"type": "color"
+	},
+	"props": {
+		"BACKGROUND_COLOR_WHITE": {
+			"value": "{!WHITE}"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "{!GREY_80}"
+		},
+		"BACKGROUND_COLOR_GREY": {
+			"value": "{!GREY_50}"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "{!GREY_35}"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"value": "{!GREY_20}"
+		},
+		"BACKGROUND_COLOR_BLACK": {
+			"value": "{!BLACK}"
+		}
+	}
+}

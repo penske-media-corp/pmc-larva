@@ -133,7 +133,6 @@
 		}
 	}
 
-
 	@include test('@mixin _text-class-generator') {
 
 		@include assert {
@@ -249,6 +248,88 @@
 			@include expect {
 				.pmc-u-background-brand-red {
 					background-color: red;
+				}
+			}
+		}
+	}
+}
+
+@include test-module('@mixin larva-utility-generator') {
+	$map: (
+		background-color-brand-primary: #FF00AA,
+		text-color-grey-light: #CCCCCC,
+	);
+
+	@include test('generates background color') {
+		@include assert {
+
+			@include output {
+
+				@include larva-utility-generator(
+					'background-color',
+					(
+						background-color-brand-primary,
+					),
+					$map,
+				);
+			}
+
+			@include expect {
+				.u-background-color-brand-primary {
+					background-color: #FF00AA;
+					background-color: var( --background-color-brand-primary, #FF00AA );
+				}
+			}
+		}
+	}
+
+	@include test('generates text color') {
+		@include assert {
+
+			@include output {
+				
+				@include larva-utility-generator(
+					'color',
+					(
+						text-color-grey-light,
+					),
+					$map,
+				);
+			}
+
+			@include expect {
+				.u-text-color-grey-light {
+					color: #CCCCCC;
+					color: var( --text-color-grey-light, #CCCCCC );
+				}
+			}
+		}
+	}
+}
+
+
+@include test-module('@mixin project-utility-generator') {
+	$map: (
+		opacity-1: 1,
+	);
+
+	@include test('generates opacity') {
+		@include assert {
+
+			@include output {
+				
+				@include project-utility-generator(
+					'opacity',
+					(
+						opacity-1,
+					),
+					$map,
+				);
+			}
+
+			@include expect {
+				.u-opacity-1 {
+					opacity: 1;
 				}
 			}
 		}
