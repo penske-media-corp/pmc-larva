@@ -13,11 +13,11 @@
 	word-wrap: normal;
 }
 
-.a-screen-reader-only {
+.lrv-a-screen-reader-only {
 	@include _a-screen-reader-only-base;
 }
 
-.a-screen-reader-only\@mobile-max {
+.lrv-a-screen-reader-only\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		@include _a-screen-reader-only-base();
 	}

@@ -11,7 +11,7 @@
 		visibility: visible;
 	}
 
-	.js-MobileHeightToggle.is-expanded .a-icon-arrow-down.a-icon-after::after { // stylelint-disable-line selector-max-specificity
+	.js-MobileHeightToggle.is-expanded .lrv-a-icon-arrow-down.lrv-a-icon-after::after { // stylelint-disable-line selector-max-specificity
 		--a-icon-transform: rotate(180deg);
 	}
 }

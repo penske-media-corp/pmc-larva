@@ -1,6 +1,6 @@
 @import '@penskemediacorp/larva-scss/dist/generators';
 
-.a-grid {
+.lrv-a-grid {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: start;
@@ -14,7 +14,7 @@
 	}
 }
 
-.a-grid-item {
+.lrv-a-grid-item {
 	// Remove flex charactaristics to honor flex-basis value.
 	flex: none;
 	padding: 0.625rem;
