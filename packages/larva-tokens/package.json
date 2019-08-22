@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-tokens",
-  "version": "1.10.0-alpha.0",
+  "version": "2.0.0-alpha.0",
   "description": "Design tokens",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -13,8 +13,8 @@
     "access": "public"
   },
   "files": [
-	"build",
-	"style-guides"
+    "build",
+    "style-guides"
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
