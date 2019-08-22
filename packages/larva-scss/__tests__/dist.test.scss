@@ -5,7 +5,7 @@
 // Module Group
 @include test-module('Distributed') {
 
-	@include test('@mixin pmc-u-background') {
+	@include test('@mixin u-background') {
 
 		@include assert {
 
@@ -14,32 +14,32 @@
 					blue: #B1CAFB,
 				);
 
-				@include pmc-u-background( (
+				@include u-background( (
 					blue,
 				), $color_list );
 			}
 
 			@include contains {
-				.pmc-u-background-blue {
+				.u-background-blue {
 					background-color: #B1CAFB;
 				}
 			}
 		}
 	}
 
-	@include test('@mixin pmc-u-padding') {
+	@include test('@mixin u-padding') {
 
 		@include assert {
 
 			@include output {
 
-				@include pmc-u-padding( (
+				@include u-padding( (
 					('tb', $spacer-050),
 				) );
 			}
 
 			@include contains {
-				.pmc-u-padding-tb-050 {
+				.u-padding-tb-050 {
 					padding-top: 0.5rem;
 					padding-bottom: 0.5rem;
 				}
