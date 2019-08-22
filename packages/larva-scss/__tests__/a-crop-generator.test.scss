@@ -13,11 +13,33 @@
 			}
 
 			@include contains {
-				.pmc-a-crop-3x2 {
+				.a-crop-3x2 {
 					padding-bottom: calc( ( 2 / 3 ) * 100% );
 				}
 
-				.pmc-a-crop-3x2 img {
+				.a-crop-3x2 img {
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	@include test('generates namespaced crops') {
+
+		@include assert {
+
+			@include output {
+				@include _a-crop-generator( (
+					'3x2': (3, 2)
+				), $namespace: 'lrv-' );
+			}
+
+			@include contains {
+				.lrv-a-crop-3x2 {
+					padding-bottom: calc( ( 2 / 3 ) * 100% );
+				}
+
+				.lrv-a-crop-3x2 img {
 					object-fit: cover;
 				}
 			}
