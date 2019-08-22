@@ -69,9 +69,14 @@
 	}
 
 	@include test('generates namepsaced grids') {
+		
+		@import 'fixture/settings';
+		
 		@include assert {
-
+			
 			@include output {
+
+				
 				$grids: (
 					(
 						columns: 2,
@@ -84,7 +89,7 @@
 					),
 				);
 
-				@include _a-grid-generator( $grids, $namespace: 'lrv-' );
+				@include _a-grid-generator( $grids );
 			}
 
 			@include expect {

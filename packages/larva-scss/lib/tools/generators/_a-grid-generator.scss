@@ -1,5 +1,7 @@
 @import "../mixins/pmc-breakpoint";
 
+$NAMESPACE: '' !default;
+
 @mixin _grid( $columns ) {
 	--cols: #{$columns};
 
@@ -9,15 +11,15 @@
 
 }
 
-@mixin _grid-selector( $columns, $breakpoint: false, $namespace: '' ) {
+@mixin _grid-selector( $columns, $breakpoint: false ) {
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
-			.#{$namespace}a-cols#{$columns}\@#{$breakpoint} {
+			.#{$NAMESPACE}a-cols#{$columns}\@#{$breakpoint} {
 				@include _grid( $columns );
 			}
 		}
 	} @else {
-		.#{$namespace}a-cols#{$columns} {
+		.#{$NAMESPACE}a-cols#{$columns} {
 			@include _grid( $columns );
 		}
 	}
@@ -33,34 +35,34 @@
 	flex-basis: ( $span / $columns * 100% );
 }
 
-@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false, $namespace: '' ) {
+@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false ) {
 
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
 
-			.#{$namespace}a-span#{$span}\@#{$breakpoint} {
+			.#{$NAMESPACE}a-span#{$span}\@#{$breakpoint} {
 				@include _grid-column( $columns, $span );
 			}
 
 			// Higher specificity to account for nested grids.
-			.#{$namespace}a-cols#{$columns}\@#{$breakpoint} > .#{$namespace}a-span#{$span}\@#{$breakpoint} {
+			.#{$NAMESPACE}a-cols#{$columns}\@#{$breakpoint} > .#{$NAMESPACE}a-span#{$span}\@#{$breakpoint} {
 				@include _grid-column-fallback( $columns, $span );
 			}
 
 		}
 	} @else {
-		.#{$namespace}a-span#{$span} {
+		.#{$NAMESPACE}a-span#{$span} {
 			@include _grid-column( $columns, $span );
 		}
 
-		.#{$namespace}a-cols#{$columns} > .#{$namespace}a-span#{$span} {
+		.#{$NAMESPACE}a-cols#{$columns} > .#{$NAMESPACE}a-span#{$span} {
 			@include _grid-column-fallback( $columns, $span );
 		}
 	}
 
 }
 
-@mixin _a-grid-generator( $tokens, $namespace: '' ) {
+@mixin _a-grid-generator( $tokens ) {
 
 	@if type-of($tokens) != 'list' {
 		@error "`#{$tokens}` is not a valid value for $tokens. It must be a list of maps.";
@@ -72,7 +74,7 @@
 		$spans: map-get( $grid, spans );
 
 		// Outputs pmc-colsX selector to be used in conjunction with .pmc-grid.
-		@include _grid-selector( $columns, $breakpoint, $namespace );
+		@include _grid-selector( $columns, $breakpoint );
 
 		@if $spans {
 
@@ -82,8 +84,7 @@
 				@include _grid-span-selector(
 					$columns,
 					$span,
-					map-get( $grid, breakpoint ),
-					$namespace
+					map-get( $grid, breakpoint )
 				);
 			}
 		}
