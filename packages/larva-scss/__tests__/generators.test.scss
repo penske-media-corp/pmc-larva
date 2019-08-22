@@ -1,5 +1,5 @@
 @import "true";
-@import "../../lib/tools/tools";
+@import "../lib/tools/tools";
 
 @include test-module('Class Generators') {
 
@@ -196,7 +196,6 @@
 
 		}
 	}
-
 
 	@include test('@mixin _text-class-generator') {
 
