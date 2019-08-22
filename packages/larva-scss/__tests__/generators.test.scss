@@ -45,12 +45,12 @@
 		}
 	}
 
-	@include test('@mixin _crop-class-generator') {
+	@include test('@mixin _a-crop-generator') {
 
 		@include assert {
 
 			@include output {
-				@include _crop-class-generator( (
+				@include _a-crop-generator( (
 					'3x2': (3, 2)
 				) );
 			}
