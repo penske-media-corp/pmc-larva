@@ -9,5 +9,5 @@
 };
 
 @mixin lrv-a-crop( $aspect-ratios ) {
-	@include _crop-class-generator( $aspect-ratios, $namespace: 'lrv-' );
+	@include _a-crop-generator( $aspect-ratios, $namespace: 'lrv-' );
 }

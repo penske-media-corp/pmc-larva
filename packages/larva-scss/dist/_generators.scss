@@ -9,7 +9,7 @@
 };
 
 @mixin a-crop( $aspect-ratios ) {
-	@include _crop-class-generator( $aspect-ratios );
+	@include _a-crop-generator( $aspect-ratios );
 }
 
 // -----------
