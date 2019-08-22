@@ -3,48 +3,6 @@
 
 @include test-module('Class Generators') {
 
-	@include test('@mixin _spacing-class-generator') {
-		@include assert {
-
-			@include output {
-				$spacer-050: 0.5rem;
-				$spacer-1: 1rem;
-
-				@include _spacing-class-generator(
-					'margin',
-					(
-						('tb', $spacer-050),
-						('a', $spacer-1, desktop)
-					)
-				);
-
-				@include _spacing-class-generator(
-					'padding',
-					(
-						('a', $spacer-1),
-					)
-				);
-			}
-
-			@include expect {
-				.pmc-u-margin-tb-050 {
-					margin-top: 0.5rem;
-					margin-bottom: 0.5rem;
-				}
-
-				@media (min-width: 62.5rem) {
-					.pmc-u-margin-a-1\@desktop {
-						margin: 1rem;
-					}
-				}
-
-				.pmc-u-padding-a-1 {
-					padding: 1rem;
-				}
-			}
-		}
-	}
-
 	@include test('@mixin _text-class-generator') {
 
 		@include assert {
@@ -166,7 +124,7 @@
 	}
 }
 
-@include test-module('@mixin larva-utility-generator') {
+@include test-module('@mixin token-utility-generator') {
 	$map: (
 		background-color-brand-primary: #FF00AA,
 		text-color-grey-light: #CCCCCC,
@@ -177,7 +135,7 @@
 
 			@include output {
 
-				@include larva-utility-generator(
+				@include token-utility-generator(
 					'background-color',
 					(
 						background-color-brand-primary,
@@ -195,12 +153,15 @@
 		}
 	}
 
-	@include test('generates text color') {
+	@include test('generates namespaced text color') {
+
+		@import 'fixture/settings';
+
 		@include assert {
 
 			@include output {
 				
-				@include larva-utility-generator(
+				@include token-utility-generator(
 					'color',
 					(
 						text-color-grey-light,
@@ -210,7 +171,7 @@
 			}
 
 			@include expect {
-				.u-text-color-grey-light {
+				.lrv-u-text-color-grey-light {
 					color: #CCCCCC;
 					color: var( --text-color-grey-light, #CCCCCC );
 				}
@@ -220,7 +181,7 @@
 }
 
 
-@include test-module('@mixin project-utility-generator') {
+@include test-module('@mixin basic-utility-generator') {
 	$map: (
 		opacity-1: 1,
 	);
@@ -230,7 +191,7 @@
 
 			@include output {
 				
-				@include project-utility-generator(
+				@include basic-utility-generator(
 					'opacity',
 					(
 						opacity-1,
