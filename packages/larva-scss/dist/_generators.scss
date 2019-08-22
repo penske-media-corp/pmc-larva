@@ -4,12 +4,12 @@
 // Algorithms 
 // -----------
 
-@mixin a-grid( $grids, $namespace: '' ) {
-	@include _a-grid-generator( $grids, $namespace );
+@mixin a-grid( $grids ) {
+	@include _a-grid-generator( $grids );
 };
 
-@mixin a-crop( $aspect-ratios, $namespace: '' ) {
-	@include _a-crop-generator( $aspect-ratios, $namespace );
+@mixin a-crop( $aspect-ratios ) {
+	@include _a-crop-generator( $aspect-ratios );
 }
 
 // -----------
