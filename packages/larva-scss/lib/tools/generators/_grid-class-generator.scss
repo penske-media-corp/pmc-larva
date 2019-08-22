@@ -60,7 +60,7 @@
 
 }
 
-@mixin _grid-class-generator( $tokens, $namespace: '' ) {
+@mixin _a-grid-generator( $tokens, $namespace: '' ) {
 
 	@if type-of($tokens) != 'list' {
 		@error "`#{$tokens}` is not a valid value for $tokens. It must be a list of maps.";

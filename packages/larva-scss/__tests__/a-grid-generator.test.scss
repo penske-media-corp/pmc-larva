@@ -1,7 +1,7 @@
 @import "true";
 @import "../lib/tools/tools";
 
-@include test-module('@mixin _grid-class-generator') {
+@include test-module('@mixin _a-grid-generator') {
 
 	@include test('generates non-namepsaced grids') {
 		@include assert {
@@ -19,7 +19,7 @@
 					),
 				);
 
-				@include _grid-class-generator( $grids );
+				@include _a-grid-generator( $grids );
 			}
 
 			@include expect {
@@ -84,7 +84,7 @@
 					),
 				);
 
-				@include _grid-class-generator( $grids, $namespace: 'lrv-' );
+				@include _a-grid-generator( $grids, $namespace: 'lrv-' );
 			}
 
 			@include expect {

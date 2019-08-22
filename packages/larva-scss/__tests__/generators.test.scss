@@ -67,7 +67,7 @@
 		}
 	}
 
-	@include test('@mixin _grid-class-generator') {
+	@include test('@mixin _a-grid-generator') {
 		@include assert {
 
 			@include output {
@@ -83,7 +83,7 @@
 					),
 				);
 
-				@include _grid-class-generator( $grids );
+				@include _a-grid-generator( $grids );
 			}
 
 			@include expect {
@@ -132,7 +132,7 @@
 		}
 	}
 
-	@include test('@mixin _grid-class-generator, namespaced') {
+	@include test('@mixin _a-grid-generator, namespaced') {
 		@include assert {
 
 			@include output {
@@ -148,7 +148,7 @@
 					),
 				);
 
-				@include _grid-class-generator( $grids, $namespace: 'lrv-' );
+				@include _a-grid-generator( $grids, $namespace: 'lrv-' );
 			}
 
 			@include expect {
