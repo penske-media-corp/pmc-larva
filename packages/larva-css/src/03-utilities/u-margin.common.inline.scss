@@ -1,55 +1,67 @@
-@import '@penskemediacorp/larva-scss/dist/tokens';
-@import '@penskemediacorp/larva-scss/dist/generators';
+@import 'setup';
 
-@include pmc-u-margin(
-	(
-		// Top
-		('t', $spacer-050),
-		('t', $spacer-1),
-		('t', $spacer-2),
+$margins_without_breakpoints: (
+	// Top
+	('t', $spacer-050),
+	('t', $spacer-1),
+	('t', $spacer-2),
 
-		// Right
-		('r', $spacer-025),
-		('r', $spacer-050),
-		('r', $spacer-1),
-		('r', $spacer-2),
+	// Right
+	('r', $spacer-025),
+	('r', $spacer-050),
+	('r', $spacer-1),
+	('r', $spacer-2),
 
-		// Bottom
-		('b', $spacer-0),
-		('b', $spacer-2),
-		('b', $spacer-050),
-		('b', $spacer-1),
-		('b', $spacer-025),
+	// Bottom
+	('b', $spacer-0),
+	('b', $spacer-2),
+	('b', $spacer-050),
+	('b', $spacer-1),
+	('b', $spacer-025),
 
-		// Left
-		('l', $spacer-025),
-		('l', $spacer-050),
-		('l', $spacer-1),
-		('l', $spacer-2),
+	// Left
+	('l', $spacer-025),
+	('l', $spacer-050),
+	('l', $spacer-1),
+	('l', $spacer-2),
 
-		// Left/Right
-		('lr', $spacer-025),
-		('lr', $spacer-050),
-		('lr', $spacer-1),
+	// Left/Right
+	('lr', $spacer-025),
+	('lr', $spacer-050),
+	('lr', $spacer-1),
 
-		// Top/Bottom
-		('tb', $spacer-0),
-		('tb', $spacer-050),
-		('tb', $spacer-1),
-		('tb', $spacer-2),
+	// Top/Bottom
+	('tb', $spacer-0),
+	('tb', $spacer-050),
+	('tb', $spacer-1),
+	('tb', $spacer-2),
 
-		// All
-		('a', $spacer-0),
-	)
+	// All
+	('a', $spacer-0),
 );
 
+@include u-margin( $margins_without_breakpoints );
+
 .lrv-u-margin-l-auto {
+	margin-left: auto;
+}
+
+.lrv-u-margin-r-auto {
+	margin-left: auto;
+}
+
+.lrv-u-margin-t-auto {
 	margin-left: auto;
 }
 
 .lrv-u-margin-lr-auto {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.lrv-u-margin-tb-auto {
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .lrv-u-margin-l-auto\@tablet {

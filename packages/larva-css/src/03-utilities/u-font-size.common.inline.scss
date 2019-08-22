@@ -1,7 +1,6 @@
-@import '@penskemediacorp/larva-scss/dist/tokens';
-@import '@penskemediacorp/larva-scss/dist/generators';
+@import 'setup';
 
-@include pmc-u-font-size(
+@include u-font-size(
 	(
 		($font-size-8,)
 		($font-size-10,)

@@ -1,4 +1,4 @@
-@import '@penskemediacorp/larva-scss/dist/generators';
+@import 'setup';
 
 $aspect-ratios: (
 	'1x1': (1, 1),
@@ -9,4 +9,4 @@ $aspect-ratios: (
 	'3x4': (3, 4)
 );
 
-@include a-crop( $aspect-ratios, $namespace: 'lrv-' );
+@include a-crop( $aspect-ratios );
