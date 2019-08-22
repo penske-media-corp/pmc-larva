@@ -9,15 +9,15 @@
 
 }
 
-@mixin _grid-selector( $columns, $breakpoint: false ) {
+@mixin _grid-selector( $columns, $breakpoint: false, $namespace: '' ) {
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
-			.pmc-a-cols#{$columns}\@#{$breakpoint} {
+			.#{$namespace}a-cols#{$columns}\@#{$breakpoint} {
 				@include _grid( $columns );
 			}
 		}
 	} @else {
-		.pmc-a-cols#{$columns} {
+		.#{$namespace}a-cols#{$columns} {
 			@include _grid( $columns );
 		}
 	}
@@ -33,27 +33,27 @@
 	flex-basis: ( $span / $columns * 100% );
 }
 
-@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false ) {
+@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false, $namespace: '' ) {
 
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
 
-			.pmc-a-span#{$span}\@#{$breakpoint} {
+			.#{$namespace}a-span#{$span}\@#{$breakpoint} {
 				@include _grid-column( $columns, $span );
 			}
 
 			// Higher specificity to account for nested grids.
-			.pmc-a-cols#{$columns}\@#{$breakpoint} > .pmc-a-span#{$span}\@#{$breakpoint} {
+			.#{$namespace}a-cols#{$columns}\@#{$breakpoint} > .#{$namespace}a-span#{$span}\@#{$breakpoint} {
 				@include _grid-column-fallback( $columns, $span );
 			}
 
 		}
 	} @else {
-		.pmc-a-span#{$span} {
+		.#{$namespace}a-span#{$span} {
 			@include _grid-column( $columns, $span );
 		}
 
-		.pmc-a-cols#{$columns} > .pmc-a-span#{$span} {
+		.#{$namespace}a-cols#{$columns} > .#{$namespace}a-span#{$span} {
 			@include _grid-column-fallback( $columns, $span );
 		}
 	}
