@@ -47,4 +47,4 @@ $grids: (
 	),
 );
 
-@include pmc-a-grid( $grids );
+@include a-grid( $grids, $namespace: 'lrv-' );
