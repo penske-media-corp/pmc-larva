@@ -9,8 +9,12 @@
     "type": "git",
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
-    "build"
+	"build",
+	"style-guides"
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
