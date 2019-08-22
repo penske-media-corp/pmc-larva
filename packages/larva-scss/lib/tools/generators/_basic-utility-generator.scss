@@ -12,7 +12,7 @@ $NAMESPACE: '' !default;
 		@if map-get($map, $token) {
 			$value: map-get($map, $token);
 
-			.u-#{$token} {
+			.#{$NAMESPACE}u-#{$token} {
 				#{$property}: $value;
 			}
 		} @else {

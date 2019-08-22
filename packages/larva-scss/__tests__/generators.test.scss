@@ -181,30 +181,3 @@
 }
 
 
-@include test-module('@mixin basic-utility-generator') {
-	$map: (
-		opacity-1: 1,
-	);
-
-	@include test('generates opacity') {
-		@include assert {
-
-			@include output {
-				
-				@include basic-utility-generator(
-					'opacity',
-					(
-						opacity-1,
-					),
-					$map,
-				);
-			}
-
-			@include expect {
-				.u-opacity-1 {
-					opacity: 1;
-				}
-			}
-		}
-	}
-}
