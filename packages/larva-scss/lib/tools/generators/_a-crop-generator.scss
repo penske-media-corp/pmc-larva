@@ -1,4 +1,4 @@
-@mixin _a-crop-generator( $aspect-ratios ) {
+@mixin _a-crop-generator( $aspect-ratios, $namespace: '' ) {
 
 	@if type-of($aspect-ratios) != 'map' {
 		@error "`#{$aspect-ratios}` is not a valid value for $aspect-ratios. It must be map.";
