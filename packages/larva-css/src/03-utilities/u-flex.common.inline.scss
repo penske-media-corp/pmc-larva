@@ -1,25 +1,25 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.pmc-u-flex {
+.lrv-u-flex {
 	display: flex;
 }
 
-.pmc-u-flex\@tablet {
+.lrv-u-flex\@tablet {
 
 	@include pmc-breakpoint( tablet ) {
 		display: flex;
 	}
 }
 
-.pmc-u-flex-grow-1 {
+.lrv-u-flex-grow-1 {
 	flex-grow: 1;
 }
 
-.pmc-u-flex-direction-column {
+.lrv-u-flex-direction-column {
 	flex-direction: column;
 }
 
-.pmc-u-flex-direction-column\@mobile-max {
+.lrv-u-flex-direction-column\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
 		flex-direction: column;

@@ -40,50 +40,50 @@ $ICONS_BUILD_PATH: '/svgs';
 	}
 }
 
-.a-icon {
+.lrv-a-icon {
 	@include _a-icon-base();
 }
 
-.a-icon-before {
+.lrv-a-icon-before {
 	@include _a-icon-base-pseudo( before ) {
 		margin-right: $spacer-050;
 	}
 }
 
-.a-icon-after {
+.lrv-a-icon-after {
 	@include _a-icon-base-pseudo( after ) {
 		margin-left: $spacer-050;
 	}
 }
 
-.a-icon-after\:margin-l-auto::after {
+.lrv-a-icon-after\:margin-l-auto::after {
 	margin-left: auto;
 }
 
 // Specific Icons
 
-.a-icon-arrow-left,
-.a-icon-arrow-right,
-.a-icon-arrow-down,
-.a-icon-arrow-up {
+.lrv-a-icon-arrow-left,
+.lrv-a-icon-arrow-right,
+.lrv-a-icon-arrow-down,
+.lrv-a-icon-arrow-up {
 	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#arrow'} );
 	--a-icon-height: #{ $font-size-12 };
 }
 
-.a-icon-arrow-right {
+.lrv-a-icon-arrow-right {
 	--a-icon-transform: rotate(-90deg);
 }
 
-.a-icon-arrow-left {
+.lrv-a-icon-arrow-left {
 	--a-icon-transform: rotate(90deg);
 }
 
-.a-icon-envelope {
+.lrv-a-icon-envelope {
 	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#envelope'} );
 }
 
-.a-icon-forward-slash,
-.a-icon-bullet {
+.lrv-a-icon-forward-slash,
+.lrv-a-icon-bullet {
 	@include _a-icon-reset( before ) {
 		padding-right: $spacer-050;
 	};
@@ -93,11 +93,11 @@ $ICONS_BUILD_PATH: '/svgs';
 	};
 }
 
-.a-icon-forward-slash {
+.lrv-a-icon-forward-slash {
 	--a-icon-content: '/';
 }
 
-.a-icon-bullet {
+.lrv-a-icon-bullet {
 	--a-icon-content: '\02022';
 }
 
@@ -106,7 +106,7 @@ $ICONS_BUILD_PATH: '/svgs';
 // // ----------
 
 // // @TODO: Move a-icon-after-down to one-offs or an algorithm called a-border-icon / a-toggle-icon.
-// .a-icon-after-down {
+// .lrv-a-icon-after-down {
 // 	position: relative;
 // 	display: flex;
 // 	align-items: center;
@@ -126,7 +126,7 @@ $ICONS_BUILD_PATH: '/svgs';
 // 	}
 // }
 
-// .a-icon-after-down-hide\@mobile {
+// .lrv-a-icon-after-down-hide\@mobile {
 // 	@include breakpoint( mobile ) {
 // 		display: block;
 
@@ -136,7 +136,7 @@ $ICONS_BUILD_PATH: '/svgs';
 // 	}
 // }
 
-// .a-icon-after-down--has-toggle {
+// .lrv-a-icon-after-down--has-toggle {
 // 	&::after {
 // 		transform: scaleY(-0.85) translate(-50%,25%) rotate(45deg);
 // 	}

@@ -1,6 +1,6 @@
 module.exports = {
 	"o_sponsored_by_classes": "u-flex u-align-items-center",
-	"o_sponsored_by_title_classes": "pmc-u-color-grey-medium pmc-u-font-family-georgia pmc-u-font-size-10 pmc-u-margin-r-050",
+	"o_sponsored_by_title_classes": "lrv-u-color-grey-medium lrv-u-font-family-georgia lrv-u-font-size-10 lrv-u-margin-r-050",
 	"o_sponsored_by_text": "Sponsored by",
 	"o_figure": {
 		"o_figure_classes": "u-width-50",

@@ -1,19 +1,12 @@
-# Class Generators
+# Generators
 
-Generators output classes according to a list or map of tokens that are provided by a consuming project. Each generator is prefixed with an underscore, indicating is is private and should not be called directly in a consuming project. Generators are made available with a wrapping mixin with a `pmc-*` namespace that outputs the actual classes. The `pmc-*` mixin is called in the theme, and can be imported from the `dist/generators` file in this repository.
+Generators are Sass mixins that generate utility classes and algorithms based on a given map of values.
 
-## To add a new generator:
+The types of generators are as follows:
+* Generators for specific patterns (e.g. `a-crop`, `a-grid`, `u-padding`)
+* Flexible generator for single purpose utility classes (e.g. project-utility-generator)
+* Token-based generators that output custom properties that are expected to be available via larva-tokens 
 
-Generators should be added very sparingly and should be "brand agnostic" i.e. generators are meant to serve all brands and should not contain any values or CSS specific to a single design. 
+## Public API
 
-That being said, if a new generator is deemed appropriate, the following steps are generally how you would go about it:
-
-1. Create a file in ./tools/generators following the naming conventions established in the existing file names i.e. `_{descriptor}-{selector type}-generator.scss`.
-2. Import that file in ./tools/tools.scss.
-3. Add a test to ./__tests__/tools/generators.test.scss.
-4. Add a wrapper mixin with the pmc-* namespace to expose the generator to consuming projects in ./dist/generators.
-
-## To use a generator in a theme:
-
-1. Add a corresponding `u-*.{chunkName}.{inline|async}.scss` file in the theme's assets/patterns/##-utilities directory.
-2. Call the generator with values defined by the theme.
+Generators are designed to be wrapped in developer-friendly mixins for use in consuming projects. See the [Larva Wiki](https://github.com/penske-media-corp/pmc-larva/wiki) to learn which generators are available for public use.

@@ -6,11 +6,10 @@
 @import './mixins/pmc-breakpoint';
 
 // Generators
-@import './generators/crop-class-generator';
-@import './generators/spacing-class-generator';
-@import './generators/text-class-generator';
-@import './generators/grid-class-generator';
-@import './generators/color-class-generator';
-@import './generators/larva-utility-generator';
-@import './generators/project-utility-generator';
+@import './generators/a-grid-generator';
+@import './generators/a-crop-generator';
+@import './generators/spacing-utility-generator';
+@import './generators/text-utility-generator';
+@import './generators/token-utility-generator';
+@import './generators/basic-utility-generator';
 

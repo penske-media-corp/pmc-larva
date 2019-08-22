@@ -7,7 +7,8 @@ const rename = require('gulp-rename');
 
 const sassOpts = {
 	includePaths: [
-		path.join( __dirname, './node_modules' )
+		path.resolve( './node_modules' ),
+		path.resolve( './src/' ),
 	]
 };
 

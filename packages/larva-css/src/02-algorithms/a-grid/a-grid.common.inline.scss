@@ -1,6 +1,6 @@
-@import '@penskemediacorp/larva-scss/dist/generators';
+@import 'setup';
 
-.pmc-a-grid {
+.lrv-a-grid {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: start;
@@ -14,7 +14,7 @@
 	}
 }
 
-.pmc-a-grid-item {
+.lrv-a-grid-item {
 	// Remove flex charactaristics to honor flex-basis value.
 	flex: none;
 	padding: 0.625rem;
@@ -47,4 +47,4 @@ $grids: (
 	),
 );
 
-@include pmc-a-grid( $grids );
+@include a-grid( $grids );

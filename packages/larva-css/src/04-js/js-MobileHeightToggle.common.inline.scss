@@ -1,17 +1,17 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
 @include pmc-breakpoint( mobile-max ) {
-	.pmc-js-MobileHeightToggle .pmc-js-MobileHeightToggle-target {
+	.js-MobileHeightToggle .js-MobileHeightToggle-target {
 		height: 0;
 		visibility: hidden;
 	}
 	
-	.pmc-js-MobileHeightToggle.is-expanded .pmc-js-MobileHeightToggle-target {
+	.js-MobileHeightToggle.is-expanded .js-MobileHeightToggle-target {
 		height: auto;
 		visibility: visible;
 	}
 
-	.pmc-js-MobileHeightToggle.is-expanded .a-icon-arrow-down.a-icon-after::after { // stylelint-disable-line selector-max-specificity
+	.js-MobileHeightToggle.is-expanded .lrv-a-icon-arrow-down.lrv-a-icon-after::after { // stylelint-disable-line selector-max-specificity
 		--a-icon-transform: rotate(180deg);
 	}
 }

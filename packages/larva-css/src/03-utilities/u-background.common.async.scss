@@ -1,32 +1,32 @@
-@import '@penskemediacorp/larva-scss/dist/generators';
-@import '@penskemediacorp/larva-scss/dist/tokens';
+@import 'setup';
 
-$color_list: (
-	white: white,
+$brand-tokens: (
+	background-color-brand-primary: red,
+	background-color-grey-lightest: yellow,
 );
 
-@include pmc-u-background( (
-	white,
-	black,
-), $semantic-color-list );
+$background-colors: (
+	background-color-brand-primary,
+	background-color-grey-lightest,
+);
 
+@include token-utility-generator( 'background-color', $background-colors, $brand-tokens );
 
-.pmc-u-background-brand-primary,
-.pmc-u-background-brand-primary\:hover:hover {
+.lrv-u-background-brand-primary\:hover:hover {
 	background-color: map-get( $semantic-color-list, brand-primary );
 	background-color: var( --color-brand-primary );
 }
 
-.pmc-u-background-grey-lightest {
+.lrv-u-background-grey-lightest {
 	background-color: map-get( $semantic-color-list, grey-lightest );
 	background-color: var( --color-grey-lightest );
 }
 
-.pmc-u-background-grey-light {
+.lrv-u-background-grey-light {
 	background-color: map-get( $semantic-color-list, grey-light );
 	background-color: var( --color-grey-light );
 }
 
-.pmc-u-background-transparent {
+.lrv-u-background-transparent {
 	background-color: transparent;
 }

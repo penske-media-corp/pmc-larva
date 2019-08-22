@@ -1,11 +1,13 @@
-@mixin _crop-class-generator( $aspect-ratios ) {
+@mixin _a-crop-generator( $aspect-ratios ) {
+
+	$NAMESPACE: '' !default;
 
 	@if type-of($aspect-ratios) != 'map' {
 		@error "`#{$aspect-ratios}` is not a valid value for $aspect-ratios. It must be map.";
 	}
 
 	@each $name, $sizes in $aspect-ratios {
-		.pmc-a-crop-#{$name} {
+		.#{$NAMESPACE}a-crop-#{$name} {
 			position: relative;
 			padding-bottom: calc( ( #{nth($sizes, 2)} / #{nth($sizes, 1)} ) * 100% );
 

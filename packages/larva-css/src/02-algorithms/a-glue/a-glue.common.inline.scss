@@ -10,11 +10,11 @@
 	left: var( --a-glue-left, initial );
 }
 
-.pmc-a-glue-parent {
+.lrv-a-glue-parent {
 	position: relative;
 }
 
-.pmc-a-glue {
+.lrv-a-glue {
 	// Fallback is top left for everything.
 	top: 0;
 	left: 0;
@@ -22,18 +22,18 @@
 	@include _a-glue-base;
 }
 
-.pmc-a-glue--l-0 {
+.lrv-a-glue--l-0 {
 	--a-glue-left: 0;
 }
 
-.pmc-a-glue--r-0 {
+.lrv-a-glue--r-0 {
 	--a-glue-right: 0;
 }
 
-.pmc-a-glue--t-0 {
+.lrv-a-glue--t-0 {
 	--a-glue-top: 0;
 }
 
-.pmc-a-glue--b-0 {
+.lrv-a-glue--b-0 {
 	--a-glue-bottom: 0;
 }

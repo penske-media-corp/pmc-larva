@@ -1,4 +1,6 @@
-@mixin larva-utility-generator( $property, $tokens, $map: () ) {
+$NAMESPACE: '' !default;
+
+@mixin basic-utility-generator( $property, $tokens, $map: () ) {
 
 	@if type-of($tokens) != 'list' {
 		@error "`#{$tokens}` is not a valid value for $values. It must be a list.";
@@ -10,9 +12,8 @@
 		@if map-get($map, $token) {
 			$value: map-get($map, $token);
 
-			.u-#{$token} {
+			.#{$NAMESPACE}u-#{$token} {
 				#{$property}: $value;
-				#{$property}: var( --#{$token}, #{$value} );
 			}
 		} @else {
 			@error "`#{$map}` does not contain #{$token}.";

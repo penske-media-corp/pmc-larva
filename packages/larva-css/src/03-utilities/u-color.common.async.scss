@@ -1,43 +1,43 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 
-.pmc-u-color-grey-light {
+.lrv-u-color-grey-light {
 	color: #{map-get( $semantic-color-list, grey-medium-light )};
 	color: var( --color-grey-light );
 }
 
-.pmc-u-color-grey {
+.lrv-u-color-grey {
 	color: #{map-get( $semantic-color-list, grey )};
 	color: var( --color-grey );
 }
 
-.pmc-u-color-grey-medium-dark {
+.lrv-u-color-grey-medium-dark {
 	color: #{map-get( $semantic-color-list, grey-medium-dark )};
 	color: var( --color-grey-medium-dark );
 }
 
-.pmc-u-color-white {
+.lrv-u-color-white {
 	color: map-get( $semantic-color-list, white );
 }
 
-.pmc-u-color-brand-primary {
+.lrv-u-color-brand-primary {
 	color: #{map-get( $semantic-color-list, brand-primary )};
 	color: var( --color-brand-primary );
 }
 
-.pmc-u-color-currentColor {
+.lrv-u-color-currentColor {
 	color: currentColor;
 }
 
-.pmc-u-color-white\:hover:hover {
+.lrv-u-color-white\:hover:hover {
 	color: map-get( $semantic-color-list, white );
 }
 
-.pmc-u-color-grey-light\:hover:hover {
+.lrv-u-color-grey-light\:hover:hover {
 	color: #{map-get( $semantic-color-list, grey-light )};
 	color: var( --color-grey-light );
 }
 
-.pmc-u-color-grey-dark\:hover:hover {
+.lrv-u-color-grey-dark\:hover:hover {
 	color: #{map-get( $semantic-color-list, grey-dark )};
 	color: var( --color-grey-dark );
 }

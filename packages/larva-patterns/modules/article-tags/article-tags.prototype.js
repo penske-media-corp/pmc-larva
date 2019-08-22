@@ -12,13 +12,13 @@ for (let i = 0; i < tags.length; i++) {
 	let c_link = clone( c_link_path );
 
 	c_link.c_link_text = tags[i];
-	c_link.c_link_classes += ' pmc-u-text-transform-uppercase';
+	c_link.c_link_classes += ' lrv-u-text-transform-uppercase';
 
 	o_nav.o_nav_list_items.push( c_link );
 	
 }
 
-o_nav.o_nav_title_classes = 'pmc-u-padding-r-1 pmc-u-font-family-secondary';
+o_nav.o_nav_title_classes = 'lrv-u-padding-r-1 lrv-u-font-family-secondary';
 
 module.exports = {
 	'o_nav': o_nav,

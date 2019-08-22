@@ -8,6 +8,8 @@
 
 @import "../mixins/pmc-breakpoint";
 
+$NAMESPACE: '' !default;
+
 @mixin _spacing-class-generator( $property, $tokens ) {
 	@if $property != 'margin' and $property != 'padding' {
 		@error "`#{$property}` is not a valid value for $property. It must be either 'margin' or 'padding'.";
@@ -30,13 +32,13 @@
 		@if (length($token) == 3) {
 			$bp: nth($token, 3);
 
-			.pmc-u-#{$property}-#{$sides}-#{$value}\@#{$bp} {
+			.#{$NAMESPACE}u-#{$property}-#{$sides}-#{$value}\@#{$bp} {
 				@include pmc-breakpoint($bp) {
 					@include _size-logic($sides, $property, nth($token, 2));
 				}
 			}
 		} @else {
-			.pmc-u-#{$property}-#{$sides}-#{$value} {
+			.#{$NAMESPACE}u-#{$property}-#{$sides}-#{$value} {
 				@include _size-logic($sides, $property, nth($token, 2));
 			}
 		}

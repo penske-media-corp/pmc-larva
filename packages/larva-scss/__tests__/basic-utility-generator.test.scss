@@ -1,0 +1,55 @@
+@import "true";
+@import "../lib/tools/tools";
+
+@include test-module('@mixin basic-utility-generator') {
+	$map: (
+		opacity-1: 1,
+	);
+
+	@include test('generates non-namespaced utility') {
+		@include assert {
+
+			@include output {
+				
+				@include basic-utility-generator(
+					'opacity',
+					(
+						opacity-1,
+					),
+					$map,
+				);
+			}
+
+			@include expect {
+				.u-opacity-1 {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	@include test('generates namespaced utility') {
+
+		@import 'fixture/settings';
+
+		@include assert {
+
+			@include output {
+				
+				@include basic-utility-generator(
+					'opacity',
+					(
+						opacity-1,
+					),
+					$map,
+				);
+			}
+
+			@include expect {
+				.lrv-u-opacity-1 {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

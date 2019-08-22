@@ -1,9 +1,9 @@
 @media (max-width: 47.999rem) {
-  .pmc-js-MobileHeightToggle .pmc-js-MobileHeightToggle-target {
+  .js-MobileHeightToggle .js-MobileHeightToggle-target {
     height: 0;
     visibility: hidden; }
-  .pmc-js-MobileHeightToggle.is-expanded .pmc-js-MobileHeightToggle-target {
+  .js-MobileHeightToggle.is-expanded .js-MobileHeightToggle-target {
     height: auto;
     visibility: visible; }
-  .pmc-js-MobileHeightToggle.is-expanded .a-icon-arrow-down.a-icon-after::after {
+  .js-MobileHeightToggle.is-expanded .lrv-a-icon-arrow-down.lrv-a-icon-after::after {
     --a-icon-transform: rotate(180deg); } }

@@ -1,16 +1,16 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.pmc-u-text-align-center {
+.lrv-u-text-align-center {
 	text-align: center;
 }
 
-.pmc-u-text-align-center\@mobile-max {
+.lrv-u-text-align-center\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		text-align: center;
 	}
 }
 
-.pmc-u-text-align-center\@tablet {
+.lrv-u-text-align-center\@tablet {
 	@include pmc-breakpoint( tablet ) {
 		text-align: center;
 	}

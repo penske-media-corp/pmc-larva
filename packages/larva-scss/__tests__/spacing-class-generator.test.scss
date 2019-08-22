@@ -1,0 +1,64 @@
+@import "true";
+@import "../lib/tools/tools";
+
+@include test-module('@mixin _spacing-class-generator') {
+
+	$spacer-050: 0.5rem;
+	$spacer-1: 1rem;
+
+	$margins: (
+		('tb', $spacer-050),
+		('a', $spacer-1, desktop)
+	);
+
+	$paddings: (
+		('a', $spacer-1),
+	);
+
+	@include test('generates non-namespaced classes') {
+		@include assert {
+
+			@include output {
+				$spacer-050: 0.5rem;
+				$spacer-1: 1rem;
+
+				@include _spacing-class-generator( 'margin', $margins );
+				@include _spacing-class-generator( 'padding', $paddings );
+			}
+
+			@include expect {
+				.u-margin-tb-050 {
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+				}
+
+				@media (min-width: 62.5rem) {
+					.u-margin-a-1\@desktop {
+						margin: 1rem;
+					}
+				}
+
+				.u-padding-a-1 {
+					padding: 1rem;
+				}
+			}
+		}
+	}
+
+	@include test('generates namespaced classes') {
+		@import 'fixture/settings';
+
+		@include assert {
+
+			@include output {
+				@include _spacing-class-generator( 'padding', $paddings );
+			}
+
+			@include expect {
+				.lrv-u-padding-a-1 {
+					padding: 1rem;
+				}
+			}
+		}
+	}
+}
