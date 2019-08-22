@@ -334,9 +334,19 @@
 .lrv-u-margin-l-auto {
   margin-left: auto; }
 
+.lrv-u-margin-r-auto {
+  margin-left: auto; }
+
+.lrv-u-margin-t-auto {
+  margin-left: auto; }
+
 .lrv-u-margin-lr-auto {
   margin-left: auto;
   margin-right: auto; }
+
+.lrv-u-margin-tb-auto {
+  margin-top: auto;
+  margin-bottom: auto; }
 
 @media (min-width: 48rem) {
   .lrv-u-margin-l-auto\@tablet {

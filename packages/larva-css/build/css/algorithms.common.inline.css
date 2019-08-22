@@ -70,6 +70,31 @@
   .lrv-a-floated-left\@tablet {
     float: left; } }
 
+.lrv-a-glue-parent {
+  position: relative; }
+
+.lrv-a-glue {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  top: var(--a-glue-top, initial);
+  bottom: var(--a-glue-bottom, initial);
+  right: var(--a-glue-right, initial);
+  left: var(--a-glue-left, initial); }
+
+.lrv-a-glue--l-0 {
+  --a-glue-left: 0; }
+
+.lrv-a-glue--r-0 {
+  --a-glue-right: 0; }
+
+.lrv-a-glue--t-0 {
+  --a-glue-top: 0; }
+
+.lrv-a-glue--b-0 {
+  --a-glue-bottom: 0; }
+
 .lrv-a-grid {
   display: flex;
   flex-wrap: wrap;
@@ -137,30 +162,30 @@
     .lrv-a-cols3\@desktop > * {
       flex-basis: 33.33333%; } }
 
-.lrv-a-glue-parent {
-  position: relative; }
-
-.lrv-a-glue {
-  top: 0;
-  left: 0;
+.lrv-a-screen-reader-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  z-index: 2;
-  top: var(--a-glue-top, initial);
-  bottom: var(--a-glue-bottom, initial);
-  right: var(--a-glue-right, initial);
-  left: var(--a-glue-left, initial); }
+  width: 1px;
+  word-wrap: normal; }
 
-.lrv-a-glue--l-0 {
-  --a-glue-left: 0; }
-
-.lrv-a-glue--r-0 {
-  --a-glue-right: 0; }
-
-.lrv-a-glue--t-0 {
-  --a-glue-top: 0; }
-
-.lrv-a-glue--b-0 {
-  --a-glue-bottom: 0; }
+@media (max-width: 47.999rem) {
+  .lrv-a-screen-reader-only\@mobile-max {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal; } }
 
 .lrv-a-icon {
   content: var(--a-icon-content, "");
@@ -246,31 +271,6 @@
 
 .lrv-a-icon-bullet {
   --a-icon-content: '\02022'; }
-
-.lrv-a-screen-reader-only {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  word-wrap: normal; }
-
-@media (max-width: 47.999rem) {
-  .lrv-a-screen-reader-only\@mobile-max {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal; } }
 
 :root {
   --a-space-children-spacer: 0; }
