@@ -1,4 +1,4 @@
-@import '@penskemediacorp/larva-scss/dist/tokens';
+@import 'setup';
 
 body {
 
@@ -19,13 +19,13 @@ strong {
 }
 
 a {
-	color: map-get( $semantic-color-list, brand-primary );
-	color: var( --color-brand-primary, #{map-get( $semantic-color-list, brand-primary )} );
+	color: map-get( $TOKENS-MAP, brand-primary );
+	color: var( --color-brand-primary, #{map-get( $TOKENS-MAP, brand-primary )} );
 	text-decoration: none;
 
 	&:hover {
-		color: map-get( $semantic-color-list, brand-primary );
-		color: var( --color-brand-primary, #{map-get( $semantic-color-list, brand-primary )} );
+		color: map-get( $TOKENS-MAP, brand-primary );
+		color: var( --color-brand-primary, #{map-get( $TOKENS-MAP, brand-primary )} );
 	}
 }
 

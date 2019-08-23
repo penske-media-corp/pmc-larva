@@ -2,8 +2,9 @@
 :root {
   --color-white: rgb(255, 255, 255);
   --color-grey-light: rgb(230, 230, 230);
+  --color-grey: rgb(140, 140, 140);
   --color-grey-dark: rgb(106, 106, 106);
-  --color-grey-black: rgb(50, 50, 50);
+  --color-black: rgb(0, 0, 0);
   --font-family-primary: Source Sans Pro, sans-serif;
   /* The web-safe fallback for primary */
   --font-family-primary-fallback: Georgia, serif;
@@ -26,6 +27,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --border-color-white: rgb(255, 255, 255);
+  --border-color-grey-lightest: rgb(247, 247, 247);
   --border-color-grey-light: rgb(204, 204, 204);
   --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(106, 106, 106);

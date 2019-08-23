@@ -1,43 +1,27 @@
-@import '@penskemediacorp/larva-scss/dist/tokens';
+@import 'setup';
 
-.lrv-u-color-grey-light {
-	color: #{map-get( $semantic-color-list, grey-medium-light )};
-	color: var( --color-grey-light );
-}
+$colors: (
+	color-white,
+	color-grey-light,
+	color-grey,
+	color-grey-dark,
+	color-brand-primary,
+);
 
-.lrv-u-color-grey {
-	color: #{map-get( $semantic-color-list, grey )};
-	color: var( --color-grey );
-}
-
-.lrv-u-color-grey-medium-dark {
-	color: #{map-get( $semantic-color-list, grey-medium-dark )};
-	color: var( --color-grey-medium-dark );
-}
-
-.lrv-u-color-white {
-	color: map-get( $semantic-color-list, white );
-}
-
-.lrv-u-color-brand-primary {
-	color: #{map-get( $semantic-color-list, brand-primary )};
-	color: var( --color-brand-primary );
-}
+@include token-utility-generator( 'color', $colors, $TOKENS-MAP );
 
 .lrv-u-color-currentColor {
 	color: currentColor;
 }
 
 .lrv-u-color-white\:hover:hover {
-	color: map-get( $semantic-color-list, white );
+	color: map-get( $TOKENS-MAP, color-white );
 }
 
 .lrv-u-color-grey-light\:hover:hover {
-	color: #{map-get( $semantic-color-list, grey-light )};
-	color: var( --color-grey-light );
+	color: map-get( $TOKENS-MAP, color-grey-light );
 }
 
 .lrv-u-color-grey-dark\:hover:hover {
-	color: #{map-get( $semantic-color-list, grey-dark )};
-	color: var( --color-grey-dark );
+	color: map-get( $TOKENS-MAP, color-grey-dark );
 }
