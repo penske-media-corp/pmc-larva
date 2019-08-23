@@ -13,12 +13,12 @@
 			"type": "color",
 			"category": "text-color"
 		},
-		"FONT_FAMILY_PRIMARY": {
+		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!CANELA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
-		"FONT_FAMILY_SECONDARY": {
+		"FONT_FAMILY_SECONDARY_FANCY": {
 			"value": "{!OVERPASS}",
 			"type": "font-family",
 			"category": "font-family"

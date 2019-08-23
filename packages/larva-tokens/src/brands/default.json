@@ -17,21 +17,6 @@
 			"value": "{!BLUE_61}",
 			"type": "color",
 			"category": "hr-color"
-		},
-		"FONT_FAMILY_PRIMARY": {
-			"value": "{!SOURCE_SANS_PRO}",
-			"type": "font-family",
-			"category": "font-family"
-		},
-		"FONT_FAMILY_SECONDARY": {
-			"value": "{!BONNIE}",
-			"type": "font-family",
-			"category": "font-family"
-		},
-		"FONT_FAMILY_BODY": {
-			"value": "{!TIMES_NEW_ROMAN}",
-			"type": "font-family",
-			"category": "font-family"
 		}
 	}
 }
