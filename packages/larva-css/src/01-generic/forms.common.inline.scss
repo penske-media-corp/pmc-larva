@@ -1,5 +1,5 @@
-@import '@penskemediacorp/larva-scss/dist/tokens';
+@import 'setup';
 
 ::placeholder {
-	color: #{map-get( $semantic-color-list, grey-light )};
+	color: #{map-get( $TOKENS-MAP, color-grey-light )};
 }
