@@ -71,14 +71,20 @@
   --font-family-secondary: var( --font-family-secondary-fancy ); }
 
 .lrv-u-font-family-primary {
-  font-family: var(--font-family-primary); }
+  font-family: Georgia, serif;
+  font-family: var(--font-family-primary, Georgia, serif); }
 
 .lrv-u-font-family-secondary {
-  font-family: var(--font-family-secondary); }
+  font-family: Helvetica, serif;
+  font-family: var(--font-family-secondary, Helvetica, serif); }
 
 .lrv-u-font-family-basic {
   font-family: Helvetica, sans-serif;
-  font-family: var(--font-family-basic); }
+  font-family: var(--font-family-basic, Helvetica, sans-serif); }
+
+.lrv-u-font-family-basic {
+  font-family: Helvetica, sans-serif;
+  font-family: var(--font-family-basic, Helvetica, sans-serif); }
 
 .lrv-u-font-size-8 {
   font-size: 0.5rem; }
@@ -223,13 +229,16 @@
     font-size: 2.875rem; } }
 
 .lrv-u-font-weight-light {
-  font-weight: 300; }
+  font-weight: 300;
+  font-weight: var(--font-weight-light, 300); }
 
 .lrv-u-font-weight-normal {
-  font-weight: 400; }
+  font-weight: 400;
+  font-weight: var(--font-weight-normal, 400); }
 
 .lrv-u-font-weight-bold {
-  font-weight: 700; }
+  font-weight: 700;
+  font-weight: var(--font-weight-bold, 700); }
 
 .lrv-u-height-100p {
   height: 100%; }
@@ -334,6 +343,84 @@
 
 .lrv-u-margin-a-00 {
   margin: 0; }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-a-00\@mobile-max {
+    margin: 0; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-t-050\@mobile-max {
+    margin-top: 0.5rem; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-t-1\@mobile-max {
+    margin-top: 1rem; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-t-2\@mobile-max {
+    margin-top: 2rem; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-r-00\@mobile-max {
+    margin-right: 0; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-b-1\@mobile-max {
+    margin-bottom: 1rem; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-b-050\@mobile-max {
+    margin-bottom: 0.5rem; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-tb-00\@mobile-max {
+    margin-top: 0;
+    margin-bottom: 0; } }
+
+@media (max-width: 47.999rem) {
+  .lrv-u-margin-tb-1\@mobile-max {
+    margin-top: 1rem;
+    margin-bottom: 1rem; } }
+
+@media (min-width: 48rem) {
+  .lrv-u-margin-r-1\@tablet {
+    margin-right: 1rem; } }
+
+@media (min-width: 48rem) {
+  .lrv-u-margin-r-00\@tablet {
+    margin-right: 0; } }
+
+@media (min-width: 48rem) {
+  .lrv-u-margin-b-1\@tablet {
+    margin-bottom: 1rem; } }
+
+@media (min-width: 62.5rem) {
+  .lrv-u-margin-a-1\@desktop {
+    margin: 1rem; } }
+
+@media (min-width: 62.5rem) {
+  .lrv-u-margin-r-00\@desktop {
+    margin-right: 0; } }
+
+@media (min-width: 62.5rem) {
+  .lrv-u-margin-r-00\@desktop {
+    margin-right: 0; } }
+
+@media (min-width: 62.5rem) {
+  .lrv-u-margin-t-050\@desktop {
+    margin-top: 0.5rem; } }
+
+@media (min-width: 78.75rem) {
+  .lrv-u-margin-t-050\@desktop-xl {
+    margin-top: 0.5rem; } }
+
+@media (min-width: 78.75rem) {
+  .lrv-u-margin-t-1\@desktop-xl {
+    margin-top: 1rem; } }
+
+@media (min-width: 78.75rem) {
+  .lrv-u-margin-b-1\@desktop-xl {
+    margin-bottom: 1rem; } }
 
 .lrv-u-margin-l-auto {
   margin-left: auto; }
@@ -476,6 +563,9 @@
   .lrv-u-padding-tb-050\@desktop {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; } }
+
+.lrv-u-text-align-right {
+  text-align: right; }
 
 .lrv-u-text-align-center {
   text-align: center; }

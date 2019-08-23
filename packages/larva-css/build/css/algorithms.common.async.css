@@ -1,11 +1,4 @@
 @media (min-width: 48rem) {
-  .lrv-a-icon-after-remove\@tablet::after {
-    display: none; } }
-
-.lrv-a-icon-invert {
-  --a-icon-filter: invert(1); }
-
-@media (min-width: 48rem) {
   .lrv-a-hover-dropup\@tablet {
     position: relative;
     min-width: 14rem; }
@@ -29,6 +22,13 @@
   .lrv-a-hover-dropup\@tablet:hover .lrv-a-icon-arrow-down::after,
   .lrv-a-hover-dropup\@tablet:focus .lrv-a-icon-arrow-down {
     --a-icon-transform: rotate(180deg); } }
+
+@media (min-width: 48rem) {
+  .lrv-a-icon-after-remove\@tablet::after {
+    display: none; } }
+
+.lrv-a-icon-invert {
+  --a-icon-filter: invert(1); }
 
 .lrv-a-unstyle-link,
 .lrv-a-unstyle-link:hover {
