@@ -1,7 +1,4 @@
-// TODO: 
-// The pmc-u-font-family generator can be used for brands that need A-grade support for IE11,
-// and a PostCSS script can be created to include the basic generator verison according to 
-// configuraiton in larva.config.js.
+@import 'setup';
 
 .wf-active {
 	--font-family-primary: var( --font-family-primary-fancy );
@@ -9,14 +6,21 @@
 }
 
 .lrv-u-font-family-primary {
-	font-family: var( --font-family-primary );
+	font-family: map-get( $TOKENS-MAP, font-family-primary );
+	font-family: var( --font-family-primary, #{map-get( $TOKENS-MAP, font-family-primary )} );
 }
 
 .lrv-u-font-family-secondary {
-	font-family: var( --font-family-secondary );
+	font-family: map-get( $TOKENS-MAP, font-family-secondary );
+	font-family: var( --font-family-secondary, #{map-get( $TOKENS-MAP, font-family-secondary  )} );
 }
 
 .lrv-u-font-family-basic {
-	font-family: Helvetica, sans-serif;
-	font-family: var( --font-family-basic );
+	font-family: map-get( $TOKENS-MAP, font-family-basic );
+	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
+}
+
+.lrv-u-font-family-basic {
+	font-family: map-get( $TOKENS-MAP, font-family-basic );
+	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
 }
