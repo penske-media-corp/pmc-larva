@@ -1,5 +1,6 @@
 @import 'setup';
 
+// Generates classes .lrv-u-font-weight-{int}
 @include u-font-size(
 	(
 		($font-size-8,)
