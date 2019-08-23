@@ -5,7 +5,7 @@ const o_email_capture_form = clone( path.resolve( __dirname, '../../objects/o-em
 o_email_capture_form.c_button.c_button_classes += ' lrv-a-icon-invert';
 
 module.exports = {
-	"footer_newsletter_classes": "lrv-u-text-align-center lrv-u-color-white lrv-u-background-black lrv-u-flex lrv-u-flex-direction-column lrv-u-align-items-center",
+	"footer_newsletter_classes": "lrv-u-text-align-center lrv-u-color-white lrv-u-background-color-black lrv-u-flex lrv-u-flex-direction-column lrv-u-align-items-center",
 	"c_title": {
 		"c_title_classes": "lrv-u-margin-b-025 lrv-u-font-family-primary lrv-u-text-align-center",
 		"c_title_text": "Stay In The Know"
