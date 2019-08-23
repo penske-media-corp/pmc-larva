@@ -1,11 +1,11 @@
 @import 'setup';
 
-// Generates classes .lrv-u-font-weight-#.
-@include u-font-weight(
+// Generates classes .lrv-u-font-weight-{name}.
+@include token-utility-generator( 'font-weight',
 	(
-		light,
-		normal,
-		bold
+		font-weight-light,
+		font-weight-normal,
+		font-weight-bold
 	),
-	$semantic-font-weights
+	$TOKENS-MAP
 );
