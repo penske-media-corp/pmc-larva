@@ -20,7 +20,7 @@ svg {
   fill: currentColor; }
 
 ::placeholder {
-  color: #E6E6E6; }
+  color: #e6e6e6; }
 
 body {
   font-family: Helvetica, sans-serif;
@@ -31,12 +31,10 @@ strong {
   font-weight: 700; }
 
 a {
-  color: #920200;
-  color: var(--color-brand-primary, #920200);
+  color: var(--color-brand-primary, );
   text-decoration: none; }
   a:hover {
-    color: #920200;
-    color: var(--color-brand-primary, #920200); }
+    color: var(--color-brand-primary, ); }
 
 h1,
 h2,
