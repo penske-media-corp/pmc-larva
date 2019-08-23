@@ -13,6 +13,11 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!BLUE_61}",
+			"type": "color",
+			"category": "hr-color"
+		},
 		"FONT_FAMILY_PRIMARY": {
 			"value": "{!SOURCE_SANS_PRO}",
 			"type": "font-family",

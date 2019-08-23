@@ -13,11 +13,14 @@
 		"COLOR_GREY_LIGHT": {
 			"value": "{!GREY_90}"
 		},
+		"COLOR_GREY": {
+			"value": "{!GREY_50}"
+		},
 		"COLOR_GREY_DARK": {
 			"value": "{!GREY_35}"
 		},
-		"COLOR_GREY_BLACK": {
-			"value": "{!GREY_20}"
+		"COLOR_BLACK": {
+			"value": "{!BLACK}"
 		}
 	}
 }
