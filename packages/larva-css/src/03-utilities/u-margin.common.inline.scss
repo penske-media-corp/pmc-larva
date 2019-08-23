@@ -40,7 +40,38 @@ $margins_without_breakpoints: (
 	('a', $spacer-0),
 );
 
+$margins_with_breakpoints: (
+
+	// Breakpoints
+	('a', $spacer-0, mobile-max),
+	('t', $spacer-050, mobile-max),
+	('t', $spacer-1, mobile-max),
+	('t', $spacer-2, mobile-max),
+	('r', $spacer-0, mobile-max),
+	('b', $spacer-1, mobile-max),
+	('b', $spacer-050, mobile-max),
+	('tb', $spacer-0, mobile-max),
+	('tb', $spacer-1, mobile-max),
+
+	('r', $spacer-1, tablet),
+	('r', $spacer-0, tablet),
+	('b', $spacer-1, tablet),
+	
+	('a', $spacer-1, desktop),
+	('r', $spacer-0, desktop),
+	('r', $spacer-0, desktop),
+	('t', $spacer-050, desktop),
+
+	('t', $spacer-050, desktop-xl),
+	('t', $spacer-1, desktop-xl),
+	('b', $spacer-1, desktop-xl),
+);
+
 @include u-margin( $margins_without_breakpoints );
+@include u-margin( $margins_with_breakpoints );
+
+
+// Auto margins
 
 .lrv-u-margin-l-auto {
 	margin-left: auto;
