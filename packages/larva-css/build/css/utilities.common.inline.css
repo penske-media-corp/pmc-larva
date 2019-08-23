@@ -241,16 +241,20 @@
   height: 1rem; }
 
 .lrv-u-line-height-small {
-  line-height: 1.1; }
+  line-height: 1.1;
+  line-height: var(--line-height-small, 1.1); }
 
 .lrv-u-line-height-normal {
-  line-height: 1.35; }
+  line-height: 1.35;
+  line-height: var(--line-height-normal, 1.35); }
 
 .lrv-u-line-height-copy {
-  line-height: 1.5; }
+  line-height: 1.5;
+  line-height: var(--line-height-copy, 1.5); }
 
 .lrv-u-line-height-large {
-  line-height: 1.85; }
+  line-height: 1.85;
+  line-height: var(--line-height-large, 1.85); }
 
 .lrv-u-margin-t-050 {
   margin-top: 0.5rem; }
