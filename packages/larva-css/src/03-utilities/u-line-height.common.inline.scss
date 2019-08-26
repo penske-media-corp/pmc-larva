@@ -1,12 +1,12 @@
 @import 'setup';
 
 // TODO: refactor to custom property version, if we need to change the line height values.
-@include u-line-height(
+@include token-utility-generator( 'line-height',
 	(
-		small,
-		normal,
-		copy,
-		large,
+		line-height-small,
+		line-height-normal,
+		line-height-copy,
+		line-height-large,
 	),
-	$semantic-line-heights
+	$TOKENS-MAP
 );

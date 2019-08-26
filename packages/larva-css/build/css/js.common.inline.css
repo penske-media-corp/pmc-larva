@@ -1,9 +1,9 @@
 @media (max-width: 47.999rem) {
-  .js-MobileHeightToggle .js-MobileHeightToggle-target {
+  .lrv-js-MobileHeightToggle .lrv-js-MobileHeightToggle-target {
     height: 0;
     visibility: hidden; }
-  .js-MobileHeightToggle.is-expanded .js-MobileHeightToggle-target {
+  .lrv-js-MobileHeightToggle.is-expanded .lrv-js-MobileHeightToggle-target {
     height: auto;
     visibility: visible; }
-  .js-MobileHeightToggle.is-expanded .lrv-a-icon-arrow-down.lrv-a-icon-after::after {
+  .lrv-js-MobileHeightToggle.is-expanded .lrv-a-icon-arrow-down.lrv-a-icon-after::after {
     --a-icon-transform: rotate(180deg); } }

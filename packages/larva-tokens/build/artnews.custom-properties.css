@@ -5,13 +5,12 @@
   --color-grey: rgb(140, 140, 140);
   --color-grey-dark: rgb(106, 106, 106);
   --color-black: rgb(0, 0, 0);
-  --font-family-primary: Source Sans Pro, sans-serif;
-  /* The web-safe fallback for primary */
-  --font-family-primary-fallback: Georgia, serif;
-  --font-family-secondary: Bonnie, Georgia, serif;
-  --font-family-secondary-fallback: Papyrus, serif;
+  --font-family-primary-fancy: Source Sans Pro, sans-serif;
+  --font-family-primary: Georgia, serif;
+  --font-family-secondary-fancy: Bonnie, Georgia, serif;
+  --font-family-secondary: Helvetica, serif;
   --font-family-body: 'Times New Roman', serif;
-  --font-family-basic: Helvetica, sans-serifs;
+  --font-family-basic: Helvetica, sans-serif;
   --background-color-white: rgb(255, 255, 255);
   --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-light: rgb(204, 204, 204);
