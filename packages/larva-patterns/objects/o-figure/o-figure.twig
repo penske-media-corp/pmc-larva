@@ -3,7 +3,7 @@
 {% endif %}
 
 {% if o_figure_screen_reader_text %}
-	<span class="a-screen-reader-only">{{ o_figure_screen_reader_text }}</span>
+	<span class="lrv-a-screen-reader-only">{{ o_figure_screen_reader_text }}</span>
 {% endif %}
 
 <figure class="o-figure {{ modifier_class }} {{ o_figure_classes }}" style="{{ o_figure_width_attr }}">
@@ -35,10 +35,6 @@
 			<span class="{{ o_figure_credit_classes }}">{{ o_figure_credit_text }}</span>
 		{% endif %}
 	</figcaption>
-{% endif %}
-
-{% if c_play_badge %}
-	{% include "@larva/components/c-play-badge/c-play-badge.twig" with c_play_badge %}
 {% endif %}
 
 </figure>
