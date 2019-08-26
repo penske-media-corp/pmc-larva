@@ -10,7 +10,7 @@ const fs = require( 'fs' );
  **/ 
 
 module.exports = function getSubDirectoryNames( path ) {
-	return fs.readdirSync(path).filter(function (file) {
-		return fs.statSync(path+'/'+file).isDirectory();
+	return fs.readdirSync( path ).filter( function( file ) {
+		return fs.statSync( path + '/' + file ).isDirectory();
 	});
 }
