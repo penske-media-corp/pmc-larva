@@ -1,0 +1,15 @@
+@import 'setup';
+
+.lrv-a-hover-effect {
+	transition: var( --a-hover-effect-property, $transition-hover );
+}
+
+.lrv-a-hover-effect--fade {
+	transform: translate3d( 0px, 0px, 0px ); // stylelint-disable-line unit-blacklist
+}
+
+.lrv-a-hover-effect--fade:hover {
+	--a-hover-effect-property: opacity;
+
+	opacity: 0.5;
+}
