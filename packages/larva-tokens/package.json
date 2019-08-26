@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "gulp-theo": "^2.0.0",
-    "theo": "^8.1.4"
+	"theo": "^8.1.4",
+	"lodash.template": ">=4.5.0"
   }
 }
