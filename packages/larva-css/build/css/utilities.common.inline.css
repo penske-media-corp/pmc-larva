@@ -243,6 +243,9 @@
 .lrv-u-height-100p {
   height: 100%; }
 
+.lrv-u-height-auto {
+  height: auto; }
+
 .lrv-u-max-height-50 {
   max-height: 3.125rem; }
 
@@ -289,8 +292,8 @@
 .lrv-u-margin-b-00 {
   margin-bottom: 0; }
 
-.lrv-u-margin-b-2 {
-  margin-bottom: 2rem; }
+.lrv-u-margin-b-025 {
+  margin-bottom: 0.25rem; }
 
 .lrv-u-margin-b-050 {
   margin-bottom: 0.5rem; }
@@ -298,8 +301,8 @@
 .lrv-u-margin-b-1 {
   margin-bottom: 1rem; }
 
-.lrv-u-margin-b-025 {
-  margin-bottom: 0.25rem; }
+.lrv-u-margin-b-2 {
+  margin-bottom: 2rem; }
 
 .lrv-u-margin-l-025 {
   margin-left: 0.25rem; }
