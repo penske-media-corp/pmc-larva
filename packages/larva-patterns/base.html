@@ -5,24 +5,23 @@
 		<link rel="stylesheet" href="/patterns/scratch-pad.css">
 		<link rel="stylesheet" href="/static/css/prism.css">
 		<link rel="stylesheet" href="/css/generic.common.inline.css">
-		{# <link rel="stylesheet" href="/css/generic.common.async.css"> #}
+		<link rel="stylesheet" href="/css/generic.common.async.css">
 		<link rel="stylesheet" href="/css/algorithms.common.inline.css">
 		<link rel="stylesheet" href="/css/algorithms.common.async.css">
 		<link rel="stylesheet" href="/css/utilities.common.inline.css">
 		<link rel="stylesheet" href="/css/utilities.common.async.css">
 		<link rel="stylesheet" href="/css/js.common.inline.css">
-		{# <link rel="stylesheet" href="/css/js.common.async.css"> #}
+		<link rel="stylesheet" href="/css/js.common.async.css">
 		
 		<script async src="/static/js/prism.js"></script>
 		<script async src="/js/common.js"></script>
 	</head>
 	<body class="lrv-u-margin-a-00">
-		<main>
+		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent">
-				{% include "@larva/_templates/pattern-nav.html" with source %}
-				{% include "@project/_templates/pattern-nav.html" with source %}
+				{% include "@" ~ source ~ "/_templates/pattern-nav.html" with source %}
 			</div>
-			<div>
+			<div class="lrv-u-flex-grow-1">
 				{% block content %}{% endblock %}
 			</div>
 		</main>
