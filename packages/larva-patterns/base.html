@@ -18,8 +18,9 @@
 	</head>
 	<body class="lrv-u-margin-a-00">
 		<main class="lrv-u-flex">
-			<div class="lrv-u-padding-a-1 lrv-a-glue-parent">
-				{% include "@" ~ source ~ "/_templates/pattern-nav.html" with source %}
+			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex">
+				{% include "@larva/_templates/pattern-nav.html" with { source: 'larva' } %}
+				{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
 			</div>
 			<div class="lrv-u-flex-grow-1">
 				{% block content %}{% endblock %}

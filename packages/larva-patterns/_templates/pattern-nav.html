@@ -1,12 +1,16 @@
-<h3 class="lrv-u-padding-r-1">{{ source|capitalize }}</h3>
+{% if 'larva' == source %}
+	{% set patterns = pattern_nav.larva %}
+{% else %}
+	{% set patterns = pattern_nav.project %}
+{% endif %}
 
 <nav style="width: 200px">
-
+	<h3 class="lrv-u-padding-r-1">{{ source|capitalize }}</h3>
 	<h4 class="lrv-u-padding-tb-050">Components</h4>
 
 	<ul class="lrv-a-unstyle-list">
-	{% for c in pattern_nav.components %}
-		{% include "@" ~ source ~ "/components/c-link/c-link.twig" with {
+	{% for c in patterns.components %}
+		{% include "@larva/components/c-link/c-link.twig" with {
 			c_link_text: c,
 			c_link_classes: 'lrv-u-display-block',
 			c_link_url: "/" ~ source ~ "/components/" ~ c ~ "/",
@@ -16,8 +20,8 @@
 
 	<h4 class="lrv-u-padding-tb-050">Objects</h4>
 	<ul class="lrv-a-unstyle-list">
-		{% for o in pattern_nav.objects %}
-			{% include "@" ~ source ~ "/components/c-link/c-link.twig" with {
+		{% for o in patterns.objects %}
+			{% include "@larva/components/c-link/c-link.twig" with {
 				c_link_text: o,
 				c_link_classes: 'lrv-u-display-block',
 				c_link_url: "/" ~ source ~ "/objects/" ~ o ~ "/",
@@ -27,8 +31,8 @@
 
 	<h4 class="lrv-u-padding-tb-050">Modules</h4>
 	<ul class="lrv-a-unstyle-list">
-		{% for m in pattern_nav.modules %}
-			{% include "@" ~ source ~ "/components/c-link/c-link.twig" with {
+		{% for m in patterns.modules %}
+			{% include "@larva/components/c-link/c-link.twig" with {
 				c_link_text: m,
 				c_link_classes: 'lrv-u-display-block',
 				c_link_url: "/" ~ source ~ "/modules/" ~ m ~ "/",
