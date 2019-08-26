@@ -1,5 +1,8 @@
+@import 'setup';
+
 .lrv-a-wrapper {
-	max-width: var( --site-max-width );
+	max-width: $screen-desktop-xl;
+	max-width: var( --site-max-width, #{$screen-desktop-xl} );
 	margin-left: auto;
 	margin-right: auto;
 }

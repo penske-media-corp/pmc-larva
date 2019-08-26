@@ -23,6 +23,16 @@
   .lrv-a-hover-dropup\@tablet:focus .lrv-a-icon-arrow-down {
     --a-icon-transform: rotate(180deg); } }
 
+.lrv-a-hover-effect {
+  transition: var(--a-hover-effect-property, 300ms cubic-bezier(0.19, 1, 0.22, 1)); }
+
+.lrv-a-hover-effect--fade {
+  transform: translate3d(0px, 0px, 0px); }
+
+.lrv-a-hover-effect--fade:hover {
+  --a-hover-effect-property: opacity;
+  opacity: 0.5; }
+
 @media (min-width: 48rem) {
   .lrv-a-icon-after-remove\@tablet::after {
     display: none; } }

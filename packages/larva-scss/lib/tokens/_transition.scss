@@ -6,7 +6,7 @@ $ease-out-cubic:   cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
 $ease-in-out-sine: cubic-bezier( 0.445, 0.050, 0.550, 0.950 );
 $ease-out-expo:    cubic-bezier(0.19, 1, 0.22, 1);
 
-$transition-fade:            $transition-duration-300 $ease-in-out-quad;
-$transition-transform:       $transition-duration-300 $ease-out-cubic;
-$transition-button:          $transition-duration-300 $ease-out-cubic;
-$transition-thumbnail-hover: $transition-duration-300 $ease-out-expo;
+$transition-fade:      $transition-duration-300 $ease-in-out-quad;
+$transition-transform: $transition-duration-300 $ease-out-cubic;
+$transition-button:    $transition-duration-300 $ease-out-cubic;
+$transition-hover:     $transition-duration-300 $ease-out-expo;
