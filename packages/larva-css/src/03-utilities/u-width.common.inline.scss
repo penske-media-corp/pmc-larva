@@ -1,12 +1,16 @@
-@import '@penskemediacorp/larva-scss/dist/tools';
+@import 'setup';
 
-.lrv-u-width-16 {
-	width: pmc-rem(16);
-}
+$widths_map: (
+	'width-30p': 30%,
+	'width-100p': 100%,
+	'width-16': pmc-rem(16),
+);
 
-.lrv-u-width-100p {
-	width: 100%;
-}
+@include basic-utility-generator( 'width', (
+	width-30p,
+	width-100p,
+	width-16,
+), $widths_map );
 
 .lrv-u-max-width-100p {
 	max-width: 100%;
