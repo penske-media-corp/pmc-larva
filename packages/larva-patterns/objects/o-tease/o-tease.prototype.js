@@ -1,22 +1,24 @@
 module.exports = {
 	"o_tease_url": "#",
-	"o_tease_primary_classes": "",
-	"o_tease_secondary_classes": "",
+	"o_tease_classes": "lrv-u-flex lrv-u-align-items-center",
+	"o_tease_link_classes": "lrv-u-display-contents",
+	"o_tease_primary_classes": "lrv-u-flex-grow-1",
+	"o_tease_secondary_classes": "lrv-u-flex-shrink-0 lrv-u-width-30p",
 	"c_heading": {
 		"c_heading_text": "Breaking News",
-		"c_heading_classes": "lrv-u-font-family-balto lrv-u-font-size-20 lrv-u-font-weight-bold u-font-style-italic"
+		"c_heading_classes": "lrv-u-font-family-primary lrv-u-font-size-20 lrv-u-font-weight-bold"
 	},
 	"c_title": {
-		"c_title_text": "here is title text from o-tease.json"
+		"c_title_text": "Title Text"
 	},
 	"c_tagline": {
 		"c_tagline_classes": "",
-		"c_tagline_markup": "here is title text from o-tease.json"
+		"c_tagline_markup": "Tagline Text"
 	},
 	"o_figure": {
 		"o_figure_crop_class": "lrv-u-crop-2x3",
 		"o_figure_alt_attr": "Thumbnail image",
-		"o_figure_image_url": "https://picsum.photos/100/100",
+		"o_figure_placeholder_image_url": "https://placehold.it/300x300",
 		"o_figure_caption_text": "Here in o-tease"
 	}
 };

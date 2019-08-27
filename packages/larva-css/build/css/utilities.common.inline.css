@@ -40,6 +40,9 @@
 .lrv-u-display-block {
   display: block; }
 
+.lrv-u-display-contents {
+  display: contents; }
+
 .lrv-u-display-inline {
   display: inline; }
 
@@ -58,6 +61,9 @@
 
 .lrv-u-flex-grow-1 {
   flex-grow: 1; }
+
+.lrv-u-flex-shrink-0 {
+  flex-shrink: 0; }
 
 .lrv-u-flex-direction-column {
   flex-direction: column; }
@@ -587,11 +593,14 @@
 .lrv-u-whitespace-nowrap {
   white-space: nowrap; }
 
-.lrv-u-width-16 {
-  width: 1rem; }
+.lrv-u-width-30p {
+  width: 30%; }
 
 .lrv-u-width-100p {
   width: 100%; }
+
+.lrv-u-width-16 {
+  width: 1rem; }
 
 .lrv-u-max-width-100p {
   max-width: 100%; }
