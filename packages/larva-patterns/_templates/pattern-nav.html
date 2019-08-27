@@ -1,13 +1,43 @@
-<div class="lrv-u-flex lrv-u-align-items-center" {{ source == 'larva' ? 'style="background: yellow;"' }}>
-	<h3 class="lrv-u-padding-r-1">Larva Modules</h3>
-	<ul class="lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-flex-grow-1">
-		<li class="lrv-u-display-inline-block"><a href="/larva/modules/pmc-footer">PMC Footer</a></li>
-		<li class="lrv-a-icon-before lrv-a-icon-bullet"><a href="/larva/modules/breadcrumbs">Breadcrumbs</a></li>
-		<li class="lrv-a-icon-before lrv-a-icon-bullet"><a href="/larva/modules/article-tags">Article Tags</a></li>
-		<li class="lrv-a-icon-before lrv-a-icon-bullet"><a href="/larva/modules/badge">Badge</a></li>
-		<li class="lrv-a-icon-before lrv-a-icon-bullet"><a href="/larva/modules/footer-menus">Footer Menus</a></li>
-		<li class="lrv-a-icon-before lrv-a-icon-bullet"><a href="/larva/modules/footer-social">Footer Social</a></li>
-		<li class="lrv-a-icon-before lrv-a-icon-bullet"><a href="/larva/modules/footer-tip">Footer Tip</a></li>
-		<li class="lrv-a-icon-before lrv-a-icon-bullet"><a href="/larva/modules/footer-newsletter">Footer Newsletter</a></li>
+{% if 'larva' == source %}
+	{% set patterns = pattern_nav.larva %}
+{% else %}
+	{% set patterns = pattern_nav.project %}
+{% endif %}
+
+<nav style="width: 200px">
+	<h3 class="lrv-u-padding-r-1">{{ source|capitalize }}</h3>
+	<h4 class="lrv-u-padding-tb-050">Components</h4>
+
+	<ul class="lrv-a-unstyle-list">
+	{% for c in patterns.components %}
+		{% include "@larva/components/c-link/c-link.twig" with {
+			c_link_text: c,
+			c_link_classes: 'lrv-u-display-block',
+			c_link_url: "/" ~ source ~ "/components/" ~ c ~ "/",
+		} %}
+	{% endfor %}
 	</ul>
-</div>
+
+	<h4 class="lrv-u-padding-tb-050">Objects</h4>
+	<ul class="lrv-a-unstyle-list">
+		{% for o in patterns.objects %}
+			{% include "@larva/components/c-link/c-link.twig" with {
+				c_link_text: o,
+				c_link_classes: 'lrv-u-display-block',
+				c_link_url: "/" ~ source ~ "/objects/" ~ o ~ "/",
+			} %}
+		{% endfor %}
+	</ul>
+
+	<h4 class="lrv-u-padding-tb-050">Modules</h4>
+	<ul class="lrv-a-unstyle-list">
+		{% for m in patterns.modules %}
+			{% include "@larva/components/c-link/c-link.twig" with {
+				c_link_text: m,
+				c_link_classes: 'lrv-u-display-block',
+				c_link_url: "/" ~ source ~ "/modules/" ~ m ~ "/",
+			} %}
+		{% endfor %}
+	</ul>
+
+</nav>

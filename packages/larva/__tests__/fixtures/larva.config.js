@@ -28,7 +28,7 @@ module.exports = {
 	},
 	
 	patterns: {
-		themePatternsDir: path.resolve( './src/patterns' ),
+		projectPatternsDir: path.join( __dirname, './src/patterns' ),
 		larvaPatternsDir: path.resolve( __dirname, '../../node_modules/@penskemediacorp/larva-patterns' )
 	}
 };

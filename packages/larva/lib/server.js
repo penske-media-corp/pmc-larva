@@ -8,6 +8,7 @@ const port = process.env.NODE_PORT || 3000;
 const getAppConfiguration = require( './utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
+const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
 
 const appConfiguration = getAppConfiguration( 'patterns' );
 const twigPaths = getPatternPathsToLoad( appConfiguration );
@@ -23,6 +24,10 @@ if( appConfiguration.projectPatternsDir ) {
 }
 
 let twing = new TwingEnvironment( loader, { debug: true } );
+let patterns = {
+	larva: {},
+	project: {}
+};
 
 app.use( express.static( 'build' ) );
 
@@ -33,8 +38,17 @@ app.use( '/css' , express.static( path.join( appConfiguration.larvaPatternsDir, 
 app.use( '/patterns' , express.static( appConfiguration.larvaPatternsDir ) );
 app.use( '/static' , express.static( path.join( __dirname, '../static' ) ) );
 
+if( appConfiguration.larvaPatternsDir ) {
+	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
+	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
+	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
+}
+
 if( appConfiguration.projectPatternsDir ) {
 	app.use( '/project' , express.static( path.join( appConfiguration.projectPatternsDir, '../../build/' ) ) );
+	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
+	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
+	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
 }
 
 app.get( '/', function (req, res) {
@@ -46,6 +60,7 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
 	req.params[ 'sprite_data' ] = fs.readFileSync( path.join( __dirname, '../../larva-svg/build/defs/svg/sprite.defs.svg' ) );
+	req.params[ 'pattern_nav' ] = patterns;
 	res.end( twing.render( 'pattern.html', req.params ) );
 })
 
