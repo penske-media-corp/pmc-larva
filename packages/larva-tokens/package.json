@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-tokens",
-  "version": "2.0.2-alpha.0",
+  "version": "2.1.0-alpha.0",
   "description": "Design tokens",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "gulp-theo": "^2.0.0",
-	"theo": "^8.1.4",
-	"lodash.template": ">=4.5.0"
+    "lodash.template": ">=4.5.0",
+    "theo": "^8.1.4"
   }
 }
