@@ -8,7 +8,11 @@
 		<h1 class="lrv-u-font-family-basic lrv-u-padding-a-1 lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' ~ name }}</h1>
 	</div>
 
-	{% include "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
+	{% if 'one-offs' == type %}
+		{% include "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".html" with data %}
+	{% else %}
+		{% include "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
+	{% endif %}
 
 	<div class="lrv-u-background-color-grey-light lrv-a-grid lrv-u-font-size-12 lrv-u-border-t-1 lrv-u-border-color-grey lrv-u-padding-a-2 js-to-hide">
 		<pre class="lrv-a-wrapper language-json"><code>{{ json_pretty|raw }}</code></pre>
