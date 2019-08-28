@@ -1,7 +1,4 @@
-@import '@penskemediacorp/larva-scss/dist/tokens';
-@import '@penskemediacorp/larva-scss/dist/tools';
-
-$ICONS_BUILD_PATH: '/svgs';
+@import 'setup';
 
 @mixin _a-icon-base {
 	content: var(--a-icon-content, '');
@@ -66,7 +63,7 @@ $ICONS_BUILD_PATH: '/svgs';
 .lrv-a-icon-arrow-right,
 .lrv-a-icon-arrow-down,
 .lrv-a-icon-arrow-up {
-	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#arrow'} );
+	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/sprite.stack.svg#arrow'} );
 	--a-icon-height: #{ $font-size-12 };
 }
 
@@ -79,7 +76,7 @@ $ICONS_BUILD_PATH: '/svgs';
 }
 
 .lrv-a-icon-envelope {
-	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/stack/svg/sprite.stack.svg#envelope'} );
+	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/sprite.stack.svg#envelope'} );
 }
 
 .lrv-a-icon-forward-slash,
@@ -100,44 +97,3 @@ $ICONS_BUILD_PATH: '/svgs';
 .lrv-a-icon-bullet {
 	--a-icon-content: '\02022';
 }
-
-	// // ----------
-// // Special Instance for Footer Dropdown Toggle Arrow
-// // ----------
-
-// // @TODO: Move a-icon-after-down to one-offs or an algorithm called a-border-icon / a-toggle-icon.
-// .lrv-a-icon-after-down {
-// 	position: relative;
-// 	display: flex;
-// 	align-items: center;
-// 	flex-wrap: nowrap;
-// 	padding-right: $spacer-025;
-
-// 	&::after {
-// 		content: '';
-// 		margin-left: auto;
-// 		width: 0.75rem;
-// 		height: 0.75rem;
-// 		transform: scaleY(0.85) translate(-50%,-50%) rotate(45deg);
-// 		border: 0.125rem solid;
-// 		border-left: none;
-// 		border-top: none;
-// 		transition: transform 225ms cubic-bezier(0.4,0,0.2,1);
-// 	}
-// }
-
-// .lrv-a-icon-after-down-hide\@mobile {
-// 	@include breakpoint( mobile ) {
-// 		display: block;
-
-// 		&::after {
-// 			display: none;
-// 		}
-// 	}
-// }
-
-// .lrv-a-icon-after-down--has-toggle {
-// 	&::after {
-// 		transform: scaleY(-0.85) translate(-50%,25%) rotate(45deg);
-// 	}
-// }
