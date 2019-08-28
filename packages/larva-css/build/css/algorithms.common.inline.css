@@ -209,7 +209,7 @@
 .lrv-a-icon-arrow-right,
 .lrv-a-icon-arrow-down,
 .lrv-a-icon-arrow-up {
-  --a-icon-url: url( /svgs/stack/svg/sprite.stack.svg#arrow );
+  --a-icon-url: url( ../icons/sprite.stack.svg#arrow );
   --a-icon-height: 0.75rem; }
 
 .lrv-a-icon-arrow-right {
@@ -219,7 +219,7 @@
   --a-icon-transform: rotate(90deg); }
 
 .lrv-a-icon-envelope {
-  --a-icon-url: url( /svgs/stack/svg/sprite.stack.svg#envelope ); }
+  --a-icon-url: url( ../icons/sprite.stack.svg#envelope ); }
 
 .lrv-a-icon-forward-slash::before,
 .lrv-a-icon-bullet::before {
