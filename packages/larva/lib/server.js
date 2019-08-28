@@ -29,14 +29,8 @@ let patterns = {
 	project: {}
 };
 
-app.use( express.static( 'build' ) );
-
-// TODO: these will be updated to paths that point to a node module for use out of the mono-repo
-app.use( '/svgs' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-svg/build' ) ) );
-app.use( '/js' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-js/build' ) ) );
-app.use( '/css' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-css/build/css' ) ) );
-app.use( '/patterns' , express.static( appConfiguration.larvaPatternsDir ) );
-app.use( '/static' , express.static( path.join( __dirname, '../static' ) ) );
+app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
+app.use( '/static' , express.static( path.join( appConfiguration.larvaPatternsDir, '../static' ) ) );
 
 if( appConfiguration.larvaPatternsDir ) {
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
