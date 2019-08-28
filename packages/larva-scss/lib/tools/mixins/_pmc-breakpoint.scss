@@ -3,6 +3,8 @@
 @mixin pmc-breakpoint($point) {
 	@if $point == desktop-xl {
 		@media (min-width: $screen-desktop-xl) { @content; }
+	} @else if $point == desktop-max {
+		@media (max-width: $screen-desktop-max) { @content; }
 	} @else if $point == desktop {
 		@media (min-width: $screen-desktop) { @content; }
 	} @else if $point == tablet {
