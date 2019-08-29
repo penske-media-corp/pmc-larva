@@ -1,5 +1,4 @@
 module.exports = {
-	buildPatternFilePath: require( './buildPatternFilePath' ),
 	getAppConfiguration: require( './getAppConfiguration' ),
 	getPatternData: require( './getPatternData' ),
 	getPatternDataPath: require( './getPatternDataPath' ),

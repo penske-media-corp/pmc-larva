@@ -10,6 +10,22 @@ const expectedSchema = require( fixture + '/src/patterns/components/c-nav-link/c
 const expectedVariantSchema = require( fixture + '/src/patterns/components/c-nav-link/c-nav-link.featured.js' );
 const expectedSchemaFromJson = require( fixture + '/src/patterns/objects/o-crap/o-crap.json' );
 const expectedPath = fixture + '/src/patterns/objects/o-nav/o-nav.json';
+const expectedOneOffSchema = require( fixture + '/src/patterns/one-offs/newswire/newswire.prototype.js' );
+
+let compStub = {
+	name: 'c-nav-link',
+	type: 'components'
+};
+
+const objStub = {
+	name: 'o-crap',
+	type: 'objects'
+};
+
+const oneOffStub = {
+	name: 'newswire',
+	type: 'one-offs'
+};
 
 describe( 'getPatternData', () => {
 	it( 'throws an error if no pattern prototype is found', () => {
@@ -17,15 +33,20 @@ describe( 'getPatternData', () => {
 	});
 
 	it( 'first returns the pattern object if the schema is found', () => {
-		assert.equal( getPatternData( fixture + '/src/patterns', { name: 'c-nav-link' } ), expectedSchema );
+		assert.equal( getPatternData( fixture + '/src/patterns', compStub ), expectedSchema );
+	});
+
+	it( 'returns the pattern object for one-offs', () => {
+		assert.equal( getPatternData( fixture + '/src/patterns', oneOffStub ), expectedOneOffSchema );
 	});
 
 	it( 'returns the pattern json object if no prototype is found', () => {
-		assert.equal( getPatternData( fixture + '/src/patterns', { name: 'o-crap' } ), expectedSchemaFromJson );
+		assert.equal( getPatternData( fixture + '/src/patterns', objStub ), expectedSchemaFromJson );
 	});
 
 	it( 'gets a variant specified in params', () => {
-		assert.equal( getPatternData( fixture + '/src/patterns', { name: 'c-nav-link', variant: 'featured' } ), expectedVariantSchema );
+		compStub.variant = 'featured';
+		assert.equal( getPatternData( fixture + '/src/patterns', compStub ), expectedVariantSchema );
 	});
 
 });
