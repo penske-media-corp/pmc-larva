@@ -79,6 +79,10 @@
 	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/sprite.stack.svg#envelope'} );
 }
 
+.lrv-a-icon-search {
+	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/sprite.stack.svg#search'} );
+}
+
 .lrv-a-icon-forward-slash,
 .lrv-a-icon-bullet {
 	@include _a-icon-reset( before ) {

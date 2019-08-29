@@ -70,6 +70,31 @@
     height: 100%;
     object-fit: cover; }
 
+.lrv-a-glue-parent {
+  position: relative; }
+
+.lrv-a-glue {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  top: var(--a-glue-top, initial);
+  bottom: var(--a-glue-bottom, initial);
+  right: var(--a-glue-right, initial);
+  left: var(--a-glue-left, initial); }
+
+.lrv-a-glue--l-0 {
+  --a-glue-left: 0; }
+
+.lrv-a-glue--r-0 {
+  --a-glue-right: 0; }
+
+.lrv-a-glue--t-0 {
+  --a-glue-top: 0; }
+
+.lrv-a-glue--b-0 {
+  --a-glue-bottom: 0; }
+
 .lrv-a-grid {
   display: flex;
   flex-wrap: wrap;
@@ -137,31 +162,6 @@
     .lrv-a-cols3\@desktop > * {
       flex-basis: 33.33333%; } }
 
-.lrv-a-glue-parent {
-  position: relative; }
-
-.lrv-a-glue {
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 2;
-  top: var(--a-glue-top, initial);
-  bottom: var(--a-glue-bottom, initial);
-  right: var(--a-glue-right, initial);
-  left: var(--a-glue-left, initial); }
-
-.lrv-a-glue--l-0 {
-  --a-glue-left: 0; }
-
-.lrv-a-glue--r-0 {
-  --a-glue-right: 0; }
-
-.lrv-a-glue--t-0 {
-  --a-glue-top: 0; }
-
-.lrv-a-glue--b-0 {
-  --a-glue-bottom: 0; }
-
 .lrv-a-icon {
   content: var(--a-icon-content, "");
   filter: var(--a-icon-filter, none);
@@ -220,6 +220,9 @@
 
 .lrv-a-icon-envelope {
   --a-icon-url: url( ../icons/sprite.stack.svg#envelope ); }
+
+.lrv-a-icon-search {
+  --a-icon-url: url( ../icons/sprite.stack.svg#search ); }
 
 .lrv-a-icon-forward-slash::before,
 .lrv-a-icon-bullet::before {
