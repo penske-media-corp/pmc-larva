@@ -1,12 +1,12 @@
 const fs = require( 'fs' );
 const chalk = require( 'chalk' );
-const buildPatternFilePath = require( './buildPatternFilePath' );
+const path = require( 'path' );
 
 module.exports = function getPatternDataPath( patternsPath, params ) {
 	let ext = params.variant ? params.variant : 'prototype';
 
-	const protoPath = buildPatternFilePath( patternsPath, params.name, '.' + ext + '.js' ).toString();
-	const jsonPath = buildPatternFilePath( patternsPath, params.name, '.json' ).toString();
+	const protoPath = path.join( patternsPath, params.type, params.name, params.name + '.' + ext + '.js' );
+	const jsonPath = path.join( patternsPath, params.type, params.name, params.name + '.json' )
 
 	if ( fs.existsSync( protoPath ) ) {
 		return protoPath;
