@@ -4,13 +4,12 @@
  *
  * @param {string} buildPath
  */
-export default function( buildPath ) {
+export default function( iconPath ) {
 
 	const ajax = new XMLHttpRequest();
 	const div = document.createElement( 'div' );
-	const path = buildPath + '/images/svg-sprite.svg?v=1';
 
-	ajax.open( 'GET', path, true );
+	ajax.open( 'GET', iconPath, true );
 	ajax.send();
 
 	ajax.onload = function() {
