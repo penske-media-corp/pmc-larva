@@ -1,11 +1,15 @@
 @import 'setup';
 
+.wf-active {
+	--font-family-primary: var( --font-family-primary-fancy );
+	--font-family-secondary: var( --font-family-secondary-fancy );
+}
+
 body {
 
-	// @todo: this is outside the system and it should use the font-family mixin.
-	// That mixin needs to support `&.wf-active`, right now it only supports `.wf-active &`.
 	// stylelint-disable property-blacklist
-	font-family: Helvetica, sans-serif;
+	font-family: map-get( $TOKENS-MAP, font-family-body );
+	font-family: var( --font-family-body, #{map-get( $TOKENS-MAP, font-family-body )} );
 
 	margin: $spacer-0;
 
