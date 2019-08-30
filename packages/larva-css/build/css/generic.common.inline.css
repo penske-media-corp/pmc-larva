@@ -25,6 +25,10 @@ svg {
 .wf-active {
   --font-family-primary: var( --font-family-primary-fancy );
   --font-family-secondary: var( --font-family-secondary-fancy ); }
+  
+button {
+  padding-left: 0;
+  padding-right: 0; }
 
 body {
   font-family: Helvetica, sans-serif;
@@ -36,10 +40,10 @@ strong {
   font-weight: 700; }
 
 a {
-  color: var(--color-brand-primary, );
+  color: var(--color-brand-primary, #417ef4);
   text-decoration: none; }
   a:hover {
-    color: var(--color-brand-primary, ); }
+    color: var(--color-brand-primary, #417ef4); }
 
 h1,
 h2,
