@@ -1,0 +1,25 @@
+<style>
+.o-icon-button--with-label {
+	display: flex;
+	align-items: center;
+}
+
+</style>
+
+{% if o_icon_button_url %}
+	<a href="{{ o_button_url }}" class="{{ o_icon_button_classes }}">
+{% else %}
+	<button class="o-icon-button {{ o_icon_button_classes }}">
+{% endif %}
+
+	{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
+
+	{% if c_span %}
+		{% include "@larva/components/c-span/c-span.twig" with c_span %}
+	{% endif %}
+
+{% if o_icon_button_url %}
+	</a>
+{% else %}
+	</button>
+{% endif %}
