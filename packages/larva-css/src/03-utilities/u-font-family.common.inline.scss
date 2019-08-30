@@ -19,8 +19,3 @@
 	font-family: map-get( $TOKENS-MAP, font-family-basic );
 	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
 }
-
-.lrv-u-font-family-basic {
-	font-family: map-get( $TOKENS-MAP, font-family-basic );
-	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
-}
