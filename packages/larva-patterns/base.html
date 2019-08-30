@@ -11,13 +11,15 @@
 			<link rel="stylesheet" href="/packages/larva-css/build/css/utilities.common.async.css">
 			<link rel="stylesheet" href="/packages/larva-css/build/css/js.common.inline.css">
 		{% else %}
-			<link rel="stylesheet" href="/build/css/generic.common.inline.css">
-			<link rel="stylesheet" href="/build/css/algorithms.common.inline.css">
-			<link rel="stylesheet" href="/build/css/algorithms.common.async.css">
-			<link rel="stylesheet" href="/build/css/utilities.common.inline.css">
-			<link rel="stylesheet" href="/build/css/utilities.common.async.css">
-			<link rel="stylesheet" href="/build/css/js.common.inline.css">
+			<link rel="stylesheet" href="/assets/build/css/generic.common.inline.css">
+			<link rel="stylesheet" href="/assets/build/css/algorithms.common.inline.css">
+			<link rel="stylesheet" href="/assets/build/css/algorithms.common.async.css">
+			<link rel="stylesheet" href="/assets/build/css/utilities.common.inline.css">
+			<link rel="stylesheet" href="/assets/build/css/utilities.common.async.css">
+			<link rel="stylesheet" href="/assets/build/css/js.common.inline.css">
 		{% endif %}
+
+		{% block stylesheets %}{% endblock %}
 
 		<link rel="stylesheet" href="/packages/larva/static/css/prism.css">
 	</head>
@@ -37,7 +39,9 @@
 				{% block content %}{% endblock %}
 			</div>
 		</main>
-
+		
+		{% block scripts %}{% endblock %}
+		
 		<script src="/packages/larva/static/js/scripts.js"></script>
 		<script src="/packages/larva/static/js/prism.js"></script>
 	</body>

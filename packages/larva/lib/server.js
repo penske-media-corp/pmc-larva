@@ -39,7 +39,7 @@ if( appConfiguration.larvaPatternsDir ) {
 }
 
 if( appConfiguration.projectPatternsDir ) {
-	app.use( '/build' , express.static( path.join( appConfiguration.projectPatternsDir, '../../build/' ) ) );
+	app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
 	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
 	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
 	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
