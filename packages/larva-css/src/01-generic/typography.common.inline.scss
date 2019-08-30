@@ -8,8 +8,8 @@
 body {
 
 	// stylelint-disable property-blacklist
-	font-family: map-get( $TOKENS-MAP, font-family-body );
-	font-family: var( --font-family-body, #{map-get( $TOKENS-MAP, font-family-body )} );
+	font-family: map-get( $TOKENS-MAP, font-family-basic );
+	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
 
 	margin: $spacer-0;
 
