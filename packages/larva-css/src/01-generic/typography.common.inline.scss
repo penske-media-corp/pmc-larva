@@ -20,12 +20,12 @@ strong {
 
 a {
 	color: map-get( $TOKENS-MAP, brand-primary );
-	color: var( --color-brand-primary, #{map-get( $TOKENS-MAP, brand-primary )} );
+	color: var( --color-brand-primary, #{map-get( $TOKENS-MAP, color-brand-primary )} );
 	text-decoration: none;
 
 	&:hover {
 		color: map-get( $TOKENS-MAP, brand-primary );
-		color: var( --color-brand-primary, #{map-get( $TOKENS-MAP, brand-primary )} );
+		color: var( --color-brand-primary, #{map-get( $TOKENS-MAP, color-brand-primary )} );
 	}
 }
 

@@ -59,6 +59,10 @@ svg {
 ::placeholder {
   color: #e6e6e6; }
 
+button {
+  padding-left: 0;
+  padding-right: 0; }
+
 body {
   font-family: Helvetica, sans-serif;
   margin: 0;
@@ -68,10 +72,10 @@ strong {
   font-weight: 700; }
 
 a {
-  color: var(--color-brand-primary, );
+  color: var(--color-brand-primary, #417ef4);
   text-decoration: none; }
   a:hover {
-    color: var(--color-brand-primary, ); }
+    color: var(--color-brand-primary, #417ef4); }
 
 h1,
 h2,

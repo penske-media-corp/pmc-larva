@@ -39,22 +39,29 @@ if( appConfiguration.larvaPatternsDir ) {
 }
 
 if( appConfiguration.projectPatternsDir ) {
-	app.use( '/project' , express.static( path.join( appConfiguration.projectPatternsDir, '../../build/' ) ) );
+	app.use( '/build' , express.static( path.join( appConfiguration.projectPatternsDir, '../../build/' ) ) );
 	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
 	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
 	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
 }
 
 app.get( '/', function (req, res) {
-	res.end( twing.render( 'index.html', { name: 'Welcome' } ) );
+	req.params[ 'source' ] = 'larva';
+	req.params[ 'pattern_nav' ] = patterns;
+	req.params[ 'name' ] = 'Welcome';
+	res.end( twing.render( 'index.html', req.params ) );
 });
 
 app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	let patternsPath = 'larva' === req.params.source ? appConfiguration.larvaPatternsDir : appConfiguration.projectPatternsDir;
-	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
-	req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
-	req.params[ 'sprite_data' ] = fs.readFileSync( path.join( __dirname, '../../larva-svg/build/defs/svg/sprite.defs.svg' ) );
-	req.params[ 'pattern_nav' ] = patterns;
+
+	if ( 'larva' == req.params.source || 'project' == req.params.source ) {
+		req.params[ 'data' ] = getPatternData( patternsPath, req.params );
+		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
+		req.params[ 'sprite_data' ] = fs.readFileSync( path.join( __dirname, '../../larva-svg/build/defs/svg/sprite.defs.svg' ) );
+		req.params[ 'pattern_nav' ] = patterns;
+	}
+
 	res.end( twing.render( 'pattern.html', req.params ) );
 })
 
