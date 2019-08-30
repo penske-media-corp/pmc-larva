@@ -1,96 +1,94 @@
-const path = require('path');
-const { task, src, watch, series, dest } = require('gulp');
-const sass = require('gulp-sass');
-const concat = require('gulp-concat');
-const gulpStylelint = require('gulp-stylelint');
-const rename = require('gulp-rename');
+const gulp = require( 'gulp' );
+const path = require( 'path' );
+const sass = require( 'gulp-sass' );
+const concat = require( 'gulp-concat' );
+const gulpStylelint = require( 'gulp-stylelint' );
+const clean = require( 'gulp-clean' );
 
 const sassOpts = {
 	includePaths: [
 		path.resolve( './node_modules' ),
-		path.resolve( './src/' ),
+		path.resolve( './src' )
 	]
 };
 
+const css_dest = './build/css/';
+
+const css_files = {
+	generic_inline: {
+		css: {
+			orig: ['./src/**/*.common.inline.scss'],
+			lrv_src: lrvCssDir + 'generic.common.inline.css',
+			file: 'generic.common.inline.css'
+		}
+	},
+	algorithms_async: {
+		css: {
+			orig: ['./src/**/a-*.common.async.scss'],
+			lrv_src: lrvCssDir + 'algorithms.common.async.css',
+			file: 'algorithms.common.async.css'
+		}
+	},
+	algorithms_inline: {
+		css: {
+			orig: ['./src/**/a-*.common.inline.scss'],
+			lrv_src: lrvCssDir + 'algorithms.common.inline.css',
+			file: 'algorithms.common.inline.css'
+		}
+	},
+	utilities_async: {
+		css: {
+			orig: ['./src/**/u-*.common.async.scss'],
+			lrv_src: lrvCssDir + 'utilities.common.async.css',
+			file: 'utilities.common.async.css'
+		}
+	},
+	utilities_inline: {
+		css: {
+			orig: ['./src/**/u-*.common.inline.scss'],
+			lrv_src: lrvCssDir + 'utilities.common.inline.css',
+			file: 'utilities.common.inline.css'
+		}
+	},
+	js_inline: {
+		css: {
+			orig: ['./src/**/js-*.common.inline.scss'],
+			lrv_src: lrvCssDir + 'js.common.inline.css',
+			file: 'js.common.inline.css'
+		}
+	}
+};
+
+function clean_css() {
+	return gulp.src( css_dest, { read: false } ).pipe( clean() );
+}
+
 function styles( done ) {
-	// Generic
-	src('./src/*generic/*.common.inline.scss')
-		.pipe(gulpStylelint({
-			failAfterError: false,
-			reporters: [{
-				formatter: 'string',
-				console: true,
-			}]
-		}))
-		.pipe(sass( sassOpts ).on( 'error', sass.logError) )
-		.pipe(concat('generic.common.inline.css'))
-		.pipe(dest('./build/css/'));
-
-	src('./src/*generic/*.common.async.scss')
-		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('generic.common.async.css'))
-		.pipe(dest('./build/css/'));
-
-	// Algorithms
-	// TODO: make this more DRY
-	src('./src/**/a-*.common.inline.scss')
-		.pipe(gulpStylelint({
-			failAfterError: false,
-			reporters: [{
-				formatter: 'string',
-				console: true,
-			}]
-		}))
-		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('algorithms.common.inline.css'))
-		.pipe(dest('./build/css/'));
-
-	src('./src/**/a-*.common.async.scss')
-		.pipe(gulpStylelint({
-			failAfterError: false,
-			reporters: [{
-				formatter: 'string',
-				console: true,
-			}]
-		}))
-		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('algorithms.common.async.css'))
-		.pipe(dest('./build/css/'));
-
-	// Utilities
-	src('./src/**/u-*.common.inline.scss')
-		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('utilities.common.inline.css'))
-		.pipe(dest('./build/css/'));
-
-	src('./src/**/u-*.common.async.scss')
-		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('utilities.common.async.css'))
-		.pipe(dest('./build/css/'));
-
-	// JS
-	src('./src/**/js-*.common.inline.scss')
-		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('js.common.inline.css'))
-		.pipe(dest('./build/css/'));
-
-	src('./src/**/js-*.common.async.scss')
-		.pipe(sass( sassOpts ).on('error', sass.logError))
-		.pipe(concat('js.common.async.css'))
-		.pipe(dest('./build/css/'));
-
+	clean_css();
+	Object.keys( css_files ).forEach( val => {
 	
-	// If we want to handle JS-related CSS on a module-by-module basis
-	// src('./src/**/js-*.scss')
-	// 	.pipe(sass( sassOpts ).on('error', sass.logError))
-	// 	.pipe(rename({
-	// 		dirname: 'js',
-	// 	}))
-	// 	.pipe(dest('./build/css/'));
+		gulp.src( css_files[val].css.orig ).
+				pipe( gulpStylelint( {
+					failAfterError: false,
+					reporters: [
+						{
+							formatter: 'string',
+							console: true
+						}]
+				} ) ).
+				pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
+				pipe( postcss( [cssnano()] ) ).
+				pipe( concat( css_files[val].css.file ) ).
+				pipe( gap.prependFile( css_files[val].css.lrv_src ) ).
+				pipe( postcss( [cssnano()] ) ).
+				pipe( gulp.dest( css_dest ) );
 
+	} );
 	done();
 }
 
-exports.default = function() {
-	watch( './src/**/*.scss', series( styles ) );
-}
+exports.watch = function() {
+	gulp.watch( './src/**/*.scss', styles );
+};
+
+exports.default = styles;
