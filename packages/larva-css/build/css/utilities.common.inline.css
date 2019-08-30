@@ -72,10 +72,6 @@
   .lrv-u-flex-direction-column\@mobile-max {
     flex-direction: column; } }
 
-.wf-active {
-  --font-family-primary: var( --font-family-primary-fancy );
-  --font-family-secondary: var( --font-family-secondary-fancy ); }
-
 .lrv-u-font-family-primary {
   font-family: Georgia, serif;
   font-family: var(--font-family-primary, Georgia, serif); }

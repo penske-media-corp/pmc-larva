@@ -162,6 +162,31 @@
     .lrv-a-cols3\@desktop > * {
       flex-basis: 33.33333%; } }
 
+.lrv-a-screen-reader-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal; }
+
+@media (max-width: 47.999rem) {
+  .lrv-a-screen-reader-only\@mobile-max {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal; } }
+
 .lrv-a-icon {
   content: var(--a-icon-content, "");
   filter: var(--a-icon-filter, none);
@@ -249,31 +274,6 @@
 
 .lrv-a-icon-bullet {
   --a-icon-content: '\02022'; }
-
-.lrv-a-screen-reader-only {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  word-wrap: normal; }
-
-@media (max-width: 47.999rem) {
-  .lrv-a-screen-reader-only\@mobile-max {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal; } }
 
 :root {
   --a-space-children-spacer: 0; }

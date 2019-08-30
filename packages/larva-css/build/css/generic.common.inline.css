@@ -1,40 +1,3 @@
-:root {
-  --color-white: rgb(255, 255, 255);
-  --color-grey-light: rgb(230, 230, 230);
-  --color-grey: rgb(140, 140, 140);
-  --color-grey-dark: rgb(106, 106, 106);
-  --color-black: rgb(0, 0, 0);
-  /* The webfont, loaded async */
-  --font-family-primary-fancy: Courier, serif;
-  --font-family-primary: Georgia, serif;
-  /* The webfont, loaded async */
-  --font-family-secondary-fancy: Papyrus, serif;
-  --font-family-secondary: Helvetica, serif;
-  --font-family-body: Georgia, serif;
-  --font-family-basic: Helvetica, sans-serif;
-  --background-color-white: rgb(255, 255, 255);
-  --background-color-grey-lightest: rgb(247, 247, 247);
-  --background-color-grey-light: rgb(204, 204, 204);
-  --background-color-grey: rgb(140, 140, 140);
-  --background-color-grey-dark: rgb(106, 106, 106);
-  --background-color-grey-darkest: rgb(50, 50, 50);
-  --background-color-black: rgb(0, 0, 0);
-  --line-height-small: 1.1;
-  --line-height-normal: 1.35;
-  --line-height-copy: 1.5;
-  --line-height-large: 1.85;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --border-color-white: rgb(255, 255, 255);
-  --border-color-grey-lightest: rgb(247, 247, 247);
-  --border-color-grey-light: rgb(204, 204, 204);
-  --border-color-grey: rgb(140, 140, 140);
-  --border-color-grey-dark: rgb(106, 106, 106);
-  --background-color-brand-primary: rgb(65, 126, 244);
-  --color-brand-primary: rgb(65, 126, 244);
-  --border-color-brand-primary: rgb(65, 126, 244); }
-
 * {
   box-sizing: border-box; }
 
@@ -59,12 +22,17 @@ svg {
 ::placeholder {
   color: #e6e6e6; }
 
+.wf-active {
+  --font-family-primary: var( --font-family-primary-fancy );
+  --font-family-secondary: var( --font-family-secondary-fancy ); }
+  
 button {
   padding-left: 0;
   padding-right: 0; }
 
 body {
   font-family: Helvetica, sans-serif;
+  font-family: var(--font-family-basic, Helvetica, sans-serif);
   margin: 0;
   line-height: 1.35; }
 

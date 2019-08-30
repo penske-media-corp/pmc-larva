@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "../../node_modules/.bin/jest",
-    "watch": "node node_modules/@penskemediacorp/larva/lib/watch.js"
+    "watch": "node node_modules/@penskemediacorp/larva/lib/watch.js",
+    "build": "../../node_modules/.bin/gulp"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
