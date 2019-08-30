@@ -1,9 +1,21 @@
+/**
+ * Things that are different from AMH:
+ * - path resolved to src/ not src/scss
+ * - no need to concat
+ * - remove lrvCssDir
+ * 
+ * Potential improvement: make the config object dynamic, determine the
+ * dest file according to the changed file.
+ */
+
 const gulp = require( 'gulp' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
 const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const clean = require( 'gulp-clean' );
+const postcss = require( 'gulp-postcss' );
+const cssnano = require( 'cssnano' );
 
 const sassOpts = {
 	includePaths: [
@@ -17,43 +29,37 @@ const css_dest = './build/css/';
 const css_files = {
 	generic_inline: {
 		css: {
-			orig: ['./src/**/*.common.inline.scss'],
-			lrv_src: lrvCssDir + 'generic.common.inline.css',
+			orig: ['./src/01-generic/*.common.inline.scss'],
 			file: 'generic.common.inline.css'
 		}
 	},
 	algorithms_async: {
 		css: {
 			orig: ['./src/**/a-*.common.async.scss'],
-			lrv_src: lrvCssDir + 'algorithms.common.async.css',
 			file: 'algorithms.common.async.css'
 		}
 	},
 	algorithms_inline: {
 		css: {
 			orig: ['./src/**/a-*.common.inline.scss'],
-			lrv_src: lrvCssDir + 'algorithms.common.inline.css',
 			file: 'algorithms.common.inline.css'
 		}
 	},
 	utilities_async: {
 		css: {
 			orig: ['./src/**/u-*.common.async.scss'],
-			lrv_src: lrvCssDir + 'utilities.common.async.css',
 			file: 'utilities.common.async.css'
 		}
 	},
 	utilities_inline: {
 		css: {
 			orig: ['./src/**/u-*.common.inline.scss'],
-			lrv_src: lrvCssDir + 'utilities.common.inline.css',
 			file: 'utilities.common.inline.css'
 		}
 	},
 	js_inline: {
 		css: {
 			orig: ['./src/**/js-*.common.inline.scss'],
-			lrv_src: lrvCssDir + 'js.common.inline.css',
 			file: 'js.common.inline.css'
 		}
 	}
@@ -77,9 +83,7 @@ function styles( done ) {
 						}]
 				} ) ).
 				pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
-				pipe( postcss( [cssnano()] ) ).
 				pipe( concat( css_files[val].css.file ) ).
-				pipe( gap.prependFile( css_files[val].css.lrv_src ) ).
 				pipe( postcss( [cssnano()] ) ).
 				pipe( gulp.dest( css_dest ) );
 
