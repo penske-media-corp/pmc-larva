@@ -1,10 +1,5 @@
 @import 'setup';
 
-.wf-active {
-	--font-family-primary: var( --font-family-primary-fancy );
-	--font-family-secondary: var( --font-family-secondary-fancy );
-}
-
 .lrv-u-font-family-primary {
 	font-family: map-get( $TOKENS-MAP, font-family-primary );
 	font-family: var( --font-family-primary, #{map-get( $TOKENS-MAP, font-family-primary )} );

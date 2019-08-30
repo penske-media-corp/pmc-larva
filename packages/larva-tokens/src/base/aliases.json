@@ -9,13 +9,17 @@
 		"GREY_35": "#6A6A6A",
 		"GREY_20": "#323232",
 		"GREY_10": "#191919",
+		"RED_45": "#E40000",
 		"BLACK": "#000000",
+		"BLACK_20": "#333333",
 		"TEAL_31": "#316E6E",
 		"BLUE_61": "#417EF4",
 		"SOURCE_SANS_PRO": "Source Sans Pro, sans-serif",
 		"BONNIE": "Bonnie, Georgia, serif",
 		"OVERPASS": "Overpass, sans-serif",
 		"CANELA": "Canela, serif",
-		"TIMES_NEW_ROMAN": "'Times New Roman', serif"
+		"TIMES_NEW_ROMAN": "'Times New Roman', serif",
+		"HELVETICA": "Helvetica, sans-serif",
+		"HELVETICA_NEUE": "'Helvetica Neue', Helvetica, Arial, sans-serif"
 	}
 }
