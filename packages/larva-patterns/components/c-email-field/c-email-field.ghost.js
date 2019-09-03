@@ -1,7 +1,7 @@
 
 const path = require( 'path' );
-const clone = require( '@penskemediacorp/larva' ).clone;// This should be in this repo, probably
-const c_email_field = clone( path.resolve( __dirname, './c-email-field.prototype' ) );
+const c_email_field_prototype = require( './c-email-field.prototype' );
+const c_email_field = Object.assign( {}, c_email_field_prototype );
 
 c_email_field.c_email_field_classes = "lrv-u-font-size-14 lrv-u-flex lrv-u-align-items-center";
 c_email_field.c_email_field_label_classes = "lrv-u-padding-r-050 lrv-u-font-weight-bold lrv-u-whitespace-nowrap";
