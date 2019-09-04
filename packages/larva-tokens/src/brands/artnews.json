@@ -14,17 +14,19 @@
 			"category": "text-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!SOURCE_SANS_PRO}",
+			"value": "{!NEUE_HAAS_UNICA}",
 			"type": "font-family",
-			"category": "font-family"
+			"category": "font-family",
+			"comment": "Available via Typekit."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!BONNIE}",
+			"value": "{!DOMAINE_DISPLAY_NARROW}",
 			"type": "font-family",
-			"category": "font-family"
+			"category": "font-family",
+			"comment": "Available via @font-face."
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "{!TIMES_NEW_ROMAN}",
+			"value": "{!HELVETICA_NEUE}",
 			"type": "font-family",
 			"category": "font-family"
 		}

@@ -14,12 +14,19 @@
 			"category": "text-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!CANELA}",
+			"value": "{!SCHNYDER_COND_M}",
 			"type": "font-family",
-			"category": "font-family"
+			"category": "font-family",
+			"comment": "Available via @font-face."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!OVERPASS}",
+			"value": "{!WARNACK_PRO}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family"
 		}
