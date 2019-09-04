@@ -129,7 +129,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 
 			// Remove the Twig filter from the variable name
 			if ( $has_filter ) {
-				$string_parts = explode( '|', $variable_name );
+				$string_parts  = explode( '|', $variable_name );
 				$variable_name = $string_parts[0];
 			}
 
