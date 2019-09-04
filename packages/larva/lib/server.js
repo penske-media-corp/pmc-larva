@@ -58,7 +58,6 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	if ( 'larva' == req.params.source || 'project' == req.params.source ) {
 		req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
-		req.params[ 'sprite_data' ] = fs.readFileSync( path.join( __dirname, '../../larva-svg/build/defs/svg/sprite.defs.svg' ) );
 		req.params[ 'pattern_nav' ] = patterns;
 	}
 

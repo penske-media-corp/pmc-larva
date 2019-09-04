@@ -19,7 +19,12 @@
 		"OVERPASS": "Overpass, sans-serif",
 		"CANELA": "Canela, serif",
 		"TIMES_NEW_ROMAN": "'Times New Roman', serif",
+		"GEORGIA": "Georgia, serif",
 		"HELVETICA": "Helvetica, sans-serif",
-		"HELVETICA_NEUE": "'Helvetica Neue', Helvetica, Arial, sans-serif"
+		"HELVETICA_NEUE": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+		"WARNOCK_PRO": "'warnock-pro'",
+		"NEUE_HAAS_UNICA": "'neue-haas-unica'",
+		"DOMAINE_DISPLAY_NARROW": "DomaineDisplayNarrow, Georgia, serif",
+		"SCHNYDER_COND_M": "SchnyderCondM, serif"
 	}
 }

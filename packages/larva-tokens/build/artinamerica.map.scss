@@ -5,9 +5,11 @@ $artinamerica-map: (
   'color-grey': (rgb(140, 140, 140)),
   'color-grey-dark': (rgb(106, 106, 106)),
   'color-black': (rgb(0, 0, 0)),
-  'font-family-primary-fancy': (Canela, serif),
+  /* Available via @font-face. */
+  'font-family-primary-fancy': (SchnyderCondM, serif),
   'font-family-primary': (Georgia, serif),
-  'font-family-secondary-fancy': (Overpass, sans-serif),
+  /* Available via Typekit. */
+  'font-family-secondary-fancy': ('warnock-pro'),
   'font-family-secondary': (Helvetica, serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
