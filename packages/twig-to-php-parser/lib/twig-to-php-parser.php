@@ -119,11 +119,19 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 		foreach ( $mustache_matches[0] as $key => $match ) {
 
 			$variable_name = $mustache_matches[2][ $count ];
+
 			$is_attr       = strpos( $match, 'class' ) || strpos( $match, 'name' ) || strpos( $match, 'attr' );
 			$is_url        = strpos( $match, 'url' );
 			$is_text       = strpos( $match, 'text' );
 			$is_data_attr  = strpos( $match, 'attributes' );
 			$is_markup     = strpos( $match, 'markup' );
+			$has_filter    = strpos( $match, '|' );
+
+			// Remove the Twig filter from the variable name
+			if ( $has_filter ) {
+				$string_parts = explode( '|', $variable_name );
+				$variable_name = $string_parts[0];
+			}
 
 			if ( ! empty( $is_url ) ) {
 				$mustache_replacements[ $count ] = '<?php echo esc_url( $' . $variable_name . ' ?? \'\' ); ?>';
