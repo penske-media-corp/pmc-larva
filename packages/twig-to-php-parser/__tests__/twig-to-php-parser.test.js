@@ -16,6 +16,7 @@ const patternShortPaths = [
 	'components/c-byline.php',
 	'components/c-heading.php',
 	'components/c-button.php',
+	'components/c-logo.php',
 	'objects/o-nav.php',
 	'objects/o-story-list.php',
 	'modules/trending.php',
