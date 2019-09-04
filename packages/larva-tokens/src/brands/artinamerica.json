@@ -20,7 +20,7 @@
 			"comment": "Available via @font-face."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!WARNACK_PRO}",
+			"value": "{!WARNOCK_PRO}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."
