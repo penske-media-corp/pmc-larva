@@ -6,7 +6,7 @@ const footer_tip = clone( path.resolve( __dirname, '../footer-tip/footer-tip.pro
 const footer_newsletter = clone( path.resolve( __dirname, '../footer-newsletter/footer-newsletter.prototype' ) );
 
 module.exports = {
-	footer_classes: "lrv-u-text-align-center lrv-u-background-color-black lrv-u-color-white lrv-u-padding-tb-1",
+	footer_classes: "lrv-u-background-color-black lrv-u-color-white lrv-u-padding-tb-1",
 	footer_menus: footer_menus,
 	footer_social: footer_social,
 	footer_tip: footer_tip,
