@@ -15,7 +15,7 @@
 {% if o_figure_image_markup %}
 	{{ o_figure_image_markup }}
 {% else %}
-	<img class="o-figure__image {{ o_figure_image_classes }}" src="{{ o_figure_placeholder_image_url }}" data-lazy-src="{{ o_figure_image_url }}" alt="{{ o_figure_alt_attr }}">
+	<img class="o-figure__image {{ o_figure_image_classes }}" src="{{ o_figure_placeholder_image_url }}" data-lazy-src="{{ o_figure_image_url }}" alt="{{ o_figure_alt_attr }}" data-lazy-srcset="{{ o_figure_lazy_srcset_attr }}" data-lazy-sizes="{{ o_figure_lazy_sizes_attr }}">
 {% endif %}
 
 {% if c_button %}
