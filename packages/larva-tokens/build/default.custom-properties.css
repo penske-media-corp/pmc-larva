@@ -7,9 +7,11 @@
   --color-black: rgb(0, 0, 0);
   /* The webfont, loaded async */
   --font-family-primary-fancy: Courier, serif;
+  /* Fallback for primary-fancy */
   --font-family-primary: Georgia, serif;
   /* The webfont, loaded async */
   --font-family-secondary-fancy: Papyrus, serif;
+  /* Fallback for secondary-fancy */
   --font-family-secondary: Helvetica, serif;
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
