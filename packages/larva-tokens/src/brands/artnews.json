@@ -19,11 +19,23 @@
 			"category": "font-family",
 			"comment": "Available via Typekit."
 		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback for primary-fancy."
+		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
 			"value": "{!DOMAINE_DISPLAY_NARROW}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via @font-face."
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback for secondary-fancy"
 		},
 		"FONT_FAMILY_BODY": {
 			"value": "{!HELVETICA_NEUE}",
