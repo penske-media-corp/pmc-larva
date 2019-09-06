@@ -13,7 +13,8 @@
 		},
 		"FONT_FAMILY_PRIMARY": {
 			"value": "Georgia, serif",
-			"type": "font"
+			"type": "font",
+			"comment": "Fallback for primary-fancy"
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
 			"value": "Papyrus, serif",
@@ -22,7 +23,8 @@
 		},
 		"FONT_FAMILY_SECONDARY": {
 			"value": "Helvetica, serif",
-			"type": "font"
+			"type": "font",
+			"comment": "Fallback for secondary-fancy"
 		},
 		"FONT_FAMILY_BODY": {
 			"value": "Georgia, serif",
