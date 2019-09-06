@@ -4,23 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>LRVA: {{ source }} | {{ name }}</title>
-		{% if 'larva' == source %}
+
+		{% block stylesheets %}
 			<link rel="stylesheet" href="/packages/larva-css/build/css/generic.common.inline.css">
 			<link rel="stylesheet" href="/packages/larva-css/build/css/algorithms.common.inline.css">
 			<link rel="stylesheet" href="/packages/larva-css/build/css/algorithms.common.async.css">
 			<link rel="stylesheet" href="/packages/larva-css/build/css/utilities.common.inline.css">
 			<link rel="stylesheet" href="/packages/larva-css/build/css/utilities.common.async.css">
 			<link rel="stylesheet" href="/packages/larva-css/build/css/js.common.inline.css">
-		{% else %}
-			<link rel="stylesheet" href="/assets/build/css/generic.common.inline.css">
-			<link rel="stylesheet" href="/assets/build/css/algorithms.common.inline.css">
-			<link rel="stylesheet" href="/assets/build/css/algorithms.common.async.css">
-			<link rel="stylesheet" href="/assets/build/css/utilities.common.inline.css">
-			<link rel="stylesheet" href="/assets/build/css/utilities.common.async.css">
-			<link rel="stylesheet" href="/assets/build/css/js.common.inline.css">
-		{% endif %}
-
-		{% block stylesheets %}{% endblock %}
+		{% endblock %}
 
 		<link rel="stylesheet" href="/packages/larva/static/css/prism.css">
 	</head>
