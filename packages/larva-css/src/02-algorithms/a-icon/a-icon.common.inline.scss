@@ -59,30 +59,6 @@
 
 // Specific Icons
 
-.lrv-a-icon-arrow-left,
-.lrv-a-icon-arrow-right,
-.lrv-a-icon-arrow-down,
-.lrv-a-icon-arrow-up {
-	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/sprite.stack.svg#arrow'} );
-	--a-icon-height: #{ $font-size-12 };
-}
-
-.lrv-a-icon-arrow-right {
-	--a-icon-transform: rotate(-90deg);
-}
-
-.lrv-a-icon-arrow-left {
-	--a-icon-transform: rotate(90deg);
-}
-
-.lrv-a-icon-envelope {
-	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/sprite.stack.svg#envelope'} );
-}
-
-.lrv-a-icon-search {
-	--a-icon-url: url( #{$ICONS_BUILD_PATH + '/sprite.stack.svg#search'} );
-}
-
 .lrv-a-icon-forward-slash,
 .lrv-a-icon-bullet {
 	@include _a-icon-reset( before ) {
