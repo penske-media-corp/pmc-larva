@@ -1,0 +1,29 @@
+{
+  "name": "@penskemediacorp/eslint-config",
+  "version": "1.0.0-alpha.0",
+  "description": "Eslint base config and customizations.",
+  "keywords": [
+    "eslint",
+    "js"
+  ],
+  "author": "escobar022 <escobar022@gmail.com>",
+  "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/penske-media-corp/pmc-larva/issues"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
+  }
+}
