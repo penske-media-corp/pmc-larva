@@ -6,12 +6,14 @@ $artinamerica-map: (
   'color-grey-dark': (rgb(106, 106, 106)),
   'color-black': (rgb(0, 0, 0)),
   /* Available via @font-face. */
-  'font-family-primary-fancy': (SchnyderCondM, serif),
+  'font-family-primary-fancy': ('Schnyder Cond M', Gerogia, serif),
+  /* Fallback for primary-fancy */
   'font-family-primary': (Georgia, serif),
   /* Available via Typekit. */
-  'font-family-secondary-fancy': ('warnock-pro'),
-  'font-family-secondary': (Helvetica, serif),
-  'font-family-body': (Georgia, serif),
+  'font-family-secondary-fancy': ('warnock-pro', 'Times New Roman', serif),
+  /* Fallback from secondary-fancy */
+  'font-family-secondary': (Georgia, serif),
+  'font-family-body': ('Times New Roman', serif),
   'font-family-basic': (Helvetica, sans-serif),
   'background-color-white': (rgb(255, 255, 255)),
   'background-color-grey-lightest': (rgb(247, 247, 247)),

@@ -6,11 +6,13 @@ $artnews-map: (
   'color-grey-dark': (rgb(106, 106, 106)),
   'color-black': (rgb(0, 0, 0)),
   /* Available via Typekit. */
-  'font-family-primary-fancy': ('neue-haas-unica'),
-  'font-family-primary': (Georgia, serif),
+  'font-family-primary-fancy': ('neue-haas-unica', Helvetica, sans-serif),
+  /* Fallback for primary-fancy. */
+  'font-family-primary': (Helvetica, sans-serif),
   /* Available via @font-face. */
-  'font-family-secondary-fancy': (DomaineDisplayNarrow, Georgia, serif),
-  'font-family-secondary': (Helvetica, serif),
+  'font-family-secondary-fancy': ('Domaine Display Narrow Test', Georgia, serif),
+  /* Fallback for secondary-fancy */
+  'font-family-secondary': (Georgia, serif),
   'font-family-body': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'font-family-basic': (Helvetica, sans-serif),
   'background-color-white': (rgb(255, 255, 255)),

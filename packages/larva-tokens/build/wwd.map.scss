@@ -8,6 +8,7 @@ $wwd-map: (
   'font-family-primary-fancy': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'font-family-primary': (Helvetica, sans-serif),
   'font-family-secondary-fancy': (Helvetica, sans-serif),
+  /* Fallback for secondary-fancy */
   'font-family-secondary': (Helvetica, serif),
   'font-family-body': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'font-family-basic': (Helvetica, sans-serif),

@@ -22,9 +22,9 @@
 		"GEORGIA": "Georgia, serif",
 		"HELVETICA": "Helvetica, sans-serif",
 		"HELVETICA_NEUE": "'Helvetica Neue', Helvetica, Arial, sans-serif",
-		"WARNOCK_PRO": "'warnock-pro'",
-		"NEUE_HAAS_UNICA": "'neue-haas-unica'",
-		"DOMAINE_DISPLAY_NARROW": "DomaineDisplayNarrow, Georgia, serif",
-		"SCHNYDER_COND_M": "SchnyderCondM, serif"
+		"WARNOCK_PRO": "'warnock-pro', 'Times New Roman', serif",
+		"NEUE_HAAS_UNICA": "'neue-haas-unica', Helvetica, sans-serif",
+		"DOMAINE_DISPLAY_NARROW": "'Domaine Display Narrow Test', Georgia, serif",
+		"SCHNYDER_COND_M": "'Schnyder Cond M', Gerogia, serif"
 	}
 }

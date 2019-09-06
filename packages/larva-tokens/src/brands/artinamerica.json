@@ -25,8 +25,14 @@
 			"category": "font-family",
 			"comment": "Available via Typekit."
 		},
-		"FONT_FAMILY_BODY": {
+		"FONT_FAMILY_SECONDARY": {
 			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from secondary-fancy"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!TIMES_NEW_ROMAN}",
 			"type": "font-family",
 			"category": "font-family"
 		}
