@@ -11,7 +11,7 @@ module.exports = {
 		}
 	},
 
-	backstop: {
+	visual_regression_testing: {
 		pmcMainQaUrl: 'https://pmc:for-the-win@deadline-2019.pmcqa.com',
 		pmcTestPaths: [
 			'/',
