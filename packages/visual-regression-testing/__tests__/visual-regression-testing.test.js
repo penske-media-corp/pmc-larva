@@ -1,6 +1,6 @@
 const assert = require( 'assert' );
 const path = require( 'path' );
-const pmcBackstop = require( '../lib/backstop' );
+const pmcBackstop = require( '../index' );
 const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const backstopUtils = require( '../lib/backstop-utils' );

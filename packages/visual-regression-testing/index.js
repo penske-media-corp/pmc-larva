@@ -3,7 +3,7 @@ const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const path    = require( 'path' );
 const chalk = require( 'chalk' );
-const backstopUtils = require( './backstop-utils' );
+const backstopUtils = require( './lib/backstop-utils' );
 
 const appConfiguration = getAppConfiguration( 'visual_regression_testing' );
 const { pmcMainQaUrl, pmcTestPaths, pmcScenario, backstopApi } = appConfiguration;
@@ -78,7 +78,7 @@ module.exports = merge({
 	'report': [ 'browser' ],
 	'engine': 'puppeteer',
 	'engineOptions': {
-		'args': [ '--no-sandbox' ],
+		'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:3000', '--proxy-bypass-list=<-loopback>' ],
 		'waitTimeout': 120000
 	},
 	'asyncCaptureLimit': 5,
