@@ -5,7 +5,7 @@ const path    = require( 'path' );
 const chalk = require( 'chalk' );
 const backstopUtils = require( './lib/backstop-utils' );
 
-const appConfiguration = getAppConfiguration( 'visual_regression_testing' );
+const appConfiguration = getAppConfiguration( 'visualRegressionTesting' );
 const { pmcMainQaUrl, pmcTestPaths, pmcScenario, backstopApi } = appConfiguration;
 
 const cliArgs = ( function getCliArgs() {

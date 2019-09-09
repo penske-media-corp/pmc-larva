@@ -11,7 +11,7 @@ module.exports = {
 		}
 	},
 
-	visual_regression_testing: {
+	visualRegressionTesting: {
 		pmcMainQaUrl: 'https://pmc:for-the-win@deadline-2019.pmcqa.com',
 		pmcTestPaths: [
 			'/',

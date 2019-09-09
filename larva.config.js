@@ -1,7 +1,7 @@
 const path = require( 'path' );
 
 module.exports = {
-	visual_regression_testing: {
+	visualRegressionTesting: {
 		pmcMainQaUrl: 'http://localhost:3000',
 		pmcTestPaths: [
 			'/larva/modules/footer'
