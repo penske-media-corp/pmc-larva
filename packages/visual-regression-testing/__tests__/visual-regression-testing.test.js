@@ -1,11 +1,12 @@
 const assert = require( 'assert' );
 const path = require( 'path' );
 const pmcBackstop = require( '../lib/backstop' );
+const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const backstopUtils = require( '../lib/backstop-utils' );
 const fixture = path.join( __dirname, '../test/fixtures' );
 
-const pmcConfig = require( fixture + '/larva.config.js' ).visual_regression_testing;
+const pmcConfig = getAppConfiguration( 'visual_regression_testing' );
 
 const processMocker = {
 	argv: [
