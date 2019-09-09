@@ -1,0 +1,28 @@
+{
+  "name": "@penskemediacorp/visual-regression-testing",
+  "version": "2.6.3-alpha.0",
+  "description": "Visual regression testing with Backstop JS.",
+  "author": "laras126 <laras126@gmail.com>",
+  "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
+  "license": "ISC",
+  "main": "lib/visual-regression-testing.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/penske-media-corp/pmc-larva/issues"
+  },
+  "dependencies": {
+    "@penskemediacorp/larva": "^2.5.2-alpha.0",
+    "backstopjs": "^4.3.2",
+    "webpack-merge": "^4.2.2"
+  }
+}
