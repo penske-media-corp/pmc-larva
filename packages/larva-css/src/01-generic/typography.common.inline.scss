@@ -1,10 +1,5 @@
 @import 'setup';
 
-.wf-active {
-	--font-family-primary: var( --font-family-primary-fancy );
-	--font-family-secondary: var( --font-family-secondary-fancy );
-}
-
 body {
 
 	// stylelint-disable property-blacklist
@@ -16,6 +11,13 @@ body {
 	// stylelint-enable property-blacklist
 
 	line-height: $line-height-normal;
+}
+
+.wf-active body {
+
+	// Apply the webfont when fonts are loaded.
+	--font-family-primary: var( --font-family-primary-fancy );
+	--font-family-secondary: var( --font-family-secondary-fancy );
 }
 
 strong {
