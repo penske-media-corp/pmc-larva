@@ -17,6 +17,7 @@ const cliArgs = ( function getCliArgs() {
 }() );
 
 const urlBase = backstopUtils.maybeUseCliUrl( cliArgs, pmcMainQaUrl );
+const modulesFromCli = backstopUtils.getCliModuleArgs( cliArgs );
 
 // Exit if no paths in config.
 if ( 0 === pmcTestPaths.length ) {
@@ -25,7 +26,7 @@ if ( 0 === pmcTestPaths.length ) {
 }
 
 // Exit if no URL from config or CLI.
-if ( undefined === pmcMainQaUrl && false === urlFromCli ) {
+if ( undefined === pmcMainQaUrl && false === urlFromCli && null === modulesFromCli ) {
 	console.error( chalk.red.bold( '\nPlease specify a QA URL in pmc.config.js in `backstop.pmcMainQaUrl`, or pass in a full URL with the comman e.g. `npm run backstop -- test --url=https://example.com`\n' ) );
 	process.exit( 1 );
 }

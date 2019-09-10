@@ -1,6 +1,6 @@
 const assert = require( 'assert' );
 const path = require( 'path' );
-const { getCliModuleArgs } = require( '../lib/backstop-utils' );
+const { getCliModuleArgs, prepareTestPaths, prepareModuleSelectors } = require( '../lib/backstop-utils' );
 // const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const processMocker = {
@@ -13,10 +13,17 @@ const processMocker = {
 	]
 };
 
-describe( 'cli for testing', function() {
+describe( 'backstop utils', function() {
 
-	it( 'gets a list of modules from the cli', () => {
+	it( 'getCliModuleArgs - gets a list of modules from the cli', () => {
 		assert.deepEqual( getCliModuleArgs( processMocker.argv ), [ 'footer', 'mega-menu-content', 'social-share' ] );
 	});
 
+	it( 'prepareTestPaths - prepares a list of paths from module names', () => {
+		assert.deepEqual( prepareTestPaths( [ 'footer', 'mega-menu-content', 'social-share' ], 'project' ), [ '/project/modules/footer', '/project/modules/mega-menu-content', '/project/modules/social-share' ] );
+	});
+
+	it( 'prepareModuleSelectors - adds a . in front of each module to make it a class', () => {
+		assert.deepEqual( prepareModuleSelectors( [ 'footer', 'mega-menu-content', 'social-share' ], 'project' ), [ '.footer', '.mega-menu-content', '.social-share' ] );
+	});
 });
