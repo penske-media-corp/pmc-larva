@@ -1,6 +1,6 @@
 const assert = require( 'assert' );
 const path = require( 'path' );
-const { getCliArgs } = require( '../lib/backstop-utils' );
+const { getCliModuleArgs } = require( '../lib/backstop-utils' );
 // const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const processMocker = {
@@ -16,7 +16,7 @@ const processMocker = {
 describe( 'cli for testing', function() {
 
 	it( 'gets a list of modules from the cli', () => {
-		assert.deepEqual( getCliArgs( processMocker.argv ), [ 'footer', 'mega-menu-content', 'social-share' ] );
+		assert.deepEqual( getCliModuleArgs( processMocker.argv ), [ 'footer', 'mega-menu-content', 'social-share' ] );
 	});
 
 });

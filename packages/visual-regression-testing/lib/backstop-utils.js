@@ -9,7 +9,7 @@ module.exports = {
 
 	},
 
-	getCliArgs: ( argv ) => {
+	getCliModuleArgs: ( argv ) => {
 
 		if ( argv[4] && argv[4].includes( '--modules=' ) ) {
 			const modulesArg = argv[4].split( '=' );
