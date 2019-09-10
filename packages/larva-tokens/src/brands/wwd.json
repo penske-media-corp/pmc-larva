@@ -13,6 +13,16 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "{!NEUE_HAAS_UNICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
 		"FONT_FAMILY_BODY": {
 			"value": "{!HELVETICA_NEUE}",
 			"type": "font-family",
