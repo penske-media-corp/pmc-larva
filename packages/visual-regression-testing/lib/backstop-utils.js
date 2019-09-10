@@ -26,18 +26,30 @@ module.exports = {
 	 * @param array of modules
 	 * @param loc project | larva
 	 */
-	prepareTestPaths: ( array, loc ) => {
+	prepareTestPaths: ( array, loc = undefined ) => {
+
+		// We are not testing patterns. Return array of paths from config.
+		if ( undefined === loc ) {
+			return array;
+		}
+
 		return array.map( a => '/' + loc + '/modules/' + a );
 	},
 	
 	/**
 	 * Prepare Module Selectors
 	 * 
-	 * Make a class selector out of each module from CLI.
+	 * Make a class selector out of each module from CLI, or return document.
 	 * 
 	 * @param array of modules
 	 */
-	prepareModuleSelectors: ( array ) => {
+	prepareTestSelectors: ( array ) => {
+
+		// Test the whole document if there are no modules in the CLI
+		if ( null === array ) {
+			return [ 'document' ];
+		}
+
 		return array.map( a => '.' + a );
 	}
 
