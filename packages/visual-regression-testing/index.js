@@ -63,7 +63,7 @@ module.exports = merge({
 	'viewports': [
 		{
 			'name': 'small',
-			'width': 500,
+			'width': 400,
 			'height': 620
 		},
 		{
