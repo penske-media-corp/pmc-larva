@@ -5,13 +5,14 @@ $wwd-map: (
   'color-grey': (rgb(140, 140, 140)),
   'color-grey-dark': (rgb(106, 106, 106)),
   'color-black': (rgb(0, 0, 0)),
-  'font-family-primary-fancy': ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  /* The webfont, loaded async */
+  'font-family-primary-fancy': (Courier, serif),
   'font-family-primary': (Helvetica, sans-serif),
-  'font-family-secondary-fancy': (Helvetica, sans-serif),
-  /* Fallback for secondary-fancy */
-  'font-family-secondary': (Helvetica, serif),
+  /* The webfont, loaded async */
+  'font-family-secondary-fancy': (Papyrus, serif),
+  'font-family-secondary': (Georgia, serif),
   'font-family-body': ('Helvetica Neue', Helvetica, Arial, sans-serif),
-  'font-family-basic': (Helvetica, sans-serif),
+  'font-family-basic': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'background-color-white': (rgb(255, 255, 255)),
   'background-color-grey-lightest': (rgb(247, 247, 247)),
   'background-color-grey-light': (rgb(204, 204, 204)),

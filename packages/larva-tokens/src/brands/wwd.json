@@ -13,16 +13,6 @@
 			"type": "color",
 			"category": "text-color"
 		},
-		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!HELVETICA_NEUE}",
-			"type": "font-family",
-			"category": "font-family"
-		},
-		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!HELVETICA}",
-			"type": "font-family",
-			"category": "font-family"
-		},
 		"FONT_FAMILY_BODY": {
 			"value": "{!HELVETICA_NEUE}",
 			"type": "font-family",
@@ -30,6 +20,16 @@
 		},
 		"FONT_FAMILY_PRIMARY": {
 			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "{!HELVETICA_NEUE}",
 			"type": "font-family",
 			"category": "font-family"
 		}
