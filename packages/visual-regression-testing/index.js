@@ -78,7 +78,7 @@ module.exports = merge({
 	'report': [ 'browser' ],
 	'engine': 'puppeteer',
 	'engineOptions': {
-		'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:3000', '--proxy-bypass-list=<-loopback>' ],
+		'args': [ '--no-sandbox', '--proxy-server=127.0.0.1', '--proxy-bypass-list=<-loopback>' ],
 		'waitTimeout': 120000
 	},
 	'asyncCaptureLimit': 5,
