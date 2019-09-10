@@ -1,6 +1,6 @@
-# `visual-regression-testing`
+# Backstop JS Config
 
-> TODO: description
+This package is 
 
 ## Usage
 
