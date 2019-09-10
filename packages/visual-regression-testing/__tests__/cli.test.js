@@ -9,8 +9,8 @@ const processMocker = {
 		'/Users/laraschenck/.nvm/versions/node/v11.6.0/bin/backstop',
 		'--config',
 		'packages/visual-regression-testing/index.js',
-		'reference',
-		'--modules=footer,social-share' 
+		'--modules=footer,social-share',
+		'reference'
 	]
 };
 

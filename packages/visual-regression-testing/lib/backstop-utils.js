@@ -11,8 +11,8 @@ module.exports = {
 
 	getCliModuleArgs: ( argv ) => {
 
-		if ( argv[5] && argv[5].includes( '--modules=' ) ) {
-			const modulesArg = argv[5].split( '=' );
+		if ( argv[4] && argv[4].includes( '--modules=' ) ) {
+			const modulesArg = argv[4].split( '=' );
 
 			return modulesArg[1].split( ',' );
 		}
