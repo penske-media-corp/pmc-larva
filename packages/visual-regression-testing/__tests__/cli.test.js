@@ -4,12 +4,13 @@ const { getCliModuleArgs, prepareTestPaths, prepareTestSelectors } = require( '.
 // const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const processMocker = {
-	argv: [
-		'/usr/local/Cellar/node/10.11.0/bin/node',
-		'/Users/laraschenck/Sites/pmc-deadline-2019/assets/node_modules/.bin/backstop',
-		'--configPath=node_modules/pmc-build-utils/lib/backstop.js',
-		'test',
-		'--modules=footer,mega-menu-content,social-share'
+	argv: [ 
+		'/Users/laraschenck/.nvm/versions/node/v11.6.0/bin/node',
+		'/Users/laraschenck/.nvm/versions/node/v11.6.0/bin/backstop',
+		'--config',
+		'packages/visual-regression-testing/index.js',
+		'reference',
+		'--modules=footer,social-share' 
 	]
 };
 
