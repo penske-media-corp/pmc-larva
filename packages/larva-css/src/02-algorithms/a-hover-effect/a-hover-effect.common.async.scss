@@ -19,7 +19,7 @@
 }
 
 .lrv-a-hover-effect--underline:hover {
-	--a-hover-effect-property: text-decoration;
+	--a-hover-effect-property: border-bottom;
 
-	text-decoration: underline;
+	border-bottom: 1px solid currentColor;
 }
