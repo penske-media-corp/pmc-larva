@@ -29,6 +29,7 @@ $margins_without_breakpoints: (
 	('lr', $spacer-025),
 	('lr', $spacer-050),
 	('lr', $spacer-1),
+	('lr', $spacer-2),
 
 	// Top/Bottom
 	('tb', $spacer-0),
@@ -38,6 +39,9 @@ $margins_without_breakpoints: (
 
 	// All
 	('a', $spacer-0),
+	('a', $spacer-050),
+	('a', $spacer-1),
+	('a', $spacer-2)
 );
 
 $margins_with_breakpoints: (
