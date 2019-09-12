@@ -1,7 +1,7 @@
 const path = require( 'path' );
 
 module.exports = {
-	visualRegressionTesting: {
+	backstopjs: {
 		pmcMainQaUrl: 'http://localhost:3000',
 		pmcScenario: {
 			'delay': 1000,

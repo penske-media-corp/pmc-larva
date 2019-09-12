@@ -1,6 +1,6 @@
 const assert = require( 'assert' );
 const path = require( 'path' );
-const { getCliModuleArgs, prepareTestPaths, prepareTestSelectors } = require( '../lib/backstop-utils' );
+const { getCliModuleArgs, prepareTestPaths, prepareTestSelectors } = require( '../lib/utils' );
 
 const processMocker = {
 	argv: [ 
@@ -8,7 +8,7 @@ const processMocker = {
 		'/Users/laraschenck/.nvm/versions/node/v11.6.0/bin/backstop',
 		'--config',
 		'packages/visual-regression-testing/index.js',
-		'--modules=footer,social-share',
+		'--modules=footer,mega-menu-content,social-share',
 		'reference'
 	]
 };

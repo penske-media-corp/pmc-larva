@@ -3,9 +3,9 @@ const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const path    = require( 'path' );
 const chalk = require( 'chalk' );
-const backstopUtils = require( './lib/backstop-utils' );
+const backstopUtils = require( './lib/utils' );
 
-const appConfiguration = getAppConfiguration( 'visualRegressionTesting' );
+const appConfiguration = getAppConfiguration( 'backstopjs' );
 const { pmcMainQaUrl, pmcTestPaths, pmcScenario, backstopApi } = appConfiguration;
 
 const cliArgs = ( function getCliArgs() {
