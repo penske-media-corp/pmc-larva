@@ -244,11 +244,10 @@ function parse_include_path( $twig_include, $pattern_name, $data_name ) {
 
 
 /**
- * Parse Twig Includes
+ * Parse SVG Path
  *
  * @param string $twig_include Full include expression
- * @param string $pattern_name o-nav
- * @param string $data_name o_nav / usually name of pattern with underscores
+ * @param string $svg_name Name of SVG file, excluding extenstion
  *
  * @return string PMC::render_template call
  */
