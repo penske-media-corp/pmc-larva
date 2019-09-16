@@ -4,7 +4,7 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLACK}",
+			"value": "{!RED_45}",
 			"type": "color",
 			"category": "background-color"
 		},
@@ -14,12 +14,12 @@
 			"category": "text-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!HELVETICA_NEUE}",
+			"value": "{!NEUE_HAAS_UNICA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!HELVETICA}",
+			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
@@ -30,6 +30,16 @@
 		},
 		"FONT_FAMILY_PRIMARY": {
 			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "{!HELVETICA_NEUE}",
 			"type": "font-family",
 			"category": "font-family"
 		}

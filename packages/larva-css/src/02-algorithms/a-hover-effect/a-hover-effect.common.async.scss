@@ -13,3 +13,13 @@
 
 	opacity: 0.5;
 }
+
+.lrv-a-hover-effect--underline {
+	transform: translate3d( 0px, 0px, 0px ); // stylelint-disable-line unit-blacklist
+}
+
+.lrv-a-hover-effect--underline:hover {
+	--a-hover-effect-property: border-bottom;
+
+	border-bottom: 1px solid currentColor;
+}
