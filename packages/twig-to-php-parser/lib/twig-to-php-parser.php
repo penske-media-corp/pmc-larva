@@ -254,6 +254,7 @@ function parse_include_path( $twig_include, $pattern_name, $data_name ) {
  */
 function parse_svg_path( $twig_include, $svg_name ) {
 	$theme_dir = 'CHILD_THEME_PATH';
+	$svg_path  = '/assets/build/svg/';
 
 	// 08/09/19 - Disabling larva/core theme logic
 	// Not sure if relevant here, but will keep it.
@@ -261,7 +262,7 @@ function parse_svg_path( $twig_include, $svg_name ) {
 	// 	$theme_dir = 'PMC_CORE_PATH';
 	// }
 
-	 return "<?php \PMC::render_template( " . $theme_dir . " . '/assets/build/icons/' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
+	 return "<?php \PMC::render_template( " . $theme_dir . " . '" . $svg_path . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
 }
 
 //EOF
