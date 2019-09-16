@@ -2,12 +2,14 @@
 
 $widths_map: (
 	'width-30p': 30%,
+	'width-50p': 50%,
 	'width-100p': 100%,
 	'width-16': pmc-rem(16),
 );
 
 @include basic-utility-generator( 'width', (
 	width-30p,
+	width-50p,
 	width-100p,
 	width-16,
 ), $widths_map );
