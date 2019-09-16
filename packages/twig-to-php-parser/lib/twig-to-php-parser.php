@@ -2,10 +2,10 @@
 
 /**
  * Twig to PHP Patterns Parser
- * 
+ *
  * This will slowly be broken up into smaller, testable functions that
  * can be refactored into node if we choose to go that route.
- * 
+ *
  * @since 06/26/2019
  * @author Lara Schenck and Amit Sannad
  */
@@ -26,7 +26,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 
 		// All components of path in array split by /
 		$twig_path_arr = explode( '/', $twig_file );
-		
+
 		// Get last three parts of the file that includes directory
 		$path_info = array_slice( $twig_path_arr, count( $twig_path_arr ) - 3, 3 );
 
@@ -71,6 +71,10 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 		// https://regex101.com/r/ns5kBR/2
 		$include_regex = '/({%\sinclude ")(.*[c-|o-|l-].*\/)(.*)(.twig)(" with )(\w*)(.*\s%})/';
 
+		// Get matches for {% include '/path/here/' ~ variable_svg ~ '.svg' %}
+		// https://regex101.com/r/pdleQb/3
+		$svg_regex = '/({%\sinclude\s.*)(\s?\~\s?)(\S*)(\s?\~\s?)(.*\s.*)(%})/';
+
 		$twig_markup = \file_get_contents( $twig_file );
 
 		$general_replacers = [
@@ -88,12 +92,14 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 		preg_match_all( $loop_regex, $twig_markup, $loop_matches );
 		preg_match_all( $mustache_regex, $twig_markup, $mustache_matches );
 		preg_match_all( $include_regex, $twig_markup, $include_matches );
+		preg_match_all( $svg_regex, $twig_markup, $svg_matches );
 
 		// Prepare empty arrays to gather the replacements as they are processed.
 		$if_condition_replacements = [];
 		$loop_replacements         = [];
 		$mustache_replacements     = [];
 		$include_replacements      = [];
+		$svg_replacements          = [];
 
 		$count = 0;
 		foreach ( $if_condition_matches[0] as $key => $match ) {
@@ -154,7 +160,6 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 
 		// Reset the count to begin accumulating $include_replacements.
 		$count = 0;
-
 		foreach ( $include_matches[0] as $include ) {
 			$include_replacements[ $count ] = parse_include_path(
 				$include,
@@ -164,9 +169,33 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 			$count ++;
 		}
 
+
+		// Reset the count to begin accumulating $include_replacements.
+		$count = 0;
+		foreach ( $svg_matches[0] as $svg ) {
+			$svg_replacements[ $count ] = parse_svg_path(
+				$svg,
+				$svg_matches[3][ $count ],
+			);
+			$count ++;
+		}
+
 		// Merge replacements and matches arrays.
-		$all_matches      = (array) array_merge( $mustache_matches[0], $include_matches[0], $loop_matches[0], $if_condition_matches[0] );
-		$all_replacements = (array) array_merge( $mustache_replacements, $include_replacements, $loop_replacements, $if_condition_replacements );
+		$all_matches      = (array) array_merge(
+			$mustache_matches[0],
+			$include_matches[0],
+			$loop_matches[0],
+			$if_condition_matches[0],
+			$svg_matches[0]
+		);
+
+		$all_replacements = (array) array_merge(
+			$mustache_replacements,
+			$include_replacements,
+			$loop_replacements,
+			$if_condition_replacements,
+			$svg_replacements
+		);
 
 		// First replace matches from the regex's, then apply the general replacements.
 		$twig_markup_replace_main     = str_replace( $all_matches, $all_replacements, $twig_markup );
@@ -186,11 +215,11 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 
 /**
  * Parse Twig Includes
- * 
+ *
  * @param string $twig_include Full include expression
  * @param string $pattern_name o-nav
  * @param string $data_name o_nav / usually name of pattern with underscores
- * 
+ *
  * @return string PMC::render_template call
  */
 function parse_include_path( $twig_include, $pattern_name, $data_name ) {
@@ -211,6 +240,28 @@ function parse_include_path( $twig_include, $pattern_name, $data_name ) {
 	}
 
 	 return "<?php \PMC::render_template( " . $theme_dir . " . '/template-parts/patterns/" . $directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+}
+
+
+/**
+ * Parse Twig Includes
+ *
+ * @param string $twig_include Full include expression
+ * @param string $pattern_name o-nav
+ * @param string $data_name o_nav / usually name of pattern with underscores
+ *
+ * @return string PMC::render_template call
+ */
+function parse_svg_path( $twig_include, $svg_name ) {
+	$theme_dir = 'CHILD_THEME_PATH';
+
+	// 08/09/19 - Disabling larva/core theme logic
+	// Not sure if relevant here, but will keep it.
+	// if ( strpos( $twig_include, "@larva" ) ) {
+	// 	$theme_dir = 'PMC_CORE_PATH';
+	// }
+
+	 return "<?php \PMC::render_template( " . $theme_dir . " . '/assets/build/icons/' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
 }
 
 //EOF
