@@ -4,7 +4,8 @@ This is Larva's core configuration for eslint, though it can be used in any code
 
 Key features include:
 * WordPress standards are used and extended
-* Full config is in index.js
+* Environments covered include es6, browser, node, commonjs and jquery
+* Full config located in index.js
 
 ## Usage
 
