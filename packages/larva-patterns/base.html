@@ -14,14 +14,10 @@
 			<link rel="stylesheet" href="/packages/larva-css/build/css/js.common.inline.css">
 		{% endblock %}
 
+		<link rel="stylesheet" href="/packages/larva/static/css/base.css">
 		<link rel="stylesheet" href="/packages/larva/static/css/prism.css">
 	</head>
 	<body class="lrv-u-margin-a-00">
-
-		{% include "@larva/components/c-button/c-button.twig" with {
-			"c_button_text": "Show Only Pattern",
-			"c_button_classes": "js-hide-button js-to-hide lrv-a-unstyle-button lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-1 lrv-u-cursor-pointer"
-		} %}
 
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
@@ -32,6 +28,11 @@
 				{% block content %}{% endblock %}
 			</div>
 		</main>
+		<br>
+		{% include "@larva/components/c-button/c-button.twig" with {
+			"c_button_text": "Show Larva UI",
+			"c_button_classes": "js-hide-button lrv-a-unstyle-button lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-1 lrv-u-cursor-pointer lrv-a-glue lrv-a-glue--b-0 lrv-a-glue--r-0"
+		} %}
 
 		{% block scripts %}{% endblock %}
 

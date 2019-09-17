@@ -3,10 +3,10 @@ const path = require( 'path' );
 const pmcBackstop = require( '../index' );
 const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
-const backstopUtils = require( '../lib/backstop-utils' );
+const backstopUtils = require( '../lib/utils' );
 const fixture = path.join( __dirname, '../test/fixtures' );
 
-const pmcConfig = getAppConfiguration( 'visualRegressionTesting' );
+const pmcConfig = getAppConfiguration( 'backstopjs' );
 
 const processMocker = {
 	argv: [

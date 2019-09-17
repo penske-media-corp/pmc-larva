@@ -3,9 +3,9 @@ const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
 
 const path    = require( 'path' );
 const chalk = require( 'chalk' );
-const backstopUtils = require( './lib/backstop-utils' );
+const backstopUtils = require( './lib/utils' );
 
-const appConfiguration = getAppConfiguration( 'visualRegressionTesting' );
+const appConfiguration = getAppConfiguration( 'backstopjs' );
 const { pmcMainQaUrl, pmcTestPaths, pmcScenario, backstopApi } = appConfiguration;
 
 const cliArgs = ( function getCliArgs() {
@@ -17,29 +17,39 @@ const cliArgs = ( function getCliArgs() {
 }() );
 
 const urlBase = backstopUtils.maybeUseCliUrl( cliArgs, pmcMainQaUrl );
+const modulesFromCli = backstopUtils.getCliModuleArgs( cliArgs );
+const selectors = backstopUtils.prepareTestSelectors( modulesFromCli );
+
+console.log( modulesFromCli );
+
+let paths = backstopUtils.prepareTestPaths( modulesFromCli, 'larva' );
 
 // Exit if no paths in config.
-if ( 0 === pmcTestPaths.length ) {
-	console.error( chalk.red.bold( '\nPlease specify paths to test in pmc.config.js in the structure `backstop.pmcTestPaths`.\n' ) );
+if ( 0 === paths.length ) {
+	console.error( chalk.red.bold( '\nPlease specify paths to test in larva.config.js in the structure `backstop.pmcTestPaths`, or add an argument for --modules in the CLI.\n' ) );
 	process.exit( 1 );
 }
 
 // Exit if no URL from config or CLI.
-if ( undefined === pmcMainQaUrl && false === urlFromCli ) {
+if ( undefined === pmcMainQaUrl && false === urlFromCli && null === modulesFromCli ) {
 	console.error( chalk.red.bold( '\nPlease specify a QA URL in pmc.config.js in `backstop.pmcMainQaUrl`, or pass in a full URL with the comman e.g. `npm run backstop -- test --url=https://example.com`\n' ) );
 	process.exit( 1 );
 }
 
+console.log( chalk.blue( 'Testing paths: \n' + paths ) );
+
 let scenarios = [];
 
-for ( let i = 0; i < pmcTestPaths.length; i++ ) {
+for ( let i = 0; i < paths.length; i++ ) {
+	console.log( urlBase + paths[i] );
+	
 	scenarios.push( merge({
-		'label': pmcTestPaths[i],
-		'url': urlBase + pmcTestPaths[i],
+		'label': paths[i],
+		'url': urlBase + paths[i],
 		'hideSelectors': [],
 		'removeSelectors': [],
 		'selectors': [
-			'document'
+			selectors[i]
 		],
 		'delay': 500,
 		'misMatchThreshold': 0.1,
@@ -63,7 +73,7 @@ module.exports = merge({
 		},
 		{
 			'name': 'desktop-xl',
-			'width': 1400,
+			'width': 1250,
 			'height': 1000
 		}
 	],
