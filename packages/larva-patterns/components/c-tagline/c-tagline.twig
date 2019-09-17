@@ -4,6 +4,6 @@
 
 {% if c_tagline_markup %}
 	<div class="c-tagline {{ modifier_class }} {{ c_tagline_classes }}">
-		{{ c_tagline_markup }}
+		{{ c_tagline_markup|raw }}
 	</div>
 {% endif %}
