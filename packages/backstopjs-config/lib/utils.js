@@ -23,17 +23,24 @@ module.exports = {
 	/**
 	 * Prepare Test Paths
 	 * 
-	 * @param array of modules
-	 * @param loc project | larva
+	 * @param modules array of module names e.g. [ 'footer', 'header', 'author' ]
+	 * @param pmcPaths array of test paths e.g. [ '/', '/blog ]
 	 */
-	prepareTestPaths: ( array, loc = undefined ) => {
+	prepareTestPaths: ( modules, pmcPaths ) => {
+		
+		if ( modules && modules.length > 0 ) {
+			return modules.map( a => '/modules/' + a );
+		} else {
 
-		// We are not testing patterns. Return array of paths from config.
-		if ( undefined === loc ) {
-			return array;
 		}
 
-		return array.map( a => '/' + loc + '/modules/' + a );
+		if ( pmcPaths && pmcPaths.length > 0 ) {
+			return pmcPaths;
+		}
+
+		// We are not testing patterns. Return array of paths from config.
+
+		throw new Error( chalk.red.bold( 'Couldn\'t find configuration for larvaModukes or pmcTestPaths. Make sure those entries exist in the `backstop` object in larva.config.js' ) );
 	},
 	
 	/**
