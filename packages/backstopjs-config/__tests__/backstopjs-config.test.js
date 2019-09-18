@@ -1,12 +1,11 @@
 const assert = require( 'assert' );
 const path = require( 'path' );
-const pmcBackstop = require( '../index' );
-const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
-
+const getScenarios = require( '../lib/getScenarios' );
 const backstopUtils = require( '../lib/utils' );
-const fixture = path.join( __dirname, '../test/fixtures' );
 
-const pmcConfig = getAppConfiguration( 'backstopjs' );
+// Gets test app config from larva/__test__/fixtures/larva.config.js
+const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
+const appConfiguration = getAppConfiguration( 'backstop' );
 
 const processMocker = {
 	argv: [
@@ -28,24 +27,26 @@ const expectations = {
 	url: 'https://notlaura.com'
 };
 
+// Basically what happens in index.js
+const scenarios = getScenarios( appConfiguration.pmcMainQaUrl, appConfiguration.pmcTestPaths, backstopUtils.prepareTestSelectors( null ), {} );
+
 describe( 'url handling for backstop command', function() {
 
 	it( 'overrides the configuration url with a CLI argument', () => {
-		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argvWithUrl, pmcConfig.pmcMainQaUrl ), expectations.url );
+		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argvWithUrl, appConfiguration.pmcMainQaUrl ), expectations.url );
 	});
 
 	it( 'uses the configuration URL if no URL parameter is passed', () => {
-		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argv, pmcConfig.pmcMainQaUrl ), pmcConfig.pmcMainQaUrl );
+		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argv, appConfiguration.pmcMainQaUrl ), appConfiguration.pmcMainQaUrl );
 	});
 
-	it( 'returns url from the app configuration as a scenario url', () => {
-		assert.equal( pmcConfig.pmcMainQaUrl + pmcConfig.pmcTestPaths[0], pmcBackstop.scenarios[0].url );
+	it( 'returns a pmcTestPaths url if there are no larva modules', () => {
+
+		// Remove larvaModules to test plain URLs
+		delete appConfiguration.larvaModules;
+
+		assert.equal( appConfiguration.pmcMainQaUrl + appConfiguration.pmcTestPaths[0], scenarios[0].url );
 	});
 
 });
 
-describe( 'backstop configuration overrides', function() {
-	it( 'overrides scenario configuration with pmcScenario', () => {
-		assert.equal( pmcConfig.pmcScenario.delay, pmcBackstop.scenarios[0].delay );
-	});
-});
