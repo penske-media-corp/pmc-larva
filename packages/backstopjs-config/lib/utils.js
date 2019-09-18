@@ -9,17 +9,6 @@ module.exports = {
 
 	},
 
-	getCliModuleArgs: ( argv ) => {
-
-		if ( argv[4] && argv[4].includes( '--modules=' ) ) {
-			const modulesArg = argv[4].split( '=' );
-
-			return modulesArg[1].split( ',' );
-		}
-
-		return null;
-	},
-
 	/**
 	 * Prepare Test Paths
 	 * 
