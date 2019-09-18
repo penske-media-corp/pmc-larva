@@ -2,6 +2,10 @@ const assert = require( 'assert' );
 const path = require( 'path' );
 const { getCliModuleArgs, prepareTestPaths, prepareTestSelectors } = require( '../../lib/utils' );
 
+// Gets test app config from larva/__test__/fixtures/larva.config.js
+const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
+const appConfiguration = getAppConfiguration( 'backstop' );
+
 const processMocker = {
 	argv: [ 
 		'/Users/laraschenck/.nvm/versions/node/v11.6.0/bin/node',
@@ -19,12 +23,15 @@ describe( 'backstop utils', function() {
 		assert.deepEqual( getCliModuleArgs( processMocker.argv ), [ 'footer', 'mega-menu-content', 'social-share' ] );
 	});
 
-	it( 'prepareTestPaths - prepares a list of paths from module names', () => {
-		assert.deepEqual( prepareTestPaths( [ 'footer', 'mega-menu-content', 'social-share' ], 'project' ), [ '/project/modules/footer', '/project/modules/mega-menu-content', '/project/modules/social-share' ] );
+	it( 'prepareTestPaths - returns paths for modules if present', () => {
+		assert.deepEqual( 
+			prepareTestPaths( appConfiguration.larvaModules, appConfiguration.pmcTestPaths ), 
+			[ '/modules/footer', '/modules/mega-menu-content', '/modules/social-share' ] 
+		);
 	});
 
-	it( 'prepareTestPaths - returns same array if loc is undefined', () => {
-		assert.deepEqual( prepareTestPaths( [ '/', '/blog/', '/about/' ] ), [ '/', '/blog/', '/about/' ] );
+	it( 'prepareTestPaths - returns array of pmcPaths if no larva modules', () => {
+		assert.deepEqual( prepareTestPaths( [], [ '/', '/blog/', '/about/' ] ), [ '/', '/blog/', '/about/' ] );
 	});
 
 	it( 'prepareTestSelectors - adds a . in front of each module to make it a class', () => {
