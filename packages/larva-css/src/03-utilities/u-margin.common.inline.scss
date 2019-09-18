@@ -63,8 +63,15 @@ $margins_with_breakpoints: (
 	
 	('a', $spacer-1, desktop),
 	('r', $spacer-0, desktop),
-	('r', $spacer-0, desktop),
+	('r', $spacer-1, desktop),
+	('l', $spacer-0, desktop),
+	('l', $spacer-1, desktop),
 	('t', $spacer-050, desktop),
+	('t', $spacer-1, desktop),
+	('t', $spacer-2, desktop),
+	('b', $spacer-050, desktop),
+	('b', $spacer-1, desktop),
+	('b', $spacer-2, desktop),
 
 	('t', $spacer-050, desktop-xl),
 	('t', $spacer-1, desktop-xl),
