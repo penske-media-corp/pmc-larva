@@ -34,7 +34,7 @@ const expectation = [{
 
 describe('getScenarios', () => {
 
-	it('outputs scenario objects', () => {
+	it('outputs backstop scenario objects', () => {
 
 		let testScenario = getScenarios(
 			stub.urlBase, stub.paths, stub.selectors, stub.scenarioOverride
