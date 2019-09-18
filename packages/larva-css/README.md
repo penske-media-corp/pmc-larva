@@ -30,9 +30,9 @@ Directories are ordered according to the cascading of styles, inspired by ITCSS.
 
 A *utility* is a single* declaration ruleset that is named according to the declaration and prefixed with a `u-*`. These sometimes come from SCSS generators, but many are authored by hand. A few examples (namespaced with pmc-* to indicate they come from this repository):
 
-* pmc-u-display-block
-* pmc-u-color-brand-primary
-* pmc-u-margin-tb-1@tablet
+* lrv-u-display-block
+* lrv-u-color-brand-primary
+* lrv-u-margin-tb-1@tablet
 
 \* The only time a utility would have more than one declaration is for margin and padding where top/bottom and right/left values can be in the same ruleset.
 
