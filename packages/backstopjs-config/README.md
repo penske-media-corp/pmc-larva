@@ -1,6 +1,6 @@
 # Backstop JS Config
 
-This package provides configuration for visual regression, or screenshot, testing with [Backstop JS](https://github.com/garris/BackstopJS). 
+This npm package provides configuration for visual regression, or screenshot, testing with [Backstop JS](https://github.com/garris/BackstopJS). 
 
 ## Overview of Functionality
 
@@ -13,29 +13,24 @@ This package provides configuration for visual regression, or screenshot, testin
 
 First install the package and its dependencies. This includes headless Chrome, so will take a moment.
 
-1. Install the package
+1. Install the package. Run this command from the same location as package.json.
 	```language:bash
 	npm install @penskemediacorp/backstopjs-config --save-dev
 	```
 
-2. Add configuration to larva.config.js.
+2. Add configuration to larva.config.js. You can _either_ test modules from the Larva repo, or test a full page screenshot at specific paths.
+
+	Configuration for testing Larva modules:
 
 	```language:javascript
 	// larva.config.js
 
 	module.exports = {
 
-		// This object will provide data for specific places in the Backstop config
+		// This object will provide project-level overrides for the Backstop config.
 		backstop: {
-			// testBaseUrl: 'https://notlaura.com',
-			testBaseUrl: 'http://localhost:3000/larva',
-			testScenario: {
-				'delay': 1000,
-				'misMatchThreshold': 0.5,
-			},
-			// If you want to test a full page:
-			// testPaths: [ '/about/' ],
-			// For testing specific modules in the Larva server:
+			// If testing from the Larva mono-repo, replace "project" with "larva", in this path:
+			testBaseUrl: 'http://localhost:3000/project',
 			larvaModules: [ 'footer', 'breadcrumbs' ],
 			backstopConfig: {
 				// This is required for testing on the Larva server. It is not required for testing external URLs.
@@ -43,6 +38,22 @@ First install the package and its dependencies. This includes headless Chrome, s
 					'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:3000', '--proxy-bypass-list=<-loopback>' ],
 				}
 			}
+		},
+	}
+	```
+
+	And configuration for testing a document and external URLs:
+	```language:javascript
+	// larva.config.js
+
+	module.exports = {
+
+		// This object will provide project-level overrides for the Backstop config.
+		backstop: {
+			// Be sure to include HTTP password in the URL
+			testBaseUrl: 'https://pmc:for-the-win@deadline.pmcqa.com',
+			// Use the testPaths property instead of larvaModules. These are appended to the testBaseUrl.
+			testPaths: [ '/', '/v/film' ]
 		},
 	}
 	```
@@ -71,3 +82,14 @@ After you have added the configuration, it is time to run the tests.
 	npm run backstop -- test
 	```
 
+## Things To Be Aware Of
+
+* Testing full pages with ads will likely time out. There is a Puppeteer script for hiding ads, but it is currently disabled.
+
+## History and Changelog
+
+This package started as part of PMC Build Utils, and was migrated to the pmc-larva monorepo during the AMH redesign project to take advantage of the shared environment for developing Larva-specific tooling.
+
+## Support
+
+Post questions in the #larva Slack channel and @laras126. Refer to the [Backstop JS documentation](https://github.com/garris/BackstopJS) for troubleshooting, and consider using the search term `Puppeteer` when googling for solutions.
