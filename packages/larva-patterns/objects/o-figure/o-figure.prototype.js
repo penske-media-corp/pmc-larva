@@ -1,6 +1,7 @@
 module.exports = {
 	"o_figure_permalink_url": "#",
 	"o_figure_link_classes": "lrv-a-unstyle-link",
+	"o_figure_crop_class": "lrv-a-crop-16x9",
 	"o_figure_alt_attr": "Thumbnail image",
 	"o_figure_placeholder_image_url": "https://placehold.it/300x300",
 	"o_figure_lazy_srcset_url": "https://farm5.staticflickr.com/4078/5441060528_31db7838ba_m.jpg 240w,https://farm5.staticflickr.com/4078/5441060528_31db7838ba_n.jpg 320w,https://farm5.staticflickr.com/4078/5441060528_31db7838ba.jpg 500w,https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg 640w,https://farm5.staticflickr.com/4078/5441060528_31db7838ba_b.jpg 1024w",

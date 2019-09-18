@@ -83,7 +83,7 @@ $grids: (
 	),
 );
 
-@include pmc-a-grid( $grids );
+@include a-grid( $grids );
 ```
 
 Utility generators are used the same way, but added inside the utilities directory, instead, and indicate a simple, property: value declaration. To add additional colors to a consuming project, for example, add the following:
@@ -99,5 +99,5 @@ $color_list: (
 	blue-light: $color-blue-80,
 );
 
-@include pmc-u-background( $color_list );
+@include token-utility-generator( $color_list );
 ```
