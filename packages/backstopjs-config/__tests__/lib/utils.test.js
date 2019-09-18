@@ -1,6 +1,6 @@
 const assert = require( 'assert' );
 const path = require( 'path' );
-const { getCliModuleArgs, prepareTestPaths, prepareTestSelectors } = require( '../lib/utils' );
+const { getCliModuleArgs, prepareTestPaths, prepareTestSelectors } = require( '../../lib/utils' );
 
 const processMocker = {
 	argv: [ 
