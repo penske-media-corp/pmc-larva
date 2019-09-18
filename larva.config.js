@@ -7,7 +7,7 @@ module.exports = {
 			'delay': 1000,
 			'misMatchThreshold': 0.5,
 		},
-		larvaModules: [ 'footer' ],
+		larvaModules: [ 'footer', 'breadcrumbs' ],
 		backstopApi: {
 			'engineOptions': {
 				'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:3000', '--proxy-bypass-list=<-loopback>' ],
