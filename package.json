@@ -4,7 +4,7 @@
   "scripts": {
     "test": "./node_modules/.bin/jest",
     "larva": "nodemon -e twig,js,html packages/larva/lib/server.js",
-    "watch": "node packages/larva/lib/watch.js"
+	"backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
