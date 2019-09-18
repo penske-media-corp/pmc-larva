@@ -2,16 +2,16 @@ const path = require( 'path' );
 
 module.exports = {
 	backstop: {
-		pmcMainQaUrl: 'http://localhost:3000/larva',
-		pmcScenario: {
+		testBaseUrl: 'https://notlaura.com',
+		testScenario: {
 			'delay': 1000,
 			'misMatchThreshold': 0.5,
 		},
-		larvaModules: [ 'footer', 'breadcrumbs' ],
-		backstopApi: {
-			'engineOptions': {
-				'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:3000', '--proxy-bypass-list=<-loopback>' ],
-			}
+		testPaths: [ '/about' ],
+		backstopConfig: {
+			// 'engineOptions': {
+			// 	'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:3000', '--proxy-bypass-list=<-loopback>' ],
+			// }
 		}
 	},
 

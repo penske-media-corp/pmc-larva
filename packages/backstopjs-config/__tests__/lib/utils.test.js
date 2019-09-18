@@ -10,7 +10,7 @@ describe( 'backstop utils', function() {
 
 	it( 'prepareTestPaths - returns paths for modules if present', () => {
 		assert.deepEqual( 
-			prepareTestPaths( appConfiguration.larvaModules, appConfiguration.pmcTestPaths ), 
+			prepareTestPaths( appConfiguration.larvaModules, appConfiguration.testPaths ), 
 			[ '/modules/footer', '/modules/mega-menu-content', '/modules/social-share' ] 
 		);
 	});

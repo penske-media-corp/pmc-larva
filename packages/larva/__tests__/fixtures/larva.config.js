@@ -12,12 +12,12 @@ module.exports = {
 	},
 
 	backstop: {
-		pmcMainQaUrl: 'https://pmc:for-the-win@deadline-2019.pmcqa.com',
-		pmcTestPaths: [
+		testBaseUrl: 'https://pmc:for-the-win@deadline-2019.pmcqa.com',
+		testPaths: [
 			'/',
 			'/blog/'
 		],
-		pmcScenario: {
+		testScenario: {
 			'delay': 5000,
 			'misMatchThreshold': 0.5
 		},

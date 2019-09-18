@@ -28,24 +28,24 @@ const expectations = {
 };
 
 // Basically what happens in index.js
-const scenarios = getScenarios( appConfiguration.pmcMainQaUrl, appConfiguration.pmcTestPaths, backstopUtils.prepareTestSelectors( null ), {} );
+const scenarios = getScenarios( appConfiguration.testBaseUrl, appConfiguration.testPaths, backstopUtils.prepareTestSelectors( null ), {} );
 
 describe( 'url handling for backstop command', function() {
 
 	it( 'overrides the configuration url with a CLI argument', () => {
-		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argvWithUrl, appConfiguration.pmcMainQaUrl ), expectations.url );
+		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argvWithUrl, appConfiguration.testBaseUrl ), expectations.url );
 	});
 
 	it( 'uses the configuration URL if no URL parameter is passed', () => {
-		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argv, appConfiguration.pmcMainQaUrl ), appConfiguration.pmcMainQaUrl );
+		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argv, appConfiguration.testBaseUrl ), appConfiguration.testBaseUrl );
 	});
 
-	it( 'returns a pmcTestPaths url if there are no larva modules', () => {
+	it( 'returns a testPaths url if there are no larva modules', () => {
 
 		// Remove larvaModules to test plain URLs
 		delete appConfiguration.larvaModules;
 
-		assert.equal( appConfiguration.pmcMainQaUrl + appConfiguration.pmcTestPaths[0], scenarios[0].url );
+		assert.equal( appConfiguration.testBaseUrl + appConfiguration.testPaths[0], scenarios[0].url );
 	});
 
 });

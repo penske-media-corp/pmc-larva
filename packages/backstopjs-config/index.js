@@ -16,25 +16,24 @@ const cliArgs = ( function getCliArgs() {
 	return process.argv;
 }() );
 
-const urlBase = backstopUtils.maybeUseCliUrl( cliArgs, appConfiguration.pmcMainQaUrl );
-const modulesFromCli = backstopUtils.getCliModuleArgs( cliArgs );
-const selectors = backstopUtils.prepareTestSelectors( appConfiguration.larvaModules );
+const urlBase = backstopUtils.maybeUseCliUrl( cliArgs, appConfiguration.testBaseUrl );
+const selectors = backstopUtils.prepareTestSelectors( ( appConfiguration.larvaModules || null ) );
 
-let paths = backstopUtils.prepareTestPaths( appConfiguration.larvaModules, appConfiguration.pmcTestPaths );
+let paths = backstopUtils.prepareTestPaths( appConfiguration.larvaModules, appConfiguration.testPaths );
 
 // Exit if no paths in config.
 if ( 0 === paths.length ) {
-	console.error( chalk.red.bold( '\nPlease specify paths to test in larva.config.js in the structure `backstop.pmcTestPaths`, or add modules in `backstop.larvaModules`\n' ) );
+	console.error( chalk.red.bold( '\nPlease specify paths to test in larva.config.js in the structure `backstop.testPaths`, or add modules in `backstop.larvaModules`\n' ) );
 	process.exit( 1 );
 }
 
 // Exit if no URL from config or CLI.
-if ( undefined === appConfiguration.pmcMainQaUrl && false === urlFromCli && null === modulesFromCli ) {
-	console.error( chalk.red.bold( '\nPlease specify a QA URL in pmc.config.js in `backstop.pmcMainQaUrl`, or pass in a full URL with the comman e.g. `npm run backstop -- test --url=https://example.com`\n' ) );
+if ( undefined === appConfiguration.testBaseUrl && false === urlFromCli ) {
+	console.error( chalk.red.bold( '\nPlease specify a QA URL in pmc.config.js in `backstop.testBaseUrl`, or pass in a full URL with the comman e.g. `npm run backstop -- test --url=https://example.com`\n' ) );
 	process.exit( 1 );
 }
 
-const scenarios = getScenarios( urlBase, paths, selectors,  appConfiguration.pmcScenario );
+const scenarios = getScenarios( urlBase, paths, selectors,  appConfiguration.testScenario );
 
 console.log( chalk.blue( 'Testing paths: \n' + paths ) );
 
@@ -74,5 +73,5 @@ module.exports = merge({
 	'asyncCompareLimit': 50,
 	'debug': false,
 	'debugWindow': false
-}, appConfiguration.backstopApi );
+}, appConfiguration.backstopConfig );
 

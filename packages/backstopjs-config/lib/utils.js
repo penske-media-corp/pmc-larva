@@ -29,7 +29,7 @@ module.exports = {
 
 		// We are not testing patterns. Return array of paths from config.
 
-		throw new Error( chalk.red.bold( 'Couldn\'t find configuration for larvaModukes or pmcTestPaths. Make sure those entries exist in the `backstop` object in larva.config.js' ) );
+		throw new Error( chalk.red.bold( 'Couldn\'t find configuration for larvaModukes or testPaths. Make sure those entries exist in the `backstop` object in larva.config.js' ) );
 	},
 	
 	/**
