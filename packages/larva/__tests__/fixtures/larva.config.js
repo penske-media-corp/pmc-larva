@@ -11,7 +11,7 @@ module.exports = {
 		}
 	},
 
-	backstopjs: {
+	backstop: {
 		pmcMainQaUrl: 'https://pmc:for-the-win@deadline-2019.pmcqa.com',
 		pmcTestPaths: [
 			'/',
@@ -20,7 +20,8 @@ module.exports = {
 		pmcScenario: {
 			'delay': 5000,
 			'misMatchThreshold': 0.5
-		}
+		},
+		larvaModules: [ 'footer', 'mega-menu-content', 'social-share' ]
 	},
 
 	parser: {
