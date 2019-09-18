@@ -22,7 +22,9 @@
   },
   "dependencies": {
     "@penskemediacorp/larva": "^2.5.2-alpha.0",
-    "backstopjs": "^4.3.2",
     "webpack-merge": "^4.2.2"
+  },
+  "peerDependencies": {
+    "backstopjs": "^4.3.2"
   }
 }
