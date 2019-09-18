@@ -1,14 +1,15 @@
 {
-  "name": "@penskemediacorp/twig-to-php-parser",
-  "version": "2.8.0-alpha.0",
-  "description": "> TODO: description",
-  "author": "laras126 <laras126@gmail.com>",
+  "name": "@penskemediacorp/eslint-config",
+  "version": "2.7.3-alpha.0",
+  "description": "Eslint base config and customizations.",
+  "keywords": [
+    "eslint",
+    "js"
+  ],
+  "author": "escobar022 <escobar022@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
   "main": "index.js",
-  "bin": {
-    "twig-to-php-parser": "bin/twig-to-php-parser.js"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -23,7 +24,7 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@penskemediacorp/larva": "^2.5.2-alpha.0",
-    "exec-php": "0.0.5"
+    "eslint": "^6.2.2",
+    "eslint-config-wordpress": "^2.0.0"
   }
 }

@@ -4,12 +4,12 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BRIGHT_RED_60}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BRIGHT_RED_60}",
 			"type": "color",
 			"category": "text-color"
 		},
