@@ -1,12 +1,13 @@
 const path = require( 'path' );
 
 module.exports = {
-	backstopjs: {
+	backstop: {
 		pmcMainQaUrl: 'http://localhost:3000',
 		pmcScenario: {
 			'delay': 1000,
 			'misMatchThreshold': 0.5,
-		}
+		},
+		larvaModules: [ 'footer', 'mega-menu-content', 'social-share' ]
 	},
 
 	patterns: {
