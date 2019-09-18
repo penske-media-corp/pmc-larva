@@ -18,7 +18,7 @@ const cliArgs = ( function getCliArgs() {
 
 const urlBase = backstopUtils.maybeUseCliUrl( cliArgs, appConfiguration.pmcMainQaUrl );
 const modulesFromCli = backstopUtils.getCliModuleArgs( cliArgs );
-const selectors = backstopUtils.prepareTestSelectors( modulesFromCli );
+const selectors = backstopUtils.prepareTestSelectors( appConfiguration.larvaModules );
 
 let paths = backstopUtils.prepareTestPaths( appConfiguration.larvaModules, appConfiguration.pmcTestPaths );
 
