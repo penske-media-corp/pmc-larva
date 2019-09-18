@@ -4,7 +4,7 @@ const assert = require( 'assert' );
 let stub = {
 	paths: ['/modules/footer', '/modules/header'],
 	urlBase: 'http://localhost:3000',
-	selectors: ['.footer', '.header'],
+	selectors: [ '.footer', '.header' ],
 	scenarioOverride: {}
 };
 
@@ -36,11 +36,23 @@ describe('getScenarios', () => {
 
 	it('outputs backstop scenario objects', () => {
 
-		let testScenario = getScenarios(
+		let testScenarios = getScenarios(
 			stub.urlBase, stub.paths, stub.selectors, stub.scenarioOverride
 		);
 
-		assert.deepEqual(testScenario, expectation);
+		assert.deepEqual( testScenarios, expectation );
+
+	});
+
+	it('supports document for selector', () => {
+
+		stub.selectors = [ 'document' ];
+
+		let testScenarios = getScenarios(
+			stub.urlBase, stub.paths, stub.selectors, stub.scenarioOverride
+		);
+
+		assert.deepEqual( testScenarios[0].selectors, stub.selectors );
 
 	});
 
