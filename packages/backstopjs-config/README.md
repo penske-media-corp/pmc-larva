@@ -15,7 +15,7 @@ First install the package and its dependencies. This includes headless Chrome, s
 
 1. Install the package. Run this command from the same location as package.json.
 	```language:bash
-	npm install @penskemediacorp/backstopjs-config --save-dev
+	npm install @penskemediacorp/backstopjs-config backstopjs --save-dev
 	```
 
 2. Add configuration to larva.config.js. You can _either_ test modules from the Larva repo, or test a full page screenshot at specific paths.
