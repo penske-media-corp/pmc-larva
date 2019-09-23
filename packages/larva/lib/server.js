@@ -55,14 +55,14 @@ app.get( '/', function (req, res) {
 app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	let patternsPath = 'larva' === req.params.source ? appConfiguration.larvaPatternsDir : appConfiguration.projectPatternsDir;
 
-	if ( 'larva' == req.params.source || 'project' == req.params.source ) {
+	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
-		req.params[ 'pattern_nav' ] = patterns;
 	}
 
+	req.params[ 'pattern_nav' ] = patterns;
 	res.end( twing.render( 'pattern.html', req.params ) );
-})
+});
 
 app.listen(port, () => {
 	console.log( 'Node.js Express server listening on port ' + port );
