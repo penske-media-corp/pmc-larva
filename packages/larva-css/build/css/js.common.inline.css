@@ -1,1 +1,9 @@
-@media (max-width:47.999rem){.lrv-js-MobileHeightToggle .lrv-js-MobileHeightToggle-target{height:0;visibility:hidden}.lrv-js-MobileHeightToggle.is-expanded .lrv-js-MobileHeightToggle-target{height:auto;visibility:visible}.lrv-js-MobileHeightToggle.is-expanded .lrv-a-icon-arrow-down.lrv-a-icon-after:after{--a-icon-transform:rotate(180deg)}}
+@media (max-width: 47.999rem) {
+  .lrv-js-MobileHeightToggle .lrv-js-MobileHeightToggle-target {
+    height: 0;
+    visibility: hidden; }
+  .lrv-js-MobileHeightToggle.is-expanded .lrv-js-MobileHeightToggle-target {
+    height: auto;
+    visibility: visible; }
+  .lrv-js-MobileHeightToggle.is-expanded .lrv-a-icon-arrow-down.lrv-a-icon-after::after {
+    --a-icon-transform: rotate(180deg); } }

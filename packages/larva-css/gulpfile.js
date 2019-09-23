@@ -84,7 +84,7 @@ function styles( done ) {
 				} ) ).
 				pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
 				pipe( concat( css_files[val].css.file ) ).
-				pipe( postcss( [cssnano()] ) ).
+				// pipe( postcss( [cssnano()] ) ).
 				pipe( gulp.dest( css_dest ) );
 
 	} );
