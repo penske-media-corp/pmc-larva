@@ -1,11 +1,1 @@
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="19.4px" height="14.5px" viewBox="0 0 19.4 14.5" style="enable-background:new 0 0 19.4 14.5;"
-	 xml:space="preserve">
-<title>Menu Icon</title>
-<defs>
-</defs>
-<rect width="19.4" height="2.5"/>
-<rect y="6" width="19.4" height="2.5"/>
-<rect y="12" width="19.4" height="2.5"/>
-</svg>
+<svg width="19.4" height="14.5"><title>Menu Icon</title><path d="M0 0h19.4v2.5H0zM0 6h19.4v2.5H0zM0 12h19.4v2.5H0z"/></svg>

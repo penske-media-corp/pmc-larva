@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="23px" height="21px" viewBox="0 0 23 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
-    <title>Icon / Star</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Style-guide" transform="translate(-1156.000000, -1428.000000)" fill="#A9A9A9" fill-rule="nonzero">
-            <g id="Icon-/-Star" transform="translate(1156.000000, 1428.000000)">
-                <polygon id="Star-Copy-4" points="11.5 17.25 4.7404696 20.8036954 6.03142503 13.2768477 0.562850063 7.94630456 8.1202348 6.84815228 11.5 0 14.8797652 6.84815228 22.4371499 7.94630456 16.968575 13.2768477 18.2595304 20.8036954"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="23" height="21"><title>Icon / Star</title><path d="M11.5 17.25l-6.76 3.554 1.291-7.527-5.468-5.33L8.12 6.847 11.5 0l3.38 6.848 7.557 1.098-5.468 5.33 1.29 7.528z" fill-rule="nonzero"/></svg>

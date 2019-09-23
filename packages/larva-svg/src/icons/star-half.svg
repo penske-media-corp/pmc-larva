@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="21px" viewBox="0 0 23 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>Star Copy</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Article-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Star-Copy" fill="#A9A9A9" fill-rule="nonzero" points="11.5 17.25 4.7404696 20.8036954 6.03142503 13.2768477 0.562850063 7.94630456 8.1202348 6.84815228 11.5 0"></polygon>
-    </g>
-</svg>
+<svg width="12" height="21" viewBox="0 0 23 21"><title>Star Copy</title><path fill-rule="nonzero" d="M11.5 17.25l-6.76 3.554 1.291-7.527-5.468-5.33L8.12 6.847 11.5 0z"/></svg>

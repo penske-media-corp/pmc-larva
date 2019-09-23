@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
-    <title>Share-icon</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Style-guide" transform="translate(-814.000000, -1427.000000)" stroke="#616161">
-            <g id="Share-icon" transform="translate(814.000000, 1427.000000)">
-                <path d="M0.5,0.5 L0.5,15.5 L15.5,15.5 L15.5,0.5 L0.5,0.5 Z" id="Rectangle-3"></path>
-                <polygon id="Shape" stroke-width="0.25" fill="#616161" fill-rule="nonzero" points="8.4299569 7.5625 8.4299569 4.5 7.5700431 4.5 7.5700431 7.5625 4.56034483 7.5625 4.56034483 8.4375 7.5700431 8.4375 7.5700431 11.5 8.4299569 11.5 8.4299569 8.4375 11.4396552 8.4375 11.4396552 7.5625"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="16" height="16"><title>Share-icon</title><g stroke="#616161" fill-rule="evenodd"><path d="M.5.5v15h15V.5H.5z"/><path stroke-width=".25" fill-rule="nonzero" d="M8.43 7.563V4.5h-.86v3.063H4.56v.875h3.01V11.5h.86V8.437h3.01v-.874z"/></g></svg>

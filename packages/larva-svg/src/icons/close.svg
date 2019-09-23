@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
-    <title>Icon / Close</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Style-guide" transform="translate(-427.000000, -1429.000000)" fill="#000000">
-            <g id="Icon-/-Close" transform="translate(427.000000, 1429.000000)">
-                <polygon points="12.1637092 1.4233579 11.0582375 0.317886245 6.39648437 4.97963937 1.73473125 0.317886245 0.629259586 1.4233579 5.29101272 6.08511103 0.629259586 10.7468642 1.73473125 11.8523358 6.39648437 7.19058269 11.0582375 11.8523358 12.1637092 10.7468642 7.50195603 6.08511103"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="13" height="12"><title>Close Icon</title><path d="M12.164 1.423L11.058.318 6.396 4.98 1.735.318.629 1.423l4.662 4.662-4.662 4.662 1.106 1.105 4.661-4.661 4.662 4.661 1.106-1.105-4.662-4.662z" fill-rule="evenodd"/></svg>
