@@ -49,8 +49,8 @@ spriter.compile( function( error, result, cssData ) {
 
 		// Run through all created resources and write them to disk
 		for ( var type in result[mode] ) {
-			mkdirp.sync(path.dirname(result[mode][type].path));
-			fs.writeFileSync(result[mode][type].path, result[mode][type].contents);
+			mkdirp.sync( path.dirname( result[mode][type].path ) );
+			fs.writeFileSync( result[mode][type].path, result[mode][type].contents );
 		}
 	}
 });
