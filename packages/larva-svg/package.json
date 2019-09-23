@@ -5,7 +5,7 @@
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
-  "main": "lib/svgs.js",
+  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -14,14 +14,15 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "node ./index.js"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
     "globby": "^10.0.1",
-    "svg-sprite": "^1.5.0"
+    "svg-sprite": "^1.5.0",
+    "svgo": "^1.3.0"
   },
   "gitHead": "02c11b980ae2eb79459f880be1f058f83cea9bdc"
 }
