@@ -6,6 +6,7 @@ const mkdirp = require('mkdirp');
 const globby = require('globby');
 const fs = require('fs');
 const svgoConfig = require( './svgo-config.json' );
+const getSassVarsString = require( './getSassVarsString' );
 
 const config = {
 	dest: 'build',
@@ -37,9 +38,17 @@ const svgFiles = globby.sync( svgPath, {
 	}
 });
 
+let scssIcons = {};
+
 svgFiles.forEach( file => {
+	// Build Sass vars object
+	scssIcons[ path.basename( file, '.svg' ) ] = fs.readFileSync( file, { encoding: 'utf-8' } );
+
 	spriter.add( file, path.basename( file ), fs.readFileSync( file, { encoding: 'utf-8' } ) );
 });
+
+// Write the Sass variables.
+fs.writeFileSync( path.join( __dirname, '../build/a-icon-svg.scss' ), getSassVarsString( scssIcons ) );
 
 // Compile the sprite
 spriter.compile( function( error, result, cssData ) {
