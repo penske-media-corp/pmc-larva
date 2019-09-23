@@ -5,6 +5,7 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const globby = require('globby');
 const fs = require('fs');
+const svgoConfig = require( './svgo-config.json' );
 
 const config = {
 	dest: 'build',
@@ -18,7 +19,9 @@ const config = {
 		id: {
 			separator: '',
 		},
-		transform: [ 'svgo' ]
+		transform: {
+			svgo: svgoConfig
+		}
 	},
 	svg: {
 		dimensionAttributes: false,
