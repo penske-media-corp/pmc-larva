@@ -5,8 +5,10 @@
 		<h1 class="lrv-u-font-family-basic lrv-u-padding-a-1 lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' ~ name }}</h1>
 	</div>
 
-	{% if 'one-offs' == type %}
+	{% if 'one-offs' == type %} 
 		{% include "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".html" with data %}
+	{% elseif 'algorithms' == type %}
+		{% include "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".html" %}
 	{% else %}
 		{% include "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ".twig" with data %}
 	{% endif %}
