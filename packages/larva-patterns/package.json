@@ -23,7 +23,8 @@
     "@penskemediacorp/larva": "^2.9.0-alpha.0",
     "@penskemediacorp/larva-css": "^2.9.0-alpha.0",
     "@penskemediacorp/larva-js": "^2.9.0-alpha.0",
-    "@penskemediacorp/larva-svg": "^2.8.2-alpha.0"
+    "@penskemediacorp/larva-svg": "^2.8.2-alpha.0",
+    "lodash.clonedeep": "^4.5.0"
   },
   "devDependencies": {
     "stylelint": "^10.1.0"
