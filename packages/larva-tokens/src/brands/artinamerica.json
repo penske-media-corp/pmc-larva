@@ -4,7 +4,7 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!TEAL_31}",
+			"value": "{!REGAL_BLUE_23}",
 			"type": "color",
 			"category": "background-color"
 		},
@@ -19,7 +19,7 @@
 			"category": "background-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!TEAL_31}",
+			"value": "{!REGAL_BLUE_23}",
 			"type": "color",
 			"category": "text-color"
 		},
