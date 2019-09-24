@@ -42,13 +42,15 @@ let scssIcons = {};
 
 svgFiles.forEach( file => {
 	// Build Sass vars object
-	scssIcons[ path.basename( file, '.svg' ) ] = fs.readFileSync( file, { encoding: 'utf-8' } );
+	// TODO: unfinished feature.
+	// scssIcons[ path.basename( file, '.svg' ) ] = fs.readFileSync( file, { encoding: 'utf-8' } );
 
 	spriter.add( file, path.basename( file ), fs.readFileSync( file, { encoding: 'utf-8' } ) );
 });
 
 // Write the Sass variables.
-fs.writeFileSync( path.join( process.cwd(), './build/a-icon-svg.scss' ), getSassVarsString( scssIcons ) );
+// TODO: unfinished feature.
+// fs.writeFileSync( path.join( process.cwd(), './build/a-icon-svg.scss' ), getSassVarsString( scssIcons ) );
 
 // Compile the sprite
 spriter.compile( function( error, result, cssData ) {
