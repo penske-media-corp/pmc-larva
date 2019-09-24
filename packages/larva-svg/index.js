@@ -29,7 +29,7 @@ const config = {
 	}
 };
 
-const svgPath = path.join( __dirname, './src/' );
+const svgPath = path.join( process.cwd(), './src/' );
 
 const spriter = new SVGSpriter(config);
 const svgFiles = globby.sync( svgPath, {
@@ -48,7 +48,7 @@ svgFiles.forEach( file => {
 });
 
 // Write the Sass variables.
-fs.writeFileSync( path.join( __dirname, './build/a-icon-svg.scss' ), getSassVarsString( scssIcons ) );
+fs.writeFileSync( path.join( process.cwd(), './build/a-icon-svg.scss' ), getSassVarsString( scssIcons ) );
 
 // Compile the sprite
 spriter.compile( function( error, result, cssData ) {
