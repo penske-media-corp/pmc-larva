@@ -8,8 +8,23 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!MAHOGANY_53}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!CERULEAN_47}",
+			"type": "color",
+			"category": "background-color"
+		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!TEAL_31}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "{!CERULEAN_47}",
 			"type": "color",
 			"category": "text-color"
 		},
