@@ -1,27 +1,169 @@
-# Larva SVGs
+# Larva SVG
 
-This package contains SVG logos and icons available as an SVG stack and as defs.
+This package contains **brand-agnostic** SVG logos and icons for PMC's websites. The package provides: 
 
-Icons should be added to this directory sparingly. All files in this directory are compiled into an SVG icon sprite that is used in conjunction with `c-icon`. This file is loaded asynchronously, and should be kept as small as possible and should only contain icons used globally e.g. the search icon, social icons, and a chevron.
+1. Indivdual, optimized SVG icons
+1. A pre-built SVG sprite to use along with the `c-icon` Larva pattern
+1. A script to build SVG sprites at the project-level for brand-specific SVG assets
 
-**Icons are available with both fragment identifiers and as inline SVGs. Logos are only available as inline SVG.**
+## Links
 
-## Notes
+* [Icons available in this package](https://penske-media-corp.github.io/pmc-larva/packages/larva-svg/build/defs/sprite.defs.html)
+* [svg-sprite npm package documentation](https://github.com/jkphl/svg-sprite)
+* [CSS-Tricks article about SVG sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/)
 
-Icons are available as SVG fragments to be accessed with `a-icon` in CSS and as inline SVG, accessed with `c-icon` and displayed in the `use` element.
+## Overview of Functionality
 
-In order for inline SVG with `c-icon` to work, the defs.svg must be inlined and hidden on the page. For the stack, or CSS icons with `a-icon` to work, the stack.svg must be available for retrieval from the stylesheet.
+**This package uses the low-level svg-sprite npm package to build an SVG sprite from a directory of SVG files**. It can be used to build sprites in this repository, or in a consuming project. 
 
-More information here: [SVG Fragment Identifiers](https://css-tricks.com/svg-fragment-identifiers-work/).
+1. Given a directory of SVG files stored inside `./src/svg/`
+2. `index.js` is exectuted as a node script from `./`
+3. All files in `./src/svg/` are piped into the svg-sprite npm package
+4. The SVGs are optimized via SVGO
+5. The SVGs are compiled into a single sprite file
+6. The package's output is written to `./build/defs/`
 
-## Adding new icons and logos
+**Important note:**
 
-There are two scripts for building the SVG sprites. To build the defs, or inline SVG, add a new icon to the directory and run the following from the root of this package:
+The consuming project is responsible for: 
+
+1. Loading the sprite on the front-end.
+2. Providing a script to combining this sprite from larva-svg with a local SVG sprite, if applicable.
+
+Examples are provided in this documentation, but this package does not provide the above functionality.
+
+## Development Setup
+
+### To copy the icon sprite from this package into a consuming project:
+
+1. Install the package. Run this command from the same location as package.json.
+	```language:bash
+	npm install @penskemediacorp/larva-svg --save
+	```
+
+2. Create a directory `./build/svg`.
+
+3. Add the following copy script to the local project's package.json:
+
+	```language:json
+	"scripts": {
+		"update-icons": "cp ./node_modules/@penskemediacorp/larva-svg/build/defs/svg/sprite.defs.svg ./build/svg",
+	}
+	```
+
+4. Run `npm run update-icons` to copy the sprite to your local project.
+
+5. Consider using the following tools to load the sprite on the front-end: 
+- `ajaxIconSprite` from [@penskemediacorp/larva-js](https://www.npmjs.com/package/@penskemediacorp/larva-js) npm package for loading the sprite file asynchronously and injecting it into the DOM
+- `c-icon` from [@penskemediacorp/larva-patterns](https://www.npmjs.com/package/@penskemediacorp/larva-patterns) is a Twig pattern that is configured with the appropriate markup to load icons from a sprite.
+
+### To build a roject-level sprite with brand-specific SVGs:
+
+After completing the above steps, you can use the larva-svg package to build a local SVG sprite with brand-specific icons and logos by following these steps:
+
+1. Create the directory `./src/svg`
+2. Add some SVG files to that directory. If these SVGs are exported from Sketch, please make sure they have an appropriate title, and we suggest removing all `fill` attributes.
+1. Add this script to package.json:
+	```language:json
+	"scripts": {
+		"svg-sprite": "node node_modules/@penskemediacorp/larva-svg",
+	}
+	```
+3. Run the script with `npm run svg-sprite`
+4. You should see a new directory that contains the optimized SVGs in sprite form, as well as an HTML file to show the available icons: `./build/defs/svg/sprite.defs.svg`
+
+### Combining the larva-svg sprite and project svg sprite:
+
+After completing the above steps, you may want to use use icons from _both_ larva-svg and this new sprite. Your project will need to provide an additional script to combine them. The following is a small Gulp script for that, but any build tool or even a bash script could accomplish this. 
+
+1. Install the following packages:
+	```
+	npm install gulp gulp-concat --save-dev
+	```
+
+2. Create and add the following to `./gulpfile.js`:
+	```language:javascript
+	const gulp = require( 'gulp' );
+	const concat = require( 'gulp-concat' );
+	
+	// Combine SVG sprites into one.
+	exports.sprite = function( done ) {
+		gulp.src( './build/**/*.defs.svg' )
+		.pipe( concat( 'svg-sprite.svg' ) )
+		.pipe( gulp.dest( './build/svg/' ) );
+		done();
+	};
+	```
+
+3. Update your scripts in package.json to:
+	```
+	"scripts": {
+		"update-icons": "cp ./node_modules/@penskemediacorp/larva-svg/build/defs/svg/sprite.defs.svg ./build/icons && npm run svg-sprite",
+		"svg-sprite": "node node_modules/@penskemediacorp/larva-svg && node_modules/.bin/gulp sprite"
+	}
+	```
+
+4. Run the command `npm run svg-sprite`
+
+5. Ensure that the sprite you are loading on the front-end points to `./build/svg/svg-sprite.svg`
+
+## Things To Be Aware Of 
+
+### Accessibility
+
+When icons are used without accompanying text to indicate a link, they must have text available to a screen reader. The can be done by adding an `aria-label` attribute on the containing anchor or button element, like so:
+
+	```
+	<a href="#" aria-label="icon name">
+		<svg>
+			<use xlink:href="#icon-name" />
+		</svg>
+	</a>
+	```
+
+Where `icon-name` is the name of the file where the SVG originated. This markup is handled by default in `c-icon` from larva-patterns.
+
+### Styling SVGs can be tricky
+
+Inline SVGs do not behave like images you might be used to. Be sure to double check an SVGs inline height, width, and viewBox attributes as you are debugging. The following links may prove helpful:
+
+* [viewBox on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox)
+* [How to Scale SVG](https://css-tricks.com/scale-svg/) by Amelia Bellamy-Royds
+
+Sometimes adding a max-width or max-height to a wrapping element, and a width-100p to the SVG will solve your problems.
+
+### Icon and logo fills should inherit their color from parent element
+
+It is a major pain to try to manage SVG fill attributes when using sprites. The recommended approach is to globally apply the following CSS in a generic or reset section of the styles, towards the very top of the cascade (so that it can be easily overridden):
+
 ```
-node lib/defs.js
+svg {
+	fill: currentColor;
+}
 ```
 
-To build the stack, add a new icon, and run the following:
+Then, you can add a color to an element containing the SVG, like so:
+
 ```
-node lib/stack.js
+<a href="#" aria-label="icon name" class="lrv-u-color-brand-primary">
+	<svg>
+		<use xlink:href="#icon-name" />
+	</svg>
+</div>
 ```
+
+And the SVG will inherit that color for its fill.
+
+### SVG sprites should contain simple logos and icons only
+
+Do not add complex illustrations to the SVG sprite because it will cause significant bloat the the file. Complex SVGs can be added as usual image tags, or directly inlined into the markup.
+
+## History and Changelog
+
+This package contains a partial implementation of support for the icons as Sass variables to be used with the CSS algorith, `a-icon`, so the icons can be added in pseudo-elements. 
+
+Also, in the future, we will hopefully add a Node script to handle the larva-svg and project-level sprite concatenation so that consuming projects will have less scripts to manage.
+
+## Support
+
+Post questions in the #larva Slack channel and @laras126. 
