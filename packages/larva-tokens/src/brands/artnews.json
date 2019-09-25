@@ -8,11 +8,6 @@
 			"type": "color",
 			"category": "background-color"
 		},
-		"BACKGROUND_COLOR_BODY": {
-			"value": "{!WHITE}",
-			"type": "color",
-			"category": "background-color"
-		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!BRIGHT_RED_60}",
 			"type": "color",

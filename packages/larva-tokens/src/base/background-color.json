@@ -7,6 +7,9 @@
 		"type": "color"
 	},
 	"props": {
+		"BACKGROUND_COLOR_BODY": {
+			"value": "{!WHITE}"
+		},
 		"BACKGROUND_COLOR_WHITE": {
 			"value": "{!WHITE}"
 		},
