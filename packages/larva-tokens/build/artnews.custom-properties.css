@@ -35,6 +35,8 @@
   --border-color-grey-light: rgb(204, 204, 204);
   --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(106, 106, 106);
-  --background-color-brand-primary: rgb(229, 75, 39);
+  --color-brand-secondary: rgb(241, 247, 252);
   --color-brand-primary: rgb(229, 75, 39);
+  --background-color-brand-secondary: rgb(241, 247, 252);
+  --background-color-brand-primary: rgb(229, 75, 39);
 }

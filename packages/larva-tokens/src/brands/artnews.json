@@ -8,8 +8,18 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!ALICE_BLUE_97}",
+			"type": "color",
+			"category": "background-color"
+		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!BRIGHT_RED_60}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "{!ALICE_BLUE_97}",
 			"type": "color",
 			"category": "text-color"
 		},
