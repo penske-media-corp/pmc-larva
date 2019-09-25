@@ -3,7 +3,7 @@
   "version": "2.8.2-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
-  "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
+  "homepage": "https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva-svg#readme",
   "license": "ISC",
   "main": "index.js",
   "publishConfig": {

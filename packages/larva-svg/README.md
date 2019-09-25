@@ -160,7 +160,7 @@ Do not add complex illustrations to the SVG sprite because it will cause signifi
 
 ## History and Changelog
 
-This package contains a partial implementation of support for the icons as Sass variables to be used with the CSS algorith, `a-icon`, so the icons can be added in pseudo-elements. 
+This package contains a partial implementation of support for the icons as Sass variables to be used with the CSS algorithm, `a-icon`, so the icons can be added in pseudo-elements.
 
 Also, in the future, we will hopefully add a Node script to handle the larva-svg and project-level sprite concatenation so that consuming projects will have less scripts to manage.
 
