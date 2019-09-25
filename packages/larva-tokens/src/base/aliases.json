@@ -1,6 +1,7 @@
 {
 	"aliases": {
 		"WHITE": "#FFFFFF",
+		"EGGSHELL_96": "#F8F8F3",
 		"GREY_98": "#FAFAFA",
 		"GREY_96": "#F7F7F7",
 		"GREY_90": "#E6E6E6",
@@ -10,11 +11,14 @@
 		"GREY_20": "#323232",
 		"GREY_10": "#191919",
 		"RED_45": "#E40000",
+		"MAHOGANY_53": "#CB454A",
 		"BRIGHT_RED_60": "#E54B27",
 		"BLACK": "#000000",
 		"BLACK_20": "#333333",
-		"TEAL_31": "#316E6E",
+		"REGAL_BLUE_23": "#0C4D6A",
 		"BLUE_61": "#417EF4",
+		"ALICE_BLUE_97": "#F1F7FC",
+		"CERULEAN_47": "#01A5ED",
 		"SOURCE_SANS_PRO": "Source Sans Pro, sans-serif",
 		"BONNIE": "Bonnie, Georgia, serif",
 		"OVERPASS": "Overpass, sans-serif",
