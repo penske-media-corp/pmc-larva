@@ -18,6 +18,11 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_BODY": {
+			"value": "{!EGGSHELL_96}",
+			"type": "color",
+			"category": "background-color"
+		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!REGAL_BLUE_23}",
 			"type": "color",
