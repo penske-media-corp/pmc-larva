@@ -85,7 +85,6 @@ function styles( done ) {
 				} ) ).
 				pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
 				pipe( concat( css_files[val].css.file ) ).
-				// Commenting out until we figure out Sass error from inline SVG
 				pipe( gulp.dest( css_dest ) );
 
 	} );
