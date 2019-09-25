@@ -28,7 +28,7 @@ This package contains **brand-agnostic** SVG logos and icons for PMC's websites.
 The consuming project is responsible for: 
 
 1. Loading the sprite on the front-end.
-2. Providing a script to combining this sprite from larva-svg with a local SVG sprite, if applicable.
+2. Providing a script to combine the from larva-svg with a local SVG sprite, if applicable.
 
 Examples are provided in this documentation, but this package does not provide the above functionality.
 
@@ -41,7 +41,7 @@ Examples are provided in this documentation, but this package does not provide t
 	npm install @penskemediacorp/larva-svg --save
 	```
 
-2. Create a directory `./build/svg`.
+2. Create a directory `./build/svg`. (where `./` is the root of `assets` or wherever your project stores front-end files)
 
 3. Add the following copy script to the local project's package.json:
 
@@ -57,7 +57,7 @@ Examples are provided in this documentation, but this package does not provide t
 - `ajaxIconSprite` from [@penskemediacorp/larva-js](https://www.npmjs.com/package/@penskemediacorp/larva-js) npm package for loading the sprite file asynchronously and injecting it into the DOM
 - `c-icon` from [@penskemediacorp/larva-patterns](https://www.npmjs.com/package/@penskemediacorp/larva-patterns) is a Twig pattern that is configured with the appropriate markup to load icons from a sprite.
 
-### To build a roject-level sprite with brand-specific SVGs:
+### To build a project-level sprite with brand-specific SVGs:
 
 After completing the above steps, you can use the larva-svg package to build a local SVG sprite with brand-specific icons and logos by following these steps:
 
@@ -72,9 +72,11 @@ After completing the above steps, you can use the larva-svg package to build a l
 3. Run the script with `npm run svg-sprite`
 4. You should see a new directory that contains the optimized SVGs in sprite form, as well as an HTML file to show the available icons: `./build/defs/svg/sprite.defs.svg`
 
-### Combining the larva-svg sprite and project svg sprite:
+### Combining the larva-svg and the project-level sprites:
 
-After completing the above steps, you may want to use use icons from _both_ larva-svg and this new sprite. Your project will need to provide an additional script to combine them. The following is a small Gulp script for that, but any build tool or even a bash script could accomplish this. 
+After completing the above steps, you will likely want to use use icons from _both_ larva-svg and this new sprite. Your project will need to provide an additional script to combine them. 
+
+The following is a small Gulp script for that, but any build tool or even a bash script could accomplish this. The goal is to concatenate the contents of the larva-svg sprite and the project-level sprite into a single file.
 
 1. Install the following packages:
 	```
@@ -113,13 +115,11 @@ After completing the above steps, you may want to use use icons from _both_ larv
 
 When icons are used without accompanying text to indicate a link, they must have text available to a screen reader. The can be done by adding an `aria-label` attribute on the containing anchor or button element, like so:
 
-	```
 	<a href="#" aria-label="icon name">
 		<svg>
 			<use xlink:href="#icon-name" />
 		</svg>
 	</a>
-	```
 
 Where `icon-name` is the name of the file where the SVG originated. This markup is handled by default in `c-icon` from larva-patterns.
 
