@@ -14,10 +14,8 @@ const sass = require( 'gulp-sass' );
 const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const clean = require( 'gulp-clean' );
-const postcss = require( 'gulp-postcss' );
-const cssnano = require( 'cssnano' );
 
-const sassOpts = {
+let sassOpts = {
 	includePaths: [
 		path.resolve( './node_modules' ),
 		path.resolve( './src' )
@@ -71,6 +69,9 @@ function clean_css() {
 
 function styles( done ) {
 	clean_css();
+
+	sassOpts.outputStyle = 'compressed';
+
 	Object.keys( css_files ).forEach( val => {
 	
 		gulp.src( css_files[val].css.orig ).
@@ -85,7 +86,6 @@ function styles( done ) {
 				pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
 				pipe( concat( css_files[val].css.file ) ).
 				// Commenting out until we figure out Sass error from inline SVG
-				// pipe( postcss( [cssnano()] ) ).
 				pipe( gulp.dest( css_dest ) );
 
 	} );
