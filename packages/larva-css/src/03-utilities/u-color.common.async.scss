@@ -6,6 +6,7 @@ $colors: (
 	color-grey,
 	color-grey-dark,
 	color-brand-primary,
+	color-black,
 );
 
 @include token-utility-generator( 'color', $colors, $TOKENS-MAP );

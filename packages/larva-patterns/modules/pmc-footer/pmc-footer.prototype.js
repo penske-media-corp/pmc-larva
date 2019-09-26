@@ -9,8 +9,8 @@ const data = require( '../../_data/brands.json' );
 o_nav.o_nav_title_text = 'Our Sites';
 o_nav.o_nav_list_items = [];
 
-c_icon.c_icon_classes = 'lrv-u-max-width-150 lrv-u-max-height-50';
-c_icon.c_icon_name = 'pmc-logo-black';
+c_icon.c_icon_classes = 'lrv-u-max-width-150 lrv-u-max-height-50 lrv-u-color-black';
+c_icon.c_icon_name = 'pmc-logo';
 c_icon.c_icon_url = 'https://pmc.com';
 c_icon.c_icon_rel_name = 'noopener noreferrer';
 

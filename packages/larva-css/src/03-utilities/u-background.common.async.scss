@@ -6,6 +6,7 @@ $background-colors: (
 	background-color-grey-lightest,
 	background-color-grey-light,
 	background-color-black,
+	background-color-body,
 );
 
 @include token-utility-generator( 'background-color', $background-colors, $TOKENS-MAP );
