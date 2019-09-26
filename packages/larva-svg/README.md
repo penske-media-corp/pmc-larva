@@ -1,6 +1,10 @@
 # Larva SVG
 
-This package contains **brand-agnostic** SVG logos and icons for PMC's websites. The package provides: 
+SVGs and SVG sprites are a great way to handle icons as an alternative to icon fonts which can weigh down a page and be inaccessible for users. This package contains **brand-agnostic** SVG logos and icons for PMC's websites as both individual files and as an SVG sprite, a wonderful alternative to icon fonts.
+
+An SVG sprite is basically a single file that contains a bunch of SVGs (similar to CSS background image sprites) that can be loaded one time, then in the markup of a page, you can use a shorthand `use` tag to refer to the id of an SVG from the larger sprite file. This minimizes both HTTP requests and provides a standardized way to handle icons.
+
+The package provides: 
 
 1. Indivdual, optimized SVG icons
 1. A pre-built SVG sprite to use along with the `c-icon` Larva pattern
