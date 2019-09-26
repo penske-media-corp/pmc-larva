@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/backstopjs-config",
-  "version": "2.9.2-alpha.0",
+  "version": "2.11.0-alpha.0",
   "description": "Visual regression testing with Backstop JS.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -24,7 +24,7 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@penskemediacorp/larva": "^2.9.0-alpha.0",
+    "@penskemediacorp/larva": "^2.11.0-alpha.0",
     "webpack-merge": "^4.2.2"
   },
   "peerDependencies": {
