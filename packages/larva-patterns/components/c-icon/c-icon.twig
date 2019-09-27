@@ -1,5 +1,6 @@
 {% if c_icon_url %}
-<a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}" aria-label="{{ c_icon_name }}" {% if c_icon_rel_name %}rel="{{ c_icon_rel_name }}"{% endif %} target="_blank">
+<a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}" {% if c_icon_rel_name %}rel="{{ c_icon_rel_name }}"{% endif %} target="_blank">
+	<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
 {% endif %}
 
 <svg class="c-icon {{ modifier_class }} {{ c_icon_classes }}">
