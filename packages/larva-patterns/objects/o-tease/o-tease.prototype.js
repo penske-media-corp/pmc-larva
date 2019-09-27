@@ -1,3 +1,11 @@
+const clonedeep = require( 'lodash.clonedeep' );
+
+const o_figure_prototype = require( '../o-figure/o-figure.prototype' );
+const o_figure = clonedeep( o_figure_prototype );
+
+o_figure.o_figure_crop_class = 'lrv-u-crop-2x3';
+o_figure.o_figure_alt_attr = 'Thumbnail image';
+
 module.exports = {
 	"o_tease_url": "#",
 	"o_tease_classes": "lrv-u-flex lrv-u-align-items-center",
@@ -15,10 +23,5 @@ module.exports = {
 		"c_tagline_classes": "",
 		"c_tagline_markup": "Tagline Text"
 	},
-	"o_figure": {
-		"o_figure_crop_class": "lrv-u-crop-2x3",
-		"o_figure_alt_attr": "Thumbnail image",
-		"o_figure_placeholder_image_url": "https://placehold.it/300x300",
-		"o_figure_caption_text": "Here in o-tease"
-	}
+	o_figure: o_figure
 };
