@@ -2,40 +2,43 @@
 	<a href="{{ o_figure_permalink_url }}" class="o-figure__link {{ o_figure_link_classes }}">
 {% endif %}
 
-{% if o_figure_screen_reader_text %}
-	<span class="lrv-a-screen-reader-only">{{ o_figure_screen_reader_text }}</span>
-{% endif %}
 
-<figure class="o-figure {{ modifier_class }} {{ o_figure_classes }}" style="{{ o_figure_width_attr }}">
+<figure class="o-figure {{ modifier_class }} {{ o_figure_classes }} lrv-u-max-width-100p" style="{{ o_figure_width_attr }}">
 
-{% if o_figure_crop_class %}
-	<div class="{{ o_figure_crop_class }}">
-{% endif %}
+	{% if o_figure_screen_reader_text %}
+		<span class="lrv-a-screen-reader-only">{{ o_figure_screen_reader_text }}</span>
+	{% endif %}
 
-{% if o_figure_image_markup %}
-	{{ o_figure_image_markup }}
-{% else %}
-	<img class="o-figure__image {{ o_figure_image_classes }}" src="{{ o_figure_placeholder_image_url }}" data-lazy-src="{{ o_figure_image_url }}" alt="{{ o_figure_alt_attr }}" data-lazy-srcset="{{ o_figure_lazy_srcset_attr }}" data-lazy-sizes="{{ o_figure_lazy_sizes_attr }}">
-{% endif %}
+	{% if o_figure_crop_class %}
+		<div class="{{ o_figure_crop_class }}">
+	{% else %}
+		<div style="{{ o_figure_crop_style_attr }}">
+	{% endif %}
 
-{% if c_button %}
-	{% include "@larva/components/c-button/c-button.twig" with c_button %}
-{% endif %}
+	{% if o_figure_image_markup %}
+		{{ o_figure_image_markup }}
+	{% else %}
+		<img class="o-figure__image {{ o_figure_image_classes }}" src="{{ o_figure_placeholder_image_url }}" data-lazy-src="{{ o_figure_image_url }}" alt="{{ o_figure_alt_attr }}" data-lazy-srcset="{{ o_figure_lazy_srcset_attr }}" data-lazy-sizes="{{ o_figure_lazy_sizes_attr }}">
+	{% endif %}
 
-{% if o_figure_crop_class %}
-	</div>
-{% endif %}
+	{% if c_button %}
+		{% include "@larva/components/c-button/c-button.twig" with c_button %}
+	{% endif %}
 
-{% if o_figure_credit_text %}
-	<figcaption class="o-figure__caption {{ o_figure_figcaption_classes }}">
-		{% if o_figure_caption_markup %}
-			<span class="{{ o_figure_caption_classes }}">{{ o_figure_caption_markup }}</span>
-		{% endif %}
-		{% if o_figure_credit_text %}
-			<span class="{{ o_figure_credit_classes }}">{{ o_figure_credit_text }}</span>
-		{% endif %}
-	</figcaption>
-{% endif %}
+	{% if o_figure_crop_class %}
+		</div>
+	{% endif %}
+
+	{% if o_figure_credit_text %}
+		<figcaption class="o-figure__caption {{ o_figure_figcaption_classes }}">
+			{% if o_figure_caption_markup %}
+				<span class="{{ o_figure_caption_classes }}">{{ o_figure_caption_markup }}</span>
+			{% endif %}
+			{% if o_figure_credit_text %}
+				<span class="{{ o_figure_credit_classes }}">{{ o_figure_credit_text }}</span>
+			{% endif %}
+		</figcaption>
+	{% endif %}
 
 </figure>
 
