@@ -9,6 +9,7 @@ const c_email_field = clonedeep( c_email_field_prototype );
 
 module.exports = {
 	"o_email_capture_form_classes": "",
+	"o_email_capture_form_inner_classes": "",
 	"o_email_capture_form_action_url": "",
 	"o_email_capture_form_button_text": "Sign up",
 	"o_email_capture_form_name_attr": "email-capture-form",
