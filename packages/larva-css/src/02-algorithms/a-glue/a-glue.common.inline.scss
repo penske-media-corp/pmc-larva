@@ -22,6 +22,16 @@
 	@include _a-glue-base;
 }
 
+
+.lrv-a-glue\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		top: 0;
+		left: 0;
+
+		@include _a-glue-base;
+	}
+}
+
 .lrv-a-glue--l-0 {
 	--a-glue-left: 0;
 }
