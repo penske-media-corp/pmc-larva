@@ -25,6 +25,7 @@
 
 .lrv-a-glue\@tablet {
 	@include pmc-breakpoint( tablet ) {
+		// TODO: incorporate these fallback values into mixin
 		top: 0;
 		left: 0;
 
