@@ -2,17 +2,14 @@
 	<a href="{{ o_figure_permalink_url }}" class="o-figure__link {{ o_figure_link_classes }}">
 {% endif %}
 
-
 <figure class="o-figure {{ modifier_class }} {{ o_figure_classes }} lrv-u-max-width-100p" style="{{ o_figure_width_attr }}">
-
-	{% if o_figure_screen_reader_text %}
-		<span class="lrv-a-screen-reader-only">{{ o_figure_screen_reader_text }}</span>
-	{% endif %}
 
 	{% if o_figure_crop_class %}
 		<div class="{{ o_figure_crop_class }}">
-	{% else %}
-		<div style="{{ o_figure_crop_style_attr }}">
+	{% endif %}
+
+	{% if o_figure_crop_style_attr %}
+		<div class="lrv-a-crop-4x3" style="{{ o_figure_crop_style_attr }}">
 	{% endif %}
 
 	{% if o_figure_image_markup %}
@@ -30,15 +27,12 @@
 		</div>
 	{% endif %}
 
-	{% if o_figure_credit_text %}
-		<figcaption class="o-figure__caption {{ o_figure_figcaption_classes }}">
-			{% if o_figure_caption_markup %}
-				<span class="{{ o_figure_caption_classes }}">{{ o_figure_caption_markup }}</span>
-			{% endif %}
-			{% if o_figure_credit_text %}
-				<span class="{{ o_figure_credit_classes }}">{{ o_figure_credit_text }}</span>
-			{% endif %}
-		</figcaption>
+	{% if o_figure_crop_style_attr %}
+		</div>
+	{% endif %}
+
+	{% if c_figcaption %}
+		{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
 	{% endif %}
 
 </figure>
