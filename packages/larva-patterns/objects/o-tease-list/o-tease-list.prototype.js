@@ -1,21 +1,14 @@
-const o_figure_prototype = require( '../o-figure/o-figure.prototype' );
-const o_figure = Object.assign( {}, o_figure_prototype );
+const clonedeep = require( 'lodash.clonedeep' );
 
-const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
-const c_title = Object.assign( {}, c_title_prototype );
-
-o_figure.o_figure_crop_class = "lrv-a-crop-16x9";
+const o_tease_prototype = require( '../o-tease/o-tease.prototype' );
+const o_tease = clonedeep( o_tease_prototype );
 
 module.exports = {
-	"o_tease_list_classes": "lrv-a-unstyle-list",
-	"o_tease_list_items": [
-		{
-			"c_title": c_title,
-			"o_figure": o_figure
-		},
-		{
-			"c_title": c_title,
-			"o_figure": o_figure
-		}
+	o_tease_list_classes: 'lrv-a-unstyle-list',
+	o_tease_list_item_classes: '',
+	o_tease_list_items: [
+		o_tease,
+		o_tease,
+		o_tease
 	]
 }
