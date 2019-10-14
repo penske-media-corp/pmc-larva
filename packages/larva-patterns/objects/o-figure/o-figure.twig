@@ -1,30 +1,11 @@
-{% if o_figure_permalink_url %}
-	<a href="{{ o_figure_permalink_url }}" class="o-figure__link {{ o_figure_link_classes }}">
+{% if o_figure_link_url %}
+	<a href="{{ o_figure_link_url }}" class="o-figure__link {{ o_figure_link_classes }}">
 {% endif %}
 
 <figure class="o-figure {{ modifier_class }} {{ o_figure_classes }} lrv-u-max-width-100p" style="{{ o_figure_width_attr }}">
 
-	{% if o_figure_crop_class %}
-		<div class="{{ o_figure_crop_class }}">
-	{% endif %}
-
-	{% if o_figure_crop_style_attr %}
-		<div class="lrv-a-crop-4x3" style="{{ o_figure_crop_style_attr }}">
-	{% endif %}
-
-	{% if o_figure_image_markup %}
-		{{ o_figure_image_markup }}
-	{% else %}
-		<img class="o-figure__image {{ o_figure_image_classes }}" src="{{ o_figure_placeholder_image_url }}" data-lazy-src="{{ o_figure_image_url }}" alt="{{ o_figure_alt_attr }}" data-lazy-srcset="{{ o_figure_lazy_srcset_attr }}" data-lazy-sizes="{{ o_figure_lazy_sizes_attr }}" height="{{ o_figure_image_height_attr }}" width="{{ o_figure_image_width_attr }}">
-		<noscript><img class="o-figure__image {{ o_figure_image_classes }}" src="{{ o_figure_image_url }}" alt="{{ o_figure_alt_attr }}" srcset="{{ o_figure_lazy_srcset_attr }}" sizes="{{ o_figure_lazy_sizes_attr }}" height="{{ o_figure_image_height_attr }}" width="{{ o_figure_image_width_attr }}"></noscript>
-	{% endif %}
-
-	{% if o_figure_crop_class %}
-		</div>
-	{% endif %}
-
-	{% if o_figure_crop_style_attr %}
-		</div>
+	{% if c_lazy_image %}
+		{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 	{% endif %}
 
 	{% if c_figcaption %}
@@ -33,6 +14,6 @@
 
 </figure>
 
-{% if o_figure_permalink_url %}
+{% if o_figure_link_url %}
 	</a>
 {% endif %}
