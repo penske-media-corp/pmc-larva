@@ -1,8 +1,9 @@
-<header class="o-heading {{ modifier_class }} {{ o_heading_classes }}">
+<header class="o-header {{ modifier_class }} {{ o_heading_classes }}">
 	{% if c_heading %}
 		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
 	{% endif %}
 
+	{# TODO: replace with c-logo when it is moved to Larva #}
 	{% if o_figure %}
 		{% include "@larva/objects/o-figure/o-figure.twig" with o_figure %}
 	{% endif %}
