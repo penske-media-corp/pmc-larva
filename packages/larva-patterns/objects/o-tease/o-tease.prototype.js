@@ -23,7 +23,7 @@ c_lazy_image.c_lazy_image_alt_attr = 'Post tease thumbnail image';
 module.exports = {
 	o_tease_url: '#',
 	o_tease_classes: 'lrv-u-flex lrv-u-align-items-center',
-	o_tease_link_classes: 'lrv-u-display-contents lrv-a-unstyle-link',
+	o_tease_link_classes: 'lrv-u-display-contents',
 	o_tease_primary_classes: 'lrv-u-flex-grow-1',
 	o_tease_secondary_classes: 'lrv-u-flex-shrink-0 lrv-u-width-30p',
 	c_heading: c_heading,
