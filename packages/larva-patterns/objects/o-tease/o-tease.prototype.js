@@ -1,27 +1,33 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const o_figure_prototype = require( '../o-figure/o-figure.prototype' );
-const o_figure = clonedeep( o_figure_prototype );
+const c_lazy_image_prototype = require( '../../components/c-lazy-image/c-lazy-image.prototype' );
+const c_lazy_image = clonedeep( c_lazy_image_prototype );
 
-o_figure.o_figure_crop_class = 'lrv-u-crop-2x3';
-o_figure.o_figure_alt_attr = 'Thumbnail image';
+const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
+const c_title = clonedeep( c_title_prototype );
+
+c_title.c_title_url = false;
+
+const c_tagline_prototype = require( '../../components/c-tagline/c-tagline.prototype' );
+const c_tagline = clonedeep( c_tagline_prototype );
+
+const c_heading_prototype = require( '../../components/c-heading/c-heading.prototype' );
+const c_heading = clonedeep( c_heading_prototype );
+
+c_heading.c_heading_url = false;
+
+c_lazy_image.c_lazy_image_link_url = false;
+c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
+c_lazy_image.c_lazy_image_alt_attr = 'Post tease thumbnail image';
 
 module.exports = {
-	"o_tease_url": "#",
-	"o_tease_classes": "lrv-u-flex lrv-u-align-items-center",
-	"o_tease_link_classes": "lrv-u-display-contents",
-	"o_tease_primary_classes": "lrv-u-flex-grow-1",
-	"o_tease_secondary_classes": "lrv-u-flex-shrink-0 lrv-u-width-30p",
-	"c_heading": {
-		"c_heading_text": "Breaking News",
-		"c_heading_classes": "lrv-u-font-family-primary lrv-u-font-size-20 lrv-u-font-weight-bold"
-	},
-	"c_title": {
-		"c_title_text": "Title Text"
-	},
-	"c_tagline": {
-		"c_tagline_classes": "",
-		"c_tagline_markup": "Tagline Text"
-	},
-	o_figure: o_figure
+	o_tease_url: '#',
+	o_tease_classes: 'lrv-u-flex lrv-u-align-items-center',
+	o_tease_link_classes: 'lrv-u-display-contents lrv-a-unstyle-link',
+	o_tease_primary_classes: 'lrv-u-flex-grow-1',
+	o_tease_secondary_classes: 'lrv-u-flex-shrink-0 lrv-u-width-30p',
+	c_heading: c_heading,
+	c_title: c_title,
+	c_tagline: c_tagline,
+	c_lazy_image: c_lazy_image
 };
