@@ -14,5 +14,6 @@ module.exports = function getPatternDataPath( patternsPath, params ) {
 		return jsonPath;
 	}
 
-	throw new Error( chalk.red( `Couldn\'t find a .prototype.js or .json file for ${params.name}.\nLooked in ${patternsPath}.` ) );
+	console.log( chalk.yellow( `Couldn\'t find data file for ${params.name}.\nLooked in ${patternsPath}.` ) );
+	return undefined;
 }

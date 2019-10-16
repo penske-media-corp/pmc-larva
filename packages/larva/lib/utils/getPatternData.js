@@ -17,14 +17,9 @@ function getPatternData( patternsPath, params ) {
 
 	try {
 		let patternData = require( patternPath );
-
-		if ( undefined == typeof patternData ) {
-			patternData = new Error( `Encountered an error getting the pattern data.` );
-		}
-		
 		return patternData;
 	} catch( error ) {
-		console.error( chalk.red.bold( `Encountered an error getting the pattern data.` ) );
+		console.error( chalk.red.bold( `Couldn't get data for ${params.name}.${params.variant}.` ) );
 		console.error( chalk.red( error ) );
 	}
 

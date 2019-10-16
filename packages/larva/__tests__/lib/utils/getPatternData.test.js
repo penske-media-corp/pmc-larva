@@ -28,10 +28,7 @@ const oneOffStub = {
 };
 
 describe( 'getPatternData', () => {
-	it( 'throws an error if no pattern prototype is found', () => {
-		assert.throws( () => getPatternData( fixture, { type: 'objects', name: 'o-nav' } ), Error );
-	});
-
+	
 	it( 'first returns the pattern object if the schema is found', () => {
 		assert.equal( getPatternData( fixture + '/src/patterns', compStub ), expectedSchema );
 	});
