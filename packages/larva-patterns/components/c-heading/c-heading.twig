@@ -1,3 +1,7 @@
+{% if c_heading_wrapper %}
+	<div class="c-heading__wrapper {{ c_heading_wrapper_classes }}">
+{% endif %}
+
 {% if c_heading_is_primary_heading %}
 	<h1 class="c-heading {{ modifier_class }} {{ c_heading_classes }}">
 {% else %}
@@ -13,8 +17,13 @@
 	{% if c_heading_url %}
 		</a>
 	{% endif %}
+
 {% if c_heading_is_primary_heading %}
 	</h1>
 {% else %}
 	</h2>
+{% endif %}
+
+{% if c_heading_wrapper %}
+	</div>
 {% endif %}
