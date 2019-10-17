@@ -2,7 +2,7 @@
 
 o-figure is designed to support images with a caption and a credit, primarily used within editorial content in `the_content` in WordPress. pmc-core-v2 contains a filter on the `caption` shortcode that applies this pattern. Is it also used in for featured images that include credits and captions.
 
-It generally supports a `figure` element around a `c-lazy-image` and `c-figcaption`, with an optional link wrapper.
+It consists of a `figure` element around a `c-lazy-image` and `c-figcaption`, with an optional link wrapper to make the entire block clickable.
 
 There is an option for adding an inline style for the width on the `figure` to provide a smooth paint in post content.
 
