@@ -1,7 +1,8 @@
-const { TwingEnvironment, TwingLoaderFilesystem, TwingLoaderArray, TwingLoaderChain } = require('twing');
+const { TwingEnvironment, TwingLoaderFilesystem, TwingLoaderArray, TwingLoaderChain, TwingFilter } = require('twing');
 const path = require( 'path' );
-const fs = require( 'fs' );
 const express = require('express');
+const marked = require( 'marked' );
+
 const app = express();
 const port = process.env.NODE_PORT || 3000;
 
@@ -15,6 +16,13 @@ const twigPaths = getPatternPathsToLoad( appConfiguration );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
 
+// Add markdown filter
+const markdownFilter = new TwingFilter( 'markdown', ( string ) => {
+	if ( string ) {
+		return marked( string );
+	}
+});
+
 // TODO: Could be an array/iterator if the namespace can be extracted from the key, the larva.config API could
 // change to `patterns: { larva: /larva/path/here/, project: /project/path/here }`
 loader.addPath( appConfiguration.larvaPatternsDir, 'larva' );
@@ -24,6 +32,9 @@ if( appConfiguration.projectPatternsDir ) {
 }
 
 let twing = new TwingEnvironment( loader, { debug: true } );
+
+twing.addFilter( markdownFilter );
+
 let patterns = {
 	larva: {},
 	project: {}

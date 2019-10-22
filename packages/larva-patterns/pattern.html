@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="lrv-u-background-color-grey-light js-to-hide">
-		<h1 class="lrv-u-font-family-basic lrv-u-padding-a-1 lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' }}<code>{{ name  }}{{ variant ? '.' ~ variant }}</code></h1>
-	</div>
-
 	{% if 'one-offs' == type or 'algorithms' == type %} 
 		{% set ext = '.html' %}
 	{% else %}
@@ -12,10 +8,20 @@
 	{% endif %}
 
 	{% set path = "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ext %}
-	
+
+	<div class="lrv-u-background-color-grey-light js-to-hide">
+		<h1 class="lrv-u-font-family-basic lrv-u-padding-a-1 lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' }}<code>{{ name  }}{{ variant ? '.' ~ variant }}</code></h1>
+	</div>
+
 	{% include path with data %}
 	
 	<div class="lrv-u-background-color-grey-light lrv-a-grid lrv-u-font-size-12 lrv-u-border-t-1 lrv-u-border-color-grey lrv-u-padding-a-2 js-to-hide">
+		<details>
+			<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}</code> README</summary>
+			<div class="lrv-u-padding-a-1 lrv-u-background-color-white lrv-u-font-size-16">
+				{{ source( "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ 'README.md', true )|markdown|raw }}
+			</div>
+		</details>
 		<details>
 			<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}</code> Twig</summary>
 			<pre class="lrv-a-wrapper language-twig"><code>{{ source( path )|escape }}</code></pre>
