@@ -1,5 +1,3 @@
-# o-nav
-
 o-nav is an object with a `nav` element containing an unordered list with list items in a for loop that contain an instance of `c-link`. It contains an optional `h4` list title. o-nav is useful for menus with several items, and the ability to apply utilities to all `li`s inside the loop with a single key can useful.
 
 In general, o-nav should be used for internal site links. It can be adapted to work with the JS pattern `MobileHeightToggle`. See the footer-menus module for an example.

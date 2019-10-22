@@ -1,5 +1,3 @@
-# c-lazy-image
-
 This is our lazy loading, responsive image pattern. It is optimized to provide an aspect ratio and no reflow when the image is loaded for a smooth user experience. Images loaded using this pattern **must**:
 
 **Option 1:** Be cropped using a class from `a-crop` applied to `c_lazy_image_crop_class`. This is the most common and simplest option.
@@ -10,7 +8,7 @@ This is our lazy loading, responsive image pattern. It is optimized to provide a
 
 An example of calculating the padding-bottom attribute in a PHP object is as follows:
 
-```
+```language-php
 if ( ! empty( $image_height ) && ! empty( $image_width ) ) {
 	$post_content_image['c_lazy_image_crop_style_attr'] = 'padding-bottom:calc((' . $image_height . '/' . $image_width . ')*100%);';
 }
@@ -21,7 +19,7 @@ https://pmcdeadline2.files.wordpress.com/2019/10/monica-beletsky-apple.jpg?w=450
 
 The image's dimensions are retrieved from the image URL in class-image-caption.php using the following regex (adapted from the ArtNews 2019 theme in class-image-captions.php): 
 
-```
+```language-php
 $image_src    = '';
 $image_height = '';
 $image_width  = '';
