@@ -1,9 +1,11 @@
-const path = require( 'path' );
-const clone = require( '@penskemediacorp/larva' ).clone;// This should be in this repo, probably
-const o_email_capture_form = clone( path.resolve( __dirname, '../../objects/o-email-capture-form/o-email-capture-form.minimal' ) );
+const clonedeep = require( 'lodash.clonedeep' );
+
+const o_email_capture_form_minimal = require( '../../objects/o-email-capture-form/o-email-capture-form.minimal' );
+const o_email_capture_form = clonedeep( o_email_capture_form_minimal );
 
 o_email_capture_form.c_button.c_button_classes += ' lrv-a-icon-invert';
 
+// TODO: update this object with cloned patterns or helper methods, once those exist.
 module.exports = {
 	"footer_newsletter_classes": "lrv-u-text-align-center lrv-u-color-white lrv-u-background-color-black lrv-u-flex lrv-u-flex-direction-column lrv-u-align-items-center",
 	"c_title": {

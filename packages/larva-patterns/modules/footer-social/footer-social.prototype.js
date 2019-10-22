@@ -1,18 +1,18 @@
-const path = require( 'path' );
-const clone = require( '@penskemediacorp/larva' ).clone;// This should be in this repo, probably
-const c_icon_path = path.resolve( __dirname, '../../components/c-icon/c-icon.prototype' );
+const clonedeep = require( 'lodash.clonedeep' )
+const c_icon_prototype = require( '../../components/c-icon/c-icon.prototype' );
 
 const social = [ 'instagram', 'pinit', 'twitter', 'facebook', 'youtube' ];
 const o_social_list_icons = [];
 
 for (let i = 0; i < social.length; i++) {
-	let c_icon = clone( c_icon_path );
+	let c_icon = clonedeep( c_icon_prototype );
 	c_icon.c_icon_name = social[i];
 	c_icon.c_icon_link_classes += ' lrv-u-display-block lrv-u-border-radius-50p lrv-u-color-grey lrv-u-margin-lr-025 lrv-u-padding-a-050 lrv-u-background-color-white lrv-u-color-grey-dark:hover';
 
 	o_social_list_icons.push( c_icon );
 }
 
+// TODO: update this object with cloned patterns or helper methods, once those exist.
 module.exports = {
 	"footer_social_classes": "lrv-u-text-align-center lrv-u-color-white lrv-u-background-color-black",
 	"c_title": {
