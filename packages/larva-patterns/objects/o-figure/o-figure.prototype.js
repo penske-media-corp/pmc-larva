@@ -12,4 +12,6 @@ module.exports = {
 	o_figure_link_url: false,
 	o_figure_classes: '',
 	o_figure_link_classes: 'lrv-a-unstyle-link ',
+	o_figure_figcaption_outer: false,
+	o_figure_figcaption_outer_classes: '',
 }

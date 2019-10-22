@@ -9,7 +9,16 @@
 	{% endif %}
 
 	{% if c_figcaption %}
-		{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
+		{% if o_figure_figcaption_outer %}
+			<div class="o-figure__figcaption-outer {{ o_figure_figcaption_outer_classes }}">
+		{% endif %}
+
+			{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
+
+		{% if o_figure_figcaption_outer %}
+			</div>
+		{% endif %}
+		</div>
 	{% endif %}
 
 </figure>
