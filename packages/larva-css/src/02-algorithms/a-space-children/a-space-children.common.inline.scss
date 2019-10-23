@@ -25,6 +25,12 @@ $spacer-2:   2;
 	@include _a-space-children-horizontal();
 }
 
+.lrv-a-space-children-horizontal\@mobile-max > * + * {
+	@include pmc-breakpoint( mobile-max ) {
+		@include _a-space-children-horizontal();
+	}
+}
+
 .lrv-a-space-children-horizontal\@tablet > * + * {
 	@include pmc-breakpoint( tablet ) {
 		@include _a-space-children-horizontal();
@@ -35,14 +41,14 @@ $spacer-2:   2;
 	@include _a-space-children-vertical();
 }
 
-.lrv-a-space-children-vertical\@tablet > * + * {
-	@include pmc-breakpoint( tablet ) {
+.lrv-a-space-children-vertical\@mobile-max > * + * {
+	@include pmc-breakpoint( mobile-max ) {
 		@include _a-space-children-vertical();
 	}
 }
 
-.lrv-a-space-children-vertical\@mobile-max > * + * {
-	@include pmc-breakpoint( mobile-max ) {
+.lrv-a-space-children-vertical\@tablet > * + * {
+	@include pmc-breakpoint( tablet ) {
 		@include _a-space-children-vertical();
 	}
 }
