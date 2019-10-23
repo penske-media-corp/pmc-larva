@@ -1,8 +1,16 @@
 <figcaption class="c-figcaption {{ c_figcaption_classes }}">
-	{% if c_figcaption_caption_markup %}
-		<span class="{{ c_figcaption_caption_classes }}">{{ c_figcaption_caption_markup|raw }}</span>
+	{% if c_figcaption_inner %}
+		<div class="c-figcaption__inner {{ c_figcaption_inner_classes }}">
 	{% endif %}
-	{% if c_figcaption_credit_text %}
-		<cite class="{{ c_figcaption_credit_classes }}">{{ c_figcaption_credit_text }}</cite>
+
+		{% if c_figcaption_caption_markup %}
+			<span class="{{ c_figcaption_caption_classes }}">{{ c_figcaption_caption_markup|raw }}</span>
+		{% endif %}
+		{% if c_figcaption_credit_text %}
+			<cite class="{{ c_figcaption_credit_classes }}">{{ c_figcaption_credit_text }}</cite>
+		{% endif %}
+
+	{% if c_figcaption_inner %}
+		</div>
 	{% endif %}
 </figcaption>
