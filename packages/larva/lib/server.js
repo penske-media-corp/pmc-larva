@@ -78,5 +78,5 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 });
 
 app.listen(port, () => {
-	console.log( 'Node.js Express server listening on port ' + port );
+	console.log( 'Larva server is listening on port ' + port );
 });
