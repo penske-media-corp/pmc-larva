@@ -1,0 +1,1 @@
+A simple text link element with no other containing or inner markup.

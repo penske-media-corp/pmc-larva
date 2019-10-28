@@ -42,4 +42,15 @@
 		{% endfor %}
 	</ul>
 
+
+	<h4 class="lrv-u-padding-tb-050">CSS Algorithms</h4>
+	<ul class="lrv-a-unstyle-list">
+		{% for a in patterns.algorithms %}
+			{% include "@larva/components/c-link/c-link.twig" with {
+				c_link_text: a,
+				c_link_classes: 'lrv-u-display-block',
+				c_link_url: "/" ~ source ~ "/algorithms/" ~ a ~ "/",
+			} %}
+		{% endfor %}
+	</ul>
 </nav>
