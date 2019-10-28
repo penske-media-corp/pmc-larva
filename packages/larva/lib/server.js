@@ -47,6 +47,7 @@ if( appConfiguration.larvaPatternsDir ) {
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
 	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
 	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
+	patterns.larva.algorithms = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/algorithms' ) );
 }
 
 if( appConfiguration.projectPatternsDir ) {
@@ -54,6 +55,7 @@ if( appConfiguration.projectPatternsDir ) {
 	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
 	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
 	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
+	patterns.larva.algorithms = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/algorithms' ) );
 }
 
 app.get( '/', function (req, res) {
@@ -67,9 +69,9 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	let patternsPath = 'larva' === req.params.source ? appConfiguration.larvaPatternsDir : appConfiguration.projectPatternsDir;
 
 	req.params[ 'query' ] = req.query;
+	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 
 	if ( 'algorithms' !== req.params.type ) {
-		req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
 	}
 
