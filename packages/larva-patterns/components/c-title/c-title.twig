@@ -14,7 +14,11 @@
 			<span class="c-title__before {{ c_title_before_classes }}">{{ c_title_before_text }}</span>
 		{% endif %}
 
-		{{ c_title_text }}
+		{% if c_title_markup %}
+			{{ c_title_markup|raw }}
+		{% else %}
+			{{ c_title_text }}
+		{% endif %}
 
 	{% if c_title_url %}
 		</a>
