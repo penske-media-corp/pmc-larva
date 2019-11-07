@@ -47,7 +47,6 @@ if( appConfiguration.larvaPatternsDir ) {
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
 	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
 	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
-	patterns.larva.algorithms = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/algorithms' ) );
 }
 
 if( appConfiguration.projectPatternsDir ) {
@@ -55,7 +54,7 @@ if( appConfiguration.projectPatternsDir ) {
 	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
 	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
 	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
-	patterns.larva.algorithms = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/algorithms' ) );
+	patterns.project.oneOffs = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/one-offs' ) );
 }
 
 app.get( '/', function (req, res) {
