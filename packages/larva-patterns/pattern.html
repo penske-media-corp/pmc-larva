@@ -23,12 +23,24 @@
 			</div>
 		</details>
 		<details>
-			<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}</code> Twig</summary>
+			{% if type == 'one-offs' %}
+				<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}</code> HTML <small class="lrv-u-font-size-16">Dummy HTML for development.</small></summary>
+			{% else %}
+				<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}</code> Twig <small class="lrv-u-font-size-16">The markup file.</small></summary>
+			{% endif %}
+
 			<pre class="lrv-a-wrapper language-twig"><code>{{ source( path )|escape }}</code></pre>
 		</details>
-		<details>
-			<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}{{ variant ? '.' ~ variant }}</code> Data Object</summary>
-			<pre class="lrv-a-wrapper language-json"><code>{{ json_pretty|raw }}</code></pre>
-		</details>
+
+		{% if type != 'algorithms' %}
+			<details>
+				<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}{{ variant ? '.' ~ variant }}</code> Prototype <small class="lrv-u-font-size-16">The data object for this pattern.</small></summary>
+				<pre class="lrv-a-wrapper language-json"><code>{{ json_pretty|raw }}</code></pre>
+			</details>
+		{% endif %}
+
+		{% if type == 'algorithms' %}
+			
+		{% endif %}
 	</div>
 {% endblock %}
