@@ -6,6 +6,10 @@
 
 	{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
 
+	{% if o_icon_button_screen_reader_text %}
+		<span class="lrv-a-screen-reader-only">{{ o_icon_button_screen_reader_text }}</span>
+	{% endif %}
+
 	{% if c_span %}
 		{% include "@larva/components/c-span/c-span.twig" with c_span %}
 	{% endif %}

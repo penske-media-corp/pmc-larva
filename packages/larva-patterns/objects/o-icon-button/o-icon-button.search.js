@@ -3,6 +3,7 @@ const o_icon_button_prototype = require( './o-icon-button.prototype' );
 const o_icon_button_search = clonedeep( o_icon_button_prototype );
 
 o_icon_button_search.c_icon.c_icon_name = 'search';
+o_icon_button_search.o_icon_button_screen_reader_text = 'Click to Expand Search Input';
 o_icon_button_search.c_span = false;
 
 module.exports = o_icon_button_search;
