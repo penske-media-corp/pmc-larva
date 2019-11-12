@@ -15,6 +15,7 @@ c_span.c_span_url = false;
 
 module.exports = {
 	o_icon_button_classes: 'lrv-a-unstyle-button lrv-a-unstyle-link lrv-u-cursor-pointer lrv-u-flex',
+	o_icon_button_screen_reader_text: '',
 	c_icon: c_icon,
 	c_span: c_span,
 };
