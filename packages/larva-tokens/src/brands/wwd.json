@@ -8,6 +8,11 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_45}",
+			"type": "color",
+			"category": "hr-color"
+		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!RED_45}",
 			"type": "color",

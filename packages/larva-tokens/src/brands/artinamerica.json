@@ -23,6 +23,11 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!REGAL_BLUE_23}",
+			"type": "color",
+			"category": "hr-color"
+		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!REGAL_BLUE_23}",
 			"type": "color",
