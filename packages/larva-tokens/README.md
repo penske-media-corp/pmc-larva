@@ -11,10 +11,6 @@ To add tokens for a new brand, duplicate the src/brands/_template.json and updat
 * All tokens are prefixed with their CSS property, e.g. background is BACKGROUND_, text colors are COLOR_, and font family values prefixed with FONT_FAMILY_.
 * Font family values should be a short CSS font stack.
 
-To build design tokens, we will use the [Theo CLI](https://github.com/salesforce-ux/theo). Replace the brand name in the below command with the tokens you want to generate, and run `npm run build` command from packages/larva-tokens/:
-
-```
-$ ./node_modules/.bin/theo src/brands/artinamerica.json --format map.scss,custom-properties.css,html --dest build
-```
+To build design tokens, run `npm run build` command from packages/larva-tokens/.
 
 This will generate a Sass map containing the tokens, a CSS file containing the tokens as custom properties, and an HTML file that can be used for reference.
