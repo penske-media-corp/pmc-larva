@@ -37,6 +37,12 @@ $spacer-2:   2;
 	}
 }
 
+.lrv-a-space-children-horizontal\@desktop-max > * + * {
+	@include pmc-breakpoint( desktop-max ) {
+		@include _a-space-children-horizontal();
+	}
+}
+
 .lrv-a-space-children-vertical > * + * {
 	@include _a-space-children-vertical();
 }
@@ -49,6 +55,12 @@ $spacer-2:   2;
 
 .lrv-a-space-children-vertical\@tablet > * + * {
 	@include pmc-breakpoint( tablet ) {
+		@include _a-space-children-vertical();
+	}
+}
+
+.lrv-a-space-children-vertical\@desktop > * + * {
+	@include pmc-breakpoint( desktop ) {
 		@include _a-space-children-vertical();
 	}
 }
