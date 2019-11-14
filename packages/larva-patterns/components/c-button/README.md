@@ -1,0 +1,3 @@
+The button component should be used for anything that _looks like_ a button - this includes acutual `button` elements and anchor tags. c-button in larva includes certain design configurations to provide a starting point.
+
+If the button is actually an anchor tag, styled as a button, simply configure the button with `c_button_url` and it will use an anchor. If `c_button_url` is not set, it will use a button element. Any JS should be attached using a `js-*` class. This is intended to encourage the use of the button element for on-page interactions, and the use of an anchor tag for buttons that are actually links.  
