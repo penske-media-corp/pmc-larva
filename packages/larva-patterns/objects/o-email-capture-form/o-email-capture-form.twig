@@ -12,10 +12,9 @@
 
 	<input type="hidden" name="__contextName" id="__contextName" value="FormPost" />
 	<input type="hidden" name="__executionContext" id="__executionContext" value="Post" />
-	<input name="__successPage" id="__successPage" value="" type="hidden" data-base-url="{{ o_email_capture_form_base_url }}"
-	/>
+	<input name="__successPage" id="__successPage" value="" type="hidden" data-base-url="{{ o_email_capture_form_base_url }}" />
+
+	{% if o_hidden_field_list_items %}
+		{% include "@larva/objects/o-hidden-field-list/o-hidden-field-list.twig" with o_hidden_field_list_items %}
+	{% endif %}
 </form>
-
-
-
-
