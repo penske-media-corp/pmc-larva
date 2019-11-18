@@ -5,8 +5,9 @@
 	.lrv-js-MobileHeightToggle .lrv-js-MobileHeightToggle-target {
 		height: 0;
 		visibility: hidden;
+		overflow: hidden;
 	}
-	
+
 	.lrv-js-MobileHeightToggle.is-expanded .lrv-js-MobileHeightToggle-target { // stylelint-disable-line selector-max-class
 		height: auto;
 		visibility: visible;
