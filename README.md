@@ -1,6 +1,6 @@
 # Larva
 
-This is the mono-repo for PMC's design system, Larva. **It is in active development and should not be used.** When it is more mature, Larva's packages can used on any web project.
+This is the mono-repo for PMC's design system, Larva. **It is in alpha.**
 
 ## About
 
@@ -22,7 +22,7 @@ What was wrong with the old way of building UI? Why use Larva?
 - Accommodates different brand styles
 - Creates a UI language for engineering/design/product
 
-### Packages
+## Packages
 
 Packages pre-fixes with larva-* are intended to go together. General purpose packages are not prefixed with larva-*.
 
