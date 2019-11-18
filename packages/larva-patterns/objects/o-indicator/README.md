@@ -1,0 +1,1 @@
+The indicator object supports `c-span` and/or `c-icon`. It is useful for arbitrary icons or text that visually support other elements, for example, the "Photos" or "Video" indication stuck to the image in a `story` excerpt. Works nicely with `a-glue`.
