@@ -14,7 +14,7 @@
 	<input type="hidden" name="__executionContext" id="__executionContext" value="Post" />
 	<input name="__successPage" id="__successPage" value="" type="hidden" data-base-url="{{ o_email_capture_form_base_url }}" />
 
-	{% for item in o_hidden_field_list_items %}
+	{% for item in o_email_capture_form_hidden_field_items %}
 		{% include "@larva/components/c-hidden-field/c-hidden-field.twig" with item %}
 	{% endfor %}
 </form>

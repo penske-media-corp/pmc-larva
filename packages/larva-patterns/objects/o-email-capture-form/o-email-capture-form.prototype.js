@@ -21,5 +21,5 @@ module.exports = {
 	o_email_capture_form_source_value_attr: "onsite-footer",
 	c_button: c_button,
 	c_email_field: c_email_field,
-	o_hidden_field_list_items: ''
+	o_email_capture_form_hidden_field_items: ""
 };
