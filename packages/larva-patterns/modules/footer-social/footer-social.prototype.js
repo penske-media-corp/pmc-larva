@@ -6,6 +6,7 @@ const o_social_list_icons = [];
 
 for (let i = 0; i < social.length; i++) {
 	let c_icon = clonedeep( c_icon_prototype );
+	c_icon.c_icon_url = '#';
 	c_icon.c_icon_name = social[i];
 	c_icon.c_icon_link_classes += ' lrv-u-display-block lrv-u-border-radius-50p lrv-u-color-grey lrv-u-margin-lr-050 lrv-u-padding-a-050 lrv-u-background-color-white lrv-u-color-grey-dark:hover';
 
