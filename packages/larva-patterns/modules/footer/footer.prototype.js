@@ -1,4 +1,3 @@
-const path = require( 'path' );
 const clonedeep = require( 'lodash.clonedeep' );
 
 const footer_menus = clonedeep( require( '../footer-menus/footer-menus.prototype' ) );
