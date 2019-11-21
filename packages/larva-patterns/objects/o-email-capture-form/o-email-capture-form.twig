@@ -1,18 +1,13 @@
-<form class="o-email-capture-form {{ o_email_capture_form_classes }}" method="post" action="{{ o_email_capture_form_action_url }}" name="{{ o_email_capture_form_name_attr }}" target="_blank">
+<form class="o-email-capture-form lrv-js-EmailCapture {{ o_email_capture_form_classes }}" method="post" action="{{ o_email_capture_form_action_url }}" name="{{ o_email_capture_form_name_attr }}" target="_blank">
 
 	<div class="o-email-capture-form__inner {{ o_email_capture_form_inner_classes }}">
 		{% include "@larva/components/c-email-field/c-email-field.twig" with c_email_field %}
 		{% include "@larva/components/c-button/c-button.twig" with c_button %}
 	</div>
 
-	<input name="{{ o_email_capture_form_input_opted_in_bool_name }}" value="{{ o_email_capture_form_input_opted_in_bool_value_attr }}" type="hidden" />
-	<input name="{{ o_email_capture_form_input_global_opted_in_name }}" value="{{ o_email_capture_form_input_global_opted_in_value_attr }}" type="hidden" />
-	<input name="{{ o_email_capture_form_input_opted_in_date_name }}" value="{{ o_email_capture_form_input_opted_in_date_value_attr }}" type="hidden" />
-	<input name="source" value="{{ o_email_capture_form_source_value_attr }}" type="hidden" />
-
 	<input type="hidden" name="__contextName" id="__contextName" value="FormPost" />
 	<input type="hidden" name="__executionContext" id="__executionContext" value="Post" />
-	<input name="__successPage" id="__successPage" value="" type="hidden" data-base-url="{{ o_email_capture_form_base_url }}" />
+	<input name="__successPage" data-email-capture-success-url="{{ o_email_capture_form_success_url }}" id="__successPage" value="" type="hidden" />
 
 	{% for item in o_email_capture_form_hidden_field_items %}
 		{% include "@larva/components/c-hidden-field/c-hidden-field.twig" with item %}
