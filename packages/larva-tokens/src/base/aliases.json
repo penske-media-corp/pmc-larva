@@ -20,6 +20,7 @@
 		"BLUE_61": "#417EF4",
 		"ALICE_BLUE_97": "#F1F7FC",
 		"CERULEAN_47": "#01A5ED",
+		"RED_46": "#D71440",
 		"SOURCE_SANS_PRO": "Source Sans Pro, sans-serif",
 		"BONNIE": "Bonnie, Georgia, serif",
 		"OVERPASS": "Overpass, sans-serif",
@@ -31,6 +32,7 @@
 		"WARNOCK_PRO": "'warnock-pro', 'Times New Roman', serif",
 		"NEUE_HAAS_UNICA": "'neue-haas-unica', Helvetica, sans-serif",
 		"DOMAINE_DISPLAY_NARROW": "'Domaine Display Narrow Test', Georgia, serif",
-		"SCHNYDER_COND_M": "'Schnyder Cond M', Gerogia, serif"
+		"SCHNYDER_COND_M": "'Schnyder Cond M', Gerogia, serif",
+		"IBM_PLEX_SANS": "'IBM Plex Sans', sans-serif"
 	}
 }

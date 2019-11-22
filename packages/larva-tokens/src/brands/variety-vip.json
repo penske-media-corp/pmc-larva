@@ -12,12 +12,17 @@
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BLUE_21}",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BLUE_21}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "{!RED_46}",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -28,6 +33,11 @@
 		},
 		"FONT_FAMILY_SECONDARY": {
 			"value": "{!BONNIE}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "{!IBM_PLEX_SANS}",
 			"type": "font-family",
 			"category": "font-family"
 		},
