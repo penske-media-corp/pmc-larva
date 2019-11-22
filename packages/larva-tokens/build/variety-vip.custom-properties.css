@@ -22,7 +22,7 @@
   --background-color-black: rgb(0, 0, 0);
   --color-brand-secondary: rgb(215, 20, 64);
   --color-brand-primary: rgb(40, 56, 65);
-  --font-family-mono: 'IBM Plex Sans', monospace;
+  --font-family-mono: 'IBM Plex Mono', monospace;
   --border-color-brand-primary: rgb(40, 56, 65);
   --background-color-brand-primary: rgb(40, 56, 65);
 }

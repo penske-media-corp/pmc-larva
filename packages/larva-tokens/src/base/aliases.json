@@ -6,6 +6,7 @@
 		"GREY_96": "#F7F7F7",
 		"GREY_90": "#E6E6E6",
 		"GREY_80": "#CCCCCC",
+		"GREY_59": "#939598",
 		"GREY_50": "#8C8C8C",
 		"GREY_35": "#6A6A6A",
 		"GREY_20": "#323232",
@@ -34,6 +35,6 @@
 		"DOMAINE_DISPLAY_NARROW": "'Domaine Display Narrow Test', Georgia, serif",
 		"SCHNYDER_COND_M": "'Schnyder Cond M', Gerogia, serif",
 		"IBM_PLEX_SANS": "'IBM Plex Sans', sans-serif",
-		"IBM_PLEX_MONO": "'IBM Plex Sans', monospace"
+		"IBM_PLEX_MONO": "'IBM Plex Mono', monospace"
 	}
 }

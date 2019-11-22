@@ -26,6 +26,11 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"COLOR_BRAND_TERTIARY": {
+			"value": "{!GREY_59}",
+			"type": "color",
+			"category": "text-color"
+		},
 		"FONT_FAMILY_PRIMARY": {
 			"value": "{!SOURCE_SANS_PRO}",
 			"type": "font-family",
