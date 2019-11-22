@@ -29,8 +29,8 @@ export default class EmailCapture {
 
 		this.successUrlBase = this.getSuccessUrlBase();
 
-		this.emailInput.addEventListener( 'change', this.updateSuccessUrlInputValue );
 		this.emailInput.addEventListener( 'blur', this.updateSuccessUrlInputValue );
+		this.emailInput.addEventListener( 'keyup', this.updateSuccessUrlInputValue );
 	}
 
 	getSuccessUrlBase() {
@@ -44,7 +44,7 @@ export default class EmailCapture {
 	}
 
 	updateSuccessUrlInputValue( e ) {
-		let email = e.target.value;
+		let email = encodeURIComponent( e.target.value );
 
 		if ( undefined !== this.successUrlBase ) {
 			this.successEl.value = `${this.successUrlBase}&email=${email}`;
