@@ -8,7 +8,8 @@
   /* The webfont, loaded async */
   --font-family-primary-fancy: Courier, serif;
   --font-family-primary: Source Sans Pro, sans-serif;
-  --font-family-secondary-fancy: 'IBM Plex Sans', sans-serif;
+  /* The webfont, loaded async */
+  --font-family-secondary-fancy: Papyrus, serif;
   --font-family-secondary: Bonnie, Georgia, serif;
   --font-family-body: 'Times New Roman', serif;
   --font-family-basic: Helvetica, sans-serif;
@@ -20,10 +21,7 @@
   --background-color-grey-dark: rgb(106, 106, 106);
   --background-color-grey-darkest: rgb(50, 50, 50);
   --background-color-black: rgb(0, 0, 0);
-  --color-brand-secondary: rgb(215, 20, 64);
-  --color-brand-tertiary: rgb(147, 149, 152);
-  --color-brand-primary: rgb(40, 56, 65);
-  --font-family-mono: 'IBM Plex Mono', monospace;
-  --border-color-brand-primary: rgb(40, 56, 65);
-  --background-color-brand-primary: rgb(40, 56, 65);
+  --background-color-brand-primary: rgb(26, 40, 47);
+  --border-color-brand-primary: rgb(65, 126, 244);
+  --color-brand-primary: rgb(65, 126, 244);
 }
