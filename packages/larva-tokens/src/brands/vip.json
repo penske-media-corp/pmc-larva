@@ -7,7 +7,7 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BLUE_21}",
 			"type": "color",
 			"category": "background-color"
 		},
