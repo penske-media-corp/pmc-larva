@@ -33,6 +33,7 @@
 		"NEUE_HAAS_UNICA": "'neue-haas-unica', Helvetica, sans-serif",
 		"DOMAINE_DISPLAY_NARROW": "'Domaine Display Narrow Test', Georgia, serif",
 		"SCHNYDER_COND_M": "'Schnyder Cond M', Gerogia, serif",
-		"IBM_PLEX_SANS": "'IBM Plex Sans', sans-serif"
+		"IBM_PLEX_SANS": "'IBM Plex Sans', sans-serif",
+		"IBM_PLEX_MONO": "'IBM Plex Sans', monospace"
 	}
 }
