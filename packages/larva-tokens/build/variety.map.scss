@@ -7,12 +7,12 @@ $variety-map: (
   'color-black': (rgb(0, 0, 0)),
   /* The webfont, loaded async */
   'font-family-primary-fancy': (Courier, serif),
-  'font-family-primary': (Source Sans Pro, sans-serif),
+  'font-family-primary': ('Para Supreme Regular', serif),
   /* The webfont, loaded async */
   'font-family-secondary-fancy': (Papyrus, serif),
-  'font-family-secondary': (Bonnie, Georgia, serif),
-  'font-family-body': ('Times New Roman', serif),
-  'font-family-basic': (Helvetica, sans-serif),
+  'font-family-secondary': ('IBM Plex Sans', sans-serif),
+  'font-family-body': ('IBM Plex Serif', serif),
+  'font-family-basic': ('IBM Plex Mono', monospace),
   'background-color-body': (rgb(255, 255, 255)),
   'background-color-white': (rgb(255, 255, 255)),
   'background-color-grey-lightest': (rgb(247, 247, 247)),
@@ -24,4 +24,5 @@ $variety-map: (
   'background-color-brand-primary': (rgb(26, 40, 47)),
   'border-color-brand-primary': (rgb(65, 126, 244)),
   'color-brand-primary': (rgb(65, 126, 244)),
+  'font-family-accent': ('Graphik XX Cond', sans-serif),
 );

@@ -36,6 +36,9 @@
 		"DOMAINE_DISPLAY_NARROW": "'Domaine Display Narrow Test', Georgia, serif",
 		"SCHNYDER_COND_M": "'Schnyder Cond M', Gerogia, serif",
 		"IBM_PLEX_SANS": "'IBM Plex Sans', sans-serif",
-		"IBM_PLEX_MONO": "'IBM Plex Mono', monospace"
+		"IBM_PLEX_SERIF": "'IBM Plex Serif', serif",
+		"IBM_PLEX_MONO": "'IBM Plex Mono', monospace",
+		"PARA_SUPREME": "'Para Supreme Regular', serif",
+		"GRAPHIK_COND": "'Graphik XX Cond', sans-serif"
 	}
 }

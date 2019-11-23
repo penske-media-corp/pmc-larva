@@ -22,17 +22,27 @@
 			"category": "text-color"
 		},
 		"FONT_FAMILY_PRIMARY": {
-			"value": "{!SOURCE_SANS_PRO}",
+			"value": "{!PARA_SUPREME}",
 			"type": "font-family",
 			"category": "font-family"
 		},
 		"FONT_FAMILY_SECONDARY": {
-			"value": "{!BONNIE}",
+			"value": "{!IBM_PLEX_SANS}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "{!GRAPHIK_COND}",
 			"type": "font-family",
 			"category": "font-family"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "{!TIMES_NEW_ROMAN}",
+			"value": "{!IBM_PLEX_SERIF}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "{!IBM_PLEX_MONO}",
 			"type": "font-family",
 			"category": "font-family"
 		}
