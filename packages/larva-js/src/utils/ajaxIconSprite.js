@@ -19,6 +19,6 @@ export default function( iconPath ) {
 		// As this must be handled by innerHTML only.
 		div.innerHTML = ajax.responseText; // @codingStandardsIgnoreLine
 
-		document.body.insertBefore( div, document.body.childNodes[0]);
+		document.body.insertBefore( div, document.body.childNodes[0] );
 	};
 }
