@@ -7,6 +7,11 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!YELLOW_48}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_A_100B": {
 			"value": "{!MIRAGE_14}",
 			"type": "color",
 			"category": "background-color"
@@ -17,16 +22,21 @@
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
+			"value": "{!YELLOW_48}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
 			"value": "{!BLUE_61}",
 			"type": "color",
 			"category": "text-color"
 		},
-		"FONT_FAMILY_PRIMARY": {
+		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!PARA_SUPREME}",
 			"type": "font-family",
 			"category": "font-family"
 		},
-		"FONT_FAMILY_SECONDARY": {
+		"FONT_FAMILY_SECONDARY_FANCY": {
 			"value": "{!IBM_PLEX_SANS}",
 			"type": "font-family",
 			"category": "font-family"
