@@ -5,9 +5,9 @@
 		{% include "@larva/components/c-button/c-button.twig" with c_button %}
 	</div>
 
-	<input type="hidden" name="__contextName" id="__contextName" value="FormPost" />
-	<input type="hidden" name="__executionContext" id="__executionContext" value="Post" />
-	<input type="hidden" name="__successPage" id="__successPage" data-email-capture-success-url="{{ o_email_capture_form_success_url }}" value="" />
+	<input type="hidden" name="__contextName" value="FormPost" />
+	<input type="hidden" name="__executionContext" value="Post" />
+	<input type="hidden" name="__successPage" data-email-capture-success-url="{{ o_email_capture_form_success_url }}" value="" />
 
 	{% for item in o_email_capture_form_hidden_field_items %}
 		{% include "@larva/components/c-hidden-field/c-hidden-field.twig" with item %}
