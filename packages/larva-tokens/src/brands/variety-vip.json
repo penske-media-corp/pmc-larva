@@ -3,7 +3,8 @@
 		"../base/aliases.json",
 		"../base/color.json",
 		"../base/font-family.json",
-		"../base/background-color.json"
+		"../base/background-color.json",
+		"./variety.json"
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
@@ -36,7 +37,7 @@
 			"type": "color",
 			"category": "text-color"
 		},
-		"FONT_FAMILY_PRIMARY": {
+		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!SOURCE_SANS_PRO}",
 			"type": "font-family",
 			"category": "font-family"
@@ -51,12 +52,12 @@
 			"type": "font-family",
 			"category": "font-family"
 		},
-		"FONT_FAMILY_BODY": {
+		"FONT_FAMILY_BODY_FANCY": {
 			"value": "{!TIMES_NEW_ROMAN}",
 			"type": "font-family",
 			"category": "font-family"
 		},
-		"FONT_FAMILY_MONO": {
+		"FONT_FAMILY_ACCENT_FANCY": {
 			"value": "{!IBM_PLEX_MONO}",
 			"type": "font-family",
 			"category": "font-family"

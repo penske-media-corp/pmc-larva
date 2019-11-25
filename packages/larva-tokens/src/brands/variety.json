@@ -41,17 +41,17 @@
 			"type": "font-family",
 			"category": "font-family"
 		},
-		"FONT_FAMILY_ACCENT": {
+		"FONT_FAMILY_ACCENT_FANCY": {
 			"value": "{!GRAPHIK_COND}",
 			"type": "font-family",
 			"category": "font-family"
 		},
-		"FONT_FAMILY_BODY": {
+		"FONT_FAMILY_BODY_FANCY": {
 			"value": "{!IBM_PLEX_SERIF}",
 			"type": "font-family",
 			"category": "font-family"
 		},
-		"FONT_FAMILY_BASIC": {
+		"FONT_FAMILY_BASIC_FANCY": {
 			"value": "{!IBM_PLEX_MONO}",
 			"type": "font-family",
 			"category": "font-family"
