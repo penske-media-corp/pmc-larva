@@ -26,6 +26,11 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"COLOR_BRAND_SECONDARY_50": {
+			"value": "{!GREY_60}",
+			"type": "color",
+			"category": "text-color"
+		},
 		"COLOR_BRAND_TERTIARY": {
 			"value": "{!GREY_59}",
 			"type": "color",
