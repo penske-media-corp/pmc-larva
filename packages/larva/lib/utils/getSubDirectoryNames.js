@@ -1,5 +1,5 @@
-
 const fs = require( 'fs' );
+const chalk = require( 'chalk' );
 
 /**
  * Get Subdirectory names
@@ -10,7 +10,11 @@ const fs = require( 'fs' );
  **/ 
 
 module.exports = function getSubDirectoryNames( path ) {
-	return fs.readdirSync( path ).filter( function( file ) {
-		return fs.statSync( path + '/' + file ).isDirectory();
-	});
+	try {
+		return fs.readdirSync( path ).filter( function( file ) {
+			return fs.statSync( path + '/' + file ).isDirectory();
+		});
+	} catch {
+		console.warn( chalk.yellow( path + ' doesn\'t exist.' ) );
+	}
 }
