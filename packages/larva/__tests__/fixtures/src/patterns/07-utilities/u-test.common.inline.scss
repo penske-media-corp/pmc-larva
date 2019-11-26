@@ -1,8 +1,0 @@
-$color_list: (
-	blue: #429AE7,
-	orange: #F77841,
-);
-
-.test {
-	color: map-get( $color_list, orange );
-}
