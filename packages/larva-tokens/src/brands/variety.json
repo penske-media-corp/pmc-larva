@@ -11,13 +11,33 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!MIRAGE_14}",
+			"type": "color",
+			"category": "background-color"
+		},
 		"BACKGROUND_COLOR_BRAND_ACCENT_A_100B": {
 			"value": "{!MIRAGE_14}",
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_20": {
+			"value": "{!GREY_84}",
+			"type": "color",
+			"category": "background-color"
+		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!YELLOW_48}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
 			"value": "{!BLUE_61}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_50": {
+			"value": "{!GREY_60}",
 			"type": "color",
 			"category": "hr-color"
 		},

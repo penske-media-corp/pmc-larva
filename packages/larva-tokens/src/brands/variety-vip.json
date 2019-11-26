@@ -8,22 +8,47 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_46}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
 			"value": "{!BLUE_21}",
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_20": {
+			"value": "{!GREY_84}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!WHITE_95}",
+			"type": "color",
+			"category": "background-color"
+		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_46}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
 			"value": "{!BLUE_21}",
 			"type": "color",
 			"category": "hr-color"
 		},
+		"BORDER_COLOR_BRAND_SECONDARY_50": {
+			"value": "{!GREY_60}",
+			"type": "color",
+			"category": "hr-color"
+		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_21}",
+			"value": "{!RED_46}",
 			"type": "color",
 			"category": "text-color"
 		},
 		"COLOR_BRAND_SECONDARY": {
-			"value": "{!RED_46}",
+			"value": "{!BLUE_21}",
 			"type": "color",
 			"category": "text-color"
 		},

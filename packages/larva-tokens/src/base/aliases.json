@@ -1,11 +1,14 @@
 {
 	"aliases": {
 		"WHITE": "#FFFFFF",
+		"WHITE_95": "#F0F1F2",
 		"EGGSHELL_96": "#F8F8F3",
 		"GREY_98": "#FAFAFA",
 		"GREY_96": "#F7F7F7",
 		"GREY_90": "#E6E6E6",
+		"GREY_84": "#D3D7D9",
 		"GREY_80": "#CCCCCC",
+		"GREY_73": "#B5BDC1",
 		"GREY_60": "#919BA0",
 		"GREY_59": "#939598",
 		"GREY_50": "#8C8C8C",
@@ -18,7 +21,7 @@
 		"BLACK": "#000000",
 		"BLACK_20": "#333333",
 		"REGAL_BLUE_23": "#0C4D6A",
-		"BLUE_21": "#283841",
+		"BLUE_21": "#283842",
 		"BLUE_61": "#417EF4",
 		"ALICE_BLUE_97": "#F1F7FC",
 		"CERULEAN_47": "#01A5ED",

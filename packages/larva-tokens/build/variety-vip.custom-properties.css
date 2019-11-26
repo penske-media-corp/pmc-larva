@@ -21,14 +21,19 @@
   --background-color-grey-dark: rgb(106, 106, 106);
   --background-color-grey-darkest: rgb(50, 50, 50);
   --background-color-black: rgb(0, 0, 0);
-  --color-brand-secondary: rgb(215, 20, 64);
+  --color-brand-secondary: rgb(40, 56, 66);
   --font-family-basic-fancy: 'IBM Plex Mono', monospace;
-  --color-brand-primary: rgb(40, 56, 65);
+  --border-color-brand-secondary: rgb(40, 56, 66);
+  --border-color-brand-secondary-50: rgb(145, 155, 160);
+  --color-brand-primary: rgb(215, 20, 64);
+  --background-color-brand-secondary-20: rgb(211, 215, 217);
+  --background-color-brand-accent: rgb(240, 241, 242);
   --font-family-body-fancy: 'Times New Roman', serif;
-  --border-color-brand-primary: rgb(40, 56, 65);
-  --background-color-brand-primary: rgb(40, 56, 65);
+  --border-color-brand-primary: rgb(215, 20, 64);
+  --background-color-brand-primary: rgb(215, 20, 64);
   --background-color-brand-accent-a-100-b: rgb(26, 40, 47);
   --font-family-accent-fancy: 'IBM Plex Mono', monospace;
   --color-brand-tertiary: rgb(147, 149, 152);
+  --background-color-brand-secondary: rgb(40, 56, 66);
   --color-brand-secondary-50: rgb(145, 155, 160);
 }
