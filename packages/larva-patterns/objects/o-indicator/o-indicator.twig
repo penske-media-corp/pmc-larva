@@ -1,0 +1,9 @@
+<span class="o-indicator {{ o_indicator_classes }}">
+	{% if c_icon %}
+		{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
+	{% endif %}
+
+	{% if c_span %}
+		{% include "@larva/components/c-span/c-span.twig" with c_span %}
+	{% endif %}
+</span>

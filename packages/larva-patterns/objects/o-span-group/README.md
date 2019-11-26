@@ -1,0 +1,1 @@
+`o-span-group` consists of a `div` containing an interderminate numer of `c-span`s. This can be useful for arbitrary decorative borders around single word links, or similar.

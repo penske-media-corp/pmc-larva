@@ -1,0 +1,7 @@
+<ul class="o-card-list {{ modifier_class }} {{ o_card_list_classes }}">
+	{% for item in o_card_list_items %}
+		<li class="o-card-list__item {{ o_card_list_item_classes }}">
+			{% include "@larva/objects/o-card/o-card.twig" with item %}
+		</li>
+	{% endfor %}
+</ul>
