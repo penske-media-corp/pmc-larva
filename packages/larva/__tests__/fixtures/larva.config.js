@@ -26,6 +26,13 @@ module.exports = {
 
 	parser: {
 		isCore: false,
+		ignoredModules: [
+			'ignore-me'
+		],
+		variants: [
+			'vip',
+			'featured'
+		],
 	},
 	
 	patterns: {
