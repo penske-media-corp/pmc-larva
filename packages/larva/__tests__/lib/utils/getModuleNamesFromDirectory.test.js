@@ -4,12 +4,16 @@ const getAppConfiguration = require( '../../../lib/utils/getAppConfiguration' );
 const config = getAppConfiguration( 'patterns' );
 
 describe( 'getModuleNamesFromDirectory', () => {
-	it( 'prints a list of module names', () => {
-		expect( getModuleNamesFromDirectory( config.projectPatternsDir, config.ignoredModules ) ).toEqual( expect.arrayContaining( [ 'test-module', 'test-module-2' ] ) );
+	it( 'gets an array of modules', () => {
+		expect( getModuleNamesFromDirectory( config.projectPatternsDir, config.ignoredModules ) ).toEqual( expect.arrayContaining( [ 'test-module' ] ) );
 	});
 
-	it( 'filters out ignored modules', () => {
-		expect( getModuleNamesFromDirectory( config.projectPatternsDir, config.ignoredModules ) ).toEqual( expect.not.arrayContaining( [ 'mega-menu-footer' ] ) );
+	it( 'ignored modules with underscores', () => {
+		expect( getModuleNamesFromDirectory( config.projectPatternsDir, config.ignoredModules ) ).toEqual( expect.not.arrayContaining( [ '_also-ignored' ] ) );
+	});
+
+	it( 'ignores modules listed in larva.config.ignoredModules', () => {
+		expect( getModuleNamesFromDirectory( config.projectPatternsDir, config.ignoredModules ) ).toEqual( expect.not.arrayContaining( [ 'ignore-me' ] ) );
 	});
 
 	it( 'gets module names from larva', () => {
