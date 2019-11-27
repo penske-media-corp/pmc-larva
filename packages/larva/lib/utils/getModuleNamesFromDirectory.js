@@ -1,4 +1,4 @@
-const getSubdirectoryNames = require( '@penskemediacorp/larva/lib/utils/getSubDirectoryNames' );
+const getSubdirectoryNames = require( './getSubDirectoryNames' );
 const path = require( 'path' );
 
 module.exports = function getModuleNamesFromDirectory( directory, patternsConfig ) {
