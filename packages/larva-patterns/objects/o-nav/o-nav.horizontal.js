@@ -1,4 +1,5 @@
-const clonedeep = require( '@penskemediacorp/larva' ).clonedeep;
+const clonedeep = require( 'lodash.clonedeep' );
+
 const o_nav_prototype = require( '../../objects/o-nav/o-nav.prototype' );
 const o_nav = clonedeep( o_nav_prototype );
 

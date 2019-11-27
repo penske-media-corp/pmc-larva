@@ -1,4 +1,4 @@
-const clonedeep = require( '@penskemediacorp/larva' ).clonedeep;
+const clonedeep = require( 'lodash.clonedeep' );
 const c_link_prototype = require( '../../components/c-link/c-link.prototype' );
 
 const o_nav_list_items = [

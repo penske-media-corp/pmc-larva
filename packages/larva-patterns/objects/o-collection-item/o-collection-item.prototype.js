@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const clonedeep = require( '@penskemediacorp/larva' ).clonedeep;
+const clonedeep = require( 'lodash.clonedeep' );
 
 const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
 const c_title = clonedeep( c_title_prototype );

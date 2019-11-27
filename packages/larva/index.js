@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = {
-	clonedeep: require( 'lodash.clonedeep' ),
+	clone: require( './lib/utils/clonePatternData' ),
 	config: require( './lib/utils/getAppConfiguration' )
 };
