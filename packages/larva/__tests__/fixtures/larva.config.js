@@ -24,19 +24,19 @@ module.exports = {
 		larvaModules: [ 'footer', 'mega-menu-content', 'social-share' ]
 	},
 
-	parser: {
-		isCore: false,
+	patterns: {
+		projectPatternsDir: path.join( __dirname, './src/patterns' ),
+		larvaPatternsDir: path.resolve( __dirname, '../../node_modules/@penskemediacorp/larva-patterns' ),
 		ignoredModules: [
 			'ignore-me'
 		],
 		variants: [
-			'vip',
 			'featured'
 		],
 	},
+
+	parser: {
+		isCore: false,
+	},
 	
-	patterns: {
-		projectPatternsDir: path.join( __dirname, './src/patterns' ),
-		larvaPatternsDir: path.resolve( __dirname, '../../node_modules/@penskemediacorp/larva-patterns' )
-	}
 };
