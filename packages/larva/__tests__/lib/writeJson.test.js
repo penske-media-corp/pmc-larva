@@ -14,6 +14,7 @@ describe( 'writeJson', () => {
 	let testJsonPath = path.join( expectedJsonPath, 'test-module.prototype.json' );
 	let testPrototypePath = path.join( fixture, './src/patterns/modules/test-module/test-module.prototype.js' );
 	let testVariantJsonPath = path.join( expectedJsonPath, 'test-module.featured.json' );
+	let testIgnoredJsonPath = path.join( expectedJsonPath, 'ignore-me.prototype.json' );
 
 	beforeAll( ( done ) => {
 		exec( 'mkdir ' + expectedJsonPath, ( err ) => {
@@ -32,6 +33,10 @@ describe( 'writeJson', () => {
 
 	it( 'prototype JS file equals JSON contents', () => {
 		assert.equal( JSON.stringify( require( testPrototypePath ) ), JSON.stringify( require( testJsonPath ) ) );
+	});
+
+	it( 'does not write JSON for ignored modules', () => {
+		assert.equal( fs.existsSync( testIgnoredJsonPath ), false );
 	});
 
 	it( 'creates a variant JSON', () => {

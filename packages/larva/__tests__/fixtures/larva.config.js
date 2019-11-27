@@ -26,7 +26,7 @@ module.exports = {
 
 	patterns: {
 		projectPatternsDir: path.join( __dirname, './src/patterns' ),
-		larvaPatternsDir: path.resolve( __dirname, '../../node_modules/@penskemediacorp/larva-patterns' ),
+		larvaPatternsDir: path.resolve( __dirname, '../../../larva-patterns' ),
 		ignoredModules: [
 			'ignore-me'
 		],
