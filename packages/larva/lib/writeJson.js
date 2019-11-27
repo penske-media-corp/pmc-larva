@@ -37,6 +37,7 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 		});
 
 		moduleVariants.forEach( ( variant ) => {
+
 			moduleData = getPatternData( sourceDirectory, {
 				type: 'modules',
 				name: moduleName,
