@@ -1,10 +1,8 @@
-const getSubdirectoryNames = require( './getSubDirectoryNames' );
+const getSubDirectoryNames = require( './getSubDirectoryNames' );
 const path = require( 'path' );
 
-module.exports = function getModuleNamesFromDirectory( directory, patternsConfig ) {
+module.exports = function getModuleNamesFromDirectory( directory, ignoredModules = [] ) {
 	let moduleNames = getSubDirectoryNames( path.join( directory , 'modules' ) );
-
-	let ignoredModules = patternsConfig.ignoredModules || [];
 
 	return moduleNames.filter( ( moduleName ) => {
 		return ! moduleName.startsWith( '_' ) && -1 === ignoredModules.indexOf( moduleName );
