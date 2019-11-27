@@ -1,11 +1,10 @@
-const path = require( 'path' );
-const clone = require( '../../../larva/lib/utils/clonePatternData' );// This should be in this repo, probably
-const c_link = path.resolve( __dirname, '../../components/c-link/c-link.prototype' );
+const clonedeep = require( '@penskemediacorp/larva' ).clonedeep;
+const c_link_prototype = require( '../../components/c-link/c-link.prototype' );
 
 const o_nav_list_items = [
-	clone( c_link ),
-	clone( c_link ),
-	clone( c_link )
+	clonedeep( c_link_prototype ),
+	clonedeep( c_link_prototype ),
+	clonedeep( c_link_prototype )
 ];
 
 module.exports = {

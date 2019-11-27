@@ -1,6 +1,6 @@
-const path = require( 'path' );
-const clone = require( '../../../larva/lib/utils/clonePatternData' );// This should be in this repo, probably
-const c_icon = clone( path.resolve( __dirname, './c-icon.prototype' ) );
+const clonedeep = require( '@penskemediacorp/larva' ).clonedeep;
+const c_icon_prototype = require( './c-icon.prototype' );
+const c_icon = clonedeep( c_icon_prototype );
 
 c_icon.c_icon_classes = 'lrv-u-height-100p lrv-u-width-100p';
 
