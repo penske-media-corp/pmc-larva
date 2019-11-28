@@ -17,11 +17,6 @@
 			"type": "color",
 			"category": "background-color"
 		},
-		"BACKGROUND_COLOR_BRAND_SECONDARY_20": {
-			"value": "{!GREY_84}",
-			"type": "color",
-			"category": "background-color"
-		},
 		"BACKGROUND_COLOR_BRAND_ACCENT": {
 			"value": "{!WHITE_95}",
 			"type": "color",
@@ -37,11 +32,6 @@
 			"type": "color",
 			"category": "hr-color"
 		},
-		"BORDER_COLOR_BRAND_SECONDARY_50": {
-			"value": "{!GREY_60}",
-			"type": "color",
-			"category": "hr-color"
-		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!RED_46}",
 			"type": "color",
@@ -52,18 +42,8 @@
 			"type": "color",
 			"category": "text-color"
 		},
-		"COLOR_BRAND_SECONDARY_50": {
-			"value": "{!GREY_60}",
-			"type": "color",
-			"category": "text-color"
-		},
-		"COLOR_BRAND_TERTIARY": {
-			"value": "{!GREY_59}",
-			"type": "color",
-			"category": "text-color"
-		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!SOURCE_SANS_PRO}",
+			"value": "{!GRAPHIK_COND}",
 			"type": "font-family",
 			"category": "font-family"
 		},
@@ -78,12 +58,17 @@
 			"category": "font-family"
 		},
 		"FONT_FAMILY_BODY_FANCY": {
-			"value": "{!TIMES_NEW_ROMAN}",
+			"value": "{!IBM_PLEX_SERIF}",
 			"type": "font-family",
 			"category": "font-family"
 		},
 		"FONT_FAMILY_ACCENT_FANCY": {
 			"value": "{!IBM_PLEX_MONO}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC_FANCY": {
+			"value": "{!PARA_SUPREME}",
 			"type": "font-family",
 			"category": "font-family"
 		}

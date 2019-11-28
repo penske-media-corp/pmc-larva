@@ -33,10 +33,6 @@
 		"FONT_FAMILY_BASIC": {
 			"value": "Helvetica, sans-serif",
 			"type": "font-family"
-		},
-		"FONT_FAMILY_ACCENT": {
-			"value": "Helvetica, sans-serif",
-			"type": "font-family"
 		}
 	}
 }
