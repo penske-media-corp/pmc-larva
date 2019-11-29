@@ -1,10 +1,10 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
 const c_heading = clonedeep( require( '../../components/c-heading/c-heading.prototype' ) );
-const o_checkbox_input_list = clonedeep( require( '../o-checkbox-input-list/o-checkbox-input-list.prototype' ) );
+const o_checkbox_input_list = clonedeep( require( '../../objects/o-checkbox-input-list/o-checkbox-input-list.prototype' ) );
 const c_button = clonedeep( require( '../../components/c-button/c-button.prototype' ) );
 
-c_heading.c_heading_text = 'Filter By';
+c_heading.c_heading_text = 'Filter:';
 c_heading.c_heading_classes = 'lrv-u-font-size-20 lrv-u-text-transform-uppercase lrv-u-border-b-1 lrv-u-margin-b-1 lrv-u-padding-b-025';
 
 o_checkbox_input_list.c_title.c_title_text = 'Location';
