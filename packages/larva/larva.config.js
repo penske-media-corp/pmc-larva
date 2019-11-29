@@ -18,6 +18,7 @@ module.exports = {
 	},
 
 	patterns: {
-		larvaPatternsDir: path.resolve( './packages/larva-patterns' ),
+		larvaPatternsDir: path.resolve( '../larva-patterns' ),
+		projectPatternsDir: path.resolve( './src/patterns' ),
 	}
 };
