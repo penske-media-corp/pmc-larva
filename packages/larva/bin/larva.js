@@ -14,9 +14,8 @@ switch ( args[0] ) {
 		
 		// larva write-json larva
 		let fromLarva = args[1] === 'larva' ? true : false;
-		let message = fromLarva ? 'Larva' : 'Project';
 
-		console.log( chalk.bold( `\n---- ${message} JSON ----\n`) );
+		console.log( chalk.bold( `\n---- ${args[1] || 'Project'} JSON ----\n`) );
 
 		writeJson( config, fromLarva );
 }
