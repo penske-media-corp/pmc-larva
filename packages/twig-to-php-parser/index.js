@@ -1,7 +1,7 @@
 const execPhp = require( 'exec-php' );
 const path = require( 'path' );
 const chalk = require( 'chalk' );
-const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
+const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
 const RELATIVE_OUPUT_PATH = '../template-parts/patterns'; // Not permitted to override this because it will break the include paths.
 
 /**

@@ -4,7 +4,7 @@ const getScenarios = require( '../lib/getScenarios' );
 const backstopUtils = require( '../lib/utils' );
 
 // Gets test app config from larva/__test__/fixtures/larva.config.js
-const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
+const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
 const appConfiguration = getAppConfiguration( 'backstop' );
 
 const processMocker = {
