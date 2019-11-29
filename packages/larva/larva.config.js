@@ -20,5 +20,10 @@ module.exports = {
 	patterns: {
 		larvaPatternsDir: path.resolve( '../larva-patterns' ),
 		projectPatternsDir: path.resolve( './src/patterns' ),
+		ignoredModules: [
+			'footer-menus',
+			'footer-social',
+			'footer-tip'
+		]
 	}
 };
