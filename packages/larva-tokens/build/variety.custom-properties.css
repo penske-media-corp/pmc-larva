@@ -29,5 +29,6 @@
   --font-family-body-fancy: 'IBM Plex Serif', serif;
   --border-color-brand-primary: rgb(238, 232, 9);
   --background-color-brand-primary: rgb(238, 232, 9);
+  --color-brand-accent: rgb(243, 112, 33);
   --font-family-accent-fancy: 'Graphik XX Cond', sans-serif;
 }

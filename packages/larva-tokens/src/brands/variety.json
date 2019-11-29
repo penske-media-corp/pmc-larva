@@ -36,6 +36,11 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "{!ORANGE_54}",
+			"type": "color",
+			"category": "text-color"
+		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!PARA_SUPREME}",
 			"type": "font-family",
