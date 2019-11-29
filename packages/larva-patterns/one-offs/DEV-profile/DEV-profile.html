@@ -1,0 +1,29 @@
+<div>
+	{% include "@larva/modules/profile-header/profile-header.twig" with profile_header %}
+
+	<div class="lrv-a-wrapper">
+		<div>
+			{% include "@larva/modules/back-to-list/back-to-list.twig" with back_to_list %}
+		</div>
+
+		<div class="a-profile-grid">
+			<div class="a-profile-grid__blurb">
+				{% include "@larva/modules/profile-blurb/profile-blurb.twig" with profile_blurb %}
+			</div>
+
+			<div class="a-profile-grid__body">
+				{% include "@larva/modules/profile-body/profile-body.twig" with profile_body %}
+			</div>
+
+			<div class="a-profile-grid__ads">
+				<img src="https://picsum.photos/300/600" class="a-hidden@mobile-max">
+				<img src="https://picsum.photos/300/250" class="a-hidden@tablet">
+			</div>
+
+			<div class="a-profile-grid__stories">
+				{% include "@larva/modules/profile-gallery/profile-gallery.twig" with profile_gallery %}
+				{% include "@larva/modules/profile-related-stories/profile-related-stories.twig" with profile_related_stories %}
+			</div>
+		</div>
+	</div>
+</div>

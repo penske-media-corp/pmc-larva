@@ -1,4 +1,4 @@
-const c_span_prototype = require( '@penskemediacorp/larva-patterns/components/c-span/c-span.prototype.js' );
+const c_span_prototype = require( '../../components/c-span/c-span.prototype.js' );
 const c_span = Object.assign( {}, c_span_prototype );
 
 module.exports = {

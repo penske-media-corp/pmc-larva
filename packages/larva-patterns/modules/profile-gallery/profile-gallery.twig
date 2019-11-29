@@ -1,0 +1,13 @@
+<div class="profile-gallery // {{ profile_gallery_classes }} ">
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	<div class="js-Flickity js-Flickity--profile js-Flickity--isContained js-Flickity--nav-top-right js-Flickity--bordered-buttons js-Flickity--isFreeScroll">
+		{% for item in galleries %}
+			<div class="js-Flickity-cell lrv-u-margin-lr-050 u-margin-lr-1@tablet">
+				{% include "@larva/objects/o-figure/o-figure.twig" with item %}
+			</div>
+		{% endfor %}
+	</div>
+</div>
