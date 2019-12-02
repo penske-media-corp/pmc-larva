@@ -27,14 +27,16 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 		];
 
 		// If variant file exists, add it to the array of moduleVariants to be written to JSON.
-		patternConfig.variants.forEach( ( variant ) => {
-
-			let variantFileLocation = path.join( sourceDirectory, `modules/${moduleName}/${moduleName}.${variant}.js` );
-
-			if ( fs.existsSync( variantFileLocation ) ) {
-				moduleVariants.push( variant );
-			}
-		});
+		if ( undefined !== patternConfig.variants ) {
+			patternConfig.variants.forEach( ( variant ) => {
+	
+				let variantFileLocation = path.join( sourceDirectory, `modules/${moduleName}/${moduleName}.${variant}.js` );
+	
+				if ( fs.existsSync( variantFileLocation ) ) {
+					moduleVariants.push( variant );
+				}
+			});
+		}
 
 		moduleVariants.forEach( ( variant ) => {
 
