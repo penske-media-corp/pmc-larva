@@ -12,11 +12,10 @@ o_checkbox_input_list.c_title.c_title_classes = 'lrv-u-font-family-primary lrv-u
 o_checkbox_input_list.o_checkbox_input_list_items_classes += ' lrv-u-font-family-primary lrv-u-font-size-12 lrv-u-line-height-large';
 
 c_button.c_button_text = 'Filter';
-c_button.c_button_classes += ' lrv-u-text-transform-uppercase lrv-u-background-color-black lrv-u-color-white lrv-u-font-size-12 lrv-u-font-family-primary u-margin-t-150@tablet lrv-u-margin-t-1 lrv-u-color-grey-light:hover lrv-u-padding-lr-2 lrv-u-padding-tb-050';
-c_button.c_button_inner_classes = 'u-padding-lr-1@tablet';
+c_button.c_button_classes += ' lrv-u-text-transform-uppercase lrv-u-background-color-black lrv-u-color-white lrv-u-font-size-12 lrv-u-font-family-primary lrv-u-margin-t-1 lrv-u-color-grey-light:hover lrv-u-padding-lr-2 lrv-u-padding-tb-050';
 
 module.exports = {
-	profile_filter_classes: 'u-padding-tb-150@tablet lrv-u-padding-a-1 u-background-color-brand-secondary', // TODO: Need to update background color.
+	profile_filter_classes: 'lrv-u-padding-a-1 lrv-u-background-color-brand-secondary',
 	c_heading: c_heading,
 	o_checkbox_input_list: [
 		o_checkbox_input_list,

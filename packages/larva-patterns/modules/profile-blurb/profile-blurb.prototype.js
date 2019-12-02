@@ -16,24 +16,26 @@ c_title.c_title_url = false;
 c_title.c_title_link_classes = 'lrv-u-color-black';
 
 c_link.c_link_text = 'New York';
-c_link.c_link_classes += ' lrv-u-font-family-primary lrv-u-font-size-22@mobile-max lrv-u-font-size-24 u-color-light-desaturated-magenta';
+c_link.c_link_classes += ' lrv-u-font-family-primary lrv-u-font-size-22@mobile-max lrv-u-font-size-24';
 
 c_span.c_span_text = 'Investment Banking';
 c_span.c_span_classes += ' lrv-u-font-size-22@mobile-max lrv-u-font-size-24 lrv-u-font-family-primary lrv-u-display-block';
 
 c_dek.c_dek_text = 'Massa tincidunt dui ut ornare lectus sit. Dolor purus non enim praesent elementum facilisis leo. Aliquet eget sit amet tellus cras adipiscing enim eu. ';
-c_dek.c_dek_classes = 'lrv-u-font-size-20 u-font-style-italic';
+c_dek.c_dek_classes = 'lrv-u-font-size-20 lrv-u-font-style-italic';
 
-o_social_list.o_social_list_classes += ' lrv-u-flex a-hidden@mobile-max';
+o_social_list.o_social_list_classes += ' lrv-u-flex';
+
 o_social_list.o_social_list_icons.map( ( social_icon ) => {
 	social_icon.c_icon_link_classes += ' lrv-u-border-a-1 lrv-u-color-black lrv-u-border-color-grey';
 } );
 
 module.exports = {
-	profile_blurb_classes: 'lrv-u-flex u-flex-direction-column@mobile-max',
-	profile_blurb_image_classes: 'u-width-40p@tablet lrv-u-flex-shrink-0 u-margin-r-2@desktop-xl lrv-u-margin-r-1@tablet',
+	profile_blurb_classes: 'lrv-u-flex lrv-u-flex-direction-column@mobile-max',
+	profile_blurb_image_classes: 'lrv-u-flex-shrink-0 lrv-u-margin-r-1@tablet',
 	profile_blurb_detail_classes: '',
-	profile_blurb_c_button: '',
+	profile_blurb_c_button_classes: '',
+	c_button: false,
 	c_lazy_image: c_lazy_image,
 	c_title: c_title,
 	c_link: c_link,
