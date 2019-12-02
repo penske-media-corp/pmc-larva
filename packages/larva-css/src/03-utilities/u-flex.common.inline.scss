@@ -29,3 +29,11 @@
 		flex-direction: column;
 	}
 }
+
+.lrv-u-flex-direction-column\@tablet {
+
+	@include pmc-breakpoint( tablet ) {
+		flex-direction: column;
+	}
+}
+
