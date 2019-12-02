@@ -15,7 +15,7 @@ c_button.c_button_text = 'Filter';
 c_button.c_button_classes += ' lrv-u-text-transform-uppercase lrv-u-background-color-black lrv-u-color-white lrv-u-font-size-12 lrv-u-font-family-primary lrv-u-margin-t-1 lrv-u-color-grey-light:hover lrv-u-padding-lr-2 lrv-u-padding-tb-050';
 
 module.exports = {
-	profile_filter_classes: 'lrv-u-padding-a-1 lrv-u-background-color-brand-secondary',
+	profile_filter_classes: 'lrv-u-padding-a-1',
 	c_heading: c_heading,
 	o_checkbox_input_list: [
 		o_checkbox_input_list,

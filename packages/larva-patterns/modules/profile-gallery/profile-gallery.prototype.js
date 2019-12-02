@@ -13,7 +13,7 @@ o_figure.c_figcaption.c_figcaption_caption_classes = 'lrv-u-margin-b-025';
 o_figure.c_figcaption.c_figcaption_credit_classes = 'lrv-u-text-transform-uppercase lrv-u-color-grey-dark';
 
 module.exports = {
-	profile_gallery_classes: 'u-padding-a-2@tablet lrv-u-padding-tb-1 u-background-color-brand-secondary',
+	profile_gallery_classes: 'lrv-u-padding-tb-1',
 	c_heading: c_heading,
 	galleries: [
 		o_figure,

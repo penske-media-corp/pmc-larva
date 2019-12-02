@@ -25,4 +25,4 @@ c_button.c_button_inner_classes = 'lrv-u-padding-lr-1@tablet';
 
 profile_blurb_card.c_button = c_button;
 
-module.exports = profile_blurb;
+module.exports = profile_blurb_card;
