@@ -41,6 +41,11 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "${!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!PARA_SUPREME}",
 			"type": "font-family",

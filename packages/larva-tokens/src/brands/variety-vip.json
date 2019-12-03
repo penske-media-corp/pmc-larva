@@ -48,7 +48,7 @@
 			"category": "font-family"
 		},
 		"FONT_FAMILY_SECONDARY": {
-			"value": "{!BONNIE}",
+			"value": "{!HELVETICA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
