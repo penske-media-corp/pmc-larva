@@ -52,6 +52,11 @@
 			"type": "font-family",
 			"category": "font-family"
 		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "${!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
 			"value": "{!IBM_PLEX_SANS}",
 			"type": "font-family",
