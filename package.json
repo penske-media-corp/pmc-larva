@@ -2,9 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "test": "./node_modules/.bin/jest",
-    "larva": "nodemon -e twig,js,html packages/larva/lib/server.js",
-    "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config"
+    "test": "./node_modules/.bin/jest"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -25,10 +23,11 @@
     "jest": "^24.8.0",
     "lerna": "^3.15.0",
     "node-sass": "^4.12.0",
-    "nodemon": "^1.19.4",
+    "sass-true": "^5.0.0",
     "stylelint": "^10.1.0",
     "twing": "^2.2.7",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.2"
   }
 }

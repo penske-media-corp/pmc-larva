@@ -1,0 +1,5 @@
+{% if c_select_option_url %}
+	<option data-select-url="{{ c_select_option_url }}" value="{{ c_select_option_value_attr }}">{{ c_select_option_text }}</option>
+{% else %}
+	<option value="{{ c_select_option_value_attr }}">{{ c_select_option_text }}</option>
+{% endif %}

@@ -38,4 +38,15 @@ The core Larva packages are:
 
 ## Usage
 
-Consult each package's readme for a description and directions for use.
+Consult each package's readme for a description and directions for use. 
+
+## Development Setup
+
+Clone this package and run the commands:
+* `npm install -g lerna` 
+* `lerna bootstrap`
+
+These will setup the mono-repo and install dependencies for each of the packages. This will take a few moments.
+
+To get started working on patterns and to view existing patterns in the pattern server, from the root of packages/larva run:
+* `npm run larva`
