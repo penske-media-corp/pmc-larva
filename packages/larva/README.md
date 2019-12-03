@@ -19,20 +19,21 @@ Any project consuming Larva, must have the following directory structure:
 			|- images/
 		|- node_modules/
 		|- src/
+			|- scss/
+				|- (Utility/ITCSS here)
 			|- patterns/
-				|- 04-components/
-				|- 05-objects/
-				|- 06-algorithms/
-				|- 07-utilities/
-				|- 08-modules/
-				|- 09-one-offs/
-		|- public
+				|- components/
+				|- objects/
+				|- modules/
+				|- one-offs/
+		|- public/
 			|- {fonts}
 		|- package.json
 		|- larva.config.js
-	|- template-parts/ (only if there are parsed patterns)
+	|- template-parts/
 		|- patterns/
 ```
+
 ### In a brand new project
 
 To install Larva, run the following command from the asset directory of a consuming project:
@@ -48,20 +49,36 @@ const path = require( 'path' );
 module.exports = {
 	patterns: {
 		larvaPatternsDir: path.resolve( __dirname, 'node_modules/@penskemediacorp/larva-patterns' ),
-		projectPatternsDir: path.resolve( __dirname, './src/patterns' )
+		projectPatternsDir: path.resolve( __dirname, './src/patterns' ),
+		ignoredModules: [
+			// Modules to be ignored from write-json
+		],
+		variants: [
+			// And Node prototype variants e.g. article-tags.vip.js
+		],
 	}
 }
 ```
 
-Create the following directories in your-theme/assets/src/patterns: 
+### Scripts in This Repo
 
+The following scripts should be added to the consuming project assets/package.json:
 
-(yes, there will be a scaffold task, someday)
-
-To start the server, you must be in the same directory as `larva.config.js` or, in other words, working within a "host" project. The Larva mono-repo is set up to be a "host" project, and the server can be started from within the root of the repository with the following command:
-
+```language:json
+"scripts": {
+	"larva": "nodemon -e twig,*.prototype.js,html,scss ./node_modules/@penskemediacorp/larva/lib/server.js",
+	"write-json": "larva write-json",
+}
 ```
-➜ pmc-larva$ npm run larva
-```
 
-This will bring up the server for developing patterns at localhost:3000.
+#### `npm run write-json`
+
+This script will output the Node prototype and variant objects from the pattern Node files to JSON file in `assets/build/json` so that the default objects can be used in the PHP templates.
+
+This command accepts one option parameter to write the JSON from Larva for shared modules: `npm run write-json -- larva`.
+
+#### `npm run larva`
+
+This command will start the pattern server, where you will develop UI. You must be in the same directory as `larva.config.js` to run this command, in other words, working within a "host" project. This will bring up the server for developing patterns at localhost:3000. You must navigate to that URL manually.
+
+The Larva mono-repo is set up to be a "host" project, and the server can be started with `npm run larva` from within the root of this repository in order to working on core Larva patterns. This will likely move to within `packages/larva` to make the managing of assets match that of other "host" projects.

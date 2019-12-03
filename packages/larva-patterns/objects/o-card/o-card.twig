@@ -1,0 +1,53 @@
+<article class="o-card {{ o_card_classes }}">
+
+	{% if o_card_link_url %}
+		<a tabindex="0" href="{{ o_card_link_url }}" class="{{ o_card_link_classes }}">
+	{% endif %}
+
+	{% if o_card_image_wrap_classes %}
+	<div class="o-card__image-wrap {{ o_card_image_wrap_classes }}">
+		{% endif %}
+
+		{% if c_lazy_image %}
+			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		{% endif %}
+
+		{% if o_indicator %}
+			{% include "@larva/objects/o-indicator/o-indicator.twig" with o_indicator %}
+		{% endif %}
+
+		{% if o_card_image_wrap_classes %}
+	</div>
+	{% endif %}
+
+	<div class="o-card__content {{ o_card_content_classes }}">
+		{% if o_span_group %}
+			{% include "@larva/objects/o-span-group/o-span-group.twig" with o_span_group %}
+		{% endif %}
+
+		{% if c_span %}
+			{% include "@larva/components/c-span/c-span.twig" with c_span %}
+		{% endif %}
+
+		{% if c_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		{% endif %}
+
+		{% if c_timestamp %}
+			{% include "@larva/components/c-timestamp/c-timestamp.twig" with c_timestamp %}
+		{% endif %}
+
+		{% if c_dek %}
+			{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+		{% endif %}
+
+		{% if c_tagline %}
+			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+		{% endif %}
+	</div>
+
+	{% if o_card_link_url %}
+	</a>
+	{% endif %}
+
+</article>

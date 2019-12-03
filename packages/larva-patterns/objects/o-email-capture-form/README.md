@@ -1,6 +1,10 @@
-# o-email-capture-form
+o-email-capture-form is an object intended to collect emails via the ExactTarget API. It accepts an array of c-hidden-fields for this the Opted In and Date ExactTarget data. 
 
-o-email-capture-form is an object intended to collect emails via the ExactTarget API. It contains several hidden inputs for this purpose. Although it could be used to collect emails via other services, developers should consider creating project-level patterns for such a use case. Also note that o-email-capture-form should not be used to provide an email input in a longer form – it should be used only when a form required a single input for an email 
+Although it could be used to collect emails via other services, developers should consider creating project-level patterns for anything other than ExactTarget. 
+
+Also note that o-email-capture-form should not be used to provide an email input in a longer form – it should be used only when a form required a single input for an email.
+
+This pattern is intended to go along with the EmailCapture larva-js package that will handle appending the input value to a success URL when the form is submitted. 
 
 ## Available configuraitons:
 

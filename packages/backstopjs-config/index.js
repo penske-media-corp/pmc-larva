@@ -5,7 +5,7 @@ const backstopUtils = require( './lib/utils' );
 const getScenarios = require( './lib/getScenarios' );
 
 // Get app config from project
-const getAppConfiguration = require( '@penskemediacorp/larva' ).config;
+const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
 const appConfiguration = getAppConfiguration( 'backstop' );
 
 const cliArgs = ( function getCliArgs() {
