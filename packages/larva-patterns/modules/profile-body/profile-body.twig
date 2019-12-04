@@ -8,4 +8,8 @@
 		{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
 	{% endif %}
 
+	<div class="profile-body__content // {{ profile_body_content_classes }}">
+		{{ profile_body_content_markup|raw }}
+	</div>
+
 </div>
