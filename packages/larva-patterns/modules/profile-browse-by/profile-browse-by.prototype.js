@@ -26,7 +26,7 @@ o_card_list.o_card_list_items.map( o_card => {
 });
 
 module.exports = {
-	profile_browse_by_classes: 'lrv-a-wrapper',
+	profile_browse_by_classes: '',
 	c_heading: c_heading,
 	o_card_list: o_card_list,
 }
