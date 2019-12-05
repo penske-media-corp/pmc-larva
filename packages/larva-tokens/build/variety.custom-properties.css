@@ -26,7 +26,7 @@
   --border-color-brand-secondary: rgb(65, 126, 244);
   --color-brand-primary: rgb(238, 232, 9);
   --background-color-brand-accent: rgb(26, 40, 47);
-  --font-family-accent: $Helvetica, sans-serif;
+  --font-family-accent: Helvetica, sans-serif;
   --font-family-body-fancy: 'IBM Plex Serif', serif;
   --border-color-brand-primary: rgb(238, 232, 9);
   --background-color-brand-primary: rgb(238, 232, 9);

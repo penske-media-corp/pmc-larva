@@ -42,7 +42,7 @@
 			"category": "text-color"
 		},
 		"FONT_FAMILY_ACCENT": {
-			"value": "${!HELVETICA}",
+			"value": "{!HELVETICA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
