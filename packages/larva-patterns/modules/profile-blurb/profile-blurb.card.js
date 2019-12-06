@@ -11,8 +11,10 @@ profile_blurb_card.profile_blurb_image_classes = false;
 profile_blurb_card.o_social_list = false;
 
 profile_blurb_card.c_title.c_title_classes = 'lrv-u-font-family-primary lrv-u-text-transform-uppercase lrv-u-font-size-16 lrv-u-color-black';
-profile_blurb_card.c_link.c_link_classes = 'lrv-a-unstyle-link lrv-u-font-family-primary lrv-u-font-size-14@mobile-max lrv-u-font-size-16 lrv-u-font-size-18@desktop-xl';
-profile_blurb_card.c_span.c_span_classes = 'lrv-u-whitespace-nowrap lrv-u-font-size-14@mobile-max lrv-u-font-size-16 lrv-u-font-size-18@desktop-xl lrv-u-font-family-primary lrv-u-display-block';
+
+profile_blurb_card.c_tagline.c_tagline_classes = 'lrv-a-unstyle-link lrv-u-font-family-primary lrv-u-font-size-14@mobile-max lrv-u-font-size-16 lrv-u-font-size-18@desktop-xl';
+profile_blurb_card.c_tagline_second.c_tagline_classes = 'lrv-u-whitespace-nowrap lrv-u-font-size-14@mobile-max lrv-u-font-size-16 lrv-u-font-size-18@desktop-xl lrv-u-font-family-primary lrv-u-display-block';
+
 profile_blurb_card.c_dek.c_dek_classes = 'lrv-u-margin-tb-050 lrv-u-font-size-16 lrv-u-font-style-italic';
 
 profile_blurb_card.profile_blurb_c_button = 'lrv-u-text-align-center';
