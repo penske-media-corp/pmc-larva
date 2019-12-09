@@ -1,17 +1,25 @@
 @import 'setup';
 
 $widths_map: (
+	'width-16': pmc-rem(16),
+	'width-30': pmc-rem(30),
+	'width-100': pmc-rem(100),
+	'width-200': pmc-rem(200),
+	'width-300': pmc-rem(300),
 	'width-30p': 30%,
 	'width-50p': 50%,
 	'width-100p': 100%,
-	'width-16': pmc-rem(16),
 );
 
 @include basic-utility-generator( 'width', (
+	width-16,
+	width-30,
+	width-100,
+	width-200,
+	width-300,
 	width-30p,
 	width-50p,
 	width-100p,
-	width-16,
 ), $widths_map );
 
 .lrv-u-max-width-100p {
