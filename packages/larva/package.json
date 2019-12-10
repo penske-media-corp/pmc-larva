@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva",
-  "version": "6.3.0-alpha.0",
+  "version": "6.3.1-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
@@ -33,6 +33,6 @@
     "twing": "^2.3.2"
   },
   "devDependencies": {
-    "@penskemediacorp/larva-patterns": "^6.3.0-alpha.0"
+    "@penskemediacorp/larva-patterns": "^6.3.1-alpha.0"
   }
 }
