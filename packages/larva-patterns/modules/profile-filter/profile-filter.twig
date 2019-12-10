@@ -1,4 +1,4 @@
-<nav class="profile-filter // {{ profile_filter_classes }}">
+<form class="profile-filter // {{ profile_filter_classes }}" method="post" action="{{ profile_filter_action_url }}">
 	{% if c_heading %}
 		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
 	{% endif %}
@@ -12,4 +12,4 @@
 	{% if c_button %}
 		{% include "@larva/components/c-button/c-button.twig" with c_button %}
 	{% endif %}
-</nav>
+</form>
