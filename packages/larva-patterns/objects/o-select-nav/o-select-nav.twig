@@ -1,0 +1,9 @@
+<div class="{{ o_select_nav_classes }}">
+	{% include "@larva/components/c-button/c-button.twig" with c_button %}
+
+	<select class="js-SelectNav-select {{ o_select_nav_select_classes }}">
+		{% for item in o_select_nav_options %}
+			{% include "@larva/components/c-select-option/c-select-option.twig" with item %}
+		{% endfor %}
+	</select>
+</div>

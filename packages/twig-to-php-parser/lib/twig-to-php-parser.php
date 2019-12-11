@@ -175,7 +175,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 		foreach ( $svg_matches[0] as $svg ) {
 			$svg_replacements[ $count ] = parse_svg_path(
 				$svg,
-				$svg_matches[3][ $count ],
+				$svg_matches[3][ $count ]
 			);
 			$count ++;
 		}

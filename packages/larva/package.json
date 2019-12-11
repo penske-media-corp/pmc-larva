@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva",
-  "version": "6.0.0-alpha.0",
+  "version": "6.3.1-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
@@ -14,7 +14,9 @@
     "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "larva": "nodemon -e twig,js,html ./lib/server.js",
+    "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config"
   },
   "publishConfig": {
     "access": "public"
@@ -27,6 +29,10 @@
     "express": "^4.17.1",
     "lodash.clonedeep": "^4.5.0",
     "marked": "^0.7.0",
+    "nodemon": "^1.19.4",
     "twing": "^2.3.2"
+  },
+  "devDependencies": {
+    "@penskemediacorp/larva-patterns": "^6.3.1-alpha.0"
   }
 }

@@ -7,7 +7,7 @@
 		{% set ext = '.twig' %}
 	{% endif %}
 
-	{% set path = "@" ~ source ~ "/" ~ type ~"/" ~ name ~ "/" ~ name ~ ext %}
+	{% set path = type ~"/" ~ name ~ "/" ~ name ~ ext %}
 
 	<div class="lrv-u-background-color-grey-light js-to-hide">
 		<h1 class="lrv-u-font-family-basic lrv-u-padding-a-1 lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' }}<code>{{ name  }}{{ variant ? '.' ~ variant }}</code></h1>

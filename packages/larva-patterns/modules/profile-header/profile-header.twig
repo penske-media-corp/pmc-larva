@@ -1,0 +1,25 @@
+<header class="profile-header // {{ profile_header_classes }}">
+
+	<div class="profile-header__banner // {{ profile_header_banner_classes }}">
+		<div class="lrv-a-wrapper lrv-u-flex lrv-u-flex-direction-column lrv-u-align-items-center lrv-u-padding-tb-1">
+			<h1 class="{{ profile_header_title_classes }}">
+				{{ profile_header_title_text }}
+			</h1>
+
+			{% include "@larva/objects/o-sponsored-by/o-sponsored-by.twig" with o_sponsored_by %}
+
+		</div>
+	</div>
+
+	<div class="profile-header__nav // {{ profile_header_nav_classes }}">
+		<div class="lrv-a-wrapper lrv-a-glue-parent">
+			{% include "@larva/objects/o-nav/o-nav.twig" with o_nav %}
+
+			{% if o_select_nav %}
+				<div class="{{ profile_header_o_select_nav_classes }}">
+					{% include "@larva/objects/o-select-nav/o-select-nav.twig" with o_select_nav %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</header>

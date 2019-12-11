@@ -1,0 +1,17 @@
+<section class="profile-highlights // {{ profile_highlights_classes }}">
+
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	<div class="profile-highlights__slider // lrv-a-wrapper {{ profile_highlights_slider_outer_classes }}">
+		<div class="js-Flickity js-Flickity--100p js-Flickity--isContained js-Flickity--bordered-buttons {{ profile_highlights_slider_classes }}">
+			{% for item in slider_items %}
+				<div class="js-Flickity-cell lrv-u-margin-lr-050 u-margin-lr-1@tablet">
+					{% include "@larva/modules/profile-blurb/profile-blurb.twig" with item %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</section>

@@ -1,0 +1,15 @@
+<form class="profile-filter // {{ profile_filter_classes }}" method="post" action="{{ profile_filter_action_url }}">
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	<div class="lrv-a-space-children-vertical lrv-a-space-children--2">
+		{% for item in o_checkbox_input_list %}
+			{% include "@larva/objects/o-checkbox-input-list/o-checkbox-input-list.twig" with item %}
+		{% endfor %}
+	</div>
+
+	{% if c_button %}
+		{% include "@larva/components/c-button/c-button.twig" with c_button %}
+	{% endif %}
+</form>

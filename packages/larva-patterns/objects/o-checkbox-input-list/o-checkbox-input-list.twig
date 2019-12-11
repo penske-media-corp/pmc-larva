@@ -1,0 +1,15 @@
+<section class="o-checkbox-input-list {{ o_checkbox_input_list_classes }}">
+
+	{% if c_title %}
+		{% include "@larva/components/c-title/c-title.twig" with c_title %}
+	{% endif %}
+
+	<ul class="{{ o_checkbox_input_list_items_classes }}">
+		{% for item in o_checkbox_input_list_items %}
+			<li class="{{ o_checkbox_input_list_item_classes }}">
+				{% include "@larva/components/c-checkbox-input/c-checkbox-input.twig" with item %}
+			</li>
+		{% endfor %}
+	</ul>
+
+</section>

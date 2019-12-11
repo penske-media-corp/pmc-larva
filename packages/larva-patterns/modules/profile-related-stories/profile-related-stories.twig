@@ -1,0 +1,9 @@
+<div class="profile-related-stories // {{ profile_related_stories_classes }}">
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	{% if o_card_list %}
+		{% include "@larva/objects/o-card-list/o-card-list.twig" with o_card_list %}
+	{% endif %}
+</div>

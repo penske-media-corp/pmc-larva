@@ -1,0 +1,7 @@
+<ul class="profile-card-list // {{ profile_card_list_classes }} lrv-a-unstyle-list">
+{% for item in profile_card_list %}
+	<li>
+		{% include "@larva/modules/profile-blurb/profile-blurb.twig" with item %}
+	</li>
+{% endfor %}
+</ul>
