@@ -8,4 +8,4 @@ c_link.c_link_classes += ' lrv-u-text-transform-uppercase lrv-u-font-family-prim
 module.exports = {
 	back_to_list_classes: 'a-hidden@desktop-max',
 	c_link: c_link
-}
+};
