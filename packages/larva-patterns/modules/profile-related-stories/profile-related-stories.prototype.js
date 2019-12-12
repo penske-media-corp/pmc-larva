@@ -30,4 +30,4 @@ module.exports = {
 	profile_related_stories_classes: '',
 	c_heading: c_heading,
 	o_card_list: o_card_list,
-}
+};
