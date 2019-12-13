@@ -1,0 +1,12 @@
+<div class="profile-landing-header // {{ profile_landing_header_classes }}">
+
+	{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+
+	{% include "@larva/modules/profile-body/profile-body.twig" with profile_body %}
+
+	{% if c_button %}
+		<div class="lrv-u-text-align-center lrv-u-margin-tb-2">
+			{% include "@larva/components/c-button/c-button.twig" with c_button %}
+		</div>
+	{% endif %}
+</div>
