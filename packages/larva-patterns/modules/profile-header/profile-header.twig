@@ -6,7 +6,9 @@
 				{{ profile_header_title_text }}
 			</h1>
 
-			{% include "@larva/objects/o-sponsored-by/o-sponsored-by.twig" with o_sponsored_by %}
+			{% if o_sponsored_by %}
+				{% include "@larva/objects/o-sponsored-by/o-sponsored-by.twig" with o_sponsored_by %}
+			{% endif %}
 
 		</div>
 	</div>

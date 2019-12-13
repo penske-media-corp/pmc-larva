@@ -10,6 +10,7 @@ c_heading.c_heading_classes = 'lrv-u-text-align-center lrv-u-font-size-36 lrv-u-
 c_heading.c_heading_text = 'Replace This Text';
 
 module.exports = {
+	profile_highlights_id_attr: 'profile-highlights',
 	profile_highlights_classes: '',
 	profile_highlights_slider_outer_classes: '',
 	profile_highlights_slider_classes: 'lrv-u-padding-a-1',
