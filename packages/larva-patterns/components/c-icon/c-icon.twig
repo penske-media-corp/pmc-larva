@@ -1,9 +1,6 @@
 {% if c_icon_url %}
 <a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}" {% if c_icon_rel_name %}rel="{{ c_icon_rel_name }}"{% endif %} target="_blank">
 	<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
-{% else %}
-<span class="{{ c_icon_link_classes }}" tabindex="0">
-	<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
 {% endif %}
 
 <svg class="c-icon {{ modifier_class }} {{ c_icon_classes }}">
@@ -15,6 +12,4 @@
 
 {% if c_icon_url %}
 </a>
-{% else %}
-</span>
 {% endif %}
