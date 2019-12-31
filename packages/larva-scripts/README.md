@@ -1,6 +1,6 @@
 # Larva Scripts
 
-Inspired by [@wordpress/scripts](https://github.com/WordPress/gutenberg/tree/master/packages/scripts), this package provides a collection of scripts for PMC development with Larva.
+Inspired by [@wordpress/scripts](https://github.com/WordPress/gutenberg/tree/master/packages/scripts), this package provides a collection of scripts for developing UI on PMC sites with Larva.
 
 For asset building commands, JS and SCSS can be run at the same time, or separately, in order to minimize the build time for instances where either JS or SCSS, not both, need to be built.
 
