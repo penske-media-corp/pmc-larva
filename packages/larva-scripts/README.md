@@ -48,7 +48,7 @@ Additional scripts, coming soon:
 
 ## Overview of Functionality
 
-This package provides a single binary, `larva`, that provide a layer of abstraction around CLI commands from various tools, and points to a default configuration for each. The configurations are stored in separate package so as to be available to other projects that have their own builds steps and are not using Larva.
+This operates by way of a single binary, `larva`, and provides a layer of abstraction around CLI commands from various tools. The `larva` binary will point to a default configuration for each command and run its package's associated binary (e.g. `eslint` or `gulp`). The configurations are stored in separate package so as to be available to projects not using Larva.
 
 For example, when the below scripts are present in a consuming projects package.json, the following would happen for `npm run dev:scss` (with the `scripts` value: `larva dev-scss` )in this package:
 1. In `bin/larva.js`, get arguments from CLI and pass to `spawnScript`
