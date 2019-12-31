@@ -6,6 +6,9 @@
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
   "license": "ISC",
   "main": "lib/larva-scripts.js",
+  "bin": {
+    "larva-scripts": "./bin/larva-scripts.js"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -25,5 +28,8 @@
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.1"
   }
 }
