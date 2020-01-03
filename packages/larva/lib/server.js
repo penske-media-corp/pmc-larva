@@ -1,15 +1,20 @@
-const { TwingEnvironment, TwingLoaderFilesystem, TwingLoaderArray, TwingLoaderChain, TwingFilter } = require('twing');
 const path = require( 'path' );
 const express = require('express');
 const marked = require( 'marked' );
 
-const app = express();
-const port = process.env.NODE_PORT || 3000;
+const { 
+	TwingEnvironment,
+	TwingLoaderFilesystem,
+	TwingFilter
+} = require('twing');
 
 const getAppConfiguration = require( './utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
 const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
+
+const app = express();
+const port = process.env.NODE_PORT || 3000;
 
 const appConfiguration = getAppConfiguration( 'patterns' );
 const twigPaths = getPatternPathsToLoad( appConfiguration );
