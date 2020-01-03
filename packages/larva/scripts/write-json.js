@@ -11,5 +11,4 @@ let fromLarva = cliArgs[1] === 'larva' ? true : false;
 
 console.log( chalk.bold( `\n---- ${cliArgs[1] || 'Project'} JSON ----\n`) );
 
-
 writeJson( config, fromLarva );
