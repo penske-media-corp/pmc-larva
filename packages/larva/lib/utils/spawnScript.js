@@ -14,12 +14,12 @@ const argsWithoutLarvaCommand = ( () => {
 	return cliArgs.length ? cliArgs : [];
 } )();
 
-module.exports = function spawnScript( binary, args ) {
+module.exports = function spawnScript( binaryFile, scriptArgs ) {
 
 	spawn.sync(
-		binary,
+		binaryFile,
 		[
-			... args,
+			... scriptArgs,
 			... argsWithoutLarvaCommand
 		], { stdio: 'inherit' }
 	);
