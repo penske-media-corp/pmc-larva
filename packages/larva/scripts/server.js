@@ -1,14 +1,11 @@
-const spawn = require( 'cross-spawn' );
 const path = require( 'path' );
 
-const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
+const spawnScript = require( '../lib/utils/spawnScript' );
 
-const cliArgs = getArgsFromCli();
+const scriptLocation = path.join( __dirname, `../lib/server.js` );
 
-spawn.sync(
-		'nodemon', 
-		[
-			path.join( __dirname, `../lib/server.js` ),
-			... cliArgs
-		], { stdio: 'inherit' }
-	);
+const args = [
+	scriptLocation
+];
+
+spawnScript( 'nodemon', args );
