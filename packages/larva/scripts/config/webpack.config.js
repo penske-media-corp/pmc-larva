@@ -10,7 +10,12 @@ const BUILD_DIR = path.resolve( './build/js' );
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 
 const entries = getConfig( 'webpack' ).entries;
-const aliases = getConfig( 'webpack' ).aliases;
+
+const aliases = {
+	'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
+	'@npm': path.resolve( './node_modules/' ),
+	... getConfig( 'webpack' ).aliases
+};
 
 //=========================================================
 //  Rules
