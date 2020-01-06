@@ -12,9 +12,9 @@ c_title.c_title_text = 'Bon Iger: Roseanne is Cancelled and I\'m Like Crying so 
 
 c_tagline.c_tagline_classes = 'lrv-u-color-grey-dark lrv-u-margin-t-00';
 
-// TODO: Add social share module and o_video_card.
 module.exports = {
 	vlanding_video_card: vlanding_video_card,
 	c_title: c_title,
 	c_tagline: c_tagline,
+	social_share: '' // TODO: Need to work on this.
 };
