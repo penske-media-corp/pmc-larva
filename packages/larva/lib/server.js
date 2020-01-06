@@ -46,7 +46,7 @@ let patterns = {
 };
 
 app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
-app.use( '/static' , express.static( path.join( appConfiguration.larvaPatternsDir, '../static' ) ) );
+app.use( '/static/' , express.static( path.join( __dirname, '../build' ) ) );
 
 if( appConfiguration.larvaPatternsDir ) {
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
