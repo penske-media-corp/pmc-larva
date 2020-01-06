@@ -2,12 +2,8 @@ const path = require( 'path' );
 
 const getConfig = require( '../../index' ).getConfig;
 
-// Variables
 const SRC_DIR = path.resolve( './entries' );
 const BUILD_DIR = path.resolve( './build/js' );
-
-// Tools
-const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 
 const entries = getConfig( 'webpack' ).entries;
 
@@ -16,6 +12,10 @@ const aliases = {
 	'@npm': path.resolve( './node_modules/' ),
 	... getConfig( 'webpack' ).aliases
 };
+
+// Tools
+const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
+
 
 //=========================================================
 //  Rules
