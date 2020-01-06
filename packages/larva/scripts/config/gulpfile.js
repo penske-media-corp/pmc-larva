@@ -9,14 +9,10 @@ const clean = require( 'gulp-clean' );
 const globImporter = require( 'node-sass-glob-importer' );
 
 const stylelintConfig = require( './stylelint.config' );
-const getConfig = require( '../../').getConfig;
 
 /*
 * Config
 */
-
-// Chunks are added in project's larva.config.js
-const chunks = getConfig( 'chunks' );
 
 const sassOpts = {
 	includePaths: [
@@ -43,18 +39,12 @@ const cssDest = './build/css/';
 * Functions
 */
 
-// Build async and inline file references for each chunk, then combine.
-const inlineChunks = chunks.map( chunk => chunk + '.inline.scss' );
-const asyncChunks = chunks.map( chunk => chunk + '.async.scss' );
-const allChunks = [ ... inlineChunks, ... asyncChunks ];
-const fullChunks = allChunks.map( chunk => './entries/' + chunk );
-
 const stylelint = ( file ) => {
 	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
 }
 
 const buildScss = ( done ) => {
-	gulp.src( fullChunks )
+	gulp.src( './entries/*.scss' )
 		.pipe( gulpStylelint( stylelintOpts ) )
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
 		.pipe( gulp.dest( cssDest ) );
