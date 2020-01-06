@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "larva": "nodemon -e twig,js,html ./lib/server.js",
+    "larva": "nodemon --watch ../larva-patterns -e twig,js,html ./lib/server.js",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config"
   },
   "publishConfig": {
