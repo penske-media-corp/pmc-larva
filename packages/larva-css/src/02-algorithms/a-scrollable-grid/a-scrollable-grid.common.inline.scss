@@ -4,6 +4,10 @@
 
 @import 'setup';
 
+:root {
+	--scrollable-grid-column-size: calc( 5vw + #{pmc-rem( 220 )} );
+}
+
 @mixin _a-scrollable-grid {
 	-webkit-overflow-scrolling: touch;
 
@@ -33,8 +37,16 @@
 .lrv-a-scrollable-grid\@desktop-max {
 
 	@include pmc-breakpoint( desktop-max ) {
-		@include _a-scrollable-grid;
 		overflow-x: scroll;
+	}
+
+}
+
+.lrv-a-scrollable-grid\@desktop-max,
+.lrv-a-scrollable-grid__nested\@desktop-max {
+
+	@include pmc-breakpoint( desktop-max ) {
+		@include _a-scrollable-grid;
 	}
 
 }
