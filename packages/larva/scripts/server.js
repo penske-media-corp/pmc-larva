@@ -8,4 +8,4 @@ const args = [
 	scriptLocation
 ];
 
-spawnScript( 'nodemon', args );
+spawnScript( './node_modules/.bin/nodemon', args );
