@@ -6,7 +6,7 @@ const c_heading = clonedeep( c_heading_prototype );
 const c_button_prototype = require( '../../components/c-button/c-button.prototype' );
 const c_button = clonedeep( c_button_prototype );
 
-c_button.c_button_classes = 'c-button--plain lrv-u-font-size-12 lrv-u-text-transform-uppercase lrv-a-icon-after lrv-a-icon-arrow-right lrv-u-margin-l-auto';
+c_button.c_button_classes = 'lrv-u-font-size-12 lrv-u-text-transform-uppercase lrv-a-icon-after lrv-a-icon-arrow-right lrv-u-margin-l-auto';
 c_button.c_button_text = 'Link';
 c_button.c_button_url = '#';
 

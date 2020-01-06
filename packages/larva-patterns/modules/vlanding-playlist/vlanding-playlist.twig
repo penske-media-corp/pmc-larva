@@ -1,0 +1,21 @@
+<section class="playlist-module // lrv-u-padding-tb-2 lrv-u-padding-tb-1@mobile-max">
+	{% if o_header %}
+		<div class="lrv-a-wrapper">
+			{% include "@larva/objects/o-header/o-header.twig" with o_header %}
+		</div>
+	{% endif %}
+
+	<div class="lrv-a-wrapper lrv-a-scrollable-grid@desktop-max lrv-a-grid lrv-a-cols2@desktop">
+		{% if large_card %}
+			{% include "@larva/objects/o-card/o-card.twig" with large_card %}
+		{% endif %}
+		<div class="lrv-a-scrollable-grid__nested@desktop-max lrv-a-grid lrv-a-cols2@desktop">
+			{% for item in small_card %}
+				{% include "@larva/objects/o-card/o-card.twig" with item %}
+			{% endfor %}
+		</div>
+
+	</div>
+</section>
+
+
