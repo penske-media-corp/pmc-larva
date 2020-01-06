@@ -4,7 +4,7 @@
 	],
 	"props": {
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!NEUE_HAAS_UNICA}",
+			"value": "{!BALTO}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."
@@ -16,7 +16,7 @@
 			"comment": "Fallback for primary-fancy."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!DOMAINE_DISPLAY_NARROW}",
+			"value": "{!ELSELL}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via @font-face."
@@ -28,12 +28,12 @@
 			"comment": "Fallback for secondary-fancy"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "{!HELVETICA_NEUE}",
+			"value": "{!HELVETICA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!#920200}",
+			"value": "{!RED_50}",
 			"type": "color",
 			"category": "background-color"
 		}
