@@ -1,0 +1,40 @@
+// Scrollable Grid
+//
+// The scrollable grid. Parent should be overflow hidden and a width of 100%.
+
+@import 'setup';
+
+@mixin _a-scrollable-grid {
+	-webkit-overflow-scrolling: touch;
+
+	display: flex;
+	flex-wrap: nowrap;
+
+	> * {
+		width: 100%;
+		min-width: calc( 1vw + #{pmc-rem( 260 )} );
+		margin-right: $spacer-150;
+	}
+
+	@supports ( display: grid ) {
+		> * {
+			width: unset;
+			min-width: unset;
+			margin-right: unset;
+		}
+
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: unset; // Override what is coming from pmc-a-grid.
+		grid-auto-columns: var( --scrollable-grid-column-size ); // Set in constants.scss.
+	}
+}
+
+.lrv-a-scrollable-grid\@desktop-max {
+
+	@include pmc-breakpoint( desktop-max ) {
+		@include _a-scrollable-grid;
+		overflow-x: scroll;
+	}
+
+}
