@@ -1,6 +1,9 @@
 const path = require( 'path' );
 
 module.exports = {
+	chunks: [
+		'common'
+	],
 	backstop: {
 		// testBaseUrl: 'https://notlaura.com',
 		testBaseUrl: 'http://localhost:3000/larva',
