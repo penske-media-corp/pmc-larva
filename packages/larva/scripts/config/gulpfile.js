@@ -11,6 +11,11 @@ const globImporter = require( 'node-sass-glob-importer' );
 const stylelintConfig = require( './stylelint.config' );
 const getConfig = require( '../../').getConfig;
 
+/*
+* Config
+*/
+
+// Chunks are added in project's larva.config.js
 const chunks = getConfig( 'chunks' );
 
 const sassOpts = {
@@ -33,24 +38,22 @@ const stylelintOpts = {
 
 const cssDest = './build/css/';
 
+
+/*
+* Functions
+*/
+
 // Build async and inline file references for each chunk, then combine.
 const inlineChunks = chunks.map( chunk => chunk + '.inline.scss' );
 const asyncChunks = chunks.map( chunk => chunk + '.async.scss' );
 const allChunks = [ ... inlineChunks, ... asyncChunks ];
-
-// Prepend full file path to each chunk.
 const fullChunks = allChunks.map( chunk => './entries/' + chunk );
 
-// Do we need this?
-function clean_css() {
-	return gulp.src( cssDest, { read: false } ).pipe( clean() );
-}
-
-function stylelint( file ) {
+const stylelint = ( file ) => {
 	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
 }
 
-function buildScss( done ) {
+const buildScss = ( done ) => {
 	gulp.src( fullChunks )
 		.pipe( gulpStylelint( stylelintOpts ) )
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
@@ -58,15 +61,21 @@ function buildScss( done ) {
 		done();
 }
 
-function processCss( done ) {
+const processCss = ( done ) => {
 	gulp.src( cssDest + '*.css' )
 		.pipe( postcss( [ cssnano() ] ) )
 		.pipe( gulp.dest( cssDest ) );
 	done();
 }
 
+
+
+/*
+* Tasks
+*/
+
 // Watch the changed file, compile and lint when changed.
-exports['dev-scss'] = function() {
+exports['dev-scss'] = () => {
 	gulp.watch( './src/**/*.scss', buildScss ).on( 'change', function( file ) {
 		stylelint( file );
 	} );
@@ -76,7 +85,7 @@ exports['dev-scss'] = function() {
 exports['build-scss'] = buildScss;
 
 // Run PostCSS on CSS.
-exports['prod-scss'] = function( done ) {
+exports['prod-scss'] = ( done ) => {
 	stylelint( './src/**/*.scss' );
 	buildScss( () => {
 		processCss( done );
@@ -84,7 +93,7 @@ exports['prod-scss'] = function( done ) {
 };
 
 // Combine SVG sprites into one.
-exports.sprite = function( done ) {
+exports.sprite = ( done ) => {
 	gulp.src( './build/**/*.defs.svg' )
 		.pipe( concat( 'svg-sprite.svg' ) )
 		.pipe( gulp.dest( './build/svg/' ) );
