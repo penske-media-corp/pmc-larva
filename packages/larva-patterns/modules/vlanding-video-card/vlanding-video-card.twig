@@ -12,10 +12,7 @@
 				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 			{% endif %}
 
-			{# Do we need this #}
-			{% if c_play_badge %}
-				{#{% include "../../04-components/c-play-badge/c-play-badge.twig" with c_play_badge %}#}
-			{% endif %}
+			{# TODO: Need c_play_badge #}
 
 			{% if o_video_card_is_player %}
 				<iframe hidden frameborder="0" data-video-showcase-iframe></iframe>
