@@ -1,20 +1,14 @@
-const spawn = require( 'cross-spawn' );
 const path = require( 'path' );
 
-const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
+const spawnScript = require( '../lib/utils/spawnScript' );
 
-const cliArgs = getArgsFromCli();
 const gulpfilePath = path.join( __dirname, './config/gulpfile.js' );
 
-// TODO: allow local gulpfile override by checking for --cwd and --gulpfile in cliArgs
+const args = [
+	'--gulpfile',
+	gulpfilePath,
+	'--cwd',
+	process.cwd()
+];
 
-spawn.sync(
-	'./node_modules/.bin/gulp',
-	[
-		'--gulpfile',
-		gulpfilePath,
-		'--cwd',
-		process.cwd(),
-		... cliArgs
-	], { stdio: 'inherit' }
-);
+spawnScript( './node_modules/.bin/gulp', args );
