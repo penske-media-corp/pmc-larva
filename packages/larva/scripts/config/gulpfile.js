@@ -13,7 +13,6 @@ const getConfig = require( '../../').getConfig;
 
 const chunks = getConfig( 'chunks' );
 
-
 const sassOpts = {
 	includePaths: [
 		path.resolve( './node_modules' ),
@@ -59,12 +58,29 @@ function buildScss( done ) {
 		done();
 }
 
-exports['dev-scss'] = function() {
+function processCss( done ) {
+	gulp.src( cssDest + '*.css' )
+		.pipe( postcss( [ cssnano() ] ) )
+		.pipe( gulp.dest( cssDest ) );
+	done();
+}
 
-	// Lint changed file.
+// Watch the changed file, compile and lint when changed.
+exports['dev-scss'] = function() {
 	gulp.watch( './src/**/*.scss', buildScss ).on( 'change', function( file ) {
 		stylelint( file );
 	} );
+};
+
+// Quickly build SCSS.
+exports['build-scss'] = buildScss;
+
+// Run PostCSS on CSS.
+exports['prod-scss'] = function( done ) {
+	stylelint( './src/**/*.scss' );
+	buildScss( () => {
+		processCss( done );
+	});
 };
 
 // Combine SVG sprites into one.
@@ -73,17 +89,4 @@ exports.sprite = function( done ) {
 		.pipe( concat( 'svg-sprite.svg' ) )
 		.pipe( gulp.dest( './build/svg/' ) );
 	done();
-};
-
-// Quickly build SCSS.
-exports['build-scss'] = buildScss;
-
-// Run all commands associated with SCSS.
-exports['prod-scss'] = function( done ) {
-	stylelint( './src/**/*.scss' );
-	buildScss( () => {
-		gulp.src( './build/**/*.css' ).pipe( postcss( [cssnano()] ) );
-		done();
-	});
-	
 };
