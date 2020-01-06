@@ -3,8 +3,7 @@ const path = require( 'path' );
 module.exports = {
 	webpack: {
 		aliases: {
-			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
-			'@npm': path.resolve( './node_modules/' )
+			'@js': path.resolve( './src/js' )
 		},
 		entries: {
 			common: './entries/common.entry.js'
