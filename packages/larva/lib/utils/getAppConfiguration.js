@@ -4,9 +4,9 @@ const path = require( 'path' );
 /**
  * Get Larva Configuration
  * 
- * Find larva.config.js according to the directory from the current
- * working directory. For consuming projects, this will be theme/assets/,
- * and for the mono-repo, it will be packages/larva.
+ * Find larva.config.js according to the current working directory.
+ * For consuming projects, this will be theme/assets/, and for the
+ * mono-repo, it will be packages/larva.
  * 
  * For test env, the CWD is overridden to the local directory for fixtures.
  * (this is a problem for writing project-level tests, but for a later time.)
