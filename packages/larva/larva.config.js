@@ -1,9 +1,16 @@
 const path = require( 'path' );
 
 module.exports = {
-	chunks: [
-		'common'
-	],
+	webpack: {
+		aliases: {
+			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
+			'@npm': path.resolve( './node_modules/' )
+		},
+		entries: {
+			common: './entries/common.entry.js'
+		}
+	},
+
 	backstop: {
 		// testBaseUrl: 'https://notlaura.com',
 		testBaseUrl: 'http://localhost:3000/larva',

@@ -1,5 +1,7 @@
 const path = require( 'path' );
 
+const getConfig = require( '../../index' ).getConfig;
+
 // Variables
 const SRC_DIR = path.resolve( './entries' );
 const BUILD_DIR = path.resolve( './build/js' );
@@ -7,14 +9,8 @@ const BUILD_DIR = path.resolve( './build/js' );
 // Tools
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 
-const entries = {
-	common: SRC_DIR + '/common.entry.js'
-};
-
-const aliases = {
-	'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
-	'@npm': path.resolve( './node_modules/' )
-};
+const entries = getConfig( 'webpack' ).entries;
+const aliases = getConfig( 'webpack' ).aliases;
 
 //=========================================================
 //  Rules
