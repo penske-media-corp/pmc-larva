@@ -10,7 +10,7 @@ c_title.c_title_classes = 'lrv-u-font-size-24 lrv-u-font-size-32@desktop lrv-u-p
 c_title.c_title_link_classes = 'lrv-u-color-black';
 c_title.c_title_text = 'Bon Iger: Roseanne is Cancelled and I\'m Like Crying so Hard';
 
-c_tagline.c_tagline_classes = 'lrv-u-color-grey-dark lrv-u-margin-t-00';
+c_tagline.c_tagline_classes = 'lrv-u-color-grey-dark lrv-u-margin-t-00 lrv-a-hidden@mobile-max';
 
 module.exports = {
 	vlanding_video_card: vlanding_video_card,
