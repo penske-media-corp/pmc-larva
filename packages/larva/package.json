@@ -25,10 +25,12 @@
     "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
   },
   "dependencies": {
+    "@penskemediacorp/eslint-config": "^2.7.3-alpha.0",
     "@penskemediacorp/stylelint-config": "^1.5.3-alpha.0",
     "chalk": "^2.4.2",
     "cross-spawn": "^7.0.1",
     "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
