@@ -110,10 +110,12 @@ To use these scripts, add the following to package.json in a project that uses t
 		"dev:js": "larva dev-js",
 		"lint": "larva lint-scss & larva lint-js",
 		"lint:scss": "larva lint-scss",
-		"lint:js": "larva lint-js",
-		"lint-fix": "larva lint-scss --fix & larva lint-js --fix",
+		"lint:js": "larva lint-js ./",
+		"lint-fix": "larva lint-scss --fix & npm run lint:js --fix",
 		"lint-fix:scss": "larva lint-scss --fix",
-		"lint-fix:js": "larva lint-js --fix"
+		"lint-fix:js": "larva lint-js --fix",
+		"larva": "larva server",
+		"write-json": "larva write-json larva && larva write-json
 	}
 }
 ```
@@ -122,9 +124,7 @@ Additional scripts, coming soon:
 ```
 {
 	"scripts": {
- 		"larva": "larva serve",
 		"parser": "larva parser",
-		"write-json": "larva write-json",
 		"backstop": "larva backstop",
 		"svg-sprite: "larva svg-sprite"
 	}
@@ -135,13 +135,10 @@ Additional scripts, coming soon:
 
 This operates by way of a single binary, `larva`, and provides a layer of abstraction around CLI commands from various tools. The `larva` binary will point to a default configuration for each command and run its package's associated binary (e.g. `eslint` or `gulp`). The configurations are stored in separate package so as to be available to projects not using Larva.
 
-For example, when the below scripts are present in a consuming projects package.json, the following would happen for `npm run dev:scss` (with the `scripts` value: `larva dev-scss` )in this package:
-1. In `bin/larva.js`, get arguments from CLI and pass to `spawnScript`
-2. `spawnScript` executes the script with same name as the argument `scripts/dev-scss.js`
-3. `dev-scss.js` executes `gulp watch` CLI via the `cross-spawn` npm package to handle cross-platform inconsistencies
+For example, when the below scripts are present in a consuming projects package.json, the following would happen for `npm run dev:scss` (with the `scripts` value: `larva dev-scss`) in this package:
+1. In `bin/larva.js`, get arguments from CLI, and execute a file with name corresponding to the argument.
+2. `dev-scss.js` executes `gulp` CLI with additional arguments defined in the JS file via `spawnScript`, which uses the `cross-spawn` npm package to handle cross-platform inconsistencies.
 
-Similarly, `npm run lint-js` would do the following:
-1. In `bin/larva.js`, get arguments from CLI and pass to `spawnScript`
-2. `spawnScript` executes `scripts/lint-js.js`
-3. `lint-js.js` executes the CLI for the linter, `eslint --config=/path/to/.eslintrc`
-
+Similarly, `npm run lint:js` (with the `scripts` value: `larva lint-js`) would do the following:
+1. In `bin/larva.js`, get arguments from CLI and execute lint-js.js.
+2. `lint-js.js` executes the `eslint` CLI with both CLI arguments and specific arguments defined in the script.
