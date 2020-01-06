@@ -4,6 +4,7 @@
 const fs = require( 'fs' );
 const path = require( 'path' );
 const spawn = require( 'cross-spawn' );
+const chalk = require( 'chalk' );
 
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
@@ -13,10 +14,12 @@ const hasScriptFile = fs.existsSync( path.join( __dirname, '../scripts/' + scrip
 
 if ( hasScriptFile ) {
 	spawn.sync(
-		'node', 
+		'node',
 		[
 			path.join( __dirname, `../scripts/${ scriptName }.js` ),
 			... cliArgs
 		], { stdio: 'inherit' }
 	);
+} else {
+	console.error( chalk.red( `No file found for "${ scriptName }".` ) );
 }
