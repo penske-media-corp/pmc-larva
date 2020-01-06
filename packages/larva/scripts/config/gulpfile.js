@@ -29,7 +29,7 @@ const stylelintOpts = {
 		{
 			formatter: 'string',
 			console: true
-		}]
+		} ]
 };
 
 const cssDest = './build/css/';
@@ -41,23 +41,22 @@ const cssDest = './build/css/';
 
 const stylelint = ( file ) => {
 	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
-}
+};
 
 const buildScss = ( done ) => {
 	gulp.src( './entries/*.scss' )
 		.pipe( gulpStylelint( stylelintOpts ) )
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
 		.pipe( gulp.dest( cssDest ) );
-		done();
-}
+	done();
+};
 
 const processCss = ( done ) => {
 	gulp.src( cssDest + '*.css' )
 		.pipe( postcss( [ cssnano() ] ) )
 		.pipe( gulp.dest( cssDest ) );
 	done();
-}
-
+};
 
 
 /*
@@ -79,7 +78,7 @@ exports['prod-scss'] = ( done ) => {
 	stylelint( './src/**/*.scss' );
 	buildScss( () => {
 		processCss( done );
-	});
+	} );
 };
 
 // Combine SVG sprites into one.

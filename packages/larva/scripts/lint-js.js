@@ -5,8 +5,7 @@ const spawnScript = require( '../lib/utils/spawnScript' );
 
 const args = [
 	'--c',
-	eslintConfigPath,
-	'./'
+	eslintConfigPath
 ];
 
 spawnScript( './node_modules/.bin/eslint', args );
