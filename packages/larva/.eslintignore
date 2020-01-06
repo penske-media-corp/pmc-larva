@@ -1,0 +1,5 @@
+lib/**/*.js
+node_modules/**/*.js
+static/**/*.js
+__tests__/**/*.js
+build/**/*.js
