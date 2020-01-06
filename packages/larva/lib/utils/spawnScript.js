@@ -4,7 +4,7 @@ const getArgsFromCli = require( './getArgsFromCli' );
 
 // Filter out the first CLI argument which is the Larva command,
 // and not needed for the binary.
-const argsWithoutLarvaCommand = ( () => {
+const cliArgsWithoutScriptName = ( () => {
 	let cliArgs = getArgsFromCli();
 
 	if ( cliArgs.length ) {
@@ -20,7 +20,7 @@ module.exports = function spawnScript( binaryFile, scriptArgs ) {
 		binaryFile,
 		[
 			... scriptArgs,
-			... argsWithoutLarvaCommand
+			... cliArgsWithoutScriptName
 		], { stdio: 'inherit' }
 	);
 };
