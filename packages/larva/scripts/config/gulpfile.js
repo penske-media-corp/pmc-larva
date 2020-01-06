@@ -8,10 +8,11 @@ const gulpStylelint = require( 'gulp-stylelint' );
 const clean = require( 'gulp-clean' );
 const globImporter = require( 'node-sass-glob-importer' );
 
+const stylelintConfig = require( './stylelint.config' );
 const getConfig = require( '../../').getConfig;
+
 const chunks = getConfig( 'chunks' );
-const stylelintConfigPath = path.join( __dirname, './stylelint.config.js' );
-console.log( stylelintConfigPath );
+
 
 const sassOpts = {
 	includePaths: [
@@ -19,6 +20,16 @@ const sassOpts = {
 		path.resolve( './src/scss' )
 	],
 	importer: globImporter()
+};
+
+const stylelintOpts = {
+	failAfterError: false,
+	config: stylelintConfig,
+	reporters: [
+		{
+			formatter: 'string',
+			console: true
+		}]
 };
 
 const cssDest = './build/css/';
@@ -37,38 +48,21 @@ function clean_css() {
 }
 
 function stylelint( file ) {
-	gulp.src( file ).pipe( gulpStylelint( {
-		failAfterError: false,
-		config: stylelintConfigPath,
-		reporters: [
-			{
-				formatter: 'string',
-				console: true
-			}]
-	} ) );
+	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
 }
 
-function entries( done ) {
-	gulp.src( fullChunks ).
-		pipe( gulpStylelint( {
-			failAfterError: false,
-			config: stylelintConfigPath,
-			reporters: [
-				{
-					formatter: 'string',
-					console: true
-				}]
-		} ) ).
-		pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
-		pipe( postcss( [cssnano()] ) ).
-		pipe( gulp.dest( cssDest ) );
+function buildScss( done ) {
+	gulp.src( fullChunks )
+		.pipe( gulpStylelint( stylelintOpts ) )
+		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
+		.pipe( gulp.dest( cssDest ) );
 		done();
 }
 
 exports['dev-scss'] = function() {
 
 	// Lint changed file.
-	gulp.watch( './src/**/*.scss', entries ).on( 'change', function( file ) {
+	gulp.watch( './src/**/*.scss', buildScss ).on( 'change', function( file ) {
 		stylelint( file );
 	} );
 };
@@ -76,9 +70,20 @@ exports['dev-scss'] = function() {
 // Combine SVG sprites into one.
 exports.sprite = function( done ) {
 	gulp.src( './build/**/*.defs.svg' )
-	.pipe( concat( 'svg-sprite.svg' ) )
-	.pipe( gulp.dest( './build/svg/' ) );
+		.pipe( concat( 'svg-sprite.svg' ) )
+		.pipe( gulp.dest( './build/svg/' ) );
 	done();
 };
 
-exports['prod-scss'] = entries;
+// Quickly build SCSS.
+exports['build-scss'] = buildScss;
+
+// Run all commands associated with SCSS.
+exports['prod-scss'] = function( done ) {
+	stylelint( './src/**/*.scss' );
+	buildScss( () => {
+		gulp.src( './build/**/*.css' ).pipe( postcss( [cssnano()] ) );
+		done();
+	});
+	
+};
