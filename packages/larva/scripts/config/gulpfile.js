@@ -3,9 +3,7 @@ const postcss = require( 'gulp-postcss' );
 const cssnano = require( 'cssnano' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
-const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
-const clean = require( 'gulp-clean' );
 const globImporter = require( 'node-sass-glob-importer' );
 
 const stylelintConfig = require( './stylelint.config' );
@@ -79,12 +77,4 @@ exports['prod-scss'] = ( done ) => {
 	buildScss( () => {
 		processCss( done );
 	} );
-};
-
-// Combine SVG sprites into one.
-exports.sprite = ( done ) => {
-	gulp.src( './build/**/*.defs.svg' )
-		.pipe( concat( 'svg-sprite.svg' ) )
-		.pipe( gulp.dest( './build/svg/' ) );
-	done();
 };
