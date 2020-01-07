@@ -1,0 +1,19 @@
+@import 'setup';
+
+@mixin _a-hidden {
+	// stylelint-disable declaration-no-important
+	display: none !important;
+	// stylelint-enable declaration-no-important
+	height: 0;
+	width: 0;
+}
+
+.lrv-a-hidden {
+	@include _a-hidden;
+}
+
+.lrv-a-hidden\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		@include _a-hidden;
+	}
+}
