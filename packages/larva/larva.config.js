@@ -33,9 +33,6 @@ module.exports = {
 			'footer-menus',
 			'footer-social',
 			'footer-tip'
-		],
-		variants: [
-			'card'
 		]
 	}
 };

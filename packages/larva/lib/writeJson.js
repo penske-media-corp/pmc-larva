@@ -19,45 +19,40 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 
 	modulesArr.forEach( ( moduleName ) => {
 
-		let moduleData, jsonDestPath;
+		let startPath = sourceDirectory + '/modules/' + moduleName;
 
-		// All modules have prototypes
-		let moduleVariants = [
-			'prototype'
-		];
+		if ( fs.existsSync( startPath ) ) {
+			let files = fs.readdirSync( startPath );
 
-		// If variant file exists, add it to the array of moduleVariants to be written to JSON.
-		if ( undefined !== patternConfig.variants ) {
-			patternConfig.variants.forEach( ( variant ) => {
-	
-				let variantFileLocation = path.join( sourceDirectory, `modules/${moduleName}/${moduleName}.${variant}.js` );
-	
-				if ( fs.existsSync( variantFileLocation ) ) {
-					moduleVariants.push( variant );
+			files.forEach( ( file ) => {
+
+				let variant, moduleData, jsonDestPath;
+
+				if ( /.+\.js$/.test( file ) ) {
+					fileParts = file.split( /\.(.+)/ );
+					variant  = fileParts[1].slice( 0, -3 );
+
+					moduleData = getPatternData( sourceDirectory, {
+						type: 'modules',
+						name: moduleName,
+						variant: variant
+					} );
+
+					jsonDestPath = path.resolve( patternConfig.projectPatternsDir, '../../build/json/modules/' + moduleName + '.' + variant + '.json' );
+
+					// If JSON data and module prototype are the same, pass, otherwise write the data to file
+					if ( fs.existsSync( jsonDestPath ) && JSON.stringify( require( jsonDestPath ) ) === JSON.stringify( moduleData ) ) {
+						console.log( chalk.grey( `No updates in ${moduleName}.${variant}` ) );
+					} else {
+						if ( undefined !== moduleData ) {
+							writeJsonToFile( jsonDestPath, moduleData );
+							console.log( chalk.green.bold( `Wrote JSON for ${moduleName}.${variant}` ) );
+						}
+					}
 				}
-			});
+
+			} );
 		}
 
-		moduleVariants.forEach( ( variant ) => {
-
-			moduleData = getPatternData( sourceDirectory, {
-				type: 'modules',
-				name: moduleName,
-				variant: variant
-			} );
-
-			jsonDestPath = path.resolve( patternConfig.projectPatternsDir, '../../build/json/modules/' + moduleName + '.' + variant + '.json' );
-
-			// If JSON data and module prototype are the same, pass, otherwise write the data to file
-			if( fs.existsSync( jsonDestPath ) && JSON.stringify( require( jsonDestPath ) ) === JSON.stringify( moduleData ) ) {
-				console.log( chalk.grey( `No updates in ${moduleName}.${variant}` ) );
-			} else {
-				if ( undefined !== moduleData ) {
-					writeJsonToFile( jsonDestPath, moduleData );
-					console.log( chalk.green.bold( `Wrote JSON for ${moduleName}.${variant}` ) );
-				}
-			}
-
-		});
-	});
+	} );
 };
