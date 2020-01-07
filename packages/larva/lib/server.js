@@ -1,15 +1,20 @@
-const { TwingEnvironment, TwingLoaderFilesystem, TwingLoaderArray, TwingLoaderChain, TwingFilter } = require('twing');
 const path = require( 'path' );
 const express = require('express');
 const marked = require( 'marked' );
 
-const app = express();
-const port = process.env.NODE_PORT || 3000;
+const { 
+	TwingEnvironment,
+	TwingLoaderFilesystem,
+	TwingFilter
+} = require('twing');
 
 const getAppConfiguration = require( './utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
 const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
+
+const app = express();
+const port = process.env.NODE_PORT || 3000;
 
 const appConfiguration = getAppConfiguration( 'patterns' );
 const twigPaths = getPatternPathsToLoad( appConfiguration );
@@ -41,7 +46,7 @@ let patterns = {
 };
 
 app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
-app.use( '/static' , express.static( path.join( appConfiguration.larvaPatternsDir, '../static' ) ) );
+app.use( '/static/' , express.static( path.join( __dirname, '../build' ) ) );
 
 if( appConfiguration.larvaPatternsDir ) {
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );

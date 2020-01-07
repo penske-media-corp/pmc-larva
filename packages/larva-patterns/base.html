@@ -15,8 +15,11 @@
 			<link rel="stylesheet" href="/packages/larva-css/build/css/js.common.async.css">
 		{% endblock %}
 
-		<link rel="stylesheet" href="/packages/larva/static/css/base.css">
-		<link rel="stylesheet" href="/packages/larva/static/css/prism.css">
+		<link rel="stylesheet" href="/static/css/common.async.css">
+
+		<style>
+			{{ source('../larva/build/css/common.inline.css' ) }}
+		</style>
 	</head>
 	<body class="lrv-u-margin-a-00">
 
@@ -44,8 +47,7 @@
 
 		{% block scripts %}{% endblock %}
 
-		<script src="/packages/larva/static/js/scripts.js"></script>
-		<script src="/packages/larva/static/js/prism.js"></script>
+		<script src="/packages/larva/build/js/common.js"></script>
 		<script src="/packages/larva-js/build/common.js"></script>
 	</body>
 </html>
