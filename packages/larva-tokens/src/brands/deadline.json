@@ -16,7 +16,7 @@
 			"comment": "Fallback for primary-fancy."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!ELSELL}",
+			"value": "{!EKSELL}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via @font-face."
@@ -28,7 +28,7 @@
 			"comment": "Fallback for secondary-fancy"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "{!HELVETICA}",
+			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family"
 		},

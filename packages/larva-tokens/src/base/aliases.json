@@ -47,7 +47,7 @@
 		"IBM_PLEX_MONO": "'IBM Plex Mono', monospace",
 		"PARA_SUPREME": "'Para Supreme Regular', serif",
 		"GRAPHIK_COND": "'Graphik XX Cond', sans-serif",
-		"BALTO": "'Balto, Helvetica, sans-serif",
-		"ELSELL": "'Eksell, Georgia, serif"
+		"BALTO": "'Balto', Helvetica, sans-serif",
+		"EKSELL": "'Eksell', Georgia, serif"
 	}
 }
