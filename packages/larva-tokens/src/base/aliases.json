@@ -26,6 +26,7 @@
 		"ALICE_BLUE_97": "#F1F7FC",
 		"CERULEAN_47": "#01A5ED",
 		"RED_46": "#D71440",
+		"RED_50": "#920200",
 		"MIRAGE_14": "#1A282F",
 		"ORANGE_54": "#F37021",
 		"YELLOW_48": "#EEE809",
@@ -45,6 +46,8 @@
 		"IBM_PLEX_SERIF": "'IBM Plex Serif', serif",
 		"IBM_PLEX_MONO": "'IBM Plex Mono', monospace",
 		"PARA_SUPREME": "'Para Supreme Regular', serif",
-		"GRAPHIK_COND": "'Graphik XX Cond', sans-serif"
+		"GRAPHIK_COND": "'Graphik XX Cond', sans-serif",
+		"BALTO": "'Balto', Helvetica, sans-serif",
+		"EKSELL": "'Eksell', Georgia, serif"
 	}
 }
