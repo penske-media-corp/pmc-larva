@@ -14,8 +14,8 @@ c_icon_struct.c_icon_classes = 'lrv-u-width-16 lrv-u-height-16';
 for ( let i = 0; i < social_share_primary_items.length; i++ ) {
 	let c_icon_social = clonedeep( c_icon_struct );
 
-	c_icon_social.c_icon_rel_name = platform;
-	c_icon_social.c_icon_name = platform;
+	c_icon_social.c_icon_rel_name = social_share_primary_items[i];
+	c_icon_social.c_icon_name = social_share_primary_items[i];
 
 	if ( 3 < i ) {
 		social_share_primary.push( c_icon_social );
