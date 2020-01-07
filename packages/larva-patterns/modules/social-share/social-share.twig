@@ -6,18 +6,18 @@
 	{% endif %}
 
 	<ul class="lrv-a-unstyle-list lrv-u-flex lrv-u-flex-wrap-wrap {{ social_share_items_classes }}" data-collapsible="collapsed">
-		{% for item in primary %}
+		{% for item in social_share_primary %}
 			<li class="{{ social_share_item_classes }}">
 				{% include "@larva/components/c-icon/c-icon.twig" with item %}
 			</li>
 		{% endfor %}
 
-		{% if secondary %}
+		{% if social_share_secondary %}
 			<li data-collapsible-toggle>
 				{% include "@larva/components/c-icon/c-icon.twig" with plus_icon %}
 			</li>
 
-			{% for item in secondary %}
+			{% for item in social_share_secondary %}
 				<li class="{{ social_share_item_classes }}" data-collapsible-panel>
 					{% include "@larva/components/c-icon/c-icon.twig" with item %}
 				</li>
