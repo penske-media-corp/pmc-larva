@@ -1,6 +1,15 @@
 const path = require( 'path' );
 
 module.exports = {
+	webpack: {
+		aliases: {
+			'@js': path.resolve( './src/js' )
+		},
+		entries: {
+			common: './entries/common.entry.js'
+		}
+	},
+
 	backstop: {
 		// testBaseUrl: 'https://notlaura.com',
 		testBaseUrl: 'http://localhost:3000/larva',
