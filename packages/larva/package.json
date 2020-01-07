@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "update-larva-latest": "npm install --save @penskemediacorp/larva-scss@latest @penskemediacorp/larva-css@latest @penskemediacorp/larva-patterns@latest @penskemediacorp/larva-svg@latest @penskemediacorp/twig-to-php-parser@latest @penskemediacorp/larva-tokens@latest @penskemediacorp/larva-js@latest && npm run prod",
-    "larva": "bin/larva.js server --watch ../larva-patterns -e twig,js,html",
+    "larva": "NODE_PORT=3001 bin/larva.js server --watch ../larva-patterns -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "bin/larva.js prod-scss & bin/larva.js prod-js",
     "prod:scss": "bin/larva.js prod-scss",
@@ -39,6 +39,8 @@
     "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
   },
   "dependencies": {
+	"@babel/core": "^7.7.5",
+	"@babel/preset-env": "^7.7.6",
     "@penskemediacorp/eslint-config": "^2.7.3-alpha.0",
     "@penskemediacorp/larva-css": "^6.9.0-alpha.0",
     "@penskemediacorp/larva-js": "^6.9.0-alpha.0",
@@ -47,7 +49,7 @@
     "@penskemediacorp/larva-svg": "^5.4.1-alpha.0",
     "@penskemediacorp/larva-tokens": "^6.9.0-alpha.0",
     "@penskemediacorp/stylelint-config": "^1.5.3-alpha.0",
-    "@penskemediacorp/twig-to-php-parser": "^6.10.0-alpha.0",
+	"@penskemediacorp/twig-to-php-parser": "^6.10.0-alpha.0",
     "babel-loader": "^8.0.6",
     "chalk": "^2.4.2",
     "clean-webpack-plugin": "^3.0.0",
