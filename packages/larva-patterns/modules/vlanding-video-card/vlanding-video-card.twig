@@ -1,11 +1,11 @@
-{% if o_video_card_permalink_url %}
-<a href="{{ o_video_card_permalink_url }}" class="o-video-card__link" data-video-showcase-trigger="{{ o_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ o_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ o_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ o_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ o_video_card_link_showcase_permalink_data_url }}">
+{% if vlanding_video_card_permalink_url %}
+<a href="{{ vlanding_video_card_permalink_url }}" class="vlanding-video-card__link" data-video-showcase-trigger="{{ vlanding_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ vlanding_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ vlanding_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ vlanding_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ vlanding_video_card_link_showcase_permalink_data_url }}">
 	{% endif %}
 
-	<article class="o-video-card {{ modifier_class }} {{ o_video_card_classes }}" data-video-showcase-player>
+	<article class="vlanding-video-card {{ modifier_class }} {{ vlanding_video_card_classes }}" data-video-showcase-player>
 
-		{% if o_video_card_crop_class %}
-		<div class="{{ o_video_card_crop_class }}" data-video-showcase-active-text="{{ o_video_card_crop_data_attr }}">
+		{% if vlanding_video_card_crop_class %}
+		<div class="{{ vlanding_video_card_crop_class }}" data-video-showcase-active-text="{{ vlanding_video_card_crop_data_attr }}">
 			{% endif %}
 
 			{% if c_lazy_image %}
@@ -14,12 +14,12 @@
 
 			{# TODO: Need c_play_badge #}
 
-			{% if o_video_card_is_player %}
+			{% if vlanding_video_card_is_player %}
 				<iframe hidden frameborder="0" data-video-showcase-iframe></iframe>
 				<div hidden id="jwplayerContainer" data-video-showcase-jwplayer></div>
 			{% endif %}
 
-			{% if o_video_card_crop_class %}
+			{% if vlanding_video_card_crop_class %}
 		</div>
 		{% endif %}
 
@@ -33,13 +33,13 @@
 
 	</article>
 
-	{% if o_video_card_permalink_url %}
+	{% if vlanding_video_card_permalink_url %}
 </a>
 {% endif %}
 
-{% if o_video_card_social_share_markup %}
+{% if vlanding_video_card_social_share_markup %}
 	<div class="lrv-a-hidden" data-video-showcase-trigger-social-share>
-		{{ o_video_card_social_share_markup }}
+		{{ vlanding_video_card_social_share_markup }}
 	</div>
 {% endif %}
 

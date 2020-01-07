@@ -23,7 +23,7 @@ module.exports = {
 	c_tagline: c_tagline,
 	social_share: '', // TODO: Need to work on this.
 	c_heading: c_heading,
-	latest_videos: [
+	v_landing_video_showcase_video_cards: [
 		vlanding_video_card,
 		vlanding_video_card,
 		vlanding_video_card,
