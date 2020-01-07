@@ -15,6 +15,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
+    "update-larva-latest": "npm install --save @penskemediacorp/larva-scss@latest @penskemediacorp/larva-css@latest @penskemediacorp/larva-patterns@latest @penskemediacorp/larva-svg@latest @penskemediacorp/twig-to-php-parser@latest @penskemediacorp/larva-tokens@latest @penskemediacorp/larva-js@latest && npm run prod",
     "larva": "bin/larva.js server --watch ../larva-patterns -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "bin/larva.js prod-scss & bin/larva.js prod-js",
@@ -40,11 +41,11 @@
   "dependencies": {
     "@penskemediacorp/eslint-config": "^2.7.3-alpha.0",
     "@penskemediacorp/larva-css": "^6.8.0-alpha.0",
-    "@penskemediacorp/larva-js": "^6.7.0-alpha.0",
-    "@penskemediacorp/larva-patterns": "^v6.8.0-alpha.0",
+    "@penskemediacorp/larva-js": "^6.8.0-alpha.0",
+    "@penskemediacorp/larva-patterns": "^6.8.0-alpha.0",
     "@penskemediacorp/larva-scss": "^2.12.0-alpha.0",
     "@penskemediacorp/larva-svg": "^5.4.1-alpha.0",
-    "@penskemediacorp/larva-tokens": "^6.7.0-alpha.0",
+    "@penskemediacorp/larva-tokens": "^6.5.0-alpha.0",
     "@penskemediacorp/stylelint-config": "^1.5.3-alpha.0",
     "@penskemediacorp/twig-to-php-parser": "^6.8.0-alpha.0",
     "babel-loader": "^8.0.6",
