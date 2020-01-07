@@ -26,7 +26,7 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 
 			files.forEach( ( file ) => {
 
-				let variant, moduleData, jsonDestPath;
+				let variant, moduleData, jsonDestPath, fileParts;
 
 				if ( /.+\.js$/.test( file ) ) {
 					fileParts = file.split( /\.(.+)/ );
