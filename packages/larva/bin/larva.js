@@ -1,21 +1,25 @@
 #!/usr/bin/env node
 'use strict';
 
+const fs = require( 'fs' );
+const path = require( 'path' );
+const spawn = require( 'cross-spawn' );
 const chalk = require( 'chalk' );
-const args = process.argv.slice(2);
-const getAppConfiguration = require( '../lib/utils/getAppConfiguration' );
-const writeJson = require( '../lib/writeJson' );
-const config = getAppConfiguration( 'patterns' );
 
-switch ( args[0] ) {
-	
-	// larva write-json
-	case 'write-json':
-		
-		// larva write-json larva
-		let fromLarva = args[1] === 'larva' ? true : false;
+const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
+const cliArgs = getArgsFromCli();
+const scriptName = cliArgs[0];
 
-		console.log( chalk.bold( `\n---- ${args[1] || 'Project'} JSON ----\n`) );
+const hasScriptFile = fs.existsSync( path.join( __dirname, '../scripts/' + scriptName + '.js' ) );
 
-		writeJson( config, fromLarva );
+if ( hasScriptFile ) {
+	spawn.sync(
+		'node',
+		[
+			path.join( __dirname, `../scripts/${ scriptName }.js` ),
+			... cliArgs
+		], { stdio: 'inherit' }
+	);
+} else {
+	console.error( chalk.red( `No file found for "${ scriptName }".` ) );
 }
