@@ -5,17 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>LRVA: {{ source }} | {{ name }}</title>
 
-		{% block stylesheets %}
-			<link rel="stylesheet" href="/packages/larva-css/build/css/generic.common.inline.css">
-			<link rel="stylesheet" href="/packages/larva-css/build/css/algorithms.common.inline.css">
-			<link rel="stylesheet" href="/packages/larva-css/build/css/algorithms.common.async.css">
-			<link rel="stylesheet" href="/packages/larva-css/build/css/utilities.common.inline.css">
-			<link rel="stylesheet" href="/packages/larva-css/build/css/utilities.common.async.css">
-			<link rel="stylesheet" href="/packages/larva-css/build/css/js.common.inline.css">
-		{% endblock %}
+		{% block stylesheets %}{% endblock %}
 
-		<link rel="stylesheet" href="/packages/larva/static/css/base.css">
-		<link rel="stylesheet" href="/packages/larva/static/css/prism.css">
+		<link rel="stylesheet" href="/static/css/common.inline.css">
+		<link rel="stylesheet" href="/static/css/common.async.css">
 	</head>
 	<body class="lrv-u-margin-a-00">
 
@@ -29,7 +22,7 @@
 			</div>
 		</main>
 		<br>
-		
+
 		{# Note: Don't write CSS like this in an actual product. #}
 		<div style="position: fixed;
 					bottom: 0;
@@ -43,8 +36,6 @@
 
 		{% block scripts %}{% endblock %}
 
-		<script src="/packages/larva/static/js/scripts.js"></script>
-		<script src="/packages/larva/static/js/prism.js"></script>
-		<script src="/packages/larva-js/build/common.js"></script>
+		<script src="/static/js/common.js"></script>
 	</body>
 </html>

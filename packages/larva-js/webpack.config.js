@@ -1,5 +1,9 @@
 const path = require('path');
 
+const aliases = {
+	'@npm': path.resolve( './node_modules/' ),
+};
+
 module.exports = {
 	entry: './src/common.js',
 	watch: true,
@@ -7,5 +11,8 @@ module.exports = {
 	output: {
 		filename: 'common.js',
 		path: path.resolve(__dirname, 'build')
+	},
+	resolve: {
+		alias: aliases,
 	}
 };

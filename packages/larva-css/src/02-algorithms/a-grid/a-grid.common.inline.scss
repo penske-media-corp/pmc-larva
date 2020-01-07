@@ -45,6 +45,10 @@ $grids: (
 		columns: 3,
 		breakpoint: desktop,
 	),
+	(
+		columns: 2,
+		breakpoint: desktop,
+	),
 );
 
 @include a-grid( $grids );
