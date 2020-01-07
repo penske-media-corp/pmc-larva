@@ -1,3 +1,5 @@
+@import 'setup';
+
 .lrv-u-display-block {
 	display: block;
 }
@@ -16,4 +18,14 @@
 
 .lrv-u-display-none {
 	display: none;
+}
+
+.lrv-u-display-inline-flex {
+	display: inline-flex;
+}
+
+.lrv-u-display-none\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		display: none;
+	}
 }

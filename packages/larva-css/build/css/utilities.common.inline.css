@@ -2,7 +2,7 @@
 
 .lrv-u-align-items-center{align-items:center}.lrv-u-justify-content-center{justify-content:center}.lrv-u-justify-content-space-evenly{justify-content:space-evenly}.lrv-u-justify-content-space-between{justify-content:space-between}
 
-.lrv-u-display-block{display:block}.lrv-u-display-contents{display:contents}.lrv-u-display-inline{display:inline}.lrv-u-display-inline-block{display:inline-block}.lrv-u-display-none{display:none}
+.lrv-u-display-block{display:block}.lrv-u-display-contents{display:contents}.lrv-u-display-inline{display:inline}.lrv-u-display-inline-block{display:inline-block}.lrv-u-display-none{display:none}.lrv-u-display-inline-flex{display:inline-flex}@media (max-width: 47.999rem){.lrv-u-display-none\@mobile-max{display:none}}
 
 .lrv-u-flex{display:flex}@media (min-width: 48rem){.lrv-u-flex\@tablet{display:flex}}.lrv-u-flex-grow-1{flex-grow:1}.lrv-u-flex-shrink-0{flex-shrink:0}.lrv-u-flex-wrap-wrap{flex-wrap:wrap}.lrv-u-flex-direction-column{flex-direction:column}@media (max-width: 47.999rem){.lrv-u-flex-direction-column\@mobile-max{flex-direction:column}}@media (min-width: 48rem){.lrv-u-flex-direction-column\@tablet{flex-direction:column}}
 
