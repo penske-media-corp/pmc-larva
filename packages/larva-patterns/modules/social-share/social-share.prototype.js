@@ -39,5 +39,5 @@ module.exports = {
 	social_share_items_classes: 'lrv-a-space-children--1 lrv-a-space-children-horizontal',
 	social_share_primary: social_share_primary,
 	social_share_secondary: social_share_secondary,
-	plus_icon: c_icon_plus
+	c_icon_plus: c_icon_plus
 };
