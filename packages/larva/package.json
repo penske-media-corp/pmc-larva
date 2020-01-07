@@ -16,7 +16,20 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "larva": "larva server --watch ../larva-patterns -e twig,js,html",
-    "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config"
+    "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
+    "prod": "larva prod-scss & larva prod-js",
+    "prod:scss": "larva prod-scss",
+    "prod:js": "larva prod-js",
+    "dev": "larva dev-js & larva dev-scss",
+    "dev:scss": "larva dev-scss",
+    "dev:js": "larva dev-js",
+    "lint": "larva lint-scss & larva lint-js",
+    "lint:scss": "larva lint-scss",
+    "lint:js": "larva lint-js ./",
+    "lint-fix": "larva lint-scss --fix & npm run lint:js --fix",
+    "lint-fix:scss": "larva lint-scss --fix",
+    "lint-fix:js": "larva lint-js --fix",
+    "write-json": "larva write-json larva && larva write-json"
   },
   "publishConfig": {
     "access": "public"
@@ -26,6 +39,7 @@
   },
   "dependencies": {
     "@penskemediacorp/eslint-config": "^2.7.3-alpha.0",
+    "@penskemediacorp/larva-js": "^6.7.0-alpha.0",
     "@penskemediacorp/larva-patterns": "^6.4.0",
     "@penskemediacorp/stylelint-config": "^1.5.3-alpha.0",
     "babel-loader": "^8.0.6",
@@ -37,6 +51,7 @@
     "eslint-config-wordpress": "^2.0.0",
     "eslint-loader": "^3.0.3",
     "express": "^4.17.1",
+    "flickity": "^2.2.1",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-postcss": "^8.0.0",

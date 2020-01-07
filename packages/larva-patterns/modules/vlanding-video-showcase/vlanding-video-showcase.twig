@@ -14,9 +14,9 @@
 		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
 
 		<div class="vlanding-video-showcase__video-cards // lrv-u-overflow-hidden lrv-a-glue-parent">
-			<ul class="lrv-a-unstyle-list lrv-a-scrollable-grid@desktop-max">
-				{% for item in v_landing_video_showcase_video_cards %}
-					<li>
+			<ul class="lrv-a-unstyle-list lrv-a-scrollable-grid@desktop-max {{ vlanding_video_showcase_video_cards_classes }}">
+				{% for item in vlanding_video_showcase_video_cards %}
+					<li class="{{ vlanding_video_showcase_video_cards_item_classes }}">
 						{% include "@larva/modules/vlanding-video-card/vlanding-video-card.twig" with item %}
 					</li>
 				{% endfor %}

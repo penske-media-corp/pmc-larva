@@ -23,7 +23,9 @@ module.exports = {
 	c_tagline: c_tagline,
 	social_share: '', // TODO: Need to work on this.
 	c_heading: c_heading,
-	v_landing_video_showcase_video_cards: [
+	vlanding_video_showcase_video_cards_classes: 'js-Flickity js-Flickity--fifths js-Flickity--isContained',
+	vlanding_video_showcase_video_cards_item_classes: 'js-Flickity-cell lrv-u-margin-r-1',
+	vlanding_video_showcase_video_cards: [
 		vlanding_video_card,
 		vlanding_video_card,
 		vlanding_video_card,
