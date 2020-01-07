@@ -1,11 +1,11 @@
-<div class="social-share lrv-u-align-items-center lrv-u-flex {{ social_share_classes }}">
+<div class="social-share // lrv-u-align-items-center lrv-u-flex {{ social_share_classes }}">
 	{% if social_share_prefix %}
 		<span class="{{ social_share_prefix_classes }}">
 			{{ social_share_prefix_text }}
 		</span>
 	{% endif %}
 
-	<ul class="lrv-a-unstyle-list lrv-u-flex u-flex-wrap-wrap {{ social_share_items_classes }}" data-collapsible="collapsed">
+	<ul class="lrv-a-unstyle-list lrv-u-flex lrv-u-flex-wrap-wrap {{ social_share_items_classes }}" data-collapsible="collapsed">
 		{% for item in primary %}
 			<li class="{{ social_share_item_classes }}">
 				{% include "@larva/components/c-icon/c-icon.twig" with item %}
