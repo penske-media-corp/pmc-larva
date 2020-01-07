@@ -1,4 +1,8 @@
+import initFlickity from '@larva-js/interface/Flickity';
+
 window.addEventListener( 'DOMContentLoaded', function() {
+
+	initFlickity();
 
 	document.querySelector( '.js-hide-button' ).addEventListener( 'click', function( e ) {
 
