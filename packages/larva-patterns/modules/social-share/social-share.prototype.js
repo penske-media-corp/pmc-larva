@@ -1,21 +1,30 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_icon_prototype = require( '../../components/c-icon/c-icon.prototype' );
-const social_share_primary_items = [ 'facebook', 'twitter', 'pinterest', 'tumblr' ];
-const social_share_secondary_items = [ 'reddit', 'linkedin', 'print' ];
+const c_icon = clonedeep( require( '../../components/c-icon/c-icon.prototype' ) );
+const social_share_primary_items = [ 'facebook', 'twitter', 'pinterest', 'tumblr', 'reddit', 'linkedin', 'print' ];
 
 const social_share_primary = [];
 const social_share_secondary = [];
 
+const c_icon_struct = clonedeep( c_icon );
+c_icon_struct.c_icon_link_classes = 'lrv-a-unstyle-link lrv-u-display-block lrv-u-display-inline-flex';
+c_icon_struct.c_icon_url = '#';
+c_icon_struct.c_icon_classes = 'lrv-u-width-16 lrv-u-height-16';
+
 for ( let i = 0; i < social_share_primary_items.length; i++ ) {
-	social_share_primary.push( generateSocialShareItemWithUtiliti( social_share_primary_items[i] ) );
+	let c_icon_social = clonedeep( c_icon_struct );
+
+	c_icon_social.c_icon_rel_name = platform;
+	c_icon_social.c_icon_name = platform;
+
+	if ( 3 < i ) {
+		social_share_primary.push( c_icon_social );
+	} else {
+		social_share_secondary.push( c_icon_social );
+	}
 }
 
-for ( let i = 0; i < social_share_secondary_items.length; i++ ) {
-	social_share_secondary.push( generateSocialShareItemWithUtiliti( social_share_primary_items[i] ) );
-}
-
-const c_icon_plus = clonedeep( c_icon_prototype );
+const c_icon_plus = clonedeep( c_icon );
 c_icon_plus.c_icon_link_classes = 'lrv-u-display-block lrv-u-display-inline-flex lrv-u-color-black';
 c_icon_plus.c_icon_url = '#';
 c_icon_plus.c_icon_rel_name = 'plus';
@@ -32,15 +41,3 @@ module.exports = {
 	social_share_secondary: social_share_secondary,
 	plus_icon: c_icon_plus
 };
-
-function generateSocialShareItemWithUtiliti( platform ) {
-	let c_icon = clonedeep( c_icon_prototype );
-
-	c_icon.c_icon_link_classes = 'lrv-a-unstyle-link lrv-u-display-block lrv-u-display-inline-flex';
-	c_icon.c_icon_url = '#';
-	c_icon.c_icon_rel_name = platform;
-	c_icon.c_icon_name = platform;
-	c_icon.c_icon_classes = 'lrv-u-width-16 lrv-u-height-16';
-
-	return c_icon;
-}
