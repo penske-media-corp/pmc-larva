@@ -1,0 +1,75 @@
+@import 'setup';
+@import "partials/flickity";
+
+// TODO: break these up into smaller utilities
+.js-Flickity--fifths .js-Flickity-cell {
+	width: 35%;
+
+	@include pmc-breakpoint( desktop ) {
+		width: 20%;
+	}
+}
+
+.js-Flickity--100p .js-Flickity-cell {
+	width: 100%;
+}
+
+// TODO: Update class name, enable js-Flickity on profile page as well.
+.js-Flickity--profile .js-Flickity-cell {
+	width: 75%;
+
+	@include pmc-breakpoint( desktop ) {
+		width: 50%;
+	}
+
+	@include pmc-breakpoint( desktop-xl ) {
+		width: 33.3%;
+	}
+}
+
+.js-Flickity--thirds .js-Flickity-cell {
+	width: 66%;
+	overflow: visible;
+}
+
+.js-Flickity--enlarge-selected .js-Flickity-cell {
+	transform: scale(0.8);
+	transition: $transition-transform transform;
+	transform-origin: center center;
+}
+
+.js-Flickity--enlarge-selected .js-Flickity-cell.is-selected { // stylelint-disable-line selector-max-class
+	transform: scale(1);
+	z-index: 9;
+	transform-origin: center center;
+}
+
+.js-Flickity--nav-top-right .flickity-prev-next-button {
+	--button-size: 0; // Hide arrows for mobile screen.
+
+	top: calc( var( --button-size ) * -1 );
+	height: var( --button-size );
+	width: var( --button-size );
+
+	@include pmc-breakpoint( tablet ) {
+		--button-size: #{pmc-rem(44)};
+	}
+}
+
+.js-Flickity--nav-top-right .flickity-prev-next-button.previous { // stylelint-disable-line selector-max-class
+	left: calc( 100% - ( var( --button-size ) * 2.5 ) );
+}
+
+.js-Flickity--bordered-buttons .flickity-button {
+	border: 1px solid map-get( $TOKENS-MAP, color-black );
+}
+
+.js-Flickity--bordered-buttons .flickity-icon {
+	fill: map-get( $TOKENS-MAP, color-black );
+}
+
+.js-Flickity--hide-nav\@mobile-max .flickity-button {
+	@include pmc-breakpoint( mobile-max ) {
+		display: none;
+	}
+}
