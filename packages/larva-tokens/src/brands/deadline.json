@@ -36,6 +36,11 @@
 			"value": "{!RED_50}",
 			"type": "color",
 			"category": "background-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_50}",
+			"type": "color",
+			"category": "text-color"
 		}
 	}
 }
