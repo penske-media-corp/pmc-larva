@@ -1,6 +1,6 @@
 const assert = require( 'assert' );
-( path = require( 'path' ) );
-( fs = require( 'fs' ) );
+const path = require( 'path' );
+const fs = require( 'fs' );
 
 const parserMethods = require( '../index.js' ).methods;
 const exec = require( 'child_process' ).exec;
