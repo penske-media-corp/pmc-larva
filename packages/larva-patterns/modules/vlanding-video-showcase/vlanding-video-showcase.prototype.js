@@ -5,8 +5,9 @@ const social_share = clonedeep( require( '../../modules/social-share/social-shar
 const c_title = clonedeep( require( '../../components/c-title/c-title.prototype' ) );
 const c_tagline = clonedeep( require( '../../components/c-tagline/c-tagline.prototype' ) );
 const c_heading = clonedeep( require( '../../components/c-heading/c-heading.prototype' ) );
-
+const vlanding_video_showcase_card = clonedeep( vlanding_video_card );
 vlanding_video_card.c_title = false;
+vlanding_video_card.c_span = false;
 
 c_title.c_title_classes = 'lrv-u-font-size-24 lrv-u-font-size-32@desktop lrv-u-padding-b-1';
 c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-color-black';
@@ -26,11 +27,11 @@ module.exports = {
 	vlanding_video_showcase_video_cards_classes: 'js-Flickity js-Flickity--fifths js-Flickity--isContained',
 	vlanding_video_showcase_video_cards_item_classes: 'js-Flickity-cell lrv-u-margin-r-1',
 	vlanding_video_showcase_video_cards: [
-		vlanding_video_card,
-		vlanding_video_card,
-		vlanding_video_card,
-		vlanding_video_card,
-		vlanding_video_card,
-		vlanding_video_card
+		vlanding_video_showcase_card,
+		vlanding_video_showcase_card,
+		vlanding_video_showcase_card,
+		vlanding_video_showcase_card,
+		vlanding_video_showcase_card,
+		vlanding_video_showcase_card
 	]
 };
