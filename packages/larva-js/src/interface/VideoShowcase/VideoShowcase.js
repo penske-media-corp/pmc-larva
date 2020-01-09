@@ -63,6 +63,7 @@ export default class VideoShowcase {
 		/**
 		 * Player UI.
 		 *
+		 * Note: the title and dek are using class selectors so they can be added to existing patterns.
 		 *
 		 * @type {object}
 		 * @property {element} title - A anchor element that will receive both a permalink and heading text.
