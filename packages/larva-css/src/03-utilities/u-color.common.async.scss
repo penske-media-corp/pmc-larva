@@ -26,3 +26,8 @@ $colors: (
 .lrv-u-color-grey-dark\:hover:hover {
 	color: map-get( $TOKENS-MAP, color-grey-dark );
 }
+
+// TODO: This value should be moved to come from a map in settings
+.lrv-u-color-brand-primary-dark\:hover:hover {
+	color: darken( map-get( $TOKENS-MAP, color-brand-primary ), 15% );
+}
