@@ -9,13 +9,15 @@ import initCollapsibles from '../Collapsible';
  * version 2 of its descendent, Video Showcase, that was first written in Robb Report to support
  * Youtube only. This is a more state-forward approach of VideoShowcase that also supports JWPlayer.
  *
- * Required selectors:
+ * Important notes for using this pattern from Larva:
  * 
- * 'data-video-showcase-trigger',
- * 'data-video-showcase-title',
- * 'data-video-showcase-dek',
- * 'data-video-showcase-permalink',
- * 'data-video-showcase-type',
+ * This JS is intended to fit directly with the vlanding modules in larva-patterns. Refer to 
+ * vlanding-video-showcase in the Larva server and reference the UI there if you want to use this
+ * outside of Larva.
+ * 
+ * There is also required CSS for this module in larva-css/src/04-js/js-VideoShowcase.js. Import
+ * that into your CSS build along with this JS file, and initialize the module with the 
+ * initVideoShowcase function in this directory's index.js.
  */
 
 export default class VideoShowcase {
@@ -69,9 +71,9 @@ export default class VideoShowcase {
 		 * @property {element} social - The main social share container that will be replaced with social share from triggers.
 		 */
 		this.playerUI = {
-			heading: el.querySelector( '[data-video-showcase-player-heading]' ),
+			heading: el.querySelector( '.js-VideoShowcase-title' ),
 			sponsoredBadge: el.querySelector( '.js-video-showcase-sponsored-badge' ),
-			dek: el.querySelector( '[data-video-showcase-player-dek]' ),
+			dek: el.querySelector( '.js-VideoShowcase-dek' ),
 			iframe: el.querySelector( '[data-video-showcase-iframe]' ),
 			jwplayerContainer: el.querySelector( '#jwplayerContainer' ),
 			social: el.querySelector( '[data-video-showcase-player-social-share]' )
@@ -94,7 +96,7 @@ export default class VideoShowcase {
 			this.state.hasSocialShare = true;
 		}
 	}
- 
+
 	/**
 	 * Get Player Card Data.
 	 *
@@ -139,6 +141,7 @@ export default class VideoShowcase {
 	 */
 
 	updatePlayerCardData( el, data ) {
+		console.log( data );
 
 		if ( data.title ) {
 			this.playerUI.heading.innerText = data.title;
@@ -218,7 +221,7 @@ export default class VideoShowcase {
 	playJW( jwplayerUrl ) {
 		/* eslint-disable */
 		let custom_jwplayer = '';
-		
+
 		this.playerUI.jwplayerContainer.removeAttribute( 'hidden' );
 
 		if ( window.jwplayer ) {
