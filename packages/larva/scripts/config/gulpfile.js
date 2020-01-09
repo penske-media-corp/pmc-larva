@@ -1,5 +1,6 @@
 const gulp = require( 'gulp' );
 const postcss = require( 'gulp-postcss' );
+const through2 = require( 'through2' );
 const cssnano = require( 'cssnano' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
@@ -8,9 +9,10 @@ const globImporter = require( 'node-sass-glob-importer' );
 
 const stylelintConfig = require( './stylelint.config' );
 
-/*
-* Config
-*/
+
+/**************
+Config
+**************/
 
 const sassOpts = {
 	includePaths: [
@@ -33,33 +35,48 @@ const stylelintOpts = {
 const cssDest = './build/css/';
 
 
-/*
-* Functions
-*/
+
+/**************
+Functions
+**************/
 
 const stylelint = ( file ) => {
 	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
 };
 
-const buildScss = ( done ) => {
+// We need an empty stream for the else condition when 
+// minifying CSS below. Reference: https://stackoverflow.com/a/30000562
+const emptyStream = () => {
+	var pass = through2.obj();
+
+	process.nextTick(pass.end.bind(pass));
+	return pass;
+}
+
+/**
+ * Build CSS
+ * 
+ * Used for both prod and dev commands.
+ * 
+ * Consider updating the name 'minify' to 'post' if/when
+ * more Post CSS functionality is added.
+ * 
+ * @param {function} done 
+ * @param {boolean} minify Run post CSS and minify output.
+ */
+const buildScss = ( done, minify = false ) => {
 	gulp.src( './entries/*.scss' )
 		.pipe( gulpStylelint( stylelintOpts ) )
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
-		.pipe( gulp.dest( cssDest ) );
-	done();
-};
-
-const processCss = ( done ) => {
-	gulp.src( cssDest + '*.css' )
-		.pipe( postcss( [ cssnano() ] ) )
+		.pipe( minify ? postcss( [ cssnano() ] ) : emptyStream() )
 		.pipe( gulp.dest( cssDest ) );
 	done();
 };
 
 
-/*
-* Tasks
-*/
+/**************
+Tasks
+***************/
 
 // Watch the changed file, compile and lint when changed.
 exports['dev-scss'] = () => {
@@ -74,7 +91,5 @@ exports['build-scss'] = buildScss;
 // Run PostCSS on CSS.
 exports['prod-scss'] = ( done ) => {
 	stylelint( './src/**/*.scss' );
-	buildScss( () => {
-		processCss( done );
-	} );
+	buildScss( done, true );
 };
