@@ -1,8 +1,10 @@
 import initFlickity from '@larva-js/interface/Flickity';
+import initVideoShowcase from '@larva-js/interface/VideoShowcase';
 
 window.addEventListener( 'DOMContentLoaded', function() {
 
 	initFlickity();
+	initVideoShowcase();
 
 	document.querySelector( '.js-hide-button' ).addEventListener( 'click', function( e ) {
 

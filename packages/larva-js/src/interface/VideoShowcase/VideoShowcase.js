@@ -1,5 +1,5 @@
-import { delegateEvent } from '@js/utilities/dom';
-import Collapsible from '@js/interface/Collapsible/Collapsible';
+import { delegateEvent } from '../../utils/dom';
+import initCollapsibles from '../Collapsible';
 
 /**
  *
@@ -9,6 +9,13 @@ import Collapsible from '@js/interface/Collapsible/Collapsible';
  * version 2 of its descendent, Video Showcase, that was first written in Robb Report to support
  * Youtube only. This is a more state-forward approach of VideoShowcase that also supports JWPlayer.
  *
+ * Required selectors:
+ * 
+ * 'data-video-showcase-trigger',
+ * 'data-video-showcase-title',
+ * 'data-video-showcase-dek',
+ * 'data-video-showcase-permalink',
+ * 'data-video-showcase-type',
  */
 
 export default class VideoShowcase {
@@ -87,7 +94,7 @@ export default class VideoShowcase {
 			this.state.hasSocialShare = true;
 		}
 	}
-
+ 
 	/**
 	 * Get Player Card Data.
 	 *
@@ -164,11 +171,7 @@ export default class VideoShowcase {
 		// NOTE: html comes from JS template with escaped data.
 		this.playerUI.social.insertAdjacentHTML( 'beforeend', html );
 
-		this.initCollapsible( this.playerUI.social.querySelector( '[data-collapsible]' ) );
-	}
-
-	initCollapsible( el ) {
-		el.pmcCollapsible = new Collapsible( el );
+		initCollapsibles();
 	}
 
 	/**

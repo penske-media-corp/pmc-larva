@@ -5,7 +5,10 @@ const social_share = clonedeep( require( '../../modules/social-share/social-shar
 const c_title = clonedeep( require( '../../components/c-title/c-title.prototype' ) );
 const c_tagline = clonedeep( require( '../../components/c-tagline/c-tagline.prototype' ) );
 const c_heading = clonedeep( require( '../../components/c-heading/c-heading.prototype' ) );
+
+const vlanding_video_card_player = clonedeep( vlanding_video_card );
 const vlanding_video_showcase_card = clonedeep( vlanding_video_card );
+
 vlanding_video_card.c_title = false;
 vlanding_video_card.c_span = false;
 
@@ -18,8 +21,12 @@ c_tagline.c_tagline_classes = 'lrv-u-color-grey-dark lrv-u-margin-t-00 lrv-a-hid
 c_heading.c_heading_text = 'The Latest Videos';
 c_heading.c_heading_classes = 'lrv-u-font-size-18 lrv-u-font-size-24@desktop lrv-u-font-size-28@desktop-xl lrv-u-border-b-1 lrv-u-border-color-grey-light lrv-u-padding-b-050 lrv-u-margin-tb-1';
 
+vlanding_video_card_player.vlanding_video_card_is_player = true;
+vlanding_video_card_player.c_lazy_image.c_lazy_image_crop_class = '';
+vlanding_video_card_player.vlanding_video_card_crop_class = 'lrv-a-crop-16x9';
+
 module.exports = {
-	vlanding_video_card: vlanding_video_card,
+	vlanding_video_card_player: vlanding_video_card_player,
 	c_title: c_title,
 	c_tagline: c_tagline,
 	social_share: social_share,

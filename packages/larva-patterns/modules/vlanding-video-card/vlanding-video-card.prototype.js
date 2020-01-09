@@ -6,8 +6,8 @@ const c_span = clonedeep( require( './../../components/c-span/c-span.prototype' 
 
 module.exports = {
 	vlanding_video_card_permalink_url: "#",
-	vlanding_video_card_link_showcase_trigger_data_attr: '',
-	vlanding_video_card_link_showcase_type_data_attr: '',
+	vlanding_video_card_link_showcase_trigger_data_attr: 'x3HbbzHK5Mc',
+	vlanding_video_card_link_showcase_type_data_attr: 'youtube',
 	vlanding_video_card_link_showcase_dek_data_attr: '',
 	vlanding_video_card_link_showcase_title_data_attr: '',
 	vlanding_video_card_link_showcase_permalink_data_url: '',

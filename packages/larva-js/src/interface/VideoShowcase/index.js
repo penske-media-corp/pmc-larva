@@ -1,4 +1,3 @@
-import './style.scss';
 import VideoShowcase from './VideoShowcase';
 
 export default function initVideoShowcase() {
