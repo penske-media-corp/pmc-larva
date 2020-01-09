@@ -9,8 +9,14 @@ const c_heading = clonedeep( require( '../../components/c-heading/c-heading.prot
 const vlanding_video_card_player = clonedeep( vlanding_video_card );
 const vlanding_video_showcase_card = clonedeep( vlanding_video_card );
 
-vlanding_video_card.c_title = false;
-vlanding_video_card.c_span = false;
+vlanding_video_card_player.c_title = false;
+vlanding_video_card_player.c_span = false;
+
+// Move the crop class to the card so the iframe will position relative to that
+// instead of c-lazy-image
+vlanding_video_card_player.vlanding_video_card_is_player = true;
+vlanding_video_card_player.c_lazy_image.c_lazy_image_crop_class = '';
+vlanding_video_card_player.vlanding_video_card_crop_class = 'lrv-a-crop-16x9';
 
 c_title.c_title_classes = 'lrv-u-font-size-24 lrv-u-font-size-32@desktop lrv-u-padding-b-1';
 c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-color-black';
@@ -21,9 +27,9 @@ c_tagline.c_tagline_classes = 'lrv-u-color-grey-dark lrv-u-margin-t-00 lrv-a-hid
 c_heading.c_heading_text = 'The Latest Videos';
 c_heading.c_heading_classes = 'lrv-u-font-size-18 lrv-u-font-size-24@desktop lrv-u-font-size-28@desktop-xl lrv-u-border-b-1 lrv-u-border-color-grey-light lrv-u-padding-b-050 lrv-u-margin-tb-1';
 
-vlanding_video_card_player.vlanding_video_card_is_player = true;
-vlanding_video_card_player.c_lazy_image.c_lazy_image_crop_class = '';
-vlanding_video_card_player.vlanding_video_card_crop_class = 'lrv-a-crop-16x9';
+vlanding_video_showcase_card.vlanding_video_card_link_showcase_trigger_data_attr = '_JFOdYRfqBQ';
+vlanding_video_showcase_card.vlanding_video_card_link_showcase_type_data_attr = 'youtube';
+vlanding_video_showcase_card.c_span = false;
 
 module.exports = {
 	vlanding_video_card_player: vlanding_video_card_player,
