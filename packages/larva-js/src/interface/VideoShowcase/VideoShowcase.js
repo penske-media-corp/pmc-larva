@@ -63,15 +63,16 @@ export default class VideoShowcase {
 		/**
 		 * Player UI.
 		 *
+		 *
 		 * @type {object}
-		 * @property {element} heading - A anchor element that will receive both a permalink and heading text.
+		 * @property {element} title - A anchor element that will receive both a permalink and heading text.
 		 * @property {element} dek - An element containing a direct child paragraph that will support the dek text.
 		 * @property {element} iframe - The iframe that will recieve an src when a trigger with the Youtube video type is clicked.
 		 * @property {element} jwplayerContainer - The placeholder element where JWPlayer will be applied.
 		 * @property {element} social - The main social share container that will be replaced with social share from triggers.
 		 */
 		this.playerUI = {
-			heading: el.querySelector( '.js-VideoShowcase-title' ),
+			title: el.querySelector( '.js-VideoShowcase-title' ),
 			sponsoredBadge: el.querySelector( '.js-video-showcase-sponsored-badge' ),
 			dek: el.querySelector( '.js-VideoShowcase-dek' ),
 			iframe: el.querySelector( '[data-video-showcase-iframe]' ),
@@ -144,11 +145,11 @@ export default class VideoShowcase {
 		console.log( data );
 
 		if ( data.title ) {
-			this.playerUI.heading.innerText = data.title;
+			this.playerUI.title.innerText = data.title;
 		}
 
 		if ( data.permalink ) {
-			this.playerUI.heading.setAttribute( 'href', data.permalink );
+			this.playerUI.title.setAttribute( 'href', data.permalink );
 		}
 
 		if ( data.dek ) {
@@ -298,7 +299,7 @@ export default class VideoShowcase {
 	/**
 	 * Update the UI.
 	 *
-	 * Replace the heading and dek elements and mark the active trigger.
+	 * Replace the title and dek elements and mark the active trigger.
 	 *
 	 * @param {string} id - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
 	 */
