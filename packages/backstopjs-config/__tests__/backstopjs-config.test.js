@@ -1,5 +1,4 @@
 const assert = require( 'assert' );
-const path = require( 'path' );
 const getScenarios = require( '../lib/getScenarios' );
 const backstopUtils = require( '../lib/utils' );
 
@@ -28,10 +27,9 @@ const expectations = {
 };
 
 // Basically what happens in index.js
-const scenarios = getScenarios( appConfiguration.testBaseUrl, appConfiguration.testPaths, backstopUtils.prepareTestSelectors( null ), {} );
 
 describe( 'url handling for backstop command', function() {
-
+	
 	it( 'overrides the configuration url with a CLI argument', () => {
 		assert.equal( backstopUtils.maybeUseCliUrl( processMocker.argvWithUrl, appConfiguration.testBaseUrl ), expectations.url );
 	});
@@ -41,11 +39,26 @@ describe( 'url handling for backstop command', function() {
 	});
 
 	it( 'returns a testPaths url if there are no larva modules', () => {
+		const scenarios = getScenarios( 
+			appConfiguration.testBaseUrl, 
+			appConfiguration.testPaths, 
+			backstopUtils.prepareTestSelectors( null ), 
+			{} );
 
 		// Remove larvaModules to test plain URLs
 		delete appConfiguration.larvaModules;
 
 		assert.equal( appConfiguration.testBaseUrl + appConfiguration.testPaths[0], scenarios[0].url );
+	});
+
+	it( 'second scenario has a selector', () => {
+		const scenarios = getScenarios( 
+			appConfiguration.testBaseUrl, 
+			appConfiguration.testPaths, 
+			backstopUtils.prepareTestSelectors( null ), 
+			{} );
+
+		assert.equal( scenarios[1].selectors[0], 'document' );
 	});
 
 });
