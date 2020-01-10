@@ -13,11 +13,14 @@ vlanding_video_showcase_card.c_title.c_title_url = false;
 vlanding_video_showcase_card.c_title.c_title_classes = 'lrv-u-color-black lrv-u-font-size-14 lrv-u-font-weight-normal lrv-u-padding-t-050';
 vlanding_video_showcase_card.c_title.c_title_link_classes = 'lrv-u-color-black';
 
+vlanding_video_showcase_card.c_span.c_span_classes += ' lrv-u-display-block lrv-u-padding-b-00 lrv-u-padding-t-050 lrv-u-font-size-12 lrv-u-font-weight-normal';
+
 c_title.c_title_classes = 'lrv-u-font-size-24 lrv-u-font-size-32@desktop lrv-u-padding-b-1';
 c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-color-black';
 c_title.c_title_text = 'Bon Iger: Roseanne is Cancelled and I\'m Like Crying so Hard';
 
 c_tagline.c_tagline_classes = 'lrv-u-color-grey-dark lrv-u-margin-t-00 lrv-a-hidden@mobile-max';
+c_tagline.c_tagline_data_attr = 'data-video-showcase-player-dek';
 
 c_heading.c_heading_text = 'The Latest Videos';
 c_heading.c_heading_classes = 'lrv-u-font-size-18 lrv-u-font-size-24@desktop lrv-u-font-size-28@desktop-xl lrv-u-border-b-1 lrv-u-border-color-grey-light lrv-u-padding-b-050 lrv-u-margin-tb-1';
