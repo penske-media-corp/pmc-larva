@@ -1,4 +1,4 @@
-# Larva JS
+# larva-js
 
 This package contains JavaScript modules that are intended to be used in conjunction with markup from larva-patterns and CSS from larva-css. It is separated into its own package in order to maintain a separation of concerns, and so that it can potentially be used outside of Larva, if required.
 
@@ -16,17 +16,17 @@ For both authoring and usage notes regarding each of the above categories, refer
 
 ## Overview of Functionality
 
-There is no functionality directly provided by this package. Consuming projects must import the desired JavaScript into their build step, and initialize it using the provided functions.
+There is no functionality directly provided by this package. Consuming projects must import the desired JavaScript into their build step, and initialize it using functionality provided by each JS module. 
 
-In general, this would be done as follows:
+**Refer to the larva-js source of the specific JS module you need**, but in general, this would be done as follows:
 
-1. Ensure @penskemediacorp/larva-js is installed. It is included with the main @penskemediacorp/larva package.
-2. Import the initXX function into the project-level asset building e.g. common.entry.js.
-3. Call the initXX function inside an appropriate event listener, such as DOMContentLoaded.
+1. Ensure `@penskemediacorp/larva-js` is installed. It is included with the main `@penskemediacorp/larva` package, so if the project is a Larva project, then this step is complete.
+2. Import the `init{ModuleName}s` function into the project-level asset building e.g. `import init{ModuleName}s from @larva-js/interface/ModuleName;` in common.entry.js.
+3. Call the `init{ModuleName}s()` function inside an appropriate event listener, such as `DOMContentLoaded`.
 
-Refer to individual interface or utility modules for more specific functionality and usage information.
+If you are using UI built with Larva that goes along with the module, then things should "just work".
 
-## Development Setup
+## Contributing to larva-js
 
 Contributions to this repository can be made by using running Larva server inside the `pmc-larva/packages/larva` for a sandbox environment, and linking the larva-js package to test local changes. 
 

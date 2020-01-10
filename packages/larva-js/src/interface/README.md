@@ -1,4 +1,4 @@
-# Larva JS - Interface
+# # larva-js/interface
 
 Each interface module is (well, should be) comprised of:
 
