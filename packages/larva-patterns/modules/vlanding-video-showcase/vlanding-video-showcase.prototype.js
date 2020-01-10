@@ -9,6 +9,10 @@ const vlanding_video_showcase_card = clonedeep( vlanding_video_card );
 vlanding_video_card.c_title = false;
 vlanding_video_card.c_span = false;
 
+vlanding_video_showcase_card.c_title.c_title_url = false;
+vlanding_video_showcase_card.c_title.c_title_classes = 'lrv-u-color-black lrv-u-font-size-14 lrv-u-font-weight-normal lrv-u-padding-t-050';
+vlanding_video_showcase_card.c_title.c_title_link_classes = 'lrv-u-color-black';
+
 c_title.c_title_classes = 'lrv-u-font-size-24 lrv-u-font-size-32@desktop lrv-u-padding-b-1';
 c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-color-black';
 c_title.c_title_text = 'Bon Iger: Roseanne is Cancelled and I\'m Like Crying so Hard';
