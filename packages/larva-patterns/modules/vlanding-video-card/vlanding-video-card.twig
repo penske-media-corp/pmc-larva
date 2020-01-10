@@ -4,9 +4,7 @@
 
 	<article class="vlanding-video-card {{ vlanding_video_card_classes }}" data-video-showcase-player>
 
-		{% if vlanding_video_card_crop_class %}
-		<div class="{{ vlanding_video_card_crop_class }}" data-video-showcase-active-text="{{ vlanding_video_card_crop_data_attr }}">
-			{% endif %}
+		<div class="{{ vlanding_video_card_crop_class }}" data-video-showcase-active-text="{{ vlanding_video_card_active_txt_attr }}">
 
 			{# TODO: Can we use image tag here, we need vlanding_video_card_crop_data_attr option with crop_classs #}
 			{% if c_lazy_image %}
@@ -20,9 +18,7 @@
 				<div hidden id="jwplayerContainer" data-video-showcase-jwplayer></div>
 			{% endif %}
 
-			{% if vlanding_video_card_crop_class %}
 		</div>
-		{% endif %}
 
 		{% if c_span %}
 			{% include "@larva/components/c-span/c-span.twig" with c_span %}

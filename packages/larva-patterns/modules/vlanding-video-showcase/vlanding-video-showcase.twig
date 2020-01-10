@@ -1,14 +1,14 @@
 <section class="vlanding-video-showcase" data-video-showcase="">
-	<div class="lrv-a-wrapper lrv-a-grid lrv-a-cols3@tablet" data-video-showcase>
+	<div class="lrv-a-wrapper lrv-a-grid lrv-a-cols3@tablet">
 		<div class="lrv-a-grid-item lrv-a-span2@tablet">
-			{% include "@larva/modules/vlanding-video-card/vlanding-video-card.twig" with vlanding_video_card %}
+			{% include "@larva/modules/vlanding-video-card/vlanding-video-card.twig" with vlanding_video_card_player %}
 		</div>
 		<div class="lrv-a-grid-item lrv-u-margin-tb-auto lrv-u-margin-tb-auto">
 			{% if c_span %}
 				{% include "@larva/components/c-span/c-span.twig" with c_span %}
 			{% endif %}
 			{% include "@larva/components/c-title/c-title.twig" with c_title %}
-			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+			{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
 			{% include "@larva/modules/social-share/social-share.twig" with social_share %}
 		</div>
 	</div>

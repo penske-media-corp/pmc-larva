@@ -1,5 +1,5 @@
-import { delegateEvent } from '@js/utilities/dom';
-import Collapsible from '@js/interface/Collapsible/Collapsible';
+import { delegateEvent } from '../../utils/dom';
+import initCollapsibles from '../Collapsible';
 
 /**
  *
@@ -9,6 +9,15 @@ import Collapsible from '@js/interface/Collapsible/Collapsible';
  * version 2 of its descendent, Video Showcase, that was first written in Robb Report to support
  * Youtube only. This is a more state-forward approach of VideoShowcase that also supports JWPlayer.
  *
+ * Important notes for using this pattern from Larva:
+ *
+ * This JS is intended to fit directly with the vlanding modules in larva-patterns. Refer to
+ * vlanding-video-showcase in the Larva server and reference the UI there if you want to use this
+ * outside of Larva.
+ *
+ * There is also required CSS for this module in larva-css/src/04-js/js-VideoShowcase.js. Import
+ * that into your CSS build along with this JS file, and initialize the module with the
+ * initVideoShowcase function in this directory's index.js.
  */
 
 export default class VideoShowcase {
@@ -54,17 +63,19 @@ export default class VideoShowcase {
 		/**
 		 * Player UI.
 		 *
+		 * Note: the title and dek are using class selectors so they can be added to existing patterns.
+		 *
 		 * @type {object}
-		 * @property {element} heading - A anchor element that will receive both a permalink and heading text.
+		 * @property {element} title - A anchor element that will receive both a permalink and heading text.
 		 * @property {element} dek - An element containing a direct child paragraph that will support the dek text.
 		 * @property {element} iframe - The iframe that will recieve an src when a trigger with the Youtube video type is clicked.
 		 * @property {element} jwplayerContainer - The placeholder element where JWPlayer will be applied.
 		 * @property {element} social - The main social share container that will be replaced with social share from triggers.
 		 */
 		this.playerUI = {
-			heading: el.querySelector( '[data-video-showcase-player-heading]' ),
+			title: el.querySelector( '.js-VideoShowcase-title' ),
 			sponsoredBadge: el.querySelector( '.js-video-showcase-sponsored-badge' ),
-			dek: el.querySelector( '[data-video-showcase-player-dek]' ),
+			dek: el.querySelector( '.js-VideoShowcase-dek' ),
 			iframe: el.querySelector( '[data-video-showcase-iframe]' ),
 			jwplayerContainer: el.querySelector( '#jwplayerContainer' ),
 			social: el.querySelector( '[data-video-showcase-player-social-share]' )
@@ -132,13 +143,14 @@ export default class VideoShowcase {
 	 */
 
 	updatePlayerCardData( el, data ) {
+		console.log( data );
 
 		if ( data.title ) {
-			this.playerUI.heading.innerText = data.title;
+			this.playerUI.title.innerText = data.title;
 		}
 
 		if ( data.permalink ) {
-			this.playerUI.heading.setAttribute( 'href', data.permalink );
+			this.playerUI.title.setAttribute( 'href', data.permalink );
 		}
 
 		if ( data.dek ) {
@@ -164,11 +176,7 @@ export default class VideoShowcase {
 		// NOTE: html comes from JS template with escaped data.
 		this.playerUI.social.insertAdjacentHTML( 'beforeend', html );
 
-		this.initCollapsible( this.playerUI.social.querySelector( '[data-collapsible]' ) );
-	}
-
-	initCollapsible( el ) {
-		el.pmcCollapsible = new Collapsible( el );
+		initCollapsibles();
 	}
 
 	/**
@@ -215,7 +223,7 @@ export default class VideoShowcase {
 	playJW( jwplayerUrl ) {
 		/* eslint-disable */
 		let custom_jwplayer = '';
-		
+
 		this.playerUI.jwplayerContainer.removeAttribute( 'hidden' );
 
 		if ( window.jwplayer ) {
@@ -292,7 +300,7 @@ export default class VideoShowcase {
 	/**
 	 * Update the UI.
 	 *
-	 * Replace the heading and dek elements and mark the active trigger.
+	 * Replace the title and dek elements and mark the active trigger.
 	 *
 	 * @param {string} id - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
 	 */
