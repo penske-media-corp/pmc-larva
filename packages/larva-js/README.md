@@ -16,34 +16,47 @@ For both authoring and usage notes regarding each of the above categories, refer
 
 ## Overview of Functionality
 
-**Document the flow and usage of the code in numbered steps.** This should not be a "how to use it" section, but should document the structure/flow of the software itself. For example:
+There is no functionality directly provided by this package. Consuming projects must import the desired JavaScript into their build step, and initialize it using the provided functions.
 
-1. The code is triggered on page load
-2. When the DOM loads
-3. XYZ widget makes an API call
-4. When the response is successful, XYZ widget is populated
-5. A user may click the ABC button to refresh the content, which calls #3
+In general, this would be done as follows:
+
+1. Ensure @penskemediacorp/larva-js is installed. It is included with the main @penskemediacorp/larva package.
+2. Import the initXX function into the project-level asset building e.g. common.entry.js.
+3. Call the initXX function inside an appropriate event listener, such as DOMContentLoaded.
+
+Refer to individual interface or utility modules for more specific functionality and usage information.
 
 ## Development Setup
 
-**What does an engineer need to do to setup this locally?** This section should be a numbered or bulleted that is easy to follow. 
+Contributions to this repository can be made by using running Larva server inside the `pmc-larva/packages/larva` for a sandbox environment, and linking the larva-js package to test local changes. 
 
-1. What are the prerequisites? Do you need to have a WordPress or Laravel environment running, or are there external services involved?
-2. What configuration is required? Do you need to enable a Cheezcap option, for example?
-3. Are there dependencies that need to be installed?
-4. Does an engineer require access to third party services? Do they need API keys or secrets to get started?
-
-If there are specific commands that need to be run, add them in a markdown block, like this, with comments above each command that indicate _why_ and _what_ the command is doing:
+First, clone the pmc-larva monorepo, then following steps should get you set up:
 
 ```
-# Install the npm module
-$ npm install project
+# Start within the pmc-larva monorepo root and npm link larva-js for local dev.
+$ cd packages/larva-js && npm link
+$ cd ../larva
 
-# Run a node script that does ABC
-$ npm run prod 
+# Set up the larva sandbox environment, linking larva-js
+$ npm install && npm link @penskemediacorp/larva-js
+
+# Start the larva server
+$ npm run larva
 ```
+Now, dependecies should be installed, and that the larva-js package is linked to the local copy for development, and you can access the UI in the Larva server at localhost:3001. 
+
+Next, we need to start the JS build. Open a new command window, and make sure you are inside `pmc-larva/packages/larva`. Run the following command:
+
+```
+# This command watches for JS changes only. `npm run dev` will watch for SCSS and JS changes.
+$ npm run dev:js
+```
+
+Now, you can start writing JS inside the larva-js package. Refer to pmc-larva/packages/larva/src/js/scripts.js and follow the conventions for importing JS from larva-js.
 
 ## Things To Be Aware Of 
+
+**docs TODO**
 
 This section can be a list of anything the is critical to be aware of, things like:
 
@@ -54,6 +67,8 @@ This section can be a list of anything the is critical to be aware of, things li
 
 ## History and Changelog
 
+**docs TODO**
+
 [Click here](CHANGELOG.md) to view this project's main history and changes.
 
 - [Click here](some-module-a/CHANGELOG.md) to view this project's some-module-a history and changes.
@@ -61,5 +76,7 @@ This section can be a list of anything the is critical to be aware of, things li
 
 
 ## Support
+
+**docs TODO**
 
 In this section, indicate where an engineer should go for support. Is there a specific Slack channel, team, or individual that can answer questions about this software?
