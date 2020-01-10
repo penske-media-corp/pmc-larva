@@ -11,8 +11,8 @@ The JS in this package is organized into two categories:
 For both authoring and usage notes regarding each of the above categories, refer to the following:
 
 **Module Readmes**
-- [Interface JS Readme](../src/interface/README.md)
-- [Utility JS Readme](../src/utils/README.md)
+- [Interface JS Readme](./src/interface/README.md)
+- [Utility JS Readme](./src/utils/README.md)
 
 ## Overview of Functionality
 
