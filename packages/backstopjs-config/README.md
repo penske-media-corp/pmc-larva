@@ -29,7 +29,7 @@ First install the package and its dependencies. This includes headless Chrome, s
 
 		// This object will provide project-level overrides for the Backstop config.
 		backstop: {
-			// If testing from the Larva mono-repo, replace "project" with "larva", in this path:
+			// If testing default Larva patterns, replace "project" with "larva", in this path:
 			testBaseUrl: 'http://localhost:3000/project',
 			larvaModules: [ 'footer', 'breadcrumbs' ],
 			backstopConfig: {
