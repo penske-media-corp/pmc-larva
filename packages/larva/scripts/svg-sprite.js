@@ -9,11 +9,12 @@ const svgoConfig = require( './config/svgo-config.json' );
 // const getSassVarsString = require( './lib/getSassVarsString' );
 
 const config = {
-	dest: 'build',
+	dest: 'build/svg',
 	log: null, // Logging verbosity (default: no logging)
 	mode: {
 		defs: {
-			example: true
+			example: true,
+			sprite: 'sprite.defs.svg'
 		}
 	},
 	shape: {
