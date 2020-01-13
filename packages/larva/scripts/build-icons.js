@@ -7,8 +7,8 @@ const globby = require('globby');
 const fs = require('fs');
 const svgoConfig = require( './config/svgo-config.json' );
 
-const projectSvgPath = path.join( process.cwd(), './src/' );
-const larvaSvgPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-svg/src' );
+const projectIconsPath = path.join( process.cwd(), './src/svg/icons' );
+const larvaIconsPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-svg/src' );
 
 // TODO: unfinished feature
 // const getSassVarsString = require( './lib/getSassVarsString' );
@@ -37,7 +37,7 @@ const config = {
 
 const spriter = new SVGSpriter( config );
 
-const svgFiles = globby.sync( [ larvaSvgPath, projectSvgPath ], {
+const svgFiles = globby.sync( [ larvaIconsPath, projectIconsPath ], {
 	expandDirectories: {
 		extensions: [ 'svg' ],
 	}
@@ -46,7 +46,7 @@ const svgFiles = globby.sync( [ larvaSvgPath, projectSvgPath ], {
 // TODO: unfinished feature
 // let scssIcons = {};
 
-console.log( `Looking for SVGs in ${path.relative( process.cwd(), larvaSvgPath )} and ${path.relative( process.cwd(), projectSvgPath )}...` );
+console.log( `Looking for icon SVGs in ${path.relative( process.cwd(), larvaIconsPath )} and ${path.relative( process.cwd(), projectIconsPath )}...` );
 
 svgFiles.forEach( file => {
 	// TODO: unfinished feature.
@@ -56,7 +56,7 @@ svgFiles.forEach( file => {
 	spriter.add( file, path.basename( file ), fs.readFileSync( file, { encoding: 'utf-8' } ) );
 });
 
-console.log( 'Building SVG sprite...' );
+console.log( 'Building SVG icon sprite...' );
 
 // Write the Sass variables.
 // TODO: unfinished feature.
@@ -76,5 +76,5 @@ spriter.compile( function( error, result, cssData ) {
 
 	}
 
-	console.log( 'Completed building SVG sprite.' );
+	console.log( 'Completed building SVG icon sprite.' );
 });

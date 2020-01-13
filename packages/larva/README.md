@@ -116,7 +116,7 @@ To use these scripts, add the following to package.json in a project that uses t
 		"lint-fix:js": "larva lint-js --fix",
 		"larva": "larva server",
 		"write-json": "larva write-json larva && larva write-json",
-		"svg-sprite": "larva svg-sprite",
+		"build-icons": "larva build-icons",
 	}
 }
 ```
