@@ -6,11 +6,16 @@ const mkdirp = require('mkdirp');
 const globby = require('globby');
 const fs = require('fs');
 const svgoConfig = require( './config/svgo-config.json' );
+
+const projectSvgPath = path.join( process.cwd(), './src/' );
+const larvaSvgPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-svg/src' );
+
+// TODO: unfinished feature
 // const getSassVarsString = require( './lib/getSassVarsString' );
 
 const config = {
 	dest: 'build/svg',
-	log: null, // Logging verbosity (default: no logging)
+	log: null, // No logging
 	mode: {
 		defs: {
 			example: true,
@@ -30,26 +35,22 @@ const config = {
 	}
 };
 
-const projectSvgPath = path.join( process.cwd(), './src/' );
-const larvaSvgPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-svg/src' );
+const spriter = new SVGSpriter( config );
 
-const spriter = new SVGSpriter(config);
+const svgFiles = globby.sync( [ larvaSvgPath, projectSvgPath ], {
+	expandDirectories: {
+		extensions: [ 'svg' ],
+	}
+});
 
-const svgFiles = [
-	... globby.sync( [ larvaSvgPath, projectSvgPath ], {
-		expandDirectories: {
-			extensions: [ 'svg' ],
-		}
-	}),
-];
-
-let scssIcons = {};
+// TODO: unfinished feature
+// let scssIcons = {};
 
 console.log( `Looking for SVGs in ${path.relative( process.cwd(), larvaSvgPath )} and ${path.relative( process.cwd(), projectSvgPath )}...` );
 
 svgFiles.forEach( file => {
-	// Build Sass vars object
 	// TODO: unfinished feature.
+	// Build Sass vars object
 	// scssIcons[ path.basename( file, '.svg' ) ] = fs.readFileSync( file, { encoding: 'utf-8' } );
 
 	spriter.add( file, path.basename( file ), fs.readFileSync( file, { encoding: 'utf-8' } ) );
@@ -63,13 +64,16 @@ console.log( 'Building SVG sprite...' );
 
 // Compile the sprite
 spriter.compile( function( error, result, cssData ) {
+
 	// Run through all configured output modes
 	for ( var mode in result ) {
+
 		// Run through all created resources and write them to disk
 		for ( var type in result[mode] ) {
 			mkdirp.sync( path.dirname( result[mode][type].path ) );
 			fs.writeFileSync( result[mode][type].path, result[mode][type].contents );
 		}
+
 	}
 
 	console.log( 'Completed building SVG sprite.' );
