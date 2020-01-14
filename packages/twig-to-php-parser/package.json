@@ -23,7 +23,6 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@penskemediacorp/larva": "^7.0.0-alpha.0",
     "exec-php": "0.0.5"
   }
 }
