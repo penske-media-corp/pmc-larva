@@ -2,7 +2,7 @@ const path = require( 'path' );
 const clone = require( '@penskemediacorp/larva' ).clone;// This should be in this repo, probably
 const c_button = clone( path.resolve( __dirname, '../../components/c-button/c-button.stripped' ) );
 
-c_button.c_button_classes += "lrv-u-color-white lrv-u-color-grey-light:hover lrv-u-background-color-black lrv-u-font-size-12 lrv-u-font-weight-bold lrv-u-text-transform-uppercase lrv-a-icon-after lrv-a-icon-arrow-right lrv-a-icon-invert";
+c_button.c_button_classes += " lrv-u-color-white lrv-u-color-grey-light:hover lrv-u-background-color-black lrv-u-font-size-12 lrv-u-font-weight-bold lrv-u-text-transform-uppercase lrv-a-icon-after lrv-a-icon-arrow-right lrv-a-icon-invert";
 c_button.c_button_text = "Send Us a Tip";
 c_button.c_button_url = "https://google.com";
 c_button.c_button_inner_classes = "lrv-u-color-white lrv-u-color-grey-light:hover";

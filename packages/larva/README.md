@@ -115,7 +115,8 @@ To use these scripts, add the following to package.json in a project that uses t
 		"lint-fix:scss": "larva lint-scss --fix",
 		"lint-fix:js": "larva lint-js --fix",
 		"larva": "larva server",
-		"write-json": "larva write-json larva && larva write-json"
+		"write-json": "larva write-json larva && larva write-json",
+		"build-icons": "larva build-icons",
 	}
 }
 ```
@@ -125,8 +126,7 @@ Additional scripts, coming soon:
 {
 	"scripts": {
 		"parser": "larva parser",
-		"backstop": "larva backstop",
-		"svg-sprite: "larva svg-sprite"
+		"backstop": "larva backstop"
 	}
 }
 ```

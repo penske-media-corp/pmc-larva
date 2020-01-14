@@ -5,15 +5,21 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const globby = require('globby');
 const fs = require('fs');
-const svgoConfig = require( './lib/svgo-config.json' );
-const getSassVarsString = require( './lib/getSassVarsString' );
+const svgoConfig = require( './config/svgo-config.json' );
+
+const projectIconsPath = path.join( process.cwd(), './src/svg/icons' );
+const larvaIconsPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-svg/src' );
+
+// TODO: unfinished feature
+// const getSassVarsString = require( './lib/getSassVarsString' );
 
 const config = {
-	dest: 'build',
-	log: null, // Logging verbosity (default: no logging)
+	dest: 'build/svg',
+	log: null, // No logging
 	mode: {
 		defs: {
-			example: true
+			example: true,
+			sprite: 'sprite.defs.svg'
 		}
 	},
 	shape: {
@@ -29,24 +35,28 @@ const config = {
 	}
 };
 
-const svgPath = path.join( process.cwd(), './src/' );
+const spriter = new SVGSpriter( config );
 
-const spriter = new SVGSpriter(config);
-const svgFiles = globby.sync( svgPath, {
+const svgFiles = globby.sync( [ larvaIconsPath, projectIconsPath ], {
 	expandDirectories: {
 		extensions: [ 'svg' ],
 	}
 });
 
-let scssIcons = {};
+// TODO: unfinished feature
+// let scssIcons = {};
+
+console.log( `Looking for icon SVGs in ${path.relative( process.cwd(), larvaIconsPath )} and ${path.relative( process.cwd(), projectIconsPath )}...` );
 
 svgFiles.forEach( file => {
-	// Build Sass vars object
 	// TODO: unfinished feature.
+	// Build Sass vars object
 	// scssIcons[ path.basename( file, '.svg' ) ] = fs.readFileSync( file, { encoding: 'utf-8' } );
 
 	spriter.add( file, path.basename( file ), fs.readFileSync( file, { encoding: 'utf-8' } ) );
 });
+
+console.log( 'Building SVG icon sprite...' );
 
 // Write the Sass variables.
 // TODO: unfinished feature.
@@ -54,7 +64,7 @@ svgFiles.forEach( file => {
 
 // Compile the sprite
 spriter.compile( function( error, result, cssData ) {
-	
+
 	// Run through all configured output modes
 	for ( var mode in result ) {
 
@@ -63,5 +73,8 @@ spriter.compile( function( error, result, cssData ) {
 			mkdirp.sync( path.dirname( result[mode][type].path ) );
 			fs.writeFileSync( result[mode][type].path, result[mode][type].contents );
 		}
+
 	}
+
+	console.log( 'Completed building SVG icon sprite.' );
 });
