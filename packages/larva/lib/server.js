@@ -1,6 +1,8 @@
 const path = require( 'path' );
 const express = require('express');
 const marked = require( 'marked' );
+const fs = require( 'fs' );
+const globby = require( 'globby' );
 
 const { 
 	TwingEnvironment,
@@ -68,6 +70,101 @@ app.get( '/', function (req, res) {
 	req.params[ 'name' ] = 'Welcome';
 	res.end( twing.render( 'index.html', req.params ) );
 });
+
+app.get( '/css', function (req, res) {
+	
+	/**
+	 * Generate Larva CSS Docs 
+	 * 
+	 * (Something similar can be done for project CSS unless we eradicate it)
+	 * 
+	 * 1. Get all CSS from the larva-css npm package. 
+	 * 2. Use PostCSS to generate an abstract syntax tree. 
+	 * 3. Generate a "spec" for the CSS by getting the base selector names
+	 *    from Sass files in larva-scss
+	 * 4. Walk the rules in the AST, checking the selectors against keys
+	 *    in the spec object, and adding them to an array of
+	 *    selectors for each property. Mark if it is in the hasTokens array.
+	 * 5. Send that spec object to the template.
+	 */
+
+	const postcss = require( 'postcss' );
+	const cssPath = path.join( __dirname, '../node_modules/@penskemediacorp/larva-css/build/css/' );
+	const sassPath = path.join( __dirname, '../node_modules/@penskemediacorp/larva-css/src/' );
+
+	const hasTokens = [
+		'u-font-family',
+		'u-color',
+		'u-background-color',
+		'u-line-height',
+		'u-font-weight',
+	];
+
+	const baseNames = ( () => {
+
+		let files = globby.sync( sassPath + '/**/*.scss', {
+			expandDirectories: true
+		} );
+
+		return files.map( ( item ) => {
+			let parts = item.split( '/' );
+			let baseName = parts[ parts.length - 1 ].split( '.' );
+			return baseName[0];
+		} );
+	} )();
+
+	const cssFiles = globby.sync( cssPath + '*.css', {
+		expandDirectories: true
+	});
+
+	const cssString = ( () => {
+		let string;
+
+		// Could use a fancy JS array function here but I can't remember then rn
+		cssFiles.forEach( file => {
+			string += fs.readFileSync( file );
+		} ); 
+
+		return string;
+	 } ) ();
+
+	const cssRoot = postcss.parse( cssString )
+
+	const generatedSpec = ( () => {
+		let obj = {};
+	
+		baseNames.forEach( ( item ) => {
+			obj[item] = {
+				selectors: [],
+				tokens: false
+			};
+		}) 
+
+		return obj;
+	} )();
+
+	cssRoot.walkRules( rule => {
+
+		Object.keys( generatedSpec ).forEach( key => {
+			let regex = new RegExp( '.*lrv-' + key + '.*', 'g' );
+
+			if ( -1 !== hasTokens.indexOf( key ) ) {
+				generatedSpec[key]['tokens'] = true;
+			}
+
+			if ( rule.selector.match( regex ) ) {
+				generatedSpec[key]['selectors'].push( rule.selector );
+			}
+
+		});
+		
+	} );
+
+	req.params[ 'name' ] = 'Larva CSS';
+	req.params[ 'spec' ] = generatedSpec;
+	res.end( twing.render( 'css.html', req.params ) );
+});
+
 
 app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	let patternsPath = 'larva' === req.params.source ? appConfiguration.larvaPatternsDir : appConfiguration.projectPatternsDir;
