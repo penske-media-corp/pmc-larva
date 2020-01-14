@@ -120,7 +120,7 @@ app.get( '/css', function (req, res) {
 	const cssString = ( () => {
 		let string;
 
-		// Could use a fancy JS array function here but I can't remember then rn
+		// Could use a different JS array helper here but idk
 		cssFiles.forEach( file => {
 			string += fs.readFileSync( file );
 		} ); 
