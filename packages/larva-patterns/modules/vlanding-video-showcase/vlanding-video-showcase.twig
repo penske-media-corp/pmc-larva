@@ -9,7 +9,9 @@
 			{% endif %}
 			{% include "@larva/components/c-title/c-title.twig" with c_title %}
 			{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
-			{% include "@larva/modules/social-share/social-share.twig" with social_share %}
+			{% if social_share %}
+				{% include "@larva/modules/social-share/social-share.twig" with social_share %}
+			{% endif %}
 		</div>
 	</div>
 
