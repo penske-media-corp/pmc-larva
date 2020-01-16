@@ -255,7 +255,7 @@ function parse_svg_path( $twig_include, $svg_name ) {
 	$svg_path  = '/assets/build/svg/';
 
 	// 08/09/19 - Disabling larva/core theme logic
-	// Not sure if relevant here, but will keep it.
+	// 01/16/20 - Enabled include logic, but this is not needed (yet?)
 	// if ( strpos( $twig_include, "@larva" ) ) {
 	// 	$theme_dir = 'PMC_CORE_PATH';
 	// }
