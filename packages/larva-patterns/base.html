@@ -7,8 +7,7 @@
 
 		{% block stylesheets %}{% endblock %}
 
-		<link rel="stylesheet" href="/static/css/larva-ui.inline.css">
-		<link rel="stylesheet" href="/static/css/larva-ui.async.css">
+		<link rel="stylesheet" href="/static/css/larva-ui.css">
 
 	</head>
 	<body class="lrv-u-margin-a-00">
@@ -16,10 +15,7 @@
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
 				{% include "@larva/_templates/pattern-nav.html" with { source: 'larva' } %}
-
-				{% if source == 'project' %}
-					{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
-				{% endif %}
+				{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
 			</div>
 			<div class="lrv-u-flex-grow-1">
 				{% block content %}{% endblock %}
