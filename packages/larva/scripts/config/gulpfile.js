@@ -4,6 +4,8 @@ const through2 = require( 'through2' );
 const cssnano = require( 'cssnano' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
+
+const gulpClean = require( 'gulp-clean' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const globImporter = require( 'node-sass-glob-importer' );
 
@@ -88,6 +90,11 @@ const buildScss = ( done, minify = false ) => {
 	done();
 };
 
+const clean = ( done ) => {
+	gulp.src( cssDest , { read: false } )
+		.pipe( gulpClean() );
+	done();
+};
 
 /**************
 Tasks
@@ -95,7 +102,7 @@ Tasks
 
 // Watch the changed file, compile and lint when changed.
 exports['dev-scss'] = () => {
-	gulp.watch( './src/**/*.scss', buildScss ).on( 'change', function( file ) {
+	gulp.watch( [ './src/**/*.scss', './entries/*.scss' ], buildScss ).on( 'change', function( file ) {
 		stylelint( file );
 	} );
 };
@@ -107,6 +114,8 @@ exports['build-scss'] = ( done ) => {
 
 // Run PostCSS on CSS.
 exports['prod-scss'] = ( done ) => {
-	stylelint( './src/**/*.scss' );
-	buildScss( done, true );
+	clean( () => {
+		stylelint( './src/**/*.scss' );
+		buildScss( done, true );
+	});
 };
