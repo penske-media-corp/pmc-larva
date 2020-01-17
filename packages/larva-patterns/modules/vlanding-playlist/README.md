@@ -1,0 +1,1 @@
+There is nothing fancy about this module - it is as it appears: a large card on the left and a few smaller ones on the right, along with a header that supports a link to "view more" or similar. It is intended to be used with carousels to display curated playlists below the vlanding-video-showcase.
