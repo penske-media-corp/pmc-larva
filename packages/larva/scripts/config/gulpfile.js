@@ -71,8 +71,7 @@ const buildScss = ( done, minify = false ) => {
 	// This is redundant, but was having issue with conditionally
 	// minifying within the same stream with 
 	// .pipe( minify ? postcss( [ cssnano() ] ) : emptyStream() )
-	// In interest of working software, use separarte streams
-	// for now.
+	// In interest of time, use separate streams for now.
 
 	if ( true === minify ) {
 		gulp.src( './entries/*.scss' )

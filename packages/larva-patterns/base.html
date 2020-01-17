@@ -16,8 +16,8 @@
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
 				{% include "@larva/_templates/pattern-nav.html" with { source: 'larva' } %}
-				
-				{% if source != 'larva' %}
+
+				{% if source == 'project' %}
 					{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
 				{% endif %}
 			</div>
