@@ -7,26 +7,31 @@
 			{% if c_span %}
 				{% include "@larva/components/c-span/c-span.twig" with c_span %}
 			{% endif %}
+
 			{% include "@larva/components/c-title/c-title.twig" with c_title %}
 			{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+	
 			{% if social_share %}
 				{% include "@larva/modules/social-share/social-share.twig" with social_share %}
 			{% endif %}
 		</div>
 	</div>
 
-	<div class="lrv-a-wrapper lrv-u-padding-t-1">
-		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% if vlanding_video_showcase_video_cards %}
 
-		<div class="vlanding-video-showcase__video-cards // lrv-u-overflow-hidden lrv-a-glue-parent">
-			<ul class="lrv-a-unstyle-list lrv-a-scrollable-grid@desktop-max {{ vlanding_video_showcase_video_cards_classes }}">
-				{% for item in vlanding_video_showcase_video_cards %}
-					<li class="{{ vlanding_video_showcase_video_cards_item_classes }}">
-						{% include "@larva/modules/vlanding-video-card/vlanding-video-card.twig" with item %}
-					</li>
-				{% endfor %}
-			</ul>
+		<div class="lrv-a-wrapper lrv-u-padding-t-1">
+			{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+
+			<div class="vlanding-video-showcase__video-cards // lrv-u-overflow-hidden lrv-a-glue-parent">
+				<ul class="lrv-a-unstyle-list lrv-a-scrollable-grid@desktop-max {{ vlanding_video_showcase_video_cards_classes }}">
+					{% for item in vlanding_video_showcase_video_cards %}
+						<li class="{{ vlanding_video_showcase_video_cards_item_classes }}">
+							{% include "@larva/modules/vlanding-video-card/vlanding-video-card.twig" with item %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
 		</div>
-	</div>
 
+	{% endif %}
 </section>
