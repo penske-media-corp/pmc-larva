@@ -1,10 +1,7 @@
-import initFlickity from '@larva-js/interface/Flickity';
-import initVideoShowcase from '@larva-js/interface/VideoShowcase';
+// Note: this is NOT up to Larva JS standards, here:
+// https://github.com/penske-media-corp/pmc-larva/wiki/JS-Authoring-Guidelines
 
-window.addEventListener( 'DOMContentLoaded', function() {
-
-	initFlickity();
-	initVideoShowcase();
+export default function initLarvaUiButton() {
 
 	document.querySelector( '.js-hide-button' ).addEventListener( 'click', function( e ) {
 
@@ -29,4 +26,4 @@ window.addEventListener( 'DOMContentLoaded', function() {
 			this.classList.remove( 'is-ui-hidden' );
 		}
 	} );
-} );
+}
