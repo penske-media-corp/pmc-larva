@@ -6,6 +6,7 @@ module.exports = {
 			'@js': path.resolve( './src/js' )
 		},
 		entries: {
+			'larva-ui': './entries/larva-ui.entry.js',
 			common: './entries/common.entry.js'
 		}
 	},
