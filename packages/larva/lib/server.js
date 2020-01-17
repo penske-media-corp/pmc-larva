@@ -162,6 +162,9 @@ app.get( '/css', function (req, res) {
 
 	req.params[ 'name' ] = 'Larva CSS';
 	req.params[ 'spec' ] = generatedSpec;
+	
+	req.params[ 'source' ] = 'larva';
+	req.params[ 'pattern_nav' ] = patterns;
 	res.end( twing.render( 'css.html', req.params ) );
 });
 
