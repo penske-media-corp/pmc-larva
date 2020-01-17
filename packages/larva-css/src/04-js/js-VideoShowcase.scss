@@ -19,11 +19,13 @@
 	&::after {
 		content: attr(data-video-showcase-active-text);
 		position: absolute;
-		color: map-get( $TOKENS-MAP, white );
+		color: map-get( $TOKENS-MAP, color-white );
 		bottom: 0;
+		left: 0;
 		width: 100%;
 		text-align: center;
 		background-color: map-get( $TOKENS-MAP, background-color-brand-primary );
+		background-color: var( --background-color-brand-primary );
 		padding-top: $spacer-025;
 		padding-bottom: $spacer-025;
 		font-size: $font-size-14; // stylelint-disable-line property-blacklist
