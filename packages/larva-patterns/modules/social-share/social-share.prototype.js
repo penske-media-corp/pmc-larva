@@ -25,7 +25,7 @@ for ( let i = 0; i < social_share_primary_items.length; i++ ) {
 }
 
 const c_icon_plus = clonedeep( c_icon );
-c_icon_plus.c_icon_link_classes = 'lrv-u-display-block lrv-u-display-inline-flex lrv-u-color-black';
+c_icon_plus.c_icon_link_classes = 'lrv-u-display-block lrv-u-display-inline-flex lrv-a-unstyle-link';
 c_icon_plus.c_icon_url = '#';
 c_icon_plus.c_icon_rel_name = 'plus';
 c_icon_plus.c_icon_name = 'plus';

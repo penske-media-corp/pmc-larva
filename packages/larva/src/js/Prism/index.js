@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* PrismJS 1.17.1
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+markup-templating+php+json+php-extras+scss+twig */
 var _self = 'undefined' != typeof window ? window : 'undefined' != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? self : {},

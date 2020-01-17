@@ -4,6 +4,8 @@ const through2 = require( 'through2' );
 const cssnano = require( 'cssnano' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
+
+const gulpClean = require( 'gulp-clean' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const globImporter = require( 'node-sass-glob-importer' );
 
@@ -49,7 +51,7 @@ const stylelint = ( file ) => {
 const emptyStream = () => {
 	var pass = through2.obj();
 
-	process.nextTick(pass.end.bind(pass));
+	process.nextTick( pass.end.bind(pass) );
 	return pass;
 }
 
@@ -65,14 +67,33 @@ const emptyStream = () => {
  * @param {boolean} minify Run post CSS and minify output.
  */
 const buildScss = ( done, minify = false ) => {
-	gulp.src( './entries/*.scss' )
-		.pipe( gulpStylelint( stylelintOpts ) )
-		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
-		.pipe( minify ? postcss( [ cssnano() ] ) : emptyStream() )
-		.pipe( gulp.dest( cssDest ) );
+
+	// This is redundant, but was having issue with conditionally
+	// minifying within the same stream with 
+	// .pipe( minify ? postcss( [ cssnano() ] ) : emptyStream() )
+	// In interest of time, use separate streams for now.
+
+	if ( true === minify ) {
+		gulp.src( './entries/*.scss' )
+			.pipe( gulpStylelint( stylelintOpts ) )
+			.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
+			.pipe( postcss( [ cssnano() ] ) )
+			.pipe( gulp.dest( cssDest ) );
+	} else {
+		gulp.src( './entries/*.scss' )
+			.pipe( gulpStylelint( stylelintOpts ) )
+			.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
+			.pipe( gulp.dest( cssDest ) );
+	}
+
 	done();
 };
 
+const clean = ( done ) => {
+	gulp.src( cssDest , { read: false } )
+		.pipe( gulpClean() );
+	done();
+};
 
 /**************
 Tasks
@@ -80,16 +101,20 @@ Tasks
 
 // Watch the changed file, compile and lint when changed.
 exports['dev-scss'] = () => {
-	gulp.watch( './src/**/*.scss', buildScss ).on( 'change', function( file ) {
+	gulp.watch( [ './src/**/*.scss', './entries/*.scss' ], buildScss ).on( 'change', function( file ) {
 		stylelint( file );
 	} );
 };
 
 // Quickly build SCSS.
-exports['build-scss'] = buildScss;
+exports['build-scss'] = ( done ) => {
+	buildScss( done );
+};
 
 // Run PostCSS on CSS.
 exports['prod-scss'] = ( done ) => {
-	stylelint( './src/**/*.scss' );
-	buildScss( done, true );
+	clean( () => {
+		stylelint( './src/**/*.scss' );
+		buildScss( done, true );
+	});
 };
