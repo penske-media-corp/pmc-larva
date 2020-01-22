@@ -6,20 +6,20 @@ Before you continue, add these scripts to package.json and then delete this "imp
 "scripts": {
 	"larva": "larva server --watch ./src/patterns -e twig,html,js",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
-    "prod": "bin/larva.js prod-scss && bin/larva.js prod-js",
-    "prod:scss": "bin/larva.js prod-scss",
-    "prod:js": "bin/larva.js prod-js",
+    "prod": "larva prod-scss && larva prod-js",
+    "prod:scss": "larva prod-scss",
+    "prod:js": "larva prod-js",
     "dev": "concurrently \"npm:dev:scss\" \"npm:dev:js\" --raw",
-    "dev:scss": "bin/larva.js dev-scss",
-    "dev:js": "bin/larva.js dev-js",
-    "lint": "bin/larva.js lint-scss & larva lint-js",
-    "lint:scss": "bin/larva.js lint-scss",
-    "lint:js": "bin/larva.js lint-js ./",
-    "lint-fix": "bin/larva.js lint-scss --fix && npm run lint:js --fix",
-    "lint-fix:scss": "bin/larva.js lint-scss --fix",
-    "lint-fix:js": "bin/larva.js lint-js --fix",
-    "write-json": "bin/larva.js write-json larva && bin/larva.js write-json",
-    "build-icons": "bin/larva.js build-icons"
+    "dev:scss": "larva dev-scss",
+    "dev:js": "larva dev-js",
+    "lint": "larva lint-scss & larva lint-js",
+    "lint:scss": "larva lint-scss",
+    "lint:js": "larva lint-js ./",
+    "lint-fix": "larva lint-scss --fix && npm run lint:js --fix",
+    "lint-fix:scss": "larva lint-scss --fix",
+    "lint-fix:js": "larva lint-js --fix",
+    "write-json": "larva write-json",
+    "build-icons": "larva build-icons"
 }
 ```
 

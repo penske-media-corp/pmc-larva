@@ -27,7 +27,7 @@ module.exports = {
 	},
 
 	patterns: {
-		larvaPatternsDir: path.resolve( './node_modules/penskemediacorp/larva-patterns' ),
+		larvaPatternsDir: path.resolve( './node_modules/@penskemediacorp/larva-patterns' ),
 		projectPatternsDir: path.resolve( './src/patterns' ),
 		ignoredModules: [
 			'footer-menus',
