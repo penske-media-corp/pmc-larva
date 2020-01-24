@@ -4,7 +4,7 @@ const marked = require( 'marked' );
 const fs = require( 'fs' );
 const globby = require( 'globby' );
 
-const { 
+const {
 	TwingEnvironment,
 	TwingLoaderFilesystem,
 	TwingFilter
@@ -72,14 +72,14 @@ app.get( '/', function (req, res) {
 });
 
 app.get( '/css', function (req, res) {
-	
+
 	/**
-	 * Generate Larva CSS Docs 
-	 * 
+	 * Generate Larva CSS Docs
+	 *
 	 * (Something similar can be done for project CSS unless we eradicate it)
-	 * 
-	 * 1. Get all CSS from the larva-css npm package. 
-	 * 2. Use PostCSS to generate an abstract syntax tree. 
+	 *
+	 * 1. Get all CSS from the larva-css npm package.
+	 * 2. Use PostCSS to generate an abstract syntax tree.
 	 * 3. Generate a "spec" for the CSS by getting the base selector names
 	 *    from Sass files in larva-scss
 	 * 4. Walk the rules in the AST, checking the selectors against keys
@@ -89,8 +89,8 @@ app.get( '/css', function (req, res) {
 	 */
 
 	const postcss = require( 'postcss' );
-	const cssPath = path.join( __dirname, '../node_modules/@penskemediacorp/larva-css/build/css/' );
-	const sassPath = path.join( __dirname, '../node_modules/@penskemediacorp/larva-css/src/' );
+	const cssPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-css/build/' );
+	const sassPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-css/src/' );
 
 	const hasTokens = [
 		'u-font-family',
@@ -113,7 +113,7 @@ app.get( '/css', function (req, res) {
 		} );
 	} )();
 
-	const cssFiles = globby.sync( cssPath + '*.css', {
+	const cssFiles = globby.sync( cssPath + '/**/*.css', {
 		expandDirectories: true
 	});
 
@@ -123,7 +123,7 @@ app.get( '/css', function (req, res) {
 		// Could use a different JS array helper here but idk
 		cssFiles.forEach( file => {
 			string += fs.readFileSync( file );
-		} ); 
+		} );
 
 		return string;
 	 } ) ();
@@ -132,13 +132,13 @@ app.get( '/css', function (req, res) {
 
 	const generatedSpec = ( () => {
 		let obj = {};
-	
+
 		baseNames.forEach( ( item ) => {
 			obj[item] = {
 				selectors: [],
 				tokens: false
 			};
-		}) 
+		})
 
 		return obj;
 	} )();
@@ -157,12 +157,12 @@ app.get( '/css', function (req, res) {
 			}
 
 		});
-		
+
 	} );
 
 	req.params[ 'name' ] = 'Larva CSS';
 	req.params[ 'spec' ] = generatedSpec;
-	
+
 	req.params[ 'source' ] = 'larva';
 	req.params[ 'pattern_nav' ] = patterns;
 	res.end( twing.render( 'css.html', req.params ) );
