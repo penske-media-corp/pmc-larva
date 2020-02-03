@@ -25,6 +25,8 @@ In order to avoid conflicting node versions, Larva should be contained to its ow
 
 First we will initialize an npm package, install Larva, and run the init command to scaffold our directory structure:
 
+_// TODO: the `npx` workflow needs to be tested once this is released on npm._
+
 ```
 # Create an npm package
 $ npm init
