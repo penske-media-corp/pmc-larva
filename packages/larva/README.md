@@ -34,70 +34,33 @@ Any project consuming Larva, must have the following directory structure:
 		|- patterns/
 ```
 
-### In a brand new project
+### Initializing Larva in a brand new project
 
-To install Larva, run the following command from the asset directory of a consuming project:
-```
-npm install @penskemediacorp/larva
-```
-
-Then, create a file, larva.config.js in the assets directory. Add the following:
+To install Larva on a brand new project, run the following command from the root of `assets`:
 
 ```
-const path = require( 'path' );
+# Create an npm package
+$ npm init
 
-module.exports = {
-	patterns: {
-		larvaPatternsDir: path.resolve( __dirname, 'node_modules/@penskemediacorp/larva-patterns' ),
-		projectPatternsDir: path.resolve( __dirname, './src/patterns' ),
-		ignoredModules: [
-			// Modules to be ignored from write-json
-		],
-		variants: [
-			// And Node prototype variants e.g. article-tags.vip.js
-		],
-	}
-}
+# Add Larva and scaffold directories
+$ npx @penskemediacorp/larva init
 ```
 
-### Scripts in This Repo
+This will install the Larva packages and create a directory called larva/ inside assets that contains a scaffold of the directory structure. Move the contents of this directory into assets/ so that the directory structure reflects the above structure.
 
-The following scripts should be added to the consuming project assets/package.json:
-
-```language:json
-"scripts": {
-	"larva": "nodemon -e twig,*.prototype.js,html,scss ./node_modules/@penskemediacorp/larva/lib/server.js",
-	"write-json": "larva write-json",
-}
-```
-
-#### `npm run write-json`
-
-This script will output the Node prototype and variant objects from the pattern Node files to JSON file in `assets/build/json` so that the default objects can be used in the PHP templates.
-
-This command accepts one option parameter to write the JSON from Larva for shared modules: `npm run write-json -- larva`.
-
-#### `npm run larva`
-
-This command will start the pattern server, where you will develop UI. You must be in the same directory as `larva.config.js` to run this command, in other words, working within a "host" project. This will bring up the server for developing patterns at localhost:3000. You must navigate to that URL manually.
-
-The Larva mono-repo is set up to be a "host" project, and the server can be started with `npm run larva` from within the root of this repository in order to working on core Larva patterns. This will likely move to within `packages/larva` to make the managing of assets match that of other "host" projects.
+Next, check in root README.md from the scaffol and copy the scripts into package.json as directed.
 
 # Larva Scripts
 
 Inspired by [@wordpress/scripts](https://github.com/WordPress/gutenberg/tree/master/packages/scripts), this package provides a collection of scripts for developing UI on PMC sites with Larva.
 
-For asset building commands, JS and SCSS can be run at the same time, or separately, in order to minimize the build time for instances where either JS or SCSS, not both, need to be built.
+For asset building commands, JS and SCSS can be run at the same time, or separately, in order to minimize the build time for cases where either JS or SCSS, not both, need to be built.
 
 ## Usage
 
-First, install the npm package:
+Assuming Larva is installed, make sure the @penskemediacorp/larva package is at least at version 8.0.0-alpha.
 
-```
-$ npm install @penskemediacorp/larva-scripts
-```
-
-To use these scripts, add the following to package.json in a project that uses the [Larva assets directory structure](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva#usage):
+To use the build scripts, add the following to package.json in a project that uses the [Larva assets directory structure](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva#usage):
 
 ```
 {
@@ -117,16 +80,6 @@ To use these scripts, add the following to package.json in a project that uses t
 		"larva": "larva server",
 		"write-json": "larva write-json larva && larva write-json",
 		"build-icons": "larva build-icons",
-	}
-}
-```
-
-Additional scripts, coming soon:
-```
-{
-	"scripts": {
-		"parser": "larva parser",
-		"backstop": "larva backstop"
 	}
 }
 ```
