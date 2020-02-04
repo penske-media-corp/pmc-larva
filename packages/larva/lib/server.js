@@ -3,6 +3,7 @@ const express = require('express');
 const marked = require( 'marked' );
 const fs = require( 'fs' );
 const globby = require( 'globby' );
+const chalk = require( 'chalk' );
 
 const {
 	TwingEnvironment,
@@ -168,18 +169,28 @@ app.get( '/css', function (req, res) {
 	res.end( twing.render( 'css.html', req.params ) );
 });
 
-
 app.get( '/:source/:type/:name/:variant?', function (req, res) {
-	let patternsPath = 'larva' === req.params.source ? appConfiguration.larvaPatternsDir : appConfiguration.projectPatternsDir;
 
-	req.params[ 'query' ] = req.query;
-	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
+	let patternsPath;
+
+	if ( 'larva' === req.params.source ) {
+		patternsPath = appConfiguration.larvaPatternsDir;
+	} else if ( 'project' === req.params.source ) {
+		patternsPath = appConfiguration.projectPatternsDir;
+	} else {
+		console.error( chalk.red.bold( 'Error loading the pattern route. \nCheck the structure of the URL. It should be: \nhttp://localhost:3000/{larva|project}/{components|objects|modules|one-offs}/{optional variant}.' ) );
+	}
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
 	}
 
+	// Support query parameters for conditionally loading stylesheets and scripts
+	req.params[ 'query' ] = req.query;
+
+	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'pattern_nav' ] = patterns;
+
 	res.end( twing.render( 'pattern.html', req.params ) );
 });
 
