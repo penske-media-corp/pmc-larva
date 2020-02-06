@@ -9,13 +9,9 @@ const writeJsonToFile = require( './utils/writeJsonToFile' );
 // The fromLarva flag can come from CLI argument
 module.exports = function writeJson( patternConfig, fromLarva = false ) {
 
-	let sourceDirectory = patternConfig.projectPatternsDir;
-
-	if ( true === fromLarva ) {
-		sourceDirectory = patternConfig.larvaPatternsDir;
-	}
-
-	let modulesArr = getModuleNamesFromDirectory( sourceDirectory, patternConfig.ignoredModules );
+	const sourceDirectory = ( true === fromLarva ) ? patternConfig.larvaPatternsDir : patternConfig.projectPatternsDir;
+	const ignoredModules  = patternConfig.ignoredModules ? patternConfig.ignoredModules : [];
+	const modulesArr      = getModuleNamesFromDirectory( sourceDirectory, ignoredModules );
 
 	modulesArr.forEach( ( moduleName ) => {
 

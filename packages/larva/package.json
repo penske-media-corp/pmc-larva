@@ -43,6 +43,7 @@
   "dependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
+    "@penskemediacorp/backstopjs-config": "^8.1.1-alpha.0",
     "@penskemediacorp/eslint-config": "^2.7.3-alpha.0",
     "@penskemediacorp/larva-css": "^8.1.0-alpha.0",
     "@penskemediacorp/larva-js": "^8.1.0-alpha.0",
