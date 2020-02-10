@@ -1,103 +1,75 @@
 # Larva!
 
-If you want _all of Larva_, this is your repo. This is where you should start for new projects and for refactoring old projects onto the system.
+If you want to build patterns with Larva, then you are in the right place. This is where you should start for new projects and for refactoring old projects with Larva.
 
-This package is essentially a wrapper that brings all of the other packages together, and provides the tools for using them to develop modules. It contains an Express server and UI for configuring patterns, and _will_ contain scripts to scaffold patterns, test them, and probably do all kinds of other cools stuff. For the time being, it's pretty much just the server and a very basic UI.
+This package is a wrapper that brings all of the other packages together, and provides the tools for using them to develop modules. 
+
+It contains: 
+
+* An Express server and UI for building project-level patterns and configuring existing patterns
+* Gulp configuration for building SCSS
+* A basic webpack configuration for JS
+* An init command for scaffolding the Larva directory structure
+* The `write-json` script for building the JSON for each pattern
+* A `larva` binary that provides access to all of the above
 
 ## Usage
 
-### Absolutely required directory structure
+### If a brand new project:
 
-Any project consuming Larva, must have the following directory structure:
+In order to avoid conflicting node versions, Larva should be contained to its own directory. 
+
+**If you are working in a brand new project**, create a directory called `assets` and follow the below steps from the root of `assets`.
+
+**If you are working in an existing project**, create a directory called `larva` and follow the below steps from its root.
+
+First we will initialize an npm package, install Larva, and run the init command to scaffold our directory structure:
+
+_// TODO: the `npx` workflow needs to be tested once this is released on npm._
+
+```
+# Create an npm package
+$ npm init
+
+# Add Larva and scaffold directory structure
+$ npx @penskemediacorp/larva init
+```
+
+This will install the main Larva package and create a directory called larva/ that contains a scaffold of the directory structure. Move the contents of this directory into your current working directory so that the directory structure aligns with the following:
 
 ```
 |- pmc-consuming-project/
-	|- assets/
+	|- assets/ (or larva if in an older code-base)
 		|- build/
-			|- css/
-			|- js/
-			|- images/
 		|- node_modules/
 		|- src/
-			|- scss/
-				|- (Utility/ITCSS here)
-			|- patterns/
-				|- components/
-				|- objects/
-				|- modules/
-				|- one-offs/
 		|- public/
-			|- {fonts}
 		|- package.json
 		|- larva.config.js
+		|- .nvmrc
+```
+
+Next, check in root README.md from the scaffold and copy the scripts into package.json as directed.
+
+Finally, create a directory `template-parts/patterns` to hold the PHP version of patterns. If working from the CLI, you can copy/paste this bash command:
+
+```
+|- pmc-consuming-project/
 	|- template-parts/
 		|- patterns/
 ```
 
-### In a brand new project
+## `larva` Binary & Build Scripts
 
-To install Larva, run the following command from the asset directory of a consuming project:
-```
-npm install @penskemediacorp/larva
-```
+Inspired by [@wordpress/scripts](https://github.com/WordPress/gutenberg/tree/master/packages/scripts), this package provides a bindary and several scripts for performing common tasks when building UI with Larva. This code lives in the `scripts` directory of this package.
 
-Then, create a file, larva.config.js in the assets directory. Add the following:
+For asset building commands, JS and SCSS can be run at the same time, or separately, in order to minimize the build time for cases where either JS or SCSS, not both, need to be built.
 
-```
-const path = require( 'path' );
+### Usage
 
-module.exports = {
-	patterns: {
-		larvaPatternsDir: path.resolve( __dirname, 'node_modules/@penskemediacorp/larva-patterns' ),
-		projectPatternsDir: path.resolve( __dirname, './src/patterns' ),
-		ignoredModules: [
-			// Modules to be ignored from write-json
-		],
-		variants: [
-			// And Node prototype variants e.g. article-tags.vip.js
-		],
-	}
-}
-```
+Assuming Larva is installed, make sure the @penskemediacorp/larva package is at least at version 8.0.0-alpha.
 
-### Scripts in This Repo
-
-The following scripts should be added to the consuming project assets/package.json:
-
-```language:json
-"scripts": {
-	"larva": "nodemon -e twig,*.prototype.js,html,scss ./node_modules/@penskemediacorp/larva/lib/server.js",
-	"write-json": "larva write-json",
-}
-```
-
-#### `npm run write-json`
-
-This script will output the Node prototype and variant objects from the pattern Node files to JSON file in `assets/build/json` so that the default objects can be used in the PHP templates.
-
-This command accepts one option parameter to write the JSON from Larva for shared modules: `npm run write-json -- larva`.
-
-#### `npm run larva`
-
-This command will start the pattern server, where you will develop UI. You must be in the same directory as `larva.config.js` to run this command, in other words, working within a "host" project. This will bring up the server for developing patterns at localhost:3000. You must navigate to that URL manually.
-
-The Larva mono-repo is set up to be a "host" project, and the server can be started with `npm run larva` from within the root of this repository in order to working on core Larva patterns. This will likely move to within `packages/larva` to make the managing of assets match that of other "host" projects.
-
-# Larva Scripts
-
-Inspired by [@wordpress/scripts](https://github.com/WordPress/gutenberg/tree/master/packages/scripts), this package provides a collection of scripts for developing UI on PMC sites with Larva.
-
-For asset building commands, JS and SCSS can be run at the same time, or separately, in order to minimize the build time for instances where either JS or SCSS, not both, need to be built.
-
-## Usage
-
-First, install the npm package:
-
-```
-$ npm install @penskemediacorp/larva-scripts
-```
-
-To use these scripts, add the following to package.json in a project that uses the [Larva assets directory structure](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva#usage):
+To use the build scripts, add the following to package.json in a project that uses the [Larva assets directory structure](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva#usage):
 
 ```
 {
@@ -121,17 +93,7 @@ To use these scripts, add the following to package.json in a project that uses t
 }
 ```
 
-Additional scripts, coming soon:
-```
-{
-	"scripts": {
-		"parser": "larva parser",
-		"backstop": "larva backstop"
-	}
-}
-```
-
-## Overview of Functionality
+### Overview of Functionality
 
 This operates by way of a single binary, `larva`, and provides a layer of abstraction around CLI commands from various tools. The `larva` binary will point to a default configuration for each command and run its package's associated binary (e.g. `eslint` or `gulp`). The configurations are stored in separate package so as to be available to projects not using Larva.
 

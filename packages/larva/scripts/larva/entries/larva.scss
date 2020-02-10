@@ -1,0 +1,17 @@
+@import '@penskemediacorp/larva-tokens/build/default.custom-properties';
+
+// Note: these inline/async will be consolidated eventually.
+@import '@penskemediacorp/larva-css/build/css/generic.common.inline';
+// @import '@penskemediacorp/larva-css/build/css/generic.common.async'; - doesn't exist.
+@import '01-generic/*.common.*.scss';
+
+@import '@penskemediacorp/larva-css/build/css/algorithms.common.inline';
+@import '@penskemediacorp/larva-css/build/css/algorithms.common.async';
+@import '02-algorithms/*.common.*.scss';
+
+@import '@penskemediacorp/larva-css/build/css/utilities.common.inline';
+@import '@penskemediacorp/larva-css/build/css/utilities.common.async';
+@import '03-utilities/*.common.*.scss';
+
+@import '@penskemediacorp/larva-css/src/04-js/*.scss';
+@import '04-js/*.common.scss';
