@@ -13,7 +13,7 @@ const regex = new RegExp( '(.[^.]+)\.(.+)\.js$' );
 module.exports = function getPatternVariants( startPath ) {
 
 	// Only return Node prototype files that follow pattern name.XX.js
-	let files = fs.readdirSync( startPath ).filter( ( file ) => {
+	const files = fs.readdirSync( startPath ).filter( ( file ) => {
 		if ( /.+\..*\.js$/.test( file ) ) {
 			return file;
 		}
