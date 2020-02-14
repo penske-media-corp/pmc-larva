@@ -29,10 +29,7 @@ module.exports = {
 		larvaPatternsDir: path.resolve( __dirname, '../../../larva-patterns' ),
 		ignoredModules: [
 			'ignore-me'
-		],
-		variants: [
-			'featured'
-		],
+		]
 	},
 
 	parser: {

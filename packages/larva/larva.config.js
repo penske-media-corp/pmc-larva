@@ -1,6 +1,16 @@
 const path = require( 'path' );
 
 module.exports = {
+	webpack: {
+		aliases: {
+			'@js': path.resolve( './src/js' )
+		},
+		entries: {
+			'larva-ui': './entries/larva-ui.entry.js',
+			common: './entries/common.entry.js'
+		}
+	},
+
 	backstop: {
 		// testBaseUrl: 'https://notlaura.com',
 		testBaseUrl: 'http://localhost:3000/larva',
@@ -24,9 +34,6 @@ module.exports = {
 			'footer-menus',
 			'footer-social',
 			'footer-tip'
-		],
-		variants: [
-			'card'
 		]
 	}
 };

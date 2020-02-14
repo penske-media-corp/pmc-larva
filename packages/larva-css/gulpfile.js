@@ -3,7 +3,7 @@
  * - path resolved to src/ not src/scss
  * - no need to concat
  * - remove lrvCssDir
- * 
+ *
  * Potential improvement: make the config object dynamic, determine the
  * dest file according to the changed file.
  */
@@ -55,6 +55,12 @@ const css_files = {
 			file: 'utilities.common.inline.css'
 		}
 	},
+	js_async: {
+		css: {
+			orig: ['./src/**/js-*.common.async.scss'],
+			file: 'js.common.async.css'
+		}
+	},
 	js_inline: {
 		css: {
 			orig: ['./src/**/js-*.common.inline.scss'],
@@ -73,7 +79,7 @@ function styles( done ) {
 	sassOpts.outputStyle = 'compressed';
 
 	Object.keys( css_files ).forEach( val => {
-	
+
 		gulp.src( css_files[val].css.orig ).
 				pipe( gulpStylelint( {
 					failAfterError: false,

@@ -1,0 +1,1 @@
+This pattern is included in `vlanding-video-showcase`, and is intended to be used there only.

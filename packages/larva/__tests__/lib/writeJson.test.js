@@ -20,6 +20,7 @@ describe( 'writeJson', () => {
 		exec( 'mkdir ' + expectedJsonPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
+				done();
 			} else {
 				writeJson( patternConfig );
 				done();

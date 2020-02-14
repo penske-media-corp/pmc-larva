@@ -1,0 +1,33 @@
+@import 'setup';
+
+[data-video-showcase-active-text] {
+	border: 2px solid transparent;
+}
+
+// stylelint-disable selector-max-specificity
+#jwplayerContainer,
+[data-video-showcase-iframe] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+// stylelint-enable selector-max-specificity
+
+[data-video-showcase-trigger].is-playing [data-video-showcase-active-text] {
+	border-color: map-get( $TOKENS-MAP, color-brand-primary );
+
+	&::after {
+		content: attr(data-video-showcase-active-text);
+		position: absolute;
+		color: map-get( $TOKENS-MAP, color-white );
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		background-color: map-get( $TOKENS-MAP, background-color-brand-primary );
+		background-color: var( --background-color-brand-primary );
+		padding-top: $spacer-025;
+		padding-bottom: $spacer-025;
+		font-size: $font-size-14; // stylelint-disable-line property-blacklist
+	}
+}
