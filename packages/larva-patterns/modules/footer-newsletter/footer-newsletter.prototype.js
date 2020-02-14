@@ -11,7 +11,7 @@ c_title.c_title_classes = 'lrv-u-margin-b-025 lrv-u-font-family-primary lrv-u-te
 c_tagline.c_tagline_text = 'Sign up for our daily newsletter';
 c_tagline.c_tagline_classes = 'lrv-u-font-size-14 u-font-style-italic lrv-u-font-family-basic lrv-u-text-align-center';
 
-o_email_capture_form.c_button.c_button_classes += ' lrv-a-icon-invert';
+o_email_capture_form_minimal.c_button.c_button_classes += ' lrv-a-icon-invert';
 
 module.exports = {
 	footer_newsletter_classes: 'lrv-u-text-align-center lrv-u-color-white lrv-u-background-color-black lrv-u-flex lrv-u-flex-direction-column lrv-u-align-items-center',
