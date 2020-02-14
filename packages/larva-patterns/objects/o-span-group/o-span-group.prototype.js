@@ -1,6 +1,6 @@
 const clonedeep = require( 'lodash.clonedeep' );
-const c_span_prototype = require( '../../components/c-span/c-span.prototype' );
-const c_span = clonedeep( c_span_prototype );
+
+const c_span = clonedeep( require( '../../components/c-span/c-span.prototype' ) );
 
 module.exports = {
 	o_span_group_classes: '',
@@ -8,4 +8,4 @@ module.exports = {
 		c_span,
 		c_span
 	]
-}
+};

@@ -1,14 +1,9 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_lazy_image_prototype = require( '../../components/c-lazy-image/c-lazy-image.prototype.js' );
-const c_span_prototype = require( '../../components/c-span/c-span.prototype.js' );
-const c_title_prototype = require( '../../components/c-title/c-title.prototype.js' );
-const c_timestamp_prototype = require( '../../components/c-timestamp/c-timestamp.prototype.js' );
-
-const c_lazy_image = clonedeep( c_lazy_image_prototype );
-const c_span = clonedeep( c_span_prototype );
-const c_title = clonedeep( c_title_prototype );
-const c_timestamp = clonedeep( c_timestamp_prototype );
+const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-image.prototype.js' ) );
+const c_span = clonedeep( require( '../../components/c-span/c-span.prototype.js' ) );
+const c_title = clonedeep( require( '../../components/c-title/c-title.prototype.js' ) );
+const c_timestamp = clonedeep( require( '../../components/c-timestamp/c-timestamp.prototype.js' ) );
 
 module.exports = {
 	o_card_classes: '',

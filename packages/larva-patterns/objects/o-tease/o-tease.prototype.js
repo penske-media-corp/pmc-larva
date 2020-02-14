@@ -1,18 +1,11 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_lazy_image_prototype = require( '../../components/c-lazy-image/c-lazy-image.prototype' );
-const c_lazy_image = clonedeep( c_lazy_image_prototype );
-
-const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
-const c_title = clonedeep( c_title_prototype );
+const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-image.prototype' ) );
+const c_title = clonedeep( require( '../../components/c-title/c-title.prototype' ) );
+const c_tagline = clonedeep( require( '../../components/c-tagline/c-tagline.prototype' ) );
+const c_heading = clonedeep( require( '../../components/c-heading/c-heading.prototype' ) );
 
 c_title.c_title_url = false;
-
-const c_tagline_prototype = require( '../../components/c-tagline/c-tagline.prototype' );
-const c_tagline = clonedeep( c_tagline_prototype );
-
-const c_heading_prototype = require( '../../components/c-heading/c-heading.prototype' );
-const c_heading = clonedeep( c_heading_prototype );
 
 c_heading.c_heading_url = false;
 

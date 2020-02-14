@@ -1,6 +1,6 @@
 const clonedeep = require( 'lodash.clonedeep' );
-const o_icon_button_prototype = require( './o-icon-button.prototype' );
-const o_icon_button_search = clonedeep( o_icon_button_prototype );
+
+const o_icon_button_search = clonedeep( require( './o-icon-button.prototype' ) );
 
 o_icon_button_search.c_icon.c_icon_name = 'search';
 o_icon_button_search.o_icon_button_screen_reader_text = 'Click to Expand Search Input';
