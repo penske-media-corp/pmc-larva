@@ -12,15 +12,13 @@ const regex = new RegExp( '(.[^.]+)\.(.+)\.js$' );
 
 module.exports = function getPatternVariants( startPath ) {
 
-	// Only return Node prototype files, not Trig or reg
+	// Only return Node prototype files that follow pattern name.XX.js
 	let files = fs.readdirSync( startPath ).filter( ( file ) => {
 		if ( /.+\..*\.js$/.test( file ) ) {
 			return file;
 		}
 	} );
 
-	// 1. c-button.brand-basic.js is split after `c-button.` 
-	// 2. `brand-basic.js` remaining
-	// 2. slice off the file ext. to return `brand-basic`
+	// Return array of the name of the variant e.g. XX in name.XX.js
 	return files.map( ( file ) => file.match( regex )[2] );
 };
