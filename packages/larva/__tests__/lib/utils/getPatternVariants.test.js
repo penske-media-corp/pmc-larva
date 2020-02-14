@@ -11,6 +11,7 @@ describe( 'getPatternVariants', () => {
 			getPatternVariants( path.join( config.projectPatternsDir, 'components/c-nav-link/' ) )
 		 ).toEqual( 
 			[
+				'featured.aia',
 				'featured',
 				'prototype'
 			]
