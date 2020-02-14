@@ -14,4 +14,4 @@ module.exports = {
 	profile_body,
 	profile_gallery,
 	profile_related_stories
-}
+};

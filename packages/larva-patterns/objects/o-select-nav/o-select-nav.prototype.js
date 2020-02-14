@@ -9,5 +9,5 @@ module.exports = {
 	o_select_nav_classes: 'js-SelectNav js-SelectNav-redirect',
 	o_select_nav_select_classes: '',
 	c_button: c_button,
-	o_select_nav_options: [c_select_option, c_select_option, c_select_option]
+	o_select_nav_options: [ c_select_option, c_select_option, c_select_option ]
 };

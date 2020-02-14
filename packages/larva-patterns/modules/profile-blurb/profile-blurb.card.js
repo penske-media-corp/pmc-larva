@@ -1,8 +1,6 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const profile_blurb_prototype = require( './profile-blurb.prototype' );
-const profile_blurb_card = clonedeep( profile_blurb_prototype );
-
+const profile_blurb_card = clonedeep( require( './profile-blurb.prototype' ) );
 const c_button = clonedeep( require( '../../components/c-button/c-button.prototype' ) );
 
 profile_blurb_card.profile_blurb_classes = false;

@@ -9,6 +9,7 @@
 	height: var(--a-icon-height, #{ $spacer-1 });
 	width: var(--a-icon-width, #{ $spacer-1 });
 	transform: var( --a-icon-transform, none );
+	flex-shrink: 0;
 }
 
 @mixin _a-icon-base-pseudo( $pseudo-el ) {

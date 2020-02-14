@@ -1,4 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
+
 const c_icon_prototype = require( './c-icon.prototype' );
 const c_icon = clonedeep( c_icon_prototype );
 

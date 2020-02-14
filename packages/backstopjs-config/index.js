@@ -33,7 +33,7 @@ if ( undefined === appConfiguration.testBaseUrl && false === urlFromCli ) {
 	process.exit( 1 );
 }
 
-const scenarios = getScenarios( urlBase, paths, selectors,  appConfiguration.testScenario );
+const scenarios = getScenarios( urlBase, paths, selectors, appConfiguration.testScenario );
 
 console.log( chalk.blue( 'Testing paths: \n' + paths ) );
 

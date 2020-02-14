@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<h1>{{ name }}</h1>
+
+	<div class="lrv-a-floated-parent">
+		<h2>Utilities</h2>
+		{% for key, value in spec %}
+			{% if value.selectors|length > 0 %}
+				<section class="lrv-a-floated-left lrv-u-width-30p">
+					<h3>{{ key }}{% if true == value.tokens %}<strong class="lrv-u-font-size-14" style="background-color: yellow;">Tokens</strong>{% endif %}</h3>
+					<ul>
+						{% for selector in value.selectors %}
+							<li>{{ selector }}</li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+{% endblock content %}

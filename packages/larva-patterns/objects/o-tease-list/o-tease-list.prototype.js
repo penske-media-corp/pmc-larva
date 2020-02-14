@@ -1,7 +1,6 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const o_tease_prototype = require( '../o-tease/o-tease.prototype' );
-const o_tease = clonedeep( o_tease_prototype );
+const o_tease = clonedeep( require( '../o-tease/o-tease.prototype' ) );
 
 module.exports = {
 	o_tease_list_classes: 'lrv-a-unstyle-list',
@@ -11,4 +10,4 @@ module.exports = {
 		o_tease,
 		o_tease
 	]
-}
+};

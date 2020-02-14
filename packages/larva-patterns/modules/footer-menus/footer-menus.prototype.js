@@ -1,6 +1,6 @@
-const path = require( 'path' );
-const clone = require( '@penskemediacorp/larva' ).clone;// This should be in this repo, probably
-const o_nav = clone( path.resolve( __dirname, '../../objects/o-nav/o-nav.prototype' ) );
+const clonedeep = require( 'lodash.clonedeep' );
+
+const o_nav = clonedeep( require( '../../objects/o-nav/o-nav.prototype' ) );
 
 o_nav.o_nav_title_text = 'Footer Menu';
 o_nav.o_nav_title_id_attr = 'pmc-footer';
@@ -10,7 +10,7 @@ o_nav.o_nav_list_classes += ' lrv-js-MobileHeightToggle-target lrv-u-padding-b-0
 o_nav.o_nav_list_item_classes = 'lrv-u-padding-lr-1 lrv-u-padding-tb-050 lrv-u-font-size-18@mobile-max lrv-u-font-size-12 lrv-u-color-grey-light lrv-u-color-white:hover';
 
 module.exports = {
-	footer_menu_classes: "lrv-a-grid lrv-a-cols3@tablet lrv-u-background-color-black lrv-u-color-white",
+	footer_menu_classes: 'lrv-a-grid lrv-a-cols3@tablet lrv-u-background-color-black lrv-u-color-white',
 	o_navs: [
 		o_nav,
 		o_nav,

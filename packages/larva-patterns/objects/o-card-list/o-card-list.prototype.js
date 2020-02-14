@@ -1,7 +1,6 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const o_card_prototype = require( '../o-card/o-card.prototype' );
-const o_card = clonedeep( o_card_prototype );
+const o_card = clonedeep( require( '../o-card/o-card.prototype' ) );
 
 module.exports = {
 	o_card_list_classes: 'lrv-a-unstyle-list',

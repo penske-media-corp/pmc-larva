@@ -1,0 +1,42 @@
+{% if vlanding_video_card_permalink_url %}
+<a href="{{ vlanding_video_card_permalink_url }}" class="vlanding-video-card__link {{ vlanding_video_card_link_classes }}" data-video-showcase-trigger="{{ vlanding_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ vlanding_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ vlanding_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ vlanding_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ vlanding_video_card_link_showcase_permalink_data_url }}">
+	{% endif %}
+
+	<article class="vlanding-video-card {{ vlanding_video_card_classes }}" data-video-showcase-player>
+
+		<div class="{{ vlanding_video_card_crop_class }}" data-video-showcase-active-text="{{ vlanding_video_card_active_txt_attr }}">
+
+			{# TODO: Can we use image tag here, we need vlanding_video_card_crop_data_attr option with crop_classs #}
+			{% if c_lazy_image %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+			{% endif %}
+
+			{# TODO: Need c_play_badge #}
+
+			{% if vlanding_video_card_is_player %}
+				<iframe hidden frameborder="0" data-video-showcase-iframe></iframe>
+				<div hidden id="jwplayerContainer" data-video-showcase-jwplayer></div>
+			{% endif %}
+
+		</div>
+
+		{% if c_span %}
+			{% include "@larva/components/c-span/c-span.twig" with c_span %}
+		{% endif %}
+
+		{% if c_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		{% endif %}
+
+	</article>
+
+	{% if vlanding_video_card_permalink_url %}
+</a>
+{% endif %}
+
+{% if vlanding_video_card_social_share_markup %}
+	<div class="lrv-a-hidden" data-video-showcase-trigger-social-share>
+		{{ vlanding_video_card_social_share_markup }}
+	</div>
+{% endif %}
+

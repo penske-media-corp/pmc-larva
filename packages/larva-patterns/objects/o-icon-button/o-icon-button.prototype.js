@@ -1,10 +1,7 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_span_prototype = require( '../../components/c-span/c-span.prototype' );
-const c_icon_prototype = require( '../../components/c-icon/c-icon.prototype' );
-
-const c_span = clonedeep( c_span_prototype );
-const c_icon = clonedeep( c_icon_prototype );
+const c_span = clonedeep( require( '../../components/c-span/c-span.prototype' ) );
+const c_icon = clonedeep( require( '../../components/c-icon/c-icon.prototype' ) );
 
 c_icon.c_icon_name = 'hamburger';
 c_icon.c_icon_url = false;
