@@ -1,0 +1,46 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "{!BALTO}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback for primary-fancy."
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "{!EKSELL}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via @font-face."
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback for secondary-fancy"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_50}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_50}",
+			"type": "color",
+			"category": "text-color"
+		}
+	}
+}

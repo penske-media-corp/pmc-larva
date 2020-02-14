@@ -1,0 +1,12 @@
+<section class="new-module // {{ new_module_classes }}">
+	<div class="lrv-a-wrapper">
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	</div>
+	<div class="lrv-a-wrapper">
+		<div class="lrv-a-grid lrv-a-cols3@desktop">
+			{% for item in new_module_cards %}
+				{% include "@larva/objects/o-card/o-card.twig" with item %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

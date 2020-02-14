@@ -1,0 +1,81 @@
+{
+	"imports": [
+		"../base/aliases.json",
+		"../base/color.json",
+		"../base/font-family.json",
+		"../base/background-color.json",
+		"./variety.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_46}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLUE_21}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!WHITE_95}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_46}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLUE_21}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_46}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "{!BLUE_21}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "{!GRAPHIK_COND}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "{!IBM_PLEX_SANS}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BODY_FANCY": {
+			"value": "{!IBM_PLEX_SERIF}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "{!IBM_PLEX_MONO}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC_FANCY": {
+			"value": "{!PARA_SUPREME}",
+			"type": "font-family",
+			"category": "font-family"
+		}
+	}
+}

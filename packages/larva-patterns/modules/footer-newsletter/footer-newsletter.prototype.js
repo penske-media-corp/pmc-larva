@@ -1,6 +1,6 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const o_email_capture_form = clonedeep( require( '../../objects/o-email-capture-form/o-email-capture-form.minimal' ) );
+const o_email_capture_form_minimal = clonedeep( require( '../../objects/o-email-capture-form/o-email-capture-form.minimal' ) );
 const c_title = clonedeep( require( '../../components/c-title/c-title.prototype' ) );
 const c_tagline = clonedeep( require( '../../components/c-tagline/c-tagline.prototype' ) );
 
@@ -17,5 +17,5 @@ module.exports = {
 	footer_newsletter_classes: 'lrv-u-text-align-center lrv-u-color-white lrv-u-background-color-black lrv-u-flex lrv-u-flex-direction-column lrv-u-align-items-center',
 	c_title: c_title,
 	c_tagline: c_tagline,
-	o_email_capture_form: o_email_capture_form
+	o_email_capture_form: o_email_capture_form_minimal
 };

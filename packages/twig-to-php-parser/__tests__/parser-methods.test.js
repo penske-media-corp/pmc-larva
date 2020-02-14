@@ -1,6 +1,6 @@
 const assert = require( 'assert' );
-( path = require( 'path' ) );
-( fs = require( 'fs' ) );
+const path = require( 'path' );
+const fs = require( 'fs' );
 
 const parserMethods = require( '../index.js' ).methods;
 const exec = require( 'child_process' ).exec;
@@ -9,8 +9,7 @@ const fixture = path.join( __dirname, 'fixtures' );
 
 const expectations = {
 	childInclude: '<?php \\PMC::render_template( CHILD_THEME_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
-	larvaInclude: '<?php \\PMC::render_template( CHILD_THEME_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>'
-	// larvaInclude: '<?php \\PMC::render_template( PMC_CORE_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>' - uncomment when core logic is reactivated
+	larvaInclude: '<?php \\PMC::render_template( PMC_CORE_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>'
 };
 
 describe( 'parse include statements', function() {
