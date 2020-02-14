@@ -1,10 +1,19 @@
-const clone = require( '@penskemediacorp/larva' ).clone;
-const path = require( 'path' );
-const c_link_path = path.resolve( __dirname, '../../components/c-link/c-link.prototype' );
-const o_nav = clone( path.resolve( __dirname, '../../objects/o-nav/o-nav.prototype' ) );
-const c_icon = clone( path.resolve( __dirname, '../../components/c-icon/c-icon.full' ) );
+const clonedeep = require( 'lodash.clonedeep' );
+
+const c_link_prototype = require( '../../components/c-link/c-link.prototype' );
+const c_tagline = clonedeep( require( '../../components/c-tagline/c-tagline.prototype' ) );
+const c_link = clonedeep( require( '../../components/c-link/c-link.prototype' ) );
+const o_nav = clonedeep( require( '../../objects/o-nav/o-nav.prototype' ) );
+const c_icon = clonedeep( require( '../../components/c-icon/c-icon.full' ) );
 
 const data = require( '../../_data/brands.json' );
+
+c_tagline.c_tagline_classes = 'lrv-u-margin-a-00';
+c_tagline.c_tagline_text = 'Copyright © 2018 Penske Business Media, LLC. All rights reserved.';
+
+c_link.c_link_classes = 'lrv-a-unstyle-link';
+c_link.c_link_text = 'Powered by WordPress.com VIP';
+c_link.c_link_url = '#';
 
 o_nav.o_nav_title_text = 'Our Sites';
 o_nav.o_nav_list_items = [];
@@ -15,7 +24,7 @@ c_icon.c_icon_url = 'https://pmc.com';
 c_icon.c_icon_rel_name = 'noopener noreferrer';
 
 data.brands.forEach( ( brand ) => {
-	let c_link = clone( c_link_path );
+	let c_link = clonedeep( c_link_prototype );
 
 	c_link.c_link_text = brand.name;
 	c_link.c_link_url = brand.url;
@@ -31,15 +40,8 @@ o_nav.o_nav_list_classes += ' lrv-u-background-color-white lrv-u-padding-b-050 l
 o_nav.o_nav_list_item_classes = 'lrv-u-color-grey-medium-dark';
 
 module.exports = {
-	"c_icon": c_icon,
-	"c_tagline": {
-		"c_tagline_classes": "lrv-u-margin-a-00",
-		"c_tagline_text": "Copyright © 2018 Penske Business Media, LLC. All rights reserved."
-	},
-	"c_link": {
-		"c_link_classes": "lrv-a-unstyle-link",
-		"c_link_text": "Powered by WordPress.com VIP",
-		"c_link_url": "#"
-	},
-	"o_nav": o_nav
+	c_icon: c_icon,
+	c_tagline: c_tagline,
+	c_link: c_link,
+	o_nav: o_nav
 };

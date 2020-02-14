@@ -1,21 +1,16 @@
-const clonedeep = require( 'lodash.clonedeep' )
-const c_icon_prototype = require( '../../components/c-icon/c-icon.prototype' );
+const clonedeep = require( 'lodash.clonedeep' );
 
-const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
-const c_title = clonedeep( c_title_prototype );
+const c_icon_prototype = require( '../../components/c-icon/c-icon.prototype' );
+const c_title = clonedeep( require( '../../components/c-title/c-title.prototype' ) );
+const c_tagline = clonedeep( require( '../../components/c-tagline/c-tagline.prototype' ) );
+const o_social_list = clonedeep( require( '../../objects/o-social-list/o-social-list.prototype' ) );
 
 c_title.c_title_url = false;
 c_title.c_title_classes = 'lrv-u-margin-b-025 lrv-u-font-family-primary lrv-u-text-align-center';
 c_title.c_title_text = 'Connect with Us';
 
-const c_tagline_prototype = require( '../../components/c-tagline/c-tagline.prototype' );
-const c_tagline = clonedeep( c_tagline_prototype );
-
 c_tagline.c_tagline_classes = 'lrv-u-font-size-14 u-font-style-italic lrv-u-font-family-basic lrv-u-text-align-center';
 c_tagline.c_tagline_text = 'Get our latest stories in the feed of your favorite networks';
-
-const o_social_list_prototype = require( '../../objects/o-social-list/o-social-list.prototype' );
-const o_social_list = clonedeep( o_social_list_prototype );
 
 const social = [ 'instagram', 'pinit', 'twitter', 'facebook', 'youtube' ];
 
