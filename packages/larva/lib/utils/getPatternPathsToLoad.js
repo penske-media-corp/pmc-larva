@@ -1,4 +1,3 @@
-const isCoreTheme = require( './isCoreTheme.js' );
 const fs = require( 'fs' );
 
 module.exports = function getPatternPathsToLoad( config ) {
