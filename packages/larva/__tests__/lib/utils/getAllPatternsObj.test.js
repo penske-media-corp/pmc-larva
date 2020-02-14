@@ -7,20 +7,20 @@ const getModuleNamesFromDirectory = require( '../../../lib/utils/getModuleNamesF
 const config = getAppConfiguration( 'patterns' );
 
 const expectedPatterns = {
-	components: {
+	'components': {
 		'c-nav-link': [
 			'featured.aia',
 			'featured',
 			'prototype'
 		]
 	},
-	modules: {
+	'modules': {
 		'test-module': [
 			'featured',
 			'prototype'
 		]
 	},
-	objects: {
+	'objects': {
 		'o-crap': [],
 		'o-nav': []
 	},
@@ -33,25 +33,31 @@ const expectedPatterns = {
 
 describe( 'getAllPatternsObj', () => {
 
-	it( 'returns an array of variants', () => {
+	it( 'returns an object containing all patterns and variants', () => {
 		function getAllPatterns( startPath ) {
-			const components = getSubDirectoryNames( path.join( startPath, 'components' ) );
-			const objects = getSubDirectoryNames( path.join( startPath, 'objects' ) );
-			const oneOffs = getSubDirectoryNames( path.join( startPath, 'one-offs' ) );
-			const modules = getModuleNamesFromDirectory( startPath, config.ignoredModules );
 
-			let obj = {
-				'components': {},
-				'objects': {},
-				'modules': {},
-				'one-offs': {},
-			};
+			const patternDirs = getSubDirectoryNames( startPath );
 
-			components.map( ( c ) => obj.components[c] = getPatternVariants( path.join( startPath, `components/${c}` ) ) );
-			modules.map( ( m ) => obj.modules[m] = getPatternVariants( path.join( startPath, `modules/${m}` ) ) );
-			objects.map( ( m ) => obj.objects[m] = getPatternVariants( path.join( startPath, `objects/${m}` ) ) );
-			oneOffs.map( ( m ) => obj['one-offs'][m] = getPatternVariants( path.join( startPath, `one-offs/${m}` ) ) );
-			
+			let obj = {};
+
+			patternDirs.map( ( patternType ) => {
+				let patterns = [];
+				obj[patternType] = {};
+
+				// Modules can be ignored, which maybe is unecessary
+				// but for now continue on that path.
+				if ( 'modules' === patternType ) {
+					patterns = getModuleNamesFromDirectory( startPath, config.ignoredModules );
+				} else {
+					patterns = getSubDirectoryNames( path.join( startPath, patternType ) );
+				}
+
+				patterns.map( ( pattern ) => {
+					obj[patternType][pattern] = getPatternVariants( path.join( startPath, `${patternType}/${pattern}` ) );
+				} );
+
+			} );
+
 			return obj;
 		}
 
