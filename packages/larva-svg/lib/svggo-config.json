@@ -1,0 +1,67 @@
+{
+	"plugins": [{
+			"removeTitle": false
+		},
+		{
+			"removeDoctype": true
+		},
+		{
+			"removeXMLNS": true
+		},
+		{
+			"removeXMLProcInst": true
+		},
+		{
+			"removeComments": true
+		},
+		{
+			"removeUselessDefs": true
+		},
+		{
+			"removeEmptyAttrs": true
+		},
+		{
+			"removeUselessStrokeAndFill": true
+		},
+		{
+			"removeUnknownsAndDefaults": true
+		},
+		{
+			"convertPathData": false
+		},
+		{
+			"cleanupIDs": true
+		},
+		{
+			"cleanupNumericValues": {
+				"floatPrecision": 3,
+				"leadingZero": true
+			}
+		},
+		{
+			"minifyStyles": true
+		},
+		{
+			"convertTransform": true
+		},
+		{
+			"cleanupAttrs": true
+		},
+		{
+			"convertPathData": true
+		},
+		{
+			"convertShapeToPath": true
+		},
+		{
+			"convertColors": {
+				"shorthex": false
+			}
+		},
+		{
+			"removeAttrs": {
+				"attrs": "fill"
+			}
+		}
+	]
+}
