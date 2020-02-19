@@ -3,5 +3,6 @@ module.exports = {
 	c_link_classes: 'lrv-a-unstyle-link',
 	c_link_text: 'A plain text link',
 	c_link_url: '#',
-	c_link_is_external: false,
+	c_link_rel_attr: false,
+	c_link_target_attr: false,
 };
