@@ -1,3 +1,3 @@
-<a class="c-link {{ modifier_class }} {{ c_link_classes }}" href="{{ c_link_url }}">
+<a class="c-link {{ modifier_class }} {{ c_link_classes }}" href="{{ c_link_url }}" {% if c_link_target_attr %} target="{{ c_link_target_attr }}" {% endif %} {% if c_link_rel_attr %} rel="{{ c_link_rel_attr }}" {% endif %}>
 	{{ c_link_text }}
 </a>
