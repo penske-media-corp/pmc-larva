@@ -181,15 +181,15 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 		console.error( chalk.red.bold( 'Error loading the pattern route. \nCheck the structure of the URL. It should be: \nhttp://localhost:3000/{larva|project}/{components|objects|modules|one-offs}/{optional variant}.' ) );
 	}
 
-	if ( 'algorithms' !== req.params.type ) {
-		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
-	}
-
 	// Support query parameters for conditionally loading stylesheets and scripts
 	req.params[ 'query' ] = req.query;
 
 	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'pattern_nav' ] = patterns;
+
+	if ( 'algorithms' !== req.params.type ) {
+		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
+	}
 
 	res.end( twing.render( 'pattern.html', req.params ) );
 });
