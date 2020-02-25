@@ -33,7 +33,6 @@ module.exports = {
 		'selector-max-combinators': 3,
 		'selector-max-class': 2,
 		'selector-max-compound-selectors': 2,
-		'at-rule-blacklist': [ 'extend' ],
 		'no-unknown-animations': true,
 		'font-family-name-quotes': 'always-where-recommended',
 		'function-name-case': 'lower',
