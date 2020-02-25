@@ -1,5 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
-const o_figure = clonedeep( require( '@penskemediacorp/larva-patterns/objects/o-figure/o-figure.prototype.js' ) );
+const o_figure = clonedeep( require( '../../objects/o-figure/o-figure.prototype.js' ) );
 
 o_figure.c_lazy_image.c_lazy_image_crop_style_attr = '';
 o_figure.c_lazy_image.c_lazy_image_link_url = '';
