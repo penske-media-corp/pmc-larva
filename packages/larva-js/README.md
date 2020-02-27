@@ -16,7 +16,7 @@ For both authoring and usage notes regarding each of the above categories, refer
 
 ## Overview of Functionality
 
-There is no functionality directly provided by this package. Consuming projects must import the desired JavaScript into their build step, and initialize it using functionality provided by each JS module. 
+There is no functionality directly provided by this package. Consuming projects must import the desired JavaScript into their build step, and initialize it using functionality provided by each JS module.
 
 **Refer to the larva-js source of the specific JS module you need**, but in general, this would be done as follows:
 
@@ -28,7 +28,7 @@ If you are using UI built with Larva that goes along with the module, then thing
 
 ## Contributing to larva-js
 
-Contributions to this repository can be made by using running Larva server inside the `pmc-larva/packages/larva` for a sandbox environment, and linking the larva-js package to test local changes. 
+Contributions to this repository can be made by using running Larva server inside the `pmc-larva/packages/larva` for a sandbox environment, and linking the larva-js package to test local changes.
 
 First, clone the pmc-larva monorepo, then following steps should get you set up:
 
@@ -43,7 +43,7 @@ $ npm install && npm link @penskemediacorp/larva-js
 # Start the larva server
 $ npm run larva
 ```
-Now, dependecies should be installed, and that the larva-js package is linked to the local copy for development, and you can access the UI in the Larva server at localhost:3001. 
+Now, dependecies should be installed, and that the larva-js package is linked to the local copy for development, and you can access the UI in the Larva server at localhost:3001.
 
 Next, we need to start the JS build. Open a new command window, and make sure you are inside `pmc-larva/packages/larva`. Run the following command:
 
@@ -54,29 +54,7 @@ $ npm run dev:js
 
 Now, you can start writing JS inside the larva-js package. Refer to pmc-larva/packages/larva/src/js/scripts.js and follow the conventions for importing JS from larva-js.
 
-## Things To Be Aware Of 
-
-**docs TODO**
-
-This section can be a list of anything the is critical to be aware of, things like:
-
-* Threat modeling
-* Accessibility testing workflow
-* Testing requirements or steps
-* ... more to come.
-
 ## History and Changelog
-
-**docs TODO**
 
 [Click here](CHANGELOG.md) to view this project's main history and changes.
 
-- [Click here](some-module-a/CHANGELOG.md) to view this project's some-module-a history and changes.
-- [Click here](some-module-b/CHANGELOG.md) to view this project's some-module-b history and changes.
-
-
-## Support
-
-**docs TODO**
-
-In this section, indicate where an engineer should go for support. Is there a specific Slack channel, team, or individual that can answer questions about this software?
