@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Update larva script in readme
+
 ## [8.5.0-alpha] - 02-25-2020
 
 ### Added
@@ -15,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Functionality to get all pattern objects in preparation for a static site build
-- Expose target and rel attributes in c-link 
+- Expose target and rel attributes in c-link
 
 ### Fixed
 - Bug in server where the node protoype was no longer showing in docs
