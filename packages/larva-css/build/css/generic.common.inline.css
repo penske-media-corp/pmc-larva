@@ -1,4 +1,4 @@
-*{box-sizing:border-box}img{max-width:100%;height:auto}figure{margin:0}[hidden]{display:none;width:0;height:0}#icon-sprite{display:none}svg{fill:currentColor}cite{font-style:normal}
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:theme("borderColor.default", currentColor)}img{max-width:100%;height:auto}figure{margin:0}[hidden]{display:none;width:0;height:0}#icon-sprite{display:none}svg{fill:currentColor}cite{font-style:normal}
 
 ::placeholder{color:#e6e6e6}button{padding-left:0;padding-right:0}
 
