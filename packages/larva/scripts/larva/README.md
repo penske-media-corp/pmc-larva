@@ -59,3 +59,12 @@ To start developing:
 
 Read about developing UI [on the Larva Wiki](https://github.com/penske-media-corp/pmc-larva/wiki). 
 
+# Troubleshooting
+
+Some placeholder text used within Larva could leak into your project. To prevent that you will have to reset those fields as follow.
+
+Given `c_figcaption_caption_markup` has a default value and you want to reset it in your project:
+
+```
+profile_blurb_card.o_figure.c_figcaption.c_figcaption_caption_markup = '';
+```
