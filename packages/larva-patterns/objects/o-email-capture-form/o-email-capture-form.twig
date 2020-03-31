@@ -5,7 +5,12 @@
 		{% include "@larva/components/c-button/c-button.twig" with c_button %}
 	</div>
 
-	<input type="hidden" name="__contextName" value="FormPost" />
+	{% if o_email_capture_form_context_name %}
+		<input type="hidden" name="__contextName" value="{{ o_email_capture_form_context_name }}"/>
+	{% else %}
+		<input type="hidden" name="__contextName" value="FormPost"/>
+	{% endif %}
+
 	<input type="hidden" name="__executionContext" value="Post" />
 	<input type="hidden" name="__successPage" data-email-capture-success-url="{{ o_email_capture_form_success_url }}" value="" />
 
