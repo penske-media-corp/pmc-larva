@@ -1,6 +1,6 @@
 # Backstop JS Config
 
-This npm package provides configuration for visual regression, or screenshot, testing with [Backstop JS](https://github.com/garris/BackstopJS). 
+This npm package provides configuration for visual regression, or screenshot, testing with [Backstop JS](https://github.com/garris/BackstopJS).
 
 ## Overview of Functionality
 
@@ -11,12 +11,17 @@ This npm package provides configuration for visual regression, or screenshot, te
 
 ## Development Setup
 
-First install the package and its dependencies. This includes headless Chrome, so will take a moment.
+1. First install the package and its dependencies. This includes headless Chrome, so will take a moment.
 
-1. Install the package. Run this command from the same location as package.json.
-	```language:bash
-	npm install @penskemediacorp/backstopjs-config backstopjs --save-dev
-	```
+	- Install @penskemediacorp/backstopjs-config in the project. Run this command from the same location as package.json.
+		```language:bash
+		npm install @penskemediacorp/backstopjs-config --save-dev
+		```
+
+	- For now, backstopjs is a peer dependency so you should install this globally:
+		```language:bash
+		npm install backstopjs --global
+		```
 
 2. Add configuration to larva.config.js. You can _either_ test modules from the Larva repo, or test a full page screenshot at specific paths.
 
@@ -59,7 +64,7 @@ First install the package and its dependencies. This includes headless Chrome, s
 	```
 
 3. Add the npm script to package.json:
-	
+
 	```language:javascript
 	"scripts": {
 		"backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config"
@@ -68,15 +73,21 @@ First install the package and its dependencies. This includes headless Chrome, s
 
 ## Running the Tests
 
-After you have added the configuration, it is time to run the tests. 
+After you have added the configuration, it is time to run the tests.
 
-1. You must first generate reference screenshots from a master branch, or other branch that contains the UI you want to test against. When you are on that branch, run the following:
+1. Before testing, Larva must be running:
+
+	```
+	npm run larva
+	```
+
+2. You must first generate reference screenshots from a master branch, or other branch that contains the UI you want to test against. When you are on that branch, run the following:
 	```
 	# Generate reference screenshots
 	npm run backstop -- reference
 	```
-2. Checkout to your feature branch, or the branch that contains changes you want to test for regressions. 
-3. Run the test with: 
+3. Checkout to your feature branch, or the branch that contains changes you want to test for regressions.
+4. Run the test with:
 	```
 	# Run the tests, then open an HTML page with a UI for viewing results.
 	npm run backstop -- test
