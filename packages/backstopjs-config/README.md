@@ -68,9 +68,10 @@ This npm package provides configuration for visual regression, or screenshot, te
 
 	```language:javascript
 	"scripts": {
-		"backstop": "larva write-json && docker run --rm --network='host' -v $(pwd):/src backstopjs/backstopjs --config=node_modules/@penskemediacorp/backstopjs-config",
+		"backstop": "larva write-json && docker run --rm -v $(pwd):/src --network='host' --user $(id -u):$(id -g) backstopjs/backstopjs --config=node_modules/@penskemediacorp/backstopjs-config",
 		"backstop:reference": "npm run backstop -- reference",
 		"backstop:test": "npm run backstop -- test && npm run backstop:open-report",
+		"backstop:approve": "npm run backstop -- approve",
 		"backstop:open-report": "opener ./backstop_data/html_report/index.html",
 		"backstop:pull-docker": "docker pull backstopjs/backstopjs",
 	}
