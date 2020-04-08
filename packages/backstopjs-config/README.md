@@ -13,13 +13,15 @@ This npm package provides configuration for visual regression, or screenshot, te
 
 1. First install the package and its dependencies. This includes headless Chrome, so will take a moment.
 
-	- Install @penskemediacorp/backstopjs-config in the project. Run this command from the same location as package.json.
+	- Install @penskemediacorp/backstopjs-config in the project's assets folder.
 		```language:bash
 		npm install @penskemediacorp/backstopjs-config --save-dev
 		```
 
-	- For now, backstopjs is a peer dependency so you should install this globally:
+	- For now, backstopjs is a peer dependency so you should install this globally. When using `nvm`, globally installed packages are scoped to the nodejs version they were installed on - so be sure to run `nvm install && nvm use` in your project's assets folder before installing.
+
 		```language:bash
+		# install backstopjs globally
 		npm install backstopjs --global
 		```
 
