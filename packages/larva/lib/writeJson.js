@@ -32,11 +32,7 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 			// If JSON data and module prototype are the same, pass, otherwise write the data to file
 			let hasChanged = true;
 			try {
-				if (
-					fs.existsSync( jsonDestPath ) &&
-						JSON.stringify( require( jsonDestPath ) ) ===
-							JSON.stringify( moduleData )
-				) {
+				if ( fs.existsSync( jsonDestPath ) && JSON.stringify( require( jsonDestPath ) ) === JSON.stringify( moduleData ) ) {
 					hasChanged = false;
 				}
 			} catch ( error ) {
@@ -45,13 +41,9 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 
 			if ( hasChanged ) {
 				writeJsonToFile( jsonDestPath, moduleData );
-				console.log(
-					chalk.green.bold( `Wrote JSON for ${moduleName}.${variant}` )
-				);
+				console.log( chalk.green.bold( `Wrote JSON for ${moduleName}.${variant}` ) );
 			} else {
-				console.log(
-					chalk.grey( `No updates in ${moduleName}.${variant}` )
-				);
+				console.log( chalk.grey( `No updates in ${moduleName}.${variant}` ) );
 			}
 		}
 
