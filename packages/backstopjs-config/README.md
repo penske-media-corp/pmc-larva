@@ -100,13 +100,17 @@ After you have added the configuration, it is time to run the tests.
 2. You must first generate reference screenshots from a master branch, or other branch that contains the UI you want to test against. When you are on that branch, run the following:
 	```
 	# Generate reference screenshots
-	npm run backstop -- reference
+	npm run backstop:reference
 	```
 3. Checkout to your feature branch, or the branch that contains changes you want to test for regressions.
 4. Run the test with:
 	```
 	# Run the tests, then open an HTML page with a UI for viewing results.
-	npm run backstop -- test
+	npm run backstop:test
+	```
+5. If the the failed tests have been reviewed and are approved changes, run the approve command to save the new reference screenshots:
+	```
+	npm run backstop:approve
 	```
 
 ## Things To Be Aware Of
