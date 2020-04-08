@@ -18,11 +18,10 @@ This npm package provides configuration for visual regression, or screenshot, te
 		npm install @penskemediacorp/backstopjs-config --save-dev
 		```
 
-	- For now, backstopjs is a peer dependency so you should install this globally. When using `nvm`, globally installed packages are scoped to the nodejs version they were installed on - so be sure to run `nvm install && nvm use` in your project's assets folder before installing.
+	- Pull docker image
 
 		```language:bash
-		# install backstopjs globally
-		npm install backstopjs --global
+		docker pull backstopjs/backstopjs
 		```
 
 2. Add configuration to larva.config.js. You can _either_ test modules from the Larva repo, or test a full page screenshot at specific paths.
@@ -69,8 +68,22 @@ This npm package provides configuration for visual regression, or screenshot, te
 
 	```language:javascript
 	"scripts": {
-		"backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config"
+		"backstop": "larva write-json && docker run --rm --network='host' -v $(pwd):/src backstopjs/backstopjs --config=node_modules/@penskemediacorp/backstopjs-config",
+		"backstop:reference": "npm run backstop -- reference",
+		"backstop:test": "npm run backstop -- test && npm run backstop:open-report",
+		"backstop:open-report": "opener ./backstop_data/html_report/index.html",
+		"backstop:pull-docker": "docker pull backstopjs/backstopjs",
 	}
+	```
+
+	Script explanation:
+
+	```bash
+	docker run --rm \
+	-v $(pwd):/src \             # Mount the source code
+	--network='host' \           # Allows docker to access your locally running larva application
+	--user $(id -u):$(id -g) \   # Run as given user (you) - without this, files get saved by root user
+	backstopjs/backstopjs --config=node_modules/@penskemediacorp/backstopjs-config
 	```
 
 ## Running the Tests

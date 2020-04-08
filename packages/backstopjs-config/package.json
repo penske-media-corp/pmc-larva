@@ -27,7 +27,7 @@
     "@penskemediacorp/larva": "^8.5.3-alpha.0",
     "webpack-merge": "^4.2.2"
   },
-  "peerDependencies": {
-    "backstopjs": "^4.3.2"
+  "devDependencies": {
+    "opener": "^1.5.1"
   }
 }
