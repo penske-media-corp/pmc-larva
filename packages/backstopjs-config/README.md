@@ -73,7 +73,7 @@ This npm package provides configuration for visual regression, or screenshot, te
 		"backstop:test": "npm run backstop -- test && npm run backstop:open-report",
 		"backstop:approve": "npm run backstop -- approve",
 		"backstop:open-report": "opener ./backstop_data/html_report/index.html",
-		"backstop:pull-docker": "docker pull backstopjs/backstopjs",
+		"backstop:docker-pull": "docker pull backstopjs/backstopjs",
 	}
 	```
 
