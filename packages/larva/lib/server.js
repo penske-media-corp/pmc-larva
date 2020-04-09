@@ -5,7 +5,7 @@ const fs = require( 'fs' );
 const globby = require( 'globby' );
 const chalk = require( 'chalk' );
 
-const BUILD_DIR = path.join( process.cwd() + '/build' );
+const BUILD_DIR = path.join( process.cwd() + '/build/site' );
 
 const {
 	TwingEnvironment,
@@ -171,7 +171,7 @@ app.get( '/css', function (req, res) {
 	res.end( twing.render( 'css.html', req.params ) );
 });
 
-app.get( '/:source/:type/:name/:variant?', function (req, res) {
+app.get( '/:source/:type/:name/:variant?', function ( req, res ) {
 
 	let patternsPath;
 
@@ -195,11 +195,12 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 
 	const html = twing.render( 'pattern.html', req.params );
 
-	const patternPath = req.params['source'] + '/' + req.params['type'] + '/' + req.params['name'];
+	const patternBuildPath = req.params['source'] + '/' + req.params['type'] + '/' + req.params['name'];
 
-	fs.writeFileSync( path.join( BUILD_DIR, patternPath + '.html' ), html );
+	fs.writeFileSync( path.join( BUILD_DIR, patternBuildPath + '.html' ), html );
 
 	res.end( html );
+
 });
 
 app.listen(port, () => {
