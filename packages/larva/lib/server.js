@@ -193,13 +193,7 @@ app.get( '/:source/:type/:name/:variant?', function ( req, res ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
 	}
 
-	const html = twing.render( 'pattern.html', req.params );
-
-	const patternBuildPath = req.params['source'] + '/' + req.params['type'] + '/' + req.params['name'];
-
-	fs.writeFileSync( path.join( BUILD_DIR, patternBuildPath + '.html' ), html );
-
-	res.end( html );
+	res.end( twing.render( 'pattern.html', req.params ) );
 
 });
 
