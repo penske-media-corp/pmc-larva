@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- larva: catch exception for invalid JSON in writeJson
+
 ## [8.5.3-alpha] - 03-31-2020
 
 - larva-patterns: Update o_email_capture_form_context_name parameter to o_email_capture_form_context_name_attr for o-email-capture-form

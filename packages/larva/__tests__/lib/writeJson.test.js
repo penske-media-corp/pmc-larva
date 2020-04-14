@@ -17,7 +17,7 @@ describe( 'writeJson', () => {
 	let testIgnoredJsonPath = path.join( expectedJsonPath, 'ignore-me.prototype.json' );
 
 	beforeAll( ( done ) => {
-		exec( 'mkdir ' + expectedJsonPath, ( err ) => {
+		exec( 'mkdirp ' + expectedJsonPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
 				done();
@@ -58,7 +58,7 @@ describe( 'writeJson from Larva', () => {
 	let testJsonPath = path.join( expectedJsonPath, 'pmc-footer.prototype.json' );
 
 	beforeAll( ( done ) => {
-		exec( 'mkdir ' + expectedJsonPath, ( err ) => {
+		exec( 'mkdirp ' + expectedJsonPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
 			} else {
