@@ -10,49 +10,62 @@ const getPatternRoutes = require( '../../lib/utils/getPatternRoutes' );
 
 const buildPath = path.join( fixture, './build-html' );
 
-function generateStatic ( directory ) {
-	const patternsObj = getAllPatternsObj( directory );
-	const routesArr = getPatternRoutes( patternsObj );
+const patternsObj = getAllPatternsObj( path.join( fixture, './src/patterns' ) );
+const routesArr = getPatternRoutes( patternsObj );
 
+function generateStatic( routesArr ) {
 
 	routesArr.map( ( route ) => {
 		const dir = path.join( buildPath, route );
 		mkdirp.sync( dir );
-		fs.writeFileSync( `${dir}/index.html`, 'asdasd' );
+
+		fs.writeFileSync( `${dir}/index.html`, 'derp' );
+		// fetch( 'http://localhost:3001/ ' ).then( response => {
+		// } );
 	} );
 
 }
 
 describe( 'generateStatic', () => {
 
-	beforeAll( ( done ) => {
+	beforeEach( ( done ) => {
 
 		exec( 'mkdir -p ' + buildPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
-				done();
-			} else {
-				generateStatic( path.join( fixture, './src/patterns' ) );
-				done();
 			}
+			done();
 		} );
 
 	} );
 
 	it( 'creates an index.html file for a prototype pattern', () => {
+
+		const routesArr = [
+			'components/c-nav-link/'
+		];
+
+		generateStatic( routesArr );
+
 		expect( fs.existsSync( path.join( buildPath, 'components/c-nav-link/index.html' ) ) ).toBe( true );
 	} );
 
 	it( 'creates an html file for a pattern variant', () => {
+		const routesArr = [
+			'components/c-nav-link/featured'
+		];
+
+		generateStatic( routesArr );
+
 		expect( fs.existsSync( path.join( buildPath, 'components/c-nav-link/featured/index.html' ) ) ).toBe( true );
 	} );
 
-	afterAll( ( done ) => {
+	afterEach( ( done ) => {
 		exec( 'rm -r ' + buildPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
-				done();
 			}
+			done();
 		} );
 	} );
 } );
