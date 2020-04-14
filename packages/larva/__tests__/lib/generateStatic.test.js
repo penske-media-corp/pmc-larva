@@ -1,7 +1,9 @@
 const path = require( 'path' );
+const exec = require( 'child_process' ).exec;
+
 const fs = require( 'fs' );
 const mkdirp = require( 'mkdirp' );
-const exec = require( 'child_process' ).exec;
+const http = require( 'http' );
 
 const fixture = path.join( __dirname, '../fixtures' );
 
@@ -17,11 +19,19 @@ function generateStatic( routesArr ) {
 
 	routesArr.map( ( route ) => {
 		const dir = path.join( buildPath, route );
+
 		mkdirp.sync( dir );
 
-		fs.writeFileSync( `${dir}/index.html`, 'derp' );
-		// fetch( 'http://localhost:3001/ ' ).then( response => {
-		// } );
+		// TODO: this needs to be a promise
+		http.get( {
+			hostname: 'localhost',
+			port: 3001,
+			path: '/',
+			agent: false  // Create a new agent just for this one request
+		}, ( res ) => {
+			fs.writeFileSync( `${dir}/index.html`, res );
+		} );
+
 	} );
 
 }
@@ -47,7 +57,9 @@ describe( 'generateStatic', () => {
 
 		generateStatic( routesArr );
 
-		expect( fs.existsSync( path.join( buildPath, 'components/c-nav-link/index.html' ) ) ).toBe( true );
+		expect(
+			fs.existsSync( path.join( buildPath, 'components/c-nav-link/index.html' ) )
+		).toBe( true );
 	} );
 
 	it( 'creates an html file for a pattern variant', () => {
@@ -57,7 +69,26 @@ describe( 'generateStatic', () => {
 
 		generateStatic( routesArr );
 
-		expect( fs.existsSync( path.join( buildPath, 'components/c-nav-link/featured/index.html' ) ) ).toBe( true );
+		expect(
+			fs.existsSync( path.join( buildPath, 'components/c-nav-link/featured/index.html' ) )
+		).toBe( true );
+	} );
+
+	it( 'writes the pattern html to the file', () => {
+		const routesArr = [
+			'components/c-nav-link/featured',
+			'components/c-nav-link/',
+			'one-offs/newsire/',
+		];
+
+		generateStatic( routesArr );
+
+		expect(
+			fs.readFileSync(
+				path.join( buildPath, routesArr[0] + '/index.html' ),
+				{ encoding: 'utf8' }
+			)
+		).toBe( expect.stringContaining( 'class="c-nav-link' ));
 	} );
 
 	afterEach( ( done ) => {
