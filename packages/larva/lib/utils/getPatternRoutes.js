@@ -29,13 +29,13 @@ module.exports = function getPatternRoutes ( patterns ) {
 		patternRoutes = Object.keys( patterns ).map( ( type ) => {
 
 			return Object.keys( patterns[type] ).map( ( name ) => {
-				let path = `/${type}/${name}/`;
+				let path = `/${type}/${name}`;
 
 				if ( patterns[type][name].length > 1 ) {
 
 					return patterns[type][name].map( ( variant ) => {
 						if ( 'prototype' !== variant ) {
-							return path + variant;
+							return path + '/' + variant;
 						} else {
 							return path;
 						}

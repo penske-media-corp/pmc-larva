@@ -13,12 +13,12 @@ describe( 'getPatternRoutes', () => {
 		const expected = [
 			'/components/c-nav-link/featured.aia',
 			'/components/c-nav-link/featured',
-			'/components/c-nav-link/',
+			'/components/c-nav-link',
 			'/modules/test-module/featured',
-			'/modules/test-module/',
-			'/objects/o-crap/',
-			'/objects/o-nav/',
-			'/one-offs/newswire/'
+			'/modules/test-module',
+			'/objects/o-crap',
+			'/objects/o-nav',
+			'/one-offs/newswire'
 		];
 
 		expect( getPatternRoutes( patterns ) ).toStrictEqual( expected );
