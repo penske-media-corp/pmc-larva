@@ -14,17 +14,12 @@ function generateStatic ( directory ) {
 	const patternsObj = getAllPatternsObj( directory );
 	const routesArr = getPatternRoutes( patternsObj );
 
-	// navigate to path in server
-	// prepare the file extension
-	// write the output to a file
-
 
 	routesArr.map( ( route ) => {
 		const dir = path.join( buildPath, route );
 		mkdirp.sync( dir );
 		fs.writeFileSync( `${dir}/index.html`, 'asdasd' );
 	} );
-
 
 }
 
