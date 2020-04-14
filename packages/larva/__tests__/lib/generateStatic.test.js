@@ -12,20 +12,20 @@ const buildPath = path.join( fixture, './build-html' );
 
 function generateStatic ( directory ) {
 	const patternsObj = getAllPatternsObj( directory );
+	const routesArr = getPatternRoutes( patternsObj );
 
 	// navigate to path in server
 	// prepare the file extension
 	// write the output to a file
 
-	let dir = path.join( buildPath, 'components/c-nav-link/' );
 
-	// patternsObj.map( ( pattern ) => {
+	routesArr.map( ( route ) => {
+		const dir = path.join( buildPath, route );
+		mkdirp.sync( dir );
+		fs.writeFileSync( `${dir}/index.html`, 'asdasd' );
+	} );
 
-	// } );
 
-	mkdirp.sync( dir );
-
-	fs.writeFileSync( dir + '/index.html', 'asdasd' );
 }
 
 describe( 'generateStatic', () => {
@@ -46,6 +46,10 @@ describe( 'generateStatic', () => {
 
 	it( 'creates an index.html file for a prototype pattern', () => {
 		expect( fs.existsSync( path.join( buildPath, 'components/c-nav-link/index.html' ) ) ).toBe( true );
+	} );
+
+	it( 'creates an html file for a pattern variant', () => {
+		expect( fs.existsSync( path.join( buildPath, 'components/c-nav-link/featured/index.html' ) ) ).toBe( true );
 	} );
 
 	afterAll( ( done ) => {
