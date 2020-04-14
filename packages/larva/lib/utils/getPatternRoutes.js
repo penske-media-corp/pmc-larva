@@ -22,28 +22,35 @@
 
 module.exports = function getPatternRoutes ( patterns ) {
 
-	const patternArrays = Object.keys( patterns ).map( ( type ) => {
+	let patternRoutes = [];
 
-		return Object.keys( patterns[type] ).map( ( name ) => {
-			let path = `/${type}/${name}/`;
+	try {
 
-			if ( patterns[type][name].length > 1 ) {
+		patternRoutes = Object.keys( patterns ).map( ( type ) => {
 
-				return patterns[type][name].map( ( variant ) => {
-					if ( 'prototype' !== variant ) {
-						return path + variant;
-					} else {
-						return path;
-					}
-				} );
+			return Object.keys( patterns[type] ).map( ( name ) => {
+				let path = `/${type}/${name}/`;
 
-			} else {
-				return path;
-			}
+				if ( patterns[type][name].length > 1 ) {
+
+					return patterns[type][name].map( ( variant ) => {
+						if ( 'prototype' !== variant ) {
+							return path + variant;
+						} else {
+							return path;
+						}
+					} );
+
+				} else {
+					return path;
+				}
+
+			} ).flat();
 
 		} ).flat();
+	} catch ( error ) {
+		throw new Error( 'Could not build the pattern routes. Is the pattern object structure correct?', error );
+	}
 
-	} );
-
-	return patternArrays.flat();
+	return patternRoutes;
 }

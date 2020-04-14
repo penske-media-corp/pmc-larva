@@ -1,9 +1,6 @@
-const assert = require( 'assert' );
 const path = require( 'path' );
 const fixture = path.join( __dirname, '../../fixtures' );
 
-// If needed, will return projectPatternsDir pointing to fixtures:
-// const getAppConfiguration = require( '../../../lib/utils/getAppConfiguration' );
 const getAllPatternsObj = require( '../../../lib/utils/getAllPatternsObj' );
 const getPatternRoutes = require( '../../../lib/utils/getPatternRoutes' );
 
@@ -25,6 +22,22 @@ describe( 'getPatternRoutes', () => {
 		];
 
 		expect( getPatternRoutes( patterns ) ).toStrictEqual( expected );
+
+	} );
+
+	it( 'throws an error if the object structure has more than two nested keys', () => {
+		const incorrectPatternObject = {
+			components: {
+				'c-link': {
+					'c-link-inner': []
+				},
+			},
+			other: [ 'asdasd', 'asdasd' ]
+		};
+
+		expect( () => {
+			getPatternRoutes( incorrectPatternObject );
+		} ).toThrow( 'pattern' );
 
 	} );
 } );
