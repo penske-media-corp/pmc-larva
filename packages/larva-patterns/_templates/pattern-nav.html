@@ -15,12 +15,20 @@
 
 	<ul class="lrv-a-unstyle-list">
 		{% for t in patterns.tests %}
-			{% include "@larva/components/c-link/c-link.twig" with {
-				c_link_text: t,
-				c_link_classes: 'lrv-u-display-block',
-				c_link_url: "/" ~ source ~ "/__tests__/" ~ t ~ "/",
-			} %}
+
+			{# Note:
+				This logic will be removed when nav is generated
+				from pattern object.
+			#}
+			{% if 'fixture' not in t   %}
+				{% include "@larva/components/c-link/c-link.twig" with {
+					c_link_text: t,
+					c_link_classes: 'lrv-u-display-block',
+					c_link_url: "/" ~ source ~ "/__tests__/" ~ t ~ "/",
+				} %}
+			{% endif %}
 		{% endfor %}
+
 	</ul>
 
 	<h4 class="lrv-u-padding-tb-050">Components</h4>
