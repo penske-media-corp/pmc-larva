@@ -11,14 +11,14 @@
 		<p><a href="/css">Larva CSS Docs</a></p>
 	{% endif %}
 
-	<h4 class="lrv-u-padding-tb-050">__tests__ (.html)</h4>
+	<h4 class="lrv-u-padding-tb-050">Template Tests (.html)</h4>
 
 	<ul class="lrv-a-unstyle-list">
-		{% for o in patterns.oneOffs %}
+		{% for t in patterns.tests %}
 			{% include "@larva/components/c-link/c-link.twig" with {
-				c_link_text: o,
+				c_link_text: t,
 				c_link_classes: 'lrv-u-display-block',
-				c_link_url: "/" ~ source ~ "/one-offs/" ~ o ~ "/",
+				c_link_url: "/" ~ source ~ "/__tests__/" ~ t ~ "/",
 			} %}
 		{% endfor %}
 	</ul>
@@ -58,5 +58,21 @@
 			} %}
 		{% endfor %}
 	</ul>
+
+	{% if 'project' == source %}
+
+		<h4 class="lrv-u-padding-tb-050">One-offs (.html)</h4>
+
+		<ul class="lrv-a-unstyle-list">
+			{% for o in patterns.oneOffs %}
+				{% include "@larva/components/c-link/c-link.twig" with {
+					c_link_text: o,
+					c_link_classes: 'lrv-u-display-block',
+					c_link_url: "/" ~ source ~ "/one-offs/" ~ o ~ "/",
+				} %}
+			{% endfor %}
+		</ul>
+
+	{% endif %}
 
 </nav>
