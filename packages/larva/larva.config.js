@@ -14,7 +14,6 @@ module.exports = {
 	},
 
 	backstop: {
-		// testBaseUrl: 'https://notlaura.com',
 		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
 		testScenario: {
 			'delay': 1000,
