@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-	{% if 'one-offs' == type or 'algorithms' == type %} 
-		{% set ext = '.html' %}
-	{% else %}
+	{% if 'components' == type or 'modules' == type or 'objects' == type %}
 		{% set ext = '.twig' %}
+	{% else %}
+		{% set ext = '.html' %}
 	{% endif %}
 
 	{% set path = type ~"/" ~ name ~ "/" ~ name ~ ext %}
@@ -14,7 +14,7 @@
 	</div>
 
 	{% include path with data %}
-	
+
 	<div class="lrv-u-background-color-grey-light lrv-a-grid lrv-u-font-size-12 lrv-u-border-t-1 lrv-u-border-color-grey lrv-u-padding-a-2 js-to-hide">
 		<details>
 			<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}</code> README</summary>
@@ -40,7 +40,7 @@
 		{% endif %}
 
 		{% if type == 'algorithms' %}
-			
+
 		{% endif %}
 	</div>
 {% endblock %}

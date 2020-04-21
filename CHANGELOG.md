@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.6.1-alpha] - 4-21-2020
+
+* larva-patterns - Move DEV-* one-offs to `__tests__`
+* larva-patterns - Update pattern extension logic to be more flexible for .html
+* larva-patterns - Add `__tests__` to the pattern nav
+* larva - Add reference screenshots for the larva template tests
+
 ## [8.6.0-alpha] - 4-21-2020
 
 * larva-js - Add SideSkinAd and removeDesktopXlClasses utility

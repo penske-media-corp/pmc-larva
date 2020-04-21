@@ -51,10 +51,14 @@ let patterns = {
 app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
 app.use( '/static/' , express.static( path.join( __dirname, '../build' ) ) );
 
+// NOTE: When the static site builder script is merged, this manual pattern
+// collection for the nav will come from an object based on the directory structure
+
 if( appConfiguration.larvaPatternsDir ) {
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
 	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
 	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
+	patterns.larva.tests = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/__tests__' ) );
 }
 
 if( appConfiguration.projectPatternsDir ) {
@@ -63,6 +67,7 @@ if( appConfiguration.projectPatternsDir ) {
 	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
 	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
 	patterns.project.oneOffs = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/one-offs' ) );
+	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
 }
 
 app.get( '/', function (req, res) {
