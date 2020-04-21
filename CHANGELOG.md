@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.6.0-alpha] - 4-21-2020
+
+* larva-js - Add SideSkinAd and removeDesktopXlClasses utility
+* larva-js - Add MegaMenu
+* larva-js - Add TabsManager
+* larva-patterns - Stub pmc cookie and skins object in base.html for font loading
+* larva - Add skins stub to larva-ui JS so it works in pattern libraries with has_side_skins query
+
 ## [8.5.4-alpha] - 04-14-2020
 
 - larva: catch exception for invalid JSON in writeJson
