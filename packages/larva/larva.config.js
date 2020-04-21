@@ -3,7 +3,8 @@ const path = require( 'path' );
 module.exports = {
 	webpack: {
 		aliases: {
-			'@js': path.resolve( './src/js' )
+			'@js': path.resolve( './src/js' ),
+			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
 		},
 		entries: {
 			'larva-ui': './entries/larva-ui.entry.js',
