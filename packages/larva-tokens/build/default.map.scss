@@ -1,6 +1,5 @@
 
 $default-map: (
-  'color-brand-primary': (rgb(65, 126, 244)),
   'color-white': (rgb(255, 255, 255)),
   'color-grey-light': (rgb(230, 230, 230)),
   'color-grey': (rgb(140, 140, 140)),
@@ -16,7 +15,6 @@ $default-map: (
   'font-family-secondary': (Helvetica, serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
-  'background-color-brand-primary': (rgb(65, 126, 244)),
   'background-color-body': (rgb(255, 255, 255)),
   'background-color-white': (rgb(255, 255, 255)),
   'background-color-grey-lightest': (rgb(247, 247, 247)),
@@ -37,5 +35,7 @@ $default-map: (
   'border-color-grey-light': (rgb(204, 204, 204)),
   'border-color-grey': (rgb(140, 140, 140)),
   'border-color-grey-dark': (rgb(106, 106, 106)),
+  'background-color-brand-primary': (rgb(65, 126, 244)),
+  'color-brand-primary': (rgb(65, 126, 244)),
   'border-color-brand-primary': (rgb(65, 126, 244)),
 );
