@@ -20,7 +20,9 @@
  * @return {array} - An array of string routes e.g. [ '/components/c-link/', '/components/c-link/sponsored' ]
  */
 
-module.exports = function getPatternRoutes ( patterns ) {
+const chalk = require( 'chalk' );
+
+module.exports = function getPatternRoutes( patterns ) {
 
 	let patternRoutes = [];
 
@@ -29,7 +31,7 @@ module.exports = function getPatternRoutes ( patterns ) {
 		patternRoutes = Object.keys( patterns ).map( ( type ) => {
 
 			return Object.keys( patterns[type] ).map( ( name ) => {
-				let path = `/${type}/${name}`;
+				let path = `${type}/${name}`;
 
 				if ( patterns[type][name].length > 1 ) {
 
@@ -49,7 +51,7 @@ module.exports = function getPatternRoutes ( patterns ) {
 
 		} ).flat();
 	} catch ( error ) {
-		throw new Error( 'Could not build the pattern routes. Is the pattern object structure correct?', error );
+		console.error( chalk.red( 'Could not build the pattern routes. Is the pattern object structure correct?' ), error );
 	}
 
 	return patternRoutes;

@@ -11,14 +11,14 @@ describe( 'getPatternRoutes', () => {
 		const patterns = getAllPatternsObj( path.join( fixture, 'src/patterns' ) );
 
 		const expected = [
-			'/components/c-nav-link/featured.aia',
-			'/components/c-nav-link/featured',
-			'/components/c-nav-link',
-			'/modules/test-module/featured',
-			'/modules/test-module',
-			'/objects/o-crap',
-			'/objects/o-nav',
-			'/one-offs/newswire'
+			'components/c-nav-link/featured.aia',
+			'components/c-nav-link/featured',
+			'components/c-nav-link',
+			'modules/test-module/featured',
+			'modules/test-module',
+			'objects/o-crap',
+			'objects/o-nav',
+			'one-offs/newswire'
 		];
 
 		expect( getPatternRoutes( patterns ) ).toStrictEqual( expected );
