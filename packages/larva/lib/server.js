@@ -5,8 +5,6 @@ const fs = require( 'fs' );
 const globby = require( 'globby' );
 const chalk = require( 'chalk' );
 
-const BUILD_DIR = path.join( process.cwd() + '/build/site' );
-
 const {
 	TwingEnvironment,
 	TwingLoaderFilesystem,
@@ -176,7 +174,7 @@ app.get( '/css', function (req, res) {
 	res.end( twing.render( 'css.html', req.params ) );
 });
 
-app.get( '/:source/:type/:name/:variant?', function ( req, res ) {
+app.get( '/:source/:type/:name/:variant?', function (req, res) {
 
 	let patternsPath;
 
@@ -199,7 +197,6 @@ app.get( '/:source/:type/:name/:variant?', function ( req, res ) {
 	}
 
 	res.end( twing.render( 'pattern.html', req.params ) );
-
 });
 
 app.listen(port, () => {
