@@ -20,9 +20,6 @@
     "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@penskemediacorp/larva-css": "^8.5.4-alpha.0",
-    "@penskemediacorp/larva-js": "^8.6.0-alpha.0",
-    "@penskemediacorp/larva-svg": "^7.0.0-alpha.0",
     "lodash.clonedeep": "^4.5.0"
   }
 }

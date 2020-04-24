@@ -21,7 +21,6 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@penskemediacorp/larva-css": "^8.5.4-alpha.0",
 		"flickity": "^2.2.1"
 	}
 }
