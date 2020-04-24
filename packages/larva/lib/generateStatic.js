@@ -4,7 +4,7 @@ const axios = require( 'axios' );
 // const http = require( 'http' );
 const fs = require( 'fs' );
 
-function generateStatic( routesArr, buildPath, done, basePath = 'http://localhost:3001/larva' ) {
+module.exports = function generateStatic( routesArr, buildPath, done, basePath = 'http://localhost:3001/larva' ) {
 
 	const promises = routesArr.map( ( route ) => {
 
@@ -24,5 +24,3 @@ function generateStatic( routesArr, buildPath, done, basePath = 'http://localhos
 		done();
 	} );
 }
-
-module.exports = generateStatic;
