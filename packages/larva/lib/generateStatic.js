@@ -6,21 +6,27 @@ const fs = require( 'fs' );
 
 module.exports = function generateStatic( routesArr, buildPath, done, basePath = 'http://localhost:3001/larva' ) {
 
-	const promises = routesArr.map( ( route ) => {
+	try {
 
-		const dir = path.join( buildPath, route );
-		const url = `${basePath}/${route}`;
+		const promises = routesArr.map( ( route ) => {
 
-		return axios.get( url ).then( ( response ) => {
-			mkdirp.sync( dir );
-			fs.writeFileSync( `${dir}/index.html`, response.data );
-		} ).catch( ( e ) => {
-			console.error( e );
-		});
+			const dir = path.join( buildPath, route );
+			const url = `${basePath}/${route}`;
 
-	} );
+			return axios.get( url ).then( ( response ) => {
+				mkdirp.sync( dir );
+				fs.writeFileSync( `${dir}/index.html`, response.data );
+			} ).catch( ( e ) => {
+				console.error( e );
+			});
 
-	axios.all( promises ).then( () => {
-		done();
-	} );
+		} );
+
+		axios.all( promises ).then( () => {
+			done();
+		} );
+
+	} catch ( e ) {
+		console.error( e );
+	}
 }
