@@ -12,10 +12,12 @@ const getPatternRoutes = require( '../../lib/utils/getPatternRoutes' );
 
 const buildPath = path.join( fixture, './build-html' );
 
-const patternsObj = getAllPatternsObj( path.join( fixture, './src/patterns' ) );
+// Note: this is the patternsObj from the monorepo's larva/src/patterns sandbox.
+const patternsObj = getAllPatternsObj( path.join( __dirname, '../../src/patterns/' ) );
+
 const routesArr = getPatternRoutes( patternsObj );
 
-function generateStatic( routesArr, patternSource = 'larva' ) {
+function generateStatic( routesArr, patternSource = 'project' ) {
 
 	routesArr.map( ( route ) => {
 		const dir = path.join( buildPath, route );
@@ -59,7 +61,7 @@ describe( 'generateStatic', () => {
 	it( 'creates an index.html file for a prototype pattern', () => {
 
 		const routesArr = [
-			'components/c-link/'
+			'components/c-link'
 		];
 
 		generateStatic( routesArr );
