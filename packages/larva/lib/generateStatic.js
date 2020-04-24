@@ -1,8 +1,7 @@
 const path = require( 'path' );
 const mkdirp = require( 'mkdirp' );
-const axios = require( 'axios' );
-// const http = require( 'http' );
 const fs = require( 'fs' );
+const axios = require( 'axios' );
 
 module.exports = function generateStatic( routesArr, buildPath, done, basePath = 'http://localhost:3001/larva' ) {
 
