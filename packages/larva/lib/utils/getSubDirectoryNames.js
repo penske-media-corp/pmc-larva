@@ -3,11 +3,11 @@ const chalk = require( 'chalk' );
 
 /**
  * Get Subdirectory names
- * 
+ *
  * @para path String of path to subdirectory
- * 
+ *
  * @link: https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs
- **/ 
+ **/
 
 module.exports = function getSubDirectoryNames( path ) {
 	try {
@@ -15,6 +15,6 @@ module.exports = function getSubDirectoryNames( path ) {
 			return fs.statSync( path + '/' + file ).isDirectory();
 		});
 	} catch {
-		console.warn( chalk.yellow( path + ' doesn\'t exist.' ) );
+		console.error( path + ' doesn\'t exist.' );
 	}
 }
