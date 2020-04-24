@@ -25,19 +25,4 @@ describe( 'getPatternRoutes', () => {
 
 	} );
 
-	it( 'throws an error if the object structure has more than two nested keys', () => {
-		const incorrectPatternObject = {
-			components: {
-				'c-link': {
-					'c-link-inner': []
-				},
-			},
-			other: [ 'asdasd', 'asdasd' ]
-		};
-
-		expect( () => {
-			getPatternRoutes( incorrectPatternObject );
-		} ).toThrow( 'pattern' );
-
-	} );
 } );
