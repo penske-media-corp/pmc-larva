@@ -1,9 +1,11 @@
 const path = require( 'path' );
+const LARVA_PORT = 3001;
 
 module.exports = {
 	webpack: {
 		aliases: {
-			'@js': path.resolve( './src/js' )
+			'@js': path.resolve( './src/js' ),
+			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
 		},
 		entries: {
 			'larva-ui': './entries/larva-ui.entry.js',
@@ -12,17 +14,19 @@ module.exports = {
 	},
 
 	backstop: {
-		// testBaseUrl: 'https://notlaura.com',
-		testBaseUrl: 'http://localhost:3000/larva',
+		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
 		testScenario: {
 			'delay': 1000,
 			'misMatchThreshold': 0.5,
 		},
-		// testPaths: [ '/about/' ],
-		larvaModules: [ 'footer', 'breadcrumbs' ],
+		testPaths: [
+			'profile',
+			'profile-index',
+			'vlanding'
+		],
 		backstopConfig: {
 			'engineOptions': {
-				'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:3000', '--proxy-bypass-list=<-loopback>' ],
+				'args': [ '--no-sandbox', '--proxy-server=127.0.0.1:' + LARVA_PORT, '--proxy-bypass-list=<-loopback>' ],
 			}
 		}
 	},

@@ -1,3 +1,5 @@
+{% set has_side_skins = query.has_side_skins %}
+
 <!doctype html>
 <html lang="en" class="wf-active">
 	<head>
@@ -8,6 +10,25 @@
 		{% block stylesheets %}{% endblock %}
 
 		<link rel="stylesheet" href="/static/css/larva-ui.css">
+
+		<script>
+			// Stub in PMC cookie object so fonts load on Larva server
+			if ( ! window.pmc ) {
+				window.pmc = {
+					cookie: {
+						get: () => {},
+						set: () => {},
+						expire: () => {},
+					}
+				};
+			}
+
+			// Stub skins object
+			{% if has_side_skins %}
+				window.pmc_dfp_skin = {};
+			{% endif %}
+
+		</script>
 
 	</head>
 	<body class="lrv-u-margin-a-00">
