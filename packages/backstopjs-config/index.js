@@ -52,7 +52,7 @@ module.exports = merge({
 		},
 		{
 			'name': 'desktop-xl',
-			'width': 1300,
+			'width': 1250,
 			'height': 1000
 		}
 	],
