@@ -42,6 +42,6 @@
 	"@penskemediacorp/stylelint-config": "file:packages/stylelint-config",
 	"@penskemediacorp/stylelint-css-algorithms": "file:packages/stylelint-css-algorithms",
 	"@penskemediacorp/eslint-config": "file:packages/eslint-config",
-	"@penskemediacorp/twig-to-php-parser": "file:packages/twig-to-php-parser",
+	"@penskemediacorp/twig-to-php-parser": "file:packages/twig-to-php-parser"
   }
 }
