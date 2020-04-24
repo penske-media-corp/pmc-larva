@@ -1,5 +1,8 @@
-<h3 class="c-title {{ modifier_class }} {{ c_title_classes }}">
-
+{% if c_title_is_h4 %}
+	<h4 class="c-title {{ modifier_class }} {{ c_title_classes }}">
+{% else %}
+	<h3 class="c-title {{ modifier_class }} {{ c_title_classes }}">
+{% endif %}
 	{% if c_title_above_url %}
 		<a href="{{ c_title_above_url }}" class="{{ c_title_above_link_classes }}">
 			{{ c_title_above_text }}
@@ -24,4 +27,8 @@
 		</a>
 	{% endif %}
 
-</h3>
+{% if c_title_is_h4 %}
+	</h4>
+{% else %}
+	</h3>
+{% endif %}
