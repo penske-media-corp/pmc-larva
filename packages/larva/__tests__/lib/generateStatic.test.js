@@ -7,17 +7,9 @@ const http = require( 'http' );
 
 const fixture = path.join( __dirname, '../fixtures' );
 
-const getAllPatternsObj = require( '../../lib/utils/getAllPatternsObj' );
-const getPatternRoutes = require( '../../lib/utils/getPatternRoutes' );
-
 const buildPath = path.join( fixture, './build-html' );
 
-// Note: this is the patternsObj from the monorepo's larva/src/patterns sandbox.
-const patternsObj = getAllPatternsObj( path.join( __dirname, '../../src/patterns/' ) );
-
-const routesArr = getPatternRoutes( patternsObj );
-
-function generateStatic( routesArr, patternSource = 'project' ) {
+function generateStatic( routesArr, patternSource = 'larva' ) {
 
 	routesArr.map( ( route ) => {
 		const dir = path.join( buildPath, route );
@@ -37,7 +29,7 @@ function generateStatic( routesArr, patternSource = 'project' ) {
 			} );
 
 			res.on( 'end', () => {
-				fs.writeFileSync( `${dir}/index.html`, 'body' );
+				fs.writeFileSync( `${dir}/index.html`, body );
 			} );
 		} );
 
@@ -86,8 +78,8 @@ describe( 'generateStatic', () => {
 	it( 'writes the pattern html to the file', () => {
 		const routesArr = [
 			'components/c-button/ghost',
-			'components/c-button/',
-			'modules/newsire/',
+			'components/c-button',
+			'modules/footer',
 		];
 
 		generateStatic( routesArr );
