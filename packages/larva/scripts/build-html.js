@@ -9,8 +9,10 @@ const getAllPatternsObj = require( '../lib/utils/getAllPatternsObj' );
 
 const config = getAppConfiguration( 'patterns' );
 const cliArgs = getArgsFromCli();
+const buildPath = path.join( process.cwd(), './build/html' );
+const urlBase = 'http://localhost:3001/project';
 
-let fromLarva = 'larva' === cliArgs[1] ? true : false;
+const fromLarva = 'larva' === cliArgs[1] ? true : false;
 
 const patternsObj = ( () => {
 	const source = fromLarva ? config.larvaPatternsDir : config.projectPatternsDir;
@@ -19,9 +21,7 @@ const patternsObj = ( () => {
 
 const routesArr = getPatternRoutes( patternsObj );
 
-const buildPath = path.join( process.cwd(), './build/html' );
-const urlBase = 'http://localhost:3001/project';
-
 generateStatic( routesArr, buildPath, () => {
-	console.log( chalk.green( 'Successfully build static site.' ) );
+	// TODO: copy assets into build path
+	console.log( chalk.green( `Successfully build static site to ${buildPath}` ) );
 }, urlBase );
