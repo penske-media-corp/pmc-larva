@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "test": "./node_modules/.bin/jest",
-    "postinstall": "lerna bootstrap"
+    "postinstall": "lerna bootstrap --ci"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
