@@ -2,9 +2,9 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 const exec = require( 'child_process' ).exec;
 
-const fixture = path.join( __dirname, '../fixtures' );
 const generateStatic = require( '../../lib/generateStatic' );
 
+const fixture = path.join( __dirname, '../fixtures' );
 const buildPath = path.join( fixture, './build-html' );
 
 describe( 'generateStatic', () => {
