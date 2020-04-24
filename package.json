@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "test": "./node_modules/.bin/jest"
+	"test": "./node_modules/.bin/jest",
+	"postinstall": "lerna bootstrap"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
