@@ -2,8 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "test": "./node_modules/.bin/jest",
-    "postinstall": "lerna bootstrap --hoist --no-ci"
+    "test": "./node_modules/.bin/jest"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -31,5 +30,18 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+	"@penskemediacorp/larva": "file:packages/larva",
+	"@penskemediacorp/larva-css": "file:packages/larva-css",
+	"@penskemediacorp/larva-js": "file:packages/larva-js",
+	"@penskemediacorp/larva-scss": "file:packages/larva-scss",
+	"@penskemediacorp/larva-svg": "file:packages/larva-svg",
+	"@penskemediacorp/larva-patterns": "file:packages/larva-patterns",
+	"@penskemediacorp/larva-tokens": "file:packages/larva-tokens",
+	"@penskemediacorp/stylelint-config": "file:packages/stylelint-config",
+	"@penskemediacorp/stylelint-css-algorithms": "file:packages/stylelint-css-algorithms",
+	"@penskemediacorp/eslint-config": "file:packages/eslint-config",
+	"@penskemediacorp/twig-to-php-parser": "file:packages/twig-to-php-parser",
   }
 }
