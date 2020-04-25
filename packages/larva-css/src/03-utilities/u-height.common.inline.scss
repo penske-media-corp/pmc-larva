@@ -8,10 +8,14 @@
 	height: auto;
 }
 
-.lrv-u-max-height-50 {
-	max-height: pmc-rem(50);
-}
+@if true == map-get( $features, utilities-v2 ) {
 
-.lrv-u-height-16 {
-	height: pmc-rem(16);
+} @else {
+	.lrv-u-max-height-50 {
+		max-height: pmc-rem(50);
+	}
+
+	.lrv-u-height-16 {
+		height: pmc-rem(16);
+	}
 }

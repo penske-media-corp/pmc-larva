@@ -2,6 +2,11 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-tokens/build/default.map.scss';
 
+$NAMESPACE: 'lrv-';
 $TOKENS-MAP: $default-map;
 
-$ICONS_BUILD_PATH: '../icons';
+// Feature Flags
+$features: (
+	'utilities-v2': true,
+	'remove-tablet': true
+);
