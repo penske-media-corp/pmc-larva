@@ -1,6 +1,78 @@
 @import 'setup';
 
 @if true == map-get( $features, utilities-v2 ) {
+
+@if true == map-get( $features, utilities-v2 ) {
+
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		@if str-index( $token-str, 'spacing' ) {
+			.lrv-u-margin-r-#{$token} {
+				margin-right: $value;
+				margin-right: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-margin-l-#{$token} {
+				margin-left: $value;
+				margin-left: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-margin-b-#{$token} {
+				margin-bottom: $value;
+				margin-bottom: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-margin-t-#{$token} {
+				margin-top: $value;
+				margin-top: var( --#{$token}, #{$value} );
+			}
+
+			@include pmc-breakpoint( desktop ) {
+				.lrv-u-margin-r-#{$token}\@desktop {
+					margin-right: $value;
+					margin-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-l-#{$token}\@desktop {
+					margin-left: $value;
+					margin-left: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-b-#{$token}\@desktop {
+					margin-bottom: $value;
+					margin-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-t-#{$token}\@desktop {
+					margin-top: $value;
+					margin-top: var( --#{$token}, #{$value} );
+				}
+			}
+
+			@include pmc-breakpoint( desktop-xl ) {
+				.lrv-u-margin-r-#{$token}\@desktop-xl {
+					margin-right: $value;
+					margin-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-l-#{$token}\@desktop-xl {
+					margin-left: $value;
+					margin-left: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-b-#{$token}\@desktop-xl {
+					margin-bottom: $value;
+					margin-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-t-#{$token}\@desktop-xl {
+					margin-top: $value;
+					margin-top: var( --#{$token}, #{$value} );
+				}
+			}
+		}
+	}
 } @else {
 	$margins_without_breakpoints: (
 		// Top
@@ -97,17 +169,7 @@
 	margin-top: auto;
 }
 
-.lrv-u-margin-lr-auto {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.lrv-u-margin-tb-auto {
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-@if true == map-get( $features, remove-tablet ) {
+@if true == map-get( $features, breakpoints-v2 ) {
 
 	@include pmc-breakpoint( desktop ) {
 
@@ -126,19 +188,19 @@
 		.lrv-u-margin-b-auto\@desktop {
 			margin-top: auto;
 		}
-
-		.lrv-u-margin-lr-auto\@desktop {
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.lrv-u-margin-tb-auto\@desktop {
-			margin-top: auto;
-			margin-bottom: auto;
-		}
 	}
 
 } @else {
+
+	.lrv-u-margin-lr-auto {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.lrv-u-margin-tb-auto {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
 
 	.lrv-u-margin-l-auto\@tablet {
 		@include pmc-breakpoint( tablet ) {

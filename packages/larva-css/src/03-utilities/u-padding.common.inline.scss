@@ -2,6 +2,75 @@
 
 @if true == map-get( $features, utilities-v2 ) {
 
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		@if str-index( $token-str, 'spacing' ) {
+			.lrv-u-padding-r-#{$token} {
+				padding-right: $value;
+				padding-right: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-padding-l-#{$token} {
+				padding-left: $value;
+				padding-left: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-padding-b-#{$token} {
+				padding-bottom: $value;
+				padding-bottom: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-padding-t-#{$token} {
+				padding-top: $value;
+				padding-top: var( --#{$token}, #{$value} );
+			}
+
+			@include pmc-breakpoint( desktop ) {
+				.lrv-u-padding-r-#{$token}\@desktop {
+					padding-right: $value;
+					padding-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-l-#{$token}\@desktop {
+					padding-left: $value;
+					padding-left: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-b-#{$token}\@desktop {
+					padding-bottom: $value;
+					padding-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-t-#{$token}\@desktop {
+					padding-top: $value;
+					padding-top: var( --#{$token}, #{$value} );
+				}
+			}
+
+			@include pmc-breakpoint( desktop-xl ) {
+				.lrv-u-padding-r-#{$token}\@desktop-xl {
+					padding-right: $value;
+					padding-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-l-#{$token}\@desktop-xl {
+					padding-left: $value;
+					padding-left: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-b-#{$token}\@desktop-xl {
+					padding-bottom: $value;
+					padding-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-t-#{$token}\@desktop-xl {
+					padding-top: $value;
+					padding-top: var( --#{$token}, #{$value} );
+				}
+			}
+		}
+	}
 } @else {
 
 	$paddings_without_breakpoints: (
