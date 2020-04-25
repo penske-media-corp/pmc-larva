@@ -6,7 +6,7 @@
 		$token-str: quote( $token );
 
 		// example: color-grey-lightest, #EEEEEE
-		@if str-index( $token-str, 'color' ) {
+		@if str-index( $token-str, 'color' ) and not str-index( $token-str, 'background' ) {
 			.lrv-u-#{$token}\:hover:hover {
 				color: $value;
 				color: var( --#{$token}, #{$value} );
