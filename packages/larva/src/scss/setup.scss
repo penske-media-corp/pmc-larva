@@ -2,11 +2,13 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-tokens/build/default.map.scss';
 
+@import '00-tools/tokens.scss';
+
 $NAMESPACE: 'lrv-';
 $TOKENS-MAP: $default-map;
 
 // Feature Flags
 $features: (
 	'utilities-v2': true,
-	'remove-tablet': true
+	'breakpoints-v2': true
 );
