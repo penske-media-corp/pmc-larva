@@ -8,7 +8,7 @@
 	// where the design deviated from the style guide a-font.
 
 } @else {
-	// Generates classes .lrv-u-font-weight-{int}
+	// Generates classes .lrv-u-font-size-{int}
 	@include u-font-size(
 		(
 			($font-size-8,)
