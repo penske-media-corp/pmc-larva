@@ -2,6 +2,11 @@
 
 @if true == map-get( $features, utilities-v2 ) {
 
+	// No font size utilities in v2.
+	// All font size utilities should be added at the project level
+	// to encourage use of a-font and to gather information about
+	// where the design deviated from the style guide a-font.
+
 } @else {
 	// Generates classes .lrv-u-font-weight-{int}
 	@include u-font-size(
