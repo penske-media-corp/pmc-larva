@@ -2,8 +2,6 @@
 
 @if true == map-get( $features, utilities-v2 ) {
 
-@if true == map-get( $features, utilities-v2 ) {
-
 	@each $token, $value in $TOKENS-MAP {
 		$token-str: quote( $token );
 
