@@ -7,7 +7,7 @@
 
 		// example: color-grey-lightest, #EEEEEE
 		@if str-index( $token-str, 'color' ) {
-			.lrv-u-color-#{$token}\:hover:hover {
+			.lrv-u-#{$token}\:hover:hover {
 				color: $value;
 				color: var( --#{$token}, #{$value} );
 			}

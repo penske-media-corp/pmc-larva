@@ -7,12 +7,12 @@
 
 		// example: color-grey-lightest, #EEEEEE
 		@if str-index( $token-str, 'color' ) {
-			.lrv-u-color-#{$token} {
+			.lrv-u-#{$token} {
 				color: $value;
 				color: var( --#{$token}, #{$value} );
 			}
 
-			.lrv-u-color-#{$token}\@desktop {
+			.lrv-u-#{$token}\@desktop {
 
 				@include pmc-breakpoint( desktop ) {
 					color: $value;
