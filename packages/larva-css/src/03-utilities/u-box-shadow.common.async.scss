@@ -1,7 +1,32 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.lrv-u-box-shadow-medium\@tablet {
-	@include pmc-breakpoint( tablet ) {
-		box-shadow: 0 -0.313rem 0.313rem rgba( 0, 0, 0, 0.15 );
+@if true == map-get( $features, utilities-v2 ) {
+
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		// example: box-shadow, 0 0 2px rgba(0,0,0,0.5)
+		@if str-index( $token-str, 'box-shadow' ) {
+			.lrv-u-#{$token} {
+				box-shadow: $value;
+				box-shadow: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-#{$token}\@desktop {
+
+				@include pmc-breakpoint( desktop ) {
+					box-shadow: $value;
+					box-shadow: var( --#{$token}, #{$value} );
+				}
+			}
+		}
+	}
+
+} @else {
+
+	.lrv-u-box-shadow-medium\@tablet {
+		@include pmc-breakpoint( tablet ) {
+			box-shadow: 0 -0.313rem 0.313rem rgba( 0, 0, 0, 0.15 );
+		}
 	}
 }
