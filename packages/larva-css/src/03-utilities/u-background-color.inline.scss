@@ -1,0 +1,28 @@
+@import 'setup';
+
+@if true == map-get( $features, utilities-v2 ) {
+
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		@if str-index( $token-str, 'color' ) {
+			.lrv-u-#{$token} {
+				background-color: $value;
+
+				// Utilities-v2 are built in the theme.
+				// This can be used later.
+				// background-color: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-#{$token}\@desktop {
+				@include pmc-breakpoint( desktop ) {
+					background-color: $value;
+
+					// Utilities-v2 are built in the theme.
+					// This can be used later.
+					// background-color: var( --#{$token}, #{$value} );
+				}
+			}
+		}
+	}
+}
