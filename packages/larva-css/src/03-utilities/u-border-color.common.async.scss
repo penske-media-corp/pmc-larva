@@ -5,12 +5,17 @@
 		$token-str: quote( $token );
 
 		@if str-index( $token-str, 'border-color' ) {
-			.lrv-u-#{$token} {
+			.lrv-u-border-#{$token} {
 				border-color: $value;
 				border-color: var( --#{$token}, #{$value} );
 			}
 
-			.lrv-u-#{$token}\@desktop {
+			.lrv-u-border-#{$token}\:hover:hover {
+				border-color: $value;
+				border-color: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-border-#{$token}\@desktop {
 				@include pmc-breakpoint( desktop ) {
 					border-color: $value;
 					border-color: var( --#{$token}, #{$value} );

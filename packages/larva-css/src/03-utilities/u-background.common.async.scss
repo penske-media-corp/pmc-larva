@@ -6,8 +6,11 @@
 		$token-str: quote( $token );
 
 		// example: color-grey-lightest, #EEEEEE
-		// All colors come from -color tokens. No more background colors tokens.
-		@if str-index( $token-str, 'color' ) and not str-index( $token-str, 'background' ) {
+		// All colors come from -color tokens. No more XX-colors tokens.
+		@if str-index( $token-str, 'color' )
+			and not str-index( $token-str, 'background' )
+			and not str-index( $token-str, 'border' ) {
+
 			.lrv-u-background-#{$token}\:hover:hover {
 				background-color: $value;
 				background-color: var( --#{$token}, #{$value} );

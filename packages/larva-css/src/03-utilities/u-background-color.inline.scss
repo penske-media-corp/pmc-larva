@@ -5,13 +5,16 @@
 	@each $token, $value in $TOKENS-MAP {
 		$token-str: quote( $token );
 
-		@if str-index( $token-str, 'color' ) {
-			.lrv-u-#{$token} {
+		@if str-index( $token-str, 'color' )
+			and not str-index( $token-str, 'background' )
+			and not str-index( $token-str, 'border' ) {
+
+			.lrv-u-background-#{$token} {
 				background-color: $value;
 				background-color: var( --#{$token}, #{$value} );
 			}
 
-			.lrv-u-#{$token}\@desktop {
+			.lrv-u-background-#{$token}\@desktop {
 				@include pmc-breakpoint( desktop ) {
 					background-color: $value;
 					background-color: var( --#{$token}, #{$value} );
