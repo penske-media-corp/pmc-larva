@@ -4,7 +4,8 @@ const chalk = require( 'chalk' );
 /**
  * Get Subdirectory names
  *
- * @para path String of path to subdirectory
+ * @param {string} path path to a directory containing subdirectories.
+ * @return {array} array of strings representing names of subdirectories.
  *
  * @link: https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs
  **/
