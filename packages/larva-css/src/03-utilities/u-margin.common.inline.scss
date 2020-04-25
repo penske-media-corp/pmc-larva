@@ -1,80 +1,83 @@
 @import 'setup';
 
-$margins_without_breakpoints: (
-	// Top
-	('t', $spacer-0),
-	('t', $spacer-050),
-	('t', $spacer-1),
-	('t', $spacer-2),
+@if true == map-get( $features, utilities-v2 ) {
+} @else {
+	$margins_without_breakpoints: (
+		// Top
+		('t', $spacer-0),
+		('t', $spacer-050),
+		('t', $spacer-1),
+		('t', $spacer-2),
 
-	// Right
-	('r', $spacer-025),
-	('r', $spacer-050),
-	('r', $spacer-1),
-	('r', $spacer-2),
+		// Right
+		('r', $spacer-025),
+		('r', $spacer-050),
+		('r', $spacer-1),
+		('r', $spacer-2),
 
-	// Bottom
-	('b', $spacer-0),
-	('b', $spacer-025),
-	('b', $spacer-050),
-	('b', $spacer-1),
-	('b', $spacer-2),
+		// Bottom
+		('b', $spacer-0),
+		('b', $spacer-025),
+		('b', $spacer-050),
+		('b', $spacer-1),
+		('b', $spacer-2),
 
-	// Left
-	('l', $spacer-025),
-	('l', $spacer-050),
-	('l', $spacer-1),
-	('l', $spacer-2),
+		// Left
+		('l', $spacer-025),
+		('l', $spacer-050),
+		('l', $spacer-1),
+		('l', $spacer-2),
 
-	// Left/Right
-	('lr', $spacer-025),
-	('lr', $spacer-050),
-	('lr', $spacer-1),
-	('lr', $spacer-2),
+		// Left/Right
+		('lr', $spacer-025),
+		('lr', $spacer-050),
+		('lr', $spacer-1),
+		('lr', $spacer-2),
 
-	// Top/Bottom
-	('tb', $spacer-0),
-	('tb', $spacer-050),
-	('tb', $spacer-1),
-	('tb', $spacer-2),
+		// Top/Bottom
+		('tb', $spacer-0),
+		('tb', $spacer-050),
+		('tb', $spacer-1),
+		('tb', $spacer-2),
 
-	// All
-	('a', $spacer-0),
-	('a', $spacer-050),
-	('a', $spacer-1),
-	('a', $spacer-2)
-);
+		// All
+		('a', $spacer-0),
+		('a', $spacer-050),
+		('a', $spacer-1),
+		('a', $spacer-2)
+	);
 
-$margins_with_breakpoints: (
+	$margins_with_breakpoints: (
 
-	// Breakpoints
-	('a', $spacer-0, mobile-max),
-	('t', $spacer-050, mobile-max),
-	('t', $spacer-1, mobile-max),
-	('t', $spacer-2, mobile-max),
-	('r', $spacer-0, mobile-max),
-	('b', $spacer-1, mobile-max),
-	('b', $spacer-050, mobile-max),
-	('tb', $spacer-0, mobile-max),
-	('tb', $spacer-1, mobile-max),
+		// Breakpoints
+		('a', $spacer-0, mobile-max),
+		('t', $spacer-050, mobile-max),
+		('t', $spacer-1, mobile-max),
+		('t', $spacer-2, mobile-max),
+		('r', $spacer-0, mobile-max),
+		('b', $spacer-1, mobile-max),
+		('b', $spacer-050, mobile-max),
+		('tb', $spacer-0, mobile-max),
+		('tb', $spacer-1, mobile-max),
 
-	('r', $spacer-1, tablet),
-	('r', $spacer-0, tablet),
-	('b', $spacer-1, tablet),
+		('r', $spacer-1, tablet),
+		('r', $spacer-0, tablet),
+		('b', $spacer-1, tablet),
 
-	('a', $spacer-1, desktop),
-	('r', $spacer-0, desktop),
-	('r', $spacer-0, desktop),
-	('t', $spacer-050, desktop),
+		('a', $spacer-1, desktop),
+		('r', $spacer-0, desktop),
+		('r', $spacer-0, desktop),
+		('t', $spacer-050, desktop),
 
-	('t', $spacer-050, desktop-xl),
-	('t', $spacer-1, desktop-xl),
-	('b', $spacer-1, desktop-xl),
-);
+		('t', $spacer-050, desktop-xl),
+		('t', $spacer-1, desktop-xl),
+		('b', $spacer-1, desktop-xl),
+	);
 
-@include u-margin( $margins_without_breakpoints );
-@include u-margin( $margins_with_breakpoints );
+	@include u-margin( $margins_without_breakpoints );
+	@include u-margin( $margins_with_breakpoints );
 
+}
 
 // Auto margins
 
@@ -90,6 +93,10 @@ $margins_with_breakpoints: (
 	margin-top: auto;
 }
 
+.lrv-u-margin-b-auto {
+	margin-top: auto;
+}
+
 .lrv-u-margin-lr-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -100,8 +107,42 @@ $margins_with_breakpoints: (
 	margin-bottom: auto;
 }
 
-.lrv-u-margin-l-auto\@tablet {
-	@include pmc-breakpoint( tablet ) {
-		margin-left: auto;
+@if true == map-get( $features, remove-tablet ) {
+
+	@include pmc-breakpoint( desktop ) {
+
+		.lrv-u-margin-l-auto\@desktop {
+			margin-left: auto;
+		}
+
+		.lrv-u-margin-r-auto\@desktop {
+			margin-right: auto;
+		}
+
+		.lrv-u-margin-t-auto\@desktop {
+			margin-top: auto;
+		}
+
+		.lrv-u-margin-b-auto\@desktop {
+			margin-top: auto;
+		}
+
+		.lrv-u-margin-lr-auto\@desktop {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.lrv-u-margin-tb-auto\@desktop {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+
+} @else {
+
+	.lrv-u-margin-l-auto\@tablet {
+		@include pmc-breakpoint( tablet ) {
+			margin-left: auto;
+		}
 	}
 }
