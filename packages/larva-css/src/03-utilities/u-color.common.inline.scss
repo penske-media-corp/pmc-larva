@@ -9,20 +9,14 @@
 		@if str-index( $token-str, 'color' ) {
 			.lrv-u-color-#{$token} {
 				color: $value;
-
-				// utilities-v2 are built in the theme.
-				// This can be used later.
-				// color: var( --#{$token}, #{$value} );
+				color: var( --#{$token}, #{$value} );
 			}
 
 			.lrv-u-color-#{$token}\@desktop {
 
 				@include pmc-breakpoint( desktop ) {
 					color: $value;
-
-					// utilities-v2 are built in the theme.
-					// This can be used later.
-					// color: var( --#{$token}, #{$value} );
+					color: var( --#{$token}, #{$value} );
 				}
 			}
 		}

@@ -9,10 +9,7 @@
 		@if str-index( $token-str, 'color' ) {
 			.lrv-u-color-#{$token}\:hover:hover {
 				color: $value;
-
-				// utilities-v2 are built in the theme.
-				// This can be used later.
-				// color: var( --#{$token}, #{$value} );
+				color: var( --#{$token}, #{$value} );
 			}
 		}
 	}
