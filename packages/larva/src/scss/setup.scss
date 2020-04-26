@@ -5,3 +5,16 @@
 $TOKENS-MAP: $default-map;
 
 $ICONS_BUILD_PATH: '../icons';
+
+// Feature Flags
+$features: (
+	'utilities-v2': true,
+	'breakpoints-v2': true,
+	'a-grid-namespace': true,
+);
+
+// Override grid generator vars according to feature flag.
+@if variable-exists( 'features' ) and true == map-get( $features, a-grid-namespace ) {
+	$cols-selector: 'grid-cols-';
+	$span-selector: 'grid-item-span-';
+}
