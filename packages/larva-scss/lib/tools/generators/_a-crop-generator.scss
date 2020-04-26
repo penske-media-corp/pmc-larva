@@ -26,9 +26,10 @@
 
 		@if true == $a-crop-breakpoint {
 
-			@include pmc-breakpoint( desktop ) {
+			.#{$NAMESPACE}a-crop-#{$name}\@desktop {
 
-				.#{$NAMESPACE}a-crop-#{$name}\@desktop {
+				@include pmc-breakpoint( desktop ) {
+
 					position: relative;
 					padding-bottom: calc( ( #{nth($sizes, 2)} / #{nth($sizes, 1)} ) * 100% );
 
