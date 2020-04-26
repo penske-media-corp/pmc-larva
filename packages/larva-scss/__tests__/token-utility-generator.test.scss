@@ -32,12 +32,12 @@
 
 	@include test('generates namespaced text color') {
 
-		@import 'fixture/settings';
+		@import 'fixture/setup';
 
 		@include assert {
 
 			@include output {
-				
+
 				@include token-utility-generator(
 					'color',
 					(

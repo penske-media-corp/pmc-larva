@@ -10,7 +10,7 @@
 		@include assert {
 
 			@include output {
-				
+
 				@include basic-utility-generator(
 					'opacity',
 					(
@@ -30,12 +30,12 @@
 
 	@include test('generates namespaced utility') {
 
-		@import 'fixture/settings';
+		@import 'fixture/setup';
 
 		@include assert {
 
 			@include output {
-				
+
 				@include basic-utility-generator(
 					'opacity',
 					(

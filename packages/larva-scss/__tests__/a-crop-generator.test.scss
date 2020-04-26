@@ -9,7 +9,7 @@
 	);
 
 	@include test('generates non-namespaced crops') {
-		
+
 		@include assert {
 
 			@include output {
@@ -29,8 +29,8 @@
 	}
 
 	@include test('generates namespaced crops') {
-		@import 'fixture/settings';
-		
+		@import 'fixture/setup';
+
 		@include assert {
 
 			@include output {
