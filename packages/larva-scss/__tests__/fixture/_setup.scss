@@ -1,0 +1,6 @@
+$NAMESPACE: 'lrv-' !global;
+
+@if variable-exists( 'features' ) and true == map-get( $features, a-grid-namespace ) {
+	$cols-selector: 'grid-cols-' !global;
+	$span-selector: 'grid-item-span-' !global;
+}
