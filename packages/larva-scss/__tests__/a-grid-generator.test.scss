@@ -41,7 +41,7 @@
 					flex-basis: 100%;
 				}
 
-				@media( min-width: 48rem ) {
+				@include pmc-breakpoint( tablet ) {
 					.a-cols3\@tablet {
 						--cols: 3;
 					}
@@ -51,7 +51,7 @@
 					}
 				}
 
-				@media( min-width: 48rem ) {
+				@include pmc-breakpoint( tablet ) {
 
 					.a-span2\@tablet {
 						@supports ( display: grid ) {
@@ -75,7 +75,6 @@
 		@include assert {
 
 			@include output {
-
 
 				$grids: (
 					(
@@ -111,7 +110,7 @@
 					flex-basis: 100%;
 				}
 
-				@media( min-width: 48rem ) {
+				@include pmc-breakpoint( tablet ) {
 					.lrv-a-cols3\@tablet {
 						--cols: 3;
 					}
@@ -121,7 +120,7 @@
 					}
 				}
 
-				@media( min-width: 48rem ) {
+				@include pmc-breakpoint( tablet ) {
 
 					.lrv-a-span2\@tablet {
 						@supports ( display: grid ) {
