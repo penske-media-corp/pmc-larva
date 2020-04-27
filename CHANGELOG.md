@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* larva-tokens - Add spacing to tokens
+
 ## [8.6.1-alpha] - 4-21-2020
 
 * larva-patterns - Move DEV-* one-offs to `__tests__`
