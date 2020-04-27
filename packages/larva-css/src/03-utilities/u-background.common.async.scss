@@ -1,50 +1,16 @@
 @import 'setup';
 
-@if true == map-get( $features, utilities-v2 ) {
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-	@each $token, $value in $TOKENS-MAP {
-		$token-str: quote( $token );
+	// example: color-grey-lightest, #EEEEEE
+	// All colors come from -color tokens. No more XX-colors tokens.
+	@if str-index( $token-str, 'background-color' ) {
 
-		// example: color-grey-lightest, #EEEEEE
-		// All colors come from -color tokens. No more XX-colors tokens.
-		@if str-index( $token-str, 'color' )
-			and not str-index( $token-str, 'background' )
-			and not str-index( $token-str, 'border' ) {
-
-			.lrv-u-background-#{$token}\:hover:hover {
-				background-color: $value;
-				background-color: var( --#{$token}, #{$value} );
-			}
+		.lrv-u-#{$token}\:hover:hover {
+			background-color: $value;
+			background-color: var( --#{$token}, #{$value} );
 		}
 	}
-
-} @else {
-
-	$background-colors: (
-		background-color-white,
-		background-color-brand-primary,
-		background-color-grey-darkest,
-		background-color-grey-dark,
-		background-color-grey,
-		background-color-grey-lightest,
-		background-color-grey-light,
-		background-color-black,
-		background-color-body,
-	);
-
-	@include token-utility-generator( 'background-color', $background-colors, $TOKENS-MAP );
-
-	.lrv-u-background-color-brand-primary\:hover:hover {
-		background-color: map-get( $TOKENS-MAP, background-color-brand-primary );
-		background-color: var( --background-color-brand-primary, #{ map-get( $TOKENS-MAP, background-color-brand-primary )} );
-	}
 }
 
-
-//
-// Static Utilities
-//
-
-.lrv-u-background-color-transparent {
-	background-color: transparent;
-}

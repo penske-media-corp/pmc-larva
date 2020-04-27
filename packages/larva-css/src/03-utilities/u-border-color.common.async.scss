@@ -1,40 +1,26 @@
 @import 'setup';
-@if true == map-get( $features, utilities-v2 ) {
 
-	@each $token, $value in $TOKENS-MAP {
-		$token-str: quote( $token );
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-		@if str-index( $token-str, 'border-color' ) {
-			.lrv-u-border-#{$token} {
+	@if str-index( $token-str, 'border-color' ) {
+		.lrv-u-#{$token} {
+			border-color: $value;
+			border-color: var( --#{$token}, #{$value} );
+		}
+
+		.lrv-u-#{$token}\:hover:hover {
+			border-color: $value;
+			border-color: var( --#{$token}, #{$value} );
+		}
+
+		.lrv-u-#{$token}\@desktop {
+			@include pmc-breakpoint( desktop ) {
 				border-color: $value;
 				border-color: var( --#{$token}, #{$value} );
-			}
-
-			.lrv-u-border-#{$token}\:hover:hover {
-				border-color: $value;
-				border-color: var( --#{$token}, #{$value} );
-			}
-
-			.lrv-u-border-#{$token}\@desktop {
-				@include pmc-breakpoint( desktop ) {
-					border-color: $value;
-					border-color: var( --#{$token}, #{$value} );
-				}
 			}
 		}
 	}
-} @else {
-
-	$border-colors: (
-		border-color-white,
-		border-color-brand-primary,
-		border-color-grey-lightest,
-		border-color-grey-light,
-		border-color-grey
-	);
-
-	@include token-utility-generator( 'border-color', $border-colors, $TOKENS-MAP );
-
 }
 
 .lrv-u-border-color-currentColor {

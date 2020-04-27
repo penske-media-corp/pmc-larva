@@ -1,51 +1,17 @@
 @import 'setup';
 
-@if true == map-get( $features, utilities-v2 ) {
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-	@each $token, $value in $TOKENS-MAP {
-		$token-str: quote( $token );
+	// example: color-grey-lightest, #EEEEEE
+	@if str-index( $token-str, 'color' )
+		and not str-index( $token-str, 'background' )
+		and not str-index( $token-str, 'border' ) {
 
-		// example: color-grey-lightest, #EEEEEE
-		@if str-index( $token-str, 'color' )
-			and not str-index( $token-str, 'background' )
-			and not str-index( $token-str, 'border' ) {
-
-			.lrv-u-#{$token}\:hover:hover {
-				color: $value;
-				color: var( --#{$token}, #{$value} );
-			}
+		.lrv-u-#{$token}\:hover:hover {
+			color: $value;
+			color: var( --#{$token}, #{$value} );
 		}
-	}
-
-} @else {
-
-	$colors: (
-		color-white,
-		color-grey-light,
-		color-grey,
-		color-grey-dark,
-		color-brand-primary,
-		color-black,
-	);
-
-	@include token-utility-generator( 'color', $colors, $TOKENS-MAP );
-
-
-	.lrv-u-color-white\:hover:hover {
-		color: map-get( $TOKENS-MAP, color-white );
-	}
-
-	.lrv-u-color-grey-light\:hover:hover {
-		color: map-get( $TOKENS-MAP, color-grey-light );
-	}
-
-	.lrv-u-color-grey-dark\:hover:hover {
-		color: map-get( $TOKENS-MAP, color-grey-dark );
-	}
-
-	// TODO: This value should be moved to come from a map in settings
-	.lrv-u-color-brand-primary-dark\:hover:hover {
-		color: darken( map-get( $TOKENS-MAP, color-brand-primary ), 15% );
 	}
 }
 
