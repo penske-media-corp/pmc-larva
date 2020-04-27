@@ -4,13 +4,6 @@
 	display: flex;
 }
 
-.lrv-u-flex\@tablet {
-
-	@include pmc-breakpoint( tablet ) {
-		display: flex;
-	}
-}
-
 .lrv-u-flex-grow-1 {
 	flex-grow: 1;
 }
@@ -27,17 +20,53 @@
 	flex-direction: column;
 }
 
-.lrv-u-flex-direction-column\@mobile-max {
+@if true == map-get( $features, utilities-v2 ) {
 
-	@include pmc-breakpoint( mobile-max ) {
-		flex-direction: column;
+	@include pmc-breakpoint( desktop ) {
+
+		.lrv-u-flex\@desktop {
+			display: flex;
+		}
+
+		.lrv-u-flex-grow-1\@desktop {
+			flex-grow: 1;
+		}
+
+		.lrv-u-flex-shrink-0\@desktop {
+			flex-shrink: 0;
+		}
+
+		.lrv-u-flex-wrap-wrap\@desktop {
+			flex-wrap: wrap;
+		}
+
+		.lrv-u-flex-direction-column\@desktop {
+			flex-direction: column;
+		}
+
 	}
-}
 
-.lrv-u-flex-direction-column\@tablet {
+} @else {
 
-	@include pmc-breakpoint( tablet ) {
-		flex-direction: column;
+	.lrv-u-flex\@tablet {
+
+		@include pmc-breakpoint( tablet ) {
+			display: flex;
+		}
 	}
-}
 
+	.lrv-u-flex-direction-column\@mobile-max {
+
+		@include pmc-breakpoint( mobile-max ) {
+			flex-direction: column;
+		}
+	}
+
+	.lrv-u-flex-direction-column\@tablet {
+
+		@include pmc-breakpoint( tablet ) {
+			flex-direction: column;
+		}
+	}
+
+}
