@@ -21,6 +21,9 @@
 		},
 		"BORDER_COLOR_GREY_DARK": {
 			"value": "{!GREY_35}"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!BLUE_61}"
 		}
 	}
 }

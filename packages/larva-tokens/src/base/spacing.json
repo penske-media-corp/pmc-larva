@@ -6,7 +6,7 @@
 	"global": {
 		"category": "spacing",
 		"type": "unit",
-		"comment": "Spacing tokens are used for margins and padding."
+		"comment": "Used for margins and padding only."
 	},
 	"props": {
 		"SPACING_00": {
