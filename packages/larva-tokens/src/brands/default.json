@@ -3,20 +3,6 @@
 		"../base/all.json"
 	],
 	"props": {
-		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
-			"type": "color",
-			"category": "background-color"
-		},
-		"COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
-			"type": "color",
-			"category": "text-color"
-		},
-		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
-			"type": "color",
-			"category": "hr-color"
-		}
+
 	}
 }
