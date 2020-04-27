@@ -32,7 +32,7 @@ Here are some instances where you would contribute to larva-tokens:
 	```
 	2. Note that the `type` and `category` for the token overrides does not carry over from their defaults, so they must be added in the top-level brand-name.json files.
 
-\* Note that adding new tokens is tedious but extremely important to do correctly. Please be very detailed and take care to follow existing naming conventions and ask your tech lead for help where you aren't sure.
+_\* **Note:** Adding new tokens is tedious, but extremely important to do correctly. Please be very detailed and take care to follow existing naming conventions and ask your tech lead for help where you aren't sure._
 
 If these sound like your needs, proceed!
 
