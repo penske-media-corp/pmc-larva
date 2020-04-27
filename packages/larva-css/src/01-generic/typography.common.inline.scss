@@ -16,29 +16,23 @@ body {
 // Apply the webfont when fonts are loaded.
 .wf-active body {
 
-	@if true == map-get( $features, utilities-v2 ) {
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
 
-		@each $token, $value in $TOKENS-MAP {
-			$token-str: quote( $token );
+		// example: font-family-primary
+		// each will have a corresponding `fancy` variation.
+		@if str-index( $token-str, 'font-family' ) {
 
-			// example: font-family-primary
-			// each will have a corresponding `fancy` variation.
-			@if str-index( $token-str, 'font-family' ) {
-
-				@if not str-index( $token-str, 'fancy' ) {
-					--#{$token}: var( --#{$token}-fancy );
-				}
+			@if not str-index( $token-str, 'fancy' ) {
+				--#{$token}: var( --#{$token}-fancy );
 			}
 		}
-
-	} @else {
-		--font-family-primary: var( --font-family-primary-fancy );
-		--font-family-secondary: var( --font-family-secondary-fancy );
 	}
+
 }
 
 strong {
-	font-weight: $font-weight-bold;
+	font-weight: map-get( $semantic-font-weights, bold );
 }
 
 a {
