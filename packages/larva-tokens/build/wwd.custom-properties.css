@@ -11,14 +11,18 @@
   --font-family-secondary: Georgia, serif;
   --font-family-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-family-basic: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --background-color-body: rgb(255, 255, 255);
-  --background-color-white: rgb(255, 255, 255);
-  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-light: rgb(204, 204, 204);
-  --background-color-grey: rgb(140, 140, 140);
+  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-dark: rgb(106, 106, 106);
-  --background-color-grey-darkest: rgb(50, 50, 50);
+  --background-color-grey: rgb(140, 140, 140);
+  /* The background color of the main body of the site. */
+  --background-color-body: rgb(255, 255, 255);
+  /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
+  --background-color-brand-secondary: rgb(241, 247, 252);
   --background-color-black: rgb(0, 0, 0);
+  --background-color-white: rgb(255, 255, 255);
+  --background-color-brand-primary: rgb(228, 0, 0);
+  --background-color-grey-darkest: rgb(50, 50, 50);
   --line-height-small: 1.1;
   --line-height-normal: 1.35;
   --line-height-copy: 1.5;
@@ -49,5 +53,4 @@
   --spacing-2: 2rem;
   --color-brand-primary: rgb(228, 0, 0);
   --border-color-brand-primary: rgb(228, 0, 0);
-  --background-color-brand-primary: rgb(228, 0, 0);
 }

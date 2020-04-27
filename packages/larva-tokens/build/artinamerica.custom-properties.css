@@ -15,14 +15,16 @@
   --font-family-secondary: Georgia, serif;
   --font-family-body: 'Times New Roman', serif;
   --font-family-basic: Helvetica, sans-serif;
-  --background-color-body: rgb(248, 248, 243);
-  --background-color-white: rgb(255, 255, 255);
-  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-light: rgb(204, 204, 204);
-  --background-color-grey: rgb(140, 140, 140);
+  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-dark: rgb(106, 106, 106);
-  --background-color-grey-darkest: rgb(50, 50, 50);
+  --background-color-grey: rgb(140, 140, 140);
+  --background-color-body: rgb(248, 248, 243);
+  --background-color-brand-secondary: rgb(203, 69, 74);
   --background-color-black: rgb(0, 0, 0);
+  --background-color-white: rgb(255, 255, 255);
+  --background-color-brand-primary: rgb(12, 77, 106);
+  --background-color-grey-darkest: rgb(50, 50, 50);
   --line-height-small: 1.1;
   --line-height-normal: 1.35;
   --line-height-copy: 1.5;
@@ -52,9 +54,7 @@
   /* Spacing tokens are used for margins and padding. */
   --spacing-2: 2rem;
   --color-brand-primary: rgb(12, 77, 106);
-  --background-color-brand-secondary: rgb(203, 69, 74);
   --background-color-brand-accent: rgb(1, 165, 237);
   --border-color-brand-primary: rgb(12, 77, 106);
-  --background-color-brand-primary: rgb(12, 77, 106);
   --color-brand-accent: rgb(1, 165, 237);
 }

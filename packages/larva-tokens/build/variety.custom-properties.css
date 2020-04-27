@@ -13,14 +13,18 @@
   --font-family-secondary: Helvetica, serif;
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
-  --background-color-body: rgb(255, 255, 255);
-  --background-color-white: rgb(255, 255, 255);
-  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-light: rgb(204, 204, 204);
-  --background-color-grey: rgb(140, 140, 140);
+  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-dark: rgb(106, 106, 106);
-  --background-color-grey-darkest: rgb(50, 50, 50);
+  --background-color-grey: rgb(140, 140, 140);
+  /* The background color of the main body of the site. */
+  --background-color-body: rgb(255, 255, 255);
+  /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
+  --background-color-brand-secondary: rgb(241, 247, 252);
   --background-color-black: rgb(0, 0, 0);
+  --background-color-white: rgb(255, 255, 255);
+  --background-color-brand-primary: rgb(238, 232, 9);
+  --background-color-grey-darkest: rgb(50, 50, 50);
   --color-brand-secondary: rgb(65, 126, 244);
   --font-family-basic-fancy: 'IBM Plex Mono', monospace;
   --border-color-brand-secondary: rgb(65, 126, 244);
@@ -29,7 +33,6 @@
   --font-family-accent: Helvetica, sans-serif;
   --font-family-body-fancy: 'IBM Plex Serif', serif;
   --border-color-brand-primary: rgb(238, 232, 9);
-  --background-color-brand-primary: rgb(238, 232, 9);
   --color-brand-accent: rgb(243, 112, 33);
   --font-family-accent-fancy: 'Graphik XX Cond', sans-serif;
 }

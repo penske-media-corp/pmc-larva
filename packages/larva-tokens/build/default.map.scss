@@ -15,14 +15,19 @@ $default-map: (
   'font-family-secondary': (Helvetica, serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
-  'background-color-body': (rgb(255, 255, 255)),
-  'background-color-white': (rgb(255, 255, 255)),
-  'background-color-grey-lightest': (rgb(247, 247, 247)),
   'background-color-grey-light': (rgb(204, 204, 204)),
-  'background-color-grey': (rgb(140, 140, 140)),
+  'background-color-grey-lightest': (rgb(247, 247, 247)),
   'background-color-grey-dark': (rgb(106, 106, 106)),
-  'background-color-grey-darkest': (rgb(50, 50, 50)),
+  'background-color-grey': (rgb(140, 140, 140)),
+  /* The background color of the main body of the site. */
+  'background-color-body': (rgb(255, 255, 255)),
+  /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
+  'background-color-brand-secondary': (rgb(241, 247, 252)),
   'background-color-black': (rgb(0, 0, 0)),
+  'background-color-white': (rgb(255, 255, 255)),
+  /* The primary brand color. This should be dark in hue, and have sufficient contrast with white text. */
+  'background-color-brand-primary': (rgb(65, 126, 244)),
+  'background-color-grey-darkest': (rgb(50, 50, 50)),
   'line-height-small': (1.1),
   'line-height-normal': (1.35),
   'line-height-copy': (1.5),
@@ -51,7 +56,4 @@ $default-map: (
   'spacing-150': (1.5rem),
   /* Spacing tokens are used for margins and padding. */
   'spacing-2': (2rem),
-  'background-color-brand-primary': (rgb(65, 126, 244)),
-  'color-brand-primary': (rgb(65, 126, 244)),
-  'border-color-brand-primary': (rgb(65, 126, 244)),
 );
