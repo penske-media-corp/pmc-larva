@@ -2,6 +2,9 @@
 
 $NAMESPACE: '' !default;
 
+$cols-selector: 'cols' !default;
+$span-selector: 'span' !default;
+
 @mixin _grid( $columns ) {
 	--cols: #{$columns};
 
@@ -14,12 +17,12 @@ $NAMESPACE: '' !default;
 @mixin _grid-selector( $columns, $breakpoint: false ) {
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
-			.#{$NAMESPACE}a-cols#{$columns}\@#{$breakpoint} {
+			.#{$NAMESPACE}a-#{$cols-selector}#{$columns}\@#{$breakpoint} {
 				@include _grid( $columns );
 			}
 		}
 	} @else {
-		.#{$NAMESPACE}a-cols#{$columns} {
+		.#{$NAMESPACE}a-#{$cols-selector}#{$columns} {
 			@include _grid( $columns );
 		}
 	}
@@ -40,22 +43,22 @@ $NAMESPACE: '' !default;
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
 
-			.#{$NAMESPACE}a-span#{$span}\@#{$breakpoint} {
+			.#{$NAMESPACE}a-#{$span-selector}#{$span}\@#{$breakpoint} {
 				@include _grid-column( $columns, $span );
 			}
 
 			// Higher specificity to account for nested grids.
-			.#{$NAMESPACE}a-cols#{$columns}\@#{$breakpoint} > .#{$NAMESPACE}a-span#{$span}\@#{$breakpoint} {
+			.#{$NAMESPACE}a-#{$cols-selector}#{$columns}\@#{$breakpoint} > .#{$NAMESPACE}a-#{$span-selector}#{$span}\@#{$breakpoint} {
 				@include _grid-column-fallback( $columns, $span );
 			}
 
 		}
 	} @else {
-		.#{$NAMESPACE}a-span#{$span} {
+		.#{$NAMESPACE}a-#{$span-selector}#{$span} {
 			@include _grid-column( $columns, $span );
 		}
 
-		.#{$NAMESPACE}a-cols#{$columns} > .#{$NAMESPACE}a-span#{$span} {
+		.#{$NAMESPACE}a-#{$cols-selector}#{$columns} > .#{$NAMESPACE}a-#{$span-selector}#{$span} {
 			@include _grid-column-fallback( $columns, $span );
 		}
 	}

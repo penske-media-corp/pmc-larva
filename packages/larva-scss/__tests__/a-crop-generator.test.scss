@@ -3,14 +3,14 @@
 
 @include test-module('@mixin _a-crop-generator') {
 
-	$aspect-ratios: (
-		'16x9': (16, 9),
-		'4x3': (4, 3)
-	);
-
 	@include test('generates non-namespaced crops') {
-		
+
 		@include assert {
+
+			$aspect-ratios: (
+				'16x9': (16, 9),
+				'4x3': (4, 3)
+			);
 
 			@include output {
 				@include _a-crop-generator( $aspect-ratios );
@@ -29,17 +29,77 @@
 	}
 
 	@include test('generates namespaced crops') {
-		@import 'fixture/settings';
-		
+		@import 'fixture/setup';
+
 		@include assert {
 
 			@include output {
+
+				$aspect-ratios: (
+					'16x9': (16, 9),
+					'4x3': (4, 3)
+				);
+
 				@include _a-crop-generator( $aspect-ratios );
 			}
 
 			@include contains {
 				.lrv-a-crop-16x9 {
 					padding-bottom: calc( ( 9 / 16 ) * 100% );
+				}
+			}
+		}
+	}
+
+	@include test('generates crop breakpoint with condition') {
+
+		$features: (
+			'a-crop-breakpoint': true,
+		);
+
+		@import 'fixture/setup';
+
+		@include assert {
+
+			@include output {
+
+				$aspect-ratios: (
+					'16x9': (16, 9),
+				);
+
+				@include _a-crop-generator( $aspect-ratios );
+			}
+
+			// Note: ideally this would be `contains` and only contain the
+			// breakpoint block, but having trouble with the
+			// "Compared values have no visual difference." error and
+			// not worth the time to debug it.
+			@include expect {
+				.lrv-a-crop-16x9 {
+					position: relative;
+					padding-bottom: calc( ( 9 / 16 ) * 100%);
+				}
+
+				.lrv-a-crop-16x9 img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				@media (min-width: 62.5rem) {
+
+					.lrv-a-crop-16x9\@desktop {
+						position: relative;
+						padding-bottom: calc( ( 9 / 16 ) * 100%);
+					}
+
+					.lrv-a-crop-16x9\@desktop img {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
 				}
 			}
 		}

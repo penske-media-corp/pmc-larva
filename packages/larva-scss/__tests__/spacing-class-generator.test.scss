@@ -46,7 +46,7 @@
 	}
 
 	@include test('generates namespaced classes') {
-		@import 'fixture/settings';
+		@import 'fixture/setup';
 
 		@include assert {
 
