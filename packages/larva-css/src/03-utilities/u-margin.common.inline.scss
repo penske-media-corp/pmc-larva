@@ -228,42 +228,50 @@
 	margin-top: auto;
 }
 
-@if true == map-get( $features, breakpoints-v2 ) {
+.lrv-u-margin-lr-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
 
-	@include pmc-breakpoint( desktop ) {
+.lrv-u-margin-tb-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
 
-		.lrv-u-margin-l-auto\@desktop {
-			margin-left: auto;
-		}
 
-		.lrv-u-margin-r-auto\@desktop {
-			margin-right: auto;
-		}
+@include pmc-breakpoint( desktop ) {
 
-		.lrv-u-margin-t-auto\@desktop {
-			margin-top: auto;
-		}
-
-		.lrv-u-margin-b-auto\@desktop {
-			margin-top: auto;
-		}
+	.lrv-u-margin-l-auto\@desktop {
+		margin-left: auto;
 	}
 
-} @else {
+	.lrv-u-margin-r-auto\@desktop {
+		margin-right: auto;
+	}
 
-	.lrv-u-margin-lr-auto {
+	.lrv-u-margin-t-auto\@desktop {
+		margin-top: auto;
+	}
+
+	.lrv-u-margin-b-auto\@desktop {
+		margin-top: auto;
+	}
+
+	.lrv-u-margin-lr-auto\@desktop {
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.lrv-u-margin-tb-auto {
+	.lrv-u-margin-tb-auto\@desktop {
 		margin-top: auto;
 		margin-bottom: auto;
 	}
 
-	.lrv-u-margin-l-auto\@tablet {
-		@include pmc-breakpoint( tablet ) {
-			margin-left: auto;
-		}
+}
+
+// Legacy
+.lrv-u-margin-l-auto\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		margin-left: auto;
 	}
 }

@@ -1,6 +1,14 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-@if true == map-get( $features, utilities-v2 ) {
+.lrv-u-order-n1 {
+	order: -1;
+}
+
+.lrv-u-order-100 {
+	order: 100;
+}
+
+@include pmc-breakpoint( desktop ) {
 
 	.lrv-u-order-n1 {
 		order: -1;
@@ -9,24 +17,13 @@
 	.lrv-u-order-100 {
 		order: 100;
 	}
+}
 
-	@include pmc-breakpoint( desktop ) {
 
-		.lrv-u-order-n1 {
-			order: -1;
-		}
+// Legacy - should not use mobile-max
+.lrv-u-order-100\@mobile-max {
 
-		.lrv-u-order-100 {
-			order: 100;
-		}
-	}
-
-} @else {
-
-	.lrv-u-order-100\@mobile-max {
-
-		@include pmc-breakpoint( mobile-max ) {
-			order: 100;
-		}
+	@include pmc-breakpoint( mobile-max ) {
+		order: 100;
 	}
 }
