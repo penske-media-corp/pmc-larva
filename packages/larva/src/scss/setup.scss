@@ -1,11 +1,13 @@
+// Import tools and legacy token values from Larva
 @import '@penskemediacorp/larva-scss/dist/generators';
 @import '@penskemediacorp/larva-scss/dist/tokens';
-@import '@penskemediacorp/larva-tokens/build/default.map.scss';
 
+// Merge project/rogue tokens and tokens map
 @import '00-tools/tokens.scss';
 
+// For v2, utilities are build in the theme.
+// Maintain namespace for backwards compat for now.
 $NAMESPACE: 'lrv-';
-$TOKENS-MAP: map-merge( $default-map, $rogue-tokens );
 
 // Feature Flags
 $features: (

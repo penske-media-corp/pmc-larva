@@ -1,3 +1,5 @@
+@import '@penskemediacorp/larva-tokens/build/default.map.scss';
+
 // All project level values not available from the official
 // larva-tokens package should be added here.
 
@@ -15,16 +17,21 @@ $rogue-tokens: (
 
 	// COLORS
 	'color-accent-b': 'blue',
+	// Example of mapping legacy token naming to v2 naming.
+	'color-grey-lightest': map-get( $default-map, background-color-grey-lightest ),
 
 	// SPACING
-	'spacing-0': 0,
+	'spacing-00': 0,
 	'spacing-n1': -1rem, // Negative spacing only supported by margin.
-	'spacing-025': 1rem,
-	'spacing-050': 1rem,
-	'spacing-075': 1rem,
+	'spacing-025': 0.25rem,
+	'spacing-050': 0.5rem,
+	'spacing-075': 0.75rem,
 	'spacing-1': 1rem,
-	'spacing-125': 9rem,
-	'spacing-150': 9rem,
-	'spacing-175': 9rem,
-	'spacing-3': 9rem,
+	'spacing-125': 1.25rem,
+	'spacing-150': 1.5rem,
+	'spacing-175': 1.75rem,
+	'spacing-2': 2rem,
+	'spacing-3': 3rem,
 );
+
+$TOKENS-MAP: map-merge( $default-map, $rogue-tokens );
