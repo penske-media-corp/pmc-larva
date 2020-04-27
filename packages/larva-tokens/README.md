@@ -10,11 +10,11 @@ This package provides a default set of design tokens for colors and font familie
 2. A Gulp task builds each of the JSON tokens into CSS file containing custom properties, a Sass map, and an HTML style guide.
 3. The built files are available for use by other applications, such as larva-css which generates utility classes according to the Sass map, and makes them available for quick theme-ing with custom properties.
 
+The values in larva-tokens are strictly controlled, and should originate from a style guide provided by design, such as [this one from ArtNews](https://projects.invisionapp.com/share/FVQGKHESJQZ#/screens/384190276).
+
 ## Development Setup
 
-### Contributing to larva-tokens
-
-The values in larva-tokens are strictly controlled, and should originate from a style guide provided by design, such as [this one from ArtNews](https://projects.invisionapp.com/share/FVQGKHESJQZ#/screens/384190276). Here are some instances where you would contribute to larva-tokens:
+Here are some instances where you would contribute to larva-tokens:
 
 1. Setting up tokens for a new brand
 	1. Make a copy of _template.txt in src/brands and rename it to brand-name.json.
@@ -34,11 +34,9 @@ The values in larva-tokens are strictly controlled, and should originate from a 
 
 \* Note that adding new tokens is tedious but extremely important to do correctly. Please be very detailed and take care to follow existing naming conventions and ask your tech lead for help where you aren't sure.
 
-If these sound like your needs, here are guidelines for contributing to larva-tokens:
+If these sound like your needs, proceed!
 
-#### Setting up tokens for a new brand
-
-**Prerequisite:** A style guide provided by design that follows the design system naming conventions.
+**Prerequisite:** A style guide provided by design (or otherwise advised by product to use tokens) that follows the design system naming conventions.
 
 1. Clone this repository, i.e. the pmc-larva monorepo.
 2. In packages/larva tokens, run `npm install`.
@@ -48,7 +46,9 @@ If these sound like your needs, here are guidelines for contributing to larva-to
 7. Once the PR is merged and the release published, update the npm package in your project.
 8. If working in a project with Larva already setup, update the name of the custom-properties map in common.inline.scss, and the name of the Sass map in setup.scss.
 
-If working in a non-Larva project, for step #8, either:
+### Consuming tokens
+
+If working in a project that does not have tokens setup by default, there are two options for consuming tokens:
 
 1. Pull in the Sass map of tokens with `@import './node_modules/@penskemediacorp/larva-tokens/build/brand.map.scss';` and access values with `map-get( $brand-map, token-name )`.
 2. Add the custom properties map to the beginning of your CSS build with from `./node_modules/@penskemediacorp/larva-tokens/build/brand.custom-properties.scss`. Access the custom property values using the `var( --token-name )` CSS syntax.
