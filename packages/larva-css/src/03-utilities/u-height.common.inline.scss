@@ -8,7 +8,7 @@
 	height: auto;
 }
 
-@if variable-exists( 'features' ) and true == map-get( $features, utilities-v2 ) {
+@if variable-exists( 'features' ) and true == map-get( $features, project-utilities ) {
 
 } @else {
 	.lrv-u-max-height-50 {
