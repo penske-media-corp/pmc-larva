@@ -6,6 +6,9 @@
 		$token-str: quote( $token );
 
 		@if str-index( $token-str, 'spacing' ) {
+
+			$token: str-replace( $token-str, 'spacing-', '' );
+
 			.lrv-u-margin-r-#{$token} {
 				margin-right: $value;
 				margin-right: var( --#{$token}, #{$value} );
@@ -24,6 +27,25 @@
 			.lrv-u-margin-t-#{$token} {
 				margin-top: $value;
 				margin-top: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-margin-tb-#{$token} {
+				margin-top: $value;
+				margin-top: var( --#{$token}, #{$value} );
+				margin-bottom: $value;
+				margin-bottom: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-margin-lr-#{$token} {
+				margin-left: $value;
+				margin-left: var( --#{$token}, #{$value} );
+				margin-right: $value;
+				margin-right: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-margin-a-#{$token} {
+				margin: $value;
+				margin: var( --#{$token}, #{$value} );
 			}
 
 			@include pmc-breakpoint( desktop ) {
@@ -46,6 +68,25 @@
 					margin-top: $value;
 					margin-top: var( --#{$token}, #{$value} );
 				}
+
+				.lrv-u-margin-tb-#{$token}\@desktop {
+					margin-top: $value;
+					margin-top: var( --#{$token}, #{$value} );
+					margin-bottom: $value;
+					margin-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-lr-#{$token}\@desktop {
+					margin-left: $value;
+					margin-left: var( --#{$token}, #{$value} );
+					margin-right: $value;
+					margin-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-a-#{$token}\@desktop {
+					margin: $value;
+					margin: var( --#{$token}, #{$value} );
+				}
 			}
 
 			@include pmc-breakpoint( desktop-xl ) {
@@ -67,6 +108,25 @@
 				.lrv-u-margin-t-#{$token}\@desktop-xl {
 					margin-top: $value;
 					margin-top: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-tb-#{$token}\@desktop-xl {
+					margin-top: $value;
+					margin-top: var( --#{$token}, #{$value} );
+					margin-bottom: $value;
+					margin-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-lr-#{$token}\@desktop-xl {
+					margin-left: $value;
+					margin-left: var( --#{$token}, #{$value} );
+					margin-right: $value;
+					margin-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-margin-a-#{$token}\@desktop-xl {
+					margin: $value;
+					margin: var( --#{$token}, #{$value} );
 				}
 			}
 		}

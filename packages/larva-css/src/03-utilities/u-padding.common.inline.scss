@@ -5,7 +5,11 @@
 	@each $token, $value in $TOKENS-MAP {
 		$token-str: quote( $token );
 
-		@if str-index( $token-str, 'spacing' ) {
+		// No negative spacing for padding
+		@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+
+			$token: str-replace( $token-str, 'spacing-', '' );
+
 			.lrv-u-padding-r-#{$token} {
 				padding-right: $value;
 				padding-right: var( --#{$token}, #{$value} );
@@ -24,6 +28,25 @@
 			.lrv-u-padding-t-#{$token} {
 				padding-top: $value;
 				padding-top: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-padding-tb-#{$token} {
+				padding-top: $value;
+				padding-top: var( --#{$token}, #{$value} );
+				padding-bottom: $value;
+				padding-bottom: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-padding-lr-#{$token} {
+				padding-left: $value;
+				padding-left: var( --#{$token}, #{$value} );
+				padding-right: $value;
+				padding-right: var( --#{$token}, #{$value} );
+			}
+
+			.lrv-u-padding-a-#{$token} {
+				padding: $value;
+				padding: var( --#{$token}, #{$value} );
 			}
 
 			@include pmc-breakpoint( desktop ) {
@@ -46,6 +69,25 @@
 					padding-top: $value;
 					padding-top: var( --#{$token}, #{$value} );
 				}
+
+				.lrv-u-padding-tb-#{$token}\@desktop {
+					padding-top: $value;
+					padding-top: var( --#{$token}, #{$value} );
+					padding-bottom: $value;
+					padding-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-lr-#{$token}\@desktop {
+					padding-left: $value;
+					padding-left: var( --#{$token}, #{$value} );
+					padding-right: $value;
+					padding-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-a-#{$token}\@desktop {
+					padding: $value;
+					padding: var( --#{$token}, #{$value} );
+				}
 			}
 
 			@include pmc-breakpoint( desktop-xl ) {
@@ -67,6 +109,25 @@
 				.lrv-u-padding-t-#{$token}\@desktop-xl {
 					padding-top: $value;
 					padding-top: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-tb-#{$token}\@desktop-xl {
+					padding-top: $value;
+					padding-top: var( --#{$token}, #{$value} );
+					padding-bottom: $value;
+					padding-bottom: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-lr-#{$token}\@desktop-xl {
+					padding-left: $value;
+					padding-left: var( --#{$token}, #{$value} );
+					padding-right: $value;
+					padding-right: var( --#{$token}, #{$value} );
+				}
+
+				.lrv-u-padding-a-#{$token}\@desktop-xl {
+					padding: $value;
+					padding: var( --#{$token}, #{$value} );
 				}
 			}
 		}
