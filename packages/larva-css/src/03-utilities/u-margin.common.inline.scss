@@ -7,126 +7,127 @@
 
 		@if str-index( $token-str, 'spacing' ) {
 
-			$token: str-replace( $token-str, 'spacing-', '' );
+			$token-name: $token;
+			$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-			.lrv-u-margin-r-#{$token} {
+			.lrv-u-margin-r-#{$token-selector} {
 				margin-right: $value;
-				margin-right: var( --#{$token}, #{$value} );
+				margin-right: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-l-#{$token} {
+			.lrv-u-margin-l-#{$token-selector} {
 				margin-left: $value;
-				margin-left: var( --#{$token}, #{$value} );
+				margin-left: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-b-#{$token} {
+			.lrv-u-margin-b-#{$token-selector} {
 				margin-bottom: $value;
-				margin-bottom: var( --#{$token}, #{$value} );
+				margin-bottom: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-t-#{$token} {
+			.lrv-u-margin-t-#{$token-selector} {
 				margin-top: $value;
-				margin-top: var( --#{$token}, #{$value} );
+				margin-top: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-tb-#{$token} {
+			.lrv-u-margin-tb-#{$token-selector} {
 				margin-top: $value;
-				margin-top: var( --#{$token}, #{$value} );
+				margin-top: var(--#{$token-name}, #{$value} );
 				margin-bottom: $value;
-				margin-bottom: var( --#{$token}, #{$value} );
+				margin-bottom: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-lr-#{$token} {
+			.lrv-u-margin-lr-#{$token-selector} {
 				margin-left: $value;
-				margin-left: var( --#{$token}, #{$value} );
+				margin-left: var(--#{$token-name}, #{$value} );
 				margin-right: $value;
-				margin-right: var( --#{$token}, #{$value} );
+				margin-right: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-a-#{$token} {
+			.lrv-u-margin-a-#{$token-selector} {
 				margin: $value;
-				margin: var( --#{$token}, #{$value} );
+				margin: var(--#{$token-name}, #{$value} );
 			}
 
 			@include pmc-breakpoint( desktop ) {
-				.lrv-u-margin-r-#{$token}\@desktop {
+				.lrv-u-margin-r-#{$token-selector}\@desktop {
 					margin-right: $value;
-					margin-right: var( --#{$token}, #{$value} );
+					margin-right: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-l-#{$token}\@desktop {
+				.lrv-u-margin-l-#{$token-selector}\@desktop {
 					margin-left: $value;
-					margin-left: var( --#{$token}, #{$value} );
+					margin-left: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-b-#{$token}\@desktop {
+				.lrv-u-margin-b-#{$token-selector}\@desktop {
 					margin-bottom: $value;
-					margin-bottom: var( --#{$token}, #{$value} );
+					margin-bottom: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-t-#{$token}\@desktop {
+				.lrv-u-margin-t-#{$token-selector}\@desktop {
 					margin-top: $value;
-					margin-top: var( --#{$token}, #{$value} );
+					margin-top: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-tb-#{$token}\@desktop {
+				.lrv-u-margin-tb-#{$token-selector}\@desktop {
 					margin-top: $value;
-					margin-top: var( --#{$token}, #{$value} );
+					margin-top: var(--#{$token-name}, #{$value} );
 					margin-bottom: $value;
-					margin-bottom: var( --#{$token}, #{$value} );
+					margin-bottom: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-lr-#{$token}\@desktop {
+				.lrv-u-margin-lr-#{$token-selector}\@desktop {
 					margin-left: $value;
-					margin-left: var( --#{$token}, #{$value} );
+					margin-left: var(--#{$token-name}, #{$value} );
 					margin-right: $value;
-					margin-right: var( --#{$token}, #{$value} );
+					margin-right: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-a-#{$token}\@desktop {
+				.lrv-u-margin-a-#{$token-selector}\@desktop {
 					margin: $value;
-					margin: var( --#{$token}, #{$value} );
+					margin: var(--#{$token-name}, #{$value} );
 				}
 			}
 
 			@include pmc-breakpoint( desktop-xl ) {
-				.lrv-u-margin-r-#{$token}\@desktop-xl {
+				.lrv-u-margin-r-#{$token-selector}\@desktop-xl {
 					margin-right: $value;
-					margin-right: var( --#{$token}, #{$value} );
+					margin-right: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-l-#{$token}\@desktop-xl {
+				.lrv-u-margin-l-#{$token-selector}\@desktop-xl {
 					margin-left: $value;
-					margin-left: var( --#{$token}, #{$value} );
+					margin-left: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-b-#{$token}\@desktop-xl {
+				.lrv-u-margin-b-#{$token-selector}\@desktop-xl {
 					margin-bottom: $value;
-					margin-bottom: var( --#{$token}, #{$value} );
+					margin-bottom: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-t-#{$token}\@desktop-xl {
+				.lrv-u-margin-t-#{$token-selector}\@desktop-xl {
 					margin-top: $value;
-					margin-top: var( --#{$token}, #{$value} );
+					margin-top: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-tb-#{$token}\@desktop-xl {
+				.lrv-u-margin-tb-#{$token-selector}\@desktop-xl {
 					margin-top: $value;
-					margin-top: var( --#{$token}, #{$value} );
+					margin-top: var(--#{$token-name}, #{$value} );
 					margin-bottom: $value;
-					margin-bottom: var( --#{$token}, #{$value} );
+					margin-bottom: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-lr-#{$token}\@desktop-xl {
+				.lrv-u-margin-lr-#{$token-selector}\@desktop-xl {
 					margin-left: $value;
-					margin-left: var( --#{$token}, #{$value} );
+					margin-left: var(--#{$token-name}, #{$value} );
 					margin-right: $value;
-					margin-right: var( --#{$token}, #{$value} );
+					margin-right: var(--#{$token-name}, #{$value} );
 				}
 
-				.lrv-u-margin-a-#{$token}\@desktop-xl {
+				.lrv-u-margin-a-#{$token-selector}\@desktop-xl {
 					margin: $value;
-					margin: var( --#{$token}, #{$value} );
+					margin: var(--#{$token-name}, #{$value} );
 				}
 			}
 		}
