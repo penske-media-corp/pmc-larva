@@ -14,7 +14,9 @@ The values in larva-tokens are strictly controlled, and should originate from a 
 
 ## Development Setup
 
-Here are some instances where you would contribute to larva-tokens:
+Given that tokens are strictly controlled, contributions should be relatively infrequent.
+
+### Use cases for updating larva-tokens
 
 1. Setting up tokens for a new brand
 	1. Make a copy of _template.txt in src/brands and rename it to brand-name.json.
@@ -32,9 +34,9 @@ Here are some instances where you would contribute to larva-tokens:
 	```
 	2. Note that the `type` and `category` for the token overrides does not carry over from their defaults, so they must be added in the top-level brand-name.json files.
 
-_\* **Note:** Adding new tokens is tedious, but extremely important to do correctly. Please be very detailed and take care to follow existing naming conventions and ask your tech lead for help where you aren't sure._
-
 If these sound like your needs, proceed!
+
+### Updating or Adding Tokens
 
 **Prerequisite:** A style guide provided by design (or otherwise advised by product to use tokens) that follows the design system naming conventions.
 
@@ -46,7 +48,10 @@ If these sound like your needs, proceed!
 7. Once the PR is merged and the release published, update the npm package in your project.
 8. If working in a project with Larva already setup, update the name of the custom-properties map in common.inline.scss, and the name of the Sass map in setup.scss.
 
-### Consuming tokens
+
+**Note:** Adding new tokens is tedious, but _extremely important_ to do correctly. Please be very detailed and take care to follow existing naming conventions and ask your tech lead for help where you aren't sure.
+
+### Consuming Tokens in Projects
 
 If working in a project that does not have tokens setup by default, there are two options for consuming tokens:
 
