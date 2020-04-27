@@ -35,13 +35,21 @@
   --border-color-grey-light: rgb(204, 204, 204);
   --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(106, 106, 106);
+  /* Spacing tokens are used for margins and padding. */
   --spacing-00: 0;
+  /* Spacing tokens are used for margins and padding. */
   --spacing-025: 0.25rem;
+  /* Spacing tokens are used for margins and padding. */
   --spacing-050: 0.5rem;
+  /* Spacing tokens are used for margins and padding. */
   --spacing-075: 0.75rem;
+  /* Spacing tokens are used for margins and padding. */
   --spacing-1: 1rem;
+  /* Spacing tokens are used for margins and padding. */
   --spacing-125: 1.25rem;
+  /* Spacing tokens are used for margins and padding. */
   --spacing-150: 1.5rem;
+  /* Spacing tokens are used for margins and padding. */
   --spacing-2: 2rem;
   --color-brand-secondary: rgb(241, 247, 252);
   --color-brand-primary: rgb(229, 75, 39);
