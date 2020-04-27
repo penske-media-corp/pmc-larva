@@ -5,8 +5,6 @@
 // Merge project/rogue tokens and tokens map
 @import '00-tools/tokens.scss';
 
-// For v2, utilities are build in the theme.
-// Maintain namespace for backwards compat for now.
 $NAMESPACE: 'lrv-';
 
 // Feature Flags
