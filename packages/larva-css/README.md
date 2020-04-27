@@ -20,7 +20,7 @@ $features: (
 
 Currently available features:
 
-* `project-utilities`: Generate project level .u-* utilities (no .lrv- namespace) for font-size, line-height, and font-weight. These should be added to a project-level tokens map that is merged with the main map from larva-tokens. See tokens.scss in packages/larva/src/scss/00-tools/tokens.scss for an example of addint project-level utilities.
+* `project-typography`: Generate project level .u-* utilities (no .lrv- namespace) for font-size, line-height, and font-weight. These should be added to a project-level tokens map that is merged with the main map from larva-tokens. See tokens.scss in packages/larva/src/scss/00-tools/tokens.scss for an example of addint project-level utilities.
 
 ### Using larva-css on its own
 

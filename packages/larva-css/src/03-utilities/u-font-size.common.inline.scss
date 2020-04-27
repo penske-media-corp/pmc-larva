@@ -1,6 +1,6 @@
 @import 'setup';
 
-@if variable-exists( 'features' ) and true == map-get( $features, project-utilities ) {
+@if variable-exists( 'features' ) and true == map-get( $features, project-typography ) {
 
 	// No .lrv- namespace.
 	// All typography oriented should be added at the project level
