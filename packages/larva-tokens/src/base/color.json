@@ -21,6 +21,9 @@
 		},
 		"COLOR_BLACK": {
 			"value": "{!BLACK}"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!BLUE_61}"
 		}
 	}
 }

@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Add @desktop breakpoints for flex, display, order, text-align, box-alignment
 * larva-patterns - Improve Larva CSS documentation UI
 * larva-tokens - Add spacing to tokens
+* larva-tokens - Add contents of default.json to the base JSONs to indicate they are required
 
 ## [8.6.1-alpha] - 4-21-2020
 
