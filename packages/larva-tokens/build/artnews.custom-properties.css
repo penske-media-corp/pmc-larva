@@ -35,6 +35,14 @@
   --border-color-grey-light: rgb(204, 204, 204);
   --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(106, 106, 106);
+  --spacing-00: 0;
+  --spacing-025: 0.25rem;
+  --spacing-050: 0.5rem;
+  --spacing-075: 0.75rem;
+  --spacing-1: 1rem;
+  --spacing-125: 1.25rem;
+  --spacing-150: 1.5rem;
+  --spacing-2: 2rem;
   --color-brand-secondary: rgb(241, 247, 252);
   --color-brand-primary: rgb(229, 75, 39);
   --background-color-brand-secondary: rgb(241, 247, 252);
