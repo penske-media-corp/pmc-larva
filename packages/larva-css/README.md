@@ -79,3 +79,7 @@ Where, if the token was `spacing-1`, the utility would be `lrv-u-margin-l-1`.
 Algorithms are presentationally named CSS patterns that provide functionality difficult or impossible to accomplish with utilities. Examples are aspect ratio cropping, CSS grid with flex box fallbacks, and SVG icons with `::before` and `::after`.
 
 Please refer to the source of each algorithm to understand its functionality.
+
+## JS-related CSS
+
+The SCSS files inside 04-js should be imported directly into a local project build, other than js-MobileHeightToggle which is added to the js.common.inline chunk here.
