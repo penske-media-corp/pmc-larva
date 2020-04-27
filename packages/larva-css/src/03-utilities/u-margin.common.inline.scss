@@ -1,214 +1,156 @@
 @import 'setup';
 
-@if true == map-get( $features, utilities-v2 ) {
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-	@each $token, $value in $TOKENS-MAP {
-		$token-str: quote( $token );
+	@if str-index( $token-str, 'spacing' ) {
 
-		@if str-index( $token-str, 'spacing' ) {
+		$token-name: $token;
+		$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-			$token-name: $token;
-			$token-selector: str-replace( $token-str, 'spacing-', '' );
+		.lrv-u-margin-r-#{$token-selector} {
+			margin-right: $value;
+			margin-right: var(--#{$token-name}, #{$value} );
+		}
 
-			.lrv-u-margin-r-#{$token-selector} {
+		.lrv-u-margin-l-#{$token-selector} {
+			margin-left: $value;
+			margin-left: var(--#{$token-name}, #{$value} );
+		}
+
+		.lrv-u-margin-b-#{$token-selector} {
+			margin-bottom: $value;
+			margin-bottom: var(--#{$token-name}, #{$value} );
+		}
+
+		.lrv-u-margin-t-#{$token-selector} {
+			margin-top: $value;
+			margin-top: var(--#{$token-name}, #{$value} );
+		}
+
+		.lrv-u-margin-tb-#{$token-selector} {
+			margin-top: $value;
+			margin-top: var(--#{$token-name}, #{$value} );
+			margin-bottom: $value;
+			margin-bottom: var(--#{$token-name}, #{$value} );
+		}
+
+		.lrv-u-margin-lr-#{$token-selector} {
+			margin-left: $value;
+			margin-left: var(--#{$token-name}, #{$value} );
+			margin-right: $value;
+			margin-right: var(--#{$token-name}, #{$value} );
+		}
+
+		.lrv-u-margin-a-#{$token-selector} {
+			margin: $value;
+			margin: var(--#{$token-name}, #{$value} );
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			.lrv-u-margin-r-#{$token-selector}\@desktop {
 				margin-right: $value;
 				margin-right: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-l-#{$token-selector} {
+			.lrv-u-margin-l-#{$token-selector}\@desktop {
 				margin-left: $value;
 				margin-left: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-b-#{$token-selector} {
+			.lrv-u-margin-b-#{$token-selector}\@desktop {
 				margin-bottom: $value;
 				margin-bottom: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-t-#{$token-selector} {
+			.lrv-u-margin-t-#{$token-selector}\@desktop {
 				margin-top: $value;
 				margin-top: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-tb-#{$token-selector} {
+			.lrv-u-margin-tb-#{$token-selector}\@desktop {
 				margin-top: $value;
 				margin-top: var(--#{$token-name}, #{$value} );
 				margin-bottom: $value;
 				margin-bottom: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-lr-#{$token-selector} {
+			.lrv-u-margin-lr-#{$token-selector}\@desktop {
 				margin-left: $value;
 				margin-left: var(--#{$token-name}, #{$value} );
 				margin-right: $value;
 				margin-right: var(--#{$token-name}, #{$value} );
 			}
 
-			.lrv-u-margin-a-#{$token-selector} {
+			.lrv-u-margin-a-#{$token-selector}\@desktop {
 				margin: $value;
 				margin: var(--#{$token-name}, #{$value} );
 			}
+		}
 
-			@include pmc-breakpoint( desktop ) {
-				.lrv-u-margin-r-#{$token-selector}\@desktop {
-					margin-right: $value;
-					margin-right: var(--#{$token-name}, #{$value} );
-				}
-
-				.lrv-u-margin-l-#{$token-selector}\@desktop {
-					margin-left: $value;
-					margin-left: var(--#{$token-name}, #{$value} );
-				}
-
-				.lrv-u-margin-b-#{$token-selector}\@desktop {
-					margin-bottom: $value;
-					margin-bottom: var(--#{$token-name}, #{$value} );
-				}
-
-				.lrv-u-margin-t-#{$token-selector}\@desktop {
-					margin-top: $value;
-					margin-top: var(--#{$token-name}, #{$value} );
-				}
-
-				.lrv-u-margin-tb-#{$token-selector}\@desktop {
-					margin-top: $value;
-					margin-top: var(--#{$token-name}, #{$value} );
-					margin-bottom: $value;
-					margin-bottom: var(--#{$token-name}, #{$value} );
-				}
-
-				.lrv-u-margin-lr-#{$token-selector}\@desktop {
-					margin-left: $value;
-					margin-left: var(--#{$token-name}, #{$value} );
-					margin-right: $value;
-					margin-right: var(--#{$token-name}, #{$value} );
-				}
-
-				.lrv-u-margin-a-#{$token-selector}\@desktop {
-					margin: $value;
-					margin: var(--#{$token-name}, #{$value} );
-				}
+		@include pmc-breakpoint( desktop-xl ) {
+			.lrv-u-margin-r-#{$token-selector}\@desktop-xl {
+				margin-right: $value;
+				margin-right: var(--#{$token-name}, #{$value} );
 			}
 
-			@include pmc-breakpoint( desktop-xl ) {
-				.lrv-u-margin-r-#{$token-selector}\@desktop-xl {
-					margin-right: $value;
-					margin-right: var(--#{$token-name}, #{$value} );
-				}
+			.lrv-u-margin-l-#{$token-selector}\@desktop-xl {
+				margin-left: $value;
+				margin-left: var(--#{$token-name}, #{$value} );
+			}
 
-				.lrv-u-margin-l-#{$token-selector}\@desktop-xl {
-					margin-left: $value;
-					margin-left: var(--#{$token-name}, #{$value} );
-				}
+			.lrv-u-margin-b-#{$token-selector}\@desktop-xl {
+				margin-bottom: $value;
+				margin-bottom: var(--#{$token-name}, #{$value} );
+			}
 
-				.lrv-u-margin-b-#{$token-selector}\@desktop-xl {
-					margin-bottom: $value;
-					margin-bottom: var(--#{$token-name}, #{$value} );
-				}
+			.lrv-u-margin-t-#{$token-selector}\@desktop-xl {
+				margin-top: $value;
+				margin-top: var(--#{$token-name}, #{$value} );
+			}
 
-				.lrv-u-margin-t-#{$token-selector}\@desktop-xl {
-					margin-top: $value;
-					margin-top: var(--#{$token-name}, #{$value} );
-				}
+			.lrv-u-margin-tb-#{$token-selector}\@desktop-xl {
+				margin-top: $value;
+				margin-top: var(--#{$token-name}, #{$value} );
+				margin-bottom: $value;
+				margin-bottom: var(--#{$token-name}, #{$value} );
+			}
 
-				.lrv-u-margin-tb-#{$token-selector}\@desktop-xl {
-					margin-top: $value;
-					margin-top: var(--#{$token-name}, #{$value} );
-					margin-bottom: $value;
-					margin-bottom: var(--#{$token-name}, #{$value} );
-				}
+			.lrv-u-margin-lr-#{$token-selector}\@desktop-xl {
+				margin-left: $value;
+				margin-left: var(--#{$token-name}, #{$value} );
+				margin-right: $value;
+				margin-right: var(--#{$token-name}, #{$value} );
+			}
 
-				.lrv-u-margin-lr-#{$token-selector}\@desktop-xl {
-					margin-left: $value;
-					margin-left: var(--#{$token-name}, #{$value} );
-					margin-right: $value;
-					margin-right: var(--#{$token-name}, #{$value} );
-				}
-
-				.lrv-u-margin-a-#{$token-selector}\@desktop-xl {
-					margin: $value;
-					margin: var(--#{$token-name}, #{$value} );
-				}
+			.lrv-u-margin-a-#{$token-selector}\@desktop-xl {
+				margin: $value;
+				margin: var(--#{$token-name}, #{$value} );
 			}
 		}
 	}
-} @else {
-	$margins_without_breakpoints: (
-		// Top
-		('t', $spacer-0),
-		('t', $spacer-050),
-		('t', $spacer-1),
-		('t', $spacer-2),
-
-		// Right
-		('r', $spacer-025),
-		('r', $spacer-050),
-		('r', $spacer-1),
-		('r', $spacer-2),
-
-		// Bottom
-		('b', $spacer-0),
-		('b', $spacer-025),
-		('b', $spacer-050),
-		('b', $spacer-1),
-		('b', $spacer-2),
-
-		// Left
-		('l', $spacer-025),
-		('l', $spacer-050),
-		('l', $spacer-1),
-		('l', $spacer-2),
-
-		// Left/Right
-		('lr', $spacer-025),
-		('lr', $spacer-050),
-		('lr', $spacer-1),
-		('lr', $spacer-2),
-
-		// Top/Bottom
-		('tb', $spacer-0),
-		('tb', $spacer-050),
-		('tb', $spacer-1),
-		('tb', $spacer-2),
-
-		// All
-		('a', $spacer-0),
-		('a', $spacer-050),
-		('a', $spacer-1),
-		('a', $spacer-2)
-	);
-
-	$margins_with_breakpoints: (
-
-		// Breakpoints
-		('a', $spacer-0, mobile-max),
-		('t', $spacer-050, mobile-max),
-		('t', $spacer-1, mobile-max),
-		('t', $spacer-2, mobile-max),
-		('r', $spacer-0, mobile-max),
-		('b', $spacer-1, mobile-max),
-		('b', $spacer-050, mobile-max),
-		('tb', $spacer-0, mobile-max),
-		('tb', $spacer-1, mobile-max),
-
-		('r', $spacer-1, tablet),
-		('r', $spacer-0, tablet),
-		('b', $spacer-1, tablet),
-
-		('a', $spacer-1, desktop),
-		('r', $spacer-0, desktop),
-		('r', $spacer-0, desktop),
-		('t', $spacer-050, desktop),
-
-		('t', $spacer-050, desktop-xl),
-		('t', $spacer-1, desktop-xl),
-		('b', $spacer-1, desktop-xl),
-	);
-
-	@include u-margin( $margins_without_breakpoints );
-	@include u-margin( $margins_with_breakpoints );
-
 }
+
+// Legacy - should not have mobile-max and tablet
+$margins_with_breakpoints: (
+
+	// Breakpoints
+	('a', $spacer-0, mobile-max),
+	('t', $spacer-050, mobile-max),
+	('t', $spacer-1, mobile-max),
+	('t', $spacer-2, mobile-max),
+	('r', $spacer-0, mobile-max),
+	('b', $spacer-1, mobile-max),
+	('b', $spacer-050, mobile-max),
+	('tb', $spacer-0, mobile-max),
+	('tb', $spacer-1, mobile-max),
+
+	('r', $spacer-1, tablet),
+	('r', $spacer-0, tablet),
+	('b', $spacer-1, tablet),
+);
+
+@include u-margin( $margins_with_breakpoints );
 
 // Auto margins
 
