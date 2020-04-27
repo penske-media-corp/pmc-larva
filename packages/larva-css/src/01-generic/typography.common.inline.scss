@@ -21,11 +21,8 @@ body {
 
 		// example: font-family-primary
 		// each will have a corresponding `fancy` variation.
-		@if str-index( $token-str, 'font-family' ) {
-
-			@if not str-index( $token-str, 'fancy' ) {
-				--#{$token}: var( --#{$token}-fancy );
-			}
+		@if str-index( $token-str, 'font-family' ) and not str-index( $token-str, 'fancy' ) {
+			--#{$token}: var( --#{$token}-fancy );
 		}
 	}
 
