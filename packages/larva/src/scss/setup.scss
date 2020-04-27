@@ -5,7 +5,7 @@
 @import '00-tools/tokens.scss';
 
 $NAMESPACE: 'lrv-';
-$TOKENS-MAP: $default-map;
+$TOKENS-MAP: map-merge( $default-map, $rogue-tokens );
 
 // Feature Flags
 $features: (

@@ -1,0 +1,30 @@
+// All project level values not available from the official
+// larva-tokens package should be added here.
+
+// BE ORGANIZED. If this starts getting too long, you can separate
+// each category into its own map and use map-merge to consolidate them.
+
+$rogue-tokens: (
+
+	// FONT-SIZE - no lrv- namespace
+	'font-size-14': pmc-rem(14),
+
+	// FONT-WEIGHT - no lrv- namespace
+
+	// LINE-HEIGHT - no lrv- namespace
+
+	// COLORS
+	'color-accent-b': 'blue',
+
+	// SPACING
+	'spacing-0': 0,
+	'spacing-n1': -1rem, // Negative spacing only supported by margin.
+	'spacing-025': 1rem,
+	'spacing-050': 1rem,
+	'spacing-075': 1rem,
+	'spacing-1': 1rem,
+	'spacing-125': 9rem,
+	'spacing-150': 9rem,
+	'spacing-175': 9rem,
+	'spacing-3': 9rem,
+);
