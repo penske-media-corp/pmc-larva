@@ -1,12 +1,43 @@
 @import 'setup';
+@if true == map-get( $features, utilities-v2 ) {
 
-// TODO: refactor to custom property version, if we need to change the line height values.
-@include token-utility-generator( 'line-height',
-	(
-		line-height-small,
-		line-height-normal,
-		line-height-copy,
-		line-height-large,
-	),
-	$TOKENS-MAP
-);
+	// No .lrv- namespace.
+	// All typography oriented utilities should be added at the project level
+	// to encourage use of a-font and to gather information about
+	// where the design deviated from the style guide a-font.
+
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		@if str-index( $token-str, 'line-height' ) {
+			.u-#{$token} {
+				font-size: $value;
+			}
+
+			@include pmc-breakpoint( desktop ) {
+				.u-#{$token}\@desktop {
+					font-size: $value;
+				}
+			}
+
+			@include pmc-breakpoint( desktop-xl ) {
+				.u-#{$token}\@desktop-xl {
+					font-size: $value;
+				}
+			}
+		}
+	}
+
+} @else {
+
+	// TODO: refactor to custom property version, if we need to change the line height values.
+	@include token-utility-generator( 'line-height',
+		(
+			line-height-small,
+			line-height-normal,
+			line-height-copy,
+			line-height-large,
+		),
+		$TOKENS-MAP
+	);
+}
