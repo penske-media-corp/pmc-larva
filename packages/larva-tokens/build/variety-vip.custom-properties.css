@@ -5,6 +5,7 @@
   --color-grey: rgb(140, 140, 140);
   --color-grey-dark: rgb(106, 106, 106);
   --color-black: rgb(0, 0, 0);
+  --color-brand-primary: rgb(215, 20, 64);
   --font-family-primary-fancy: 'Graphik XX Cond', sans-serif;
   /* Fallback for primary-fancy */
   --font-family-primary: Georgia, serif;
@@ -26,7 +27,6 @@
   --color-brand-secondary: rgb(40, 56, 66);
   --font-family-basic-fancy: 'Para Supreme Regular', serif;
   --border-color-brand-secondary: rgb(40, 56, 66);
-  --color-brand-primary: rgb(215, 20, 64);
   --background-color-brand-accent: rgb(240, 241, 242);
   --font-family-accent: Helvetica, sans-serif;
   --font-family-body-fancy: 'IBM Plex Serif', serif;

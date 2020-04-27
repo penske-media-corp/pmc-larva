@@ -5,6 +5,7 @@
   --color-grey: rgb(140, 140, 140);
   --color-grey-dark: rgb(106, 106, 106);
   --color-black: rgb(0, 0, 0);
+  --color-brand-primary: rgb(12, 77, 106);
   /* Available via @font-face. */
   --font-family-primary-fancy: 'Schnyder Cond M', Gerogia, serif;
   /* Fallback for primary-fancy */
@@ -37,6 +38,7 @@
   --border-color-grey-light: rgb(204, 204, 204);
   --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(106, 106, 106);
+  --border-color-brand-primary: rgb(12, 77, 106);
   /* Spacing tokens are used for margins and padding. */
   --spacing-00: 0;
   /* Spacing tokens are used for margins and padding. */
@@ -53,8 +55,6 @@
   --spacing-150: 1.5rem;
   /* Spacing tokens are used for margins and padding. */
   --spacing-2: 2rem;
-  --color-brand-primary: rgb(12, 77, 106);
   --background-color-brand-accent: rgb(1, 165, 237);
-  --border-color-brand-primary: rgb(12, 77, 106);
   --color-brand-accent: rgb(1, 165, 237);
 }
