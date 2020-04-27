@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Generate breakpoints for tokens and :hover for border colors
 * larva-css - Add feature for supporting project-level typography tokens
 * larva-css - Add @desktop breakpoints for flex, display, order, text-align, box-alignment
+* larva-patterns - Improve Larva CSS documentation UI
 * larva-tokens - Add spacing to tokens
 
 ## [8.6.1-alpha] - 4-21-2020
