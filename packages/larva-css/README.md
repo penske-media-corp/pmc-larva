@@ -6,7 +6,23 @@ This package contains Larva's base CSS, CSS algorithms, utlities, and CSS for JS
 
 larva-css can be used on its own, or in conjunction with the main larva package. The main larva package provides a single larva.inline.css and larva.async.css file for consumption.
 
-# Using larva-css on its own
+### Enabling features
+
+As of 8.7.0-alpha, larva-css can support feature queries via a Sass map in setup.scss. **This only applies to projects that build the larva-css .scss files in the project, not those that consume .css files directly.**
+
+If you project meets the above requirements, you may enable features by adding the following to `setup.scss`:
+
+```
+$features: (
+	'feature-name': true,
+);
+```
+
+Currently available features:
+
+* `project-utilities`: Generate project level .u-* utilities (no .lrv- namespace) for font-size, line-height, and font-weight. These should be added to a project-level tokens map that is merged with the main map from larva-tokens. See tokens.scss in packages/larva/src/scss/00-tools/tokens.scss for an example of addint project-level utilities.
+
+### Using larva-css on its own
 
 If you'd like to use larva-css on its own, install like so:
 
