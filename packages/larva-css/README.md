@@ -1,84 +1,65 @@
 # Larva CSS
 
-This package contains Larva's base CSS, CSS algorithms, utlities, and CSS for JS patterns from larva-js.
+This package contains Larva's base CSS, CSS algorithms, utlities, and CSS for JS patterns from larva-js. Design-related utilities e.g. typography, spacing, and color, are generated according to configuration in larva-tokens.
 
 ## Usage
+
+larva-css can be used on its own, or in conjunction with the main larva package. The main larva package provides a single larva.inline.css and larva.async.css file for consumption.
+
+# Using larva-css on its own
+
+If you'd like to use larva-css on its own, install like so:
 
 ```
 npm install @penskemediacorp/larva-css --save
 ```
 
-Then include the CSS from @penskemediacorp/larva-css/build/css in your asset pipeline. Make sure that the CSS files containing `inline` and `async` are loaded accordingly.
+## Loading larva-css into your project's build
 
-## Concepts
+If you are splitting inline and async loaded CSS, you can load inline CSS separately by including the following files inline in your application, in this order to maintain the cascade:
 
-### "Atomic" or "Functional" CSS
+```
+// inline.scss => inline.css
+@import '@penskemediacorp/larva-css/build/css/generic.inline.css';
+@import '@penskemediacorp/larva-css/build/css/algorithms.inline.css';
+@import '@penskemediacorp/larva-css/build/css/utilities.inline.css';
+@import '@penskemediacorp/larva-css/build/css/js.inline.css';
 
-Coming soon!
+// async.scss => async.css
+@import '@penskemediacorp/larva-css/build/css/algorithms.async.css';
+@import '@penskemediacorp/larva-css/build/css/utilities.async.css';
+```
 
-### Removing the Burden of Naming
+Or, if you are not splitting inline and async:
 
-Unless you are authoring a CSS algorithm, you should not have to name a new class.
+```
+@import '@penskemediacorp/larva-css/build/css/generic.common.inline';
+@import '@penskemediacorp/larva-css/build/css/algorithms.common.inline';
+@import '@penskemediacorp/larva-css/build/css/algorithms.common.async';
+@import '@penskemediacorp/larva-css/build/css/utilities.common.inline';
+@import '@penskemediacorp/larva-css/build/css/utilities.common.async';
+@import '@penskemediacorp/larva-css/build/css/js.common.inline';
 
-### Cascading and Specificity
+```
 
-Directories are ordered according to the cascading of styles, inspired by ITCSS. Generic CSS will almost always be overridden, so it is first. Unless selector specificty says otherwise (e.g. `a-space-children` or the image in `a-crop`), CSS algorithms should be overridden by utilities. The CSS related to JS interactivity comes last because it should be the most important in the cascade.
+Note that at present, there are no js or generic files for async CSS from larva-css.
 
-## Terminology
+In the future, this workflow needs some refactoring to be simpler and oriented around a single import, like it is in the main larva package.
 
-*Generic* styles are any basic reset styles, usually applied to general elements. Larva does not use a formal reset like Normalize, rather, any initial property values are overridden in this directory as needed. For example, removing margins from headings and adding box-sizing: border-box to all elements.
+## Utility Names
 
-A *utility* is a single* declaration ruleset that is named according to the declaration and prefixed with a `u-*`. These sometimes come from SCSS generators, but many are authored by hand. A few examples (namespaced with pmc-* to indicate they come from this repository):
+Excluding spacing, utilities that are generated from larva-tokens, are named as follows:
 
-* lrv-u-display-block
-* lrv-u-color-brand-primary
-* lrv-u-margin-tb-1@tablet
+`.lrv-u-{$token-name}`
 
-\* The only time a utility would have more than one declaration is for margin and padding where top/bottom and right/left values can be in the same ruleset.
+For spacing, they are named:
 
-An *algorithm* is a more involved ruleset or set of rulesets that accomplished a specific styling goal that is not reasonable to accomplish with utilties, and generally makes use of browser algorithms or familiar CSS programming patterns. A few examples:
+`.lrv-u-margin-{l|r|t|b|lr|tb|a}-{$size}`
 
-* lrv-a-space-children - utilized the owl selector pattern to apply space between child elements.
-* lrv-a-glue - an algorithm for "glueing" one element onto another with absolute positioning.
-* lrv-a-unstyle-list – a straightforward set of declarations that remove basic list styling.
+Where, if the token was `spacing-1`, the utility would be `lrv-u-margin-l-1`.
 
-The *js* directory contains CSS corresponding to interactivity from larva-js. These styles could be kept alongside the JS, but in order to minimize build tool dependencies, there are kept here, in the larva-css package.
+## Algorithms
 
-## Naming SCSS Files
+Algorithms are presentationally named CSS patterns that provide functionality difficult or impossible to accomplish with utilities. Examples are aspect ratio cropping, CSS grid with flex box fallbacks, and SVG icons with `::before` and `::after`.
 
-The SCSS file should be named according to the chunk it will be included in when used in an actual product, and whether it should be loaded asynchronously or inline. The formular for naming a file:
-
-`{a|u|js}-{baseName}.{chunkName}.{inline|async}.scss`
-
-Example, full file names:
-
-* u-background.common.async.scss
-* u-font-size.single.async.scss
-* a-gradient-after.common.async.scss
-* a-archive-grid.archive.inline.scss
-* js-MobileHeightToggle.common.async.scss
-
-### Namespace {a|u|js}
-
-- a, for algorithm
-- u, for utility
-- js, styling paired with a JS pattern
-- No namespace for generic or reset styles
-
-### baseName
-
-The baseName of a pattern is the consistent name that is included before all responsive suffixes and BEM elements or modifiers.
-
-For example, `a-article-grid` could contain `a-article-grid__sidebar` or `a-article-grid--3col`, but the name of the file only contains a-article-grid.
-
-### chunkName
-
-The name of the chunk where this algorithm should be included. Most algorithms will be common, but there will certainly be cases when algorithms are written for specifc projects that may have their own chunk naming convention. When naming chunks in a WordPress theme, they should map directly 1 to 1 with the queried template where the CSS is equeued or inlined.
-
-### Async or Inline
-
-These terms refer to whether or not the algorithm should be included in inlined, or "critical CSS", or in a file loaded asynchronously.
-
-inline should be used for CSS that is applied to elements that are both "above the fold" and contain properties that come into play at the layout phase in rendering. In other words, they are crucial for the first paint of the page. Examples are any properties part of the box model, positioning, layout APIs like Grid and Flexbox, font sizing, and more.
-
-async should be used for CSS that is not critical to the first paint i.e. to making the page content readable, and that apply during the paint and composite phases of rendering. These are properties like color, background, transition, and box-shadow.
+Please refer to the source of each algorithm to understand its functionality.
