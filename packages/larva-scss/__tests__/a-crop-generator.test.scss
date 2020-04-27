@@ -70,12 +70,35 @@
 				@include _a-crop-generator( $aspect-ratios );
 			}
 
-			@include contains {
+			// Note: ideally this would be `contains` and only contain the
+			// breakpoint block, but having trouble with the
+			// "Compared values have no visual difference." error and
+			// not worth the time to debug it.
+			@include expect {
+				.lrv-a-crop-16x9 {
+					position: relative;
+					padding-bottom: calc( ( 9 / 16 ) * 100%);
+				}
 
-				.lrv-a-crop-16x9\@desktop {
-					@include pmc-breakpoint( desktop ) {
+				.lrv-a-crop-16x9 img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				@media (min-width: 62.5rem) {
+
+					.lrv-a-crop-16x9\@desktop {
 						position: relative;
 						padding-bottom: calc( ( 9 / 16 ) * 100%);
+					}
+
+					.lrv-a-crop-16x9\@desktop img {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
 					}
 				}
 			}
