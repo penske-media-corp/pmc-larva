@@ -3,8 +3,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	// example: color-grey-lightest, #EEEEEE
-	// All colors come from -color tokens. No more XX-colors tokens.
+	// example: background-color-grey-lightest, #EEEEEE
 	@if str-index( $token-str, 'background-color' ) {
 
 		.lrv-u-#{$token}\:hover:hover {
