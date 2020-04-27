@@ -38,9 +38,9 @@ A *utility* is a single* declaration ruleset that is named according to the decl
 
 An *algorithm* is a more involved ruleset or set of rulesets that accomplished a specific styling goal that is not reasonable to accomplish with utilties, and generally makes use of browser algorithms or familiar CSS programming patterns. A few examples:
 
-* pmc-a-space-children - utilized the owl selector pattern to apply space between child elements.
-* pmc-a-glue - an algorithm for "glueing" one element onto another with absolute positioning.
-* pmc-a-unstyle-list – a straightforward set of declarations that remove basic list styling.
+* lrv-a-space-children - utilized the owl selector pattern to apply space between child elements.
+* lrv-a-glue - an algorithm for "glueing" one element onto another with absolute positioning.
+* lrv-a-unstyle-list – a straightforward set of declarations that remove basic list styling.
 
 The *js* directory contains CSS corresponding to interactivity from larva-js. These styles could be kept alongside the JS, but in order to minimize build tool dependencies, there are kept here, in the larva-css package.
 
