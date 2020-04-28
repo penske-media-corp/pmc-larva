@@ -1,43 +1,23 @@
 @import 'setup';
 
-@if variable-exists( 'features' ) and true == map-get( $features, project-typography ) {
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-	// No .lrv- namespace.
-	// All typography oriented utilities should be added at the project level
-	// to encourage use of a-font and to gather information about
-	// where the design deviated from the style guide a-font.
+	@if str-index( $token-str, 'line-height' ) {
+		.lrv-u-#{$token} {
+			font-size: $value;
+		}
 
-	@each $token, $value in $TOKENS-MAP {
-		$token-str: quote( $token );
-
-		@if str-index( $token-str, 'line-height' ) {
-			.u-#{$token} {
+		@include pmc-breakpoint( desktop ) {
+			.lrv-u-#{$token}\@desktop {
 				font-size: $value;
 			}
+		}
 
-			@include pmc-breakpoint( desktop ) {
-				.u-#{$token}\@desktop {
-					font-size: $value;
-				}
-			}
-
-			@include pmc-breakpoint( desktop-xl ) {
-				.u-#{$token}\@desktop-xl {
-					font-size: $value;
-				}
+		@include pmc-breakpoint( desktop-xl ) {
+			.lrv-u-#{$token}\@desktop-xl {
+				font-size: $value;
 			}
 		}
 	}
-
-} @else {
-
-	@include token-utility-generator( 'line-height',
-		(
-			line-height-small,
-			line-height-normal,
-			line-height-copy,
-			line-height-large,
-		),
-		$TOKENS-MAP
-	);
 }

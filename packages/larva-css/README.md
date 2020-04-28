@@ -54,7 +54,7 @@ If you are splitting inline CSS, you can load inline CSS separately by including
 
 Note that at present, there are no js or generic files for async CSS from larva-css.
 
-### Experimental features
+### Experimental Features
 
 As of 8.7.0-alpha, larva-css can support feature toggles via a Sass map in setup.scss. **This only applies to projects that build the larva-css .scss files in the project, not those that consume .css files directly.**
 
@@ -68,7 +68,7 @@ $features: (
 
 Currently available features:
 
-* `project-utilities`: Generate project level .u-* utilities (no .lrv- namespace) for font-size, line-height, and font-weight. These should be added to a project-level tokens map that is merged with the main map from larva-tokens. See tokens.scss in packages/larva/src/scss/00-tools/tokens.scss for an example of addint project-level utilities.
+* `project-font-size`: Generate project level .u-* utilities (no .lrv- namespace) for font-size. These should be added to a project-level tokens map that is merged with the main map from larva-tokens. See tokens.scss in packages/larva/src/scss/00-tools/tokens.scss for an example of adding project-level utilities.
 
 ## Development Setup (this repo)
 
