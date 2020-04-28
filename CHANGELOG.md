@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* larva-scss - Add deprecated notices for utility generators and max-width breakpoints
+
 ## [8.7.0-alpha] - 4-28-2020
 
 * larva-css - Directly generate utilities based on tokens map
