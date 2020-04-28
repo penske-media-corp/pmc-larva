@@ -5,18 +5,18 @@
 
 	@if str-index( $token-str, 'line-height' ) {
 		.lrv-u-#{$token} {
-			font-size: $value;
+			line-height: $value;
 		}
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
-				font-size: $value;
+				line-height: $value;
 			}
 		}
 
 		@include pmc-breakpoint( desktop-xl ) {
 			.lrv-u-#{$token}\@desktop-xl {
-				font-size: $value;
+				line-height: $value;
 			}
 		}
 	}

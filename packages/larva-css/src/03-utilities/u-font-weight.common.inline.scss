@@ -5,18 +5,18 @@
 
 	@if str-index( $token-str, 'font-weight' ) {
 		.lrv-u-#{$token} {
-			font-size: $value;
+			font-weight: $value;
 		}
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
-				font-size: $value;
+				font-weight: $value;
 			}
 		}
 
 		@include pmc-breakpoint( desktop-xl ) {
 			.lrv-u-#{$token}\@desktop-xl {
-				font-size: $value;
+				font-weight: $value;
 			}
 		}
 	}

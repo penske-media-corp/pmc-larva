@@ -143,3 +143,5 @@ $paddings_with_breakpoints: (
 	('t', $spacer-050, tablet ),
 	('lr', $spacer-1, tablet ),
 );
+
+@include u-padding( $paddings_with_breakpoints );
