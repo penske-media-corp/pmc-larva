@@ -8,8 +8,23 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!WHITE_95}",
+			"type": "color",
+			"category": "background-color"
+		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
 			"value": "{!RED_45}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}",
 			"type": "color",
 			"category": "hr-color"
 		},
