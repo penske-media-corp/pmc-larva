@@ -4,14 +4,18 @@
 	@if $point == desktop-xl {
 		@media (min-width: $screen-desktop-xl) { @content; }
 	} @else if $point == desktop-xl-max {
+		@warn 'The breakpoint desktop-xl-max is deprecated. Build mobile first and use @desktop or @desktop-xl.';
 		@media (max-width: $screen-desktop-xl-max) { @content; }
 	} @else if $point == desktop-max {
+		@warn 'The breakpoint desktop-max is deprecated. Build mobile first and use @desktop or @desktop-xl.';
 		@media (max-width: $screen-desktop-max) { @content; }
 	} @else if $point == desktop {
 		@media (min-width: $screen-desktop) { @content; }
 	} @else if $point == tablet {
+		@warn 'The breakpoint tablet is deprecated. Use @desktop.';
 		@media (min-width: $screen-tablet) { @content; }
 	} @else if $point == mobile-max {
+		@warn 'The breakpoint mobile-max is deprecated. Build mobile-first and use @desktop.';
 		@media (max-width: $screen-mobile-max) { @content; }
 	}
 }
