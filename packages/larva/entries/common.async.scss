@@ -2,7 +2,7 @@
 
 @import '@penskemediacorp/larva-tokens/build/default.custom-properties';
 
-@import '@penskemediacorp/larva-css/src/01-generic/*.common.*.scss';
+@import '@penskemediacorp/larva-css/src/01-generic/*.scss';
 @import '01-generic/*.common.*.scss';
 
 @import '@penskemediacorp/larva-css/src/02-algorithms/**/*.scss';
@@ -12,7 +12,7 @@
 @import '03-utilities/*.common.*.scss';
 
 @import '@penskemediacorp/larva-css/src/04-js/*.scss';
-@import '04-js/*.common.scss';
+@import '04-js/*.common.*.scss';
 
 
 // Note: Commented out for feature testing - would use the $features value,
