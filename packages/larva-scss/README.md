@@ -1,16 +1,18 @@
 # Larva SCSS
 
+**Note:** As of 8.7.0-alpha, the recommended approach for class generation is NOT to use these generators, but to directly iterate over a map of tokens add rulesets within that loop.
+
 This repository holds core SCSS tools and tokens for Larva.  These include:
 
 - Breakpoint mixin
-- Tokens (e.g. spacing, color, z-index, and transition values)
-- Generators (i.e. mixins that generate classes according to a list of tokens)
+- Variables (e.g. spacing, color, z-index, and transition values)
+- Generators (i.e. mixins that generate classes according to a list of tokens) **NOT RECOMMENDED FOR UTILITIES**
 
 This repository provides **Sass files only**. The consuming project is responsible for building the assets.
 
 ## Usage
 
-Import a SCSS file for tools or tokens to use them in your project. 
+Import a SCSS file for tools or tokens to use them in your project.
 
 ### Available Tools
 
