@@ -150,7 +150,7 @@ $margins_with_breakpoints: (
 	('b', $spacer-1, tablet),
 );
 
-@include u-margin( $margins_with_breakpoints );
+@include u-margin( $margins_with_breakpoints, $NAMESPACE: 'lrv-' );
 
 // Auto margins
 

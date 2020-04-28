@@ -45,20 +45,4 @@
 		}
 	}
 
-	@include test('generates namespaced classes') {
-		@import 'fixture/settings';
-
-		@include assert {
-
-			@include output {
-				@include _spacing-class-generator( 'padding', $paddings );
-			}
-
-			@include expect {
-				.lrv-u-padding-a-1 {
-					padding: 1rem;
-				}
-			}
-		}
-	}
 }

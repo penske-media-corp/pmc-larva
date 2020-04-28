@@ -9,9 +9,8 @@
 @import '../functions/pmc-rem';
 @import '../mixins/pmc-breakpoint';
 
-$NAMESPACE: '' !default;
+@mixin _text-class-generator( $property, $tokens, $NAMESPACE, $available_tokens: () ) {
 
-@mixin _text-class-generator( $property, $tokens, $available_tokens: () ) {
 	@if $property != 'font-size' and $property != 'line-height' and $property != 'font-family' and $property != 'font-weight' {
 		@error "`#{$property}` is not a valid value for $property. It must be either 'font-size', 'line-height', 'font-family', 'font-weight'.";
 	}

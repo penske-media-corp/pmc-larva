@@ -8,9 +8,7 @@
 
 @import "../mixins/pmc-breakpoint";
 
-$NAMESPACE: '' !default;
-
-@mixin _spacing-class-generator( $property, $tokens ) {
+@mixin _spacing-class-generator( $property, $tokens, $NAMESPACE ) {
 	@if $property != 'margin' and $property != 'padding' {
 		@error "`#{$property}` is not a valid value for $property. It must be either 'margin' or 'padding'.";
 	}

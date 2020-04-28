@@ -144,4 +144,4 @@ $paddings_with_breakpoints: (
 	('lr', $spacer-1, tablet ),
 );
 
-@include u-padding( $paddings_with_breakpoints );
+@include u-padding( $paddings_with_breakpoints, $NAMESPACE: 'lrv-' );
