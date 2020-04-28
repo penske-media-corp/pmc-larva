@@ -8,16 +8,17 @@
 		and not str-index( $token-str, 'background' )
 		and not str-index( $token-str, 'border' ) {
 
-		.lrv-u-#{$token}\:hover:hover {
+		.lrv-u-#{$token} {
 			color: $value;
 			color: var( --#{$token}, #{$value} );
 		}
+
+		.lrv-u-#{$token}\@desktop {
+
+			@include pmc-breakpoint( desktop ) {
+				color: $value;
+				color: var( --#{$token}, #{$value} );
+			}
+		}
 	}
-}
-
-
-// Static Utilities
-
-.lrv-u-color-currentColor {
-	color: currentColor;
 }

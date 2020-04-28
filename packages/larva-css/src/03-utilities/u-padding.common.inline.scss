@@ -1,53 +1,140 @@
 @import 'setup';
 
-$paddings_without_breakpoints: (
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-	// Top
-	('t', $spacer-050),
-	('t', $spacer-1),
-	('t', $spacer-2),
+	// No negative spacing for padding
+	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
 
-	// Right
-	('r', $spacer-025),
-	('r', $spacer-050),
-	('r', $spacer-1),
-	('r', $spacer-0),
+		$token-name: $token;
+		$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-	// Bottom
-	('b', $spacer-0),
-	('b', $spacer-025),
-	('b', $spacer-050),
-	('b', $spacer-1),
-	('b', $spacer-2),
+		.lrv-u-padding-r-#{$token-selector} {
+			padding-right: $value;
+			padding-right: var( --#{$token-name}, #{$value} );
+		}
 
-	// Left
-	('t', $spacer-025),
-	('l', $spacer-1),
-	('l', $spacer-2),
+		.lrv-u-padding-l-#{$token-selector} {
+			padding-left: $value;
+			padding-left: var( --#{$token-name}, #{$value} );
+		}
 
-	// Left/Right
-	('lr', $spacer-025),
-	('lr', $spacer-050),
-	('lr', $spacer-1),
-	('lr', $spacer-2),
+		.lrv-u-padding-b-#{$token-selector} {
+			padding-bottom: $value;
+			padding-bottom: var( --#{$token-name}, #{$value} );
+		}
 
-	// Top/Bottom
-	('tb', $spacer-025),
-	('tb', $spacer-050),
-	('tb', $spacer-075),
-	('tb', $spacer-1),
-	('tb', $spacer-2),
+		.lrv-u-padding-t-#{$token-selector} {
+			padding-top: $value;
+			padding-top: var( --#{$token-name}, #{$value} );
+		}
 
-	// All
-	('a', $spacer-0),
-	('a', $spacer-025),
-	('a', $spacer-050),
-	('a', $spacer-1),
-	('a', $spacer-2),
+		.lrv-u-padding-tb-#{$token-selector} {
+			padding-top: $value;
+			padding-top: var( --#{$token-name}, #{$value} );
+			padding-bottom: $value;
+			padding-bottom: var( --#{$token-name}, #{$value} );
+		}
 
-);
+		.lrv-u-padding-lr-#{$token-selector} {
+			padding-left: $value;
+			padding-left: var( --#{$token-name}, #{$value} );
+			padding-right: $value;
+			padding-right: var( --#{$token-name}, #{$value} );
+		}
+
+		.lrv-u-padding-a-#{$token-selector} {
+			padding: $value;
+			padding: var( --#{$token-name}, #{$value} );
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			.lrv-u-padding-r-#{$token-selector}\@desktop {
+				padding-right: $value;
+				padding-right: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-l-#{$token-selector}\@desktop {
+				padding-left: $value;
+				padding-left: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-b-#{$token-selector}\@desktop {
+				padding-bottom: $value;
+				padding-bottom: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-t-#{$token-selector}\@desktop {
+				padding-top: $value;
+				padding-top: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-tb-#{$token-selector}\@desktop {
+				padding-top: $value;
+				padding-top: var( --#{$token-name}, #{$value} );
+				padding-bottom: $value;
+				padding-bottom: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-lr-#{$token-selector}\@desktop {
+				padding-left: $value;
+				padding-left: var( --#{$token-name}, #{$value} );
+				padding-right: $value;
+				padding-right: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-a-#{$token-selector}\@desktop {
+				padding: $value;
+				padding: var( --#{$token-name}, #{$value} );
+			}
+		}
+
+		@include pmc-breakpoint( desktop-xl ) {
+			.lrv-u-padding-r-#{$token-selector}\@desktop-xl {
+				padding-right: $value;
+				padding-right: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-l-#{$token-selector}\@desktop-xl {
+				padding-left: $value;
+				padding-left: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-b-#{$token-selector}\@desktop-xl {
+				padding-bottom: $value;
+				padding-bottom: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-t-#{$token-selector}\@desktop-xl {
+				padding-top: $value;
+				padding-top: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-tb-#{$token-selector}\@desktop-xl {
+				padding-top: $value;
+				padding-top: var( --#{$token-name}, #{$value} );
+				padding-bottom: $value;
+				padding-bottom: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-lr-#{$token-selector}\@desktop-xl {
+				padding-left: $value;
+				padding-left: var( --#{$token-name}, #{$value} );
+				padding-right: $value;
+				padding-right: var( --#{$token-name}, #{$value} );
+			}
+
+			.lrv-u-padding-a-#{$token-selector}\@desktop-xl {
+				padding: $value;
+				padding: var( --#{$token-name}, #{$value} );
+			}
+		}
+	}
+}
 
 // Ordered by breakpoint.
+
+// Legacy - should not have tablet and mobile-max
 $paddings_with_breakpoints: (
 	('tb', $spacer-025, mobile-max ),
 	('tb', $spacer-1, mobile-max),
@@ -55,9 +142,6 @@ $paddings_with_breakpoints: (
 	('r', $spacer-1, tablet ),
 	('t', $spacer-050, tablet ),
 	('lr', $spacer-1, tablet ),
-
-	('tb', $spacer-050, desktop ),
 );
 
-@include u-padding( $paddings_without_breakpoints );
-@include u-padding( $paddings_with_breakpoints );
+@include u-padding( $paddings_with_breakpoints, $NAMESPACE: 'lrv-' );

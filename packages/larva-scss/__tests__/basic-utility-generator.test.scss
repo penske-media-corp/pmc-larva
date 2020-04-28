@@ -10,7 +10,7 @@
 		@include assert {
 
 			@include output {
-				
+
 				@include basic-utility-generator(
 					'opacity',
 					(
@@ -28,28 +28,4 @@
 		}
 	}
 
-	@include test('generates namespaced utility') {
-
-		@import 'fixture/settings';
-
-		@include assert {
-
-			@include output {
-				
-				@include basic-utility-generator(
-					'opacity',
-					(
-						opacity-1,
-					),
-					$map,
-				);
-			}
-
-			@include expect {
-				.lrv-u-opacity-1 {
-					opacity: 1;
-				}
-			}
-		}
-	}
 }

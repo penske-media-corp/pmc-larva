@@ -102,8 +102,9 @@ app.get( '/css', function (req, res) {
 		'u-font-family',
 		'u-color',
 		'u-background-color',
-		'u-line-height',
-		'u-font-weight',
+		'u-border-color',
+		'u-margin',
+		'u-padding',
 	];
 
 	const baseNames = ( () => {

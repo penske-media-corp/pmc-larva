@@ -1,7 +1,6 @@
+// Import tools and legacy token values from Larva
 @import '@penskemediacorp/larva-scss/dist/generators';
 @import '@penskemediacorp/larva-scss/dist/tokens';
-@import '@penskemediacorp/larva-tokens/build/default.map.scss';
 
-$TOKENS-MAP: $default-map;
-
-$ICONS_BUILD_PATH: '../icons';
+// Merge project/rogue tokens and tokens map
+@import '00-tools/tokens.scss';

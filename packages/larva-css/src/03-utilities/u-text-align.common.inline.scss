@@ -12,6 +12,21 @@
 	text-align: center;
 }
 
+@include pmc-breakpoint( desktop ) {
+	.lrv-u-text-align-right\@desktop {
+		text-align: right;
+	}
+
+	.lrv-u-text-align-left\@desktop {
+		text-align: left;
+	}
+
+	.lrv-u-text-align-center\@desktop {
+		text-align: center;
+	}
+}
+
+// Legacy
 .lrv-u-text-align-center\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		text-align: center;

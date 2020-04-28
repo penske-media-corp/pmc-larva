@@ -1,7 +1,5 @@
 @import "../mixins/pmc-breakpoint";
 
-$NAMESPACE: '' !default;
-
 @mixin _grid( $columns ) {
 	--cols: #{$columns};
 
@@ -11,7 +9,7 @@ $NAMESPACE: '' !default;
 
 }
 
-@mixin _grid-selector( $columns, $breakpoint: false ) {
+@mixin _grid-selector( $columns, $breakpoint: false, $NAMESPACE: ''  ) {
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
 			.#{$NAMESPACE}a-cols#{$columns}\@#{$breakpoint} {
@@ -35,7 +33,7 @@ $NAMESPACE: '' !default;
 	flex-basis: ( $span / $columns * 100% );
 }
 
-@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false ) {
+@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false, $NAMESPACE: '' ) {
 
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
@@ -62,7 +60,7 @@ $NAMESPACE: '' !default;
 
 }
 
-@mixin _a-grid-generator( $tokens ) {
+@mixin _a-grid-generator( $tokens, $NAMESPACE ) {
 
 	@if type-of($tokens) != 'list' {
 		@error "`#{$tokens}` is not a valid value for $tokens. It must be a list of maps.";
@@ -74,7 +72,7 @@ $NAMESPACE: '' !default;
 		$spans: map-get( $grid, spans );
 
 		// Outputs pmc-colsX selector to be used in conjunction with .pmc-grid.
-		@include _grid-selector( $columns, $breakpoint );
+		@include _grid-selector( $columns, $breakpoint, $NAMESPACE );
 
 		@if $spans {
 
@@ -84,7 +82,8 @@ $NAMESPACE: '' !default;
 				@include _grid-span-selector(
 					$columns,
 					$span,
-					map-get( $grid, breakpoint )
+					map-get( $grid, breakpoint ),
+					$NAMESPACE
 				);
 			}
 		}

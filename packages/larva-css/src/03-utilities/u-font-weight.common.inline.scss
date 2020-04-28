@@ -1,11 +1,23 @@
 @import 'setup';
 
-// Generates classes .lrv-u-font-weight-{name}.
-@include token-utility-generator( 'font-weight',
-	(
-		font-weight-light,
-		font-weight-normal,
-		font-weight-bold
-	),
-	$TOKENS-MAP
-);
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'font-weight' ) {
+		.lrv-u-#{$token} {
+			font-weight: $value;
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			.lrv-u-#{$token}\@desktop {
+				font-weight: $value;
+			}
+		}
+
+		@include pmc-breakpoint( desktop-xl ) {
+			.lrv-u-#{$token}\@desktop-xl {
+				font-weight: $value;
+			}
+		}
+	}
+}

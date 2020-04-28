@@ -1,41 +1,41 @@
 @import '../lib/tools/tools';
 
 // -----------
-// Algorithms 
+// Algorithms
 // -----------
 
-@mixin a-grid( $grids ) {
-	@include _a-grid-generator( $grids );
+@mixin a-grid( $grids, $NAMESPACE: '' ) {
+	@include _a-grid-generator( $grids, $NAMESPACE );
 };
 
-@mixin a-crop( $aspect-ratios ) {
-	@include _a-crop-generator( $aspect-ratios );
+@mixin a-crop( $aspect-ratios, $NAMESPACE: '' ) {
+	@include _a-crop-generator( $aspect-ratios, $NAMESPACE );
 }
 
 // -----------
-// Utilities 
+// Utilities
 // -----------
 
-@mixin u-padding( $paddings ) {
-	@include _spacing-class-generator( 'padding', $paddings );
+@mixin u-padding( $paddings, $NAMESPACE: '' ) {
+	@include _spacing-class-generator( 'padding', $paddings, $NAMESPACE );
 }
 
-@mixin u-margin( $margins ) {
-	@include _spacing-class-generator( 'margin', $margins );
+@mixin u-margin( $margins, $NAMESPACE: '' ) {
+	@include _spacing-class-generator( 'margin', $margins, $NAMESPACE );
 }
 
-@mixin u-font-family( $tokens, $available_tokens ) {
-	@include _text-class-generator('font-family', $tokens, $available_tokens);
+@mixin u-font-family( $tokens, $available_tokens, $NAMESPACE: '' ) {
+	@include _text-class-generator('font-family', $tokens, $NAMESPACE, $available_tokens );
 }
 
-@mixin u-line-height( $tokens, $available_tokens ) {
-	@include _text-class-generator('line-height', $tokens, $available_tokens);
+@mixin u-line-height( $tokens, $available_tokens, $NAMESPACE: '' ) {
+	@include _text-class-generator('line-height', $tokens, $NAMESPACE, $available_tokens );
 }
 
-@mixin u-font-size( $tokens ) {
-	@include _text-class-generator('font-size', $tokens);
+@mixin u-font-size( $tokens, $NAMESPACE: '' ) {
+	@include _text-class-generator( 'font-size', $tokens, $NAMESPACE );
 }
 
-@mixin u-font-weight( $tokens, $available_tokens ) {
-	@include _text-class-generator('font-weight', $tokens, $available_tokens);
+@mixin u-font-weight( $tokens, $available_tokens, $NAMESPACE: '' ) {
+	@include _text-class-generator('font-weight', $tokens, $NAMESPACE, $available_tokens );
 }

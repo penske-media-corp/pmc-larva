@@ -35,7 +35,8 @@
 					(
 						( $font-size-1, ),
 						( $font-size-2, desktop, )
-					)
+					),
+					'',
 				);
 
 				@include _text-class-generator(
@@ -43,7 +44,8 @@
 					(
 						sm,
 					),
-					$line-heights
+					'',
+					$line-heights,
 				);
 
 				@include _text-class-generator(
@@ -51,7 +53,8 @@
 					(
 						bold,
 					),
-					$font-weights
+					'',
+					$font-weights,
 				);
 
 				@include _text-class-generator(
@@ -60,7 +63,8 @@
 						balto,
 						helvetica
 					),
-					$font-families
+					'',
+					$font-families,
 				);
 			}
 
@@ -94,101 +98,6 @@
 
 		}
 	}
-
-	@include test('generates namespaced classes') {
-
-		@import './fixture/settings';
-
-		@include assert {
-
-			@include output {
-
-				$font-size-1: 1rem;
-				$font-size-2: 2rem;
-
-				$font-weights: (
-					bold: 600,
-				);
-
-				$line-heights: (
-					sm: 1,
-					md: 2,
-					lg: 3,
-				);
-
-				$font-family-balto: Balto, sans-serif;
-
-				$font-families: (
-					balto: ($font-family-balto, 'web',),
-					helvetica: (Helvetica, 'system',),
-				);
-
-
-				@include _text-class-generator(
-					'font-size',
-					(
-						( $font-size-1, ),
-						( $font-size-2, desktop, )
-					)
-				);
-
-				@include _text-class-generator(
-					'line-height',
-					(
-						sm,
-					),
-					$line-heights
-				);
-
-				@include _text-class-generator(
-					'font-weight',
-					(
-						bold,
-					),
-					$font-weights
-				);
-
-				@include _text-class-generator(
-					'font-family',
-					(
-						balto,
-						helvetica
-					),
-					$font-families
-				);
-			}
-
-			@include expect {
-				.lrv-u-font-size-16 {
-					font-size: 1rem;
-				}
-
-				@media( min-width: 62.5rem ) {
-					.lrv-u-font-size-32\@desktop {
-						font-size: 2rem;
-					}
-				}
-
-				.lrv-u-line-height-sm {
-					line-height: 1;
-				}
-
-				.lrv-u-font-weight-bold {
-					font-weight: 600;
-				}
-
-				.wf-active .lrv-u-font-family-balto {
-					font-family: Balto, sans-serif;
-				}
-
-				.lrv-u-font-family-helvetica {
-					font-family: Helvetica;
-				}
-			}
-
-		}
-	}
-
 
 }
 

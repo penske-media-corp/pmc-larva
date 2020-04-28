@@ -14,7 +14,7 @@ o_nav.o_nav_list_item_classes = 'lrv-u-text-transform-uppercase lrv-u-color-whit
 
 o_select_nav.o_select_nav_classes += ' lrv-u-display-inline-block';
 o_select_nav.c_button.c_button_text = 'Year 2019';
-o_select_nav.c_button.c_button_classes += ' lrv-u-color-white lrv-u-color-white:hover lrv-u-text-transform-uppercase lrv-u-font-size-16 lrv-u-border-a-1 lrv-u-padding-lr-1 lrv-u-padding-tb-025 lrv-u-line-height-small lrv-a-icon-after lrv-a-icon-invert lrv-a-icon-arrow-down';
+o_select_nav.c_button.c_button_classes += ' lrv-u-color-white lrv-u-color-white:hover lrv-u-text-transform-uppercase lrv-u-font-size-16 lrv-u-border-color-white lrv-u-border-a-1 lrv-u-padding-lr-1 lrv-u-padding-tb-025 lrv-u-line-height-small lrv-a-icon-after lrv-a-icon-invert lrv-a-icon-arrow-down';
 
 module.exports = {
 	profile_header_classes: '',

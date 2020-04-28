@@ -1,0 +1,36 @@
+@import '@penskemediacorp/larva-tokens/build/default.map.scss';
+
+// All project level values not available from the official
+// larva-tokens package should be added here.
+
+// BE ORGANIZED. If this starts getting too long, you can separate
+// each category into its own map and use map-merge to consolidate them.
+
+$rogue-tokens: (
+
+	// FONT-SIZE - no lrv- namespace
+	'font-size-14': pmc-rem(14),
+
+	// FONT-WEIGHT - no lrv- namespace
+
+	// LINE-HEIGHT - no lrv- namespace
+
+	// COLORS
+	'color-accent-b': 'blue',
+	'background-color-accent-b': 'lemonchiffon',
+
+	// SPACING
+	'spacing-00': 0,
+	'spacing-n1': -1rem, // Negative spacing only supported by margin.
+	'spacing-025': 0.25rem,
+	'spacing-050': 0.5rem,
+	'spacing-075': 0.75rem,
+	'spacing-1': 1rem,
+	'spacing-125': 1.25rem,
+	'spacing-150': 1.5rem,
+	'spacing-175': 1.75rem,
+	'spacing-2': 2rem,
+	'spacing-3': 3rem,
+);
+
+$TOKENS-MAP: map-merge( $default-map, $rogue-tokens );

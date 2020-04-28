@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.7.0-alpha] - 4-28-2020
+
+* larva-css - Directly generate utilities based on tokens map
+* larva-css - Generate breakpoints for tokens and :hover for border colors
+* larva-css - Add reset and update border utility to be width
+* larva-css - Add @desktop breakpoints for flex, display, order, text-align, box-alignment
+* larva-patterns - Improve Larva CSS documentation UI
 * larva-tokens - Add spacing to tokens
 * larva-tokens - Add contents of default.json to the base JSONs to indicate they are required
 

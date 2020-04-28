@@ -1,12 +1,23 @@
 @import 'setup';
 
-// TODO: refactor to custom property version, if we need to change the line height values.
-@include token-utility-generator( 'line-height',
-	(
-		line-height-small,
-		line-height-normal,
-		line-height-copy,
-		line-height-large,
-	),
-	$TOKENS-MAP
-);
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'line-height' ) {
+		.lrv-u-#{$token} {
+			line-height: $value;
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			.lrv-u-#{$token}\@desktop {
+				line-height: $value;
+			}
+		}
+
+		@include pmc-breakpoint( desktop-xl ) {
+			.lrv-u-#{$token}\@desktop-xl {
+				line-height: $value;
+			}
+		}
+	}
+}

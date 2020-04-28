@@ -2,8 +2,6 @@
 @import '@penskemediacorp/larva-scss/dist/tokens';
 @import '@penskemediacorp/larva-tokens/build/default.map.scss';
 
-$NAMESPACE: 'lrv-';
-
 $TOKENS-MAP: $default-map;
 
 $ICONS_BUILD_PATH: '../icons';

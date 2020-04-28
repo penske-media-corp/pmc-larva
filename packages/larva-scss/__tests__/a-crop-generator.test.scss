@@ -9,11 +9,11 @@
 	);
 
 	@include test('generates non-namespaced crops') {
-		
+
 		@include assert {
 
 			@include output {
-				@include _a-crop-generator( $aspect-ratios );
+				@include _a-crop-generator( $aspect-ratios, '' );
 			}
 
 			@include contains {
@@ -23,23 +23,6 @@
 
 				.a-crop-4x3 img {
 					object-fit: cover;
-				}
-			}
-		}
-	}
-
-	@include test('generates namespaced crops') {
-		@import 'fixture/settings';
-		
-		@include assert {
-
-			@include output {
-				@include _a-crop-generator( $aspect-ratios );
-			}
-
-			@include contains {
-				.lrv-a-crop-16x9 {
-					padding-bottom: calc( ( 9 / 16 ) * 100% );
 				}
 			}
 		}

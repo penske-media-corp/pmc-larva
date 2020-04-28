@@ -30,29 +30,4 @@
 		}
 	}
 
-	@include test('generates namespaced text color') {
-
-		@import 'fixture/settings';
-
-		@include assert {
-
-			@include output {
-				
-				@include token-utility-generator(
-					'color',
-					(
-						text-color-grey-light,
-					),
-					$map,
-				);
-			}
-
-			@include expect {
-				.lrv-u-text-color-grey-light {
-					color: #CCCCCC;
-					color: var( --text-color-grey-light, #CCCCCC );
-				}
-			}
-		}
-	}
 }

@@ -1,21 +1,24 @@
 @import 'setup';
 
-.lrv-u-font-family-primary {
-	font-family: map-get( $TOKENS-MAP, font-family-primary );
-	font-family: var( --font-family-primary, #{map-get( $TOKENS-MAP, font-family-primary )} );
-}
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-.lrv-u-font-family-secondary {
-	font-family: map-get( $TOKENS-MAP, font-family-secondary );
-	font-family: var( --font-family-secondary, #{map-get( $TOKENS-MAP, font-family-secondary  )} );
-}
+	// example: font-family-primary-fancy, 'Graphik', sans-serif
+	// example: font-family-primary, Helvetica
+	@if str-index( $token-str, 'font-family' ) {
 
-.lrv-u-font-family-basic {
-	font-family: map-get( $TOKENS-MAP, font-family-basic );
-	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
-}
+		// The webfont/'fancy' variation is added via custom property
+		// in generic/typography
+		@if not str-index( $token-str, 'fancy' ) {
+			.lrv-u-#{$token} {
+				font-family: $value;
+				font-family: var( --#{$token}, #{$value} );
+			}
 
-.lrv-u-font-family-body {
-	font-family: map-get( $TOKENS-MAP, font-family-body );
-	font-family: var( --font-family-body, #{map-get( $TOKENS-MAP, font-family-body )} );
+			.lrv-u-#{$token}\@desktop {
+				font-family: $value;
+				font-family: var( --#{$token}, #{$value} );
+			}
+		}
+	}
 }

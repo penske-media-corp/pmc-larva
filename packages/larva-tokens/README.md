@@ -41,7 +41,7 @@ If these sound like your needs, proceed!
 **Prerequisite:** A style guide provided by design (or otherwise advised by product to use tokens) that follows the design system naming conventions.
 
 1. Clone this repository, i.e. the pmc-larva monorepo.
-2. In packages/larva tokens, run `npm install`.
+2. In packages/larva-tokens, run `npm install`.
 3. Make necessary changes according to the above guidelines.
 5. Run `npm run build` to generate the custom properties, Sass map, and style guide.
 6. Add a note to the monorepo CHANGELOG.md, and open a pull request with your changes.
