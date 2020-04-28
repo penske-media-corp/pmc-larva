@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+* larva-tokens - Update colors in wwd tokens and default tokens
 
 ## [8.7.0-alpha] - 4-28-2020
 
@@ -15,7 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Improve Larva CSS documentation UI
 * larva-tokens - Add spacing to tokens
 * larva-tokens - Add contents of default.json to the base JSONs to indicate they are required
-* larva-tokens - Update colors in wwd tokens and default tokens
 
 ## [8.6.1-alpha] - 4-21-2020
 

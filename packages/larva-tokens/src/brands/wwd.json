@@ -1,9 +1,6 @@
 {
 	"imports": [
-		"../base/aliases.json",
-		"../base/color.json",
-		"../base/font-family.json",
-		"../base/background-color.json",
+		"../base/all.json"
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
@@ -33,11 +30,6 @@
 		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!RED_45}",
-			"type": "color",
-			"category": "text-color"
-		},
-		"COLOR_BRAND_SECONDARY": {
-			"value": "{!BLACK}",
 			"type": "color",
 			"category": "text-color"
 		},
