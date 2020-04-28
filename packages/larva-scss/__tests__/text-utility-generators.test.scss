@@ -36,7 +36,7 @@
 						( $font-size-1, ),
 						( $font-size-2, desktop, )
 					),
-					''
+					'',
 				);
 
 				@include _text-class-generator(
@@ -44,8 +44,8 @@
 					(
 						sm,
 					),
+					'',
 					$line-heights,
-					''
 				);
 
 				@include _text-class-generator(
@@ -53,8 +53,8 @@
 					(
 						bold,
 					),
+					'',
 					$font-weights,
-					''
 				);
 
 				@include _text-class-generator(
@@ -63,8 +63,8 @@
 						balto,
 						helvetica
 					),
+					'',
 					$font-families,
-					''
 				);
 			}
 

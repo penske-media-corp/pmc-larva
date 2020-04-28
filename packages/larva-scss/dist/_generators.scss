@@ -4,11 +4,11 @@
 // Algorithms
 // -----------
 
-@mixin a-grid( $grids, $NAMESPACE ) {
+@mixin a-grid( $grids, $NAMESPACE: '' ) {
 	@include _a-grid-generator( $grids, $NAMESPACE );
 };
 
-@mixin a-crop( $aspect-ratios, $NAMESPACE ) {
+@mixin a-crop( $aspect-ratios, $NAMESPACE: '' ) {
 	@include _a-crop-generator( $aspect-ratios, $NAMESPACE );
 }
 
@@ -25,11 +25,11 @@
 }
 
 @mixin u-font-family( $tokens, $available_tokens, $NAMESPACE: '' ) {
-	@include _text-class-generator('font-family', $tokens, $available_tokens, $NAMESPACE );
+	@include _text-class-generator('font-family', $tokens, $NAMESPACE, $available_tokens );
 }
 
 @mixin u-line-height( $tokens, $available_tokens, $NAMESPACE: '' ) {
-	@include _text-class-generator('line-height', $tokens, $available_tokens, $NAMESPACE );
+	@include _text-class-generator('line-height', $tokens, $NAMESPACE, $available_tokens );
 }
 
 @mixin u-font-size( $tokens, $NAMESPACE: '' ) {
@@ -37,5 +37,5 @@
 }
 
 @mixin u-font-weight( $tokens, $available_tokens, $NAMESPACE: '' ) {
-	@include _text-class-generator('font-weight', $tokens, $available_tokens, $NAMESPACE );
+	@include _text-class-generator('font-weight', $tokens, $NAMESPACE, $available_tokens );
 }
