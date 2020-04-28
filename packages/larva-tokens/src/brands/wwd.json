@@ -1,10 +1,23 @@
 {
 	"imports": [
-		"../base/all.json"
+		"../base/aliases.json",
+		"../base/color.json",
+		"../base/font-family.json",
+		"../base/background-color.json",
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
 			"value": "{!RED_45}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!WHITE_95}",
 			"type": "color",
 			"category": "background-color"
 		},
@@ -13,8 +26,18 @@
 			"type": "color",
 			"category": "hr-color"
 		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}",
+			"type": "color",
+			"category": "hr-color"
+		},
 		"COLOR_BRAND_PRIMARY": {
 			"value": "{!RED_45}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}",
 			"type": "color",
 			"category": "text-color"
 		},

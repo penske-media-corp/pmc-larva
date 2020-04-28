@@ -6,6 +6,7 @@ $deadline-map: (
   'color-grey-dark': (rgb(106, 106, 106)),
   'color-black': (rgb(0, 0, 0)),
   'color-brand-primary': (rgb(146, 2, 0)),
+  'color-brand-secondary': (rgb(0, 0, 0)),
   /* Available via Typekit. */
   'font-family-primary-fancy': ('Balto', Helvetica, sans-serif),
   /* Fallback for primary-fancy. */
@@ -23,7 +24,7 @@ $deadline-map: (
   /* The background color of the main body of the site. */
   'background-color-body': (rgb(255, 255, 255)),
   /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
-  'background-color-brand-secondary': (rgb(241, 247, 252)),
+  'background-color-brand-secondary': (rgb(236, 28, 36)),
   'background-color-black': (rgb(0, 0, 0)),
   'background-color-white': (rgb(255, 255, 255)),
   'background-color-brand-primary': (rgb(146, 2, 0)),
@@ -40,7 +41,8 @@ $deadline-map: (
   'border-color-grey-light': (rgb(204, 204, 204)),
   'border-color-grey': (rgb(140, 140, 140)),
   'border-color-grey-dark': (rgb(106, 106, 106)),
-  'border-color-brand-primary': (rgb(65, 126, 244)),
+  'border-color-brand-primary': (rgb(236, 28, 36)),
+  'border-color-brand-secondary': (rgb(0, 0, 0)),
   /* Used for margins and padding only. */
   'spacing-00': (0),
   /* Used for margins and padding only. */

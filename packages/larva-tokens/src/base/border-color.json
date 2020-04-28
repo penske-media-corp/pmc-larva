@@ -23,7 +23,10 @@
 			"value": "{!GREY_35}"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}"
+			"value": "{!PMC_RED}"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}"
 		}
 	}
 }
