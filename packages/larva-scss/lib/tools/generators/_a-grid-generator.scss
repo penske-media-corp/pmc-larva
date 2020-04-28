@@ -9,7 +9,7 @@
 
 }
 
-@mixin _grid-selector( $columns, $NAMESPACE, $breakpoint: false ) {
+@mixin _grid-selector( $columns, $breakpoint: false, $NAMESPACE: ''  ) {
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {
 			.#{$NAMESPACE}a-cols#{$columns}\@#{$breakpoint} {
@@ -33,7 +33,7 @@
 	flex-basis: ( $span / $columns * 100% );
 }
 
-@mixin _grid-span-selector( $columns, $NAMESPACE, $span: 1, $breakpoint: false ) {
+@mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false, $NAMESPACE: '' ) {
 
 	@if $breakpoint {
 		@include pmc-breakpoint( $breakpoint ) {

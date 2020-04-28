@@ -19,7 +19,7 @@
 					),
 				);
 
-				@include _a-grid-generator( $grids );
+				@include _a-grid-generator( $grids, '' );
 			}
 
 			@include expect {

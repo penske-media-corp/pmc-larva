@@ -13,7 +13,7 @@
 		@include assert {
 
 			@include output {
-				@include _a-crop-generator( $aspect-ratios );
+				@include _a-crop-generator( $aspect-ratios, '' );
 			}
 
 			@include contains {

@@ -22,8 +22,8 @@
 				$spacer-050: 0.5rem;
 				$spacer-1: 1rem;
 
-				@include _spacing-class-generator( 'margin', $margins );
-				@include _spacing-class-generator( 'padding', $paddings );
+				@include _spacing-class-generator( 'margin', $margins, '' );
+				@include _spacing-class-generator( 'padding', $paddings, '' );
 			}
 
 			@include expect {
