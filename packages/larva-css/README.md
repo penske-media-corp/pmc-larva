@@ -29,6 +29,108 @@ Otherwise, it will be included as a dependency when installing the main @penskem
 
 larva-css files can be accessed as CSS directly by linking the stylesheets available in the build directory, but the current recommended approach is to load them into a local project build.
 
+#### Option 1: With project-level utilities (recommended for themes)
+
+This approach is recommeded for WordPress themes and redesigns that include a styleguide and the addition of a new brand.json to [larva-tokens](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva-tokens).
+
+Prerequisites to this approach:
+
+1. Your project is using the core @penskemediacorp/larva package for its build step.
+2. The CSS architecture and directory structure in this repository's packages/larva/src/scss.
+3. The project's assets structure follows that outlined in the [main larva package readme](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva).
+
+Include the source .scss files from this repository in your top-level common stylesheet in assets/entries/:
+
+In all of the following, replace `default` with the brand name containing tokens.
+
+```language:scss
+// common.async.scss
+@import '@penskemediacorp/larva-tokens/build/default.custom-properties';
+
+@import '@penskemediacorp/larva-css/src/01-generic/*.scss';
+@import '01-generic/*.common.*.scss';
+
+@import '@penskemediacorp/larva-css/src/02-algorithms/**/*.scss';
+@import '02-algorithms/*.common.*.scss';
+
+@import '@penskemediacorp/larva-css/src/03-utilities/*.scss';
+@import '03-utilities/*.common.*.scss';
+
+@import '@penskemediacorp/larva-css/src/04-js/*.scss';
+@import '04-js/*.common.*.scss';
+```
+
+In a corresponding stylesheet for inline CSS, include only the .inline.scss extensions.
+
+```language:scss
+// common.inline.scss
+@import '@penskemediacorp/larva-tokens/build/default.custom-properties';
+
+@import '@penskemediacorp/larva-css/src/01-generic/*.inline.scss';
+@import '01-generic/*.common.inline.scss';
+
+@import '@penskemediacorp/larva-css/src/02-algorithms/**/*.inline.scss';
+@import '02-algorithms/*.common.inline.scss';
+
+@import '@penskemediacorp/larva-css/src/03-utilities/*.inline.scss';
+@import '03-utilities/*.common.inline.scss';
+
+@import '@penskemediacorp/larva-css/src/04-js/*.inline.scss';
+@import '04-js/*.common.inline.scss';
+```
+
+Next, create a file for project-level tokens in in assets/src/scss/00-tools/tokens.scss that contains the following:
+
+```
+@import '@penskemediacorp/larva-tokens/build/default.map.scss';
+
+$local-tokens: (
+	'font-size-12': pmc-rem(12),
+	'opacity-075': 0.75,
+);
+
+$TOKENS-MAP: map-merge( $default-map, $local-tokens );
+```
+
+And in assets/src/scss/setup.scss, import the tokens:
+```
+@import '00-tools/tokens.scss';
+```
+
+Be sure to `@import 'setup'` at the top of all of your local utility files. Font size is already generated from the larva-css repo, but opacity is not.
+
+If a property is **not** generated from larva-css, you can iterate over the local tokens map with the following Sass:
+
+```
+// Example: u-opacity.common.inline.scss
+@import 'setup';
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'opacity' ) {
+		.u-#{$token} {
+			opacity: $value;
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			.u-#{$token}\@desktop {
+				font-size: $value;
+			}
+		}
+
+		// Some utilities may benefit from the additional breakpoint
+		// desktop-xl, but opactiy will likely not change between
+		// desktop and desktop-xl.
+
+	}
+}
+```
+
+Refer to the larva-css source files in larva-css/src and in the local Larva server, navigate to /css to see available classes.
+
+#### Option 2: Without project-level utility generation
+
 In your local build, inlcude these files into your main stylesheet:
 
 ```language:scss
@@ -54,22 +156,6 @@ If you are splitting inline CSS, you can load inline CSS separately by including
 
 Note that at present, there are no js or generic files for async CSS from larva-css.
 
-### Experimental Features
-
-As of 8.7.0-alpha, larva-css can support feature toggles via a Sass map in setup.scss. **This only applies to projects that build the larva-css .scss files in the project, not those that consume .css files directly.**
-
-If you project meets the above requirements, you may enable features by adding the following to `setup.scss`:
-
-```
-$features: (
-	'feature-name': true,
-);
-```
-
-Currently available features:
-
-* `project-font-size`: Generate project level .u-* utilities (no .lrv- namespace) for font-size. These should be added to a project-level tokens map that is merged with the main map from larva-tokens. See tokens.scss in packages/larva/src/scss/00-tools/tokens.scss for an example of adding project-level utilities.
-
 ## Development Setup (this repo)
 
 1. Clone this repository, i.e. the pmc-larva monorepo.
@@ -80,6 +166,10 @@ Currently available features:
 Contributions adding static utilities e.g. display properties or others that are not generated from tokens are welcome.
 
 ## Things to Know
+
+### The .lrv namespace
+
+CSS originating from larva-css .scss files contain a .lrv- namespace. Local project CSS should only contain an `a-`, `u-`, or `js-` namespace.
 
 ### Utility Naming
 
