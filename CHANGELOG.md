@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.8.1-alpha] - 05-06-2020
+
+### Added
+
+* larva - Support for port in CLI for build-html, defaults to 3000
+
+### Fixed
+
+* larva - Correct var for fromLarva logic
+
 ## [8.8.0-alpha] - 05-06-2020
 
 ### Added

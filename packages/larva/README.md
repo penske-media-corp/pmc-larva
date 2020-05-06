@@ -88,9 +88,23 @@ To use the build scripts, add the following to package.json in a project that us
 		"larva": "larva server",
 		"write-json": "larva write-json larva && larva write-json",
 		"build-icons": "larva build-icons",
+		"build-html": "larva build-html"
 	}
 }
 ```
+
+#### Script Usage Notes
+
+**`build-html`**
+
+This is the script for building static HTML files for deployment. It accepts two CLI arguments, the first for build source ('project' or 'larva') and the second as an optional port number. The default is 3000.
+
+Example of building HTML for project Larva patterns:
+`npm run build-html -- project`.
+
+Example of building HTML for Larva patterns with a server on port 2003:
+`npm run build-html -- larva 2003`.
+
 
 ### Overview of Functionality
 
