@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* larva - Add build-html to larva binary
+* larva - Add scripts for generating static site files
+
+
 ## [8.7.1-alpha] - 4-28-2020
 
 * larva-tokens - Update colors in wwd tokens and default tokens
