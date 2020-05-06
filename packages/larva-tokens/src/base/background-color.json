@@ -8,7 +8,8 @@
 	},
 	"props": {
 		"BACKGROUND_COLOR_BODY": {
-			"value": "{!WHITE}"
+			"value": "{!WHITE}",
+			"comment": "The background color of the main body of the site."
 		},
 		"BACKGROUND_COLOR_WHITE": {
 			"value": "{!WHITE}"
@@ -30,6 +31,18 @@
 		},
 		"BACKGROUND_COLOR_BLACK": {
 			"value": "{!BLACK}"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!BLACK}",
+			"type": "color",
+			"category": "background-color",
+			"comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text."
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!PMC_RED}",
+			"type": "color",
+			"category": "background-color",
+			"comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text."
 		}
 	}
 }

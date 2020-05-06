@@ -1,6 +1,28 @@
 @import 'setup';
 
-// Generates classes .lrv-u-font-weight-{int}
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'font-size' ) {
+		.lrv-u-#{$token} {
+			font-size: $value;
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			.lrv-u-#{$token}\@desktop {
+				font-size: $value;
+			}
+		}
+
+		@include pmc-breakpoint( desktop-xl ) {
+			.lrv-u-#{$token}\@desktop-xl {
+				font-size: $value;
+			}
+		}
+	}
+}
+
+// Generates classes .lrv-u-font-size-{int}
 @include u-font-size(
 	(
 		($font-size-8,)
@@ -42,5 +64,4 @@
 		($font-size-32, desktop-xl,)
 		($font-size-28, desktop-xl,)
 		($font-size-46, desktop-xl,)
-	)
-);
+	), $NAMESPACE: 'lrv-' );

@@ -6,6 +6,7 @@
 		"./background-color.json",
 		"./line-height.json",
 		"./font-weight.json",
-		"./border-color.json"
+		"./border-color.json",
+		"./spacing.json"
 	]
 }

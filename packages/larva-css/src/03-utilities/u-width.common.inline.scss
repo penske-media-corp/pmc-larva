@@ -20,7 +20,7 @@ $widths_map: (
 	width-30p,
 	width-50p,
 	width-100p,
-), $widths_map );
+), $widths_map, $NAMESPACE: 'lrv-' );
 
 .lrv-u-max-width-100p {
 	max-width: 100%;

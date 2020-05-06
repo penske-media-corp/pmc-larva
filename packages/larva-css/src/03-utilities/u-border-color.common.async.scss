@@ -1,14 +1,27 @@
 @import 'setup';
 
-$border-colors: (
-	border-color-white,
-	border-color-brand-primary,
-	border-color-grey-lightest,
-	border-color-grey-light,
-	border-color-grey
-);
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-@include token-utility-generator( 'border-color', $border-colors, $TOKENS-MAP );
+	@if str-index( $token-str, 'border-color' ) {
+		.lrv-u-#{$token} {
+			border-color: $value;
+			border-color: var( --#{$token}, #{$value} );
+		}
+
+		.lrv-u-#{$token}\:hover:hover {
+			border-color: $value;
+			border-color: var( --#{$token}, #{$value} );
+		}
+
+		.lrv-u-#{$token}\@desktop {
+			@include pmc-breakpoint( desktop ) {
+				border-color: $value;
+				border-color: var( --#{$token}, #{$value} );
+			}
+		}
+	}
+}
 
 .lrv-u-border-color-currentColor {
 	border-color: currentColor;

@@ -4,20 +4,41 @@
 
 	<h1>{{ name }}</h1>
 
-	<div class="lrv-a-floated-parent">
-		<h2>Utilities</h2>
-		{% for key, value in spec %}
-			{% if value.selectors|length > 0 %}
-				<section class="lrv-a-floated-left lrv-u-width-30p">
-					<h3>{{ key }}{% if true == value.tokens %}<strong class="lrv-u-font-size-14" style="background-color: yellow;">Tokens</strong>{% endif %}</h3>
-					<ul>
-						{% for selector in value.selectors %}
-							<li>{{ selector }}</li>
-						{% endfor %}
-					</ul>
-				</section>
-			{% endif %}
-		{% endfor %}
+	<div class="lrv-u-padding-a-1 lrv-a-grid lrv-a-cols2">
+		<section>
+			<h2>Utilities - Default tokens</h2>
+			{% for key, value in spec %}
+				{% if value.selectors|length > 0  and 'u-' in key %}
+					<details>
+						<summary>
+							<strong class="lrv-u-cursor-pointer">.lrv-{{ key }}{% if true == value.tokens %}<strong class="lrv-u-font-size-14" style="background-color: yellow;">From Tokens</strong>{% endif %}</strong>
+						</summary>
+						<ul>
+							{% for selector in value.selectors %}
+								<li>{{ selector }}</li>
+							{% endfor %}
+						</ul>
+					</details>
+				{% endif %}
+			{% endfor %}
+		</section>
+		<section>
+			<h2>Algorithms</h2>
+			{% for key, value in spec %}
+				{% if value.selectors|length > 0 and 'a-' in key %}
+					<details>
+						<summary>
+							<strong class="lrv-u-cursor-pointer">.lrv-{{ key }}{% if true == value.tokens %}<strong class="lrv-u-font-size-14" style="background-color: yellow;">From Tokens</strong>{% endif %}</strong>
+						</summary>
+						<ul>
+							{% for selector in value.selectors %}
+								<li>{{ selector }}</li>
+							{% endfor %}
+						</ul>
+					</details>
+				{% endif %}
+			{% endfor %}
+		</section>
 	</div>
 
 {% endblock content %}

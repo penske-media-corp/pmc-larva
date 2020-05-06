@@ -22,8 +22,8 @@
 				$spacer-050: 0.5rem;
 				$spacer-1: 1rem;
 
-				@include _spacing-class-generator( 'margin', $margins );
-				@include _spacing-class-generator( 'padding', $paddings );
+				@include _spacing-class-generator( 'margin', $margins, '' );
+				@include _spacing-class-generator( 'padding', $paddings, '' );
 			}
 
 			@include expect {
@@ -45,20 +45,4 @@
 		}
 	}
 
-	@include test('generates namespaced classes') {
-		@import 'fixture/settings';
-
-		@include assert {
-
-			@include output {
-				@include _spacing-class-generator( 'padding', $paddings );
-			}
-
-			@include expect {
-				.lrv-u-padding-a-1 {
-					padding: 1rem;
-				}
-			}
-		}
-	}
 }

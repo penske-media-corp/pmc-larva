@@ -1,11 +1,12 @@
 
 $default-map: (
-  'color-brand-primary': (rgb(65, 126, 244)),
   'color-white': (rgb(255, 255, 255)),
   'color-grey-light': (rgb(230, 230, 230)),
   'color-grey': (rgb(140, 140, 140)),
   'color-grey-dark': (rgb(106, 106, 106)),
   'color-black': (rgb(0, 0, 0)),
+  'color-brand-primary': (rgb(236, 28, 36)),
+  'color-brand-secondary': (rgb(0, 0, 0)),
   /* The webfont, loaded async */
   'font-family-primary-fancy': (Courier, serif),
   /* Fallback for primary-fancy */
@@ -16,15 +17,19 @@ $default-map: (
   'font-family-secondary': (Helvetica, serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
-  'background-color-brand-primary': (rgb(65, 126, 244)),
-  'background-color-body': (rgb(255, 255, 255)),
-  'background-color-white': (rgb(255, 255, 255)),
-  'background-color-grey-lightest': (rgb(247, 247, 247)),
   'background-color-grey-light': (rgb(204, 204, 204)),
-  'background-color-grey': (rgb(140, 140, 140)),
+  'background-color-grey-lightest': (rgb(247, 247, 247)),
   'background-color-grey-dark': (rgb(106, 106, 106)),
-  'background-color-grey-darkest': (rgb(50, 50, 50)),
+  'background-color-grey': (rgb(140, 140, 140)),
+  /* The background color of the main body of the site. */
+  'background-color-body': (rgb(255, 255, 255)),
+  /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
+  'background-color-brand-secondary': (rgb(236, 28, 36)),
   'background-color-black': (rgb(0, 0, 0)),
+  'background-color-white': (rgb(255, 255, 255)),
+  /* The primary brand color. This should be dark in hue, and have sufficient contrast with white text. */
+  'background-color-brand-primary': (rgb(0, 0, 0)),
+  'background-color-grey-darkest': (rgb(50, 50, 50)),
   'line-height-small': (1.1),
   'line-height-normal': (1.35),
   'line-height-copy': (1.5),
@@ -37,5 +42,22 @@ $default-map: (
   'border-color-grey-light': (rgb(204, 204, 204)),
   'border-color-grey': (rgb(140, 140, 140)),
   'border-color-grey-dark': (rgb(106, 106, 106)),
-  'border-color-brand-primary': (rgb(65, 126, 244)),
+  'border-color-brand-primary': (rgb(236, 28, 36)),
+  'border-color-brand-secondary': (rgb(0, 0, 0)),
+  /* Used for margins and padding only. */
+  'spacing-00': (0),
+  /* Used for margins and padding only. */
+  'spacing-025': (0.25rem),
+  /* Used for margins and padding only. */
+  'spacing-050': (0.5rem),
+  /* Used for margins and padding only. */
+  'spacing-075': (0.75rem),
+  /* Used for margins and padding only. */
+  'spacing-1': (1rem),
+  /* Used for margins and padding only. */
+  'spacing-125': (1.25rem),
+  /* Used for margins and padding only. */
+  'spacing-150': (1.5rem),
+  /* Used for margins and padding only. */
+  'spacing-2': (2rem),
 );

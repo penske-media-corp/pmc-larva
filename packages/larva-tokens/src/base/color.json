@@ -21,6 +21,12 @@
 		},
 		"COLOR_BLACK": {
 			"value": "{!BLACK}"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!PMC_RED}"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}"
 		}
 	}
 }

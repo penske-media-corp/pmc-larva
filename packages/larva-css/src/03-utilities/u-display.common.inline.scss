@@ -24,6 +24,34 @@
 	display: inline-flex;
 }
 
+@include pmc-breakpoint( desktop ) {
+
+	.lrv-u-display-block\@desktop {
+		display: block;
+	}
+
+	.lrv-u-display-contents\@desktop {
+		display: contents;
+	}
+
+	.lrv-u-display-inline\@desktop {
+		display: inline;
+	}
+
+	.lrv-u-display-inline-block\@desktop {
+		display: inline-block;
+	}
+
+	.lrv-u-display-none\@desktop {
+		display: none;
+	}
+
+	.lrv-u-display-inline-flex\@desktop {
+		display: inline-flex;
+	}
+}
+
+// Legacy
 .lrv-u-display-none\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		display: none;

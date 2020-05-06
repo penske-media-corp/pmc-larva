@@ -4,13 +4,6 @@
 	display: flex;
 }
 
-.lrv-u-flex\@tablet {
-
-	@include pmc-breakpoint( tablet ) {
-		display: flex;
-	}
-}
-
 .lrv-u-flex-grow-1 {
 	flex-grow: 1;
 }
@@ -27,10 +20,36 @@
 	flex-direction: column;
 }
 
-.lrv-u-flex-direction-column\@mobile-max {
+@include pmc-breakpoint( desktop ) {
 
-	@include pmc-breakpoint( mobile-max ) {
+	.lrv-u-flex\@desktop {
+		display: flex;
+	}
+
+	.lrv-u-flex-grow-1\@desktop {
+		flex-grow: 1;
+	}
+
+	.lrv-u-flex-shrink-0\@desktop {
+		flex-shrink: 0;
+	}
+
+	.lrv-u-flex-wrap-wrap\@desktop {
+		flex-wrap: wrap;
+	}
+
+	.lrv-u-flex-direction-column\@desktop {
 		flex-direction: column;
+	}
+
+}
+
+// Legacy - should not use @tablet and @mobile-max
+
+.lrv-u-flex\@tablet {
+
+	@include pmc-breakpoint( tablet ) {
+		display: flex;
 	}
 }
 
@@ -41,3 +60,9 @@
 	}
 }
 
+.lrv-u-flex-direction-column\@mobile-max {
+
+	@include pmc-breakpoint( mobile-max ) {
+		flex-direction: column;
+	}
+}

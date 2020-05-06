@@ -5,6 +5,8 @@
   --color-grey: rgb(140, 140, 140);
   --color-grey-dark: rgb(106, 106, 106);
   --color-black: rgb(0, 0, 0);
+  --color-brand-primary: rgb(229, 75, 39);
+  --color-brand-secondary: rgb(241, 247, 252);
   /* Available via Typekit. */
   --font-family-primary-fancy: 'neue-haas-unica', Helvetica, sans-serif;
   /* Fallback for primary-fancy. */
@@ -15,14 +17,17 @@
   --font-family-secondary: Georgia, serif;
   --font-family-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-family-basic: Helvetica, sans-serif;
-  --background-color-body: rgb(255, 255, 255);
-  --background-color-white: rgb(255, 255, 255);
-  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-light: rgb(204, 204, 204);
-  --background-color-grey: rgb(140, 140, 140);
+  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-dark: rgb(106, 106, 106);
-  --background-color-grey-darkest: rgb(50, 50, 50);
+  --background-color-grey: rgb(140, 140, 140);
+  /* The background color of the main body of the site. */
+  --background-color-body: rgb(255, 255, 255);
+  --background-color-brand-secondary: rgb(241, 247, 252);
   --background-color-black: rgb(0, 0, 0);
+  --background-color-white: rgb(255, 255, 255);
+  --background-color-brand-primary: rgb(229, 75, 39);
+  --background-color-grey-darkest: rgb(50, 50, 50);
   --line-height-small: 1.1;
   --line-height-normal: 1.35;
   --line-height-copy: 1.5;
@@ -35,9 +40,22 @@
   --border-color-grey-light: rgb(204, 204, 204);
   --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(106, 106, 106);
-  --color-brand-secondary: rgb(241, 247, 252);
-  --color-brand-primary: rgb(229, 75, 39);
-  --background-color-brand-secondary: rgb(241, 247, 252);
   --border-color-brand-primary: rgb(229, 75, 39);
-  --background-color-brand-primary: rgb(229, 75, 39);
+  --border-color-brand-secondary: rgb(0, 0, 0);
+  /* Used for margins and padding only. */
+  --spacing-00: 0;
+  /* Used for margins and padding only. */
+  --spacing-025: 0.25rem;
+  /* Used for margins and padding only. */
+  --spacing-050: 0.5rem;
+  /* Used for margins and padding only. */
+  --spacing-075: 0.75rem;
+  /* Used for margins and padding only. */
+  --spacing-1: 1rem;
+  /* Used for margins and padding only. */
+  --spacing-125: 1.25rem;
+  /* Used for margins and padding only. */
+  --spacing-150: 1.5rem;
+  /* Used for margins and padding only. */
+  --spacing-2: 2rem;
 }

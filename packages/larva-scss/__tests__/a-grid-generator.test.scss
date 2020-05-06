@@ -19,7 +19,7 @@
 					),
 				);
 
-				@include _a-grid-generator( $grids );
+				@include _a-grid-generator( $grids, '' );
 			}
 
 			@include expect {
@@ -68,73 +68,4 @@
 		}
 	}
 
-	@include test('generates namepsaced grids') {
-		
-		@import 'fixture/settings';
-		
-		@include assert {
-			
-			@include output {
-
-				
-				$grids: (
-					(
-						columns: 2,
-						spans: ( 2, ),
-					),
-					(
-						columns: 3,
-						breakpoint: tablet,
-						spans: ( 2, ),
-					),
-				);
-
-				@include _a-grid-generator( $grids );
-			}
-
-			@include expect {
-				.lrv-a-cols2 {
-					--cols: 2;
-				}
-
-				.lrv-a-cols2 > * {
-					flex-basis: 50%;
-				}
-
-				@supports (display: grid) {
-					.lrv-a-span2 {
-						grid-column: span 2;
-					}
-				}
-
-				.lrv-a-cols2 > .lrv-a-span2 {
-					flex-basis: 100%;
-				}
-
-				@media( min-width: 48rem ) {
-					.lrv-a-cols3\@tablet {
-						--cols: 3;
-					}
-
-					.lrv-a-cols3\@tablet > * {
-						flex-basis: 33.33333%;
-					}
-				}
-
-				@media( min-width: 48rem ) {
-
-					.lrv-a-span2\@tablet {
-						@supports ( display: grid ) {
-							grid-column: span 2;
-						}
-					}
-
-					.lrv-a-cols3\@tablet > .lrv-a-span2\@tablet {
-						flex-basis: 66.66667%;
-					}
-				}
-			}
-
-		}
-	}
 }

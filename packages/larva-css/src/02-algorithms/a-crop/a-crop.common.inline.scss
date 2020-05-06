@@ -10,4 +10,4 @@ $aspect-ratios: (
 	'3x4': (3, 4)
 );
 
-@include a-crop( $aspect-ratios );
+@include a-crop( $aspect-ratios, $NAMESPACE: 'lrv-' );

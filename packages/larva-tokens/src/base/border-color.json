@@ -21,6 +21,12 @@
 		},
 		"BORDER_COLOR_GREY_DARK": {
 			"value": "{!GREY_35}"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!PMC_RED}"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}"
 		}
 	}
 }

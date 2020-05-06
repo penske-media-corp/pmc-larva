@@ -1,39 +1,48 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
+// TODO: Border widths should be generated from tokens,
+// similar to spacing.
+
 .lrv-u-border-b-1 {
-	border-bottom: 1px solid;
+	border-bottom-width: 1px;
 }
 
 .lrv-u-border-t-1 {
-	border-top: 1px solid;
+	border-top-width: 1px;
 }
 
 .lrv-u-border-a-1 {
-	border: 1px solid;
+	border-width: 1px;
 }
 
 .lrv-u-border-a-3 {
-	border: 3px solid;
+	border-width: 3px;
 }
 
 .lrv-u-border-a-0 {
-	border: 0;
+	border-width: 0;
 }
 
 .lrv-u-border-a-1\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
-		border: 1px solid;
+		border-width: 1px;
 	}
 }
 
 .lrv-u-border-t-0\@desktop {
 	@include pmc-breakpoint( desktop ) {
-		border-top: 0px solid;
+		border-top-width: 0px;
+	}
+}
+
+@include pmc-breakpoint( desktop ) {
+	.lrv-u-border-a-0\@desktop {
+		border-width: 0;
 	}
 }
 
 .lrv-u-border-r-1\@desktop {
 	@include pmc-breakpoint( desktop ) {
-		border-right: 1px solid;
+		border-right-width: 1px;
 	}
 }

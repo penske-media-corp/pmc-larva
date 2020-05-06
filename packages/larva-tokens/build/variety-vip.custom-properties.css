@@ -5,6 +5,8 @@
   --color-grey: rgb(140, 140, 140);
   --color-grey-dark: rgb(106, 106, 106);
   --color-black: rgb(0, 0, 0);
+  --color-brand-primary: rgb(215, 20, 64);
+  --color-brand-secondary: rgb(40, 56, 66);
   --font-family-primary-fancy: 'Graphik XX Cond', sans-serif;
   /* Fallback for primary-fancy */
   --font-family-primary: Georgia, serif;
@@ -12,24 +14,23 @@
   --font-family-secondary: Helvetica, sans-serif;
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
-  --background-color-body: rgb(255, 255, 255);
-  --background-color-white: rgb(255, 255, 255);
-  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-light: rgb(204, 204, 204);
-  --background-color-grey: rgb(140, 140, 140);
+  --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-dark: rgb(106, 106, 106);
-  --background-color-grey-darkest: rgb(50, 50, 50);
+  --background-color-grey: rgb(140, 140, 140);
+  /* The background color of the main body of the site. */
+  --background-color-body: rgb(255, 255, 255);
+  --background-color-brand-secondary: rgb(40, 56, 66);
   --background-color-black: rgb(0, 0, 0);
-  --color-brand-secondary: rgb(40, 56, 66);
+  --background-color-white: rgb(255, 255, 255);
+  --background-color-brand-primary: rgb(215, 20, 64);
+  --background-color-grey-darkest: rgb(50, 50, 50);
   --font-family-basic-fancy: 'Para Supreme Regular', serif;
   --border-color-brand-secondary: rgb(40, 56, 66);
-  --color-brand-primary: rgb(215, 20, 64);
   --background-color-brand-accent: rgb(240, 241, 242);
   --font-family-accent: Helvetica, sans-serif;
   --font-family-body-fancy: 'IBM Plex Serif', serif;
   --border-color-brand-primary: rgb(215, 20, 64);
-  --background-color-brand-primary: rgb(215, 20, 64);
   --color-brand-accent: rgb(243, 112, 33);
   --font-family-accent-fancy: 'IBM Plex Mono', monospace;
-  --background-color-brand-secondary: rgb(40, 56, 66);
 }

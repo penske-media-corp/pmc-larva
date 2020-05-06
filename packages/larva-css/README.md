@@ -1,84 +1,195 @@
 # Larva CSS
 
-This package contains Larva's base CSS, CSS algorithms, utlities, and CSS for JS patterns from larva-js.
+This package contains Larva's base CSS, CSS algorithms, utlities, and CSS for JS patterns from larva-js. Design-related utilities e.g. typography, spacing, and color, are generated according to configuration in [larva-tokens](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva-tokens).
 
-## Usage
+## Overview of Functionality
+
+In larva-css, CSS originates in one of three ways:
+
+1. For properties that are part of larva-tokens, iterate over the Sass map of values and output utilities based on the token name e.g. `.lrv-u-#{$token} { property: $value }`.
+2. For properties _not_ part of larva-tokens, iterate over a map of local values and output utilities in the same fashion
+3. For algorithms that are not part of tokens – e.g. `a-grid` and `a-crop` - use a generator from larva-scss to output the rulesets.
+4. .scss files associated with patterns from larva-js that can be pulled into project-level builds.
+
+## Development Setup (consuming project)
+
+larva-css can be used on its own, or in conjunction with the main larva package.
+
+### Using larva-css on its own
+
+If you'd like to use larva-css on its own, install like so:
 
 ```
 npm install @penskemediacorp/larva-css --save
 ```
 
-Then include the CSS from @penskemediacorp/larva-css/build/css in your asset pipeline. Make sure that the CSS files containing `inline` and `async` are loaded accordingly.
+Otherwise, it will be included as a dependency when installing the main @penskemediacorp/larva package.
 
-## Concepts
+### Loading larva-css into your project's build
 
-### "Atomic" or "Functional" CSS
+larva-css files can be accessed as CSS directly by linking the stylesheets available in the build directory, but the current recommended approach is to load them into a local project build.
 
-Coming soon!
+#### Option 1: With project-level utilities (recommended for themes)
 
-### Removing the Burden of Naming
+This approach is recommeded for WordPress themes and redesigns that include a styleguide and the addition of a new brand.json to [larva-tokens](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva-tokens).
 
-Unless you are authoring a CSS algorithm, you should not have to name a new class.
+Prerequisites to this approach:
 
-### Cascading and Specificity
+1. Your project is using the core @penskemediacorp/larva package for its build step.
+2. The CSS architecture and directory structure in this repository's packages/larva/src/scss.
+3. The project's assets structure follows that outlined in the [main larva package readme](https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva).
 
-Directories are ordered according to the cascading of styles, inspired by ITCSS. Generic CSS will almost always be overridden, so it is first. Unless selector specificty says otherwise (e.g. `a-space-children` or the image in `a-crop`), CSS algorithms should be overridden by utilities. The CSS related to JS interactivity comes last because it should be the most important in the cascade.
+Include the source .scss files from this repository in your top-level common stylesheet in assets/entries/:
 
-## Terminology
+In all of the following, replace `default` with the brand name containing tokens.
 
-*Generic* styles are any basic reset styles, usually applied to general elements. Larva does not use a formal reset like Normalize, rather, any initial property values are overridden in this directory as needed. For example, removing margins from headings and adding box-sizing: border-box to all elements.
+```language:scss
+// common.async.scss
+@import '@penskemediacorp/larva-tokens/build/default.custom-properties';
 
-A *utility* is a single* declaration ruleset that is named according to the declaration and prefixed with a `u-*`. These sometimes come from SCSS generators, but many are authored by hand. A few examples (namespaced with pmc-* to indicate they come from this repository):
+@import '@penskemediacorp/larva-css/src/01-generic/*.scss';
+@import '01-generic/*.common.*.scss';
 
-* lrv-u-display-block
-* lrv-u-color-brand-primary
-* lrv-u-margin-tb-1@tablet
+@import '@penskemediacorp/larva-css/src/02-algorithms/**/*.scss';
+@import '02-algorithms/*.common.*.scss';
 
-\* The only time a utility would have more than one declaration is for margin and padding where top/bottom and right/left values can be in the same ruleset.
+@import '@penskemediacorp/larva-css/src/03-utilities/*.scss';
+@import '03-utilities/*.common.*.scss';
 
-An *algorithm* is a more involved ruleset or set of rulesets that accomplished a specific styling goal that is not reasonable to accomplish with utilties, and generally makes use of browser algorithms or familiar CSS programming patterns. A few examples:
+@import '@penskemediacorp/larva-css/src/04-js/*.scss';
+@import '04-js/*.common.*.scss';
+```
 
-* pmc-a-space-children - utilized the owl selector pattern to apply space between child elements.
-* pmc-a-glue - an algorithm for "glueing" one element onto another with absolute positioning.
-* pmc-a-unstyle-list – a straightforward set of declarations that remove basic list styling.
+In a corresponding stylesheet for inline CSS, include only the .inline.scss extensions.
 
-The *js* directory contains CSS corresponding to interactivity from larva-js. These styles could be kept alongside the JS, but in order to minimize build tool dependencies, there are kept here, in the larva-css package.
+```language:scss
+// common.inline.scss
+@import '@penskemediacorp/larva-tokens/build/default.custom-properties';
 
-## Naming SCSS Files
+@import '@penskemediacorp/larva-css/src/01-generic/*.inline.scss';
+@import '01-generic/*.common.inline.scss';
 
-The SCSS file should be named according to the chunk it will be included in when used in an actual product, and whether it should be loaded asynchronously or inline. The formular for naming a file:
+@import '@penskemediacorp/larva-css/src/02-algorithms/**/*.inline.scss';
+@import '02-algorithms/*.common.inline.scss';
 
-`{a|u|js}-{baseName}.{chunkName}.{inline|async}.scss`
+@import '@penskemediacorp/larva-css/src/03-utilities/*.inline.scss';
+@import '03-utilities/*.common.inline.scss';
 
-Example, full file names:
+@import '@penskemediacorp/larva-css/src/04-js/*.inline.scss';
+@import '04-js/*.common.inline.scss';
+```
 
-* u-background.common.async.scss
-* u-font-size.single.async.scss
-* a-gradient-after.common.async.scss
-* a-archive-grid.archive.inline.scss
-* js-MobileHeightToggle.common.async.scss
+Next, create a file for project-level tokens in in assets/src/scss/00-tools/tokens.scss that contains the following:
 
-### Namespace {a|u|js}
+```
+@import '@penskemediacorp/larva-tokens/build/default.map.scss';
 
-- a, for algorithm
-- u, for utility
-- js, styling paired with a JS pattern
-- No namespace for generic or reset styles
+$local-tokens: (
+	'font-size-12': pmc-rem(12),
+	'opacity-075': 0.75,
+);
 
-### baseName
+$TOKENS-MAP: map-merge( $default-map, $local-tokens );
+```
 
-The baseName of a pattern is the consistent name that is included before all responsive suffixes and BEM elements or modifiers.
+And in assets/src/scss/setup.scss, import the tokens:
+```
+@import '00-tools/tokens.scss';
+```
 
-For example, `a-article-grid` could contain `a-article-grid__sidebar` or `a-article-grid--3col`, but the name of the file only contains a-article-grid.
+Be sure to `@import 'setup'` at the top of all of your local utility files. Font size is already generated from the larva-css repo, but opacity is not.
 
-### chunkName
+If a property is **not** generated from larva-css, you can iterate over the local tokens map with the following Sass:
 
-The name of the chunk where this algorithm should be included. Most algorithms will be common, but there will certainly be cases when algorithms are written for specifc projects that may have their own chunk naming convention. When naming chunks in a WordPress theme, they should map directly 1 to 1 with the queried template where the CSS is equeued or inlined.
+```
+// Example: u-opacity.common.inline.scss
+@import 'setup';
 
-### Async or Inline
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-These terms refer to whether or not the algorithm should be included in inlined, or "critical CSS", or in a file loaded asynchronously.
+	@if str-index( $token-str, 'opacity' ) {
+		.u-#{$token} {
+			opacity: $value;
+		}
 
-inline should be used for CSS that is applied to elements that are both "above the fold" and contain properties that come into play at the layout phase in rendering. In other words, they are crucial for the first paint of the page. Examples are any properties part of the box model, positioning, layout APIs like Grid and Flexbox, font sizing, and more.
+		@include pmc-breakpoint( desktop ) {
+			.u-#{$token}\@desktop {
+				font-size: $value;
+			}
+		}
 
-async should be used for CSS that is not critical to the first paint i.e. to making the page content readable, and that apply during the paint and composite phases of rendering. These are properties like color, background, transition, and box-shadow.
+		// Some utilities may benefit from the additional breakpoint
+		// desktop-xl, but opactiy will likely not change between
+		// desktop and desktop-xl.
+
+	}
+}
+```
+
+Refer to the larva-css source files in larva-css/src and in the local Larva server, navigate to /css to see available classes.
+
+#### Option 2: Without project-level utility generation
+
+In your local build, inlcude these files into your main stylesheet:
+
+```language:scss
+// common.scss => common.css
+@import '@penskemediacorp/larva-css/build/css/generic.common.inline';
+@import '@penskemediacorp/larva-css/build/css/algorithms.common.inline';
+@import '@penskemediacorp/larva-css/build/css/algorithms.common.async';
+@import '@penskemediacorp/larva-css/build/css/utilities.common.inline';
+@import '@penskemediacorp/larva-css/build/css/utilities.common.async';
+@import '@penskemediacorp/larva-css/build/css/js.common.inline';
+
+```
+
+If you are splitting inline CSS, you can load inline CSS separately by including the following in a file that will be inlined:
+
+```language:scss
+// inline.scss => inline.css
+@import '@penskemediacorp/larva-css/build/css/generic.inline';
+@import '@penskemediacorp/larva-css/build/css/algorithms.inline';
+@import '@penskemediacorp/larva-css/build/css/utilities.inline';
+@import '@penskemediacorp/larva-css/build/css/js.inline';
+```
+
+Note that at present, there are no js or generic files for async CSS from larva-css.
+
+## Development Setup (this repo)
+
+1. Clone this repository, i.e. the pmc-larva monorepo.
+2. In packages/larva-css, run `npm install`.
+3. Make your updates to the CSS.
+4. From packages/larva-css, run `npm run build`.
+
+Contributions adding static utilities e.g. display properties or others that are not generated from tokens are welcome.
+
+## Things to Know
+
+### The .lrv namespace
+
+CSS originating from larva-css .scss files contain a .lrv- namespace. Local project CSS should only contain an `a-`, `u-`, or `js-` namespace.
+
+### Utility Naming
+
+Utilities that are generated from larva-tokens, are named as follows:
+
+`.lrv-u-{$token-name}`
+
+For `spacing-XX` tokens, they are named:
+
+`.lrv-u-margin-{l|r|t|b|lr|tb|a}-{$size}`
+
+Where, if the token was `spacing-1`, the utility would be `lrv-u-margin-l-1`.
+
+### Algorithms
+
+Algorithms are presentationally named CSS patterns that provide functionality difficult or impossible to accomplish with utilities. Examples are aspect ratio cropping, CSS grid with flex box fallbacks, and SVG icons with `::before` and `::after`.
+
+Please refer to the source of each algorithm and its corresponding generator in larva-scss for more information.
+
+### JS-related CSS
+
+The SCSS files inside 04-js should be imported directly into a local project build, other than js-MobileHeightToggle which is added to the js.common.inline chunk here.
+

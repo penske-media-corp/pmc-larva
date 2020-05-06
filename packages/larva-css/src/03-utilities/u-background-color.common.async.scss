@@ -1,0 +1,15 @@
+@import 'setup';
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	// example: background-color-grey-lightest, #EEEEEE
+	@if str-index( $token-str, 'background-color' ) {
+
+		.lrv-u-#{$token}\:hover:hover {
+			background-color: $value;
+			background-color: var( --#{$token}, #{$value} );
+		}
+	}
+}
+

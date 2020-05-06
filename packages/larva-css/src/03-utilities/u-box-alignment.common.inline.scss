@@ -1,3 +1,4 @@
+@import 'setup';
 
 .lrv-u-align-items-center {
 	align-items: center;
@@ -15,3 +16,52 @@
 	justify-content: space-between;
 }
 
+.lrv-u-align-items-start {
+	align-items: flex-start;
+}
+
+.lrv-u-justify-content-start {
+	justify-content: flex-start;
+}
+
+.lrv-u-justify-content-end {
+	justify-content: flex-end;
+}
+
+.lrv-u-align-items-end {
+	align-items: flex-start;
+}
+
+@include pmc-breakpoint( desktop ) {
+	.lrv-u-align-items-center\@desktop {
+		align-items: center;
+	}
+
+	.lrv-u-justify-content-center\@desktop {
+		justify-content: center;
+	}
+
+	.lrv-u-justify-content-space-evenly\@desktop {
+		justify-content: space-evenly;
+	}
+
+	.lrv-u-justify-content-space-between\@desktop {
+		justify-content: space-between;
+	}
+
+	.lrv-u-align-items-start\@desktop {
+		align-items: flex-start;
+	}
+
+	.lrv-u-justify-content-start\@desktop {
+		justify-content: flex-start;
+	}
+
+	.lrv-u-justify-content-end\@desktop {
+		justify-content: flex-end;
+	}
+
+	.lrv-u-align-items-end\@desktop {
+		align-items: flex-start;
+	}
+}

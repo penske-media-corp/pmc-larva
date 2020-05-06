@@ -13,15 +13,23 @@ body {
 	line-height: $line-height-normal;
 }
 
+// Apply the webfont when fonts are loaded.
 .wf-active body {
 
-	// Apply the webfont when fonts are loaded.
-	--font-family-primary: var( --font-family-primary-fancy );
-	--font-family-secondary: var( --font-family-secondary-fancy );
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		// example: font-family-primary
+		// each will have a corresponding `fancy` variation.
+		@if str-index( $token-str, 'font-family' ) and not str-index( $token-str, 'fancy' ) {
+			--#{$token}: var( --#{$token}-fancy );
+		}
+	}
+
 }
 
 strong {
-	font-weight: $font-weight-bold;
+	font-weight: map-get( $semantic-font-weights, bold );
 }
 
 a {

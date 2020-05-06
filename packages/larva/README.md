@@ -1,10 +1,8 @@
-# Larva!
+# Larva
 
-If you want to build patterns with Larva, then you are in the right place. This is where you should start for new projects and for refactoring old projects with Larva.
+_Note:_ This package may eventually be split into separate packages.
 
-This package is a wrapper that brings all of the other packages together, and provides the tools for using them to develop modules. 
-
-It contains: 
+By nature it is a wrapper package that brings all of the smaller Larva packages together, and provides a sandbox for testing Larva tools. Now, it also contains the `larva` binary build scripts and the Larva UI Express server for patterns development.
 
 * An Express server and UI for building project-level patterns and configuring existing patterns
 * Gulp configuration for building SCSS
@@ -17,7 +15,7 @@ It contains:
 
 ### If a brand new project:
 
-In order to avoid conflicting node versions, Larva should be contained to its own directory. 
+In order to avoid conflicting node versions, Larva should be contained to its own directory.
 
 **If you are working in a brand new project**, create a directory called `assets` and follow the below steps from the root of `assets`.
 
@@ -43,6 +41,7 @@ This will install the main Larva package and create a directory called larva/ th
 		|- build/
 		|- node_modules/
 		|- src/
+		|- entries/
 		|- public/
 		|- package.json
 		|- larva.config.js

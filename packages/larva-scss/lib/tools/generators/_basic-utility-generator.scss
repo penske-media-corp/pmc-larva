@@ -1,6 +1,4 @@
-$NAMESPACE: '' !default;
-
-@mixin basic-utility-generator( $property, $tokens, $map: () ) {
+@mixin basic-utility-generator( $property, $tokens, $map: (), $NAMESPACE: '' ) {
 
 	@if type-of($tokens) != 'list' {
 		@error "`#{$tokens}` is not a valid value for $values. It must be a list.";
