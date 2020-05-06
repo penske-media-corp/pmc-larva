@@ -1,0 +1,86 @@
+
+:root {
+  --color-white: rgb(255, 255, 255);
+  --color-grey-light: rgb(230, 230, 230);
+  --color-grey: rgb(140, 140, 140);
+  --color-grey-dark: rgb(106, 106, 106);
+  --color-black: rgb(0, 0, 0);
+  --color-brand-primary: rgb(169, 19, 30);
+  --color-brand-secondary: rgb(238, 80, 85);
+  /* The primary webfont, loaded async */
+  --font-family-primary-fancy: 'Playfair Display', serif;
+  /* The fallback for the primary font */
+  --font-family-primary: Georgia, serif;
+  /* The secondary webfont, loaded async */
+  --font-family-secondary-fancy: 'Sofia Pro', sans-serif;
+  /* The fallback for the secondary font */
+  --font-family-secondary: 'Helvetica Neue', sans-serif;
+  --font-family-body: 'Helvetica Neue', sans-serif;
+  --font-family-basic: Helvetica, sans-serif;
+  --background-color-grey-light: rgb(204, 204, 204);
+  --background-color-grey-lightest: rgb(247, 247, 247);
+  --background-color-grey-dark: rgb(106, 106, 106);
+  --background-color-grey: rgb(140, 140, 140);
+  /* The background color of the main body of the site. */
+  --background-color-body: rgb(255, 248, 241);
+  --background-color-brand-secondary: rgb(238, 80, 85);
+  --background-color-black: rgb(0, 0, 0);
+  --background-color-white: rgb(255, 255, 255);
+  --background-color-brand-primary: rgb(169, 19, 30);
+  --background-color-grey-darkest: rgb(50, 50, 50);
+  --line-height-small: 1.1;
+  --line-height-normal: 1.35;
+  --line-height-copy: 1.5;
+  --line-height-large: 1.85;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --border-color-white: rgb(255, 255, 255);
+  --border-color-grey-lightest: rgb(247, 247, 247);
+  --border-color-grey-light: rgb(204, 204, 204);
+  --border-color-grey: rgb(140, 140, 140);
+  --border-color-grey-dark: rgb(106, 106, 106);
+  --border-color-brand-primary: rgb(169, 19, 30);
+  --border-color-brand-secondary: rgb(238, 80, 85);
+  /* Used for margins and padding only. */
+  --spacing-00: 0;
+  /* Used for margins and padding only. */
+  --spacing-025: 0.25rem;
+  /* Used for margins and padding only. */
+  --spacing-050: 0.5rem;
+  /* Used for margins and padding only. */
+  --spacing-075: 0.75rem;
+  /* Used for margins and padding only. */
+  --spacing-1: 1rem;
+  /* Used for margins and padding only. */
+  --spacing-125: 1.25rem;
+  /* Used for margins and padding only. */
+  --spacing-150: 1.5rem;
+  /* Used for margins and padding only. */
+  --spacing-2: 2rem;
+  --border-color-brand-secondary-light: rgb(246, 161, 151);
+  --background-color-brand-accent-secondary: rgb(250, 220, 171);
+  --border-color-brand-accent-dark: rgb(97, 190, 181);
+  --color-brand-primary-light: rgb(202, 79, 88);
+  --border-color-brand-accent-secondary: rgb(250, 220, 171);
+  --background-color-brand-secondary-light: rgb(246, 161, 151);
+  --background-color-brand-accent-dark: rgb(97, 190, 181);
+  --background-color-brand-accent-light: rgb(242, 253, 252);
+  --border-color-brand-accent-light: rgb(242, 253, 252);
+  --color-brand-accent-secondary-light: rgb(254, 249, 228);
+  --background-color-brand-accent: rgb(168, 220, 214);
+  --border-color-brand-accent: rgb(168, 220, 214);
+  --border-color-brand-primary-light: rgb(202, 79, 88);
+  --color-brand-accent-secondary: rgb(250, 220, 171);
+  --background-color-brand-primary-light: rgb(202, 79, 88);
+  --color-brand-accent-light: rgb(242, 253, 252);
+  /* The fallback for the accent font */
+  --font-family-accent: Georgia, serif;
+  --color-brand-secondary-light: rgb(246, 161, 151);
+  --color-brand-accent-dark: rgb(97, 190, 181);
+  --background-color-brand-accent-secondary-light: rgb(254, 249, 228);
+  --border-color-brand-accent-secondary-light: rgb(254, 249, 228);
+  --color-brand-accent: rgb(168, 220, 214);
+  /* The accent webfont, loaded async */
+  --font-family-accent-fancy: Lust, serif;
+}
