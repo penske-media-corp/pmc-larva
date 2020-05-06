@@ -10,13 +10,14 @@ const getAllPatternsObj = require( '../lib/utils/getAllPatternsObj' );
 const config = getAppConfiguration( 'patterns' );
 const cliArgs = getArgsFromCli();
 const source = 'larva' === cliArgs[1] ? 'larva' : 'project';
+const port = cliArgs[2] || '3000' ;
 
-const urlBase = 'http://localhost:3001/' + source;
+const urlBase = 'http://localhost:' + port + '/' + source;
 const buildPath = path.join( process.cwd(), './build/html/' + source );
 
 const patternsObj = ( () => {
-	const source = fromLarva ? config.larvaPatternsDir : config.projectPatternsDir;
-	return getAllPatternsObj( source );
+	const patternDir = 'larva' === source ? config.larvaPatternsDir : config.projectPatternsDir;
+	return getAllPatternsObj( patternDir );
 } )();
 
 const routesArr = getPatternRoutes( patternsObj );
