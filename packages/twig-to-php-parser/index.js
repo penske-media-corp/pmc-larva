@@ -15,8 +15,8 @@ const config = getAppConfiguration( 'parser' );
 function twigToPhpParser( config = {} ) {
 
 	// TODO: We need some kind of wrapper here for config...or better:
-	// move this to pmc-plugins/pmc-larva and scrap this strings JS
-	// wrapper situation, and use Larva\Config for these paths.
+	// move this to pmc-plugins/pmc-larva and scrap this awkward JS
+	// execPhp wrapper situation, and use Larva\Config for this config.
 	let twigDir = path.join( process.cwd(), './src/patterns' );
 	let phpDir = path.join( process.cwd(), '../template-parts/patterns' );
 	let isUsingPlugin = false;
