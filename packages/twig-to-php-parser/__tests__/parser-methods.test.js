@@ -6,7 +6,7 @@ const parserMethods = require( '../index.js' ).methods;
 const expectations = {
 	childInclude: '<?php \\PMC::render_template( CHILD_THEME_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
 	larvaInclude: '<?php \\PMC::render_template( PMC_CORE_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
-	pluginEnabled: '<?php \\PMC::render_template( \\PMC\\Larva\\Config::get_instance()->get_brand_directory() . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
+	pluginEnabled: '<?php \\PMC::render_template( \\PMC\\Larva\\Config::get_instance()->get( \'brand_directory\' ) . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
 };
 
 describe( 'parse include statements', function() {
