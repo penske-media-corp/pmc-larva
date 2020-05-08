@@ -2,14 +2,33 @@ const execPhp = require( 'exec-php' );
 const path = require( 'path' );
 const chalk = require( 'chalk' );
 const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
-const RELATIVE_OUPUT_PATH = '../template-parts/patterns'; // Not permitted to override this because it will break the include paths.
+
+const config = getAppConfiguration( 'parser' );
+
+const twigDir = ( () => {
+	if ( undefined !== config.twigDir ) {
+		return config.twigDir;
+	}
+
+	// Default
+	return path.resolve( process.cwd(), './src/patterns' );
+} )();
+
+const phpDir = ( () => {
+	if ( undefined !== config.phpDir ) {
+		return config.phpDir;
+	}
+
+	// Default
+	return path.resolve( process.cwd(), '../template-parts/patterns' );
+} )();
 
 /**
  * Twig to PHP Parser
- * 
+ *
  * @param {string} twigDirPath Absolute path to Twig patterns
  * @param {string} phpDirPath Absolute path to PHP output
- * @param {object} config Containing 
+ * @param {object} config Optional object containing configuration
  */
 
 function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
@@ -70,10 +89,7 @@ module.exports = {
 		parseIncludePath: parseIncludePath
 	},
 	run: () => {
-		let config = getAppConfiguration( 'parser' );
-		let relativeSrcPath = config.relativeSrcOverride || './src/patterns';
-
-		twigToPhpParser( path.resolve( process.cwd(), relativeSrcPath ), path.resolve( process.cwd(), RELATIVE_OUPUT_PATH ), config )
+		twigToPhpParser( twigDir, phpDir, config )
 		.catch( e => console.log( e ) ) // PHP errors
 		.then( result => console.log( chalk.green( 'Completed parsing Twig templates to PHP.' ) ) )
 		.catch( e => console.log( e ) );
