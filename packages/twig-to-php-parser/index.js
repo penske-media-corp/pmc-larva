@@ -6,7 +6,7 @@ const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
 const config = getAppConfiguration( 'parser' );
 
 const twigDir = ( () => {
-	if ( undefined !== config.twigDir ) {
+	if ( undefined !== typeof config.twigDir ) {
 		return config.twigDir;
 	}
 
@@ -15,7 +15,7 @@ const twigDir = ( () => {
 } )();
 
 const phpDir = ( () => {
-	if ( undefined !== config.phpDir ) {
+	if ( undefined !== typeof config.phpDir ) {
 		return config.phpDir;
 	}
 
@@ -57,7 +57,7 @@ function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
 
 };
 
-function parseIncludePath( twigIncludeStr, patternName, dataName, config = {} ) {
+function parseIncludePath( twigIncludeStr, patternName, dataName, isUsingPlugin = false ) {
 
 	return new Promise( ( resolve, reject ) => {
 
@@ -67,7 +67,7 @@ function parseIncludePath( twigIncludeStr, patternName, dataName, config = {} ) 
 				reject( error );
 			}
 
-			php.parse_include_path( twigIncludeStr, patternName, dataName, function( error, result, output, printed ) {
+			php.parse_include_path( twigIncludeStr, patternName, dataName, isUsingPlugin, function( error, result, output, printed ) {
 
 				if ( error ) {
 					reject( error );

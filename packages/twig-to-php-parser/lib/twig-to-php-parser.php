@@ -222,12 +222,13 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
  *
  * @return string PMC::render_template call
  */
-function parse_include_path( $twig_include, $pattern_name, $data_name ) {
-	$theme_dir = 'CHILD_THEME_PATH';
+function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using_plugin ) {
+
+	$brand_directory = 'CHILD_THEME_PATH';
 	$start_name = substr( $pattern_name, 0, 2 );
 
 	if ( strpos( $twig_include, '@larva' ) ) {
-		$theme_dir = 'PMC_CORE_PATH';
+		$brand_directory = 'PMC_CORE_PATH';
 	}
 
 	if ( 'c-' === $start_name ) {
@@ -238,7 +239,13 @@ function parse_include_path( $twig_include, $pattern_name, $data_name ) {
 		$directory = 'modules';
 	}
 
-	 return "<?php \PMC::render_template( " . $theme_dir . " . '/template-parts/patterns/" . $directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+
+	if ( true === $is_using_plugin ) {
+		$brand_directory = '\PMC\Larva\Config::get_instance()->get_brand_directory()';
+	}
+
+	return "<?php \PMC::render_template( " . $theme_dir . " . '/template-parts/patterns/" . $directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+
 }
 
 
