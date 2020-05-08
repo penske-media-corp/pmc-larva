@@ -30,10 +30,17 @@ module.exports = {
 	// Other config
 
 	parser: {
-		relativeSrcOverride: false, // The default will look in src/patterns for the source path, but if you want to parse from a different directory, you can add that path here.
-		isCore: false // Or true, if it is the core theme and should parse everything to PMC_CORE_PATH
 	}
 }
+```
+
+The parser object supports the following configuraiton:
+```language-js
+	parser: {
+		twigDir: path.resolve( './new-path/to-twig/' ), // Default /theme/assets/src/patterns.
+		phpDir: path.resolve( './new-path/to-php/' ), // Default /theme/template-parts/patterns.
+		isUsingPlugin: true, // Default false.
+	}
 ```
 
 Then, run the script from the assets directory by executing the package binary like so:
