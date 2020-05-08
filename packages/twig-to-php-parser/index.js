@@ -3,35 +3,16 @@ const path = require( 'path' );
 const chalk = require( 'chalk' );
 const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
 
-const config = getAppConfiguration( 'parser' );
-
-const twigDir = ( () => {
-	if ( undefined !== typeof config.twigDir ) {
-		return config.twigDir;
-	}
-
-	// Default
-	return path.resolve( process.cwd(), './src/patterns' );
-} )();
-
-const phpDir = ( () => {
-	if ( undefined !== typeof config.phpDir ) {
-		return config.phpDir;
-	}
-
-	// Default
-	return path.resolve( process.cwd(), '../template-parts/patterns' );
-} )();
 
 /**
  * Twig to PHP Parser
  *
- * @param {string} twigDirPath Absolute path to Twig patterns
- * @param {string} phpDirPath Absolute path to PHP output
+ * @param {string} twigDir Absolute path to Twig patterns
+ * @param {string} phpDir Absolute path to PHP output
  * @param {object} config Optional object containing configuration
  */
 
-function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
+function twigToPhpParser( twigDir, phpDir, config = {} ) {
 
 	return new Promise( ( resolve, reject ) => {
 
@@ -41,7 +22,7 @@ function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
 				reject( error );
 			}
 
-			php.twig_to_php_parser( twigDirPath, phpDirPath, function( error, result, output, printed ) {
+			php.twig_to_php_parser( twigDir, phpDir, function( error, result, output, printed ) {
 
 				if ( error ) {
 					reject( error );
@@ -89,9 +70,25 @@ module.exports = {
 		parseIncludePath: parseIncludePath
 	},
 	run: () => {
+
+		const config = getAppConfiguration( 'parser' );
+
+		let twigDir = path.join( process.cwd(), './src/patterns' );
+		let phpDir = path.join( process.cwd(), '../template-parts/patterns' );
+
+		if ( 'undefined' !== typeof config.twigDir ) {
+			twigDir = config.twigDir;
+		}
+
+		if ( 'undefined' !== typeof config.phpDir ) {
+			phpDir = config.phpDir;
+		}
+
 		twigToPhpParser( twigDir, phpDir, config )
-		.catch( e => console.log( e ) ) // PHP errors
-		.then( result => console.log( chalk.green( 'Completed parsing Twig templates to PHP.' ) ) )
-		.catch( e => console.log( e ) );
+			.catch( e => console.log( e ) ) // PHP errors
+			.then( result => console.log(
+				chalk.green( `Completed parsing Twig templates to PHP. \nFrom: ${twigDir} \nTo: ${phpDir}.` )
+			) )
+			.catch( e => console.log( e ) );
 	}
 };
