@@ -43,7 +43,7 @@ describe( 'parse include statements', function() {
 		});
 	} );
 
-	it( 'if plugin is enabled, parsed to the function call', ( done ) => {
+	it( 'if plugin is enabled, output to the function call', ( done ) => {
 		parserMethods.parseIncludePath(
 			'{% include "@larva/objects/o-nav.twig" with o_nav %}',
 			'o-nav',
