@@ -10,7 +10,7 @@
  * @author Lara Schenck and Amit Sannad
  */
 
-function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
+function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_plugin ) {
 	$twig_files        = [];
 
 	$twig_dir_iterator      = new \RecursiveDirectoryIterator( $patterns_dir_path );
@@ -164,7 +164,8 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 			$include_replacements[ $count ] = parse_include_path(
 				$include,
 				$include_matches[3][ $count ],
-				$include_matches[6][ $count ]
+				$include_matches[6][ $count ],
+				$is_using_plugin
 			);
 			$count ++;
 		}
