@@ -3,11 +3,6 @@ const path = require( 'path' );
 
 const parserMethods = require( '../index.js' ).methods;
 
-const fixture = path.join( __dirname, 'fixtures' );
-const config = require( fixture + '/larva.config.js' ).parser;
-
-console.log( config );
-
 const expectations = {
 	childInclude: '<?php \\PMC::render_template( CHILD_THEME_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
 	larvaInclude: '<?php \\PMC::render_template( PMC_CORE_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
@@ -33,8 +28,7 @@ describe( 'parse include statements', function() {
 		parserMethods.parseIncludePath(
 			'{% include "@larva/objects/o-nav.twig" with o_nav %}',
 			'o-nav',
-			'o_nav',
-			config
+			'o_nav'
 		)
 		.catch( e => console.log( e ) )
 		.then( ( result ) => {
@@ -44,10 +38,12 @@ describe( 'parse include statements', function() {
 	} );
 
 	it( 'if plugin is enabled, output to the function call', ( done ) => {
+
 		parserMethods.parseIncludePath(
 			'{% include "@larva/objects/o-nav.twig" with o_nav %}',
 			'o-nav',
-			'o_nav' )
+			'o_nav',
+			true )
 			.catch( e => console.log( e ) )
 			.then( ( result ) => {
 				assert.equal( result, expectations.pluginEnabled );
