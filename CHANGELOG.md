@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* twig-to-php-parser - Add support for includes to parse to a function from \PMC\Larva\Config to handle paths.
+* twig-to-php-parser - Add support for input `twigDir` and output `phpDir` configuration in larva.config.js
+
+### Fixed
+
+* twig-to-php-parser - Refactor JS wrapper `twigToPhpParser` to accept single configuration object
+
 ## [8.9.0-alpha] - 05-08-2020
 
 ### Added
