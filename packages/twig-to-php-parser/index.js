@@ -2,17 +2,34 @@ const execPhp = require( 'exec-php' );
 const path = require( 'path' );
 const chalk = require( 'chalk' );
 const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
-
+const config = getAppConfiguration( 'parser' );
 
 /**
  * Twig to PHP Parser
  *
- * @param {string} twigDir Absolute path to Twig patterns
- * @param {string} phpDir Absolute path to PHP output
- * @param {object} config Optional object containing configuration
+ * @param {object} config Optional object containing configuration. See the
+ *                        package README for supported configuration.
+ * }
  */
 
-function twigToPhpParser( twigDir, phpDir, config = {} ) {
+function twigToPhpParser( config = {} ) {
+
+	// TODO: we need some kind of wrapper here for config.
+	let twigDir = path.join( process.cwd(), './src/patterns' );
+	let phpDir = path.join( process.cwd(), '../template-parts/patterns' );
+	let isUsingPlugin = false;
+
+	if ( 'undefined' !== typeof config.twigDir ) {
+		twigDir = config.twigDir;
+	}
+
+	if ( 'undefined' !== typeof config.isUsingPlugin ) {
+		isUsingPlugin = config.isUsingPlugin;
+	}
+
+	if ( 'undefined' !== typeof config.phpDir ) {
+		phpDir = config.phpDir;
+	}
 
 	return new Promise( ( resolve, reject ) => {
 
@@ -22,7 +39,7 @@ function twigToPhpParser( twigDir, phpDir, config = {} ) {
 				reject( error );
 			}
 
-			php.twig_to_php_parser( twigDir, phpDir, function( error, result, output, printed ) {
+			php.twig_to_php_parser( twigDir, phpDir, isUsingPlugin, function( error, result, output, printed ) {
 
 				if ( error ) {
 					reject( error );
@@ -70,24 +87,10 @@ module.exports = {
 		parseIncludePath: parseIncludePath
 	},
 	run: () => {
-
-		const config = getAppConfiguration( 'parser' );
-
-		let twigDir = path.join( process.cwd(), './src/patterns' );
-		let phpDir = path.join( process.cwd(), '../template-parts/patterns' );
-
-		if ( 'undefined' !== typeof config.twigDir ) {
-			twigDir = config.twigDir;
-		}
-
-		if ( 'undefined' !== typeof config.phpDir ) {
-			phpDir = config.phpDir;
-		}
-
-		twigToPhpParser( twigDir, phpDir, config )
+		twigToPhpParser( config )
 			.catch( e => console.log( e ) ) // PHP errors
 			.then( result => console.log(
-				chalk.green( `Completed parsing Twig templates to PHP. \nFrom: ${twigDir} \nTo: ${phpDir}.` )
+				chalk.green( 'Completed parsing Twig templates to PHP.' )
 			) )
 			.catch( e => console.log( e ) );
 	}
