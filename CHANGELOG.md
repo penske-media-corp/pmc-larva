@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [8.10.0-alpha] - 05-11-2020
 
+### Fixed
+
+* twig-to-php-parser - Update the path for plugin patterns to point to build/patterns.
+
 ### Added
 
 * twig-to-php-parser - Add support for includes to parse to a function from \PMC\Larva\Config to handle paths.
