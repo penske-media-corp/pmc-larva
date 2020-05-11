@@ -4,7 +4,7 @@ const LARVA_PATTERNS_PATH = path.resolve( './node_modules/@penskemediacorp/larva
 module.exports = {
 	webpack: {
 		aliases: {
-			'@larva-js': path.resolve( './src/js' ),
+			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
 			'@js': path.resolve( './src/js' )
 		},
 		entries: {
