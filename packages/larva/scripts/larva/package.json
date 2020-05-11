@@ -1,0 +1,31 @@
+{
+	"name": "new-brand",
+	"version": "1.0.0",
+	"description": "Larva pattern library for {brand name}.",
+	"main": "index.js",
+	"scripts": {
+	  	"test": "echo \"Error: no test specified\" && exit 1",
+		"larva": "larva server --watch ./src/patterns -e twig,html,js",
+		"write-json": "larva write-json",
+		"parser": "./node_modules/.bin/twig-to-php-parser",
+		"backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
+		"prod:scss": "larva prod-scss",
+		"prod:js": "larva prod-js",
+		"prod": "larva prod-scss & larva prod-js && npm run parser && npm run write-json",
+		"dev": "concurrently \"npm:dev:scss\" \"npm:dev:js\" --raw",
+		"dev:scss": "larva dev-scss",
+		"dev:js": "larva dev-js",
+		"lint": "larva lint-scss & larva lint-js",
+		"lint:scss": "larva lint-scss",
+		"lint:js": "larva lint-js ./",
+		"lint-fix": "larva lint-scss --fix && npm run lint:js --fix",
+		"lint-fix:scss": "larva lint-scss --fix",
+		"lint-fix:js": "larva lint-js --fix",
+		"build-icons": "larva build-icons",
+		"build-html": "larva build-html"
+	},
+	"dependencies": {},
+	"devDependencies": {},
+	"author": "",
+	"license": "ISC"
+  }

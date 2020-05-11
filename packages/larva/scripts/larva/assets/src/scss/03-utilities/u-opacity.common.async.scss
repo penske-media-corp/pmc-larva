@@ -1,0 +1,32 @@
+@import 'setup';
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'opacity' ) {
+
+		// No lrv namespace because this is the project.
+		.u-#{$token} {
+			opacity: $value;
+		}
+
+		// You probably don't need breakpoints for opacity
+		// @include pmc-breakpoint( desktop ) {
+		// 	.u-#{$token}\@desktop {
+		// 		opacity: $value;
+		// 	}
+		// }
+
+		// @include pmc-breakpoint( desktop-xl ) {
+		// 	.u-#{$token}\@desktop-xl {
+		// 		opacity: $value;
+		// 	}
+		// }
+
+		// But you might need :hover
+		// .u-#{$token}\:hover:hover {
+		// 	opacity: $value;
+		// }
+
+	}
+}
