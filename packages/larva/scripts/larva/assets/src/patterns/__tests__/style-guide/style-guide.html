@@ -1,0 +1,17 @@
+{% include "@project/__tests__/style-guide/fonts.html" %}
+{% include "@project/__tests__/style-guide/colors.html" %}
+
+<div class="lrv-a-wrapper">
+	<h2 style="background-color: whitesmoke;" class="lrv-u-padding-a-1 lrv-u-margin-b-2">Buttons</h2>
+
+	<div class="lrv-a-grid lrv-a-cols2">
+		<div class="lrv-a-grid-item">
+			<h3>Brand Basic</h3>
+			{% include "@larva/components/c-button/c-button.twig" with c_button_brand_basic %}
+		</div>
+		<div class="lrv-a-grid-item">
+			<h3>Black</h3>
+			{% include "@larva/components/c-button/c-button.twig" with c_button_black %}
+		</div>
+	</div>
+</div>
