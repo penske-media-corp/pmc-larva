@@ -2,17 +2,36 @@ const execPhp = require( 'exec-php' );
 const path = require( 'path' );
 const chalk = require( 'chalk' );
 const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
-const RELATIVE_OUPUT_PATH = '../template-parts/patterns'; // Not permitted to override this because it will break the include paths.
+const config = getAppConfiguration( 'parser' );
 
 /**
  * Twig to PHP Parser
- * 
- * @param {string} twigDirPath Absolute path to Twig patterns
- * @param {string} phpDirPath Absolute path to PHP output
- * @param {object} config Containing 
+ *
+ * @param {object} config Optional object containing configuration. See the
+ *                        package README for supported configuration.
+ * }
  */
 
-function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
+function twigToPhpParser( config = {} ) {
+
+	// TODO: We need some kind of wrapper here for config...or better:
+	// move this to pmc-plugins/pmc-larva and scrap this awkward JS
+	// execPhp wrapper situation, and use Larva\Config for this config.
+	let twigDir = path.join( process.cwd(), './src/patterns' );
+	let phpDir = path.join( process.cwd(), '../template-parts/patterns' );
+	let isUsingPlugin = false;
+
+	if ( 'undefined' !== typeof config.twigDir ) {
+		twigDir = config.twigDir;
+	}
+
+	if ( 'undefined' !== typeof config.isUsingPlugin ) {
+		isUsingPlugin = config.isUsingPlugin;
+	}
+
+	if ( 'undefined' !== typeof config.phpDir ) {
+		phpDir = config.phpDir;
+	}
 
 	return new Promise( ( resolve, reject ) => {
 
@@ -22,7 +41,7 @@ function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
 				reject( error );
 			}
 
-			php.twig_to_php_parser( twigDirPath, phpDirPath, function( error, result, output, printed ) {
+			php.twig_to_php_parser( twigDir, phpDir, isUsingPlugin, function( error, result, output, printed ) {
 
 				if ( error ) {
 					reject( error );
@@ -38,7 +57,7 @@ function twigToPhpParser( twigDirPath, phpDirPath, config = {} ) {
 
 };
 
-function parseIncludePath( twigIncludeStr, patternName, dataName, config = {} ) {
+function parseIncludePath( twigIncludeStr, patternName, dataName, isUsingPlugin = false ) {
 
 	return new Promise( ( resolve, reject ) => {
 
@@ -48,7 +67,7 @@ function parseIncludePath( twigIncludeStr, patternName, dataName, config = {} ) 
 				reject( error );
 			}
 
-			php.parse_include_path( twigIncludeStr, patternName, dataName, function( error, result, output, printed ) {
+			php.parse_include_path( twigIncludeStr, patternName, dataName, isUsingPlugin, function( error, result, output, printed ) {
 
 				if ( error ) {
 					reject( error );
@@ -70,12 +89,11 @@ module.exports = {
 		parseIncludePath: parseIncludePath
 	},
 	run: () => {
-		let config = getAppConfiguration( 'parser' );
-		let relativeSrcPath = config.relativeSrcOverride || './src/patterns';
-
-		twigToPhpParser( path.resolve( process.cwd(), relativeSrcPath ), path.resolve( process.cwd(), RELATIVE_OUPUT_PATH ), config )
-		.catch( e => console.log( e ) ) // PHP errors
-		.then( result => console.log( chalk.green( 'Completed parsing Twig templates to PHP.' ) ) )
-		.catch( e => console.log( e ) );
+		twigToPhpParser( config )
+			.catch( e => console.log( e ) ) // PHP errors
+			.then( result => console.log(
+				chalk.green( 'Completed parsing Twig templates to PHP.' )
+			) )
+			.catch( e => console.log( e ) );
 	}
 };

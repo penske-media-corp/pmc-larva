@@ -10,7 +10,7 @@
  * @author Lara Schenck and Amit Sannad
  */
 
-function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
+function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_plugin ) {
 	$twig_files        = [];
 
 	$twig_dir_iterator      = new \RecursiveDirectoryIterator( $patterns_dir_path );
@@ -164,7 +164,8 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
 			$include_replacements[ $count ] = parse_include_path(
 				$include,
 				$include_matches[3][ $count ],
-				$include_matches[6][ $count ]
+				$include_matches[6][ $count ],
+				$is_using_plugin
 			);
 			$count ++;
 		}
@@ -222,23 +223,32 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path ) {
  *
  * @return string PMC::render_template call
  */
-function parse_include_path( $twig_include, $pattern_name, $data_name ) {
-	$theme_dir = 'CHILD_THEME_PATH';
+function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using_plugin ) {
+
+	$brand_directory = 'CHILD_THEME_PATH';
 	$start_name = substr( $pattern_name, 0, 2 );
 
-	if ( strpos( $twig_include, '@larva' ) ) {
-		$theme_dir = 'PMC_CORE_PATH';
+	if ( true === $is_using_plugin ) {
+		$brand_directory = "\PMC\Larva\Config::get_instance()->get( 'brand_directory' )";
+	} else {
+
+		// This logic is only supported if not using the plugin
+		if ( strpos( $twig_include, '@larva' ) ) {
+			$brand_directory = 'PMC_CORE_PATH';
+		}
 	}
+
 
 	if ( 'c-' === $start_name ) {
-		$directory = 'components';
+		$pattern_directory = 'components';
 	} elseif ( 'o-' === $start_name ) {
-		$directory = 'objects';
+		$pattern_directory = 'objects';
 	} elseif ( '-' !== substr( $pattern_name, 1, 2 ) ) { // If there is no namespace, it is a module.
-		$directory = 'modules';
+		$pattern_directory = 'modules';
 	}
 
-	 return "<?php \PMC::render_template( " . $theme_dir . " . '/template-parts/patterns/" . $directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+	return "<?php \PMC::render_template( " . $brand_directory . " . '/template-parts/patterns/" . $pattern_directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+
 }
 
 
