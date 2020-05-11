@@ -1,0 +1,15 @@
+// Only *.common.inline CSS.
+
+@import '@penskemediacorp/larva-tokens/build/default.custom-properties';
+
+@import '@penskemediacorp/larva-css/src/01-generic/*.inline.scss';
+@import '01-generic/*.common.inline.scss';
+
+@import '@penskemediacorp/larva-css/src/02-algorithms/**/*.inline.scss';
+@import '02-algorithms/*.common.inline.scss';
+
+@import '@penskemediacorp/larva-css/src/03-utilities/*.inline.scss';
+@import '03-utilities/*.common.inline.scss';
+
+@import '@penskemediacorp/larva-css/src/04-js/*.inline.scss';
+@import '04-js/*.common.inline.scss';
