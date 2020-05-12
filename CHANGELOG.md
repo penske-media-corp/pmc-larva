@@ -6,11 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [8.10.0-alpha] - 05-11-2020
-
 ### Fixed
 
 * twig-to-php-parser - Update the path for plugin patterns to point to build/patterns.
+
+## [8.10.0-alpha] - 05-11-2020
 
 ### Added
 
