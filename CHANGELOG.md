@@ -6,9 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* larva-scss - add pmc-font-family mixin
+
 ### Fixed
 
 * twig-to-php-parser - Update the path for plugin patterns to point to build/patterns.
+* larva - update scripts/larva scaffold files to new standards
 
 ## [8.10.0-alpha] - 05-11-2020
 
