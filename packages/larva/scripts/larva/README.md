@@ -4,6 +4,14 @@ After this directory has been copied into a consuming project, follow these step
 
 # {Project} Larva
 
+## Links
+
+* [{Project} design tokens]().
+* [{Project} style guide on Invision]().
+* [{Project} style guide built on Larva server]().
+
+## Development
+
 To start developing:
 
 1. Run `npm install` from assets.
