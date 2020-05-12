@@ -115,7 +115,7 @@ If a property is **not** generated from larva-css, you can iterate over the loca
 
 		@include pmc-breakpoint( desktop ) {
 			.u-#{$token}\@desktop {
-				font-size: $value;
+				opacity: $value;
 			}
 		}
 

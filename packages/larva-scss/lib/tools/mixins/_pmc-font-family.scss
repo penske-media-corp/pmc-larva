@@ -1,0 +1,14 @@
+
+// Required to be used with larva tokens, custom property
+// font loading pattern, and webfontLoader.
+
+@mixin pmc-font-family( $font-family, $map: $TOKENS-MAP ) {
+
+	$webfont-family: $font-family + '-fancy';
+
+	font-family: map-get( $map, $font-family );
+
+	.wf-active & {
+		font-family: map-get( $map, $webfont-family );
+	}
+}

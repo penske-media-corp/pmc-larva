@@ -1,8 +1,6 @@
+// Import tools and legacy token values from Larva
 @import '@penskemediacorp/larva-scss/dist/generators';
 @import '@penskemediacorp/larva-scss/dist/tokens';
 
-// Replace this with the name of the map you want to import from larva-tokens
-@import '@penskemediacorp/larva-tokens/build/default.map.scss';
-
-// Replace this value with the name of the map above
-$TOKENS-MAP: $default-map;
+// Merge project/local tokens and tokens map
+@import '00-tools/tokens.scss';

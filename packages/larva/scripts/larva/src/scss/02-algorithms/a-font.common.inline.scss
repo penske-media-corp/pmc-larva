@@ -1,0 +1,334 @@
+
+@import 'setup';
+
+// Table of Contents:
+// (should correspond to tokens, customized per theme)
+//
+// 1. Primary
+// 2. Secondary (bold and regular)
+// 3. Accent
+// 4. Basic
+// 5. Body
+//
+// 6. Media queries at end of file.
+
+[class*='a-font-primary'] {
+	@include pmc-font-family('font-family-primary-fancy');
+
+	font-weight: normal;
+}
+
+.a-font-primary-xl {
+	font-size: pmc-rem(25);
+	line-height: pmc-rem(27);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(28);
+		line-height: pmc-rem(32);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(36);
+		line-height: pmc-rem(40);
+	}
+
+}
+
+.a-font-primary-l {
+	font-size: pmc-rem(22);
+	line-height: pmc-rem(25);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(32);
+		line-height: pmc-rem(35);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(36);
+		line-height: pmc-rem(40);
+	}
+}
+
+.a-font-primary-m {
+	font-size: pmc-rem(18);
+	line-height: pmc-rem(22);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(24);
+		line-height: pmc-rem(27);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(28);
+		line-height: pmc-rem(32);
+	}
+}
+
+.a-font-primary-s {
+	font-size: pmc-rem(22);
+	line-height: pmc-rem(25);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(24);
+		line-height: pmc-rem(29);
+	}
+}
+
+.a-font-primary-xs {
+	font-size: pmc-rem(18);
+	line-height: pmc-rem(21);
+	letter-spacing: pmc-rem(0.5);
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(21);
+		line-height: pmc-rem(24);
+	}
+}
+
+
+//
+// Secondary Bold
+//
+
+[class*='a-font-secondary'] {
+	@include pmc-font-family('font-family-secondary-fancy');
+}
+
+[class*='a-font-secondary-bold'] {
+	font-weight: 700;
+}
+
+.a-font-secondary-bold-xl {
+	font-size: pmc-rem(16);
+	letter-spacing: pmc-rem(3);
+	text-transform: uppercase;
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(24);
+	}
+}
+
+.a-font-secondary-bold-l {
+	font-size: pmc-rem(18);
+	line-height: pmc-rem(21);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(21);
+		line-height: pmc-rem(24);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(24);
+		line-height: pmc-rem(27);
+	}
+}
+
+.a-font-secondary-bold-m {
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(18);
+		line-height: pmc-rem(21);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(21);
+		line-height: pmc-rem(24);
+	}
+}
+
+.a-font-secondary-bold-s {
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(16);
+		line-height: pmc-rem(19);
+	}
+}
+
+.a-font-secondary-bold-xs {
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(14);
+		line-height: pmc-rem(17);
+	}
+}
+
+//
+// Secondary Regular
+//
+
+.a-font-secondary-regular-l {
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(18);
+		line-height: pmc-rem(21);
+	}
+}
+
+.a-font-secondary-regular-m {
+	font-size: pmc-rem(13);
+	line-height: pmc-rem(15);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(15);
+		line-height: pmc-rem(18);
+	}
+}
+
+.a-font-secondary-regular-s {
+	font-size: pmc-rem(12);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(14);
+	}
+}
+
+.a-font-secondary-regular-xs {
+	font-size: pmc-rem(12);
+	letter-spacing: pmc-rem(1.5);
+}
+
+//
+// Accent
+//
+
+[class*='a-font-accent'] {
+	@include pmc-font-family( 'font-family-accent-fancy' );
+
+	letter-spacing: -#{pmc-rem(4)};
+	font-weight: normal;
+	text-transform: uppercase;
+
+	.wf-active & {
+		letter-spacing: pmc-rem(4);
+	}
+}
+
+.a-font-accent-l {
+	font-size: pmc-rem(30);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(52);
+	}
+
+}
+
+.a-font-accent-m {
+	font-size: pmc-rem(35);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(42);
+	}
+}
+
+.a-font-accent-s {
+	font-size: pmc-rem(24);
+	letter-spacing: pmc-rem(1.5);
+}
+
+//
+// Basic
+//
+
+[class*='a-font-basic'] {
+	@include pmc-font-family('font-family-basic-fancy');
+}
+
+.a-font-basic-xl {
+	letter-spacing: pmc-rem(5);
+	font-size: pmc-rem(12);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(18);
+	}
+}
+
+.a-font-basic-l {
+	font-size: pmc-rem(15);
+	letter-spacing: pmc-rem(1);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(18);
+	}
+}
+
+.a-font-basic-m {
+	font-size: pmc-rem(12);
+	letter-spacing: pmc-rem(1);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(15);
+	}
+}
+
+.a-font-basic-s {
+	font-size: pmc-rem(12);
+	letter-spacing: pmc-rem(1);
+}
+
+.a-font-basic-xs {
+	font-size: pmc-rem(10);
+	letter-spacing: pmc-rem(1);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(11);
+	}
+}
+
+
+//
+// Body
+//
+
+[class*='a-font-body'] {
+	@include pmc-font-family('font-family-body-fancy');
+}
+
+.a-font-body-m {
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(24);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(18);
+		line-height: pmc-rem(26);
+	}
+}
+
+.a-font-body-s {
+	font-size: pmc-rem(13);
+	line-height: pmc-rem(15);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(16);
+		line-height: pmc-rem(21);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-size: pmc-rem(18);
+	}
+}
+
+
+//
+// Breakpoints
+//
+
+.a-font-primary-s\@tablet {
+
+	@include pmc-breakpoint(tablet) {
+		font-size: pmc-rem(24);
+		line-height: pmc-rem(29);
+
+		font-weight: normal;
+
+		@include pmc-font-family('font-family-primary-fancy');
+	}
+
+}
