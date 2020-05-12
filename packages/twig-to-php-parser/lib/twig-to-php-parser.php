@@ -226,28 +226,28 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using_plugin ) {
 
 	$brand_directory = 'CHILD_THEME_PATH';
+	$pattern_directory = '/template-parts/patterns/';
 	$start_name = substr( $pattern_name, 0, 2 );
 
 	if ( true === $is_using_plugin ) {
+		$pattern_directory = '/build/patterns/';
 		$brand_directory = "\PMC\Larva\Config::get_instance()->get( 'brand_directory' )";
 	} else {
-
 		// This logic is only supported if not using the plugin
 		if ( strpos( $twig_include, '@larva' ) ) {
 			$brand_directory = 'PMC_CORE_PATH';
 		}
 	}
 
-
 	if ( 'c-' === $start_name ) {
-		$pattern_directory = 'components';
+		$pattern_directory .= 'components';
 	} elseif ( 'o-' === $start_name ) {
-		$pattern_directory = 'objects';
+		$pattern_directory .= 'objects';
 	} elseif ( '-' !== substr( $pattern_name, 1, 2 ) ) { // If there is no namespace, it is a module.
-		$pattern_directory = 'modules';
+		$pattern_directory .= 'modules';
 	}
 
-	return "<?php \PMC::render_template( " . $brand_directory . " . '/template-parts/patterns/" . $pattern_directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $pattern_directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
 
 }
 
