@@ -10,7 +10,7 @@
 // Colors.
 $random-specific-color: '#B0C0E5';
 
-$rogue-tokens: (
+$local-tokens: (
 
 	// COLORS - Must follow same property naming as tokens.
 	'color-random-specific': $random-specific-color,
@@ -28,4 +28,4 @@ $rogue-tokens: (
 	'opacity-75': 0.75,
 );
 
-$TOKENS-MAP: map-merge( $default-map, $rogue-tokens );
+$TOKENS-MAP: map-merge( $default-map, $local-tokens );
