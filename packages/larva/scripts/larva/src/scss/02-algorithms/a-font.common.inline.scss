@@ -43,7 +43,7 @@
 		line-height: pmc-rem(35);
 	}
 
-	@include pmc-breakpoint(desktop) {
+	@include pmc-breakpoint(desktop-xl) {
 		font-size: pmc-rem(36);
 		line-height: pmc-rem(40);
 	}
