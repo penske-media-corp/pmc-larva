@@ -1,6 +1,6 @@
 # IMPORTANT!!!!
 
-After this directory has been copied into a consuming project, follow these steps, delete this section, and replace the {Project} text below with the name of the brand.
+After this directory has been copied into a consuming project, [follow these steps](https://confluence.pmcdev.io/x/JQqeAw), delete this section of the readme, and replace the {Project} text below with the name of the brand (in the bright future, this will be automated).
 
 # {Project} Larva
 
