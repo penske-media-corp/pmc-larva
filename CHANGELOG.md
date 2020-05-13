@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 * larva-scss - add pmc-font-family mixin
+* larva-tokens - Add sportico design tokens
 
 ### Fixed
 
