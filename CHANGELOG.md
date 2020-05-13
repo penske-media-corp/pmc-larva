@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* twig-to-php-parser - Add underscores to key so variable names don't trigger them
+
 ## [8.11.0-alpha] - 05-12-2020
 
 ### Added

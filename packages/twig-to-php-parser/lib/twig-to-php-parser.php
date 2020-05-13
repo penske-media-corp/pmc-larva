@@ -126,11 +126,11 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 			$variable_name = $mustache_matches[2][ $count ];
 
-			$is_attr       = strpos( $match, 'class' ) || strpos( $match, 'name' ) || strpos( $match, 'attr' );
-			$is_url        = strpos( $match, 'url' );
-			$is_text       = strpos( $match, 'text' );
-			$is_data_attr  = strpos( $match, 'attributes' );
-			$is_markup     = strpos( $match, 'markup' );
+			$is_attr       = strpos( $match, '_class' ) || strpos( $match, '_name' ) || strpos( $match, '_attr' );
+			$is_url        = strpos( $match, '_url' );
+			$is_text       = strpos( $match, '_text' );
+			$is_data_attr  = strpos( $match, '_attributes' );
+			$is_markup     = strpos( $match, '_markup' );
 			$has_filter    = strpos( $match, '|' );
 
 			// Remove the Twig filter from the variable name
