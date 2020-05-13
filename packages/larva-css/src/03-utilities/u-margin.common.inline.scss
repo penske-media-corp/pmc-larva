@@ -46,6 +46,100 @@
 			margin: $value;
 			margin: var(--#{$token-name}, #{$value} );
 		}
+	}
+}
+
+// Legacy - should not have mobile-max and tablet
+$margins_with_breakpoints: (
+
+	// Breakpoints
+	('a', $spacer-0, mobile-max),
+	('t', $spacer-050, mobile-max),
+	('t', $spacer-1, mobile-max),
+	('t', $spacer-2, mobile-max),
+	('r', $spacer-0, mobile-max),
+	('b', $spacer-1, mobile-max),
+	('b', $spacer-050, mobile-max),
+	('tb', $spacer-0, mobile-max),
+	('tb', $spacer-1, mobile-max),
+
+	('r', $spacer-1, tablet),
+	('r', $spacer-0, tablet),
+	('b', $spacer-1, tablet),
+);
+
+@include u-margin( $margins_with_breakpoints, $NAMESPACE: 'lrv-' );
+
+// Auto margins
+
+.lrv-u-margin-l-auto {
+	margin-left: auto;
+}
+
+.lrv-u-margin-r-auto {
+	margin-right: auto;
+}
+
+.lrv-u-margin-t-auto {
+	margin-top: auto;
+}
+
+.lrv-u-margin-b-auto {
+	margin-bottom: auto;
+}
+
+.lrv-u-margin-lr-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lrv-u-margin-tb-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+@include pmc-breakpoint( desktop ) {
+
+	.lrv-u-margin-l-auto\@desktop {
+		margin-left: auto;
+	}
+
+	.lrv-u-margin-r-auto\@desktop {
+		margin-right: auto;
+	}
+
+	.lrv-u-margin-t-auto\@desktop {
+		margin-top: auto;
+	}
+
+	.lrv-u-margin-b-auto\@desktop {
+		margin-bottom: auto;
+	}
+
+	.lrv-u-margin-lr-auto\@desktop {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.lrv-u-margin-tb-auto\@desktop {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+}
+
+//
+// Media Queries
+//
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'spacing' ) {
+
+		$token-name: $token;
+		$token-selector: str-replace( $token-str, 'spacing-', '' );
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-margin-r-#{$token-selector}\@desktop {
@@ -131,87 +225,8 @@
 	}
 }
 
-// Legacy - should not have mobile-max and tablet
-$margins_with_breakpoints: (
 
-	// Breakpoints
-	('a', $spacer-0, mobile-max),
-	('t', $spacer-050, mobile-max),
-	('t', $spacer-1, mobile-max),
-	('t', $spacer-2, mobile-max),
-	('r', $spacer-0, mobile-max),
-	('b', $spacer-1, mobile-max),
-	('b', $spacer-050, mobile-max),
-	('tb', $spacer-0, mobile-max),
-	('tb', $spacer-1, mobile-max),
-
-	('r', $spacer-1, tablet),
-	('r', $spacer-0, tablet),
-	('b', $spacer-1, tablet),
-);
-
-@include u-margin( $margins_with_breakpoints, $NAMESPACE: 'lrv-' );
-
-// Auto margins
-
-.lrv-u-margin-l-auto {
-	margin-left: auto;
-}
-
-.lrv-u-margin-r-auto {
-	margin-right: auto;
-}
-
-.lrv-u-margin-t-auto {
-	margin-top: auto;
-}
-
-.lrv-u-margin-b-auto {
-	margin-bottom: auto;
-}
-
-.lrv-u-margin-lr-auto {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.lrv-u-margin-tb-auto {
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-
-@include pmc-breakpoint( desktop ) {
-
-	.lrv-u-margin-l-auto\@desktop {
-		margin-left: auto;
-	}
-
-	.lrv-u-margin-r-auto\@desktop {
-		margin-right: auto;
-	}
-
-	.lrv-u-margin-t-auto\@desktop {
-		margin-top: auto;
-	}
-
-	.lrv-u-margin-b-auto\@desktop {
-		margin-bottom: auto;
-	}
-
-	.lrv-u-margin-lr-auto\@desktop {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.lrv-u-margin-tb-auto\@desktop {
-		margin-top: auto;
-		margin-bottom: auto;
-	}
-
-}
-
-// Legacy
+// Legacy - tablet will be removed
 .lrv-u-margin-l-auto\@tablet {
 	@include pmc-breakpoint( tablet ) {
 		margin-left: auto;

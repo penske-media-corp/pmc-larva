@@ -7,6 +7,18 @@
 		.lrv-u-#{$token} {
 			font-weight: $value;
 		}
+	}
+}
+
+
+//
+// Media Queries
+//
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'font-weight' ) {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {

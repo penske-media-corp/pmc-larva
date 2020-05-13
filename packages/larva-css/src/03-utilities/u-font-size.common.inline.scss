@@ -7,18 +7,6 @@
 		.lrv-u-#{$token} {
 			font-size: $value;
 		}
-
-		@include pmc-breakpoint( desktop ) {
-			.lrv-u-#{$token}\@desktop {
-				font-size: $value;
-			}
-		}
-
-		@include pmc-breakpoint( desktop-xl ) {
-			.lrv-u-#{$token}\@desktop-xl {
-				font-size: $value;
-			}
-		}
 	}
 }
 
@@ -65,3 +53,28 @@
 		($font-size-28, desktop-xl,)
 		($font-size-46, desktop-xl,)
 	), $NAMESPACE: 'lrv-' );
+
+
+//
+// Media Queries
+//
+
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'font-size' ) {
+
+		@include pmc-breakpoint( desktop ) {
+			.lrv-u-#{$token}\@desktop {
+				font-size: $value;
+			}
+		}
+
+		@include pmc-breakpoint( desktop-xl ) {
+			.lrv-u-#{$token}\@desktop-xl {
+				font-size: $value;
+			}
+		}
+	}
+}

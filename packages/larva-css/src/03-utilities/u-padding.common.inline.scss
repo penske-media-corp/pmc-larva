@@ -48,6 +48,37 @@
 			padding: var( --#{$token-name}, #{$value} );
 		}
 
+	}
+}
+
+// Ordered by breakpoint.
+
+// Legacy - should not have tablet and mobile-max
+$paddings_with_breakpoints: (
+	('tb', $spacer-025, mobile-max ),
+	('tb', $spacer-1, mobile-max),
+
+	('r', $spacer-1, tablet ),
+	('t', $spacer-050, tablet ),
+	('lr', $spacer-1, tablet ),
+);
+
+@include u-padding( $paddings_with_breakpoints, $NAMESPACE: 'lrv-' );
+
+
+//
+// Media Queries
+//
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	// No negative spacing for padding
+	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+
+		$token-name: $token;
+		$token-selector: str-replace( $token-str, 'spacing-', '' );
+
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-padding-r-#{$token-selector}\@desktop {
 				padding-right: $value;
@@ -131,17 +162,3 @@
 		}
 	}
 }
-
-// Ordered by breakpoint.
-
-// Legacy - should not have tablet and mobile-max
-$paddings_with_breakpoints: (
-	('tb', $spacer-025, mobile-max ),
-	('tb', $spacer-1, mobile-max),
-
-	('r', $spacer-1, tablet ),
-	('t', $spacer-050, tablet ),
-	('lr', $spacer-1, tablet ),
-);
-
-@include u-padding( $paddings_with_breakpoints, $NAMESPACE: 'lrv-' );

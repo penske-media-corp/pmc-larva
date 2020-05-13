@@ -7,6 +7,18 @@
 		.lrv-u-#{$token} {
 			line-height: $value;
 		}
+	}
+}
+
+//
+// Media Queries
+//
+
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'line-height' ) {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {

@@ -26,3 +26,21 @@
 .lrv-u-border-color-currentColor {
 	border-color: currentColor;
 }
+
+//
+// Media Queries
+//
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'border-color' ) {
+
+		.lrv-u-#{$token}\@desktop {
+			@include pmc-breakpoint( desktop ) {
+				border-color: $value;
+				border-color: var( --#{$token}, #{$value} );
+			}
+		}
+	}
+}
