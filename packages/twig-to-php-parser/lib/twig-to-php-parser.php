@@ -231,9 +231,9 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 
 	if ( true === $is_using_plugin ) {
 		$pattern_directory = '/build/patterns/';
-		$brand_directory = "\PMC\Larva\Config::get_instance()->get( 'brand_directory' )";
+		$key_name = strpos( $twig_include, '@larva' ) ? 'core_directory' : 'brand_directory';
+		$brand_directory = "\PMC\Larva\Config::get_instance()->get( '" . $key_name . "' )";
 	} else {
-		// This logic is only supported if not using the plugin
 		if ( strpos( $twig_include, '@larva' ) ) {
 			$brand_directory = 'PMC_CORE_PATH';
 		}
