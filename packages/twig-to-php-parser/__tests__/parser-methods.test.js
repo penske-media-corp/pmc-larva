@@ -38,7 +38,7 @@ describe( 'parse include statements', function() {
 		} );
 	} );
 
-	it( 'if plugin is enabled, output larva config with core_directory', ( done ) => {
+	it( 'if plugin is enabled, call config with core_directory', ( done ) => {
 
 		parserMethods.parseIncludePath(
 			'{% include "@larva/objects/o-nav.twig" with o_nav %}',
@@ -53,7 +53,7 @@ describe( 'parse include statements', function() {
 		});
 	} );
 
-	it( 'if plugin is enabled, output larva config with brand_directory', ( done ) => {
+	it( 'if plugin is enabled, call config with brand_directory', ( done ) => {
 
 		parserMethods.parseIncludePath(
 			'{% include "@project/objects/o-nav.twig" with o_nav %}',
