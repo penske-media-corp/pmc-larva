@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 * larva-css - Move media queries to bottom of utility files
-* backstopjs-config - Update desktop xl screensize (thanks @metalandcoffee!)
 
 ## [8.11.0-alpha] - 05-12-2020
 
