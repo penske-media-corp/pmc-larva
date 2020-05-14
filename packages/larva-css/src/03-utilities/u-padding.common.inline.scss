@@ -1,5 +1,46 @@
 @import 'setup';
 
+@mixin _u-padding( $token-selector, $value, $breakpoint-suffix: '' ) {
+	.lrv-u-padding-r-#{$token-selector}#{$breakpoint-suffix} {
+		padding-right: $value;
+		padding-right: var( --#{$token-name}, #{$value} );
+	}
+
+	.lrv-u-padding-l-#{$token-selector}#{$breakpoint-suffix} {
+		padding-left: $value;
+		padding-left: var( --#{$token-name}, #{$value} );
+	}
+
+	.lrv-u-padding-b-#{$token-selector}#{$breakpoint-suffix} {
+		padding-bottom: $value;
+		padding-bottom: var( --#{$token-name}, #{$value} );
+	}
+
+	.lrv-u-padding-t-#{$token-selector}#{$breakpoint-suffix} {
+		padding-top: $value;
+		padding-top: var( --#{$token-name}, #{$value} );
+	}
+
+	.lrv-u-padding-tb-#{$token-selector}#{$breakpoint-suffix} {
+		padding-top: $value;
+		padding-top: var( --#{$token-name}, #{$value} );
+		padding-bottom: $value;
+		padding-bottom: var( --#{$token-name}, #{$value} );
+	}
+
+	.lrv-u-padding-lr-#{$token-selector}#{$breakpoint-suffix} {
+		padding-left: $value;
+		padding-left: var( --#{$token-name}, #{$value} );
+		padding-right: $value;
+		padding-right: var( --#{$token-name}, #{$value} );
+	}
+
+	.lrv-u-padding-a-#{$token-selector}#{$breakpoint-suffix} {
+		padding: $value;
+		padding: var( --#{$token-name}, #{$value} );
+	}
+}
+
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
@@ -9,44 +50,7 @@
 		$token-name: $token;
 		$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-		.lrv-u-padding-r-#{$token-selector} {
-			padding-right: $value;
-			padding-right: var( --#{$token-name}, #{$value} );
-		}
-
-		.lrv-u-padding-l-#{$token-selector} {
-			padding-left: $value;
-			padding-left: var( --#{$token-name}, #{$value} );
-		}
-
-		.lrv-u-padding-b-#{$token-selector} {
-			padding-bottom: $value;
-			padding-bottom: var( --#{$token-name}, #{$value} );
-		}
-
-		.lrv-u-padding-t-#{$token-selector} {
-			padding-top: $value;
-			padding-top: var( --#{$token-name}, #{$value} );
-		}
-
-		.lrv-u-padding-tb-#{$token-selector} {
-			padding-top: $value;
-			padding-top: var( --#{$token-name}, #{$value} );
-			padding-bottom: $value;
-			padding-bottom: var( --#{$token-name}, #{$value} );
-		}
-
-		.lrv-u-padding-lr-#{$token-selector} {
-			padding-left: $value;
-			padding-left: var( --#{$token-name}, #{$value} );
-			padding-right: $value;
-			padding-right: var( --#{$token-name}, #{$value} );
-		}
-
-		.lrv-u-padding-a-#{$token-selector} {
-			padding: $value;
-			padding: var( --#{$token-name}, #{$value} );
-		}
+		@include _u-padding( $token-selector, $value );
 
 	}
 }
@@ -70,95 +74,36 @@ $paddings_with_breakpoints: (
 // Media Queries
 //
 
-@each $token, $value in $TOKENS-MAP {
-	$token-str: quote( $token );
+@include pmc-breakpoint( desktop ) {
 
-	// No negative spacing for padding
-	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
 
-		$token-name: $token;
-		$token-selector: str-replace( $token-str, 'spacing-', '' );
+		// No negative spacing for padding
+		@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
 
-		@include pmc-breakpoint( desktop ) {
-			.lrv-u-padding-r-#{$token-selector}\@desktop {
-				padding-right: $value;
-				padding-right: var( --#{$token-name}, #{$value} );
-			}
+			$token-name: $token;
+			$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-			.lrv-u-padding-l-#{$token-selector}\@desktop {
-				padding-left: $value;
-				padding-left: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-b-#{$token-selector}\@desktop {
-				padding-bottom: $value;
-				padding-bottom: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-t-#{$token-selector}\@desktop {
-				padding-top: $value;
-				padding-top: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-tb-#{$token-selector}\@desktop {
-				padding-top: $value;
-				padding-top: var( --#{$token-name}, #{$value} );
-				padding-bottom: $value;
-				padding-bottom: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-lr-#{$token-selector}\@desktop {
-				padding-left: $value;
-				padding-left: var( --#{$token-name}, #{$value} );
-				padding-right: $value;
-				padding-right: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-a-#{$token-selector}\@desktop {
-				padding: $value;
-				padding: var( --#{$token-name}, #{$value} );
-			}
-		}
-
-		@include pmc-breakpoint( desktop-xl ) {
-			.lrv-u-padding-r-#{$token-selector}\@desktop-xl {
-				padding-right: $value;
-				padding-right: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-l-#{$token-selector}\@desktop-xl {
-				padding-left: $value;
-				padding-left: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-b-#{$token-selector}\@desktop-xl {
-				padding-bottom: $value;
-				padding-bottom: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-t-#{$token-selector}\@desktop-xl {
-				padding-top: $value;
-				padding-top: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-tb-#{$token-selector}\@desktop-xl {
-				padding-top: $value;
-				padding-top: var( --#{$token-name}, #{$value} );
-				padding-bottom: $value;
-				padding-bottom: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-lr-#{$token-selector}\@desktop-xl {
-				padding-left: $value;
-				padding-left: var( --#{$token-name}, #{$value} );
-				padding-right: $value;
-				padding-right: var( --#{$token-name}, #{$value} );
-			}
-
-			.lrv-u-padding-a-#{$token-selector}\@desktop-xl {
-				padding: $value;
-				padding: var( --#{$token-name}, #{$value} );
-			}
+			@include _u-padding( $token-selector, $value, '@desktop' );
 		}
 	}
+
+}
+
+@include pmc-breakpoint( desktop-xl ) {
+
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		// No negative spacing for padding
+		@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+
+			$token-name: $token;
+			$token-selector: str-replace( $token-str, 'spacing-', '' );
+
+			@include _u-padding( $token-selector, $value, '@desktop-xl' );
+		}
+	}
+
 }
