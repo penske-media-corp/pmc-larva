@@ -1,0 +1,9 @@
+<div class="{{ o_story_arc_item_classes }}">
+	<span class="a-span-sandwich lrv-u-margin-b-1">
+		{% if c_timestamp %}
+			{% include "@larva/components/c-timestamp/c-timestamp.twig" with c_timestamp %}
+		{% endif %}
+	</span>
+
+	{% include "@larva/objects/o-tease/o-tease.twig" with o_tease %}
+</div>
