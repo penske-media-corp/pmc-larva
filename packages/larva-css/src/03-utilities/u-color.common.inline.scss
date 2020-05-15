@@ -7,7 +7,7 @@
 	@if str-index( $token-str, 'color' )
 		and not str-index( $token-str, 'background' )
 		and not str-index( $token-str, 'border' ) {
-		@debug $token-str;
+
 		.lrv-u-#{$token} {
 			color: $value;
 			color: var( --#{$token}, #{$value} );
