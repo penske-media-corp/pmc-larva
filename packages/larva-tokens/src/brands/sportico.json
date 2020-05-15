@@ -4,32 +4,32 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLACK}",
+			"value": "{!RED_43}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLACK}",
+			"value": "{!RED_43}",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!BLACK}",
+			"value": "{!RED_43}",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY": {
-			"value": "{!RED_43}",
+			"value": "{!GREEN_57}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY": {
-			"value": "{!RED_43}",
+			"value": "{!GREEN_57}",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY": {
-			"value": "{!RED_43}",
+			"value": "{!GREEN_57}",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -40,7 +40,7 @@
 			"comment": "The webfont for font-family-primary."
 		},
 		"FONT_FAMILY_PRIMARY": {
-			"value": "{!TIMES_NEW_ROMAN}",
+			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The fallback font for font-family-primary."
