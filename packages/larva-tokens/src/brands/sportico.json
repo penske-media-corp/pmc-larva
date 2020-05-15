@@ -34,7 +34,7 @@
 			"category": "text-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!SCHNYDER_COND_M}",
+			"value": "{!GEOGRAPH}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The webfont for font-family-primary."
@@ -46,7 +46,7 @@
 			"comment": "The fallback font for font-family-primary."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!WARNOCK_PRO}",
+			"value": "{!DRUK_WIDE}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."
@@ -58,7 +58,7 @@
 			"comment": "Fallback from secondary-fancy"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "{!TIMES_NEW_ROMAN}",
+			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
