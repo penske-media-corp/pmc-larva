@@ -1,0 +1,101 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_43}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_43}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_43}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!GREEN_57}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!GREEN_57}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "{!GREEN_57}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "{!GEOGRAPH}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The webfont for font-family-primary."
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback font for font-family-primary."
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "{!DRUK_WIDE}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from secondary-fancy"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"COLOR_GREY_LIGHT": {
+			"value": "#dcdcdc",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "{!GREY_50}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "#dcdcdc",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "{!GREY_50}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "#dcdcdc",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "{!GREY_50}",
+			"type": "color",
+			"category": "hr-color"
+		}
+	}
+}

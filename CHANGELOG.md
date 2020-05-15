@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+* larva-tokens - Add sportico design tokens
+
 ## [8.11.1-alpha] - 05-14-2020
 
 ### Fixed
