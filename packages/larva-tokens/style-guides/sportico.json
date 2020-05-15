@@ -68,14 +68,10 @@
 			"category": "font-family"
 		},
 		"COLOR_GREY_LIGHT": {
-			"value": "#dcdcdc",
-			"type": "color",
-			"category": "text-color"
+			"value": "#dcdcdc"
 		},
 		"COLOR_GREY_DARK": {
-			"value": "{!GREY_50}",
-			"type": "color",
-			"category": "text-color"
+			"value": "{!GREY_50}"
 		}
 	}
 }
