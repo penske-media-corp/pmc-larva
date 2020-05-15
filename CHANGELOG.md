@@ -6,7 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.11.1-alpha] - 05-14-2020
+
+### Fixed
+
 * twig-to-php-parser - Add underscores to key so variable names don't trigger them
+* twig-to-php-parser - Enable core theme logic
+* backstopjs-config - Update desktop xl screensize (thanks @metalandcoffee!)
 
 ## [8.11.0-alpha] - 05-12-2020
 
