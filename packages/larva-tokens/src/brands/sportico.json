@@ -76,6 +76,26 @@
 			"value": "{!GREY_50}",
 			"type": "color",
 			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "#dcdcdc",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "{!GREY_50}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "#dcdcdc",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "{!GREY_50}",
+			"type": "color",
+			"category": "hr-color"
 		}
 	}
 }
