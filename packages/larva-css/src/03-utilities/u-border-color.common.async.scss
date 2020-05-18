@@ -13,13 +13,6 @@
 			border-color: $value;
 			border-color: var( --#{$token}, #{$value} );
 		}
-
-		.lrv-u-#{$token}\@desktop {
-			@include pmc-breakpoint( desktop ) {
-				border-color: $value;
-				border-color: var( --#{$token}, #{$value} );
-			}
-		}
 	}
 }
 

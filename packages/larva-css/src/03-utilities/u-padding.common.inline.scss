@@ -1,6 +1,7 @@
 @import 'setup';
 
-@mixin _u-padding( $token-selector, $value, $breakpoint-suffix: '' ) {
+@mixin _u-padding( $token-name, $token-selector, $value, $breakpoint-suffix: '' ) {
+
 	.lrv-u-padding-r-#{$token-selector}#{$breakpoint-suffix} {
 		padding-right: $value;
 		padding-right: var( --#{$token-name}, #{$value} );
@@ -50,7 +51,7 @@
 		$token-name: $token;
 		$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-		@include _u-padding( $token-selector, $value );
+		@include _u-padding( $token-name, $token-selector, $value );
 
 	}
 }
@@ -74,35 +75,34 @@ $paddings_with_breakpoints: (
 // Media Queries
 //
 
-@include pmc-breakpoint( desktop ) {
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
 
-	@each $token, $value in $TOKENS-MAP {
-		$token-str: quote( $token );
 
-		// No negative spacing for padding
-		@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+	// No negative spacing for padding
+	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
 
-			$token-name: $token;
-			$token-selector: str-replace( $token-str, 'spacing-', '' );
+		$token-name: $token;
+		$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-			@include _u-padding( $token-selector, $value, '@desktop' );
+		@include pmc-breakpoint( desktop ) {
+			@include _u-padding( $token-name, $token-selector, $value, '\\@desktop' );
 		}
 	}
-
 }
 
-@include pmc-breakpoint( desktop-xl ) {
+@each $token, $value in $TOKENS-MAP {
 
-	@each $token, $value in $TOKENS-MAP {
-		$token-str: quote( $token );
+	$token-str: quote( $token );
 
-		// No negative spacing for padding
-		@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+	// No negative spacing for padding
+	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
 
-			$token-name: $token;
-			$token-selector: str-replace( $token-str, 'spacing-', '' );
+		$token-name: $token;
+		$token-selector: str-replace( $token-str, 'spacing-', '' );
 
-			@include _u-padding( $token-selector, $value, '@desktop-xl' );
+		@include pmc-breakpoint( desktop-xl ) {
+			@include _u-padding( $token-name, $token-selector, $value, '\\@desktop-xl' );
 		}
 	}
 
