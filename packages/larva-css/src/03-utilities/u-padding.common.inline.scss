@@ -42,20 +42,6 @@
 	}
 }
 
-@each $token, $value in $TOKENS-MAP {
-	$token-str: quote( $token );
-
-	// No negative spacing for padding
-	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
-
-		$token-name: $token;
-		$token-selector: str-replace( $token-str, 'spacing-', '' );
-
-		@include _u-padding( $token-name, $token-selector, $value );
-
-	}
-}
-
 // Ordered by breakpoint.
 
 // Legacy - should not have tablet and mobile-max
@@ -70,40 +56,39 @@ $paddings_with_breakpoints: (
 
 @include u-padding( $paddings_with_breakpoints, $NAMESPACE: 'lrv-' );
 
-
 //
 // Media Queries
 //
 
-@each $token, $value in $TOKENS-MAP {
-	$token-str: quote( $token );
+$breakpoints: (
+	'',
+	'desktop',
+	'desktop-xl'
+);
 
+@each $breakpoint in $breakpoints {
 
-	// No negative spacing for padding
-	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+	@each $token, $value in $TOKENS-MAP {
 
-		$token-name: $token;
-		$token-selector: str-replace( $token-str, 'spacing-', '' );
+		$token-str: quote( $token );
 
-		@include pmc-breakpoint( desktop ) {
-			@include _u-padding( $token-name, $token-selector, $value, '\\@desktop' );
+		// No negative spacing for padding
+		@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
+
+			$token-name: $token;
+			$token-selector: str-replace( $token-str, 'spacing-', '' );
+
+			@if '' == $breakpoint {
+				@include _u-padding( $token-name, $token-selector, $value );
+			} @else {
+
+				$breakpoint-suffix: '\\@#{$breakpoint}';
+
+				@include pmc-breakpoint( $breakpoint ) {
+					@include _u-padding( $token-name, $token-selector, $value, $breakpoint-suffix );
+				}
+			}
+
 		}
 	}
-}
-
-@each $token, $value in $TOKENS-MAP {
-
-	$token-str: quote( $token );
-
-	// No negative spacing for padding
-	@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'spacing-n' ) {
-
-		$token-name: $token;
-		$token-selector: str-replace( $token-str, 'spacing-', '' );
-
-		@include pmc-breakpoint( desktop-xl ) {
-			@include _u-padding( $token-name, $token-selector, $value, '\\@desktop-xl' );
-		}
-	}
-
 }
