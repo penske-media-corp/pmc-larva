@@ -1,5 +1,11 @@
 @import 'setup';
 
+$breakpoints: (
+	'',
+	'desktop',
+	'desktop-xl'
+);
+
 @mixin _u-margin( $token-name, $token-selector, $value, $breakpoint-suffix: '' ) {
 	.lrv-u-margin-r-#{$token-selector}#{$breakpoint-suffix} {
 		margin-right: $value;
@@ -41,19 +47,6 @@
 	}
 }
 
-@each $token, $value in $TOKENS-MAP {
-	$token-str: quote( $token );
-
-	@if str-index( $token-str, 'spacing' ) {
-
-		$token-name: $token;
-		$token-selector: str-replace( $token-str, 'spacing-', '' );
-
-		@include _u-margin( $token-name, $token-selector, $value, '\\@desktop' );
-
-	}
-}
-
 // Auto margins
 
 .lrv-u-margin-l-auto {
@@ -80,34 +73,6 @@
 .lrv-u-margin-tb-auto {
 	margin-top: auto;
 	margin-bottom: auto;
-}
-
-// Legacy - should not have mobile-max and tablet
-$margins_with_breakpoints: (
-
-	// Breakpoints
-	('a', $spacer-0, mobile-max),
-	('t', $spacer-050, mobile-max),
-	('t', $spacer-1, mobile-max),
-	('t', $spacer-2, mobile-max),
-	('r', $spacer-0, mobile-max),
-	('b', $spacer-1, mobile-max),
-	('b', $spacer-050, mobile-max),
-	('tb', $spacer-0, mobile-max),
-	('tb', $spacer-1, mobile-max),
-
-	('r', $spacer-1, tablet),
-	('r', $spacer-0, tablet),
-	('b', $spacer-1, tablet),
-);
-
-@include u-margin( $margins_with_breakpoints, $NAMESPACE: 'lrv-' );
-
-// Legacy - tablet will be removed
-.lrv-u-margin-l-auto\@tablet {
-	@include pmc-breakpoint( tablet ) {
-		margin-left: auto;
-	}
 }
 
 @include pmc-breakpoint( desktop ) {
@@ -140,35 +105,57 @@ $margins_with_breakpoints: (
 
 }
 
-//
-// Media Queries
-//
+@each $breakpoint in $breakpoints {
 
-@each $token, $value in $TOKENS-MAP {
-	$token-str: quote( $token );
+	@each $token, $value in $TOKENS-MAP {
 
-	@if str-index( $token-str, 'spacing' ) {
+		$token-str: quote( $token );
 
-		$token-name: $token;
-		$token-selector: str-replace( $token-str, 'spacing-', '' );
+		// No negative spacing for padding
+		@if str-index( $token-str, 'spacing' ) {
 
-		@include pmc-breakpoint( desktop ) {
-			@include _u-margin( $token-name, $token-selector, $value, '\\@desktop' );
+			$token-name: $token;
+			$token-selector: str-replace( $token-str, 'spacing-', '' );
+
+			@if '' == $breakpoint {
+				@include _u-margin( $token-name, $token-selector, $value );
+			} @else {
+
+				$breakpoint-suffix: '\\@#{$breakpoint}';
+
+				@include pmc-breakpoint( $breakpoint ) {
+					@include _u-margin( $token-name, $token-selector, $value, $breakpoint-suffix );
+				}
+			}
+
 		}
 	}
 }
 
+// Legacy - should not have mobile-max and tablet
+$margins_with_breakpoints: (
 
-@each $token, $value in $TOKENS-MAP {
-	$token-str: quote( $token );
+	// Breakpoints
+	('a', $spacer-0, mobile-max),
+	('t', $spacer-050, mobile-max),
+	('t', $spacer-1, mobile-max),
+	('t', $spacer-2, mobile-max),
+	('r', $spacer-0, mobile-max),
+	('b', $spacer-1, mobile-max),
+	('b', $spacer-050, mobile-max),
+	('tb', $spacer-0, mobile-max),
+	('tb', $spacer-1, mobile-max),
 
-	@if str-index( $token-str, 'spacing' ) {
+	('r', $spacer-1, tablet),
+	('r', $spacer-0, tablet),
+	('b', $spacer-1, tablet),
+);
 
-		$token-name: $token;
-		$token-selector: str-replace( $token-str, 'spacing-', '' );
+@include u-margin( $margins_with_breakpoints, $NAMESPACE: 'lrv-' );
 
-		@include pmc-breakpoint( desktop-xl ) {
-			@include _u-margin( $token-name, $token-selector, $value, '\\@desktop-xl' );
-		}
+// Legacy - tablet will be removed
+.lrv-u-margin-l-auto\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		margin-left: auto;
 	}
 }
