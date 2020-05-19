@@ -26,6 +26,10 @@ $widths_map: (
 	max-width: 100%;
 }
 
+.lrv-u-max-width-100vw {
+	max-width: 100vw;
+}
+
 .lrv-u-width-100p\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
