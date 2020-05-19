@@ -6,11 +6,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [8.11.1-alpha] - 05-13-2020
+## [8.12.1-alpha] - 05-19-2020
 
 ### Fixed
 
-* larva-css - Move media queries to bottom of utility files
+* larva-css - Fix issue with order of media queries in utility files
+
+## [8.12.0-alpha] - 05-15-2020
+
+### Added
+
+* larva-tokens - Add sportico design tokens
+
+## [8.11.1-alpha] - 05-14-2020
+
+### Fixed
+
+* twig-to-php-parser - Add underscores to key so variable names don't trigger them
+* twig-to-php-parser - Enable core theme logic
+* backstopjs-config - Update desktop xl screensize (thanks @metalandcoffee!)
 
 ## [8.11.0-alpha] - 05-12-2020
 
