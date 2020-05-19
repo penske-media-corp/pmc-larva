@@ -5,7 +5,7 @@ const c_title = clonedeep( require( '../../components/c-title/c-title.prototype'
 const c_dek = clonedeep( require( '../../components/c-dek/c-dek.prototype' ) );
 const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-image.prototype' ) );
 
-c_span.c_span_classes += ' lrv-u-color-brand-primary lrv-u-font-size-12 lrv-u-font-size-14@tablet lrv-u-font-weight-bold u-text-transform-lowercase lrv-u-font-family-primary';
+c_span.c_span_classes += ' lrv-u-color-brand-primary lrv-u-font-size-12 lrv-u-font-size-14@tablet lrv-u-font-weight-bold lrv-u-text-transform-lowercase lrv-u-font-family-primary';
 c_span.c_span_link_classes = 'lrv-u-color-brand-primary-dark:hover';
 c_span.c_span_text = 'News';
 c_span.c_span_url = '#';
