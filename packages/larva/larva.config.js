@@ -22,7 +22,8 @@ module.exports = {
 		testPaths: [
 			'profile',
 			'profile-index',
-			'vlanding'
+			'vlanding',
+			'css'
 		],
 		backstopConfig: {
 			'engineOptions': {
