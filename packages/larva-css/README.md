@@ -113,18 +113,46 @@ If a property is **not** generated from larva-css, you can iterate over the loca
 			opacity: $value;
 		}
 
-		@include pmc-breakpoint( desktop ) {
+		// If you would like to generate a hover selector,
+		// that could happen here, but media queries need
+		// to be in an additional loops to maintain the cascade
+
+	}
+}
+
+//
+// Media Queries
+//
+
+
+@include pmc-breakpoint( desktop ) {
+
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		@if str-index( $token-str, 'opacity' ) {
 			.u-#{$token}\@desktop {
 				opacity: $value;
 			}
 		}
-
-		// Some utilities may benefit from the additional breakpoint
-		// desktop-xl, but opactiy will likely not change between
-		// desktop and desktop-xl.
-
 	}
+
 }
+
+@include pmc-breakpoint( desktop-xl ) {
+
+	@each $token, $value in $TOKENS-MAP {
+		$token-str: quote( $token );
+
+		@if str-index( $token-str, 'opacity' ) {
+			.u-#{$token}\@desktop-xl {
+				opacity: $value;
+			}
+		}
+	}
+
+}
+
 ```
 
 Refer to the larva-css source files in larva-css/src and in the local Larva server, navigate to /css to see available classes.

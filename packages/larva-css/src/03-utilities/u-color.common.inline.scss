@@ -12,6 +12,21 @@
 			color: $value;
 			color: var( --#{$token}, #{$value} );
 		}
+	}
+}
+
+//
+// Media Queries
+//
+
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	// example: color-grey-lightest, #EEEEEE
+	@if str-index( $token-str, 'color' )
+		and not str-index( $token-str, 'background' )
+		and not str-index( $token-str, 'border' ) {
 
 		.lrv-u-#{$token}\@desktop {
 

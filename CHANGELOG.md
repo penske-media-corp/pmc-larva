@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.12.1-alpha] - 05-19-2020
+
+### Fixed
+
+* larva-css - Fix issue with order of media queries in utility files
+
+## [8.12.0-alpha] - 05-15-2020
+
+### Added
+
+* larva-tokens - Add sportico design tokens
+
 ## [8.11.1-alpha] - 05-14-2020
 
 ### Fixed
