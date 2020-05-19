@@ -9,14 +9,6 @@
 			box-shadow: $value;
 			box-shadow: var( --#{$token}, #{$value} );
 		}
-
-		.lrv-u-#{$token}\@desktop {
-
-			@include pmc-breakpoint( desktop ) {
-				box-shadow: $value;
-				box-shadow: var( --#{$token}, #{$value} );
-			}
-		}
 	}
 }
 
