@@ -14,6 +14,21 @@
 				font-family: $value;
 				font-family: var( --#{$token}, #{$value} );
 			}
+		}
+	}
+}
+
+//
+// Media Queries
+//
+
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'font-family' ) {
+
+		@if not str-index( $token-str, 'fancy' ) {
 
 			.lrv-u-#{$token}\@desktop {
 				font-family: $value;
