@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.13.0-alpha] - 05-19-2020
+
+### Added
+
+* larva-js - Add ProfileFilter, SelectNav
+* larva-patterns - Add story, story-arc-stories, profile-landing-river, more-stories-button, o-select-nav
+* larva-css - Add text transform lowercase, opactiy 0, span 2 for 3 col grid
+
 ## [8.12.1-alpha] - 05-19-2020
 
 ### Fixed
