@@ -36,7 +36,7 @@
 
 .lrv-u-text-align-right{text-align:right}.lrv-u-text-align-left{text-align:left}.lrv-u-text-align-center{text-align:center}@media (min-width: 62.5rem){.lrv-u-text-align-right\@desktop{text-align:right}.lrv-u-text-align-left\@desktop{text-align:left}.lrv-u-text-align-center\@desktop{text-align:center}}@media (max-width: 47.999rem){.lrv-u-text-align-center\@mobile-max{text-align:center}}@media (min-width: 48rem){.lrv-u-text-align-center\@tablet{text-align:center}}
 
-.lrv-u-text-transform-uppercase{text-transform:uppercase}.lrv-u-text-transform-initial{text-transform:initial}
+.lrv-u-text-transform-uppercase{text-transform:uppercase}.lrv-u-text-transform-initial{text-transform:initial}.lrv-u-text-transform-lowercase{text-transform:lowercase}
 
 .lrv-u-whitespace-nowrap{white-space:nowrap}
 
