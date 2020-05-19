@@ -1,10 +1,7 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const story_prototype = require( '../../modules/story/story.prototype.js' );
-const c_heading_prototype = require( '@penskemediacorp/larva-patterns/components/c-heading/c-heading.prototype' );
-
-const story = clonedeep( story_prototype );
-const c_heading = clonedeep( c_heading_prototype );
+const story = clonedeep( require( '../../modules/story/story.prototype.js' ) );
+const c_heading = clonedeep( require( '../../components/c-heading/c-heading.prototype' ) );
 
 c_heading.c_heading_text = 'Latest News';
 c_heading.c_heading_classes = 'lrv-u-font-family-secondary lrv-u-font-size-28 u-font-size-40@tablet lrv-u-font-size-46@desktop-xl lrv-u-padding-r-1';

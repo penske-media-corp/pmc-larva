@@ -1,5 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
-const c_button_basic_prototype = require( '@penskemediacorp/larva-patterns/components/c-button/c-button.brand-basic' );
+const c_button_basic_prototype = require( '../../components/c-button/c-button.brand-basic' );
 
 const c_button_struct = clonedeep( c_button_basic_prototype );
 
