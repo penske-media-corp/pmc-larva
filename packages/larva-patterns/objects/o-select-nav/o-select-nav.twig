@@ -1,7 +1,7 @@
-<div class="{{ o_select_nav_classes }}">
+<div class="o-select-nav js-SelectNav js-SelectNav-redirect lrv-a-glue-parent {{ o_select_nav_classes }}">
 	{% include "@larva/components/c-button/c-button.twig" with c_button %}
 
-	<select class="js-SelectNav-select {{ o_select_nav_select_classes }}">
+	<select class="o-select-nav__select js-SelectNav-select lrv-a-glue lrv-a-glue--t-0 lrv-a-glue--l-0 lrv-u-cursor-pointer lrv-u-width-100p lrv-u-height-100p {{ o_select_nav_select_classes }}">
 		{% for item in o_select_nav_options %}
 			{% include "@larva/components/c-select-option/c-select-option.twig" with item %}
 		{% endfor %}
