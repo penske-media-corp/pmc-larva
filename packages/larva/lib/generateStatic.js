@@ -1,6 +1,7 @@
 const path = require( 'path' );
 const mkdirp = require( 'mkdirp' );
 const fs = require( 'fs' );
+const chalk = require( 'chalk' );
 const axios = require( 'axios' );
 
 /**
@@ -33,7 +34,13 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 				mkdirp.sync( dir );
 				fs.writeFileSync( `${dir}/index.html`, response.data );
 			} ).catch( ( e ) => {
-				console.error( e );
+
+				if ( 'ECONNREFUSED' === e.code ) {
+					console.error( chalk.bold.red( 'You must start the Larva server with `npm run larva`.' ) );
+					process.exit();
+				}
+
+				fs.writeFileSync( `${dir}/index.html`, e.response.config.path );
 			});
 
 		} );
