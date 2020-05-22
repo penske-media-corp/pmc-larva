@@ -40,7 +40,10 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 					process.exit();
 				}
 
-				fs.writeFileSync( `${dir}/index.html`, e.response.config.path );
+				console.log( e );
+
+				mkdirp.sync( dir );
+				fs.writeFileSync( `${dir}/index.html`, e.response.data );
 			});
 
 		} );
