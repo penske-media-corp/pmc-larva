@@ -1,11 +1,15 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
+const mkdirp = require( 'mkdirp' );
+
 const exec = require( 'child_process' ).exec;
+
+const ncp = require( 'ncp' ).ncp;
 
 const generateStatic = require( '../../lib/generateStatic' );
 
 const fixture = path.join( __dirname, '../fixtures' );
-const buildPath = path.join( fixture, './build-html' );
+const buildPath = path.join( fixture, './build/html' );
 
 describe( 'generateStatic', () => {
 
@@ -67,6 +71,42 @@ describe( 'generateStatic', () => {
 		} );
 	} );
 
+	it( 'copies static assets', ( done ) => {
+		const routesArr = [
+			'components/c-button/brand-basic'
+		];
+
+
+		console.log( path.join( buildPath, './static/js' ) );
+
+		generateStatic( routesArr, buildPath, () => {
+
+			const assetsDest = path.join( buildPath, './static/js' );
+			const assetsSrc = path.join( buildPath, '../js' );
+
+			mkdirp( assetsDest );
+
+			ncp(
+				assetsSrc,
+				assetsDest,
+				( e ) => {
+
+					if ( e ) {
+						return console.error( e );
+					}
+
+					expect(
+						fs.existsSync( path.join( buildPath, './static/js/larva-ui.js' ) )
+					).toBe( true );
+
+					done();
+				}
+			);
+
+		} );
+
+	} );
+
 	afterEach( ( done ) => {
 		exec( 'rm -r ' + buildPath, ( err ) => {
 			if ( err ) {
@@ -75,4 +115,5 @@ describe( 'generateStatic', () => {
 			done();
 		} );
 	} );
+
 } );
