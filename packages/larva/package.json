@@ -33,7 +33,7 @@
     "lint-fix:js": "bin/larva.js lint-js --fix",
     "write-json": "bin/larva.js write-json larva && bin/larva.js write-json",
     "build-icons": "bin/larva.js build-icons",
-    "build-html": "bin/larva.js build-html"
+    "build-html": "bin/larva.js build-html larva 3001 && bin/larva.js build-html project 3001"
   },
   "publishConfig": {
     "access": "public"
