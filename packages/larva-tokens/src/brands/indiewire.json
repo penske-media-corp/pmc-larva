@@ -1,0 +1,108 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#005DA4",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#005DA4",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#005DA4",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "#B2DDFF",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "#B2DDFF",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "#B2DDFF",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#DBEFFF",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#DBEFFF",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#DBEFFF",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "#FB4B22",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "#FB4B22",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "#FB4B22",
+			"type": "color",
+			"category": "text-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'Argent CF', serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The primary webfont, loaded async"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the primary font"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'PT Sans', sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The secondary webfont, loaded async"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!HELVETICA_NEUE}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the secondary font"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "'Teko', 'Open Sans', sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The accent webfont, loaded async"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "{!HELVETICA_NEUE}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the accent font"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		}
+	}
+}
