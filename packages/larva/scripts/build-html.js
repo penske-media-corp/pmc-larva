@@ -22,7 +22,12 @@ const patternsObj = ( () => {
 
 const routesArr = getPatternRoutes( patternsObj );
 
+// Add a static, non-pattern path. If we need more paths like this,
+// this method should be called in its own function.
+routesArr.push( 'css' );
+
 generateStatic( routesArr, buildPath, () => {
+
 	// TODO: copy assets into build path
 	// copy assets from larva package to static
 	// copy assets from project to assets
