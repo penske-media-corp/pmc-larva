@@ -77,7 +77,7 @@ app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.html', req.params ) );
 });
 
-app.get( '/css', function (req, res) {
+app.get( '/:source/css', function (req, res) {
 
 	/**
 	 * Generate Larva CSS Docs
