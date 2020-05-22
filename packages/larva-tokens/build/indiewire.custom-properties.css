@@ -1,0 +1,71 @@
+
+:root {
+  --color-white: rgb(255, 255, 255);
+  --color-grey-light: rgb(230, 230, 230);
+  --color-grey: rgb(140, 140, 140);
+  --color-grey-dark: rgb(106, 106, 106);
+  --color-black: rgb(0, 0, 0);
+  --color-brand-primary: rgb(0, 93, 164);
+  --color-brand-secondary: rgb(178, 221, 255);
+  /* The primary webfont, loaded async */
+  --font-family-primary-fancy: 'Argent CF', serif;
+  /* The fallback for the primary font */
+  --font-family-primary: Georgia, serif;
+  /* The secondary webfont, loaded async */
+  --font-family-secondary-fancy: 'PT Sans', sans-serif;
+  /* The fallback for the secondary font */
+  --font-family-secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-body: Georgia, serif;
+  --font-family-basic: Helvetica, sans-serif;
+  --background-color-grey-light: rgb(204, 204, 204);
+  --background-color-grey-lightest: rgb(247, 247, 247);
+  --background-color-grey-dark: rgb(106, 106, 106);
+  --background-color-grey: rgb(140, 140, 140);
+  /* The background color of the main body of the site. */
+  --background-color-body: rgb(255, 255, 255);
+  --background-color-brand-secondary: rgb(178, 221, 255);
+  --background-color-black: rgb(0, 0, 0);
+  --background-color-white: rgb(255, 255, 255);
+  --background-color-brand-primary: rgb(0, 93, 164);
+  --background-color-grey-darkest: rgb(50, 50, 50);
+  --line-height-small: 1.1;
+  --line-height-normal: 1.35;
+  --line-height-copy: 1.5;
+  --line-height-large: 1.85;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --border-color-white: rgb(255, 255, 255);
+  --border-color-grey-lightest: rgb(247, 247, 247);
+  --border-color-grey-light: rgb(204, 204, 204);
+  --border-color-grey: rgb(140, 140, 140);
+  --border-color-grey-dark: rgb(106, 106, 106);
+  --border-color-brand-primary: rgb(0, 93, 164);
+  --border-color-brand-secondary: rgb(178, 221, 255);
+  /* Used for margins and padding only. */
+  --spacing-00: 0;
+  /* Used for margins and padding only. */
+  --spacing-025: 0.25rem;
+  /* Used for margins and padding only. */
+  --spacing-050: 0.5rem;
+  /* Used for margins and padding only. */
+  --spacing-075: 0.75rem;
+  /* Used for margins and padding only. */
+  --spacing-1: 1rem;
+  /* Used for margins and padding only. */
+  --spacing-125: 1.25rem;
+  /* Used for margins and padding only. */
+  --spacing-150: 1.5rem;
+  /* Used for margins and padding only. */
+  --spacing-2: 2rem;
+  --border-color-brand-secondary-light: rgb(219, 239, 255);
+  --background-color-brand-secondary-light: rgb(219, 239, 255);
+  --background-color-brand-accent: rgb(251, 75, 34);
+  --border-color-brand-accent: rgb(251, 75, 34);
+  /* The fallback for the accent font */
+  --font-family-accent: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --color-brand-secondary-light: rgb(219, 239, 255);
+  --color-brand-accent: rgb(251, 75, 34);
+  /* The accent webfont, loaded async */
+  --font-family-accent-fancy: 'Teko', 'Open Sans', sans-serif;
+}
