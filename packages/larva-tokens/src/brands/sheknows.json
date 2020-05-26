@@ -157,7 +157,7 @@
 			"comment": "The fallback for the primary font"
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "'Sofia Pro', sans-serif",
+			"value": "'sofia-pro', sans-serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The secondary webfont, loaded async"
