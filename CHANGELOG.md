@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+* larva-tokens - Fix reference to Sofia Pro in SheKnows design tokens
+
 ## [8.14.0-alpha] - 05-21-2020
 
 ### Added
