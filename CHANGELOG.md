@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 * larva-tokens - Fix reference to Sofia Pro in SheKnows design tokens
+* larva-tokens - Update accent colors in sheknows design tokens
 
 ## [8.14.0-alpha] - 05-21-2020
 
