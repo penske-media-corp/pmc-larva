@@ -70,47 +70,47 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
-			"value": "#61BEB5",
+			"value": "#173351",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT_DARK": {
-			"value": "#61BEB5",
+			"value": "#173351",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT_DARK": {
-			"value": "#61BEB5",
+			"value": "#173351",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT": {
-			"value": "#A8DCD6",
+			"value": "#CFE3F9",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT": {
-			"value": "#A8DCD6",
+			"value": "#CFE3F9",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT": {
-			"value": "#A8DCD6",
+			"value": "#CFE3F9",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#F2FDFC",
+			"value": "#F9FAFB",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#F2FDFC",
+			"value": "#F9FAFB",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#F2FDFC",
+			"value": "#F9FAFB",
 			"type": "color",
 			"category": "text-color"
 		},
