@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.2-alpha] - 05-28-2020
+
+### Added
+
+* larva-css - Add utility class for border radius 100px
+
 ## [8.14.1-alpha] - 05-28-2020
 
 ### Fixed
@@ -16,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [8.14.0-alpha] - 05-21-2020
 
 ### Added
+
 * larva-tokens - Add indiewire design tokens
 
 ## [8.13.0-alpha] - 05-20-2020
