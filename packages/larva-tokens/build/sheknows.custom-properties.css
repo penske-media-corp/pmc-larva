@@ -12,7 +12,7 @@
   /* The fallback for the primary font */
   --font-family-primary: Georgia, serif;
   /* The secondary webfont, loaded async */
-  --font-family-secondary-fancy: 'Sofia Pro', sans-serif;
+  --font-family-secondary-fancy: 'sofia-pro', sans-serif;
   /* The fallback for the secondary font */
   --font-family-secondary: 'Helvetica Neue', sans-serif;
   --font-family-body: 'Helvetica Neue', sans-serif;
