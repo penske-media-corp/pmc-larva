@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+* twig-to-php-parser - Update parse_svg method to use brand_directory with plugin, add test
 * larva-patterns/o-select-nav - Updated default classes to correctly overlay button on select
 
 ## [8.14.2-alpha] - 05-28-2020
