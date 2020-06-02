@@ -1,0 +1,10 @@
+{% if c_logo_is_h1 %}
+	<h1 class="lrv-u-flex">
+{% endif %}
+	<a class="c-logo {{ c_logo_classes }}" href="{{ c_logo_url }}">
+		{% include '../../build/svg/' ~ c_logo_svg ~ '.svg' %}
+		<span class="lrv-a-screen-reader-only">{{ c_logo_screen_reader_text }}</span>
+	</a>
+{% if c_logo_is_h1 %}
+	</h1>
+{% endif %}
