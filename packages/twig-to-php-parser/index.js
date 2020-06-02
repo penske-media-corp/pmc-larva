@@ -83,10 +83,38 @@ function parseIncludePath( twigIncludeStr, patternName, dataName, isUsingPlugin 
 
 };
 
+
+function parseSvgPath( twigSvgIncludeStr, svgName, isUsingPlugin = false ) {
+
+	return new Promise( ( resolve, reject ) => {
+
+		execPhp( path.resolve( __dirname, './lib/twig-to-php-parser.php' ), config.phpBinaryPath, function( error, php, output ) {
+
+			if ( error ) {
+				reject( error );
+			}
+
+			php.parse_svg_path( twigSvgIncludeStr, svgName, isUsingPlugin, function( error, result, output, printed ) {
+
+				if ( error ) {
+					reject( error );
+				}
+
+				resolve( result );
+
+			});
+
+		});
+
+	});
+
+};
+
 module.exports = {
 	twigToPhpParser: twigToPhpParser,
 	methods: {
-		parseIncludePath: parseIncludePath
+		parseIncludePath: parseIncludePath,
+		parseSvgPath: parseSvgPath
 	},
 	run: () => {
 		twigToPhpParser( config )
