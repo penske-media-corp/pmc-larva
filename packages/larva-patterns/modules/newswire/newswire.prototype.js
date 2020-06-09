@@ -15,7 +15,7 @@ const c_title = clonedeep( c_title_prototype );
 c_heading.c_heading_text = 'Newswire';
 c_heading.c_heading_classes = 'lrv-u-font-family-primary lrv-u-font-size-32 lrv-u-margin-b-050';
 
-c_span.c_span_classes += ' lrv-u-display-block lrv-u-font-size-14 lrv-u-font-weight-bold lrv-u-margin-tb-050 lrv-u-display-block lrv-u-text-transform-initial lrv-u-color-grey';
+c_span.c_span_classes += ' lrv-u-display-block lrv-u-font-size-14 lrv-u-margin-tb-050 lrv-u-display-block';
 
 c_timestamp.c_timestamp_classes = 'lrv-u-font-size-12 lrv-u-color-grey lrv-u-margin-t-auto@desktop';
 
