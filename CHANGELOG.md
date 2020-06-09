@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.5-alpha] - 06-09-2020
+
+### Added
+
+* larva-patterns - Add button module
+* larva-patterns - Add separator module
+
 ## [8.14.4-alpha] - 06-05-2020
 
 ### Added
