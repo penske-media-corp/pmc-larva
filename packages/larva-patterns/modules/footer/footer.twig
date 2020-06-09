@@ -2,16 +2,21 @@
 	<div class="lrv-a-wrapper">
 		{% include "@larva/modules/footer-menus/footer-menus.twig" with footer_menus %}
 
-		<div class="lrv-a-grid lrv-a-cols3@desktop lrv-u-border-t-1 lrv-u-border-color-grey lrv-u-padding-tb-1">
-			<div class="lrv-u-border-r-1 lrv-u-border-color-grey lrv-u-padding-a-1 lrv-u-border-r-1@desktop">
-				{% include "@larva/modules/footer-social/footer-social.twig" with footer_social %}
+		{% if footer_social %}
+
+			<div class="lrv-a-grid lrv-a-cols3@desktop lrv-u-border-t-1 lrv-u-border-color-grey lrv-u-padding-tb-1">
+				<div class="lrv-u-border-r-1 lrv-u-border-color-grey lrv-u-padding-a-1 lrv-u-border-r-1@desktop">
+					{% include "@larva/modules/footer-social/footer-social.twig" with footer_social %}
+				</div>
+				<div class="lrv-u-border-r-1 lrv-u-border-color-grey lrv-u-padding-a-1 lrv-u-border-t-1 lrv-u-border-t-0@desktop lrv-u-border-r-1@desktop">
+					{% include "@larva/modules/footer-tip/footer-tip.twig" with footer_tip %}
+				</div>
+				<div class="lrv-u-border-r-1 lrv-u-border-color-grey lrv-u-padding-a-1 lrv-u-border-t-1 lrv-u-border-t-0@desktop">
+					{% include "@larva/modules/footer-newsletter/footer-newsletter.twig" with footer_newsletter %}
+				</div>
 			</div>
-			<div class="lrv-u-border-r-1 lrv-u-border-color-grey lrv-u-padding-a-1 lrv-u-border-t-1 lrv-u-border-t-0@desktop lrv-u-border-r-1@desktop">
-				{% include "@larva/modules/footer-tip/footer-tip.twig" with footer_tip %}
-			</div>
-			<div class="lrv-u-border-r-1 lrv-u-border-color-grey lrv-u-padding-a-1 lrv-u-border-t-1 lrv-u-border-t-0@desktop">
-				{% include "@larva/modules/footer-newsletter/footer-newsletter.twig" with footer_newsletter %}
-			</div>
-		</div>
+
+		{% endif %}
+
 	</div>
 </footer>
