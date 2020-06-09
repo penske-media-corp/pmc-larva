@@ -8,11 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [8.14.5-alpha] - 06-09-2020
 
-* larva-patterns - Add newswire
-* larva-patterns - Add condition around footer modules
+### Added
+
+* larva-js - Add webfontConfig
 * larva-css - Add lrv-u-border-t-3
 * larva-css - Add 5 col grid + first child span all
-* larva-js - Add webfontConfig
+* larva-patterns - Add newswire
+* larva-patterns - Add button module
+* larva-patterns - Add paragraph module
+* larva-patterns - Add separator module
+
+### Fixed
+
+* larva-patterns - Add condition around footer modules to support footers without them
 
 ## [8.14.4-alpha] - 06-05-2020
 
