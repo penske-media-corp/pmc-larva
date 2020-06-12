@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.7-alpha] - 06-12-2020
+
+### Fixed
+
+* larva-patterns - Paragraph closing
+
 ## [8.14.6-alpha] - 06-12-2020
 
 ### Added
