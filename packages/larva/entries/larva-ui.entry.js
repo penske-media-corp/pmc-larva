@@ -1,7 +1,7 @@
 import reflowForSideSkinAd from '@larva-js/interface/SideSkinAd/SideSkinAd';
-
 import initLarvaUiButton from '@js/LarvaUiButton';
-import '@js/Prism';
+
+import '@js/vendor/prism';
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	initLarvaUiButton();
