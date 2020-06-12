@@ -8,6 +8,7 @@ $widths_map: (
 	'width-300': pmc-rem(300),
 	'width-30p': 30%,
 	'width-50p': 50%,
+	'width-75p': 75%,
 	'width-100p': 100%,
 );
 
@@ -19,6 +20,7 @@ $widths_map: (
 	width-300,
 	width-30p,
 	width-50p,
+	width-75p,
 	width-100p,
 ), $widths_map, $NAMESPACE: 'lrv-' );
 
@@ -29,14 +31,16 @@ $widths_map: (
 	}
 }
 
-.lrv-u-max-width-100p {
-	max-width: 100%;
+.lrv-u-width-50p\@desktop {
+
+	@include pmc-breakpoint( desktop ) {
+		width: 50%;
+	}
 }
 
-.lrv-u-max-width-100vw {
-	max-width: 100vw;
-}
+.lrv-u-width-75p\@desktop {
 
-.lrv-u-max-width-150 {
-	max-width: pmc-rem(150);
+	@include pmc-breakpoint( desktop ) {
+		width: 75%;
+	}
 }
