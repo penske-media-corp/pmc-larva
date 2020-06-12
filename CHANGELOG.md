@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.6-alpha] - 06-12-2020
+
+### Added
+
+* larva - Add webfontloader.js for the Larva server
+* larva-css - Add 5x2 crop and extension to use object-fit: contain
+* larva-css - Add widths 75p and 50p @desktop
+
+### Fixed
+
+* larva - Move prism.js to js/vendor
+* larva-css - Move max-width to own file so we have docs
+
 ## [8.14.5-alpha] - 06-09-2020
 
 ### Added
