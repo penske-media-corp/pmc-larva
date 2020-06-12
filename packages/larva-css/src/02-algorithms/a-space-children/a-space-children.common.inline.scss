@@ -83,6 +83,13 @@ $spacer-2:   2;
 	--a-space-children-spacer: #{$spacer-3};
 }
 
+.lrv-a-space-children--4\@desktop {
+
+	@include pmc-breakpoint( desktop ) {
+		--a-space-children-spacer: #{$spacer-4};
+	}
+}
+
 .lrv-a-space-children--5\@desktop {
 
 	@include pmc-breakpoint( desktop ) {
