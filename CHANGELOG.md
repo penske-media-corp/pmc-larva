@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * larva-tokens - Add a `FONT_FAMILY_BASIC` variant to SheKnows
 
+## [8.14.9-alpha] - 06-12-2020
+
+### Fixed
+
+* larva-css - Space children values should be unit-less
+
+## [8.14.8-alpha] - 06-12-2020
+
+### Added
+
+* larva-css - Add more space children
+* larva-css - Add display table
+
 ## [8.14.7-alpha] - 06-12-2020
 
 ### Fixed
