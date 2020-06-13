@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.8-alpha] - 06-12-2020
+
+### Added
+
+* larva-css - Add more space children
+* larva-css - Add display table
+
 ## [8.14.7-alpha] - 06-12-2020
 
 ### Fixed
