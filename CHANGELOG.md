@@ -6,8 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-* larva-patterns - Add list module
-
 ## [8.14.9-alpha] - 06-12-2020
 
 ### Fixed
