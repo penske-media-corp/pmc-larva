@@ -1,7 +1,8 @@
 {
   "name": "root",
   "scripts": {
-    "test": "./node_modules/.bin/jest"
+	"test": "./node_modules/.bin/jest",
+	"changelog": "./node_modules/.bin/jest lerna-changelog"
   },
   "repository": {
     "type": "git",
@@ -38,10 +39,11 @@
     "labels": {
       "tokens": "Tokens",
 	  "patterns": "Patterns",
-	  "css": "CSS",
-	  "parser": "Parser",
-	  "backstop": "Backstop JS",
-	  "scripts": "Scripts / Tooling"
+	  "styling": "Styling",
+	  "tooling": "Tooling",
+	  "bug": "Bug Fix",
+	  "improvement": "Improvement",
+	  "addition": "Addition"
     }
   }
 }
