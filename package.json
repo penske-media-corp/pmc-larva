@@ -1,8 +1,11 @@
 {
   "name": "root",
-  "private": true,
   "scripts": {
     "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
