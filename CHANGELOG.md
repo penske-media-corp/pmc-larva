@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.10-alpha] - 06-15-2020
+
 ### Added
 
+* larva-patterns - Add list module
 * larva-tokens - Add a `FONT_FAMILY_BASIC` variant to SheKnows
 
 ## [8.14.9-alpha] - 06-12-2020
