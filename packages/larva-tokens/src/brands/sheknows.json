@@ -184,6 +184,11 @@
 			"value": "'Helvetica Neue', sans-serif",
 			"type": "font-family",
 			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "'Helvetica Neue', sans-serif",
+			"type": "font-family",
+			"category": "font-family"
 		}
 	}
 }

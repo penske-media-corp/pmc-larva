@@ -16,7 +16,7 @@
   /* The fallback for the secondary font */
   --font-family-secondary: 'Helvetica Neue', sans-serif;
   --font-family-body: 'Helvetica Neue', sans-serif;
-  --font-family-basic: Helvetica, sans-serif;
+  --font-family-basic: 'Helvetica Neue', sans-serif;
   --background-color-grey-light: rgb(204, 204, 204);
   --background-color-grey-lightest: rgb(247, 247, 247);
   --background-color-grey-dark: rgb(106, 106, 106);
