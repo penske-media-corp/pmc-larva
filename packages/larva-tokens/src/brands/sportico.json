@@ -67,6 +67,11 @@
 			"type": "font-family",
 			"category": "font-family"
 		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "#efefef",
+			"type": "color",
+			"category": "text-color"
+		},
 		"COLOR_GREY_LIGHT": {
 			"value": "#dcdcdc",
 			"type": "color",
@@ -77,6 +82,11 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "#efefef",
+			"type": "color",
+			"category": "background-color"
+		},
 		"BACKGROUND_COLOR_GREY_LIGHT": {
 			"value": "#dcdcdc",
 			"type": "color",
@@ -86,6 +96,11 @@
 			"value": "{!GREY_50}",
 			"type": "color",
 			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "#efefef",
+			"type": "color",
+			"category": "hr-color"
 		},
 		"BORDER_COLOR_GREY_LIGHT": {
 			"value": "#dcdcdc",

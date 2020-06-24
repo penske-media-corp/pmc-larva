@@ -10,6 +10,9 @@
 		"COLOR_WHITE": {
 			"value": "{!WHITE}"
 		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}"
+		},
 		"COLOR_GREY_LIGHT": {
 			"value": "{!GREY_90}"
 		},

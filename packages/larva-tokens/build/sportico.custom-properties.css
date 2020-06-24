@@ -1,6 +1,7 @@
 
 :root {
   --color-white: rgb(255, 255, 255);
+  --color-grey-lightest: rgb(239, 239, 239);
   --color-grey-light: rgb(220, 220, 220);
   --color-grey: rgb(140, 140, 140);
   --color-grey-dark: rgb(140, 140, 140);
@@ -18,7 +19,7 @@
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
   --background-color-grey-light: rgb(220, 220, 220);
-  --background-color-grey-lightest: rgb(247, 247, 247);
+  --background-color-grey-lightest: rgb(239, 239, 239);
   --background-color-grey-dark: rgb(140, 140, 140);
   --background-color-grey: rgb(140, 140, 140);
   /* The background color of the main body of the site. */
@@ -36,7 +37,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --border-color-white: rgb(255, 255, 255);
-  --border-color-grey-lightest: rgb(247, 247, 247);
+  --border-color-grey-lightest: rgb(239, 239, 239);
   --border-color-grey-light: rgb(220, 220, 220);
   --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(140, 140, 140);
