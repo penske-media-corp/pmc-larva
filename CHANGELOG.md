@@ -6,6 +6,98 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.10-alpha] - 06-15-2020
+
+### Added
+
+* larva-patterns - Add list module
+* larva-tokens - Add a `FONT_FAMILY_BASIC` variant to SheKnows
+
+## [8.14.9-alpha] - 06-12-2020
+
+### Fixed
+
+* larva-css - Space children values should be unit-less
+
+## [8.14.8-alpha] - 06-12-2020
+
+### Added
+
+* larva-css - Add more space children
+* larva-css - Add display table
+
+## [8.14.7-alpha] - 06-12-2020
+
+### Fixed
+
+* larva-patterns - Paragraph closing
+
+## [8.14.6-alpha] - 06-12-2020
+
+### Added
+
+* larva - Add webfontloader.js for the Larva server
+* larva-css - Add 5x2 crop and extension to use object-fit: contain
+* larva-css - Add widths 75p and 50p @desktop
+
+### Fixed
+
+* larva - Move prism.js to js/vendor
+* larva-css - Move max-width to own file so we have docs
+
+## [8.14.5-alpha] - 06-09-2020
+
+### Added
+
+* larva-js - Add webfontConfig
+* larva-css - Add lrv-u-border-t-3
+* larva-css - Add 5 col grid + first child span all
+* larva-patterns - Add newswire
+* larva-patterns - Add button module
+* larva-patterns - Add paragraph module
+* larva-patterns - Add separator module
+
+### Fixed
+
+* larva-patterns - Add condition around footer modules to support footers without them
+
+## [8.14.4-alpha] - 06-05-2020
+
+### Added
+
+* larva-patterns - Add heading module and variants
+
+## [8.14.3-alpha] - 06-02-2020
+
+### Added
+
+* larva-patterns - Added c-logo
+* larva-patterns - Add `larva` identifier class for use in themes to c-button and c-heading
+
+### Fixed
+
+* twig-to-php-parser - Update parse_svg method to use brand_directory with plugin, add test
+* larva-patterns/o-select-nav - Updated default classes to correctly overlay button on select
+
+## [8.14.2-alpha] - 05-28-2020
+
+### Added
+
+* larva-css - Add utility class for border radius 100px
+
+## [8.14.1-alpha] - 05-28-2020
+
+### Fixed
+
+* larva-tokens - Fix reference to Sofia Pro in SheKnows design tokens
+* larva-tokens - Update accent colors in sheknows design tokens
+
+## [8.14.0-alpha] - 05-21-2020
+
+### Added
+
+* larva-tokens - Add indiewire design tokens
+
 ## [8.13.0-alpha] - 05-20-2020
 
 ### Added
