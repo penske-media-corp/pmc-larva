@@ -17,7 +17,6 @@ const getPatternData = require( './utils/getPatternData' );
 const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
 
 const app = express();
-const port = process.env.NODE_PORT || 3000;
 
 const appConfiguration = getAppConfiguration( 'patterns' );
 const twigPaths = getPatternPathsToLoad( appConfiguration );
@@ -200,6 +199,4 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	res.end( twing.render( 'pattern.html', req.params ) );
 });
 
-app.listen(port, () => {
-	console.log( 'Larva server is listening on port ' + port );
-});
+module.exports = app;
