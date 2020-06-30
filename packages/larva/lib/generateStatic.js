@@ -37,7 +37,7 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 				if ( 'ECONNREFUSED' === e.code ) {
 					console.error( chalk.bold.red( 'You must start the Larva server with `npm run larva`.' ) );
-					process.exit();
+					process.exitCode = 1;
 				}
 
 				console.log( e );
