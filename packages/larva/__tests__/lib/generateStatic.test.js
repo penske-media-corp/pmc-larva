@@ -1,15 +1,27 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
 const mkdirp = require( 'mkdirp' );
-
+const supertest = require( 'supertest' );
 const exec = require( 'child_process' ).exec;
 
 const ncp = require( 'ncp' ).ncp;
-
+const app = require( '../../lib/server' );
 const generateStatic = require( '../../lib/generateStatic' );
+const request = supertest( app );
 
 const fixture = path.join( __dirname, '../fixtures' );
 const buildPath = path.join( fixture, './build/html' );
+
+it.only( 'does a thing', ( done ) => {
+	
+	request.get( '/larva/css/' ).then( (res) => {
+
+		expect( res.status).toBe(200);
+		done();
+
+	});
+	
+} );
 
 describe( 'generateStatic', () => {
 
