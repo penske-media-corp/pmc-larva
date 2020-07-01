@@ -23,7 +23,7 @@ const axios = require( 'axios' );
 
 module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 'http://localhost:3000/larva' ) {
 	const errors = [];
-	
+
 	try {
 		
 		const promises = routesArr.map( ( route ) => {
@@ -36,6 +36,8 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 				if ( 200 === response.status ) {
 					mkdirp.sync( dir );
 					fs.writeFileSync( `${dir}/index.html`, response.data );
+					console.log( `Built ${route}.` );
+					console.log( `---^^ ${response.status}.` );
 				}
 
 				if ( 500 === response.status ) {
@@ -45,11 +47,8 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 			} ).catch( ( e ) => {
 
 				if ( 'ECONNREFUSED' === e.code ) {
-					console.error( chalk.bold.red( 'You must start the Larva server with `npm run larva`.' ) );
-					  process.exitCode = 1;
+					process.exitCode = 1;
 				}
-
-				console.log( e );
 
 				mkdirp.sync( dir );
 				fs.writeFileSync( `${dir}/index.html`, e.response.data );
@@ -62,9 +61,14 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 			if ( errors.length > 0 ) {
 				console.log( errors );
 			}
+
+			done( chalk.green( `Successfully build static site to ${buildPath}` ) );
+
+		} ).catch( ( e ) =>  {
 			
-			done();
-		} );
+			done( chalk.bold.red( 'You must start the Larva server with `npm run larva`.' ) );
+		
+		});
 
 	} catch ( e ) {
 		console.error( e );
