@@ -78,42 +78,6 @@ describe( 'generateStatic', () => {
 		}, urlBase );
 	} );
 
-	it.skip( 'copies static assets', ( done ) => {
-		const routesArr = [
-			'components/c-button/brand-basic'
-		];
-
-
-		console.log( path.join( buildPath, './static/js' ) );
-
-		generateStatic( routesArr, buildPath, () => {
-
-			const assetsDest = path.join( buildPath, './static/js' );
-			const assetsSrc = path.join( buildPath, '../js' );
-
-			mkdirp( assetsDest );
-
-			ncp(
-				assetsSrc,
-				assetsDest,
-				( e ) => {
-
-					if ( e ) {
-						return console.error( e );
-					}
-
-					expect(
-						fs.existsSync( path.join( buildPath, './static/js/larva-ui.js' ) )
-					).toBe( true );
-
-					done();
-				}
-			);
-
-		} );
-
-	} );
-
 	afterEach( ( done ) => {
 
 		exec( 'rm -r ' + buildPath, ( err ) => {
