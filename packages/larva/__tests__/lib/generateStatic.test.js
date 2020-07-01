@@ -1,10 +1,8 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
-const mkdirp = require( 'mkdirp' );
 const exec = require( 'child_process' ).exec;
-
-const ncp = require( 'ncp' ).ncp;
 const app = require( '../../lib/server' );
+
 const port = 5555;
 const urlBase = 'http://localhost:' + port + '/larva';
 const generateStatic = require( '../../lib/generateStatic' );
