@@ -16,7 +16,7 @@
 	{% if data.error %}
 		<div class="lrv-a-wrapper">
 			<h2 style="color: red;">
-				{{ data.message }}
+				{{ data.message|raw }}
 			</h2>
 			<code>{{ data.error.message }}</code>
 			<pre>

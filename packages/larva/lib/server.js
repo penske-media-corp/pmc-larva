@@ -191,8 +191,6 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'pattern_nav' ] = patterns;
 
-	req.params[ 'variant' ] = req.params[ 'variant' ] || 'prototype';
-
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
 	}
