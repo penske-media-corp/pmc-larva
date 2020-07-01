@@ -37,7 +37,6 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 					mkdirp.sync( dir );
 					fs.writeFileSync( `${dir}/index.html`, response.data );
 					console.log( `Built ${route}.` );
-					console.log( `---^^ ${response.status}.` );
 				}
 
 				if ( 500 === response.status ) {
