@@ -9,10 +9,16 @@ module.exports = function getPatternDataPath( patternsPath, params ) {
 	try {
 		if ( fs.existsSync( protoPath ) ) {
 			return protoPath;
-		} else if ( fs.existsSync( jsonPath ) ) {
-			return jsonPath;
-		}
+		} 
+		
+		
 	} catch( e ) {
+
+		try {
+			if ( fs.existsSync( jsonPath ) ) {
+				return jsonPath;
+			}
+		} catch ) 
 		return e;
 	}
 }

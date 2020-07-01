@@ -1,6 +1,5 @@
-const getPatternDataPath = require( './getPatternDataPath' );
 const chalk = require( 'chalk' );
-
+const path = require( 'path' );
 /**
  * Get Pattern Data
  * 
@@ -13,16 +12,25 @@ function getPatternData( patternsPath, params ) {
 		throw new Error( chalk.red( `Pattern must contain a name and a type` ) );
 	}
 
-	const patternPath = getPatternDataPath( patternsPath, params );
+	const patternPath = path.join( patternsPath, params.type, params.name, params.name + '.' + params.variant + '.js' );
+	const jsonPath = path.join( patternsPath, params.type, params.name, params.name + '.json' )
 
 	try {
 		let patternData = require( patternPath );
 		return patternData;
 	} catch( e ) {
-		return {
-			isError: true,
-			message: `Error getting data for ${params.name}.${params.variant}.`,
-			error: e
+		const originalError = e;
+		
+		try {
+			// Backwards compat for Deadline when patterns were stored as JSON
+			let patternData = require( jsonPath );
+			return patternData;
+		} catch ( e ) {
+
+			return {
+				message: `Error getting data for ${params.name}.${params.variant}.`,
+				error: originalError
+			}
 		}
 	}
 

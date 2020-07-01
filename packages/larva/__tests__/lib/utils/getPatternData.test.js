@@ -14,17 +14,20 @@ const expectedOneOffSchema = require( fixture + '/src/patterns/one-offs/newswire
 
 let compStub = {
 	name: 'c-nav-link',
-	type: 'components'
+	type: 'components',
+	variant: 'prototype'
 };
 
 const objStub = {
 	name: 'o-crap',
-	type: 'objects'
+	type: 'objects',
+	variant: 'prototype'
 };
 
 const oneOffStub = {
 	name: 'newswire',
-	type: 'one-offs'
+	type: 'one-offs',
+	variant: 'prototype'
 };
 
 describe( 'getPatternData', () => {
