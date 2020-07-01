@@ -23,7 +23,7 @@ function getPatternData( patternsPath, params ) {
 			return patternData;
 		} catch ( e ) {
 			return {
-				message: `Error getting data for "${params.name}".<br>There is likely a problem in ${params.name}.${variant}.js.`,
+				message: `Error getting data for "${params.name}".<br>There is likely a problem with ${params.name}.${variant}.js.`,
 				error: originalError
 			}
 		}
