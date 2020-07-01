@@ -13,7 +13,19 @@
 		<h1 class="lrv-u-font-family-basic lrv-u-padding-a-1 lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' }}<code>{{ name  }}{{ variant ? '.' ~ variant }}</code></h1>
 	</div>
 
-	{% include path with data %}
+	{% if true == data.isError %}
+		<div class="lrv-a-wrapper">
+			<h2 style="color: red;">
+				{{ data.message }}
+			</h2>
+			<code>{{ data.error.message }}</code>
+			<pre>
+				{{ data.error.stack }}
+			</pre>
+		</div>
+	{% else %}
+		{% include path with data %}
+	{% endif %}
 
 	<div class="lrv-u-background-color-grey-light lrv-a-grid lrv-u-font-size-12 lrv-u-border-t-1 lrv-u-border-color-grey lrv-u-padding-a-2 js-to-hide">
 		<details>

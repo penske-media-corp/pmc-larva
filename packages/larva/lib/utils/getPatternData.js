@@ -18,9 +18,12 @@ function getPatternData( patternsPath, params ) {
 	try {
 		let patternData = require( patternPath );
 		return patternData;
-	} catch( error ) {
-		console.error( chalk.red.bold( `Couldn't get data for ${params.name}.${params.variant}.` ) );
-		console.error( chalk.red( error ) );
+	} catch( e ) {
+		return {
+			isError: true,
+			message: `Error getting data for ${params.name}.${params.variant}.`,
+			error: e
+		}
 	}
 
 }
