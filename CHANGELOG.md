@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.11-alpha] - 07-01-2020
+
+* larva-patterns - add c_icon_target_attr, default _blank
+
 ## [8.14.10-alpha] - 06-15-2020
 
 ### Added
