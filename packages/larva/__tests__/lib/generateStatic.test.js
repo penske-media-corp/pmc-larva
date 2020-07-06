@@ -1,16 +1,25 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
 const exec = require( 'child_process' ).exec;
+const app = require( '../../lib/server' );
 
+const port = 5555;
+const urlBase = 'http://localhost:' + port + '/larva';
 const generateStatic = require( '../../lib/generateStatic' );
 
 const fixture = path.join( __dirname, '../fixtures' );
-const buildPath = path.join( fixture, './build-html' );
+const buildPath = path.join( fixture, './build/html' );
+
+beforeAll( ( done ) => {
+	app.listen( port, () => {
+		done();
+	});
+});
 
 describe( 'generateStatic', () => {
-
+	
 	beforeEach( ( done ) => {
-
+	
 		exec( 'mkdir -p ' + buildPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
@@ -31,7 +40,7 @@ describe( 'generateStatic', () => {
 				fs.existsSync( path.join( buildPath, 'components/c-link/index.html' ) )
 			).toBe( true );
 			done();
-		} );
+		}, urlBase );
 
 	} );
 
@@ -45,7 +54,7 @@ describe( 'generateStatic', () => {
 				fs.existsSync( path.join( buildPath, 'components/c-button/brand-basic/index.html' ) )
 			).toBe( true );
 			done();
-		} );
+		}, urlBase );
 
 	} );
 
@@ -64,15 +73,24 @@ describe( 'generateStatic', () => {
 				).indexOf( 'footer_classes' )
 			).not.toBe( -1 );
 			done();
-		} );
+		}, urlBase );
 	} );
 
 	afterEach( ( done ) => {
+
 		exec( 'rm -r ' + buildPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
 			}
 			done();
 		} );
+
 	} );
+	
 } );
+
+afterAll( async ( done ) => {
+	const server = app.listen();
+	server.close();
+	done();
+});

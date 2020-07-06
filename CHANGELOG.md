@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.12-alpha] - 07-06-2020
+
+### Added
+
+* larva - Output JS errors to UI in browser on larva server
+
+### Fixed
+
+* larva - refactor and remove getPatternDataPath
+* larva - start server in test for generateStatic
+
 ## [8.14.11-alpha] - 07-01-2020
 
 * larva-patterns - add c_icon_target_attr, default _blank

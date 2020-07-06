@@ -1,7 +1,7 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_timestamp_prototype = require( '@penskemediacorp/larva-patterns/components/c-timestamp/c-timestamp.prototype' );
-const o_tease_prototype = require( '@penskemediacorp/larva-patterns/objects/o-tease/o-tease.prototype.js' );
+const c_timestamp_prototype = require( '../../components/c-timestamp/c-timestamp.prototype' );
+const o_tease_prototype = require( '../o-tease/o-tease.prototype.js' );
 
 const c_timestamp = clonedeep( c_timestamp_prototype );
 const o_tease = clonedeep( o_tease_prototype );

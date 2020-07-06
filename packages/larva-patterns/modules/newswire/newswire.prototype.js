@@ -1,10 +1,10 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const o_card_prototype = require( '@penskemediacorp/larva-patterns/objects/o-card/o-card.prototype' );
-const c_span_prototype = require( '@penskemediacorp/larva-patterns/components/c-span/c-span.prototype' );
-const c_timestamp_prototype = require( '@penskemediacorp/larva-patterns/components/c-timestamp/c-timestamp.prototype' );
-const c_heading_prototype = require( '@penskemediacorp/larva-patterns/components/c-heading/c-heading.prototype' );
-const c_title_prototype = require( '@penskemediacorp/larva-patterns/components/c-title/c-title.prototype' );
+const o_card_prototype = require( '../../objects/o-card/o-card.prototype' );
+const c_span_prototype = require( '../../components/c-span/c-span.prototype' );
+const c_timestamp_prototype = require( '../../components/c-timestamp/c-timestamp.prototype' );
+const c_heading_prototype = require( '../../components/c-heading/c-heading.prototype' );
+const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
 
 const o_card = clonedeep( o_card_prototype );
 const c_span = clonedeep( c_span_prototype );

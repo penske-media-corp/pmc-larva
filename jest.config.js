@@ -2,7 +2,8 @@ module.exports = {
 	testEnvironment: 'node',
 	testPathIgnorePatterns: [
 		'/fixtures/',
-		'/packages/larva-patterns/'
+		'/larva/src/patterns/',
+		'/larva-patterns/'
 	],
 	setupFiles: [
 		'./jest-setup.js'

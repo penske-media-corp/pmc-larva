@@ -10,7 +10,7 @@ const getAllPatternsObj = require( '../lib/utils/getAllPatternsObj' );
 const config = getAppConfiguration( 'patterns' );
 const cliArgs = getArgsFromCli();
 const source = 'larva' === cliArgs[1] ? 'larva' : 'project';
-const port = cliArgs[2] || '3000' ;
+const port = process.env.NODE_PORT || '3000' ;
 
 const urlBase = 'http://localhost:' + port + '/' + source;
 const buildPath = path.join( process.cwd(), './build/html/' + source );
@@ -22,9 +22,14 @@ const patternsObj = ( () => {
 
 const routesArr = getPatternRoutes( patternsObj );
 
-generateStatic( routesArr, buildPath, () => {
+// Add a static, non-pattern path. If we need more paths like this,
+// this method should be called in its own function.
+routesArr.push( 'css' );
+
+generateStatic( routesArr, buildPath, ( message ) => {
+
 	// TODO: copy assets into build path
 	// copy assets from larva package to static
 	// copy assets from project to assets
-	console.log( chalk.green( `Successfully build static site to ${buildPath}` ) );
+	console.log( message );
 }, urlBase );
