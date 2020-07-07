@@ -67,6 +67,7 @@ export default class Collapsible {
 
 		if ( 'expanded' === this.state && null !== this.group ) {
 			this.closeOthersInGroup();
+			document.querySelector( '[data-collapsible-toggle] + li > a' ).focus();
 		}
 	}
 
