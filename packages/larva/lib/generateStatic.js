@@ -1,6 +1,6 @@
 const path = require( 'path' );
 const mkdirp = require( 'mkdirp' );
-const fs = require( 'fs' );
+const fs = require( 'fs-extra' );
 const chalk = require( 'chalk' );
 const axios = require( 'axios' );
 
@@ -23,6 +23,27 @@ const axios = require( 'axios' );
 
 module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 'http://localhost:3000/larva' ) {
 	const errors = [];
+
+	// TODO: must update to always read from static larva UI JS
+	const assetsDest = path.join( buildPath, './assets' );
+	const assetsBuildSrc = path.join( buildPath, '../js' );
+
+	// get subdirectories - i dont even know rifhr noqaS
+	// const assetsDest = path.join( buildPath, './assets' );
+	// const assetsBuildSrc = path.join( buildPath, '../js' );
+
+	fs.copy(
+		assetsBuildSrc,
+		assetsDest,
+		( e ) => {
+
+			if ( e ) {
+				return console.error( e );
+			}
+
+			console.log( `Copied assets.` );
+		}
+	);
 
 	try {
 		
@@ -47,10 +68,11 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 				if ( 'ECONNREFUSED' === e.code ) {
 					process.exitCode = 1;
+				} else {
+					mkdirp.sync( dir );
+					fs.writeFileSync( `${dir}/index.html`, e.message );
 				}
 
-				mkdirp.sync( dir );
-				fs.writeFileSync( `${dir}/index.html`, e.response.data );
 			});
 
 		} );
@@ -61,11 +83,11 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 				console.log( errors );
 			}
 
-			done( chalk.green( `Successfully build static site to ${buildPath}` ) );
+			done( chalk.green( `Successfully build static site to ${buildPath}` ) );			
 
 		} ).catch( ( e ) =>  {
 			
-			done( chalk.bold.red( 'You must start the Larva server with `npm run larva`.' ) );
+			done( chalk.bold.red( e ) );
 		
 		});
 
