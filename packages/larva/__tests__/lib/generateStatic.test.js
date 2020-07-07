@@ -1,7 +1,7 @@
 const path = require( 'path' );
-const fs = require( 'fs' );
 const exec = require( 'child_process' ).exec;
 const app = require( '../../lib/server' );
+const fs = require( 'fs-extra' );
 
 const port = 5555;
 const urlBase = 'http://localhost:' + port + '/larva';
@@ -74,6 +74,24 @@ describe( 'generateStatic', () => {
 			).not.toBe( -1 );
 			done();
 		}, urlBase );
+	} );
+
+
+	it( 'copies static assets', ( done ) => {
+		const routesArr = [
+			'components/c-button/brand-basic'
+		];
+
+		generateStatic( routesArr, buildPath, () => {
+
+			expect(
+				fs.existsSync( path.join( buildPath, './assets/build/js/larva-ui.js' ) )
+			).toBe( true );
+
+			done();
+
+		}, urlBase );
+
 	} );
 
 	afterEach( ( done ) => {
