@@ -8,7 +8,7 @@ const urlBase = 'http://localhost:' + port + '/larva';
 const generateStatic = require( '../../lib/generateStatic' );
 
 const fixture = path.join( __dirname, '../fixtures' );
-const buildPath = path.join( fixture, './build/html' );
+const buildPath = path.join( fixture, './build/html/project' );
 
 beforeAll( ( done ) => {
 	app.listen( port, () => {
@@ -17,9 +17,9 @@ beforeAll( ( done ) => {
 });
 
 describe( 'generateStatic', () => {
-	
+
 	beforeEach( ( done ) => {
-	
+
 		exec( 'mkdir -p ' + buildPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
@@ -84,31 +84,31 @@ describe( 'generateStatic', () => {
 
 		generateStatic( routesArr, buildPath, () => {
 
-			// This is pretty sloppy and may be annoying to maintain.
+			// This is kinda sloppy and may be annoying to maintain. Sorry, future person.
 
 			// JS
 			expect(
-				fs.existsSync( path.join( buildPath, './assets/build/js/larva-ui.js' ) )
+				fs.existsSync( path.join( buildPath, '../assets/build/js/larva-ui.js' ) )
 			).toBe( true );
-			
+
 			// CSS
 			expect(
-				fs.existsSync( path.join( buildPath, './assets/build/css/common.inline.css' ) )
+				fs.existsSync( path.join( buildPath, '../assets/build/css/common.inline.css' ) )
 			).toBe( true );
-			
+
 			// Images
 			expect(
-				fs.existsSync( path.join( buildPath, './assets/build/images/test.png' ) )
+				fs.existsSync( path.join( buildPath, '../assets/build/images/test.png' ) )
 			).toBe( true );
 
 			// SVG
 			expect(
-				fs.existsSync( path.join( buildPath, './assets/build/svg/defs/sprite.svg' ) )
+				fs.existsSync( path.join( buildPath, '../assets/build/svg/defs/sprite.svg' ) )
 			).toBe( true );
 
 			// Public dir
 			expect(
-				fs.existsSync( path.join( buildPath, './assets/public/some-library.js' ) )
+				fs.existsSync( path.join( buildPath, '../assets/public/some-library.js' ) )
 			).toBe( true );
 
 			done();
@@ -119,7 +119,9 @@ describe( 'generateStatic', () => {
 
 	afterEach( ( done ) => {
 
-		exec( 'rm -r ' + buildPath, ( err ) => {
+		const htmlDir = path.join( buildPath, '../' );
+
+		exec( 'rm -r ' + htmlDir, ( err ) => {
 			if ( err ) {
 				console.error( err );
 			}
@@ -127,7 +129,7 @@ describe( 'generateStatic', () => {
 		} );
 
 	} );
-	
+
 } );
 
 afterAll( async ( done ) => {
