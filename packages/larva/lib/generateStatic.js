@@ -89,31 +89,50 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 		const dest = path.join( buildPath, `./assets/build/${item}` );
 		const src  = path.join( buildPath, `../${item}` );
 		
-		fs.copy(
-			src,
-			dest,
-			( e ) => {
+		fs.exists( src, ( exists ) => {
+			if ( ! exists ) {
+				return console.log( `Skipped copying assets/build/${item}` );
+			}
+
+			fs.copy(
+				src,
+				dest,
+				( e ) => {
+		
+					if ( e ) {
+						return console.error( e );
+					}
+		
+					console.log( `Copied assets/build/${item}` );
+				}
+			);
+		} );
+		
+	});
 	
+	const publicAssetsSrc = path.join( buildPath, `../../public` );
+
+	fs.exists( publicAssetsSrc, ( exists ) => {
+		
+		if ( ! exists ) {
+			return console.log( `Skipped copying assets/public` );	
+		};
+
+		fs.copy(
+			path.join( buildPath, `../../public` ),
+			path.join( buildPath, './assets/public' ),
+			( e ) => {
+
 				if ( e ) {
 					return console.error( e );
 				}
-	
-				console.log( `Copied assets/build/${item}` );
+
+				console.log( `Copied assets/public` );
 			}
 		);
+
 	});
 
-	fs.copy(
-		path.join( buildPath, `../../public` ),
-		path.join( buildPath, './assets/public' ),
-		( e ) => {
+	siteBuilder();
 
-			if ( e ) {
-				return console.error( e );
-			}
-
-			console.log( `Copied assets/public` );
-			siteBuilder();
-		}
-	);
 }
