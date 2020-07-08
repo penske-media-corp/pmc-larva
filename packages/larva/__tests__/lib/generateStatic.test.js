@@ -77,15 +77,38 @@ describe( 'generateStatic', () => {
 	} );
 
 
-	it( 'copies static assets', ( done ) => {
+	it.only( 'copies static assets', ( done ) => {
 		const routesArr = [
 			'components/c-button/brand-basic'
 		];
 
 		generateStatic( routesArr, buildPath, () => {
 
+			// This is pretty sloppy and may be annoying to maintain.
+
+			// JS
 			expect(
 				fs.existsSync( path.join( buildPath, './assets/build/js/larva-ui.js' ) )
+			).toBe( true );
+			
+			// CSS
+			expect(
+				fs.existsSync( path.join( buildPath, './assets/build/css/common.inline.css' ) )
+			).toBe( true );
+			
+			// Images
+			expect(
+				fs.existsSync( path.join( buildPath, './assets/build/images/test.png' ) )
+			).toBe( true );
+
+			// SVG
+			expect(
+				fs.existsSync( path.join( buildPath, './assets/build/svg/defs/sprite.svg' ) )
+			).toBe( true );
+
+			// Public dir
+			expect(
+				fs.existsSync( path.join( buildPath, './assets/public/some-library.js' ) )
 			).toBe( true );
 
 			done();

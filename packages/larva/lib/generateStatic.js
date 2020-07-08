@@ -77,29 +77,43 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 		}
 	};
 
-	// TODO: must update to always read from static larva UI JS
-	const assetsDest = path.join( buildPath, './assets/build/js' );
-	const assetsBuildSrc = path.join( buildPath, '../js' );
+	// Could do a globby here, but this won't change much so it might be okay.
+	const buildPathsToCopy = [
+		'js',
+		'css',
+		'images',
+		'svg'
+	];
 
-	console.log( assetsBuildSrc );
-	console.log( assetsDest );
+	buildPathsToCopy.forEach( item => {
+		const dest = path.join( buildPath, `./assets/build/${item}` );
+		const src  = path.join( buildPath, `../${item}` );
+		
+		fs.copy(
+			src,
+			dest,
+			( e ) => {
 	
-	// get subdirectories - i dont even know rifhr noqaS
-	// const assetsDest = path.join( buildPath, './assets' );
-	// const assetsBuildSrc = path.join( buildPath, '../js' );
+				if ( e ) {
+					return console.error( e );
+				}
+	
+				console.log( `Copied assets/build/${item}` );
+			}
+		);
+	});
 
 	fs.copy(
-		assetsBuildSrc,
-		assetsDest,
+		path.join( buildPath, `../../public` ),
+		path.join( buildPath, './assets/public' ),
 		( e ) => {
 
 			if ( e ) {
 				return console.error( e );
 			}
 
-			console.log( `Copied assets.` );
+			console.log( `Copied assets/public` );
 			siteBuilder();
 		}
 	);
-
 }
