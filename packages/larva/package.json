@@ -16,8 +16,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "update-larva-latest": "npm install --save @penskemediacorp/larva-scss@latest @penskemediacorp/larva-css@latest @penskemediacorp/larva-patterns@latest @penskemediacorp/larva-svg@latest @penskemediacorp/twig-to-php-parser@latest @penskemediacorp/larva-tokens@latest @penskemediacorp/larva-js@latest && npm run prod",
-    "larva": "concurrently \"npm:server\" \"npm:dev\" --raw",
-    "server": "NODE_PORT=3001 bin/larva.js server --watch ../ -e twig,js,html",
+    "larva": "bin/larva.js server --watch ../ -e twig,js",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "bin/larva.js prod-scss && bin/larva.js prod-js",
     "prod:scss": "bin/larva.js prod-scss",
@@ -33,7 +32,7 @@
     "lint-fix:js": "bin/larva.js lint-js --fix",
     "write-json": "bin/larva.js write-json larva && bin/larva.js write-json",
     "build-icons": "bin/larva.js build-icons",
-    "build-html": "NODE_PORT=3001 bin/larva.js build-html larva && NODE_PORT=3001 bin/larva.js build-html project"
+    "build-html": "bin/larva.js build-html larva && bin/larva.js build-html project"
   },
   "publishConfig": {
     "access": "public"
@@ -66,6 +65,7 @@
     "eslint-loader": "^3.0.3",
     "express": "^4.17.1",
     "flickity": "^2.2.1",
+    "fs-extra": "^9.0.1",
     "globby": "^11.0.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
