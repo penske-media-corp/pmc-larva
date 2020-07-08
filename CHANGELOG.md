@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.13-alpha] - 07-08-2020
+
+* larva-js - A11y improvement for focus on Collapsible pattern
+
 ## [8.14.12-alpha] - 07-06-2020
 
 ### Added
