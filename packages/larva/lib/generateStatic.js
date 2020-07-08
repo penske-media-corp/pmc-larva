@@ -27,7 +27,7 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 	const siteBuilder = () => {
 		try {
-			
+
 			const promises = routesArr.map( ( route ) => {
 
 				const dir = path.join( buildPath, route );
@@ -59,17 +59,17 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 			} );
 
 			axios.all( promises ).then( () => {
-				
+
 				if ( errors.length > 0 ) {
 					console.log( errors );
 				}
 
-				done( chalk.green( `Successfully build static site to ${buildPath}` ) );			
+				done( chalk.green( `Successfully build static site to ${buildPath}` ) );
 
 			} ).catch( ( e ) =>  {
-				
+
 				done( chalk.bold.red( e ) );
-			
+
 			});
 
 		} catch ( e ) {
@@ -87,8 +87,8 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 	buildPathsToCopy.forEach( item => {
 		const dest = path.join( buildPath, `./assets/build/${item}` );
-		const src  = path.join( buildPath, `../${item}` );
-		
+		const src  = path.join( buildPath, `../../${item}` );
+
 		fs.exists( src, ( exists ) => {
 			if ( ! exists ) {
 				return console.log( `Skipped copying assets/build/${item}` );
@@ -98,24 +98,24 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 				src,
 				dest,
 				( e ) => {
-		
+
 					if ( e ) {
 						return console.error( e );
 					}
-		
+
 					console.log( `Copied assets/build/${item}` );
 				}
 			);
 		} );
-		
+
 	});
-	
-	const publicAssetsSrc = path.join( buildPath, `../../public` );
+
+	const publicAssetsSrc = path.join( buildPath, `../../../public` );
 
 	fs.exists( publicAssetsSrc, ( exists ) => {
-		
+
 		if ( ! exists ) {
-			return console.log( `Skipped copying assets/public` );	
+			return console.log( `Skipped copying assets/public` );
 		};
 
 		fs.copy(
@@ -133,6 +133,6 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 	});
 
-	siteBuilder();
+	// siteBuilder();
 
 }
