@@ -86,29 +86,38 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	];
 
 	buildPathsToCopy.forEach( item => {
-		const dest = path.join( buildPath, `../assets/build/${item}` );
 		const src  = path.join( buildPath, `../../${item}` );
+		const dest = path.join( buildPath, `../assets/build/${item}` );
 
-		try {
-			fs.copySync( src, dest );
-
-			console.log( `Copied assets/build/${item}` );
-		} catch ( err ) {
-			console.error( err );
-		}
+		copySyncHelper( src, dest );
 
 	});
 
-	try {
-		const publicAssetsSrc = path.join( buildPath, `../../../public` );
-		const publicAssetsDest = path.join( buildPath, '../assets/public' );
 
-		fs.copySync( publicAssetsSrc, publicAssetsDest );
-		console.log( `Copied assets/public.` );
-	} catch ( err ) {
-		console.error( err );
-	}
+	const publicAssetsSrc = path.join( buildPath, `../../../public` );
+	const publicAssetsDest = path.join( buildPath, '../assets/public' );
+
+	copySyncHelper( publicAssetsSrc, publicAssetsDest );
 
 	siteBuilder();
 
+}
+
+function copySyncHelper( src, dest ) {
+
+	const name = path.basename( src );
+
+	try {
+		fs.copySync( src, dest );
+
+		console.log( `Copied '${name}'.` );
+	} catch ( e ) {
+
+		if ( 'ENOENT' === e.code ) {
+			console.log( `Can't find '${name}' to copy, skipping.` );
+		} else {
+			console.error( e );
+		}
+
+	}
 }
