@@ -1,8 +1,12 @@
 {
   "name": "root",
-  "private": true,
   "scripts": {
-    "test": "./node_modules/.bin/jest"
+	"test": "./node_modules/.bin/jest",
+	"changelog": "./node_modules/.bin/jest lerna-changelog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -22,6 +26,7 @@
     "gulp-stylelint": "^9.0.0",
     "jest": "^24.8.0",
     "lerna": "^3.15.0",
+    "lerna-changelog": "^1.0.1",
     "node-sass": "^4.13.1",
     "sass-true": "^5.0.0",
     "stylelint": "^10.1.0",
@@ -29,5 +34,16 @@
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-merge": "^4.2.2"
+  },
+  "changelog": {
+    "labels": {
+      "tokens": "Tokens",
+	  "patterns": "Patterns",
+	  "styling": "Styling",
+	  "tooling": "Tooling",
+	  "bug": "Bug Fix",
+	  "improvement": "Improvement",
+	  "addition": "Addition"
+    }
   }
 }
