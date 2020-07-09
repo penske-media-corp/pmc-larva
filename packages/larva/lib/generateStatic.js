@@ -4,6 +4,8 @@ const fs = require( 'fs-extra' );
 const chalk = require( 'chalk' );
 const axios = require( 'axios' );
 
+const copySyncHelper = require( './utils/copySyncHelper' );
+
 /**
  * Generate Static HTML
  *
@@ -21,73 +23,26 @@ const axios = require( 'axios' );
  * @see {@link getPatternRoutes}.
  */
 
-
 module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 'http://localhost:3000/larva' ) {
 	const errors = [];
 
-	const siteBuilder = () => {
-		console.log( '\nBuilding site...\n');
+	// Copy assets from assets/build and assets/public
+	// to the static site build directory.
+	console.log( '\nCopying assets...\n')
 
-		try {
-
-			const promises = routesArr.map( ( route ) => {
-
-				const dir = path.join( buildPath, route );
-				const url = `${urlBase}/${route}`;
-
-				return axios.get( url ).then( ( response ) => {
-
-					if ( 200 === response.status ) {
-						mkdirp.sync( dir );
-						fs.writeFileSync( `${dir}/index.html`, response.data );
-						console.log( `Built ${route}.` );
-					}
-
-				} ).catch( ( e ) => {
-
-					if ( 'ECONNREFUSED' === e.code ) {
-						process.exitCode = 1;
-					} else {
-						mkdirp.sync( dir );
-						fs.writeFileSync( `${dir}/index.html`, e.message );
-
-						console.log( chalk.yellow( `Error writing ${route}: ${e.message}.` ) );
-					}
-
-				});
-
-			} );
-
-			axios.all( promises ).then( () => {
-
-				if ( errors.length > 0 ) {
-					console.log( errors );
-				}
-
-				done( chalk.green( `\nSite built to build/html/${path.basename( buildPath )}. Check output for issues.\n` ) );
-
-			} ).catch( ( e ) =>  {
-
-				done( chalk.bold.red( e ) );
-
-			});
-
-		} catch ( e ) {
-			console.error( e );
-		}
-	};
+	// assets/public dir contains fonts and non-built things.
+	const publicAssetsSrc = path.join( buildPath, `../../../public` );
+	const publicAssetsDest = path.join( buildPath, '../assets/public' );
 
 	// Could do a globby here, but this won't change much so it might be okay.
-	const buildPathsToCopy = [
+	const builtAssets = [
 		'js',
 		'css',
 		'images',
 		'svg'
 	];
 
-	console.log( '\nCopying assets...\n')
-
-	buildPathsToCopy.forEach( item => {
+	builtAssets.forEach( item => {
 		const src  = path.join( buildPath, `../../${item}` );
 		const dest = path.join( buildPath, `../assets/build/${item}` );
 
@@ -95,33 +50,59 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 	});
 
-
-	// Copy assets/public dir that contains fonts and non-built things.
-	const publicAssetsSrc = path.join( buildPath, `../../../public` );
-	const publicAssetsDest = path.join( buildPath, '../assets/public' );
-
 	copySyncHelper( publicAssetsSrc, publicAssetsDest );
 
-	// Run the static site build
-	siteBuilder();
-
-}
-
-function copySyncHelper( src, dest ) {
-
-	const name = path.basename( src );
+	// Build the site.
+	// Cycle through the list of routes and write the response
+	// to files.
+	console.log( '\nBuilding site...\n');
 
 	try {
-		fs.copySync( src, dest );
 
-		console.log( `Copied '${name}'.` );
+		const promises = routesArr.map( ( route ) => {
+
+			const dir = path.join( buildPath, route );
+			const url = `${urlBase}/${route}`;
+
+			return axios.get( url ).then( ( response ) => {
+
+				if ( 200 === response.status ) {
+					mkdirp.sync( dir );
+					fs.writeFileSync( `${dir}/index.html`, response.data );
+					console.log( `Built ${route}.` );
+				}
+
+			} ).catch( ( e ) => {
+
+				if ( 'ECONNREFUSED' === e.code ) {
+					process.exitCode = 1;
+				} else {
+					mkdirp.sync( dir );
+					fs.writeFileSync( `${dir}/index.html`, e.message );
+
+					console.log( chalk.yellow( `Error writing ${route}: ${e.message}.` ) );
+				}
+
+			});
+
+		} );
+
+		axios.all( promises ).then( () => {
+
+			if ( errors.length > 0 ) {
+				console.log( errors );
+			}
+
+			done( chalk.green( `\nSite built to build/html/${path.basename( buildPath )}. Check output for issues.\n` ) );
+
+		} ).catch( ( e ) =>  {
+
+			done( chalk.bold.red( e ) );
+
+		});
+
 	} catch ( e ) {
-
-		if ( 'ENOENT' === e.code ) {
-			console.log( chalk.grey( `Can't find '${name}' to copy, skipping.` ) );
-		} else {
-			console.error( e );
-		}
-
+		console.error( e );
 	}
+
 }
