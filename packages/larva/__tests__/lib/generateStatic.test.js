@@ -85,11 +85,9 @@ describe( 'generateStatic', () => {
 
 			// This is kinda sloppy and may be annoying to maintain, and there is
 			// surely a more elegant way to test this functionality than checking
-			// if the file exists. Sorry, future person working on this.
+			// if the file exists...
 
 			// JS
-			// console.log( path.join( buildPath, '../assets/build/js/larva-ui.js' ) );
-
 			expect(
 				fs.existsSync( path.join( buildPath, '../assets/build/js/larva-ui.js' ) )
 			).toBe( true );
