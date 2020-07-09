@@ -86,53 +86,29 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	];
 
 	buildPathsToCopy.forEach( item => {
-		const dest = path.join( buildPath, `./assets/build/${item}` );
+		const dest = path.join( buildPath, `../assets/build/${item}` );
 		const src  = path.join( buildPath, `../../${item}` );
 
-		fs.exists( src, ( exists ) => {
-			if ( ! exists ) {
-				return console.log( `Skipped copying assets/build/${item}` );
-			}
+		try {
+			fs.copySync( src, dest );
 
-			fs.copy(
-				src,
-				dest,
-				( e ) => {
-
-					if ( e ) {
-						return console.error( e );
-					}
-
-					console.log( `Copied assets/build/${item}` );
-				}
-			);
-		} );
+			console.log( `Copied assets/build/${item}` );
+		} catch ( err ) {
+			console.error( err );
+		}
 
 	});
 
-	const publicAssetsSrc = path.join( buildPath, `../../../public` );
+	try {
+		const publicAssetsSrc = path.join( buildPath, `../../../public` );
+		const publicAssetsDest = path.join( buildPath, '../assets/public' );
 
-	fs.exists( publicAssetsSrc, ( exists ) => {
+		fs.copySync( publicAssetsSrc, publicAssetsDest );
+		console.log( `Copied assets/public.` );
+	} catch ( err ) {
+		console.error( err );
+	}
 
-		if ( ! exists ) {
-			return console.log( `Skipped copying assets/public` );
-		};
-
-		fs.copy(
-			path.join( buildPath, `../../public` ),
-			path.join( buildPath, './assets/public' ),
-			( e ) => {
-
-				if ( e ) {
-					return console.error( e );
-				}
-
-				console.log( `Copied assets/public` );
-			}
-		);
-
-	});
-
-	// siteBuilder();
+	siteBuilder();
 
 }
