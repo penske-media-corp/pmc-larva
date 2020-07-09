@@ -26,6 +26,8 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	const errors = [];
 
 	const siteBuilder = () => {
+		console.log( '\nBuilding site...\n');
+
 		try {
 
 			const promises = routesArr.map( ( route ) => {
@@ -41,10 +43,6 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 						console.log( `Built ${route}.` );
 					}
 
-					if ( 500 === response.status ) {
-						errors.push( url );
-					}
-
 				} ).catch( ( e ) => {
 
 					if ( 'ECONNREFUSED' === e.code ) {
@@ -52,6 +50,8 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 					} else {
 						mkdirp.sync( dir );
 						fs.writeFileSync( `${dir}/index.html`, e.message );
+
+						console.log( chalk.yellow( `Error writing ${route}: ${e.message}.` ) );
 					}
 
 				});
@@ -64,7 +64,7 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 					console.log( errors );
 				}
 
-				done( chalk.green( `Successfully build static site to ${buildPath}` ) );
+				done( chalk.green( `\nSite built to build/html/${path.basename( buildPath )}. Check output for issues.\n` ) );
 
 			} ).catch( ( e ) =>  {
 
@@ -85,6 +85,8 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 		'svg'
 	];
 
+	console.log( '\nCopying assets...\n')
+
 	buildPathsToCopy.forEach( item => {
 		const src  = path.join( buildPath, `../../${item}` );
 		const dest = path.join( buildPath, `../assets/build/${item}` );
@@ -94,11 +96,13 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	});
 
 
+	// Copy assets/public dir that contains fonts and non-built things.
 	const publicAssetsSrc = path.join( buildPath, `../../../public` );
 	const publicAssetsDest = path.join( buildPath, '../assets/public' );
 
 	copySyncHelper( publicAssetsSrc, publicAssetsDest );
 
+	// Run the static site build
 	siteBuilder();
 
 }
@@ -114,7 +118,7 @@ function copySyncHelper( src, dest ) {
 	} catch ( e ) {
 
 		if ( 'ENOENT' === e.code ) {
-			console.log( `Can't find '${name}' to copy, skipping.` );
+			console.log( chalk.grey( `Can't find '${name}' to copy, skipping.` ) );
 		} else {
 			console.error( e );
 		}
