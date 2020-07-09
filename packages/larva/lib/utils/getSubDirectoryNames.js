@@ -13,7 +13,7 @@ const chalk = require( 'chalk' );
 module.exports = function getSubDirectoryNames( path ) {
 	try {
 		return fs.readdirSync( path ).filter( function( file ) {
-			if ( 'node_modules' !== file ) {
+			if ( 'node_modules' !== file && 'fixtures' !== file ) {
 				return fs.statSync( path + '/' + file ).isDirectory();
 			}
 		});
