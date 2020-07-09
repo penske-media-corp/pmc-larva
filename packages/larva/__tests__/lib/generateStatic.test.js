@@ -76,17 +76,20 @@ describe( 'generateStatic', () => {
 		}, urlBase );
 	} );
 
-
-	it.only( 'copies static assets', ( done ) => {
+	it( 'copies static assets', ( done ) => {
 		const routesArr = [
 			'components/c-button/brand-basic'
 		];
 
 		generateStatic( routesArr, buildPath, () => {
 
-			// This is kinda sloppy and may be annoying to maintain. Sorry, future person.
+			// This is kinda sloppy and may be annoying to maintain, and there is
+			// surely a more elegant way to test this functionality than checking
+			// if the file exists. Sorry, future person working on this.
 
 			// JS
+			// console.log( path.join( buildPath, '../assets/build/js/larva-ui.js' ) );
+
 			expect(
 				fs.existsSync( path.join( buildPath, '../assets/build/js/larva-ui.js' ) )
 			).toBe( true );
