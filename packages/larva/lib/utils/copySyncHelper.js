@@ -6,9 +6,11 @@ const chalk = require( 'chalk' );
  * copySync Helper
  *
  * Wrap the fs.copySync funtion and provide useful logging.
+ * See {@link https://github.com/jprichardson/node-fs-extra/blob/master/docs/copy-sync.md fs.copySync}.
  *
  * @param {string} src Path of directory or file to copy.
  * @param {string} dest Path of destination for copied directory or file.
+ *
  */
 
 module.exports = function copySyncHelper( src, dest ) {
