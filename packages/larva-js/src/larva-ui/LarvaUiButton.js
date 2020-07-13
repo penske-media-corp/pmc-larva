@@ -1,6 +1,8 @@
 // Note: this is NOT up to Larva JS standards, here:
 // https://github.com/penske-media-corp/pmc-larva/wiki/JS-Authoring-Guidelines
 
+// CSS for this lives in larva-css/larva-ui
+
 export default function initLarvaUiButton() {
 
 	document.querySelector( '.js-hide-button' ).addEventListener( 'click', function( e ) {

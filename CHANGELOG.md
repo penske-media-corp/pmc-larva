@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.14-alpha] - 07-09-2020
+
+* larva - Add asset copy assets functionality to the build-html script
+* larva - Move /css route to /larva/css to fit in with site builder script
+* larva - Refactor to remove /static route for assets - we can only have one. Themes will need to build the Larva UI assets.
+
 ## [8.14.13-alpha] - 07-08-2020
 
 * larva-js - A11y improvement for focus on Collapsible pattern

@@ -48,12 +48,12 @@ let patterns = {
 };
 
 app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
-app.use( '/static/' , express.static( path.join( __dirname, '../build' ) ) );
 
 // NOTE: When the static site builder script is merged, this manual pattern
 // collection for the nav will come from an object based on the directory structure
 
 if( appConfiguration.larvaPatternsDir ) {
+	app.use( '/assets' , express.static( path.join( __dirname, '../' ) ) );
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
 	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
 	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
@@ -76,7 +76,7 @@ app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.html', req.params ) );
 });
 
-app.get( '/css', function (req, res) {
+app.get( '/:source/css', function (req, res) {
 
 	/**
 	 * Generate Larva CSS Docs

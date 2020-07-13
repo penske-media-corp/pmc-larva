@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest --forceExit"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
