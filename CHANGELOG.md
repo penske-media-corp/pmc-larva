@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.15-alpha] - 07-15-2020
+
+* eslint-config - update deprecated package, thanks @metalandcoffee!
+
 ## [8.14.14-alpha] - 07-09-2020
 
 * larva - Add asset copy assets functionality to the build-html script
