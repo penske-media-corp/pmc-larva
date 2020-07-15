@@ -6,6 +6,151 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.14-alpha] - 07-09-2020
+
+* larva - Add asset copy assets functionality to the build-html script
+* larva - Move /css route to /larva/css to fit in with site builder script
+* larva - Refactor to remove /static route for assets - we can only have one. Themes will need to build the Larva UI assets.
+
+## [8.14.13-alpha] - 07-08-2020
+
+* larva-js - A11y improvement for focus on Collapsible pattern
+
+## [8.14.12-alpha] - 07-06-2020
+
+### Added
+
+* larva - Output JS errors to UI in browser on larva server
+
+### Fixed
+
+* larva - refactor and remove getPatternDataPath
+* larva - start server in test for generateStatic
+
+## [8.14.11-alpha] - 07-01-2020
+
+* larva-patterns - add c_icon_target_attr, default _blank
+
+## [8.14.10-alpha] - 06-15-2020
+
+### Added
+
+* larva-patterns - Add list module
+* larva-tokens - Add a `FONT_FAMILY_BASIC` variant to SheKnows
+
+## [8.14.9-alpha] - 06-12-2020
+
+### Fixed
+
+* larva-css - Space children values should be unit-less
+
+## [8.14.8-alpha] - 06-12-2020
+
+### Added
+
+* larva-css - Add more space children
+* larva-css - Add display table
+
+## [8.14.7-alpha] - 06-12-2020
+
+### Fixed
+
+* larva-patterns - Paragraph closing
+
+## [8.14.6-alpha] - 06-12-2020
+
+### Added
+
+* larva - Add webfontloader.js for the Larva server
+* larva-css - Add 5x2 crop and extension to use object-fit: contain
+* larva-css - Add widths 75p and 50p @desktop
+
+### Fixed
+
+* larva - Move prism.js to js/vendor
+* larva-css - Move max-width to own file so we have docs
+
+## [8.14.5-alpha] - 06-09-2020
+
+### Added
+
+* larva-js - Add webfontConfig
+* larva-css - Add lrv-u-border-t-3
+* larva-css - Add 5 col grid + first child span all
+* larva-patterns - Add newswire
+* larva-patterns - Add button module
+* larva-patterns - Add paragraph module
+* larva-patterns - Add separator module
+
+### Fixed
+
+* larva-patterns - Add condition around footer modules to support footers without them
+
+## [8.14.4-alpha] - 06-05-2020
+
+### Added
+
+* larva-patterns - Add heading module and variants
+
+## [8.14.3-alpha] - 06-02-2020
+
+### Added
+
+* larva-patterns - Added c-logo
+* larva-patterns - Add `larva` identifier class for use in themes to c-button and c-heading
+
+### Fixed
+
+* twig-to-php-parser - Update parse_svg method to use brand_directory with plugin, add test
+* larva-patterns/o-select-nav - Updated default classes to correctly overlay button on select
+
+## [8.14.2-alpha] - 05-28-2020
+
+### Added
+
+* larva-css - Add utility class for border radius 100px
+
+## [8.14.1-alpha] - 05-28-2020
+
+### Fixed
+
+* larva-tokens - Fix reference to Sofia Pro in SheKnows design tokens
+* larva-tokens - Update accent colors in sheknows design tokens
+
+## [8.14.0-alpha] - 05-21-2020
+
+### Added
+
+* larva-tokens - Add indiewire design tokens
+
+## [8.13.0-alpha] - 05-20-2020
+
+### Added
+
+* larva-js - Add ProfileFilter, SelectNav
+* larva-patterns - Add story, story-arc-stories, profile-landing-river, more-stories-button, o-select-nav
+* larva-css - Add text transform lowercase, opactiy 0, span 2 for 3 col grid, max-width 100vw
+
+## [8.12.1-alpha] - 05-19-2020
+
+### Fixed
+
+* larva-css - Fix issue with order of media queries in utility files
+
+## [8.12.0-alpha] - 05-15-2020
+
+### Added
+
+* larva-tokens - Add sportico design tokens
+
+## [8.11.1-alpha] - 05-14-2020
+
+### Fixed
+
+* twig-to-php-parser - Add underscores to key so variable names don't trigger them
+* twig-to-php-parser - Enable core theme logic
+* backstopjs-config - Update desktop xl screensize (thanks @metalandcoffee!)
+
 ## [8.11.0-alpha] - 05-12-2020
 
 ### Added

@@ -65,8 +65,12 @@ export default class Collapsible {
 		this.maybeRepositionPanel();
 		this.maybeCloseOnClick();
 
-		if ( 'expanded' === this.state && null !== this.group ) {
-			this.closeOthersInGroup();
+		if ( 'expanded' === this.state ) {
+			document.querySelector( '[data-collapsible-toggle] + li > a' ).focus();
+
+			if ( null !== this.group ) {
+				this.closeOthersInGroup();
+			}
 		}
 	}
 

@@ -70,47 +70,47 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
-			"value": "#61BEB5",
+			"value": "#173351",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT_DARK": {
-			"value": "#61BEB5",
+			"value": "#173351",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT_DARK": {
-			"value": "#61BEB5",
+			"value": "#173351",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT": {
-			"value": "#A8DCD6",
+			"value": "#CFE3F9",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT": {
-			"value": "#A8DCD6",
+			"value": "#CFE3F9",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT": {
-			"value": "#A8DCD6",
+			"value": "#CFE3F9",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#F2FDFC",
+			"value": "#F9FAFB",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#F2FDFC",
+			"value": "#F9FAFB",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#F2FDFC",
+			"value": "#F9FAFB",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -157,7 +157,7 @@
 			"comment": "The fallback for the primary font"
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "'Sofia Pro', sans-serif",
+			"value": "'sofia-pro', sans-serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The secondary webfont, loaded async"
@@ -181,6 +181,11 @@
 			"comment": "The fallback for the accent font"
 		},
 		"FONT_FAMILY_BODY": {
+			"value": "'Helvetica Neue', sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
 			"value": "'Helvetica Neue', sans-serif",
 			"type": "font-family",
 			"category": "font-family"

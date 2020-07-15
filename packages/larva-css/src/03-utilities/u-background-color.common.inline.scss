@@ -9,13 +9,6 @@
 			background-color: $value;
 			background-color: var( --#{$token}, #{$value} );
 		}
-
-		.lrv-u-#{$token}\@desktop {
-			@include pmc-breakpoint( desktop ) {
-				background-color: $value;
-				background-color: var( --#{$token}, #{$value} );
-			}
-		}
 	}
 }
 
@@ -25,4 +18,20 @@
 
 .lrv-u-background-color-transparent {
 	background-color: transparent;
+}
+
+// Media Queries
+
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'background-color' ) {
+
+		.lrv-u-#{$token}\@desktop {
+			@include pmc-breakpoint( desktop ) {
+				background-color: $value;
+				background-color: var( --#{$token}, #{$value} );
+			}
+		}
+	}
 }

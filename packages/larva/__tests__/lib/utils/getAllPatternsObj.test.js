@@ -3,6 +3,7 @@ const getAppConfiguration = require( '../../../lib/utils/getAppConfiguration' );
 const getAllPatternsObj = require( '../../../lib/utils/getAllPatternsObj' );
 
 const expectedPatterns = {
+	'__tests__' : {},
 	'components': {
 		'c-nav-link': [
 			'featured.aia',

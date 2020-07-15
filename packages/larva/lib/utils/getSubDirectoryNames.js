@@ -13,7 +13,9 @@ const chalk = require( 'chalk' );
 module.exports = function getSubDirectoryNames( path ) {
 	try {
 		return fs.readdirSync( path ).filter( function( file ) {
-			return fs.statSync( path + '/' + file ).isDirectory();
+			if ( 'node_modules' !== file && 'fixtures' !== file ) {
+				return fs.statSync( path + '/' + file ).isDirectory();
+			}
 		});
 	} catch {
 		console.error( path + ' doesn\'t exist.' );

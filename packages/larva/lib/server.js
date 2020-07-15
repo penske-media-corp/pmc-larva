@@ -17,7 +17,6 @@ const getPatternData = require( './utils/getPatternData' );
 const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
 
 const app = express();
-const port = process.env.NODE_PORT || 3000;
 
 const appConfiguration = getAppConfiguration( 'patterns' );
 const twigPaths = getPatternPathsToLoad( appConfiguration );
@@ -49,12 +48,12 @@ let patterns = {
 };
 
 app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
-app.use( '/static/' , express.static( path.join( __dirname, '../build' ) ) );
 
 // NOTE: When the static site builder script is merged, this manual pattern
 // collection for the nav will come from an object based on the directory structure
 
 if( appConfiguration.larvaPatternsDir ) {
+	app.use( '/assets' , express.static( path.join( __dirname, '../' ) ) );
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
 	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
 	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
@@ -77,7 +76,7 @@ app.get( '/', function (req, res) {
 	res.end( twing.render( 'index.html', req.params ) );
 });
 
-app.get( '/css', function (req, res) {
+app.get( '/:source/css', function (req, res) {
 
 	/**
 	 * Generate Larva CSS Docs
@@ -189,7 +188,6 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 
 	// Support query parameters for conditionally loading stylesheets and scripts
 	req.params[ 'query' ] = req.query;
-
 	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'pattern_nav' ] = patterns;
 
@@ -200,6 +198,4 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	res.end( twing.render( 'pattern.html', req.params ) );
 });
 
-app.listen(port, () => {
-	console.log( 'Larva server is listening on port ' + port );
-});
+module.exports = app;

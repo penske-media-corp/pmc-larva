@@ -10,11 +10,11 @@
 
 @include pmc-breakpoint( desktop ) {
 
-	.lrv-u-order-n1 {
+	.lrv-u-order-n1\@desktop {
 		order: -1;
 	}
 
-	.lrv-u-order-100 {
+	.lrv-u-order-100\@desktop {
 		order: 100;
 	}
 }

@@ -126,11 +126,11 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 			$variable_name = $mustache_matches[2][ $count ];
 
-			$is_attr       = strpos( $match, 'class' ) || strpos( $match, 'name' ) || strpos( $match, 'attr' );
-			$is_url        = strpos( $match, 'url' );
-			$is_text       = strpos( $match, 'text' );
-			$is_data_attr  = strpos( $match, 'attributes' );
-			$is_markup     = strpos( $match, 'markup' );
+			$is_attr       = strpos( $match, '_class' ) || strpos( $match, '_name' ) || strpos( $match, '_attr' );
+			$is_url        = strpos( $match, '_url' );
+			$is_text       = strpos( $match, '_text' );
+			$is_data_attr  = strpos( $match, '_attributes' );
+			$is_markup     = strpos( $match, '_markup' );
 			$has_filter    = strpos( $match, '|' );
 
 			// Remove the Twig filter from the variable name
@@ -176,7 +176,8 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		foreach ( $svg_matches[0] as $svg ) {
 			$svg_replacements[ $count ] = parse_svg_path(
 				$svg,
-				$svg_matches[3][ $count ]
+				$svg_matches[3][ $count ],
+				$is_using_plugin
 			);
 			$count ++;
 		}
@@ -231,9 +232,9 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 
 	if ( true === $is_using_plugin ) {
 		$pattern_directory = '/build/patterns/';
-		$brand_directory = "\PMC\Larva\Config::get_instance()->get( 'brand_directory' )";
+		$key_name = strpos( $twig_include, '@larva' ) ? 'core_directory' : 'brand_directory';
+		$brand_directory = "\PMC\Larva\Config::get_instance()->get( '" . $key_name . "' )";
 	} else {
-		// This logic is only supported if not using the plugin
 		if ( strpos( $twig_include, '@larva' ) ) {
 			$brand_directory = 'PMC_CORE_PATH';
 		}
@@ -260,17 +261,22 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
  *
  * @return string PMC::render_template call
  */
-function parse_svg_path( $twig_include, $svg_name ) {
-	$theme_dir = 'CHILD_THEME_PATH';
-	$svg_path  = '/assets/build/svg/';
+function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
+	$brand_directory = 'CHILD_THEME_PATH';
+	$svg_directory = '/assets/build/svg/';
+	$start_name = substr( $pattern_name, 0, 2 );
 
-	// 08/09/19 - Disabling larva/core theme logic
-	// 01/16/20 - Enabled include logic, but this is not needed (yet?)
-	// if ( strpos( $twig_include, "@larva" ) ) {
-	// 	$theme_dir = 'PMC_CORE_PATH';
-	// }
+	if ( true === $is_using_plugin ) {
+		$svg_directory = '/build/svg/';
+		$key_name = 'brand_directory';
+		$brand_directory = "\PMC\Larva\Config::get_instance()->get( '" . $key_name . "' )";
+	} else {
+		if ( strpos( $twig_include, '@larva' ) ) {
+			$brand_directory = 'PMC_CORE_PATH';
+		}
+	}
 
-	 return "<?php \PMC::render_template( " . $theme_dir . " . '" . $svg_path . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
+	 return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
 }
 
 //EOF

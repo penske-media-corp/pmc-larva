@@ -1,0 +1,13 @@
+<section id="{{ profile_landing_river_id_attr }}" class="profile-landing-river // {{ profile_landing_river_classes }}">
+	{% if c_heading %}
+		<div class="lrv-a-wrapper a-stacking-context">
+			{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+		</div>
+	{% endif %}
+
+	<div class="lrv-a-wrapper a-children-border--grey-light a-children-border-vertical">
+		{% for item in profile_landing_river_stories %}
+			{% include "@larva/modules/story/story.twig" with item %}
+		{% endfor %}
+	</div>
+</section>

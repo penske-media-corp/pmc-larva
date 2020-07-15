@@ -1,0 +1,14 @@
+<section class="story-arc-stories {{ story_arc_stories_classes }}">
+	<div class="lrv-u-font-family-primary lrv-u-margin-b-050">
+		{% include "@larva/components/c-span/c-span.twig" with c_span %}
+		{% include "@larva/components/c-button/c-button.twig" with c_button %}
+	</div>
+
+	<div class="lrv-u-overflow-hidden lrv-u-max-width-100vw lrv-u-padding-b-1">
+		<div class="lrv-u-width-100p lrv-u-max-width-100p a-scrollable-grid@desktop-max lrv-a-grid lrv-a-cols3@desktop">
+			{% for item in story_arc_stories %}
+				{% include "@larva/objects/o-story-arc-item/o-story-arc-item.twig" with item %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -9,17 +9,25 @@
 			box-shadow: $value;
 			box-shadow: var( --#{$token}, #{$value} );
 		}
+	}
+}
 
-		.lrv-u-#{$token}\@desktop {
 
-			@include pmc-breakpoint( desktop ) {
+@each $token, $value in $TOKENS-MAP {
+	$token-str: quote( $token );
+
+	// example: box-shadow, 0 0 2px rgba(0,0,0,0.5)
+	@if str-index( $token-str, 'box-shadow' ) {
+
+		@include pmc-breakpoint( desktop ) {
+
+			.lrv-u-#{$token}\@desktop {
 				box-shadow: $value;
 				box-shadow: var( --#{$token}, #{$value} );
 			}
 		}
 	}
 }
-
 
 // Legacy Utility
 

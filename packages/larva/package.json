@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva",
-  "version": "8.11.0-alpha.0",
+  "version": "8.14.14-alpha.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
@@ -16,8 +16,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "update-larva-latest": "npm install --save @penskemediacorp/larva-scss@latest @penskemediacorp/larva-css@latest @penskemediacorp/larva-patterns@latest @penskemediacorp/larva-svg@latest @penskemediacorp/twig-to-php-parser@latest @penskemediacorp/larva-tokens@latest @penskemediacorp/larva-js@latest && npm run prod",
-    "larva": "concurrently \"npm:server\" \"npm:dev\" --raw",
-    "server": "NODE_PORT=3001 bin/larva.js server --watch ./ -e twig,js,html",
+    "larva": "bin/larva.js server --watch ../larva-patterns --watch src -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "bin/larva.js prod-scss && bin/larva.js prod-js",
     "prod:scss": "bin/larva.js prod-scss",
@@ -32,7 +31,8 @@
     "lint-fix:scss": "bin/larva.js lint-scss --fix",
     "lint-fix:js": "bin/larva.js lint-js --fix",
     "write-json": "bin/larva.js write-json larva && bin/larva.js write-json",
-    "build-icons": "bin/larva.js build-icons"
+    "build-icons": "bin/larva.js build-icons",
+    "build-html": "bin/larva.js build-html larva && bin/larva.js build-html project"
   },
   "publishConfig": {
     "access": "public"
@@ -43,17 +43,18 @@
   "dependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
-    "@penskemediacorp/backstopjs-config": "^8.9.0-alpha.0",
+    "@penskemediacorp/backstopjs-config": "^8.11.1-alpha.0",
     "@penskemediacorp/eslint-config": "^2.7.3-alpha.0",
-    "@penskemediacorp/larva-css": "^8.11.0-alpha.0",
-    "@penskemediacorp/larva-js": "^8.11.0-alpha.0",
-    "@penskemediacorp/larva-patterns": "^8.11.0-alpha.0",
-    "@penskemediacorp/larva-scss": "^8.11.0-alpha.0",
+    "@penskemediacorp/larva-css": "^8.14.14-alpha.0",
+    "@penskemediacorp/larva-js": "^8.14.14-alpha.0",
+    "@penskemediacorp/larva-patterns": "^8.14.14-alpha.0",
+    "@penskemediacorp/larva-scss": "^8.14.8-alpha.0",
     "@penskemediacorp/larva-svg": "^7.0.0-alpha.0",
-    "@penskemediacorp/larva-tokens": "^8.9.0-alpha.0",
+    "@penskemediacorp/larva-tokens": "^8.14.10-alpha.0",
     "@penskemediacorp/stylelint-config": "^1.5.3-alpha.0",
     "@penskemediacorp/twig-to-php-parser": "^8.11.0-alpha.0",
     "@wordpress/eslint-plugin": "^5.1.0",
+    "@penskemediacorp/twig-to-php-parser": "^8.14.14-alpha.0",
     "axios": "^0.19.2",
     "babel-loader": "^8.0.6",
     "chalk": "^2.4.2",
@@ -65,6 +66,7 @@
     "eslint-loader": "^3.0.3",
     "express": "^4.17.1",
     "flickity": "^2.2.1",
+    "fs-extra": "^9.0.1",
     "globby": "^11.0.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",

@@ -1,0 +1,13 @@
+<nav class="more-stories-button // lrv-u-flex lrv-u-justify-content-space-between {{ more_stories_button_classes }}">
+	{% if c_button %}
+		{% include "@larva/components/c-button/c-button.twig" with c_button %}
+	{% endif %}
+
+	{% if c_button_prev %}
+		{% include "@larva/components/c-button/c-button.twig" with c_button_prev %}
+	{% endif %}
+
+	{% if c_button_next %}
+		{% include "@larva/components/c-button/c-button.twig" with c_button_next %}
+	{% endif %}
+</nav>
