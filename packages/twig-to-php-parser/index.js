@@ -1,7 +1,7 @@
 const execPhp = require( 'exec-php' );
 const path = require( 'path' );
 const chalk = require( 'chalk' );
-const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
+const getAppConfiguration = require( './lib/getConfig' );
 const config = getAppConfiguration( 'parser' );
 
 /**
@@ -9,7 +9,6 @@ const config = getAppConfiguration( 'parser' );
  *
  * @param {object} config Optional object containing configuration. See the
  *                        package README for supported configuration.
- * }
  */
 
 function twigToPhpParser( config = {} ) {
@@ -82,7 +81,6 @@ function parseIncludePath( twigIncludeStr, patternName, dataName, isUsingPlugin 
 	});
 
 };
-
 
 function parseSvgPath( twigSvgIncludeStr, svgName, isUsingPlugin = false ) {
 
