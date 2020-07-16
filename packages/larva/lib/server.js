@@ -14,7 +14,7 @@ const {
 const getAppConfiguration = require( './utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
-const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
+const getAllPatternsObj = require( './utils/getAllPatternsObj' );
 
 const app = express();
 
@@ -47,8 +47,8 @@ let twing = new TwingEnvironment( loader, { debug: true } );
 twing.addFilter( markdownFilter );
 
 let patterns = {
-	larva: {},
-	project: {}
+	larva: getAllPatternsObj( appConfiguration.larvaPatternsDir ),
+	project: getAllPatternsObj( appConfiguration.projectPatternsDir )
 };
 
 app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
@@ -58,19 +58,10 @@ app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPattern
 
 if( appConfiguration.larvaPatternsDir ) {
 	app.use( '/assets' , express.static( path.join( __dirname, '../' ) ) );
-	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
-	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
-	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
-	patterns.larva.tests = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/__tests__' ) );
 }
 
 if( appConfiguration.projectPatternsDir ) {
 	app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
-	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
-	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
-	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
-	patterns.project.oneOffs = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/one-offs' ) );
-	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
 }
 
 app.get( '/', function (req, res) {
