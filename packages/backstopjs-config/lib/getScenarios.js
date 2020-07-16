@@ -1,11 +1,11 @@
-const merge = require( 'webpack-merge' );
+const { merge } = require( 'webpack-merge' );
 
 module.exports = function getScenarios( urlBase, paths, selectorArr, scenarioOverride ) {
 
 	let scenarios = [];
 
 	for ( let i = 0; i < paths.length; i++ ) {
-		
+
 		let selectors = 1 === selectorArr.length ? selectorArr[0] : selectorArr[i];
 
 		console.log( urlBase + paths[i] );

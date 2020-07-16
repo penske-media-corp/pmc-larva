@@ -1,11 +1,11 @@
-const merge = require( 'webpack-merge' );
+const { merge } = require( 'webpack-merge' );
 const path = require( 'path' );
 const chalk = require( 'chalk' );
 const backstopUtils = require( './lib/utils' );
 const getScenarios = require( './lib/getScenarios' );
 
 // Get app config from project
-const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
+const getAppConfiguration = require( './lib/getConfig' );
 const appConfiguration = getAppConfiguration( 'backstop' );
 
 const cliArgs = ( function getCliArgs() {
