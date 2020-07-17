@@ -22,8 +22,5 @@
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
-  },
-  "dependencies": {
-    "stylelint": "^10.1.0"
   }
 }
