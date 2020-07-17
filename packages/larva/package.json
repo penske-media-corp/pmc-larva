@@ -44,7 +44,6 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@penskemediacorp/backstopjs-config": "^8.14.16-alpha.0",
-    "@penskemediacorp/eslint-config": "^8.14.15-alpha.0",
     "@penskemediacorp/larva-css": "^8.14.16-alpha.0",
     "@penskemediacorp/larva-js": "^8.14.16-alpha.0",
     "@penskemediacorp/larva-patterns": "^8.14.16-alpha.0",
