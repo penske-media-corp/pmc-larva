@@ -1,5 +1,5 @@
 module.exports = {
-	'extends': 'wordpress',
+	'extends': [ 'plugin:@wordpress/eslint-plugin/recommended' ],
 	'parserOptions': {
 		'ecmaVersion': 6,
 		'ecmaFeatures': {
