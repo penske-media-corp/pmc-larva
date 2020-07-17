@@ -1,5 +1,4 @@
 const assert = require( 'assert' );
-const path = require( 'path' );
 
 const parserMethods = require( '../index.js' ).methods;
 

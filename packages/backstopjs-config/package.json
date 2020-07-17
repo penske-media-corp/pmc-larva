@@ -24,10 +24,7 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@penskemediacorp/larva": "^8.9.0-alpha.0",
-    "webpack-merge": "^4.2.2"
-  },
-  "peerDependencies": {
-    "backstopjs": "^4.3.2"
+    "chalk": "^4.1.0",
+    "webpack-merge": "^5.0.9"
   }
 }

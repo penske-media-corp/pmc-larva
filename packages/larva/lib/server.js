@@ -26,7 +26,11 @@ let loader = new TwingLoaderFilesystem( twigPaths );
 // Add markdown filter
 const markdownFilter = new TwingFilter( 'markdown', ( string ) => {
 	if ( string ) {
-		return marked( string );
+		return Promise.resolve( marked( string ) );
+	} else {
+		const noDocsMessage = '**This needs docs!** <br>Create a README.md in the pattern\'s directory and add details about using this pattern in markdown.';
+
+		return Promise.resolve( marked( noDocsMessage ) );
 	}
 });
 
@@ -73,7 +77,7 @@ app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
 	req.params[ 'pattern_nav' ] = patterns;
 	req.params[ 'name' ] = 'Welcome';
-	res.end( twing.render( 'index.html', req.params ) );
+	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
 });
 
 app.get( '/:source/css', function (req, res) {
@@ -171,7 +175,8 @@ app.get( '/:source/css', function (req, res) {
 
 	req.params[ 'source' ] = 'larva';
 	req.params[ 'pattern_nav' ] = patterns;
-	res.end( twing.render( 'css.html', req.params ) );
+
+	twing.render( 'css.html', req.params ).then( output => res.end( output ) );
 });
 
 app.get( '/:source/:type/:name/:variant?', function (req, res) {
@@ -195,7 +200,15 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
 	}
 
-	res.end( twing.render( 'pattern.html', req.params ) );
+	twing.render( 'pattern.html', req.params ).then( ( output ) => {
+		res.end( output );
+	}).catch( e => {
+		const errorMessage = `Cannot render template! \n\n${e}`;
+
+		console.log( e );
+
+		res.end( errorMessage );
+	} );
 });
 
 module.exports = app;
