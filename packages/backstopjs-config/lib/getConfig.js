@@ -25,7 +25,7 @@ module.exports = function getAppConfiguration( key ) {
 		let appRoot = process.cwd();
 
 		if ( 'test' === process.env.NODE_ENV ) {
-			appRoot = path.join( __dirname, '../../__tests__/fixtures/' );
+			appRoot = path.join( __dirname, '../__tests__/fixtures' );
 		}
 
 		let config = require( `${appRoot}/larva.config.js` )[ key ];

@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.17-alpha] - 07-17-2020
+
+* eslint-config - update reference to wp eslint package
+* stylelint-config - remove stylelint dependency - that comes from larva
+* larva - directly use wordpress eslint config in lint script
+
 ## [8.14.16-alpha] - 07-16-2020
 
 * larva - update packages and fix breaking changes
