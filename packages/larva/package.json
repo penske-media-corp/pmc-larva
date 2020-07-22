@@ -52,7 +52,7 @@
     "@penskemediacorp/larva-tokens": "^8.14.16-alpha.0",
     "@penskemediacorp/stylelint-config": "^8.14.17-alpha.0",
     "@penskemediacorp/twig-to-php-parser": "^8.14.16-alpha.0",
-    "@wordpress/eslint-plugin": "^7.1.0",
+    "@penskemediacorp/eslint-config": "^8.14.17-alpha.0",
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
