@@ -229,26 +229,27 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 	$brand_directory = 'CHILD_THEME_PATH';
 	$pattern_directory = '/template-parts/patterns/';
 	$start_name = substr( $pattern_name, 0, 2 );
+	$pattern_type = '';
 
-	if ( true === $is_using_plugin ) {
-		$pattern_directory = '/build/patterns/';
-		$key_name = strpos( $twig_include, '@larva' ) ? 'core_directory' : 'brand_directory';
-		$brand_directory = "\PMC\Larva\Config::get_instance()->get( '" . $key_name . "' )";
-	} else {
-		if ( strpos( $twig_include, '@larva' ) ) {
-			$brand_directory = 'PMC_CORE_PATH';
-		}
+	if ( strpos( $twig_include, '@larva' ) ) {
+		$brand_directory = 'PMC_CORE_PATH';
 	}
 
 	if ( 'c-' === $start_name ) {
-		$pattern_directory .= 'components';
+		$pattern_type = 'components';
 	} elseif ( 'o-' === $start_name ) {
-		$pattern_directory .= 'objects';
+		$pattern_type = 'objects';
 	} elseif ( '-' !== substr( $pattern_name, 1, 2 ) ) { // If there is no namespace, it is a module.
-		$pattern_directory .= 'modules';
+		$pattern_type = 'modules';
 	}
 
-	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $pattern_directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+	if ( $is_using_plugin ) {
+		return "<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( '" . $pattern_type . '/' . $pattern_name . "', $" . $data_name . ", true ); ?>";
+	} else {
+		$pattern_partial_path = $pattern_directory . $pattern_type . '/' . $pattern_name;
+
+		return '<?php \PMC::render_template( ' . $brand_directory . " . '" . $pattern_partial_path  . ".php', $" . $data_name . ', true ); ?>';
+	}
 
 }
 
