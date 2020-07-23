@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.19-alpha] - 07-23-2020
+
+* twig-to-php-parser - Update isUsingPlugin `include` path transformation to use new render_pattern_template method
+
+## [8.14.18-alpha] - 07-21-2020
+
+* larva - Fix missing @penskemediacorp/eslint-config dependency
+
 ## [8.14.17-alpha] - 07-17-2020
 
 * eslint-config - update reference to wp eslint package
