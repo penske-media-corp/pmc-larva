@@ -5,8 +5,7 @@ const parserMethods = require( '../index.js' ).methods;
 const expectations = {
 	childInclude: '<?php \\PMC::render_template( CHILD_THEME_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
 	larvaInclude: '<?php \\PMC::render_template( PMC_CORE_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
-	larvaIncludePluginEnabled: '<?php \\PMC::render_template( \\PMC\\Larva\\Config::get_instance()->get( \'core_directory\' ) . \'/build/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
-	pluginEnabled: '<?php \\PMC::render_template( \\PMC\\Larva\\Config::get_instance()->get( \'brand_directory\' ) . \'/build/patterns/objects/o-nav.php\', $o_nav, true ); ?>'
+	pluginEnabled: '<?php \\PMC\\Larva\\Pattern::get_instance()->render_pattern_template( \'objects/o-nav\', $o_nav, true ); ?>'
 };
 
 describe( 'parse include statements', function() {
@@ -37,22 +36,7 @@ describe( 'parse include statements', function() {
 		} );
 	} );
 
-	it( 'if plugin is enabled, call config with core_directory', ( done ) => {
-
-		parserMethods.parseIncludePath(
-			'{% include "@larva/objects/o-nav.twig" with o_nav %}',
-			'o-nav',
-			'o_nav',
-			true
-		)
-		.catch( e => console.log( e ) )
-		.then( ( result ) => {
-			assert.equal( result, expectations.larvaIncludePluginEnabled );
-			done();
-		});
-	} );
-
-	it( 'if plugin is enabled, call config with brand_directory', ( done ) => {
+	it( 'if plugin is enabled, use the render_pattern_template method from Larva', ( done ) => {
 
 		parserMethods.parseIncludePath(
 			'{% include "@project/objects/o-nav.twig" with o_nav %}',
