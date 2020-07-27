@@ -71,6 +71,7 @@ if( appConfiguration.projectPatternsDir ) {
 	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
 }
 
+// appConfiguration.projectPatternsDir will be assets/src/patterns - move out to assets.
 app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
 
 app.get( '/', function (req, res) {
