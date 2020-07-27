@@ -57,7 +57,6 @@ app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPattern
 // collection for the nav will come from an object based on the directory structure
 
 if( appConfiguration.larvaPatternsDir ) {
-	app.use( '/assets' , express.static( path.join( __dirname, '../' ) ) );
 	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
 	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
 	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
@@ -65,13 +64,14 @@ if( appConfiguration.larvaPatternsDir ) {
 }
 
 if( appConfiguration.projectPatternsDir ) {
-	app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
 	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
 	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
 	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
 	patterns.project.oneOffs = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/one-offs' ) );
 	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
 }
+
+app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
 
 app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
