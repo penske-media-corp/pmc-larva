@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.14.20-alpha] - 07-23-2020
+
+* larva - Fix to use single path to assets in Larva server.
+
 ## [8.14.19-alpha] - 07-23-2020
 
 * twig-to-php-parser - Update isUsingPlugin `include` path transformation to use new render_pattern_template method
