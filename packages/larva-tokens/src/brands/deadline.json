@@ -33,12 +33,12 @@
 			"category": "font-family"
 		},
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!RED_50}",
+			"value": "{!RED_29}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!RED_50}",
+			"value": "{!RED_29}",
 			"type": "color",
 			"category": "text-color"
 		}
