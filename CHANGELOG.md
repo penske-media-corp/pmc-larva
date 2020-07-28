@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [8.14.20-alpha] - 07-23-2020
+## [8.14.21-alpha] - 07-28-2020
+
+* larva-tokens - Add RS tokens and update alias.
+
+## [8.14.20-alpha] - 07-28-2020
 
 * larva - Fix to use single path to assets in Larva server.
 
