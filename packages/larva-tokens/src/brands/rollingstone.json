@@ -4,12 +4,12 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!RED_50}",
+			"value": "{!RED_49}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY": {
-			"value": "{!RED_45}",
+			"value": "{!RED_49}",
 			"type": "color",
 			"category": "background-color"
 		},
@@ -19,7 +19,7 @@
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "{!RED_50}",
+			"value": "{!RED_45}",
 			"type": "color",
 			"category": "hr-color"
 		},
@@ -29,7 +29,7 @@
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!RED_50}",
+			"value": "{!RED_45}",
 			"type": "color",
 			"category": "text-color"
 		},
