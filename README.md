@@ -1,6 +1,6 @@
 # Larva
 
-This is the mono-repo for PMC's design system, Larva. **It is in alpha.**
+This is the mono-repo for PMC's design system, Larva.
 
 ## About
 
