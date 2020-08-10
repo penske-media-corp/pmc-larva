@@ -4,49 +4,99 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BROWN_32}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "{!BROWN_57}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"value": "{!BROWN_81}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BROWN_32}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "{!BROWN_57}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"value": "{!BROWN_81}",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BROWN_32}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "{!BROWN_57}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"value": "{!BROWN_81}",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BLUE_13}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "{!BLUE_17}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BLUE_13}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "{!BLUE_17}",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY": {
-			"value": "{!BLUE_61}",
+			"value": "{!BLUE_13}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "{!BLUE_17}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_DARK_GREY": {
+			"value": "5A5A5A",
 			"type": "color",
 			"category": "text-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!SCHNYDER_COND_M}",
+			"value": "{!FERTIGO_PRO}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The webfont for font-family-primary."
 		},
 		"FONT_FAMILY_PRIMARY": {
-			"value": "{!TIMES_NEW_ROMAN}",
+			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The fallback font for font-family-primary."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!WARNOCK_PRO}",
+			"value": "{!ASTORIA_SANS}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."
@@ -58,7 +108,7 @@
 			"comment": "Fallback from secondary-fancy"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "{!TIMES_NEW_ROMAN}",
+			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family"
 		},
