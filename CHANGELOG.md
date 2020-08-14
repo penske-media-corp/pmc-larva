@@ -12,8 +12,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * larva-tokens - Add Dirt design tokens.
 
-* larva-tokens - Add Dirt design tokens.
-
 ## [8.14.22-alpha] - 07-29-2020
 
 * larva-tokens - Fix RS colors.
