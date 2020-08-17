@@ -16,8 +16,7 @@
   "scripts": {
     "test": "../../node_modules/.bin/jest",
     "build": "./node_modules/.bin/gulp",
-    "dev": "./node_modules/.bin/gulp watch",
-    "update-icons": "cp ../larva-svg/build/stack/svg/sprite.stack.svg ./build/icons/"
+    "dev": "./node_modules/.bin/gulp watch"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"

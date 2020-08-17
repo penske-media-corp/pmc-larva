@@ -116,6 +116,12 @@
 			"value": "{!HELVETICA}",
 			"type": "font-family",
 			"category": "font-family"
+		},
+		"SPACING_350": {
+			"value": "3.5rem",
+			"category": "spacing",
+			"type": "unit",
+			"comment": "Used for margins and padding only."
 		}
 	}
 }
