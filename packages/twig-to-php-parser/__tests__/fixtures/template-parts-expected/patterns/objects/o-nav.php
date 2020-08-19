@@ -10,7 +10,7 @@
 	<ul class="o-nav__list <?php echo esc_attr( $o_nav_list_classes ?? '' ); ?>" data-dropdown-list="<?php echo esc_attr( $o_nav_list_data_attributes ?? '' ); ?>">
 		<?php foreach ( $o_nav_list_items ?? [] as $item ) { ?>
 			<li class="o-nav__list-item <?php echo esc_attr( $o_nav_list_item_classes ?? '' ); ?>" data-dropdown-list-item="<?php echo esc_attr( $o_nav_list_item_data_attributes ?? '' ); ?>">
-				<?php \PMC::render_template( CHILD_THEME_PATH . '/template-parts/patterns/components/c-nav-link.php', $item, true ); ?>
+				<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( 'components/c-nav-link', $item, true ); ?>
 			</li>
 		<?php } ?>
 	</ul>
