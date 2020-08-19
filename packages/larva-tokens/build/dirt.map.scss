@@ -17,7 +17,7 @@ $dirt-map: (
   'font-family-secondary': (Georgia, serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
-  'background-color-grey-light': (rgb(204, 204, 204)),
+  'background-color-grey-light': (rgb(193, 193, 193)),
   'background-color-grey-lightest': (rgb(247, 247, 247)),
   'background-color-grey-dark': (rgb(94, 94, 94)),
   'background-color-grey': (rgb(117, 117, 117)),
@@ -37,7 +37,7 @@ $dirt-map: (
   'font-weight-bold': (700),
   'border-color-white': (rgb(255, 255, 255)),
   'border-color-grey-lightest': (rgb(247, 247, 247)),
-  'border-color-grey-light': (rgb(204, 204, 204)),
+  'border-color-grey-light': (rgb(193, 193, 193)),
   'border-color-grey': (rgb(117, 117, 117)),
   'border-color-grey-dark': (rgb(94, 94, 94)),
   'border-color-brand-primary': (rgb(155, 109, 8)),
@@ -70,6 +70,7 @@ $dirt-map: (
   /* The fallback font for font-family-primary. */
   'font-family-primary-regular': (Georgia, serif),
   'background-color-brand-primary-light': (rgb(193, 149, 96)),
+  'background-color-grey-brand': (rgb(250, 250, 250)),
   'border-color-brand-primary-lightest': (rgb(236, 210, 178)),
   'color-brand-secondary-light': (rgb(33, 38, 52)),
   /* The webfont for font-family-primary. */

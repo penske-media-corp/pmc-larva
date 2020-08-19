@@ -123,6 +123,31 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BACKGROUND_COLOR_GREY_BRAND": {
+			"value": "{!GREY_98}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "C1C1C1",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "C1C1C1",
+			"type": "color",
+			"category": "hr-color"
+		},
 		"FONT_FAMILY_PRIMARY_REGULAR_FANCY": {
 			"value": "{!FERTIGO_PRO}",
 			"type": "font-family",
