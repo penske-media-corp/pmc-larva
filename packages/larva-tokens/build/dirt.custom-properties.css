@@ -7,9 +7,9 @@
   --color-black: rgb(0, 0, 0);
   --color-brand-primary: rgb(155, 109, 8);
   --color-brand-secondary: rgb(21, 28, 45);
-  /* The webfont for font-family-primary. */
-  --font-family-primary-fancy: 'fertigo-pro', serif;
-  /* The fallback font for font-family-primary. */
+  /* The webfont, loaded async */
+  --font-family-primary-fancy: Courier, serif;
+  /* Fallback for primary-fancy */
   --font-family-primary: Georgia, serif;
   /* Available via Typekit. */
   --font-family-secondary-fancy: 'astoria-sans', serif;
@@ -67,7 +67,11 @@
   --background-color-brand-primary-lightest: rgb(236, 210, 178);
   /* Used for margins and padding only. */
   --spacing-350: 3.5rem;
+  /* The fallback font for font-family-primary. */
+  --font-family-primary-regular: Georgia, serif;
   --background-color-brand-primary-light: rgb(193, 149, 96);
   --border-color-brand-primary-lightest: rgb(236, 210, 178);
   --color-brand-secondary-light: rgb(33, 38, 52);
+  /* The webfont for font-family-primary. */
+  --font-family-primary-regular-fancy: 'fertigo-pro', serif;
 }
