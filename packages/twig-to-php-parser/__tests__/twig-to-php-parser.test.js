@@ -18,7 +18,7 @@ const patternShortPaths = [
 	'objects/o-nav.php',
 	'objects/o-story-list.php',
 	'modules/trending.php',
-	// 'modules/array-key.php',
+	'modules/array-key-in-loop.php',
 	'modules/html-tag-interpolation.php',
 ];
 
