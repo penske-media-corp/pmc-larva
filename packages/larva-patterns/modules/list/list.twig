@@ -1,7 +1,11 @@
-<{{ list_type }}l class="list larva // {{ list_classes }}">
+<{{ list_type_name }}l class="list larva // {{ list_classes }}">
 	{% for item in list_items %}
 		<li class="list__item larva // {{ list_item_classes }}">
-			{% include "@larva/modules/list/list.twig" with item %}
+			{% if item['list_items'] %}
+				{% include "@larva/modules/list/list.twig" with item %}
+			{% else %}
+				{{ item['list_item_markup'] }}
+			{% endif %}
 		</li>
 	{% endfor %}
-</{{ list_type }}l>
+</{{ list_type_name }}l>
