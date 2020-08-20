@@ -148,13 +148,13 @@
 			"type": "color",
 			"category": "hr-color"
 		},
-		"FONT_FAMILY_PRIMARY_REGULAR_FANCY": {
+		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!FERTIGO_PRO}",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The webfont for font-family-primary."
 		},
-		"FONT_FAMILY_PRIMARY_REGULAR": {
+		"FONT_FAMILY_PRIMARY": {
 			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family",
