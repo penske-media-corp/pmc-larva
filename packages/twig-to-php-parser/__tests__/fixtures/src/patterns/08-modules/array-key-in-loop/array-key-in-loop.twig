@@ -3,7 +3,9 @@
 		{% if item['list_items'] %}
 			{% include "@larva/modules/list/list.twig" with item %}
 		{% else %}
-			<p>false</p>
+			<div class="{{ item['list_item_classes'] }}">
+				{{ item['list_item_markup'] }}
+			</div>
 		{% endif %}
 	</li>
 {% endfor %}
