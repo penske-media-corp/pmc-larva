@@ -64,7 +64,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$loop_regex = '/({% for item in\s*)(\w*)/';
 
 		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
-		// https://regex101.com/r/ACN0rE/3
+		// https://regex101.com/r/ACN0rE/5
 		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s*}})/';
 
 		// Get matches for {% include "path/c-element.twig" with data %}
