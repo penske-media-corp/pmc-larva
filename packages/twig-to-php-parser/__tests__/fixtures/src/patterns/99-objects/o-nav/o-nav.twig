@@ -8,6 +8,10 @@
 		{% for item in o_nav_list_items %}
 			<li class="o-nav__list-item {{ o_nav_list_item_classes }}" data-dropdown-list-item="{{ o_nav_list_item_data_attributes }}">
 				{% include "../../04-components/c-nav-link/c-nav-link.twig" with item %}
+				
+				{% if item['newsletter_dropdown'] %}
+					{% include "@project/modules/newsletter-dropdown/newsletter-dropdown.twig" with item['newsletter_dropdown'] %}
+				{% endif %}
 			</li>
 		{% endfor %}
 	</ul>
