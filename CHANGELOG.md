@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.14.26-alpha] - 08-26-2020
+
+* larva-css - Add a-show-on-hover Algorithm
+* larva-css - Add max-width 1000 utility
+* twig-to-php-parser - Add support for WordPress style do_action token
+
+## [8.14.25-alpha] - 08-20-2020
+
+* larva-css - Add mobile-max breakpoint for margin utilities.
+* larva-css - Add space-children--150 utility.
+* larva-tokens - Add grey color tokens for Dirt.
+
 ## [8.14.24-alpha] - 08-18-2020
 
 * larva-tokens - Update fonts for Dirt.

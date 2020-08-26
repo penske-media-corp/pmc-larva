@@ -1,0 +1,16 @@
+@import 'setup';
+
+.lrv-a-show-on-hover {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	transition: opacity $transition-hover;
+}
+
+.lrv-a-show-on-hover-parent:hover .lrv-a-show-on-hover,
+.lrv-a-show-on-hover-parent:focus-within .lrv-a-show-on-hover {
+	opacity: 1;
+	visibility: visible;
+}
