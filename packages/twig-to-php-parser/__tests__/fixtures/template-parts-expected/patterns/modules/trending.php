@@ -8,4 +8,5 @@
 	<div class="pmc-u-margin-b-0 u-border-bottom-2">
 		<?php \PMC::render_template( CHILD_THEME_PATH . '/template-parts/patterns/objects/o-story-list.php', $o_story_list, true ); ?>
 	</div>
+	<?php do_action( 'trending_ads_action' ); ?>
 </section>
