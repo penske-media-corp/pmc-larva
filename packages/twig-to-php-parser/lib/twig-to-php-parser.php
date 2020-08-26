@@ -131,6 +131,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			$is_text       = strpos( $match, '_text' );
 			$is_data_attr  = strpos( $match, '_attributes' );
 			$is_markup     = strpos( $match, '_markup' );
+			$is_action     = strpos( $match, '_action' );
 			$has_filter    = strpos( $match, '|' );
 
 			// Remove the Twig filter from the variable name
@@ -153,6 +154,10 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 			if ( ! empty( $is_markup ) ) {
 				$mustache_replacements[ $count ] = '<?php echo wp_kses_post( $' . $variable_name . ' ?? \'\' ); ?>';
+			}
+
+			if ( ! empty( $is_action ) ) {
+				$mustache_replacements[ $count ] = '<?php do_action( \'' . $variable_name . '\' ); ?>';
 			}
 
 			$count ++;
