@@ -67,9 +67,9 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		// https://regex101.com/r/ACN0rE/5
 		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s*}})/';
 
-		// Get matches for {% include "path/c-element.twig" with data %}
-		// https://regex101.com/r/ns5kBR/2
-		$include_regex = '/({%\sinclude ")(.*[c-|o-|l-].*\/)(.*)(.twig)(" with )(\w*)(.*\s%})/';
+		// Get matches for {% include "path/c-element.twig" with data['some_data'] %}
+		// https://regex101.com/r/ns5kBR/3
+		$include_regex = '/({%\sinclude ")(.*[c-|o-|l-].*\/)(.*)(.twig)(" with )(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s%})/';
 
 		// Get matches for {% include '/path/here/' ~ variable_svg ~ '.svg' %}
 		// https://regex101.com/r/pdleQb/3
