@@ -18,6 +18,8 @@ const patternShortPaths = [
 	'objects/o-nav.php',
 	'objects/o-story-list.php',
 	'modules/trending.php',
+	'modules/array-key-in-loop.php',
+	'modules/html-tag-interpolation.php',
 ];
 
 describe( 'twig to php parser', function() {
@@ -47,7 +49,7 @@ describe( 'twig to php parser', function() {
 			let expectedContents = fs.readFileSync( expectedDir + shortpath ).toString();
 			let actualContents = fs.readFileSync( appConfiguration.phpDir + shortpath ).toString();
 
-			assert.equal( expectedContents, actualContents );
+			assert.equal( actualContents, expectedContents );
 		});
 		done();
 	});

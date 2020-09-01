@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ##Unpublished
 * Update support for WordPress style do_action token. Use _wp_action keyword rather than _action
 
+## Unreleased
+
+* twig-to-php-parser - Add support for item['submodule'] in for include and mustache regex
+
 ## [8.14.26-alpha] - 08-26-2020
 
 * larva-css - Add a-show-on-hover Algorithm
