@@ -3,8 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-##Unpublished
-* Update support for WordPress style do_action token. Use _wp_action keyword rather than _action
+
+## Unpublished
+* twig-to-php-parser - Update support for WordPress style do_action token. Use _wp_action keyword rather than _action
+* stylelint-config - Remove  oppressive language
 
 ## [8.14.26-alpha] - 08-26-2020
 
