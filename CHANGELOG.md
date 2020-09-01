@@ -6,11 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * twig-to-php-parser - Update support for WordPress style do_action token. Use _wp_action keyword rather than _action
-* stylelint-config - Remove  oppressive language
-
-## Unreleased
-
 * twig-to-php-parser - Add support for item['submodule'] in for include and mustache regex
+* stylelint-config - Remove  oppressive language
 
 ## [8.14.26-alpha] - 08-26-2020
 
