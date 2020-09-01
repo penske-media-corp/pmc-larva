@@ -131,7 +131,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			$is_text       = strpos( $match, '_text' );
 			$is_data_attr  = strpos( $match, '_attributes' );
 			$is_markup     = strpos( $match, '_markup' );
-			$is_action     = strpos( $match, '_action' );
+			$is_action     = strpos( $match, '_wp_action' );
 			$has_filter    = strpos( $match, '|' );
 
 			// Remove the Twig filter from the variable name
