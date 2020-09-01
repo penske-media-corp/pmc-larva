@@ -1,5 +1,4 @@
 module.exports = {
-	'syntax': 'scss',
 	'rules': {
 		'block-opening-brace-space-before': 'always',
 		'declaration-block-no-shorthand-property-overrides': true,
