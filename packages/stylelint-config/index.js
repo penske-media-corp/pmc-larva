@@ -16,14 +16,14 @@ module.exports = {
 		'no-descending-specificity': true,
 		'no-duplicate-at-import-rules': true,
 		'no-duplicate-selectors': true,
-		'function-blacklist': [ 'hsla', 'hsl' ],
-		'function-url-scheme-blacklist': [ '/^http/', 'ftp' ],
+		'function-disallowed-list': [ 'hsla', 'hsl' ],
+		'function-url-scheme-disallowed-list': [ '/^http/', 'ftp' ],
 		'function-url-no-scheme-relative': true,
 		'number-max-precision': 3,
 		'shorthand-property-no-redundant-values': true,
 		'property-no-vendor-prefix': true,
-		'property-blacklist': [ 'background', 'font', 'animation' ],
-		'declaration-property-unit-blacklist': {
+		'property-disallowed-list': [ 'background', 'font', 'animation' ],
+		'declaration-property-unit-disallowed-list': {
 			'font-size': [ 'em', 'px', 'pt' ],
 			'/^animation/': [ 's' ],
 			'/^transition/': [ 's' ]
@@ -33,7 +33,7 @@ module.exports = {
 		'selector-max-combinators': 3,
 		'selector-max-class': 2,
 		'selector-max-compound-selectors': 2,
-		'at-rule-blacklist': [ 'extend' ],
+		'at-rule-disallowed-list': [ 'extend' ],
 		'no-unknown-animations': true,
 		'font-family-name-quotes': 'always-where-recommended',
 		'function-name-case': 'lower',
@@ -69,7 +69,7 @@ module.exports = {
 				'ignore': [ 'first-nested', 'after-comment' ]
 			}
 		],
-		'unit-blacklist': [
+		'unit-disallowed-list': [
 			'px', {
 				'ignoreProperties': {
 					'px': [ 'box-shadow', '/^border/' ]
