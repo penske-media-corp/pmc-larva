@@ -6,13 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
+## 0.1.1 - 9-2-2020
+
 * stylelint-config - Remove oppressive language based on stylelint update
+* larva-patterns - Add condition to check before adding aria-labelledby attribute to o-nav
 
 ## 0.1.0 - 9-2-2020
 
 * twig-to-php-parser - Update support for WordPress style do_action token. Use _wp_action keyword rather than _action
 * twig-to-php-parser - Add support for item['submodule'] in for include and mustache regex
-* larva-patterns - add condition to check before adding aria-labelledby attribute to o-nav
 
 ## [8.14.26-alpha] - 08-26-2020
 
