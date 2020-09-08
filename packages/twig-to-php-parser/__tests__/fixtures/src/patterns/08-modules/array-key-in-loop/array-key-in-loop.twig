@@ -1,0 +1,11 @@
+{% for item in list_items %}
+	<li class="list__item larva // {{ list_item_classes }}">
+		{% if item['list_items'] %}
+			{% include "@larva/modules/list/list.twig" with item %}
+		{% else %}
+			<div class="{{ item['list_item_classes'] }}">
+				{{ item['list_item_markup'] }}
+			</div>
+		{% endif %}
+	</li>
+{% endfor %}

@@ -1,0 +1,192 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!BROWN_32}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "{!BROWN_57}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"value": "{!BROWN_81}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!BROWN_32}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "{!BROWN_57}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"value": "{!BROWN_81}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!BROWN_32}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "{!BROWN_57}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"value": "{!BROWN_81}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLUE_13}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "{!BLUE_17}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLUE_13}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "{!BLUE_17}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "{!BLUE_13}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "{!BLUE_17}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_GREY": {
+			"value": "757575",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY": {
+			"value": "757575",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY": {
+			"value": "757575",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "5E5E5E",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "5E5E5E",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "5E5E5E",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARKEST": {
+			"value": "333333",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARKEST": {
+			"value": "333333",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"value": "333333",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_GREY_BRAND": {
+			"value": "{!GREY_98}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "C1C1C1",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "C1C1C1",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "{!FERTIGO_PRO}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The webfont for font-family-primary."
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback font for font-family-primary."
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "{!ASTORIA_SANS}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from secondary-fancy"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"SPACING_350": {
+			"value": "3.5rem",
+			"category": "spacing",
+			"type": "unit",
+			"comment": "Used for margins and padding only."
+		}
+	}
+}

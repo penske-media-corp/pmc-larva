@@ -63,13 +63,13 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		// https://regex101.com/r/lceCnz/2/
 		$loop_regex = '/({% for item in\s*)(\w*)/';
 
-		// Get matches for {{ name }}
-		// https://regex101.com/r/ACN0rE/2
-		$mustache_regex = '/({{\s*)(\w*?\|?\w*)(\s*}})/';
+		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
+		// https://regex101.com/r/ACN0rE/5
+		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s*}})/';
 
-		// Get matches for {% include "path/c-element.twig" with data %}
-		// https://regex101.com/r/ns5kBR/2
-		$include_regex = '/({%\sinclude ")(.*[c-|o-|l-].*\/)(.*)(.twig)(" with )(\w*)(.*\s%})/';
+		// Get matches for {% include "path/c-element.twig" with data['some_data'] %}
+		// https://regex101.com/r/ns5kBR/3
+		$include_regex = '/({%\sinclude ")(.*[c-|o-|l-].*\/)(.*)(.twig)(" with )(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s%})/';
 
 		// Get matches for {% include '/path/here/' ~ variable_svg ~ '.svg' %}
 		// https://regex101.com/r/pdleQb/3
@@ -131,6 +131,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			$is_text       = strpos( $match, '_text' );
 			$is_data_attr  = strpos( $match, '_attributes' );
 			$is_markup     = strpos( $match, '_markup' );
+			$is_action     = strpos( $match, '_wp_action' );
 			$has_filter    = strpos( $match, '|' );
 
 			// Remove the Twig filter from the variable name
@@ -153,6 +154,10 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 			if ( ! empty( $is_markup ) ) {
 				$mustache_replacements[ $count ] = '<?php echo wp_kses_post( $' . $variable_name . ' ?? \'\' ); ?>';
+			}
+
+			if ( ! empty( $is_action ) ) {
+				$mustache_replacements[ $count ] = '<?php do_action( \'' . $variable_name . '\' ); ?>';
 			}
 
 			$count ++;

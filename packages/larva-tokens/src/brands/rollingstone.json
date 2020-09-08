@@ -1,0 +1,57 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_49}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "{!RED_49}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!WHITE_95}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_45}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!BLACK}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "{!RED_45}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!GRAPHIK}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!GRAPHIK}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!PUBLICO}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "{!GRAPHIK}",
+			"type": "font-family",
+			"category": "font-family"
+		}
+	}
+}
