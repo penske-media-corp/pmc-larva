@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
+* twig-to-php-parser - Fix bug in svg include replacement
+* Add travis build
+
+
 ## 0.1.1 - 9-2-2020
 
 * stylelint-config - Remove oppressive language based on stylelint update
