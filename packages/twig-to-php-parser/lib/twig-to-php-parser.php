@@ -270,7 +270,7 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
 	$brand_directory = 'CHILD_THEME_PATH';
 	$svg_directory = '/assets/build/svg/';
-	$start_name = substr( $pattern_name, 0, 2 );
+	$start_name = substr( $svg_name, 0, 2 );
 
 	if ( true === $is_using_plugin ) {
 		$svg_directory = '/build/svg/';
