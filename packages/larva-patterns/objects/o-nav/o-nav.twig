@@ -9,7 +9,7 @@
 		<h4 class="o-nav__title {{ o_nav_title_classes }}" data-dropdown-list-item="{{ o_nav_title_data_attributes }}"> {{ o_nav_title_text }}</h4>
 	{% endif %}
 
-	<ul class="o-nav__list {{ o_nav_list_classes }}" data-dropdown-list="{{ o_nav_list_data_attributes }}">
+	<ul class="o-nav__list {{ o_nav_list_classes }}" data-dropdown-list="{{ o_nav_list_data_attributes }}" aria-labelledby="{{ o_nav_list_labelledby_attr }}">
 		{% for item in o_nav_list_items %}
 			<li class="o-nav__list-item {{ o_nav_list_item_classes }}" data-dropdown-list-item="{{ o_nav_list_item_data_attributes }}">
 				{% include "@larva/components/c-link/c-link.twig" with item %}
