@@ -1,4 +1,8 @@
-<h3 class="c-title {{ modifier_class }} {{ c_title_classes }}">
+{% if c_title_tag == 'span' %}
+<span id="{{ c_title_id_attr }}" class="c-title {{ modifier_class }} {{ c_title_classes }}">
+{% else %}
+<h3 id="{{ c_title_id_attr }}" class="c-title {{ modifier_class }} {{ c_title_classes }}">
+{% endif %}
 
 	{% if c_title_above_url %}
 		<a href="{{ c_title_above_url }}" class="{{ c_title_above_link_classes }}">
@@ -24,4 +28,8 @@
 		</a>
 	{% endif %}
 
+{% if c_title_tag == 'span' %}
+</span>
+{% else %}
 </h3>
+{% endif %}
