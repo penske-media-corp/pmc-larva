@@ -6,7 +6,7 @@
 <nav class="o-nav {{ modifier_class }} {{ o_nav_classes }}" data-dropdown="{{ o_nav_data_attributes }}" aria-labelledby="{{ o_nav_screen_reader_id_attr }}">
 
 	{% if o_nav_title_text %}
-		<h4 class="o-nav__title {{ o_nav_title_classes }}" data-dropdown-list-item="{{ o_nav_title_data_attributes }}"> {{ o_nav_title_text }}</h4>
+		<h4 id="{{ o_nav_title_id_attr }}" class="o-nav__title {{ o_nav_title_classes }}" data-dropdown-list-item="{{ o_nav_title_data_attributes }}"> {{ o_nav_title_text }}</h4>
 	{% endif %}
 
 	<ul class="o-nav__list {{ o_nav_list_classes }}" data-dropdown-list="{{ o_nav_list_data_attributes }}" aria-labelledby="{{ o_nav_list_labelledby_attr }}">
