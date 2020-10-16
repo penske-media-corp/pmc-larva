@@ -3,7 +3,11 @@
 	<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
 {% endif %}
 
-<svg class="c-icon {{ modifier_class }} {{ c_icon_classes }}">
+{% if c_icon_screen_reader_text %}
+	<abbr class="lrv-a-screen-reader-only" title="{{ c_icon_screen_reader_title_attr }}">{{ c_icon_screen_reader_text }}</abbr>
+{% endif %}
+
+<svg class="c-icon {{ modifier_class }} {{ c_icon_classes }}" {% if c_icon_screen_reader_text %}aria-hidden="true" {% endif %}>
 	<use xlink:href="#{{ c_icon_name }}" />
 	{% if c_icon_secondary_name %}
 		<use xlink:href="#{{ c_icon_secondary_name }}" />
