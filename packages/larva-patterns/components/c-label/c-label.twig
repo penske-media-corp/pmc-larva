@@ -1,5 +1,5 @@
-{% if c_label_tag == 'h2' %}
-<h2 id="{{ c_label_id_attr }}" class="c-label {{ modifier_class }} {{ c_label_classes }}" {{ c_label_data_attr }}>
+{% if c_label_tag_text %}
+<{{ c_label_tag_text }} id="{{ c_label_id_attr }}" class="c-label {{ modifier_class }} {{ c_label_classes }}" {{ c_label_data_attr }}>
 {% else %}
 <span id="{{ c_label_id_attr }}" class="c-label {{ modifier_class }} {{ c_label_classes }}" {{ c_label_data_attr }}>
 {% endif %}
@@ -12,8 +12,8 @@
 	</a>
 {% endif %}
 
-{% if c_label_tag == 'h2' %}
-</h2>
+{% if c_label_tag_text %}
+</{{ c_label_tag_text }}>
 {% else %}
 </span>
 {% endif %}
