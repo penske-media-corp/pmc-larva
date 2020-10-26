@@ -11,7 +11,8 @@
 		<h4 id="{{ o_nav_title_id_attr }}" class="o-nav__title {{ o_nav_title_classes }}">{{ o_nav_title_text }}</h4>
 	{% endif %}
 
-	<ul class="o-nav__list {{ o_nav_list_classes }}" {% if o_nav_title_id_attr %} aria-labelledby="{{ o_nav_title_id_attr }}" {% endif %}>
+	<ul class="o-nav__list {{ o_nav_list_classes }}"
+		{% if o_nav_list_labelledby_attr %} aria-labelledby="{{ o_nav_list_labelledby_attr }}" {% endif %}>
 		{% for item in o_nav_list_items %}
 			<li class="o-nav__list-item {{ o_nav_list_item_classes }}">
 				{% include "@larva/components/c-link/c-link.twig" with item %}

@@ -17,5 +17,6 @@ module.exports = {
 	o_nav_screen_reader_text: 'optional screen reader',
 	o_nav_list_classes: 'lrv-a-unstyle-list',
 	o_nav_list_item_classes: '',
-	o_nav_list_items: o_nav_list_items
+	o_nav_list_items: o_nav_list_items,
+	o_nav_list_labelledby_attr: ''
 };
