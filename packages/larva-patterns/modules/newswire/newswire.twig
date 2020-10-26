@@ -2,9 +2,12 @@
 	{% if c_heading %}
 		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
 	{% endif %}
-	<div class="lrv-a-grid lrv-a-cols2 lrv-a-cols5@desktop lrv-a-grid-first-child-span-all@mobile-max">
+	<ul class="lrv-a-unstyle-list lrv-a-grid lrv-a-cols2 lrv-a-cols5@desktop lrv-a-grid-first-child-span-all@mobile-max"
+		{% if newswire_aria_labelledby_attr %} aria-labelledby="{{ newswire_aria_labelledby_attr }}" {% endif %}>
 		{% for item in newswire_items %}
-			{% include "@larva/objects/o-card/o-card.twig" with item %}
+			<li class="lrv-a-grid-item lrv-u-height-100p">
+				{% include "@larva/objects/o-card/o-card.twig" with item %}
+			</li>
 		{% endfor %}
-	</div>
+	</ul>
 </section>

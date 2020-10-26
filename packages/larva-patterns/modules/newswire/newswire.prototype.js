@@ -35,5 +35,6 @@ o_card.c_timestamp = c_timestamp;
 
 module.exports = {
 	c_heading: c_heading,
+	newswire_aria_labelledby_attr: c_heading.c_heading_id_attr,
 	newswire_items: [ o_card, o_card, o_card, o_card, o_card ]
 };
