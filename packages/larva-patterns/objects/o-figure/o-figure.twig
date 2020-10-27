@@ -1,5 +1,12 @@
 {% if o_figure_link_url %}
-	<a href="{{ o_figure_link_url }}" class="o-figure__link {{ o_figure_link_classes }}">
+	<a href="{{ o_figure_link_url }}" class="o-figure__link {{ o_figure_link_classes }}"
+		{% if o_figure_link_target_attr %}
+			target="{{ o_figure_link_target_attr }}"
+		{% endif %}
+		{% if o_figure_link_tabindex_attr %}
+			tabindex="{{ o_figure_link_tabindex_attr }}"
+		{% endif %}
+	>
 {% endif %}
 
 <figure class="o-figure {{ modifier_class }} {{ o_figure_classes }} lrv-u-max-width-100p" style="{{ o_figure_width_attr }}">

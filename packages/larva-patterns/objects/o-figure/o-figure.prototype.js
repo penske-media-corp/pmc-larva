@@ -6,6 +6,8 @@ const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-i
 module.exports = {
 	c_figcaption: c_figcaption,
 	c_lazy_image: c_lazy_image,
+	o_figure_link_tabindex_attr: '',
+	o_figure_link_target_attr: '_self',
 	o_figure_link_url: false,
 	o_figure_classes: '',
 	o_figure_link_classes: 'lrv-a-unstyle-link ',

@@ -18,5 +18,6 @@ for ( let i = 0; i < social.length; i++ ) {
 
 module.exports = {
 	o_social_list_classes: 'lrv-a-unstyle-list',
+	o_social_list_labelledby_attr: '',
 	o_social_list_icons: o_social_list_icons
 };

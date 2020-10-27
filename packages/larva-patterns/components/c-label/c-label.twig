@@ -1,0 +1,19 @@
+{% if c_label_tag_text %}
+<{{ c_label_tag_text }} id="{{ c_label_id_attr }}" class="c-label {{ modifier_class }} {{ c_label_classes }}" {{ c_label_data_attr }}>
+{% else %}
+<span id="{{ c_label_id_attr }}" class="c-label {{ modifier_class }} {{ c_label_classes }}" {{ c_label_data_attr }}>
+{% endif %}
+
+{% if c_label_url %}
+	<a href="{{ c_label_url }}" class="c-label__link {{ c_label_link_classes }}">
+{% endif %}
+	{{ c_label_text }}
+{% if c_label_url %}
+	</a>
+{% endif %}
+
+{% if c_label_tag_text %}
+</{{ c_label_tag_text }}>
+{% else %}
+</span>
+{% endif %}

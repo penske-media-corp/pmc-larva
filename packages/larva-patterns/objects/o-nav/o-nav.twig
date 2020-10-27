@@ -1,10 +1,18 @@
-<nav class="o-nav {{ modifier_class }} {{ o_nav_classes }}">
+{% if o_nav_screen_reader_text %}
+	<h2 id="{{ o_nav_screen_reader_id_attr }}" class="lrv-a-screen-reader-only">
+		{{ o_nav_screen_reader_text }}
+	</h2>
+{% endif %}
+<nav class="o-nav {{ modifier_class }} {{ o_nav_classes }}" data-dropdown="{{ o_nav_data_attributes }}"
+	{% if o_nav_title_id_attr %} aria-label="{{ o_nav_title_id_attr }}" {% endif %}
+	{% if o_nav_screen_reader_id_attr %} aria-labelledby="{{ o_nav_screen_reader_id_attr }}" {% endif %}>
 
 	{% if o_nav_title_text %}
 		<h4 id="{{ o_nav_title_id_attr }}" class="o-nav__title {{ o_nav_title_classes }}">{{ o_nav_title_text }}</h4>
 	{% endif %}
 
-	<ul class="o-nav__list {{ o_nav_list_classes }}" {% if o_nav_title_id_attr %} aria-labelledby="{{ o_nav_title_id_attr }}" {% endif %}>
+	<ul class="o-nav__list {{ o_nav_list_classes }}"
+		{% if o_nav_list_labelledby_attr %} aria-labelledby="{{ o_nav_list_labelledby_attr }}" {% endif %}>
 		{% for item in o_nav_list_items %}
 			<li class="o-nav__list-item {{ o_nav_list_item_classes }}">
 				{% include "@larva/components/c-link/c-link.twig" with item %}
