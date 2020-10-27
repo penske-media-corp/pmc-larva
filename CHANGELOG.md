@@ -6,12 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
-## 0.1.2 - 10-9-2020
+## 0.1.2-alpha.0 - 10-27-2020
 
 * twig-to-php-parser - Fix bug in svg include replacement
 * repo - Add travis build
 * repo - Bump node-fetch version
-
+* accessibility fixes
 
 ## 0.1.1 - 9-2-2020
 
