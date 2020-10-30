@@ -1,0 +1,29 @@
+// Line Clamp
+//
+// This algorithm does line clamping in the WebKit Flexbox Way. Refer: https://css-tricks.com/line-clampin/
+//
+// If you want to have a maximum of two lines before the overflow kicks in, the following markup will be required:
+// .a-line-clamp.a-line-clamp-2
+//
+// You can create additional classes similar to .a-line-clamp-2 if you need to have a different number of lines.
+//
+// Style Guide: Algorithms.LineClamp
+
+@import 'setup';
+
+.a-line-clamp\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		display: -webkit-box;
+		-webkit-box-orient: vertical; // stylelint-disable-line property-no-vendor-prefix
+		overflow: hidden;
+		-webkit-line-clamp: var(--line-count);
+	}
+}
+
+.a-line-clamp-2 {
+	--line-count: 2;
+}
+
+.a-line-clamp-3 {
+	--line-count: 3;
+}
