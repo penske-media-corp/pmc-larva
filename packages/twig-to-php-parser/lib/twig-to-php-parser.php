@@ -84,7 +84,6 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			'{% else %}'   => '<?php } else { ?>',
 			'{% endfor %}' => '<?php } ?>',
 			'{% if '       => '<?php if ( $',
-			'{% elseif '   => '<?php } elseif ( $',
 			'%}'           => ') { ?>',
 		];
 
