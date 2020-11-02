@@ -6,10 +6,8 @@
 		data-video-showcase-dek="{{ vlanding_video_card_link_showcase_dek_data_attr }}"
 		data-video-showcase-title="{{ vlanding_video_card_link_showcase_title_data_attr }}"
 		data-video-showcase-permalink="{{ vlanding_video_card_link_showcase_permalink_data_url }}"
-		{% if vlanding_video_card_link_showcase_type_data_attr === 'youtube' %}
-			aria-controls="youtubePlayerContainer"
-		{% elseif vlanding_video_card_link_showcase_type_data_attr === 'jwplayer' %}
-			aria-controls="jwplayerContainer"
+		{% if vlanding_video_card_link_aria_controls_attr %}
+			aria-controls="{{ vlanding_video_card_link_aria_controls_attr }}"
 		{% endif %}
 	>
 	{% else %}
