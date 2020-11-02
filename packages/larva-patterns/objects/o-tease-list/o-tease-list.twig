@@ -1,5 +1,8 @@
 <ul class="o-tease-list {{ modifier_class }} {{ o_tease_list_classes }}"
-	{% if o_tease_list_labelledby_attr %} aria-labelledby="{{ o_tease_list_labelledby_attr }}" {% endif %}>
+	{% if o_tease_list_labelledby_attr %}
+		aria-labelledby="{{ o_tease_list_labelledby_attr }}"
+	{% endif %}
+>
 	{% for item in o_tease_list_items %}
 		<li class="o-tease-list__item {{ o_tease_list_item_classes }}">
 			{% include "@larva/objects/o-tease/o-tease.twig" with item %}
