@@ -1,6 +1,21 @@
 {% if vlanding_video_card_permalink_url %}
-<a href="{{ vlanding_video_card_permalink_url }}" class="vlanding-video-card__link {{ vlanding_video_card_link_classes }}" data-video-showcase-trigger="{{ vlanding_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ vlanding_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ vlanding_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ vlanding_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ vlanding_video_card_link_showcase_permalink_data_url }}">
+	{% if vlanding_video_card_use_button %}
+	<button class="vlanding-video-card__link lrv-a-unstyle-button lrv-u-width-100p {{ vlanding_video_card_link_classes }}"
+		data-video-showcase-trigger="{{ vlanding_video_card_link_showcase_trigger_data_attr }}"
+		data-video-showcase-type="{{ vlanding_video_card_link_showcase_type_data_attr }}"
+		data-video-showcase-dek="{{ vlanding_video_card_link_showcase_dek_data_attr }}"
+		data-video-showcase-title="{{ vlanding_video_card_link_showcase_title_data_attr }}"
+		data-video-showcase-permalink="{{ vlanding_video_card_link_showcase_permalink_data_url }}"
+		{% if vlanding_video_card_link_showcase_type_data_attr == 'youtube' %}
+			aria-controls="youtubePlayerContainer"
+		{% elseif vlanding_video_card_link_showcase_type_data_attr == 'jwplayer' %}
+			aria-controls="jwplayerContainer"
+		{% endif %}
+	>
+	{% else %}
+	<a href="{{ vlanding_video_card_permalink_url }}" class="vlanding-video-card__link {{ vlanding_video_card_link_classes }}" data-video-showcase-trigger="{{ vlanding_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ vlanding_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ vlanding_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ vlanding_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ vlanding_video_card_link_showcase_permalink_data_url }}">
 	{% endif %}
+{% endif %}
 
 	<div class="vlanding-video-card {{ vlanding_video_card_classes }}" data-video-showcase-player>
 
@@ -14,7 +29,7 @@
 			{# TODO: Need c_play_badge #}
 
 			{% if vlanding_video_card_is_player %}
-				<iframe hidden frameborder="0" data-video-showcase-iframe></iframe>
+				<iframe hidden id="youtubePlayerContainer" frameborder="0" data-video-showcase-iframe></iframe>
 				<div hidden id="jwplayerContainer" data-video-showcase-jwplayer></div>
 			{% endif %}
 
@@ -30,8 +45,12 @@
 
 	</div>
 
-	{% if vlanding_video_card_permalink_url %}
-</a>
+{% if vlanding_video_card_permalink_url %}
+	{% if vlanding_video_card_use_button %}
+	</button>
+	{% else %}
+	</a>
+	{% endif %}
 {% endif %}
 
 {% if vlanding_video_card_social_share_markup %}
