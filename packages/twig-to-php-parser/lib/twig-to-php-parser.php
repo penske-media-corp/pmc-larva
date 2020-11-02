@@ -78,12 +78,13 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$twig_markup = \file_get_contents( $twig_file );
 
 		$general_replacers = [
-			'{#'           => '<?php /*' . "\n",
+			'{#'           => '<?php' . "\n/**" . "\n",
 			'#}'           => '*/' . "\n" . '?>',
 			'{% endif %}'  => '<?php } ?>',
 			'{% else %}'   => '<?php } else { ?>',
 			'{% endfor %}' => '<?php } ?>',
 			'{% if '       => '<?php if ( $',
+			'{% elseif '   => '<?php } elseif ( $',
 			'%}'           => ') { ?>',
 		];
 
