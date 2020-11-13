@@ -71,8 +71,12 @@ if( appConfiguration.projectPatternsDir ) {
 	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
 }
 
-// appConfiguration.projectPatternsDir will be assets/src/patterns - move out to assets.
-app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
+// Set static assets
+if ( appConfiguration.assetsPath ) {
+	app.use( '/assets' , express.static( appConfiguration.assetsPath ) );
+} else {
+	app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
+}
 
 app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
