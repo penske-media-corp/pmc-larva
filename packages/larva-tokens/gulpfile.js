@@ -9,7 +9,7 @@ gulp.task('default', ( done ) => {
 			format: { type: 'map.scss' }
 		}))
 		.pipe(gulp.dest('./build'));
-	
+
 	gulp.src('src/brands/*.json')
 		.pipe(theo({
 			transform: { type: 'web' },
@@ -20,7 +20,14 @@ gulp.task('default', ( done ) => {
 	gulp.src('src/brands/*.json')
 		.pipe(theo({
 			transform: { type: 'web' },
-			format: { 
+			format: { type: 'json' }
+		}))
+		.pipe(gulp.dest('./build'));
+
+	gulp.src('src/brands/*.json')
+		.pipe(theo({
+			transform: { type: 'web' },
+			format: {
 				type: 'html',
 				options: {
 					transformPropName: ( name ) =>  {
@@ -39,7 +46,7 @@ gulp.task('default', ( done ) => {
 							return a.toLowerCase() + b.toLowerCase();
 						});
 					}
-				} 
+				}
 			}
 		}))
 		.pipe(gulp.dest('./style-guides'));
