@@ -91,14 +91,14 @@ export const InitialForm = () => {
 						</select>
 					</div>
 				</Fragment>
-				<button
+				{/* <button
 					className="btn"
 					onClick={() =>
 						setSelectedToken({ ...selectedToken, action: "create" })
 					}
 				>
 					Create New Token
-				</button>
+				</button> */}
 
 				<button
 					className="btn"
