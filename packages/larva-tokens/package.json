@@ -18,13 +18,14 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "../../node_modules/.bin/gulp"
+    "build": "./node_modules/.bin/gulp"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
     "gulp-theo": "^2.0.0",
+    "gulp": "^4.0.2",
     "lodash.template": ">=4.5.0",
     "theo": "^8.1.4"
   }
