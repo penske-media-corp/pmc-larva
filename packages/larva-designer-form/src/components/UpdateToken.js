@@ -1,28 +1,38 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 
-export const UpdateToken = (props) => {
-
-	const [tokens, setTokens] = useState();
-
-	( async () => {
-		let url = 'https://gist.githubusercontent.com/laras126/20e75684dcbd65b4dc3fe84403a1243c/raw/a14143306c76c77cbe8771088429283c24a9c1d5/artnews.json';
-		let response = await fetch( url );
-
-		setTokens( await response.json() );
-	} )();
-
+export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
 	const Tokens = () => {
 		const tokensArr = [];
 
-		for ( const token in tokens ) {
-			tokensArr.push( <li key={token}>{token}: {tokens[token]}</li> );
+		for (const token in tokens) {
+			let value = tokens[token];
+			tokensArr.push(
+				<li
+					style={{
+						marginBottom: "1rem",
+					}}
+					key={token}
+				>
+					{token}: <br />
+					<input defaultValue={value} onChange={() => {}} />
+				</li>
+			);
 		}
 
 		return tokensArr;
-	}
+	};
 
-	return <Fragment>
-		{ tokens && <Tokens /> }
-		<div>{`Update ${props.tokenType} token: ${props.selectedToken}`}</div>
-	</Fragment>;
+	return (
+		<Fragment>
+			<h3>{`Update ${tokenType} token: ${selectedToken}`}</h3>
+			<ul
+				style={{
+					textAlign: "left",
+					listStyle: "none",
+				}}
+			>
+				{tokens && <Tokens />}
+			</ul>
+		</Fragment>
+	);
 };
