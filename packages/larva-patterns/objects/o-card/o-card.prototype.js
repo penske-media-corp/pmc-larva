@@ -7,6 +7,7 @@ const c_timestamp = clonedeep( require( '../../components/c-timestamp/c-timestam
 
 module.exports = {
 	o_card_classes: '',
+	o_card_tag_text: '',
 	o_card_link_url: '',
 	o_card_link_classes: '',
 	o_card_image_wrap_classes: '',
