@@ -2,6 +2,8 @@ import React, { Fragment, useState } from "react";
 
 export const UpdateToken = (props) => {
 
+	console.log( 'updatetokesn rerendering' );
+
 	const [tokens, setTokens] = useState();
 
 	( async () => {
@@ -15,14 +17,28 @@ export const UpdateToken = (props) => {
 		const tokensArr = [];
 
 		for ( const token in tokens ) {
-			tokensArr.push( <li key={token}>{token}: {tokens[token]}</li> );
+			let value = tokens[token];
+
+			tokensArr.push(
+				<li style={{
+					marginBottom: '1rem'
+				}} key={token}>{token}: <br/><input
+					defaultValue={value}
+					onChange={()=>{}}
+				/></li>
+			);
 		}
 
 		return tokensArr;
 	}
 
 	return <Fragment>
-		{ tokens && <Tokens /> }
-		<div>{`Update ${props.tokenType} token: ${props.selectedToken}`}</div>
+		<h3>{`Updating ${props.tokenType} Token: ${props.selectedToken}`}</h3>
+		<ul style={{
+			textAlign: 'left',
+			listStyle: 'none'
+		}}>
+			{ tokens && <Tokens /> }
+		</ul>
 	</Fragment>;
 };
