@@ -21,7 +21,7 @@ export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
 	}
 
 	return <Fragment>
-		<h3>{`Updating ${props.tokenType} Token: ${props.selectedToken}`}</h3>
+		<h3>{`Updating ${tokenType} Token: ${selectedToken}`}</h3>
 		<ul style={{
 			textAlign: 'left',
 			listStyle: 'none'
