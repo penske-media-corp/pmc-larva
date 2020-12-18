@@ -180,6 +180,10 @@ app.get( '/:source/css', function (req, res) {
 	twing.render( 'css.html', req.params ).then( output => res.end( output ) );
 });
 
+app.get( '/:source/tokens', function (req, res) {
+	twing.render( 'tokens.html', req.params ).then( output => res.end( output ) );
+});
+
 app.get( '/:source/:type/:name/:variant?', function (req, res) {
 
 	let patternsPath;
