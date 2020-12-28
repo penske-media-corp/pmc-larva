@@ -31,7 +31,7 @@ const oneOffStub = {
 };
 
 describe( 'getPatternData', () => {
-	
+
 	it( 'first returns the pattern object if the schema is found', () => {
 		assert.equal( getPatternData( fixture + '/src/patterns', compStub ), expectedSchema );
 	});
@@ -47,6 +47,21 @@ describe( 'getPatternData', () => {
 	it( 'gets a variant specified in params', () => {
 		compStub.variant = 'featured';
 		assert.equal( getPatternData( fixture + '/src/patterns', compStub ), expectedVariantSchema );
+	});
+
+	it( 'falls back to the larva pattern if the project pattern doens\'t exist', () => {
+		const reqObj = {
+			name: 'c-button',
+			source: 'project',
+			type: 'components',
+			variant: 'prototype'
+		};
+
+		const expectedResult = require( '@penskemediacorp/larva-patterns/components/c-button/c-button.prototype' );
+
+		const result = getPatternData( fixture + '/src/patterns', reqObj );
+
+		assert.strictEqual( result, expectedResult );
 	});
 
 });
