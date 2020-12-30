@@ -4,7 +4,7 @@
 	"description": "Larva pattern library for {brand name}.",
 	"main": "index.js",
 	"scripts": {
-	  	"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "echo \"Error: no test specified\" && exit 1",
 		"larva": "larva server --watch ./src/patterns -e twig,html,js",
 		"write-json": "larva write-json",
 		"parser": "./node_modules/.bin/twig-to-php-parser",
@@ -24,8 +24,10 @@
 		"build-icons": "larva build-icons",
 		"build-html": "larva build-html"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"@penskemediacorp/larva": "^0.1.7"
+	},
 	"devDependencies": {},
 	"author": "",
 	"license": "ISC"
-  }
+}
