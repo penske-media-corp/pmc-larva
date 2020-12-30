@@ -11,6 +11,10 @@
 
 		<link rel="stylesheet" href="/assets/build/css/larva-ui.css">
 
+		{% if query.tokens %}
+			<link rel="stylesheet" href="/assets/node_modules/@penskemediacorp/larva-tokens/build/{{ query.tokens }}.custom-properties.css">
+		{% endif %}
+
 		<script>
 			// Stub in PMC cookie object so fonts load on Larva server
 			if ( ! window.pmc ) {
@@ -32,6 +36,15 @@
 
 	</head>
 	<body class="lrv-u-margin-a-00">
+
+		{% set tokens = ['variety','indiewire','sportico','deadline','sheknows'] %}
+
+		<ul class="lrv-a-unstyle-list lrv-u-flex lrv-a-space-children lrv-a-space-children-horizontal lrv-a-space-children--1 lrv-u-background-color-white lrv-u-border-a-1" style="position:fixed;z-index:10;">
+
+		{% for t in tokens %}
+			<li><a href="?tokens={{t}}">{{t}}</a></li>
+		{% endfor %}
+		</ul>
 
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
