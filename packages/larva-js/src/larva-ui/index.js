@@ -22,5 +22,6 @@ export default function initLarvaUi() {
 			// Indicate the border of the skins
 			document.querySelector( 'html' ).style.border = '2px solid red';
 		}
+
 	} );
 }
