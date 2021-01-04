@@ -1,8 +1,8 @@
 {
-	"routes": [
+	"redirects": [
 		{
-			"src": "/tokens-form",
-			"dest": "/packages/larva-designer-form/public/index.html"
+			"source": "/tokens",
+			"destination": "/packages/larva-designer-form/public/index.html"
 		}
 	]
 }
