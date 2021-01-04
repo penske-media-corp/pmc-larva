@@ -31,7 +31,7 @@ const oneOffStub = {
 };
 
 describe( 'getPatternData', () => {
-	
+
 	it( 'first returns the pattern object if the schema is found', () => {
 		assert.equal( getPatternData( fixture + '/src/patterns', compStub ), expectedSchema );
 	});
