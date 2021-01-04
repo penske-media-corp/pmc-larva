@@ -1,0 +1,8 @@
+{
+	"routes": [
+		{
+			"src": "/tokens-form",
+			"dest": "/packages/larva-designer-form/public/index.html"
+		}
+	]
+}
