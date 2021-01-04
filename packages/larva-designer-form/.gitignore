@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# production
-/build
+# production - uncomment below when the build command is hooked up in Vercel
+# /build
 
 # misc
 .DS_Store

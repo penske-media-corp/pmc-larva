@@ -2,7 +2,7 @@
 	"redirects": [
 		{
 			"source": "/tokens",
-			"destination": "/packages/larva-designer-form/public/index.html"
+			"destination": "/packages/larva-designer-form/build/index.html"
 		}
 	]
 }
