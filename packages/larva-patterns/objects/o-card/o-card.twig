@@ -1,4 +1,8 @@
-<article class="o-card {{ o_card_classes }}">
+{% if o_card_tag_text %}
+<{{ o_card_tag_text }} class="o-card {{ modifier_class }} {{ o_card_classes }}">
+{% else %}
+<article class="o-card {{ modifier_class }} {{ o_card_classes }}">
+{% endif %}
 
 	{% if o_card_link_url %}
 		<a tabindex="0" href="{{ o_card_link_url }}" class="{{ o_card_link_classes }}">
@@ -50,4 +54,8 @@
 	</a>
 	{% endif %}
 
+{% if o_card_tag_text %}
+</{{ o_card_tag_text }}>
+{% else %}
 </article>
+{% endif %}

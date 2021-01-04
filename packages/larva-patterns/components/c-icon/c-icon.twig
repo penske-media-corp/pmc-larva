@@ -1,5 +1,12 @@
 {% if c_icon_url %}
-<a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}" {% if c_icon_rel_name %}rel="{{ c_icon_rel_name }}"{% endif %} {% if c_icon_target_attr %} target="{{ c_icon_target_attr }}" {% endif %}>
+<a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}"
+	{% if c_icon_rel_name %}
+		rel="{{ c_icon_rel_name }}"
+	{% endif %}
+	{% if c_icon_target_attr %}
+		target="{{ c_icon_target_attr }}"
+	{% endif %}
+>
 	<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
 {% endif %}
 
@@ -11,7 +18,11 @@
 	{% endif %}
 {% endif %}
 
-<svg class="c-icon {{ modifier_class }} {{ c_icon_classes }}" {% if c_icon_screen_reader_text %}aria-hidden="true" {% endif %}>
+<svg class="c-icon {{ modifier_class }} {{ c_icon_classes }}"
+	{% if c_icon_screen_reader_text %}
+		aria-hidden="true"
+	{% endif %}
+>
 	<use xlink:href="#{{ c_icon_name }}" />
 	{% if c_icon_secondary_name %}
 		<use xlink:href="#{{ c_icon_secondary_name }}" />

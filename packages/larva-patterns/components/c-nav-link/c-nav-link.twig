@@ -1,6 +1,10 @@
-<a class="c-nav-link {{ modifier_class }} {{ c_nav_link_classes }}" href="{{ c_nav_link_url }}">
+<a class="c-nav-link {{ modifier_class }} {{ c_nav_link_classes }}" href="{{ c_nav_link_url }}"
+	{% if c_nav_link_aria_current_attr %}
+		aria-current="{{ c_nav_link_aria_current_attr }}"
+	{% endif %}
+>
+	{{ c_nav_link_text }}
 	{% if c_nav_link_screen_reader_text %}
 	<span class="lrv-a-screen-reader-only">{{ c_nav_link_screen_reader_text }}</span>
 	{% endif %}
-	{{ c_nav_link_text }}
 </a>

@@ -1,5 +1,8 @@
 <ul class="o-social-list {{ modifier_class }} {{ o_social_list_classes }}"
-	{% if o_social_list_labelledby_attr %} aria-labelledby="{{ o_social_list_labelledby_attr }}" {% endif %}>
+	{% if o_social_list_labelledby_attr %}
+		aria-labelledby="{{ o_social_list_labelledby_attr }}"
+	{% endif %}
+>
 	{% for item in o_social_list_icons %}
 		<li class="o-social-list__item {{ o_social_list_item_classes }}">
 			{% include "@larva/components/c-icon/c-icon.twig" with item %}
