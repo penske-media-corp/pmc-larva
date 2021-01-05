@@ -8,7 +8,7 @@ export const baseTokens = [
 	"line-height",
 	"spacing",
 ];
-export const brandTokens = [
+export const brands = [
 	"artinamerica",
 	"artnews",
 	"deadline",

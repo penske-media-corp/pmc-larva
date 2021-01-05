@@ -5,15 +5,21 @@ export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
 		const tokensArr = [];
 
 		for ( const token in tokens ) {
-			let value = tokens[token];
 
 			tokensArr.push(
-				<li style={{
-					marginBottom: '1rem'
-				}} key={token}>{token}: <br/><input
-					defaultValue={value}
-					onChange={()=>{}}
-				/></li>
+				<div className="lrv-u-display-block lrv-u-margin-b-1"
+					key={token}>
+					<li className="ui labeled input">
+						<span className="ui label">
+							{token}:
+						</span>
+						<br/>
+						<input
+							defaultValue={tokens[token].value}
+							onChange={()=>{}}
+						/>
+					</li>
+				</div>
 			);
 		}
 
@@ -21,11 +27,8 @@ export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
 	}
 
 	return <Fragment>
-		<h3>{`Updating ${tokenType} Token: ${selectedToken}`}</h3>
-		<ul style={{
-			textAlign: 'left',
-			listStyle: 'none'
-		}}>
+		<h3 className="lrv-u-padding-b-1">{`Updating ${tokenType} Token: ${selectedToken}`}</h3>
+		<ul className="lrv-a-unstyle-list">
 			{ tokens && <Tokens /> }
 		</ul>
 	</Fragment>;

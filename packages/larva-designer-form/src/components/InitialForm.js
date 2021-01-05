@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { baseTokens, brandTokens } from "../tokens";
+import { brands } from "../data";
 import { NewToken } from "./NewToken";
 import { UpdateToken } from "./UpdateToken";
 
@@ -7,7 +7,7 @@ export const InitialForm = () => {
 	const [selectedToken, setSelectedToken] = useState({
 		action: "update",
 		type: "Brand",
-		token: "",
+		brand: "",
 	});
 	const [submitted, setSubmitted] = useState(false);
 	const [tokens, setTokens] = useState();
@@ -17,93 +17,48 @@ export const InitialForm = () => {
 		setSubmitted(true);
 
 		let url =
-			"https://gist.githubusercontent.com/laras126/20e75684dcbd65b4dc3fe84403a1243c/raw/a14143306c76c77cbe8771088429283c24a9c1d5/artnews.json";
+			'https://raw.githubusercontent.com/penske-media-corp/pmc-larva/503492cc17e1f4b5362f09ccae28209da9ee415c/packages/larva-tokens/build/' + selectedToken.brand + '.raw.json';
 		let response = await fetch(url);
-		setTokens(await response.json());
+		let json = await response.json();
+		let tokens = await json.props;
+
+		setTokens( await tokens );
 	};
 
 	if (!submitted) {
 		return (
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit} className="lrv-a-space-children lrv-a-space-children-vertical lrv-a-space-children--1">
 				<h3>
-					Which brand would you like to update? <br />
-					Select "Generic" to update the default tokens.
+					Which brand would you like to update?
 				</h3>
-				<Fragment>
-					<div className="radio">
-						<label>
-							<input
-								type="radio"
-								value="Brand"
-								checked={selectedToken.type === "Brand"}
-								onChange={() =>
-									setSelectedToken({
-										...selectedToken,
-										type: "Brand",
-									})
-								}
-							/>
-							Brand
-						</label>
-					</div>
-					<div className="radio">
-						<label>
-							<input
-								type="radio"
-								value="Default"
-								checked={selectedToken.type === "Default"}
-								onChange={() =>
-									setSelectedToken({
-										...selectedToken,
-										type: "Default",
-									})
-								}
-							/>
-							Generic
-						</label>
-					</div>
-				</Fragment>
 
-				<Fragment>
-					<h3>Select the brand you would like to update:</h3>
-					<div>
-						<select
-							name="select"
-							onChange={(e) => {
-								setSelectedToken({
-									...selectedToken,
-									token: e.target.value,
-								});
-							}}
-						>
-							<option key="select">Select</option>
-							{selectedToken.type === "Default"
-								? baseTokens.map((token) => (
-										<option key={token} value={token}>
-											{token}
-										</option>
-								  ))
-								: brandTokens.map((token) => (
-										<option key={token} value={token}>
-											{token}
-										</option>
-								  ))}
-						</select>
-					</div>
-				</Fragment>
-				{/* <button
-					className="btn"
-					onClick={() =>
-						setSelectedToken({ ...selectedToken, action: "create" })
-					}
+				<h3>Select the brand you would like to update:</h3>
+
+				<select
+					className="lrv-u-display-block lrv-u-padding-a-050 lrv-u-margin-b-2"
+					name="select"
+					onChange={(e) => {
+						setSelectedToken({
+							...selectedToken,
+							brand: e.target.value,
+						});
+					}}
 				>
-					Create New Token
-				</button> */}
+					<option key="select">Select</option>
+					{
+						selectedToken.type === "Brand"
+						&& brands.map((brand) => (
+								<option key={brand} value={brand}>
+									{brand}
+								</option>
+						))
+					}
+				</select>
 
 				<button
-					className="btn"
+					className="ui primary button lrv-u-display-inline-block"
 					type="submit"
-					disabled={!(selectedToken.type && selectedToken.token)}
+					disabled={!(selectedToken.type && selectedToken.brand)}
 				>
 					Submit
 				</button>
@@ -112,12 +67,34 @@ export const InitialForm = () => {
 	} else if (selectedToken.action === "create") {
 		return <NewToken tokenType={selectedToken.type} />;
 	} else {
+
+		const JsonForm = ( { tokensJson } ) => {
+			return (
+				<Fragment>
+					<pre>
+						<code>{ JSON.stringify( tokensJson, null, 2 ) }</code>
+					</pre>
+				</Fragment>
+			);
+		}
+
 		return (
-			<UpdateToken
-				tokenType={selectedToken.type}
-				selectedToken={selectedToken.token}
-				tokens={tokens}
-			/>
+			<Fragment>
+			<div className="lrv-a-grid lrv-a-cols2">
+				<section>
+					<UpdateToken
+						tokenType={selectedToken.type}
+						selectedToken={selectedToken.brand}
+						tokens={tokens}
+					/>
+				</section>
+				<section>
+					<JsonForm
+						tokensJson={tokens}
+					/>
+				</section>
+			</div>
+			</Fragment>
 		);
 	}
 };
