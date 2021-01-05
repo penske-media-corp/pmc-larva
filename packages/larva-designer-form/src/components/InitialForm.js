@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { brands } from "../data";
 import { NewToken } from "./NewToken";
 import { UpdateToken } from "./UpdateToken";
+import { JsonOutput } from "./JsonOutput";
 
 export const InitialForm = () => {
 	const [selectedToken, setSelectedToken] = useState({
@@ -68,28 +69,18 @@ export const InitialForm = () => {
 		return <NewToken tokenType={selectedToken.type} />;
 	} else {
 
-		const JsonForm = ( { tokensJson } ) => {
-			return (
-				<Fragment>
-					<pre>
-						<code>{ JSON.stringify( tokensJson, null, 2 ) }</code>
-					</pre>
-				</Fragment>
-			);
-		}
-
 		return (
 			<Fragment>
-			<div className="lrv-a-grid lrv-a-cols2">
-				<section>
+			<div className="lrv-a-grid lrv-a-cols3">
+				<section className="lrv-a-span2">
 					<UpdateToken
 						tokenType={selectedToken.type}
 						selectedToken={selectedToken.brand}
 						tokens={tokens}
 					/>
 				</section>
-				<section>
-					<JsonForm
+				<section className="lrv-u-width-100p lrv-u-overflow-auto">
+					<JsonOutput
 						tokensJson={tokens}
 					/>
 				</section>

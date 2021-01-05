@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { TokenListItem } from './TokenListItem';
 
 export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
 	const Tokens = () => {
@@ -9,16 +10,10 @@ export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
 			tokensArr.push(
 				<div className="lrv-u-display-block lrv-u-margin-b-1"
 					key={token}>
-					<li className="ui labeled input">
-						<span className="ui label">
-							{token}:
-						</span>
-						<br/>
-						<input
-							defaultValue={tokens[token].value}
-							onChange={()=>{}}
-						/>
-					</li>
+					<TokenListItem
+						tokenName={token}
+						tokenData={tokens[token]}
+					/>
 				</div>
 			);
 		}
