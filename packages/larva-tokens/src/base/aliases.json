@@ -7,6 +7,7 @@
 		"GREY_96": "#F7F7F7",
 		"GREY_90": "#E6E6E6",
 		"GREY_84": "#D3D7D9",
+		"GREY_86": "#DCDCDC",
 		"GREY_80": "#CCCCCC",
 		"GREY_73": "#B5BDC1",
 		"GREY_60": "#919BA0",
@@ -24,10 +25,11 @@
 		"BLACK": "#000000",
 		"BLACK_20": "#333333",
 		"REGAL_BLUE_23": "#0C4D6A",
-		"BLUE_21": "#283842",
-		"BLUE_61": "#417EF4",
 		"BLUE_13": "#151C2D",
 		"BLUE_17": "#212634",
+		"BLUE_21": "#283842",
+		"BLUE_36": "#0926A2",
+		"BLUE_61": "#417EF4",
 		"ALICE_BLUE_97": "#F1F7FC",
 		"CERULEAN_47": "#01A5ED",
 		"RED_29": "#920200",
@@ -40,6 +42,7 @@
 		"MIRAGE_14": "#1A282F",
 		"ORANGE_54": "#F37021",
 		"YELLOW_48": "#EEE809",
+		"YELLOW_59": "#F2FA33",
 		"SOURCE_SANS_PRO": "Source Sans Pro, sans-serif",
 		"BONNIE": "Bonnie, Georgia, serif",
 		"OVERPASS": "Overpass, sans-serif",
@@ -64,6 +67,8 @@
 		"GRAPHIK": "'Graphik', sans-serif",
 		"PUBLICO": "'Publico', serif",
 		"BALTO": "'Balto', Helvetica, sans-serif",
-		"EKSELL": "'Eksell', Georgia, serif"
+		"EKSELL": "'Eksell', Georgia, serif",
+		"AILERON": "'Aileron', Helvetica, sans-serif",
+		"ACUMIN_PRO_WIDE": "'Acumin Pro Wide', Helvetica, sans-serif"
 	}
 }
