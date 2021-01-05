@@ -8,7 +8,8 @@ export const JsonOutput = ( { tokensJson } ) => {
 				<p>Next, send this JSON to the engineer or product manager who requested it.</p>
 				<button className="ui button primary">Copy JSON to Clipboard</button>
 			</div>
-			<pre>
+			{/* TODO: add this to utilities, and first fix the utils */}
+			<pre className="lrv-u-height-300">
 				<code>{ JSON.stringify( tokensJson, null, 2 ) }</code>
 			</pre>
 		</div>
