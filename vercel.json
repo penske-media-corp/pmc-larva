@@ -1,8 +1,0 @@
-{
-	"redirects": [
-		{
-			"source": "/",
-			"destination": "/packages/larva-designer-form/build/"
-		}
-	]
-}
