@@ -9,7 +9,7 @@
 /coverage
 
 # production - uncomment below when the build command is hooked up in Vercel
-# /build
+/build
 
 # misc
 .DS_Store
