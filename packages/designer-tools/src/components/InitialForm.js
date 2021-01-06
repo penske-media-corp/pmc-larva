@@ -36,7 +36,7 @@ export const InitialForm = () => {
 				<h3>Select the brand you would like to update:</h3>
 
 				<select
-					className="lrv-u-display-block lrv-u-padding-a-050 lrv-u-margin-b-2"
+					className="lrv-u-display-block lrv-u-padding-a-050 lrv-u-margin-b-2 lrv-u-border-a-1 lrv-u-border-radius-5"
 					name="select"
 					onChange={(e) => {
 						setSelectedToken({
