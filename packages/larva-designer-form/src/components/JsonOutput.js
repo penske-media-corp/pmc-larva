@@ -1,5 +1,3 @@
-import { TwingNodeExpressionBinaryDiv } from "twing"
-
 export const JsonOutput = ( { tokensJson } ) => {
 	return (
 		<div className="lrv-a-glue-parent lrv-u-margin-b-2">
