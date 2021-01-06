@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Larva Designer Tools
+
+This package is a React application that provides tools for helping designers to communicate specs with engineers using Larva.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
