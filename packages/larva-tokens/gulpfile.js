@@ -27,6 +27,13 @@ gulp.task('default', ( done ) => {
 	gulp.src('src/brands/*.json')
 		.pipe(theo({
 			transform: { type: 'web' },
+			format: { type: 'raw.json' }
+		}))
+		.pipe(gulp.dest('./build'));
+
+	gulp.src('src/brands/*.json')
+		.pipe(theo({
+			transform: { type: 'web' },
 			format: {
 				type: 'html',
 				options: {

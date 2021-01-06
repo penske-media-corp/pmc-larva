@@ -27,6 +27,9 @@
     "SOURCE_SANS_PRO": {
       "value": "Source Sans Pro, sans-serif"
     },
+    "ACUMIN_PRO_WIDE": {
+      "value": "'Acumin Pro Wide', Helvetica, sans-serif"
+    },
     "OVERPASS": {
       "value": "Overpass, sans-serif"
     },
@@ -38,6 +41,9 @@
     },
     "BLUE_13": {
       "value": "#151C2D"
+    },
+    "BLUE_36": {
+      "value": "#0926A2"
     },
     "IBM_PLEX_MONO": {
       "value": "'IBM Plex Mono', monospace"
@@ -81,11 +87,17 @@
     "YELLOW_48": {
       "value": "#EEE809"
     },
+    "YELLOW_59": {
+      "value": "#F2FA33"
+    },
     "RED_46": {
       "value": "#D71440"
     },
     "ORANGE_54": {
       "value": "#F37021"
+    },
+    "AILERON": {
+      "value": "'Aileron', Helvetica, sans-serif"
     },
     "GRAPHIK": {
       "value": "'Graphik', sans-serif"
@@ -167,6 +179,9 @@
     },
     "MAHOGANY_53": {
       "value": "#CB454A"
+    },
+    "GREY_86": {
+      "value": "#DCDCDC"
     },
     "GEORGIA": {
       "value": "Georgia, serif"

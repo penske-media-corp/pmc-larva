@@ -248,63 +248,63 @@
       "name": "COLOR_BLACK"
     },
     "COLOR_BRAND_PRIMARY": {
-      "category": "text-color",
+      "value": "rgb(242, 250, 51)",
       "type": "color",
-      "value": "rgb(236, 28, 36)",
-      "originalValue": "{!PMC_RED}",
+      "category": "text-color",
+      "originalValue": "{!YELLOW_59}",
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_BRAND_SECONDARY": {
-      "category": "text-color",
+      "value": "rgb(9, 38, 162)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "category": "text-color",
+      "originalValue": "{!BLUE_36}",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
+      "value": "'Aileron', Helvetica, sans-serif",
+      "type": "font-family",
       "category": "font-family",
-      "value": "Courier, serif",
-      "type": "font",
-      "comment": "The webfont, loaded async",
-      "originalValue": "Courier, serif",
+      "comment": "The webfont for font-family-primary.",
+      "originalValue": "{!AILERON}",
       "name": "FONT_FAMILY_PRIMARY_FANCY"
     },
     "FONT_FAMILY_PRIMARY": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
       "category": "font-family",
-      "value": "Georgia, serif",
-      "type": "font",
-      "comment": "Fallback for primary-fancy",
-      "originalValue": "Georgia, serif",
+      "comment": "The fallback font for font-family-primary.",
+      "originalValue": "{!HELVETICA}",
       "name": "FONT_FAMILY_PRIMARY"
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
+      "value": "'Acumin Pro Wide', Helvetica, sans-serif",
+      "type": "font-family",
       "category": "font-family",
-      "value": "Papyrus, serif",
-      "type": "font",
-      "comment": "The webfont, loaded async",
-      "originalValue": "Papyrus, serif",
+      "comment": "Available via Typekit.",
+      "originalValue": "{!ACUMIN_PRO_WIDE}",
       "name": "FONT_FAMILY_SECONDARY_FANCY"
     },
     "FONT_FAMILY_SECONDARY": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
       "category": "font-family",
-      "value": "Helvetica, serif",
-      "type": "font",
-      "comment": "Fallback for secondary-fancy",
-      "originalValue": "Helvetica, serif",
+      "comment": "Fallback from secondary-fancy",
+      "originalValue": "{!HELVETICA}",
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
       "category": "font-family",
-      "value": "Georgia, serif",
-      "type": "font",
-      "originalValue": "Georgia, serif",
+      "originalValue": "{!HELVETICA}",
       "name": "FONT_FAMILY_BODY"
     },
     "FONT_FAMILY_BASIC": {
-      "category": "font-family",
       "value": "Helvetica, sans-serif",
       "type": "font-family",
-      "originalValue": "Helvetica, sans-serif",
+      "category": "font-family",
+      "originalValue": "{!HELVETICA}",
       "name": "FONT_FAMILY_BASIC"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
@@ -315,10 +315,10 @@
       "name": "BACKGROUND_COLOR_GREY_LIGHT"
     },
     "BACKGROUND_COLOR_GREY_LIGHTEST": {
-      "category": "background-color",
+      "value": "rgb(220, 220, 220)",
       "type": "color",
-      "value": "rgb(247, 247, 247)",
-      "originalValue": "{!GREY_96}",
+      "category": "background-color",
+      "originalValue": "{!GREY_86}",
       "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
     },
     "BACKGROUND_COLOR_GREY_DARK": {
@@ -344,11 +344,10 @@
       "name": "BACKGROUND_COLOR_BODY"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY": {
-      "category": "background-color",
+      "value": "rgb(9, 38, 162)",
       "type": "color",
-      "value": "rgb(236, 28, 36)",
-      "comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
-      "originalValue": "{!PMC_RED}",
+      "category": "background-color",
+      "originalValue": "{!BLUE_36}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BLACK": {
@@ -366,18 +365,17 @@
       "name": "BACKGROUND_COLOR_WHITE"
     },
     "BACKGROUND_COLOR_BRAND_PRIMARY": {
-      "category": "background-color",
+      "value": "rgb(242, 250, 51)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
-      "originalValue": "{!BLACK}",
+      "category": "background-color",
+      "originalValue": "{!YELLOW_59}",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_DARKEST": {
-      "category": "background-color",
+      "value": "rgb(140, 140, 140)",
       "type": "color",
-      "value": "rgb(50, 50, 50)",
-      "originalValue": "{!GREY_20}",
+      "category": "background-color",
+      "originalValue": "{!GREY_50}",
       "name": "BACKGROUND_COLOR_GREY_DARKEST"
     },
     "LINE_HEIGHT_SMALL": {
@@ -437,10 +435,10 @@
       "name": "BORDER_COLOR_WHITE"
     },
     "BORDER_COLOR_GREY_LIGHTEST": {
-      "category": "hr-color",
+      "value": "rgb(220, 220, 220)",
       "type": "color",
-      "value": "rgb(247, 247, 247)",
-      "originalValue": "{!GREY_96}",
+      "category": "hr-color",
+      "originalValue": "{!GREY_86}",
       "name": "BORDER_COLOR_GREY_LIGHTEST"
     },
     "BORDER_COLOR_GREY_LIGHT": {
@@ -465,17 +463,17 @@
       "name": "BORDER_COLOR_GREY_DARK"
     },
     "BORDER_COLOR_BRAND_PRIMARY": {
-      "category": "hr-color",
+      "value": "rgb(242, 250, 51)",
       "type": "color",
-      "value": "rgb(236, 28, 36)",
-      "originalValue": "{!PMC_RED}",
+      "category": "hr-color",
+      "originalValue": "{!YELLOW_59}",
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BORDER_COLOR_BRAND_SECONDARY": {
-      "category": "hr-color",
+      "value": "rgb(9, 38, 162)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "category": "hr-color",
+      "originalValue": "{!BLUE_36}",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "SPACING_00": {
@@ -541,6 +539,27 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
+    },
+    "COLOR_GREY_DARKEST": {
+      "value": "rgb(140, 140, 140)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "{!GREY_50}",
+      "name": "COLOR_GREY_DARKEST"
+    },
+    "COLOR_GREY_LIGHTEST": {
+      "value": "rgb(220, 220, 220)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "{!GREY_86}",
+      "name": "COLOR_GREY_LIGHTEST"
+    },
+    "BORDER_COLOR_GREY_DARKEST": {
+      "value": "rgb(140, 140, 140)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "{!GREY_50}",
+      "name": "BORDER_COLOR_GREY_DARKEST"
     }
   }
 }
