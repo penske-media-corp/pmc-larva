@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { TokenListItem } from './TokenListItem';
 
-export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
+export const TokensList = ({ action, selectedBrand, tokens }) => {
 	const Tokens = () => {
 		const tokensArr = [];
 
@@ -19,10 +19,12 @@ export const UpdateToken = ({ tokenType, selectedToken, tokens }) => {
 		}
 
 		return tokensArr;
-	}
+	};
+
+	const headingText = 'create' === action ? 'Creating New ' : 'Updating ';
 
 	return <Fragment>
-		<h3 className="lrv-u-padding-b-1">{`Updating ${tokenType} Token: ${selectedToken}`}</h3>
+		<h3 className="lrv-u-padding-b-2">{`${headingText} Tokens for `}<code className="lrv-u-background-color-grey-dark lrv-u-color-white lrv-u-border-radius-5 lrv-u-padding-tb-025 lrv-u-padding-lr-050">{selectedBrand}</code></h3>
 		<ul className="lrv-a-unstyle-list">
 			{ tokens && <Tokens /> }
 		</ul>
