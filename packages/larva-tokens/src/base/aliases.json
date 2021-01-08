@@ -68,7 +68,7 @@
 		"PUBLICO": "'Publico', serif",
 		"BALTO": "'Balto', Helvetica, sans-serif",
 		"EKSELL": "'Eksell', Georgia, serif",
-		"AILERON": "'Aileron', Helvetica, sans-serif",
-		"ACUMIN_PRO_WIDE": "'Acumin Pro Wide', Helvetica, sans-serif"
+		"AILERON": "'aileron', Helvetica, sans-serif",
+		"ACUMIN_PRO_WIDE": "'acumin-pro-wide', Helvetica, sans-serif"
 	}
 }
