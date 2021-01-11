@@ -36,9 +36,11 @@ export const TokenForm = ( { action, tokens, brandName, updateTokenValue } ) => 
 					</ul>
 				</section>
 				<section className="lrv-u-width-100p lrv-u-overflow-auto">
-					<JsonOutput
-						tokensJson={tokens}
-					/>
+					{ tokens &&
+						<JsonOutput
+							tokens={tokens}
+						/>
+					}
 				</section>
 			</div>
 		</Fragment>

@@ -1,4 +1,4 @@
-export const JsonOutput = ( { tokensJson } ) => {
+export const JsonOutput = ( { tokens } ) => {
 	return (
 		<div className="lrv-a-glue-parent lrv-u-margin-b-2">
 			<div className="lrv-u-background-color-grey-lightest lrv-u-border-a-2 lrv-u-border-radius-5 lrv-u-padding-a-1">
@@ -6,9 +6,8 @@ export const JsonOutput = ( { tokensJson } ) => {
 				<p>Next, send this JSON to the engineer or product manager who requested it.</p>
 				<button className="ui button primary">Copy JSON to Clipboard</button>
 			</div>
-			{/* TODO: add this to utilities, and first fix the utils */}
 			<pre className="lrv-u-height-300">
-				<code>{ JSON.stringify( tokensJson, null, 2 ) }</code>
+				<code>{ JSON.stringify( tokens, null, 2 ) }</code>
 			</pre>
 		</div>
 

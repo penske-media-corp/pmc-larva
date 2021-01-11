@@ -4,7 +4,7 @@ import {
 	useRouteMatch,
 } from "react-router-dom";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TokenForm } from "./TokenForm";
 import { InitialForm } from "./InitialForm";
 
@@ -25,13 +25,14 @@ export const TokensView = () => {
 	};
 
 	const updateTokenValue = (tokenKey, newValue) => {
-		console.log( tokenKey );
-		console.log( newValue );
-		console.log(tokens);
 
+		const newTokens = ((arr) => {
+			arr[tokenKey].value = newValue;
+			return arr;
+		})(tokens);
 
-		// updateToken
-	}
+		setTokens(newTokens);
+	};
 
 	const fetchAndSetTokens = async (e) => {
 
