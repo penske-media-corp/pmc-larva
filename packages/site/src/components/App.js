@@ -10,7 +10,7 @@ import { TokensView } from "./TokensView";
 
 export const App = () => (
 	<Router>
-		<div className="App lrv-a-space-children-vertical lrv-a-space-children--1">
+		<div className="lrv-a-space-children-vertical lrv-a-space-children--1">
 			<header className="lrv-u-flex lrv-u-align-items-center lrv-u-padding-tb-1 lrv-u-border-b-1">
 				<h1 className="lrv-u-margin-r-1">Larva Helpers Site</h1>
 				<nav>

@@ -10,6 +10,7 @@ import { InitialForm } from "./InitialForm";
 
 export const TokensView = () => {
 	let match = useRouteMatch();
+
 	const [selectedBrand, setSelectedBrand] = useState({
 		action: "",
 		brand: "",
@@ -22,6 +23,15 @@ export const TokensView = () => {
 			brand, action
 		});
 	};
+
+	const updateTokenValue = (tokenKey, newValue) => {
+		console.log( tokenKey );
+		console.log( newValue );
+		console.log(tokens);
+
+
+		// updateToken
+	}
 
 	const fetchAndSetTokens = async (e) => {
 
@@ -36,16 +46,12 @@ export const TokensView = () => {
 		setTokens( await tokens );
 	};
 
-	const updateTokens = () => {
-		console.log();
-	}
-
 	return (
 		<Switch>
 			<Route path={`${match.url}/:action`}>
 				<TokenForm
 					tokens={tokens}
-					updateTokens={updateTokens}
+					updateTokenValue={updateTokenValue}
 					brandName={selectedBrand.brand}
 					action={selectedBrand.action}
 				/>
@@ -54,7 +60,6 @@ export const TokensView = () => {
 				<InitialForm
 					fetchAndSetTokens={fetchAndSetTokens}
 					handleUpdateBrand={handleUpdateBrand}
-
 					selectedBrand={selectedBrand}
 				/>
 			</Route>

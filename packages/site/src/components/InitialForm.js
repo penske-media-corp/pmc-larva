@@ -25,9 +25,9 @@ export const InitialForm = ( {fetchAndSetTokens, handleUpdateBrand, selectedBran
 						<option key="select">Select</option>
 						{
 							brands.map((brand) => (
-									<option key={brand} value={brand}>
-										{brand}
-									</option>
+								<option key={brand} value={brand}>
+									{brand}
+								</option>
 							))
 						}
 					</select>

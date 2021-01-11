@@ -1,4 +1,4 @@
-export const TokenListItem = ({ tokenName, tokenData }) => {
+export const TokenListItem = ({ tokenName, tokenData, updateTokenValue }) => {
 	return (
 		<li className="ui labeled input">
 			<span className="ui label">
@@ -7,7 +7,7 @@ export const TokenListItem = ({ tokenName, tokenData }) => {
 			<br/>
 			<input
 				defaultValue={tokenData.value}
-				onChange={()=>{}}
+				onChange={(e) => updateTokenValue(tokenName, e.target.value)}
 			/>
 			{ 'color' === tokenData.type ?
 				<div
