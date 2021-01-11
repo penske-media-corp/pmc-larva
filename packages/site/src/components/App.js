@@ -6,7 +6,7 @@ import {
 	Link
   } from "react-router-dom";
 
-import { InitialForm } from "./InitialForm";
+import { TokensView } from "./TokensView";
 
 export const App = () => (
 	<Router>
@@ -24,7 +24,7 @@ export const App = () => (
 			</header>
 			<Switch>
 				<Route path="/tokens">
-					<InitialForm />
+					<TokensView />
 				</Route>
 				<Route path="/">
 					<p>Welcome to the Larva helpers site! So far, this site contains a tool for helping to create design tokens.</p>
