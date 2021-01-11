@@ -14,7 +14,7 @@ export const TokensView = () => {
 		action: "",
 		brand: "",
 	});
-	const [submitted, setSubmitted] = useState(false);
+
 	const [tokens, setTokens] = useState();
 
 	const handleUpdateBrand = (brand, action) => {
@@ -36,11 +36,16 @@ export const TokensView = () => {
 		setTokens( await tokens );
 	};
 
+	const updateTokens = () => {
+		console.log();
+	}
+
 	return (
 		<Switch>
 			<Route path={`${match.url}/:action`}>
 				<TokenForm
 					tokens={tokens}
+					updateTokens={updateTokens}
 					brandName={selectedBrand.brand}
 					action={selectedBrand.action}
 				/>
@@ -49,7 +54,7 @@ export const TokensView = () => {
 				<InitialForm
 					fetchAndSetTokens={fetchAndSetTokens}
 					handleUpdateBrand={handleUpdateBrand}
-					submitted={submitted}
+
 					selectedBrand={selectedBrand}
 				/>
 			</Route>
