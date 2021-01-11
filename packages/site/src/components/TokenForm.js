@@ -4,8 +4,6 @@ import { JsonOutput } from "./JsonOutput";
 
 export const TokenForm = ( { action, tokens, brandName } ) => {
 
-	console.log(tokens);
-
 	return (
 		<Fragment>
 			<div className="lrv-a-grid lrv-a-cols3">

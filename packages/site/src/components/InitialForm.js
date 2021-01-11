@@ -1,14 +1,11 @@
 import {
-	Link,
-	Route
+	Link
 } from "react-router-dom";
 
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { brands } from "../data";
-import { NewToken } from "./NewToken";
-import { TokenForm } from "./TokenForm";
 
-export const InitialForm = ( {handleSubmit, handleUpdateBrand, submitted, selectedBrand}) => {
+export const InitialForm = ( {fetchAndSetTokens, handleUpdateBrand, submitted, selectedBrand}) => {
 
 	if (!submitted) {
 
@@ -16,7 +13,7 @@ export const InitialForm = ( {handleSubmit, handleUpdateBrand, submitted, select
 			<Fragment>
 				<p className="lrv-u-font-size-18">Choose from the following options for working with Design Tokens.</p>
 
-				<form onSubmit={handleSubmit} className="lrv-a-grid lrv-a-cols2">
+				<form className="lrv-a-grid lrv-a-cols2">
 					<div className="lrv-a-space-children-vertical lrv-a-space-children--1">
 						<h2>Update a Brand's Tokens</h2>
 						<p className="lrv-u-font-size-18">Select the brand you would like to update:</p>
@@ -41,12 +38,14 @@ export const InitialForm = ( {handleSubmit, handleUpdateBrand, submitted, select
 							<button
 								className="ui primary button lrv-u-display-inline-block"
 								type="submit"
+								onClick={fetchAndSetTokens}
 								disabled={!( 'update' === selectedBrand.action )}
 							>
 								Continue to Update Tokens
 							</button>
 						</Link>
 					</div>
+
 					<div className="lrv-a-space-children-vertical lrv-a-space-children--1">
 						<h2>Create Tokens for a New Brand</h2>
 						<p className="lrv-u-font-size-18">Enter the name of the brand in all lowercase, one word text:</p>
@@ -69,6 +68,7 @@ export const InitialForm = ( {handleSubmit, handleUpdateBrand, submitted, select
 									className="ui primary button lrv-u-display-inline-block"
 									type="submit"
 									disabled={! ( 'create' === selectedBrand.action )}
+									onClick={fetchAndSetTokens}
 								>
 									Continue to Create Tokens
 								</button>

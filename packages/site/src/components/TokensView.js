@@ -1,14 +1,10 @@
 import {
-	BrowserRouter as Router,
-	Link,
 	Route,
 	Switch,
 	useRouteMatch,
 } from "react-router-dom";
 
-import React, { Fragment, useState } from "react";
-import { brands } from "../data";
-import { NewToken } from "./NewToken";
+import React, { useState } from "react";
 import { TokenForm } from "./TokenForm";
 import { InitialForm } from "./InitialForm";
 
@@ -27,10 +23,7 @@ export const TokensView = () => {
 		});
 	};
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-
-		setSubmitted(true);
+	const fetchAndSetTokens = async (e) => {
 
 		const brand = 'create' === selectedBrand.action ? 'default' : selectedBrand.brand;
 
@@ -48,13 +41,13 @@ export const TokensView = () => {
 			<Route path={`${match.url}/:action`}>
 				<TokenForm
 					tokens={tokens}
-					brandName={selectedBrand.name}
+					brandName={selectedBrand.brand}
 					action={selectedBrand.action}
 				/>
 			</Route>
 			<Route path={`${match.url}`}>
 				<InitialForm
-					handleSubmit={handleSubmit}
+					fetchAndSetTokens={fetchAndSetTokens}
 					handleUpdateBrand={handleUpdateBrand}
 					submitted={submitted}
 					selectedBrand={selectedBrand}
