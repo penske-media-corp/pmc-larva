@@ -9,6 +9,7 @@ import { TokenForm } from "./TokenForm";
 import { InitialForm } from "./InitialForm";
 
 export const TokensView = () => {
+
 	let match = useRouteMatch();
 
 	const [selectedBrand, setSelectedBrand] = useState({
@@ -47,6 +48,10 @@ export const TokensView = () => {
 		setTokens( await tokens );
 	};
 
+	const saveJsonToFile = () => {
+		alert('wow!');
+	};
+
 	return (
 		<Switch>
 			<Route path={`${match.url}/:action`}>
@@ -55,6 +60,7 @@ export const TokensView = () => {
 					updateTokenValue={updateTokenValue}
 					brandName={selectedBrand.brand}
 					action={selectedBrand.action}
+					saveJsonToFile={saveJsonToFile}
 				/>
 			</Route>
 			<Route path={`${match.url}`}>

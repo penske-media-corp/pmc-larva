@@ -3,10 +3,9 @@ import {
 } from "react-router-dom";
 
 import React, { Fragment } from "react";
-import { JsonOutput } from "./JsonOutput";
 import { TokenListItem } from './TokenListItem';
 
-export const TokenForm = ( { action, tokens, brandName, updateTokenValue } ) => {
+export const TokenForm = ( { action, tokens, brandName, updateTokenValue, saveJsonToFile } ) => {
 
 	const Tokens = () => {
 		const tokensArr = [];
@@ -61,9 +60,18 @@ export const TokenForm = ( { action, tokens, brandName, updateTokenValue } ) => 
 				</section>
 				<section className="lrv-u-width-100p lrv-u-overflow-auto">
 					{ tokens &&
-						<JsonOutput
-							tokens={tokens}
-						/>
+						<div className="lrv-a-glue-parent lrv-u-margin-b-2">
+							<div className="lrv-u-background-color-grey-lightest lrv-u-border-a-2 lrv-u-border-radius-5 lrv-u-padding-a-1">
+								<h3 className="lrv-u-margin-b-1">When you are finished...</h3>
+								<p>Press the button below to copy the JSON to your clipboard.</p>
+								<p>Next, send this JSON to the engineer or product manager who requested it.</p>
+								<button
+									className="ui button primary"
+									onClick={saveJsonToFile}>
+										Copy JSON to Clipboard
+								</button>
+							</div>
+						</div>
 					}
 				</section>
 			</div>
