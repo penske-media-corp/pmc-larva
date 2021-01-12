@@ -4,7 +4,7 @@ const LARVA_PORT = 3001;
 module.exports = {
 
 	eslint: {
-		configFile: './scripts/config/.eslintrc.json'
+		configFile: path.join( __dirname, './scripts/config/.eslintrc.json' )
 	},
 
 	webpack: {
