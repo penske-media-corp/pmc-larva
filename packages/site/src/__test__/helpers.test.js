@@ -1,4 +1,7 @@
-import { getCoreColorsFromTokens, updateTokensWithCoreColors } from "../helpers";
+import {
+	getCoreColorsFromTokens,
+	getUpdatedTokensWithCoreColors,
+} from "../helpers";
 
 describe("Core Color Tokens", () => {
 	const tokens = {
@@ -116,7 +119,7 @@ describe("Core Color Tokens", () => {
 		);
 	});
 
-	it( 'should update tokens that use the core color', () => {
+	it("should update tokens that use the core color", () => {
 		const tokensToUpdate = {
 			SPACING_2: {
 				category: "spacing",
@@ -146,7 +149,7 @@ describe("Core Color Tokens", () => {
 				value: "rgb(236, 28, 36)",
 				originalValue: "{!PMC_RED}",
 				name: "COLOR_BRAND_PRIMARY",
-			}
+			},
 		};
 
 		const coreColorTokens = {
@@ -187,13 +190,14 @@ describe("Core Color Tokens", () => {
 				value: "rgb(111, 111, 111)",
 				originalValue: "{!PMC_RED}",
 				name: "COLOR_BRAND_PRIMARY",
-			}
+			},
 		};
 
-		const result = updateTokensWithCoreColors( tokensToUpdate, coreColorTokens );
+		const result = getUpdatedTokensWithCoreColors(
+			tokensToUpdate,
+			coreColorTokens
+		);
 
-		expect( result ).toStrictEqual( expectedResult );
-
+		expect(result).toStrictEqual(expectedResult);
 	});
-
 });

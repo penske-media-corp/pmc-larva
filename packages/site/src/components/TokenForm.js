@@ -9,6 +9,7 @@ export const TokenForm = ({
 	coreColorTokens,
 	brandName,
 	updateTokenValue,
+	updateTokensWithCoreColors,
 	saveJsonToFile,
 	copyText,
 }) => {
@@ -34,9 +35,7 @@ export const TokenForm = ({
 		return (
 			<Fragment>
 				<h3 className="lrv-u-margin-b-1">All Tokens</h3>
-				<ul className="lrv-a-unstyle-list">
-					{ tokenLisItems }
-				</ul>
+				<ul className="lrv-a-unstyle-list">{tokenLisItems}</ul>
 			</Fragment>
 		);
 	};
@@ -44,7 +43,7 @@ export const TokenForm = ({
 	const CoreColorTokens = () => {
 		const colorListItems = [];
 
-		for ( const color in coreColorTokens ) {
+		for (const color in coreColorTokens) {
 			colorListItems.push(
 				<TokenListItem
 					key={color}
@@ -58,10 +57,20 @@ export const TokenForm = ({
 		return (
 			<Fragment>
 				<h3 className="lrv-u-margin-b-1">Core Colors</h3>
-				<p>These core color tokens will update any tokens containing the color key in their name. If the token value below is updated to be different that this core value, it will no longer be "linked" to this core color value.</p>
-				<ul className="lrv-a-unstyle-list">
-					{ colorListItems }
-				</ul>
+				<p>
+					These core color tokens will update any tokens containing
+					the color key in their name. If the token value below is
+					updated to be different that this core value, it will no
+					longer be "linked" to this core color value.
+				</p>
+				<div className="lrv-u-margin-b-1">
+					<button
+						className="ui button lrv-u-display-inline-block"
+						onClick={updateTokensWithCoreColors}>
+							Update Tokens With Core Colors
+					</button>
+				</div>
+				<ul className="lrv-a-unstyle-list">{colorListItems}</ul>
 			</Fragment>
 		);
 	};
@@ -103,9 +112,7 @@ export const TokenForm = ({
 			<div className="lrv-a-grid lrv-a-cols3">
 				<section className="lrv-a-span2">
 					<Header />
-					<section>
-						{tokens && <CoreColorTokens />}
-					</section>
+					<section>{tokens && <CoreColorTokens />}</section>
 					<section className="lrv-u-margin-t-2">
 						{tokens && <Tokens />}
 					</section>

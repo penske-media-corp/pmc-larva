@@ -3,7 +3,7 @@ import { Route, Switch, useRouteMatch } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { TokenForm } from "./TokenForm";
 import { InitialForm } from "./InitialForm";
-import { getCoreColorsFromTokens } from '../helpers';
+import { getCoreColorsFromTokens, getUpdatedTokensWithCoreColors } from "../helpers";
 
 export const TokensView = () => {
 	let match = useRouteMatch();
@@ -20,7 +20,7 @@ export const TokensView = () => {
 	const [copied, setCopied] = useState(false);
 	const [copyText, setCopyText] = useState("");
 	const [canSaveFile] = useState(supportsshowSaveFilePicker);
-	const [coreColorTokens, setCoreColorTokens ] = useState( {} );
+	const [coreColorTokens, setCoreColorTokens] = useState({});
 
 	// Handle the updates that are side effects of the
 	// check for browser support
@@ -40,11 +40,8 @@ export const TokensView = () => {
 	// Handle updating the tokens state when we update
 	// the core colors state to "link" the values.
 	useEffect(() => {
-		// todo: when coreColorTokens is updated,
-		// find all token keys
-		// matching those of the coreColorTokens and update them
-		// to the coreColorToken value
 
+		// setTokens( newTokens );
 
 	}, [tokens, coreColorTokens]);
 
@@ -56,18 +53,22 @@ export const TokensView = () => {
 	};
 
 	const updateTokenValue = (tokenData, newValue) => {
-
-		const updateAllTokensWithNewValue = ( tokensObj, updateStateFn ) => {
+		const updateValueHelper = (tokensObj, updateStateFn) => {
 			tokensObj[tokenData.name].value = newValue;
 
-			updateStateFn( tokensObj );
+			updateStateFn(tokensObj);
 		};
 
-		if ( tokenData.category !== 'core-color' ) {
-			updateAllTokensWithNewValue( tokens, setTokens );
+		if (tokenData.category !== "core-color") {
+			updateValueHelper(tokens, setTokens);
 		} else {
-			updateAllTokensWithNewValue( coreColorTokens, setCoreColorTokens );
+			updateValueHelper(coreColorTokens, setCoreColorTokens);
 		}
+	};
+
+	const updateTokensWithCoreColors = () => {
+		const newTokens = getUpdatedTokensWithCoreColors( tokens, coreColorTokens );
+		setTokens( newTokens );
 	};
 
 	const fetchAndSetTokens = async (e) => {
@@ -82,14 +83,14 @@ export const TokensView = () => {
 		let json = await response.json();
 		let tokens = await json.props;
 		let sortedKeys = await Object.keys(tokens).sort();
-		let sortedTokens = sortedKeys.reduce( ( tokensObj, key ) => {
+		let sortedTokens = sortedKeys.reduce((tokensObj, key) => {
 			tokensObj[key] = tokens[key];
-			return tokensObj
+			return tokensObj;
 		}, {});
 
-		let reducedColorTokens = await getCoreColorsFromTokens( tokens );
-		let sortedColorKeys = Object.keys( reducedColorTokens ).sort();
-		let sortedColorTokens = sortedColorKeys.reduce( ( sortedColors, key ) => {
+		let reducedColorTokens = await getCoreColorsFromTokens(tokens);
+		let sortedColorKeys = Object.keys(reducedColorTokens).sort();
+		let sortedColorTokens = sortedColorKeys.reduce((sortedColors, key) => {
 			sortedColors[key] = reducedColorTokens[key];
 			return sortedColors;
 		}, {});
@@ -143,6 +144,7 @@ export const TokensView = () => {
 				<TokenForm
 					tokens={tokens}
 					updateTokenValue={updateTokenValue}
+					updateTokensWithCoreColors={updateTokensWithCoreColors}
 					brandName={selectedBrand.brand}
 					action={selectedBrand.action}
 					saveJsonToFile={saveJsonToFile}
