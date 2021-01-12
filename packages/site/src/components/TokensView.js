@@ -61,7 +61,15 @@ export const TokensView = () => {
 		let json = await response.json();
 		let tokens = await json.props;
 
-		setTokens(await tokens);
+		let sortedKeys = await Object.keys( tokens ).sort();
+
+		let sortedTokens = {};
+
+		sortedKeys.map( ( key ) => {
+			return sortedTokens[key] = tokens[key];
+		})
+
+		setTokens(sortedTokens);
 	};
 
 	/**
