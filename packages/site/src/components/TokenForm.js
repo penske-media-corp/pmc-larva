@@ -33,38 +33,36 @@ export const TokenForm = ({
 	};
 
 	const CoreColorTokens = () => {
-
-		const colorNames = (() => {
-			let keys = Object.keys( tokens );
-			let colorKeys = keys.filter( key => key.includes( 'COLOR' ) );
-			let colorNames = colorKeys.map( key => key.split( 'COLOR_' )[1] );
-			let reducedColorNames = colorNames.reduce( ( colors, color ) => {
-				if ( ! colors.includes( color ) ) {
-					colors.push( color )
+		const colorValues = (() => {
+			let keys = Object.keys(tokens);
+			let colorKeys = keys.filter((key) => key.includes("COLOR"));
+			let colorValues = colorKeys.map((key) => key.split("COLOR_")[1]);
+			let reducedColorValues = colorValues.reduce((colors, color) => {
+				if (!colors.includes(color)) {
+					colors.push(color);
 				}
 
 				return colors;
-			}, [] );
+			}, []);
 
-
-			return reducedColorNames;
+			return reducedColorValues;
 		})();
 
 		const coreColorsArr = [];
 
-		colorNames.forEach( ( color ) => {
+		colorValues.forEach((color) => {
 			coreColorsArr.push(
 				<TokenListItem
 					key={color}
 					tokenName={color}
-					tokenData={''}
+					tokenData={""}
 					updateTokenValue={updateTokenValue}
 				/>
 			);
 		});
 
 		return coreColorsArr;
-	}
+	};
 
 	const Header = () => {
 		const headingText = "create" === action ? "Creating New " : "Updating ";
