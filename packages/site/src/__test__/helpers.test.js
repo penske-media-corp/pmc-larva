@@ -1,6 +1,6 @@
-import { reduceColorValues } from "../helpers";
+import { getCoreColorsFromTokens, updateTokensWithCoreColors } from "../helpers";
 
-describe("Reduce Tokens to Core Colors", () => {
+describe("Core Color Tokens", () => {
 	const tokens = {
 		SPACING_2: {
 			category: "spacing",
@@ -74,10 +74,10 @@ describe("Reduce Tokens to Core Colors", () => {
 			},
 		};
 
-		expect(reduceColorValues(tokens)).toStrictEqual(expected);
+		expect(getCoreColorsFromTokens(tokens)).toStrictEqual(expected);
 	});
 
-	it("should not include a color name if it does not have consistent values", () => {
+	it("should not include color as a core color if it does not have consistent values across tokens", () => {
 		const tokensWithUnlinkedColors = {
 			...tokens,
 			COLOR_BRAND_ACCENT: {
@@ -111,8 +111,89 @@ describe("Reduce Tokens to Core Colors", () => {
 			},
 		};
 
-		expect(reduceColorValues(tokensWithUnlinkedColors)).toStrictEqual(
+		expect(getCoreColorsFromTokens(tokensWithUnlinkedColors)).toStrictEqual(
 			expected
 		);
 	});
+
+	it( 'should update tokens that use the core color', () => {
+		const tokensToUpdate = {
+			SPACING_2: {
+				category: "spacing",
+				type: "unit",
+				comment: "Used for margins and padding only.",
+				value: "2rem",
+				originalValue: "2rem",
+				name: "SPACING_2",
+			},
+			BACKGROUND_COLOR_BRAND_PRIMARY: {
+				category: "background-color",
+				type: "color",
+				value: "rgb(236, 28, 36)",
+				originalValue: "{!PMC_RED}",
+				name: "BORDER_COLOR_BRAND_PRIMARY",
+			},
+			BORDER_COLOR_BRAND_PRIMARY: {
+				category: "hr-color",
+				type: "color",
+				value: "rgb(236, 28, 36)",
+				originalValue: "{!PMC_RED}",
+				name: "BORDER_COLOR_BRAND_PRIMARY",
+			},
+			COLOR_BRAND_PRIMARY: {
+				category: "text-color",
+				type: "color",
+				value: "rgb(236, 28, 36)",
+				originalValue: "{!PMC_RED}",
+				name: "COLOR_BRAND_PRIMARY",
+			}
+		};
+
+		const coreColorTokens = {
+			BRAND_PRIMARY: {
+				type: "color",
+				value: "rgb(111, 111, 111)",
+				name: "BRAND_PRIMARY",
+				category: "core-color",
+			},
+		};
+
+		const expectedResult = {
+			SPACING_2: {
+				category: "spacing",
+				type: "unit",
+				comment: "Used for margins and padding only.",
+				value: "2rem",
+				originalValue: "2rem",
+				name: "SPACING_2",
+			},
+			BACKGROUND_COLOR_BRAND_PRIMARY: {
+				category: "background-color",
+				type: "color",
+				value: "rgb(111, 111, 111)",
+				originalValue: "{!PMC_RED}",
+				name: "BORDER_COLOR_BRAND_PRIMARY",
+			},
+			BORDER_COLOR_BRAND_PRIMARY: {
+				category: "hr-color",
+				type: "color",
+				value: "rgb(111, 111, 111)",
+				originalValue: "{!PMC_RED}",
+				name: "BORDER_COLOR_BRAND_PRIMARY",
+			},
+			COLOR_BRAND_PRIMARY: {
+				category: "text-color",
+				type: "color",
+				value: "rgb(111, 111, 111)",
+				originalValue: "{!PMC_RED}",
+				name: "COLOR_BRAND_PRIMARY",
+			}
+		};
+
+		const result = updateTokensWithCoreColors( tokensToUpdate, coreColorTokens );
+
+		expect( result ).toStrictEqual( expectedResult );
+
+	});
+
 });

@@ -3,7 +3,7 @@ import { Route, Switch, useRouteMatch } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { TokenForm } from "./TokenForm";
 import { InitialForm } from "./InitialForm";
-import { reduceColorValues } from '../helpers';
+import { getCoreColorsFromTokens } from '../helpers';
 
 export const TokensView = () => {
 	let match = useRouteMatch();
@@ -22,6 +22,8 @@ export const TokensView = () => {
 	const [canSaveFile] = useState(supportsshowSaveFilePicker);
 	const [coreColorTokens, setCoreColorTokens ] = useState( {} );
 
+	// Handle the updates that are side effects of the
+	// check for browser support
 	useEffect(() => {
 		const beforeText = canSaveFile
 			? "Save JSON to File"
@@ -35,6 +37,17 @@ export const TokensView = () => {
 		}
 	}, [copied, copyText, canSaveFile]);
 
+	// Handle updating the tokens state when we update
+	// the core colors state to "link" the values.
+	useEffect(() => {
+		// todo: when coreColorTokens is updated,
+		// find all token keys
+		// matching those of the coreColorTokens and update them
+		// to the coreColorToken value
+
+
+	}, [tokens, coreColorTokens]);
+
 	const handleUpdateBrand = (brand, action) => {
 		setSelectedBrand({
 			brand,
@@ -44,19 +57,17 @@ export const TokensView = () => {
 
 	const updateTokenValue = (tokenData, newValue) => {
 
-		const getUpdatedTokens = ( tokensObj ) => {
+		const updateAllTokensWithNewValue = ( tokensObj, updateStateFn ) => {
 			tokensObj[tokenData.name].value = newValue;
-			return tokensObj;
+
+			updateStateFn( tokensObj );
 		};
 
 		if ( tokenData.category !== 'core-color' ) {
-			const newTokens = getUpdatedTokens( tokens );
-
-			setTokens( newTokens );
+			updateAllTokensWithNewValue( tokens, setTokens );
+		} else {
+			updateAllTokensWithNewValue( coreColorTokens, setCoreColorTokens );
 		}
-
-		// todo: when core colors are updated,
-		// update other tokens in a useEffect
 	};
 
 	const fetchAndSetTokens = async (e) => {
@@ -70,15 +81,13 @@ export const TokensView = () => {
 		let response = await fetch(url);
 		let json = await response.json();
 		let tokens = await json.props;
-
 		let sortedKeys = await Object.keys(tokens).sort();
-
 		let sortedTokens = sortedKeys.reduce( ( tokensObj, key ) => {
 			tokensObj[key] = tokens[key];
 			return tokensObj
 		}, {});
 
-		let reducedColorTokens = await reduceColorValues( tokens );
+		let reducedColorTokens = await getCoreColorsFromTokens( tokens );
 		let sortedColorKeys = Object.keys( reducedColorTokens ).sort();
 		let sortedColorTokens = sortedColorKeys.reduce( ( sortedColors, key ) => {
 			sortedColors[key] = reducedColorTokens[key];
