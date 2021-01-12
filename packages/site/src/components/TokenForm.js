@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 import React, { Fragment } from "react";
 import { TokenListItem } from "./TokenListItem";
-import { reduceColorValues } from '../helpers';
 
 export const TokenForm = ({
 	action,
 	tokens,
+	coreColorTokens,
 	brandName,
 	updateTokenValue,
 	saveJsonToFile,
@@ -35,22 +35,15 @@ export const TokenForm = ({
 	};
 
 	const CoreColorTokens = () => {
-
-		let colors = reduceColorValues( tokens );
-		let sortedColorKeys = Object.keys( colors ).sort();
-		let sortedColors = sortedColorKeys.reduce( ( colors, key ) => {
-			colors[key] = tokens[key];
-			return colors
-		}, {});
-
 		const coreColorsArr = [];
-
-		for ( const color in sortedColors ) {
+		console.log(coreColorTokens);
+		for ( const color in coreColorTokens ) {
+			// console.log(coreColorTokens[color]);
 			coreColorsArr.push(
 				<TokenListItem
 					key={color}
 					tokenName={color}
-					tokenData={colors[color]}
+					tokenData={coreColorTokens[color]}
 					updateTokenValue={updateTokenValue}
 				/>
 			);

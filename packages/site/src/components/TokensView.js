@@ -3,6 +3,7 @@ import { Route, Switch, useRouteMatch } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { TokenForm } from "./TokenForm";
 import { InitialForm } from "./InitialForm";
+import { reduceColorValues } from '../helpers';
 
 export const TokensView = () => {
 	let match = useRouteMatch();
@@ -19,6 +20,7 @@ export const TokensView = () => {
 	const [copied, setCopied] = useState(false);
 	const [copyText, setCopyText] = useState("");
 	const [canSaveFile] = useState(supportsshowSaveFilePicker);
+	const [coreColorTokens, setCoreColorTokens ] = useState( {} );
 
 	useEffect(() => {
 		const beforeText = canSaveFile
@@ -68,6 +70,14 @@ export const TokensView = () => {
 			return tokensObj
 		}, {});
 
+		let reducedColorTokens = await reduceColorValues( tokens );
+		let sortedColorKeys = Object.keys( reducedColorTokens ).sort();
+		let sortedColorTokens = sortedColorKeys.reduce( ( sortedColors, key ) => {
+			sortedColors[key] = reducedColorTokens[key];
+			return sortedColors;
+		}, {});
+
+		setCoreColorTokens(sortedColorTokens);
 		setTokens(sortedTokens);
 	};
 
@@ -120,6 +130,7 @@ export const TokensView = () => {
 					action={selectedBrand.action}
 					saveJsonToFile={saveJsonToFile}
 					copyText={copyText}
+					coreColorTokens={coreColorTokens}
 					copied={copied}
 				/>
 			</Route>
