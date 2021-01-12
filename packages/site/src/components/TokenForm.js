@@ -66,8 +66,9 @@ export const TokenForm = ({
 				<div className="lrv-u-margin-b-1">
 					<button
 						className="ui button lrv-u-display-inline-block"
-						onClick={updateTokensWithCoreColors}>
-							Update Tokens With Core Colors
+						onClick={updateTokensWithCoreColors}
+					>
+						Update Tokens With Core Colors
 					</button>
 				</div>
 				<ul className="lrv-a-unstyle-list">{colorListItems}</ul>

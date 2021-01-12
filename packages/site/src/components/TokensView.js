@@ -3,7 +3,10 @@ import { Route, Switch, useRouteMatch } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { TokenForm } from "./TokenForm";
 import { InitialForm } from "./InitialForm";
-import { getCoreColorsFromTokens, getUpdatedTokensWithCoreColors } from "../helpers";
+import {
+	getCoreColorsFromTokens,
+	getUpdatedTokensWithCoreColors,
+} from "../helpers";
 
 export const TokensView = () => {
 	let match = useRouteMatch();
@@ -40,9 +43,7 @@ export const TokensView = () => {
 	// Handle updating the tokens state when we update
 	// the core colors state to "link" the values.
 	useEffect(() => {
-
 		// setTokens( newTokens );
-
 	}, [tokens, coreColorTokens]);
 
 	const handleUpdateBrand = (brand, action) => {
@@ -67,8 +68,11 @@ export const TokensView = () => {
 	};
 
 	const updateTokensWithCoreColors = () => {
-		const newTokens = getUpdatedTokensWithCoreColors( tokens, coreColorTokens );
-		setTokens( newTokens );
+		const newTokens = getUpdatedTokensWithCoreColors(
+			tokens,
+			coreColorTokens
+		);
+		setTokens(newTokens);
 	};
 
 	const fetchAndSetTokens = async (e) => {
