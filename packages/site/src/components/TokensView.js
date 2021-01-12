@@ -31,7 +31,7 @@ export const TokensView = () => {
 		} else {
 			setCopyText(beforeText);
 		}
-	}, [copied, copyText]);
+	}, [copied, copyText, canSaveFile]);
 
 	const handleUpdateBrand = (brand, action) => {
 		setSelectedBrand({
@@ -61,13 +61,12 @@ export const TokensView = () => {
 		let json = await response.json();
 		let tokens = await json.props;
 
-		let sortedKeys = await Object.keys( tokens ).sort();
+		let sortedKeys = await Object.keys(tokens).sort();
 
-		let sortedTokens = {};
-
-		sortedKeys.map( ( key ) => {
-			sortedTokens[key] = tokens[key];
-		})
+		let sortedTokens = sortedKeys.reduce( ( tokensObj, key ) => {
+			tokensObj[key] = tokens[key];
+			return tokensObj
+		}, {});
 
 		setTokens(sortedTokens);
 	};

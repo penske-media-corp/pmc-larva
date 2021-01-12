@@ -14,7 +14,7 @@ export const reduceColorValues = ( tokens ) => {
 
 	let keys = Object.keys( tokens );
 	let colorKeys = keys.filter( key => key.includes( 'COLOR' ) );
-	let colorValues = colorKeys.map( ( key ) => {
+	let colorTokens = colorKeys.map( ( key ) => {
 		let obj = {};
 		let name = key.split( 'COLOR_' )[1];
 		obj[name] = tokens[key].value;
@@ -22,7 +22,7 @@ export const reduceColorValues = ( tokens ) => {
 		return obj;
 	});
 
-	let reducedColorValues = colorValues.reduce( ( colors, color ) => {
+	let reducedColorTokens = colorTokens.reduce( ( colors, color ) => {
 		let currKey = Object.keys( color )[0];
 		let currValue = color[currKey];
 
@@ -36,11 +36,15 @@ export const reduceColorValues = ( tokens ) => {
 			}
 
 		} else {
-			colors[currKey] = color[currKey];
+			colors[currKey] = {
+				value: color[currKey],
+				name: currKey,
+				type: 'color'
+			};
 		}
 
 		return colors;
 	}, {} );
 
-	return reducedColorValues;
+	return reducedColorTokens;
 };

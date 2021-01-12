@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import React, { Fragment } from "react";
 import { TokenListItem } from "./TokenListItem";
+import { reduceColorValues } from '../helpers';
 
 export const TokenForm = ({
 	action,
@@ -21,6 +22,7 @@ export const TokenForm = ({
 					key={token}
 				>
 					<TokenListItem
+						key={token}
 						tokenName={token}
 						tokenData={tokens[token]}
 						updateTokenValue={updateTokenValue}
@@ -33,33 +35,26 @@ export const TokenForm = ({
 	};
 
 	const CoreColorTokens = () => {
-		const colorValues = (() => {
-			let keys = Object.keys(tokens);
-			let colorKeys = keys.filter((key) => key.includes("COLOR"));
-			let colorValues = colorKeys.map((key) => key.split("COLOR_")[1]);
-			let reducedColorValues = colorValues.reduce((colors, color) => {
-				if (!colors.includes(color)) {
-					colors.push(color);
-				}
 
-				return colors;
-			}, []);
-
-			return reducedColorValues;
-		})();
+		let colors = reduceColorValues( tokens );
+		let sortedColorKeys = Object.keys( colors ).sort();
+		let sortedColors = sortedColorKeys.reduce( ( colors, key ) => {
+			colors[key] = tokens[key];
+			return colors
+		}, {});
 
 		const coreColorsArr = [];
 
-		colorValues.forEach((color) => {
+		for ( const color in sortedColors ) {
 			coreColorsArr.push(
 				<TokenListItem
 					key={color}
 					tokenName={color}
-					tokenData={""}
+					tokenData={colors[color]}
 					updateTokenValue={updateTokenValue}
 				/>
 			);
-		});
+		}
 
 		return coreColorsArr;
 	};

@@ -4,7 +4,7 @@ export const TokenListItem = ({ tokenName, tokenData, updateTokenValue }) => {
 	const [tokenPreviewValue, setTokenPreviewValue] = useState(tokenData.value);
 
 	return (
-		<li className="lrv-u-display-block lrv-u-margin-b-1">
+		<li className="lrv-u-display-block lrv-u-margin-b-1" key={tokenName}>
 			<div className="ui labeled input">
 				<span className="ui label">{tokenName}:</span>
 				<br />

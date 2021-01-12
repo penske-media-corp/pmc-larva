@@ -1,6 +1,6 @@
 import { reduceColorValues } from "../helpers";
 
-describe("Core Color Filtering", () => {
+describe("Reduce Tokens to Core Colors", () => {
 	const tokens = {
 		SPACING_2: {
 			category: "spacing",
@@ -60,8 +60,16 @@ describe("Core Color Filtering", () => {
 
 	it("should reduce tokens object to core color names and values", () => {
 		const expected = {
-			BRAND_PRIMARY: "rgb(236, 28, 36)",
-			BRAND_SECONDARY: "rgb(0, 0, 0)",
+			BRAND_PRIMARY: {
+				type: "color",
+				value: "rgb(236, 28, 36)",
+				name: "BRAND_PRIMARY",
+			},
+			BRAND_SECONDARY: {
+				type: "color",
+				value: "rgb(0, 0, 0)",
+				name: "BRAND_SECONDARY",
+			},
 		};
 
 		expect(reduceColorValues(tokens)).toStrictEqual(expected);
@@ -75,20 +83,28 @@ describe("Core Color Filtering", () => {
 				type: "color",
 				value: "rgb(12, 0, 0)",
 				originalValue: "{!BLACK}",
-				name: "COLOR_BRAND_SECONDARY",
+				name: "COLOR_BRAND_ACCENT",
 			},
 			BACKGROUND_COLOR_BRAND_ACCENT: {
 				category: "background-color",
 				type: "color",
 				value: "rgb(0, 12, 0)",
 				originalValue: "{!BLACK}",
-				name: "COLOR_BRAND_SECONDARY",
+				name: "BACKGROUND_COLOR_BRAND_ACCENT",
 			},
 		};
 
 		const expected = {
-			BRAND_PRIMARY: "rgb(236, 28, 36)",
-			BRAND_SECONDARY: "rgb(0, 0, 0)",
+			BRAND_PRIMARY: {
+				type: "color",
+				value: "rgb(236, 28, 36)",
+				name: "BRAND_PRIMARY",
+			},
+			BRAND_SECONDARY: {
+				type: "color",
+				value: "rgb(0, 0, 0)",
+				name: "BRAND_SECONDARY",
+			},
 		};
 
 		expect(reduceColorValues(tokensWithUnlinkedColors)).toStrictEqual(
