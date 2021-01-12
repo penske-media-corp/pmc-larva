@@ -13,10 +13,10 @@ export const TokenForm = ({
 	copyText,
 }) => {
 	const Tokens = () => {
-		const tokensArr = [];
+		const tokenLisItems = [];
 
 		for (const token in tokens) {
-			tokensArr.push(
+			tokenLisItems.push(
 				<div
 					className="lrv-u-display-block lrv-u-margin-b-1"
 					key={token}
@@ -31,14 +31,21 @@ export const TokenForm = ({
 			);
 		}
 
-		return tokensArr;
+		return (
+			<Fragment>
+				<h3 className="lrv-u-margin-b-1">All Tokens</h3>
+				<ul className="lrv-a-unstyle-list">
+					{ tokenLisItems }
+				</ul>
+			</Fragment>
+		);
 	};
 
 	const CoreColorTokens = () => {
-		const coreColorsArr = [];
+		const colorListItems = [];
 
 		for ( const color in coreColorTokens ) {
-			coreColorsArr.push(
+			colorListItems.push(
 				<TokenListItem
 					key={color}
 					tokenName={color}
@@ -48,7 +55,15 @@ export const TokenForm = ({
 			);
 		}
 
-		return coreColorsArr;
+		return (
+			<Fragment>
+				<h3 className="lrv-u-margin-b-1">Core Colors</h3>
+				<p>These core color tokens will update any tokens containing the color key in their name. If the token value below is updated to be different that this core value, it will no longer be "linked" to this core color value.</p>
+				<ul className="lrv-a-unstyle-list">
+					{ colorListItems }
+				</ul>
+			</Fragment>
+		);
 	};
 
 	const Header = () => {
@@ -88,18 +103,14 @@ export const TokenForm = ({
 			<div className="lrv-a-grid lrv-a-cols3">
 				<section className="lrv-a-span2">
 					<Header />
-
-					<h3 className="lrv-u-margin-b-1">Core Colors</h3>
-					<p>These colors are repeated </p>
-					<ul className="lrv-a-unstyle-list">
+					<section>
 						{tokens && <CoreColorTokens />}
-					</ul>
-					<h3 className="lrv-u-margin-b-1">Tokens</h3>
-					<ul className="lrv-a-unstyle-list">
+					</section>
+					<section className="lrv-u-margin-t-2">
 						{tokens && <Tokens />}
-					</ul>
+					</section>
 				</section>
-				<section className="lrv-u-width-100p lrv-u-overflow-auto">
+				<aside className="lrv-u-width-100p lrv-u-overflow-auto">
 					{tokens && (
 						<div className="lrv-a-glue-parent lrv-u-margin-b-2">
 							<div className="lrv-u-background-color-grey-lightest lrv-u-border-a-2 lrv-u-border-radius-5 lrv-u-padding-a-1">
@@ -123,7 +134,7 @@ export const TokenForm = ({
 							</div>
 						</div>
 					)}
-				</section>
+				</aside>
 			</div>
 		</Fragment>
 	);
