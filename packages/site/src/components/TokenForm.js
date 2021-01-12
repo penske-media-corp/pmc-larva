@@ -36,9 +36,8 @@ export const TokenForm = ({
 
 	const CoreColorTokens = () => {
 		const coreColorsArr = [];
-		console.log(coreColorTokens);
+
 		for ( const color in coreColorTokens ) {
-			// console.log(coreColorTokens[color]);
 			coreColorsArr.push(
 				<TokenListItem
 					key={color}

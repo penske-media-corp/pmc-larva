@@ -42,13 +42,21 @@ export const TokensView = () => {
 		});
 	};
 
-	const updateTokenValue = (tokenKey, newValue) => {
-		const newTokens = ((arr) => {
-			arr[tokenKey].value = newValue;
-			return arr;
-		})(tokens);
+	const updateTokenValue = (tokenData, newValue) => {
 
-		setTokens(newTokens);
+		const getUpdatedTokens = ( tokensObj ) => {
+			tokensObj[tokenData.name].value = newValue;
+			return tokensObj;
+		};
+
+		if ( tokenData.category !== 'core-color' ) {
+			const newTokens = getUpdatedTokens( tokens );
+
+			setTokens( newTokens );
+		}
+
+		// todo: when core colors are updated,
+		// update other tokens in a useEffect
 	};
 
 	const fetchAndSetTokens = async (e) => {

@@ -39,7 +39,8 @@ export const reduceColorValues = ( tokens ) => {
 			colors[currKey] = {
 				value: color[currKey],
 				name: currKey,
-				type: 'color'
+				type: 'color',
+				category: 'core-color'
 			};
 		}
 

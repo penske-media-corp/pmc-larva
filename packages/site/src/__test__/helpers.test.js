@@ -64,11 +64,13 @@ describe("Reduce Tokens to Core Colors", () => {
 				type: "color",
 				value: "rgb(236, 28, 36)",
 				name: "BRAND_PRIMARY",
+				category: "core-color",
 			},
 			BRAND_SECONDARY: {
 				type: "color",
 				value: "rgb(0, 0, 0)",
 				name: "BRAND_SECONDARY",
+				category: "core-color",
 			},
 		};
 
@@ -99,11 +101,13 @@ describe("Reduce Tokens to Core Colors", () => {
 				type: "color",
 				value: "rgb(236, 28, 36)",
 				name: "BRAND_PRIMARY",
+				category: "core-color",
 			},
 			BRAND_SECONDARY: {
 				type: "color",
 				value: "rgb(0, 0, 0)",
 				name: "BRAND_SECONDARY",
+				category: "core-color",
 			},
 		};
 

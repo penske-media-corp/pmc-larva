@@ -12,7 +12,7 @@ export const TokenListItem = ({ tokenName, tokenData, updateTokenValue }) => {
 					defaultValue={tokenData.value}
 					onChange={(e) => {
 						setTokenPreviewValue(e.target.value);
-						updateTokenValue(tokenName, e.target.value);
+						updateTokenValue(tokenData, e.target.value);
 					}}
 				/>
 				{"color" === tokenData.type ? (
