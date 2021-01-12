@@ -32,28 +32,62 @@ export const TokenForm = ({
 		return tokensArr;
 	};
 
+	const CoreColorTokens = () => {
+
+		const colorNames = (() => {
+			let keys = Object.keys( tokens );
+			let colorKeys = keys.filter( key => key.includes( 'COLOR' ) );
+			let colorNames = colorKeys.map( key => key.split( 'COLOR_' )[1] );
+			let reducedColorNames = colorNames.reduce( ( colors, color ) => {
+				if ( ! colors.includes( color ) ) {
+					colors.push( color )
+				}
+
+				return colors;
+			}, [] );
+
+
+			return reducedColorNames;
+		})();
+
+		const coreColorsArr = [];
+
+		colorNames.forEach( ( color ) => {
+			coreColorsArr.push(
+				<TokenListItem
+					key={color}
+					tokenName={color}
+					tokenData={''}
+					updateTokenValue={updateTokenValue}
+				/>
+			);
+		});
+
+		return coreColorsArr;
+	}
+
 	const Header = () => {
 		const headingText = "create" === action ? "Creating New " : "Updating ";
 
 		if (!!brandName) {
 			return (
 				<Fragment>
-					<h3 className="lrv-u-padding-b-2">
+					<h2 className="lrv-u-padding-b-2">
 						{headingText} Tokens for{" "}
 						<code className="lrv-u-background-color-grey-dark lrv-u-color-white lrv-u-border-radius-5 lrv-u-padding-tb-025 lrv-u-padding-lr-050">
 							{brandName}
 						</code>
-					</h3>
+					</h2>
 				</Fragment>
 			);
 		}
 
 		return (
 			<Fragment>
-				<h3 className="lrv-u-padding-b-2">
+				<h2 className="lrv-u-padding-b-2">
 					Oops! You need to specify a brand and action on the initial
 					tokens form.
-				</h3>
+				</h2>
 				<Link
 					className="lrv-u-display-inline-block ui button primary"
 					to="/tokens"
@@ -70,6 +104,12 @@ export const TokenForm = ({
 				<section className="lrv-a-span2">
 					<Header />
 
+					<h3 className="lrv-u-margin-b-1">Core Colors</h3>
+					<p>These colors are repeated </p>
+					<ul className="lrv-a-unstyle-list">
+						{tokens && <CoreColorTokens />}
+					</ul>
+					<h3 className="lrv-u-margin-b-1">Tokens</h3>
 					<ul className="lrv-a-unstyle-list">
 						{tokens && <Tokens />}
 					</ul>

@@ -66,7 +66,7 @@ export const TokensView = () => {
 		let sortedTokens = {};
 
 		sortedKeys.map( ( key ) => {
-			return sortedTokens[key] = tokens[key];
+			sortedTokens[key] = tokens[key];
 		})
 
 		setTokens(sortedTokens);
