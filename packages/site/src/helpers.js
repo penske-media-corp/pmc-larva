@@ -61,13 +61,13 @@ export const getCoreColorsFromTokens = ( tokens ) => {
  *
  * @returns The full tokens object.
  */
-export const updateTokensWithCoreColors = ( tokensToUpdate, coreColors ) => {
+export const getUpdatedTokensWithCoreColors = ( tokensToUpdate, coreColors ) => {
 
 	const tokenKeys = Object.keys( tokensToUpdate );
 
 	const colorTokenReducer = ( newTokens, key ) => {
 
-		let fullToken = { ... tokensToUpdate[key] };
+		let fullToken = { ...tokensToUpdate[key] };
 
 		if ( key.includes( 'COLOR_' ) ) {
 
