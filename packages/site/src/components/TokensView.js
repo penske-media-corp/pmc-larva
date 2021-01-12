@@ -56,7 +56,7 @@ export const TokensView = () => {
 		const brand = 'create' === selectedBrand.action ? 'default' : selectedBrand.brand;
 
 		let url =
-			'https://raw.githubusercontent.com/penske-media-corp/pmc-larva/503492cc17e1f4b5362f09ccae28209da9ee415c/packages/larva-tokens/build/' + brand + '.raw.json';
+			'https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/' + brand + '.raw.json';
 		let response = await fetch(url);
 		let json = await response.json();
 		let tokens = await json.props;
