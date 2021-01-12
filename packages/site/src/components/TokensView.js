@@ -17,7 +17,23 @@ export const TokensView = () => {
 		brand: "",
 	});
 
+	const supportsshowSaveFilePicker = () => undefined !== window.showSaveFilePicker;
+
 	const [tokens, setTokens] = useState();
+	const [copied, setCopied] = useState( false );
+	const [copyText, setCopyText] = useState( '' );
+	const [canSaveFile ] = useState( supportsshowSaveFilePicker );
+
+	useEffect( () => {
+		const beforeText = canSaveFile ?'Save JSON to File' : 'Copy JSON to Clipboard';
+		const afterText = canSaveFile ? 'Saved!' : 'Copied!';
+
+		if ( copied ) {
+			setCopyText( afterText );
+		} else {
+			setCopyText( beforeText );
+		}
+	}, [copied, copyText])
 
 	const handleUpdateBrand = (brand, action) => {
 		setSelectedBrand({
@@ -48,9 +64,40 @@ export const TokensView = () => {
 		setTokens( await tokens );
 	};
 
-	const saveJsonToFile = () => {
-		alert('wow!');
+	/**
+	 * Save JSON to file for browsers that support it, and fallback to
+	 * copy to clipboard for browsers that don't.
+	 *
+	 * @see https://developer.mozilla.org/en-US/docs/Web/API/window/showSaveFilePicker
+	 */
+	const saveJsonToFile = async () => {
+
+		if ( canSaveFile ) {
+			const tokensBlob = new Blob([JSON.stringify(tokens, null, 2)], {type : 'application/json'});
+
+			// create a new handle
+			const newHandle = await window.showSaveFilePicker({
+				types: [{
+					name: selectedBrand.brand,
+					accept: {'text/json': ['.json']},
+				}],
+			});
+
+			// create a FileSystemWritableFileStream to write to
+			const writableStream = await newHandle.createWritable();
+
+			// write our file
+			await writableStream.write(tokensBlob);
+
+			// close the file and write the contents to disk.
+			await writableStream.close();
+		} else {
+			await navigator.clipboard.writeText( JSON.stringify(tokens, null, 2) );
+		}
+
+		setCopied( true );
 	};
+
 
 	return (
 		<Switch>
@@ -61,6 +108,8 @@ export const TokensView = () => {
 					brandName={selectedBrand.brand}
 					action={selectedBrand.action}
 					saveJsonToFile={saveJsonToFile}
+					copyText={copyText}
+					copied={copied}
 				/>
 			</Route>
 			<Route path={`${match.url}`}>

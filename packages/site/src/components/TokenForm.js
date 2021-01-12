@@ -5,7 +5,7 @@ import {
 import React, { Fragment } from "react";
 import { TokenListItem } from './TokenListItem';
 
-export const TokenForm = ( { action, tokens, brandName, updateTokenValue, saveJsonToFile } ) => {
+export const TokenForm = ( { action, tokens, brandName, updateTokenValue, saveJsonToFile, copyText } ) => {
 
 	const Tokens = () => {
 		const tokensArr = [];
@@ -68,7 +68,7 @@ export const TokenForm = ( { action, tokens, brandName, updateTokenValue, saveJs
 								<button
 									className="ui button primary"
 									onClick={saveJsonToFile}>
-										Copy JSON to Clipboard
+										{ copyText }
 								</button>
 							</div>
 						</div>
