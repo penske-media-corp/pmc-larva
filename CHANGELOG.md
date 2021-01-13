@@ -4,13 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+* larva-tokens - Add json and raw json formats to tokens build, and run build.
+* Minor dependency updates
+
 ## 0.1.9 - 01-12-2021
 
 * Add support to use app root .eslintrc file 
 * Add option to get config function to fallback to package global default  
 
 ## 0.1.8 - 01-05-2021
-
 * larva-tokens - Add Vibe design tokens.
 ## 0.1.7 - 11-04-2020
 * Fix larva-patterns/modules/social-share/social-share.twig to use square bracket notation for accessing submodule values
