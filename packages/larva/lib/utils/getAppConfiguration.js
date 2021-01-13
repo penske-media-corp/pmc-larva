@@ -12,12 +12,12 @@ const path = require( 'path' );
  * (this is a problem for writing project-level tests, but for a later time.)
  *
  * @param {string} key string that indicates a specific configuration property, e.g. patterns.
- * @param {boolean} use_package_default fall back to package default if not defined in app
+ * @param {boolean} usePackageDefault fall back to package default if not defined in app
  *
  * @returns value of the specified key.
  */
 
-module.exports = function getAppConfiguration( key, use_package_default ) {
+module.exports = function getAppConfiguration( key, usePackageDefault ) {
 
 	try {
 		let appRoot = process.cwd();
