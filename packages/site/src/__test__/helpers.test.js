@@ -4,7 +4,7 @@ import {
 } from "../helpers";
 
 describe("Core Color Tokens", () => {
-	const tokens = {
+	const tokensBase = {
 		SPACING_2: {
 			category: "spacing",
 			type: "unit",
@@ -62,6 +62,25 @@ describe("Core Color Tokens", () => {
 	};
 
 	it("should reduce tokens object to core color names and values", () => {
+
+		const tokens = {
+			COLOR_BLACK: {
+				category: "text-color",
+				type: "color",
+				value: "rgb(0, 0, 0)",
+				originalValue: "{!BLACK}",
+				name: "COLOR_BLACK",
+			},
+			BACKGROUND_COLOR_BLACK: {
+				category: "background-color",
+				type: "color",
+				value: "rgb(0, 0, 0)",
+				originalValue: "{!BLACK}",
+				name: "BACKGROUND_COLOR_BLACK",
+			},
+			...tokensBase,
+
+		}
 		const expected = {
 			BRAND_PRIMARY: {
 				type: "color",
@@ -75,6 +94,12 @@ describe("Core Color Tokens", () => {
 				name: "BRAND_SECONDARY",
 				category: "core-color",
 			},
+			BLACK: {
+				type: "color",
+				value: "rgb(0, 0, 0)",
+				name: "BLACK",
+				category: "core-color",
+			},
 		};
 
 		expect(getCoreColorsFromTokens(tokens)).toStrictEqual(expected);
@@ -82,7 +107,7 @@ describe("Core Color Tokens", () => {
 
 	it("should not include color as a core color if it does not have consistent values across tokens", () => {
 		const tokensWithUnlinkedColors = {
-			...tokens,
+			...tokensBase,
 			COLOR_BRAND_ACCENT: {
 				category: "text-color",
 				type: "color",

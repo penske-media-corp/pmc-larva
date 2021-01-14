@@ -1,3 +1,5 @@
+import { loadPartialConfig } from "@babel/core";
+
 /**
  * Reduce color tokens to a set of "Core Colors".
  *
@@ -37,14 +39,14 @@ export const getCoreColorsFromTokens = ( tokens ) => {
 				delete colors[currKey];
 			}
 
-		} else {
-			colors[currKey] = {
-				value: color[currKey],
-				name: currKey,
-				type: 'color',
-				category: 'core-color'
-			};
 		}
+
+		colors[currKey] = {
+			value: color[currKey],
+			name: currKey,
+			type: 'color',
+			category: 'core-color'
+		};
 
 		return colors;
 	}, {} );
