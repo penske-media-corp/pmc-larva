@@ -1,5 +1,3 @@
-import { loadPartialConfig } from "@babel/core";
-
 /**
  * Reduce color tokens to a set of "Core Colors".
  *
@@ -21,34 +19,55 @@ export const getCoreColorsFromTokens = ( tokens ) => {
 	let colorTokens = colorKeys.map( ( key ) => {
 		let obj = {};
 		let name = key.split( 'COLOR_' )[1];
-		obj[name] = tokens[key].value;
+		obj[name] = {
+			value: tokens[key].value,
+			name: name,
+			type: 'color',
+			category: 'core-color'
+		};
 
 		return obj;
 	});
 
-	let reducedColorTokens = colorTokens.reduce( ( colors, color ) => {
+	let colorsToIgnore = [];
+	let count = 0;
+	let reducedColorTokens = colorTokens.reduce( ( colorsAcc, color ) => {
+		count++;
+
 		let currKey = Object.keys( color )[0];
-		let currValue = color[currKey];
+		let currValue = color[currKey].value;
 
-		// If the color was already added to the object...
-		if ( colors.hasOwnProperty( currKey ) ) {
+		// If the color was already added to the object and is not to be ignored...
+		if ( colorsAcc.hasOwnProperty( currKey ) && ! colorsToIgnore.includes( currKey ) ) {
+			let accValue = colorsAcc[ currKey ].value;
 
-			// ...compare the values. If they are different, remove
-			// the color key because it can no longer be a core color.
-			if ( colors[ currKey ] !== currValue ) {
-				delete colors[currKey];
+			console.log('Its already been added and is not in the ignored array');
+			// ...compare the values.
+			// They are the same, return and continue to the next item.
+			if ( accValue === currValue ) {
+				console.log( accValue, ' matches ', currValue, ' so return' );
+				return colorsAcc;
 			}
+
+			// They are different. Delete the property and add it
+			// to the ignore list because this is no longer a repeated color.
+			delete colorsAcc[currKey];
+			colorsToIgnore.push( currKey );
+
+			return colorsAcc;
 
 		}
 
-		colors[currKey] = {
-			value: color[currKey],
+		// This is a color not yet in the object, add it.
+		colorsAcc[currKey] = {
+			value: currValue,
 			name: currKey,
 			type: 'color',
 			category: 'core-color'
 		};
 
-		return colors;
+		return colorsAcc;
+
 	}, {} );
 
 	return reducedColorTokens;
