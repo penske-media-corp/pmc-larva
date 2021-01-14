@@ -479,10 +479,10 @@
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BORDER_COLOR_BRAND_SECONDARY": {
-      "category": "hr-color",
+      "value": "rgb(241, 247, 252)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "category": "border-color",
+      "originalValue": "{!ALICE_BLUE_97}",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "SPACING_00": {
