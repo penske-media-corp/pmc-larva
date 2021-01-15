@@ -12,9 +12,10 @@
  *
  * @returns An object of core color tokens who's keys are only the color name.
  */
-export const getCoreColorsFromTokens = ( tokens ) => {
-
-	const colorKeys = Object.keys( tokens ).filter( key => key.includes( 'COLOR_' ) );
+export const getCoreColorsFromTokens = (tokens) => {
+	const colorKeys = Object.keys(tokens).filter((key) =>
+		key.includes("COLOR_")
+	);
 
 	/**
 	 * Create a store for values associated with each color token so
@@ -23,12 +24,12 @@ export const getCoreColorsFromTokens = ( tokens ) => {
 	 * @return Object keys for the color names and a list of values
 	 *         used for each color.
 	 */
-	const colorTokenValuesStore = colorKeys.reduce( ( valuesAcc, key ) => {
-		const name = key.split( 'COLOR_' )[1];
+	const colorTokenValuesStore = colorKeys.reduce((valuesAcc, key) => {
+		const name = key.split("COLOR_")[1];
 		const { value } = tokens[key];
 
-		if ( valuesAcc.hasOwnProperty( name ) ) {
-			valuesAcc[name].push( value );
+		if (valuesAcc.hasOwnProperty(name)) {
+			valuesAcc[name].push(value);
 			return valuesAcc;
 		}
 
@@ -37,7 +38,6 @@ export const getCoreColorsFromTokens = ( tokens ) => {
 		return valuesAcc;
 	}, {});
 
-
 	/**
 	 * Build an object containing tokens for each of the colors
 	 * that have consistent values across all tokens so that these
@@ -45,21 +45,28 @@ export const getCoreColorsFromTokens = ( tokens ) => {
 	 *
 	 * @returns Object containing the "core color tokens"
 	 */
-	const coreColorTokens = Object.keys( colorTokenValuesStore ).reduce( ( colorsAcc, colorKey ) => {
-		const colorValuesList = colorTokenValuesStore[colorKey];
-		const colorHasRepetetiveValues = colorValuesList.filter( ( currValue, index ) => currValue !== colorValuesList[ index + 1] ).length === 1;
+	const coreColorTokens = Object.keys(colorTokenValuesStore).reduce(
+		(colorsAcc, colorKey) => {
+			const colorValuesList = colorTokenValuesStore[colorKey];
+			const colorHasRepetetiveValues =
+				colorValuesList.filter(
+					(currValue, index) =>
+						currValue !== colorValuesList[index + 1]
+				).length === 1;
 
-		if ( colorHasRepetetiveValues ) {
-			colorsAcc[colorKey] = {
-				name: colorKey,
-				type: 'color',
-				value: colorValuesList[0],
-				category: 'core-color',
+			if (colorHasRepetetiveValues) {
+				colorsAcc[colorKey] = {
+					name: colorKey,
+					type: "color",
+					value: colorValuesList[0],
+					category: "core-color",
+				};
 			}
-		}
 
-		return colorsAcc;
-	}, {});
+			return colorsAcc;
+		},
+		{}
+	);
 
 	return coreColorTokens;
 };
@@ -73,29 +80,26 @@ export const getCoreColorsFromTokens = ( tokens ) => {
  *
  * @returns The full tokens object.
  */
-export const getUpdatedTokensWithCoreColors = ( tokensToUpdate, coreColors ) => {
+export const getUpdatedTokensWithCoreColors = (tokensToUpdate, coreColors) => {
+	const tokenKeys = Object.keys(tokensToUpdate);
 
-	const tokenKeys = Object.keys( tokensToUpdate );
-
-	const colorTokenReducer = ( newTokens, key ) => {
-
+	const colorTokenReducer = (newTokens, key) => {
 		const fullToken = { ...tokensToUpdate[key] };
 
-		if ( key.includes( 'COLOR_' ) ) {
+		if (key.includes("COLOR_")) {
+			const coreColorName = key.split("COLOR_")[1];
 
-			const coreColorName = key.split( 'COLOR_' )[1];
-
-			if ( coreColors.hasOwnProperty( coreColorName ) ) {
+			if (coreColors.hasOwnProperty(coreColorName)) {
 				fullToken.value = coreColors[coreColorName].value;
 			}
 		}
 
 		newTokens[key] = {
-			...fullToken
+			...fullToken,
 		};
 
 		return newTokens;
 	};
 
-	return tokenKeys.reduce( colorTokenReducer, {});
+	return tokenKeys.reduce(colorTokenReducer, {});
 };
