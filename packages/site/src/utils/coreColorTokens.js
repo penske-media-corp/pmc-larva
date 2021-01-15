@@ -8,7 +8,7 @@
  * e.g. for COLOR_BRAND_PRIMARY, BORDER_COLOR_BRAND_PRIMARY, BACKGROUND_COLOR_BRAND_PRIMARY
  * this method will return a single BRAND_PRIMARY if all of the above are the same value.
  *
- * @param {Object} tokens The raw.json format of design tokens
+ * @param {Object} tokens The raw.json format of design tokens stored in the `tokens` state
  *
  * @returns An object of core color tokens who's keys are only the color name.
  */
@@ -21,7 +21,7 @@ export const getCoreColorsFromTokens = (tokens) => {
 	 * Create a store for values associated with each color token so
 	 * we can determine if any of the colors names are not repeatable.
 	 *
-	 * @return Object keys for the color names and a list of values
+	 * @return Object containing keys for the color names and a list of values
 	 *         used for each color.
 	 */
 	const colorTokenValuesStore = colorKeys.reduce((valuesAcc, key) => {
@@ -39,22 +39,21 @@ export const getCoreColorsFromTokens = (tokens) => {
 	}, {});
 
 	/**
-	 * Build an object containing tokens for each of the colors
-	 * that have consistent values across all tokens so that these
-	 * values can be managed in one place.
+	 * Build an object containing tokens for each of the colors that
+	 * are "core colors" i.e. that have consistent values across all tokens.
 	 *
-	 * @returns Object containing the "core color tokens"
+	 * @returns Object containing the "core color" tokens
 	 */
 	const coreColorTokens = Object.keys(colorTokenValuesStore).reduce(
 		(colorsAcc, colorKey) => {
 			const colorValuesList = colorTokenValuesStore[colorKey];
-			const colorHasRepetetiveValues =
+			const colorHasConsistentValues =
 				colorValuesList.filter(
 					(currValue, index) =>
 						currValue !== colorValuesList[index + 1]
 				).length === 1;
 
-			if (colorHasRepetetiveValues) {
+			if (colorHasConsistentValues) {
 				colorsAcc[colorKey] = {
 					name: colorKey,
 					type: "color",
