@@ -6,7 +6,7 @@ import { InitialForm } from "./InitialForm";
 import {
 	getCoreColorsFromTokens,
 	getUpdatedTokensWithCoreColors,
-} from "../helpers";
+} from "../utils/coreColorTokens";
 
 export const TokensView = () => {
 	let match = useRouteMatch();

@@ -1,6 +1,7 @@
-# Larva Designer Tools
+# Larva React Site
 
-This package is a React application that provides tools for helping designers to communicate specs with engineers using Larva.
+This package is a React application that provides a site built with React that is deployed to the root of this repo.
+At present, the site contains a tool for designers and product managers to create and update design tokens.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

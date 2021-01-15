@@ -1,7 +1,7 @@
 import {
 	getCoreColorsFromTokens,
 	getUpdatedTokensWithCoreColors,
-} from "../helpers";
+} from "../../utils/coreColorTokens";
 
 describe("Core Color Tokens", () => {
 	const tokensBase = {
