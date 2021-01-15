@@ -56,7 +56,7 @@ export const TokenForm = ({
 
 		return (
 			<Fragment>
-				<h3 className="lrv-u-margin-b-1">Core Colors</h3>
+				<h3 className="lrv-u-margin-b-1">Repeated Colors</h3>
 				<p>
 					These core color tokens will update any tokens containing
 					the color key in their name. If the token value below is
@@ -68,7 +68,7 @@ export const TokenForm = ({
 						className="ui button lrv-u-display-inline-block"
 						onClick={updateTokensWithCoreColors}
 					>
-						Update Tokens With Core Colors
+						Update Tokens With Repeated Colors
 					</button>
 				</div>
 				<ul className="lrv-a-unstyle-list">{colorListItems}</ul>

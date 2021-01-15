@@ -105,7 +105,7 @@ describe("Core Color Tokens", () => {
 		expect(getCoreColorsFromTokens(tokens)).toStrictEqual(expected);
 	});
 
-	it.only("should not include color as a core color if it does not have consistent values across tokens", () => {
+	it("should not include color as a core color if it does not have consistent values across tokens", () => {
 		const tokensWithUnlinkedColors = {
 			...tokensBase,
 			COLOR_BRAND_ACCENT: {
