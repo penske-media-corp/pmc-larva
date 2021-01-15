@@ -16,7 +16,7 @@ describe("Core Color Tokens", () => {
 		BACKGROUND_COLOR_BRAND_PRIMARY: {
 			category: "background-color",
 			type: "color",
-			value: "rgb(0, 0, 0)",
+			value: "primary",
 			comment:
 				"The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
 			originalValue: "{!BLACK}",
@@ -25,7 +25,7 @@ describe("Core Color Tokens", () => {
 		BACKGROUND_COLOR_BRAND_SECONDARY: {
 			category: "background-color",
 			type: "color",
-			value: "rgb(236, 28, 36)",
+			value: "secondary",
 			comment:
 				"The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
 			originalValue: "{!PMC_RED}",
@@ -34,28 +34,28 @@ describe("Core Color Tokens", () => {
 		BORDER_COLOR_BRAND_PRIMARY: {
 			category: "hr-color",
 			type: "color",
-			value: "rgb(236, 28, 36)",
+			value: "primary",
 			originalValue: "{!PMC_RED}",
 			name: "BORDER_COLOR_BRAND_PRIMARY",
 		},
 		BORDER_COLOR_BRAND_SECONDARY: {
 			category: "hr-color",
 			type: "color",
-			value: "rgb(0, 0, 0)",
+			value: "secondary",
 			originalValue: "{!BLACK}",
 			name: "BORDER_COLOR_BRAND_SECONDARY",
 		},
 		COLOR_BRAND_PRIMARY: {
 			category: "text-color",
 			type: "color",
-			value: "rgb(236, 28, 36)",
+			value: "primary",
 			originalValue: "{!PMC_RED}",
 			name: "COLOR_BRAND_PRIMARY",
 		},
 		COLOR_BRAND_SECONDARY: {
 			category: "text-color",
 			type: "color",
-			value: "rgb(0, 0, 0)",
+			value: "secondary",
 			originalValue: "{!BLACK}",
 			name: "COLOR_BRAND_SECONDARY",
 		},
@@ -67,14 +67,14 @@ describe("Core Color Tokens", () => {
 			COLOR_BLACK: {
 				category: "text-color",
 				type: "color",
-				value: "rgb(0, 0, 0)",
+				value: "black",
 				originalValue: "{!BLACK}",
 				name: "COLOR_BLACK",
 			},
 			BACKGROUND_COLOR_BLACK: {
 				category: "background-color",
 				type: "color",
-				value: "rgb(0, 0, 0)",
+				value: "black",
 				originalValue: "{!BLACK}",
 				name: "BACKGROUND_COLOR_BLACK",
 			},
@@ -84,19 +84,19 @@ describe("Core Color Tokens", () => {
 		const expected = {
 			BRAND_PRIMARY: {
 				type: "color",
-				value: "rgb(236, 28, 36)",
+				value: "primary",
 				name: "BRAND_PRIMARY",
 				category: "core-color",
 			},
 			BRAND_SECONDARY: {
 				type: "color",
-				value: "rgb(0, 0, 0)",
+				value: "secondary",
 				name: "BRAND_SECONDARY",
 				category: "core-color",
 			},
 			BLACK: {
 				type: "color",
-				value: "rgb(0, 0, 0)",
+				value: "black",
 				name: "BLACK",
 				category: "core-color",
 			},
@@ -105,20 +105,27 @@ describe("Core Color Tokens", () => {
 		expect(getCoreColorsFromTokens(tokens)).toStrictEqual(expected);
 	});
 
-	it("should not include color as a core color if it does not have consistent values across tokens", () => {
+	it.only("should not include color as a core color if it does not have consistent values across tokens", () => {
 		const tokensWithUnlinkedColors = {
 			...tokensBase,
 			COLOR_BRAND_ACCENT: {
 				category: "text-color",
 				type: "color",
-				value: "rgb(12, 0, 0)",
+				value: "accent",
 				originalValue: "{!BLACK}",
 				name: "COLOR_BRAND_ACCENT",
+			},
+			BORDER_COLOR_BRAND_ACCENT: {
+				category: "hr-color",
+				type: "color",
+				value: "different accent",
+				originalValue: "{!BLACK}",
+				name: "BACKGROUND_COLOR_BRAND_SECONDARY",
 			},
 			BACKGROUND_COLOR_BRAND_ACCENT: {
 				category: "background-color",
 				type: "color",
-				value: "rgb(0, 12, 0)",
+				value: "accent",
 				originalValue: "{!BLACK}",
 				name: "BACKGROUND_COLOR_BRAND_ACCENT",
 			},
@@ -127,13 +134,13 @@ describe("Core Color Tokens", () => {
 		const expected = {
 			BRAND_PRIMARY: {
 				type: "color",
-				value: "rgb(236, 28, 36)",
+				value: "primary",
 				name: "BRAND_PRIMARY",
 				category: "core-color",
 			},
 			BRAND_SECONDARY: {
 				type: "color",
-				value: "rgb(0, 0, 0)",
+				value: "secondary",
 				name: "BRAND_SECONDARY",
 				category: "core-color",
 			},

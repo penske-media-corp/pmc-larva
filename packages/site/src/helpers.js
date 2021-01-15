@@ -15,47 +15,91 @@
 export const getCoreColorsFromTokens = ( tokens ) => {
 
 	let keys = Object.keys( tokens );
-	let colorKeys = keys.filter( key => key.includes( 'COLOR' ) );
-	let colorTokens = colorKeys.map( ( key ) => {
-		let obj = {};
-		let name = key.split( 'COLOR_' )[1];
-		obj[name] = {
-			value: tokens[key].value,
-			name: name,
+	let colorKeys = keys.filter( key => key.includes( 'COLOR_' ) );
+
+	/**
+	 * for each token with key including COLOR,
+	 * 		for each token with that key( color.split( 'COLOR_' )[1] )
+	 * 			add tempValues = [ all of the values ]
+	 *
+	 * return acc
+	 *
+	 *
+	 * for each in that result
+	 * 	check the value of temp values
+	 * 	if they are not all equal,
+	 * 		delete it from the object
+	 * return acc
+	 */
+
+	/**
+	 * A temporary store for values associated with each color token.
+	 * These values will be checked later in order to determine
+	 * if any of the colors names are not repeatable.
+	 */
+	const colorTokenValuesStore = colorKeys.reduce( ( valuesAcc, key ) => {
+		const name = key.split( 'COLOR_' )[1];
+		const { value } = tokens[key];
+
+		if ( valuesAcc.hasOwnProperty( name ) ) {
+
+			valuesAcc[name].push( value );
+
+			return valuesAcc;
+		}
+
+		valuesAcc[name] = [value];
+
+		return valuesAcc;
+	}, {});
+
+	const allColorTokens = colorKeys.reduce( ( colorsAcc, colorKey ) => {
+
+		const name = colorKey.split( 'COLOR_' )[1];
+		const usedValuesList = colorTokenValuesStore[name];
+
+		colorsAcc[name] = {
+			name,
+
 			type: 'color',
-			category: 'core-color'
+			category: 'core-color',
+			tempValues: colorTokenValuesStore[name]
 		};
 
-		return obj;
-	});
+		return colorsAcc;
 
-	let colorsToIgnore = [];
-	let count = 0;
-	let reducedColorTokens = colorTokens.reduce( ( colorsAcc, color ) => {
-		count++;
+	}, {});
 
-		let currKey = Object.keys( color )[0];
-		let currValue = color[currKey].value;
+	console.log(allColorTokens);
+
+	// const reducedColorTokens = colorKeys.reduce( ( colorTokensAcc, colorKey ) => {
+
+	// }, {} );
+	/**
+	 * get colors to ignore
+	 * if not in colors to ignore, add to array
+	 */
+	// console.log(colorTokens);
+	const reducedColorTokens = allColorTokens.reduce( ( colorsAcc, color ) => {
+
+		const currKey = Object.keys( color )[0];
+		const currValue = color[currKey].value;
 
 		// If the color was already added to the object and is not to be ignored...
-		if ( colorsAcc.hasOwnProperty( currKey ) && ! colorsToIgnore.includes( currKey ) ) {
-			let accValue = colorsAcc[ currKey ].value;
+		if ( colorsAcc.hasOwnProperty( currKey ) ) {
+			const accValue = colorsAcc[ currKey ].value;
 
-			console.log('Its already been added and is not in the ignored array');
 			// ...compare the values.
 			// They are the same, return and continue to the next item.
-			if ( accValue === currValue ) {
-				console.log( accValue, ' matches ', currValue, ' so return' );
+			if ( accValue !== currValue ) {
+				// They are different. Delete the property and add it
+				// to the ignore list because this is no longer a repeated color.
+				delete colorsAcc[currKey];
+				// colorsToIgnore.push( currKey );
 				return colorsAcc;
 			}
 
-			// They are different. Delete the property and add it
-			// to the ignore list because this is no longer a repeated color.
-			delete colorsAcc[currKey];
-			colorsToIgnore.push( currKey );
-
 			return colorsAcc;
-
 		}
 
 		// This is a color not yet in the object, add it.
@@ -88,7 +132,7 @@ export const getUpdatedTokensWithCoreColors = ( tokensToUpdate, coreColors ) => 
 
 	const colorTokenReducer = ( newTokens, key ) => {
 
-		let fullToken = { ...tokensToUpdate[key] };
+		const fullToken = { ...tokensToUpdate[key] };
 
 		if ( key.includes( 'COLOR_' ) ) {
 
