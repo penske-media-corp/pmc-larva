@@ -10,6 +10,7 @@ export const TokenForm = ({
 	brandName,
 	updateTokenValue,
 	updateTokensWithCoreColors,
+	updateCoreColors,
 	saveJsonToFile,
 	copyText,
 }) => {
@@ -24,9 +25,11 @@ export const TokenForm = ({
 				>
 					<TokenListItem
 						key={token}
+						coreColorTokens={coreColorTokens}
 						tokenName={token}
 						tokenData={tokens[token]}
 						updateTokenValue={updateTokenValue}
+						updateCoreColors={updateCoreColors}
 					/>
 				</div>
 			);
@@ -35,6 +38,15 @@ export const TokenForm = ({
 		return (
 			<Fragment>
 				<h3 className="lrv-u-margin-b-1">All Tokens</h3>
+				<p>These are all design tokens. Values with <i className="circle icon"></i> are using a "core color". Updating this value will "unlink" it from the core colors.</p>
+				<div className="lrv-u-margin-b-1">
+					<button
+						className="ui button lrv-u-display-inline-block"
+						onClick={updateCoreColors}
+					>
+						Update Core Colors
+					</button>
+				</div>
 				<ul className="lrv-a-unstyle-list">{tokenLisItems}</ul>
 			</Fragment>
 		);
@@ -56,7 +68,7 @@ export const TokenForm = ({
 
 		return (
 			<Fragment>
-				<h3 className="lrv-u-margin-b-1">Repeated Colors</h3>
+				<h3 className="lrv-u-margin-b-1">Core Colors</h3>
 				<p>
 					These core color tokens will update any tokens containing
 					the color key in their name. If the token value below is
@@ -68,7 +80,7 @@ export const TokenForm = ({
 						className="ui button lrv-u-display-inline-block"
 						onClick={updateTokensWithCoreColors}
 					>
-						Update Tokens With Repeated Colors
+						Update Tokens With Core Colors
 					</button>
 				</div>
 				<ul className="lrv-a-unstyle-list">{colorListItems}</ul>
@@ -108,42 +120,48 @@ export const TokenForm = ({
 		);
 	};
 
+	const Instructions = () => {
+		return (
+			<div className="lrv-a-glue-parent lrv-u-margin-b-2">
+				<div className="lrv-u-background-color-grey-lightest lrv-u-border-a-2 lrv-u-border-radius-5 lrv-u-padding-a-1">
+					<h3 className="lrv-u-margin-b-1">
+						When you are finished...
+					</h3>
+					<p>
+						Press the button below to copy the JSON to
+						your clipboard.
+					</p>
+					<p>
+						Next, send this JSON to the engineer or
+						product manager who requested it.
+					</p>
+					<button
+						className="ui button primary"
+						onClick={saveJsonToFile}
+					>
+						{copyText}
+					</button>
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<Fragment>
-			<div className="lrv-a-grid lrv-a-cols3">
-				<section className="lrv-a-span2">
-					<Header />
-					<section>{tokens && <CoreColorTokens />}</section>
-					<section className="lrv-u-margin-t-2">
-						{tokens && <Tokens />}
+			<Header />
+			{ brandName && (
+				<Fragment>
+					<aside>
+						<Instructions />
+					</aside>
+					<section className="lrv-a-grid lrv-a-cols2@desktop">
+						<section>{tokens && <CoreColorTokens />}</section>
+						<section>
+							{tokens && <Tokens />}
+						</section>
 					</section>
-				</section>
-				<aside className="lrv-u-width-100p lrv-u-overflow-auto">
-					{tokens && (
-						<div className="lrv-a-glue-parent lrv-u-margin-b-2">
-							<div className="lrv-u-background-color-grey-lightest lrv-u-border-a-2 lrv-u-border-radius-5 lrv-u-padding-a-1">
-								<h3 className="lrv-u-margin-b-1">
-									When you are finished...
-								</h3>
-								<p>
-									Press the button below to copy the JSON to
-									your clipboard.
-								</p>
-								<p>
-									Next, send this JSON to the engineer or
-									product manager who requested it.
-								</p>
-								<button
-									className="ui button primary"
-									onClick={saveJsonToFile}
-								>
-									{copyText}
-								</button>
-							</div>
-						</div>
-					)}
-				</aside>
-			</div>
+				</Fragment>
+			)}
 		</Fragment>
 	);
 };

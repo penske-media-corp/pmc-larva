@@ -19,7 +19,7 @@ export const TokensView = () => {
 	const supportsshowSaveFilePicker = () =>
 		undefined !== window.showSaveFilePicker;
 
-	const [tokens, setTokens] = useState();
+	const [tokens, setTokens] = useState({});
 	const [copied, setCopied] = useState(false);
 	const [copyText, setCopyText] = useState("");
 	const [canSaveFile] = useState(supportsshowSaveFilePicker);
@@ -43,6 +43,7 @@ export const TokensView = () => {
 	// Handle updating the tokens state when we update
 	// the core colors state to "link" the values.
 	useEffect(() => {
+		// const newTokens = getUpdatedTokensWithCoreColors( tokens, coreColorTokens );
 		// setTokens( newTokens );
 	}, [tokens, coreColorTokens]);
 
@@ -73,6 +74,12 @@ export const TokensView = () => {
 			coreColorTokens
 		);
 		setTokens(newTokens);
+	};
+
+	const updateCoreColors = () => {
+		const newCoreColors = getCoreColorsFromTokens( tokens );
+
+		setCoreColorTokens(newCoreColors);
 	};
 
 	const fetchAndSetTokens = async (e) => {
@@ -149,6 +156,7 @@ export const TokensView = () => {
 					tokens={tokens}
 					updateTokenValue={updateTokenValue}
 					updateTokensWithCoreColors={updateTokensWithCoreColors}
+					updateCoreColors={updateCoreColors}
 					brandName={selectedBrand.brand}
 					action={selectedBrand.action}
 					saveJsonToFile={saveJsonToFile}

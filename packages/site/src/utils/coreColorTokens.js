@@ -6,7 +6,7 @@
  * in a single place.
  *
  * e.g. for COLOR_BRAND_PRIMARY, BORDER_COLOR_BRAND_PRIMARY, BACKGROUND_COLOR_BRAND_PRIMARY
- * this method will return a single BRAND_PRIMARY if all of the above are the same value.
+ * this method will return a single BRAND_PRIMARY if all of the above have the same color value.
  *
  * @param {Object} tokens The raw.json format of design tokens stored in the `tokens` state
  *
@@ -102,3 +102,4 @@ export const getUpdatedTokensWithCoreColors = (tokensToUpdate, coreColors) => {
 
 	return tokenKeys.reduce(colorTokenReducer, {});
 };
+
