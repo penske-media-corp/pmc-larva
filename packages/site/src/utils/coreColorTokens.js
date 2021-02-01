@@ -1,5 +1,6 @@
 /**
- * Reduce color tokens to a set of "Core Colors".
+ * Reduce color tokens to a set of "Linked Colors". These are called
+ * Core colors in the code.
  *
  * Core colors are the color names and values that are repeated across tokens
  * for different CSS properties so that the color can be added and updated
