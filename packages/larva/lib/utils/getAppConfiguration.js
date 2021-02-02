@@ -3,20 +3,21 @@ const path = require( 'path' );
 
 /**
  * Get Larva Configuration
- * 
+ *
  * Find larva.config.js according to the current working directory.
  * For consuming projects, this will be theme/assets/, and for the
  * mono-repo, it will be packages/larva.
- * 
+ *
  * For test env, the CWD is overridden to the local directory for fixtures.
  * (this is a problem for writing project-level tests, but for a later time.)
- * 
- * @param tool string that indicates a specific configuration property, e.g. patterns.
+ *
+ * @param {string} key string that indicates a specific configuration property, e.g. patterns.
+ * @param {boolean} usePackageDefault fall back to package default if not defined in app
  *
  * @returns value of the specified key.
  */
 
-module.exports = function getAppConfiguration( key ) {
+module.exports = function getAppConfiguration( key, usePackageDefault ) {
 
 	try {
 		let appRoot = process.cwd();
@@ -26,6 +27,12 @@ module.exports = function getAppConfiguration( key ) {
 		}
 
 		let config = require( `${appRoot}/larva.config.js` )[ key ];
+
+		// If config not found in approot, fallback to package default
+		if ( undefined === config && use_package_default ) {
+			let configFile = path.join( __dirname, '../../larva.config.js' );
+			config = require( configFile )[ key ];
+		}
 
 		if ( undefined === config ) {
 			throw new Error( `Configuration for \`${key}\` is required in larva.config.js. \nPlease refer to the Larva's docs for adding configuration: https://github.com/penske-media-corp/pmc-larva` );
