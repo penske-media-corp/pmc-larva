@@ -5,6 +5,9 @@
 	{% if c_link_rel_attr %}
 		rel="{{ c_link_rel_attr }}"
 	{% endif %}
+	{% if c_link_aria_label_attr %}
+		aria-label="{{ c_link_aria_label_attr }}"
+	{% endif %}
 >
 	{{ c_link_text }}
 </a>
