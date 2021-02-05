@@ -54,12 +54,12 @@ export default class MegaMenu {
 			}
 
 			if ( event.shiftKey ) { // shift + tab combination
-				if ( document.activeElement === firstFocusableElement ) {
+				if ( document.activeElement === firstFocusableElement && lastFocusableElement ) {
 					lastFocusableElement.focus();
 					event.preventDefault();
 				}
 			} else { // tab key
-				if ( document.activeElement === lastFocusableElement ) {
+				if ( document.activeElement === lastFocusableElement && firstFocusableElement ) {
 					firstFocusableElement.focus();
 					event.preventDefault();
 				}
