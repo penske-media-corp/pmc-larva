@@ -40,7 +40,12 @@ export const TokenForm = ({
 			<Fragment>
 				<h3 className="lrv-u-margin-b-1">All Tokens</h3>
 				<p>
-					Use this column to make individual token changes. These are all design tokens in the theme. Values with <i className="circle icon"></i> use a Core Color. Changing a value with <i className="circle icon"></i> in this column unlinks all tokens using the same color term from Core Colors updates and removes it from the Core Colors column.
+					Use this column to make individual token changes. These are
+					all design tokens in the theme. Values with{" "}
+					<i className="circle icon"></i> use a Core Color. Changing a
+					value with <i className="circle icon"></i> in this column
+					unlinks all tokens using the same color term from Core
+					Colors updates and removes it from the Core Colors column.
 				</p>
 				<div className="lrv-u-margin-b-1">
 					<button
@@ -73,7 +78,15 @@ export const TokenForm = ({
 			<Fragment>
 				<h3 className="lrv-u-margin-b-1">Core Colors</h3>
 				<p>
-					Use this column to make theme-wide token color changes. Changing a Core Color updates all tokens with a name containing the matching color term <strong>if</strong> all of these tokens use the same value. (Ex. Updating <code>BRAND_ACCENT</code> will change the tokens <code>BACKGROUND_COLOR_BRAND_ACCENT</code>, <code>BORDER_COLOR_BRAND_ACCENT</code>, and <code>COLOR_BRAND_ACCENT</code> <strong>if</strong> all of them have the same value).
+					Use this column to make theme-wide token color changes.
+					Changing a Core Color updates all tokens with a name
+					containing the matching color term <strong>if</strong> all
+					of these tokens use the same value. (Ex. Updating{" "}
+					<code>BRAND_ACCENT</code> will change the tokens{" "}
+					<code>BACKGROUND_COLOR_BRAND_ACCENT</code>,{" "}
+					<code>BORDER_COLOR_BRAND_ACCENT</code>, and{" "}
+					<code>COLOR_BRAND_ACCENT</code> <strong>if</strong> all of
+					them have the same value).
 				</p>
 				<div className="lrv-u-margin-b-1">
 					<button
@@ -89,7 +102,8 @@ export const TokenForm = ({
 	};
 
 	const Header = () => {
-		const headingText = appActions.create === action ? "Creating New " : "Updating ";
+		const headingText =
+			appActions.create === action ? "Creating New " : "Updating ";
 
 		if (!!brandName) {
 			return (
@@ -128,12 +142,12 @@ export const TokenForm = ({
 						When you are finished...
 					</h3>
 					<p>
-						Press the button below to copy the JSON to
-						your clipboard.
+						Press the button below to copy the JSON to your
+						clipboard.
 					</p>
 					<p>
-						Next, send this JSON to the engineer or
-						product manager who requested it.
+						Next, send this JSON to the engineer or product manager
+						who requested it.
 					</p>
 					<button
 						className="ui button primary"
@@ -144,21 +158,19 @@ export const TokenForm = ({
 				</div>
 			</div>
 		);
-	}
+	};
 
 	return (
 		<Fragment>
 			<Header />
-			{ brandName && (
+			{brandName && (
 				<Fragment>
 					<aside>
 						<Instructions />
 					</aside>
 					<section className="lrv-a-grid lrv-a-cols2@desktop">
 						<section>{tokens && <CoreColorTokens />}</section>
-						<section>
-							{tokens && <Tokens />}
-						</section>
+						<section>{tokens && <Tokens />}</section>
 					</section>
 				</Fragment>
 			)}

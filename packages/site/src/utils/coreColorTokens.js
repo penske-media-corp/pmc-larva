@@ -103,4 +103,3 @@ export const getUpdatedTokensWithCoreColors = (tokensToUpdate, coreColors) => {
 
 	return tokenKeys.reduce(colorTokenReducer, {});
 };
-

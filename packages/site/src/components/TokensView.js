@@ -75,14 +75,16 @@ export const TokensView = () => {
 	};
 
 	const updateCoreColors = () => {
-		const newCoreColors = getCoreColorsFromTokens( tokens );
+		const newCoreColors = getCoreColorsFromTokens(tokens);
 
 		setCoreColorTokens(newCoreColors);
 	};
 
 	const fetchAndSetTokens = async (e) => {
 		const brand =
-			appActions.create === selectedBrand.action ? "default" : selectedBrand.brand;
+			appActions.create === selectedBrand.action
+				? "default"
+				: selectedBrand.brand;
 
 		let url =
 			"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/" +
@@ -116,13 +118,16 @@ export const TokensView = () => {
 	 */
 	const saveJsonToFile = async () => {
 		const tokensOutput = {
-			"props": tokens
+			props: tokens,
 		};
 
 		if (canSaveFile) {
-			const tokensBlob = new Blob([JSON.stringify(tokensOutput, null, 2)], {
-				type: "application/json",
-			});
+			const tokensBlob = new Blob(
+				[JSON.stringify(tokensOutput, null, 2)],
+				{
+					type: "application/json",
+				}
+			);
 
 			// create a new handle
 			const newHandle = await window.showSaveFilePicker({

@@ -26,7 +26,10 @@ export const InitialForm = ({
 						className="lrv-u-display-block lrv-u-padding-a-050 lrv-u-margin-b-2 lrv-u-border-a-1 lrv-u-border-radius-5"
 						name="select"
 						onChange={(e) => {
-							handleUpdateBrand(e.target.value, appActions.update);
+							handleUpdateBrand(
+								e.target.value,
+								appActions.update
+							);
 						}}
 					>
 						<option key="select">Select</option>
@@ -42,7 +45,9 @@ export const InitialForm = ({
 							className="ui primary button lrv-u-display-inline-block"
 							type="submit"
 							onClick={fetchAndSetTokens}
-							disabled={!(appActions.update === selectedBrand.action)}
+							disabled={
+								!(appActions.update === selectedBrand.action)
+							}
 						>
 							Continue to Update Tokens
 						</button>
@@ -61,7 +66,10 @@ export const InitialForm = ({
 							type="text"
 							placeholder="artnews"
 							onChange={(e) => {
-								handleUpdateBrand(e.target.value, appActions.create);
+								handleUpdateBrand(
+									e.target.value,
+									appActions.create
+								);
 							}}
 						/>
 					</div>
@@ -76,7 +84,12 @@ export const InitialForm = ({
 							<button
 								className="ui primary button lrv-u-display-inline-block"
 								type="submit"
-								disabled={!(appActions.create === selectedBrand.action)}
+								disabled={
+									!(
+										appActions.create ===
+										selectedBrand.action
+									)
+								}
 								onClick={fetchAndSetTokens}
 							>
 								Continue to Create Tokens
