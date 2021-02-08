@@ -5,8 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## 0.2.0 - 02-08-2021
+* New feature: React site to create and update tokens
 * larva-tokens - Fix swapped tokens in default
-* Add package for React site to contain tokens form
 
 ## 0.1.12 - 02-08-2021
 * Typo - Fix Variable typo
