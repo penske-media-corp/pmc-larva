@@ -13,6 +13,7 @@ export const TokenForm = ({
 	updateCoreColors,
 	saveJsonToFile,
 	copyText,
+	appActions,
 }) => {
 	const Tokens = () => {
 		const tokenLisItems = [];
@@ -88,7 +89,7 @@ export const TokenForm = ({
 	};
 
 	const Header = () => {
-		const headingText = "create" === action ? "Creating New " : "Updating ";
+		const headingText = appActions.create === action ? "Creating New " : "Updating ";
 
 		if (!!brandName) {
 			return (

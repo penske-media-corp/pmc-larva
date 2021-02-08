@@ -11,6 +11,11 @@ import {
 export const TokensView = () => {
 	let match = useRouteMatch();
 
+	const appActions = {
+		create: "create",
+		update: "update",
+	};
+
 	const [selectedBrand, setSelectedBrand] = useState({
 		action: "",
 		brand: "",
@@ -77,7 +82,7 @@ export const TokensView = () => {
 
 	const fetchAndSetTokens = async (e) => {
 		const brand =
-			"create" === selectedBrand.action ? "default" : selectedBrand.brand;
+			appActions.create === selectedBrand.action ? "default" : selectedBrand.brand;
 
 		let url =
 			"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/" +
@@ -160,6 +165,7 @@ export const TokensView = () => {
 					copyText={copyText}
 					coreColorTokens={coreColorTokens}
 					copied={copied}
+					appActions={appActions}
 				/>
 			</Route>
 			<Route path={`${match.url}`}>
@@ -167,6 +173,7 @@ export const TokensView = () => {
 					fetchAndSetTokens={fetchAndSetTokens}
 					handleUpdateBrand={handleUpdateBrand}
 					selectedBrand={selectedBrand}
+					appActions={appActions}
 				/>
 			</Route>
 		</Switch>
