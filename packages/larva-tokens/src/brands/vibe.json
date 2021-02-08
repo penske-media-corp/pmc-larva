@@ -33,35 +33,65 @@
 			"type": "color",
 			"category": "text-color"
 		},
-		"COLOR_GREY_DARKEST": {
-			"value": "{!GREY_50}",
+		"COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK_6}",
 			"type": "color",
 			"category": "text-color"
 		},
-		"BORDER_COLOR_GREY_DARKEST": {
-			"value": "{!GREY_50}",
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK_6}",
 			"type": "color",
 			"category": "hr-color"
 		},
-		"BACKGROUND_COLOR_GREY_DARKEST": {
-			"value": "{!GREY_50}",
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK_6}",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_94}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_94}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_94}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHT": {
 			"value": "{!GREY_86}",
 			"type": "color",
 			"category": "text-color"
 		},
-		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "{!GREY_86}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
 			"value": "{!GREY_86}",
 			"type": "color",
 			"category": "background-color"
 		},
-		"BORDER_COLOR_GREY_LIGHTEST": {
-			"value": "{!GREY_86}",
+		"COLOR_GREY_DARK": {
+			"value": "{!GREY_36}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "{!GREY_36}",
 			"type": "color",
 			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "{!GREY_36}",
+			"type": "color",
+			"category": "background-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!AILERON}",

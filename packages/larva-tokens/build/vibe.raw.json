@@ -12,6 +12,9 @@
     "GREY_35": {
       "value": "#6A6A6A"
     },
+    "GREY_36": {
+      "value": "#5A5A5A"
+    },
     "GREY_59": {
       "value": "#939598"
     },
@@ -28,7 +31,7 @@
       "value": "Source Sans Pro, sans-serif"
     },
     "ACUMIN_PRO_WIDE": {
-      "value": "'Acumin Pro Wide', Helvetica, sans-serif"
+      "value": "'acumin-pro-wide', Helvetica, sans-serif"
     },
     "OVERPASS": {
       "value": "Overpass, sans-serif"
@@ -97,7 +100,7 @@
       "value": "#F37021"
     },
     "AILERON": {
-      "value": "'Aileron', Helvetica, sans-serif"
+      "value": "'aileron', Helvetica, sans-serif"
     },
     "GRAPHIK": {
       "value": "'Graphik', sans-serif"
@@ -132,6 +135,9 @@
     "DOMAINE_DISPLAY_NARROW": {
       "value": "'Domaine Display Narrow Test', Georgia, serif"
     },
+    "BLACK_6": {
+      "value": "#101010"
+    },
     "CERULEAN_47": {
       "value": "#01A5ED"
     },
@@ -161,6 +167,9 @@
     },
     "PARA_SUPREME": {
       "value": "'Para Supreme Regular', serif"
+    },
+    "GREY_94": {
+      "value": "#EFEFEF"
     },
     "GREY_50": {
       "value": "#8C8C8C"
@@ -220,10 +229,10 @@
       "name": "COLOR_WHITE"
     },
     "COLOR_GREY_LIGHT": {
-      "category": "text-color",
+      "value": "rgb(220, 220, 220)",
       "type": "color",
-      "value": "rgb(230, 230, 230)",
-      "originalValue": "{!GREY_90}",
+      "category": "text-color",
+      "originalValue": "{!GREY_86}",
       "name": "COLOR_GREY_LIGHT"
     },
     "COLOR_GREY": {
@@ -234,10 +243,10 @@
       "name": "COLOR_GREY"
     },
     "COLOR_GREY_DARK": {
-      "category": "text-color",
+      "value": "rgb(90, 90, 90)",
       "type": "color",
-      "value": "rgb(106, 106, 106)",
-      "originalValue": "{!GREY_35}",
+      "category": "text-color",
+      "originalValue": "{!GREY_36}",
       "name": "COLOR_GREY_DARK"
     },
     "COLOR_BLACK": {
@@ -262,7 +271,7 @@
       "name": "COLOR_BRAND_SECONDARY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
-      "value": "'Aileron', Helvetica, sans-serif",
+      "value": "'aileron', Helvetica, sans-serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "The webfont for font-family-primary.",
@@ -278,7 +287,7 @@
       "name": "FONT_FAMILY_PRIMARY"
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
-      "value": "'Acumin Pro Wide', Helvetica, sans-serif",
+      "value": "'acumin-pro-wide', Helvetica, sans-serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "Available via Typekit.",
@@ -308,24 +317,24 @@
       "name": "FONT_FAMILY_BASIC"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
-      "category": "background-color",
-      "type": "color",
-      "value": "rgb(204, 204, 204)",
-      "originalValue": "{!GREY_80}",
-      "name": "BACKGROUND_COLOR_GREY_LIGHT"
-    },
-    "BACKGROUND_COLOR_GREY_LIGHTEST": {
       "value": "rgb(220, 220, 220)",
       "type": "color",
       "category": "background-color",
       "originalValue": "{!GREY_86}",
+      "name": "BACKGROUND_COLOR_GREY_LIGHT"
+    },
+    "BACKGROUND_COLOR_GREY_LIGHTEST": {
+      "value": "rgb(239, 239, 239)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "{!GREY_94}",
       "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
     },
     "BACKGROUND_COLOR_GREY_DARK": {
-      "category": "background-color",
+      "value": "rgb(90, 90, 90)",
       "type": "color",
-      "value": "rgb(106, 106, 106)",
-      "originalValue": "{!GREY_35}",
+      "category": "background-color",
+      "originalValue": "{!GREY_36}",
       "name": "BACKGROUND_COLOR_GREY_DARK"
     },
     "BACKGROUND_COLOR_GREY": {
@@ -372,10 +381,10 @@
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_DARKEST": {
-      "value": "rgb(140, 140, 140)",
-      "type": "color",
       "category": "background-color",
-      "originalValue": "{!GREY_50}",
+      "type": "color",
+      "value": "rgb(50, 50, 50)",
+      "originalValue": "{!GREY_20}",
       "name": "BACKGROUND_COLOR_GREY_DARKEST"
     },
     "LINE_HEIGHT_SMALL": {
@@ -435,17 +444,17 @@
       "name": "BORDER_COLOR_WHITE"
     },
     "BORDER_COLOR_GREY_LIGHTEST": {
+      "value": "rgb(239, 239, 239)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "{!GREY_94}",
+      "name": "BORDER_COLOR_GREY_LIGHTEST"
+    },
+    "BORDER_COLOR_GREY_LIGHT": {
       "value": "rgb(220, 220, 220)",
       "type": "color",
       "category": "hr-color",
       "originalValue": "{!GREY_86}",
-      "name": "BORDER_COLOR_GREY_LIGHTEST"
-    },
-    "BORDER_COLOR_GREY_LIGHT": {
-      "category": "hr-color",
-      "type": "color",
-      "value": "rgb(204, 204, 204)",
-      "originalValue": "{!GREY_80}",
       "name": "BORDER_COLOR_GREY_LIGHT"
     },
     "BORDER_COLOR_GREY": {
@@ -456,10 +465,10 @@
       "name": "BORDER_COLOR_GREY"
     },
     "BORDER_COLOR_GREY_DARK": {
-      "category": "hr-color",
+      "value": "rgb(90, 90, 90)",
       "type": "color",
-      "value": "rgb(106, 106, 106)",
-      "originalValue": "{!GREY_35}",
+      "category": "hr-color",
+      "originalValue": "{!GREY_36}",
       "name": "BORDER_COLOR_GREY_DARK"
     },
     "BORDER_COLOR_BRAND_PRIMARY": {
@@ -540,26 +549,33 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
-    "COLOR_GREY_DARKEST": {
-      "value": "rgb(140, 140, 140)",
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "value": "rgb(16, 16, 16)",
       "type": "color",
-      "category": "text-color",
-      "originalValue": "{!GREY_50}",
-      "name": "COLOR_GREY_DARKEST"
+      "category": "background-color",
+      "originalValue": "{!BLACK_6}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
-    "COLOR_GREY_LIGHTEST": {
-      "value": "rgb(220, 220, 220)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "{!GREY_86}",
-      "name": "COLOR_GREY_LIGHTEST"
-    },
-    "BORDER_COLOR_GREY_DARKEST": {
-      "value": "rgb(140, 140, 140)",
+    "BORDER_COLOR_BRAND_ACCENT": {
+      "value": "rgb(16, 16, 16)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "{!GREY_50}",
-      "name": "BORDER_COLOR_GREY_DARKEST"
+      "originalValue": "{!BLACK_6}",
+      "name": "BORDER_COLOR_BRAND_ACCENT"
+    },
+    "COLOR_GREY_LIGHTEST": {
+      "value": "rgb(239, 239, 239)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "{!GREY_94}",
+      "name": "COLOR_GREY_LIGHTEST"
+    },
+    "COLOR_BRAND_ACCENT": {
+      "value": "rgb(16, 16, 16)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "{!BLACK_6}",
+      "name": "COLOR_BRAND_ACCENT"
     }
   }
 }

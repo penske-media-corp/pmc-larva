@@ -13,6 +13,11 @@
 			"type": "color",
 			"category": "background-color"
 		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "{!ALICE_BLUE_97}",
+			"type": "color",
+			"category": "border-color"
+		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
 			"value": "{!BRIGHT_RED_60}",
 			"type": "color",

@@ -24,11 +24,11 @@
   /* The background color of the main body of the site. */
   --background-color-body: rgb(255, 255, 255);
   /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
-  --background-color-brand-secondary: rgb(236, 28, 36);
+  --background-color-brand-secondary: rgb(0, 0, 0);
   --background-color-black: rgb(0, 0, 0);
   --background-color-white: rgb(255, 255, 255);
   /* The primary brand color. This should be dark in hue, and have sufficient contrast with white text. */
-  --background-color-brand-primary: rgb(0, 0, 0);
+  --background-color-brand-primary: rgb(236, 28, 36);
   --background-color-grey-darkest: rgb(50, 50, 50);
   --line-height-small: 1.1;
   --line-height-normal: 1.35;
