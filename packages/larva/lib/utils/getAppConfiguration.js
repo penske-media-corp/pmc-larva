@@ -29,7 +29,7 @@ module.exports = function getAppConfiguration( key, usePackageDefault ) {
 		let config = require( `${appRoot}/larva.config.js` )[ key ];
 
 		// If config not found in approot, fallback to package default
-		if ( undefined === config && use_package_default ) {
+		if ( undefined === config && usePackageDefault ) {
 			let configFile = path.join( __dirname, '../../larva.config.js' );
 			config = require( configFile )[ key ];
 		}
