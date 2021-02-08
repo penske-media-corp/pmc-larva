@@ -40,13 +40,6 @@ export const TokensView = () => {
 		}
 	}, [copied, copyText, canSaveFile]);
 
-	// Handle updating the tokens state when we update
-	// the core colors state to "link" the values.
-	useEffect(() => {
-		// const newTokens = getUpdatedTokensWithCoreColors( tokens, coreColorTokens );
-		// setTokens( newTokens );
-	}, [tokens, coreColorTokens]);
-
 	const handleUpdateBrand = (brand, action) => {
 		setSelectedBrand({
 			brand,
@@ -117,8 +110,12 @@ export const TokensView = () => {
 	 * @see https://developer.mozilla.org/en-US/docs/Web/API/window/showSaveFilePicker
 	 */
 	const saveJsonToFile = async () => {
+		const tokensOutput = {
+			"props": tokens
+		};
+
 		if (canSaveFile) {
-			const tokensBlob = new Blob([JSON.stringify(tokens, null, 2)], {
+			const tokensBlob = new Blob([JSON.stringify(tokensOutput, null, 2)], {
 				type: "application/json",
 			});
 
@@ -142,7 +139,7 @@ export const TokensView = () => {
 			await writableStream.close();
 		} else {
 			await navigator.clipboard.writeText(
-				JSON.stringify(tokens, null, 2)
+				JSON.stringify(tokensOutput, null, 2)
 			);
 		}
 

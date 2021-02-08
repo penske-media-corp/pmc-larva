@@ -10,5 +10,6 @@ export const brands = [
 	"sportico",
 	"variety-vip",
 	"variety",
+	"vibe",
 	"wwd",
 ];
