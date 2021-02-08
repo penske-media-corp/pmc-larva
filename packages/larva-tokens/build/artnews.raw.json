@@ -12,6 +12,9 @@
     "GREY_35": {
       "value": "#6A6A6A"
     },
+    "GREY_36": {
+      "value": "#5A5A5A"
+    },
     "GREY_59": {
       "value": "#939598"
     },
@@ -28,7 +31,7 @@
       "value": "Source Sans Pro, sans-serif"
     },
     "ACUMIN_PRO_WIDE": {
-      "value": "'Acumin Pro Wide', Helvetica, sans-serif"
+      "value": "'acumin-pro-wide', Helvetica, sans-serif"
     },
     "OVERPASS": {
       "value": "Overpass, sans-serif"
@@ -97,7 +100,7 @@
       "value": "#F37021"
     },
     "AILERON": {
-      "value": "'Aileron', Helvetica, sans-serif"
+      "value": "'aileron', Helvetica, sans-serif"
     },
     "GRAPHIK": {
       "value": "'Graphik', sans-serif"
@@ -132,6 +135,9 @@
     "DOMAINE_DISPLAY_NARROW": {
       "value": "'Domaine Display Narrow Test', Georgia, serif"
     },
+    "BLACK_6": {
+      "value": "#101010"
+    },
     "CERULEAN_47": {
       "value": "#01A5ED"
     },
@@ -161,6 +167,9 @@
     },
     "PARA_SUPREME": {
       "value": "'Para Supreme Regular', serif"
+    },
+    "GREY_94": {
+      "value": "#EFEFEF"
     },
     "GREY_50": {
       "value": "#8C8C8C"
@@ -470,10 +479,10 @@
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BORDER_COLOR_BRAND_SECONDARY": {
-      "category": "hr-color",
+      "value": "rgb(241, 247, 252)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "category": "border-color",
+      "originalValue": "{!ALICE_BLUE_97}",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "SPACING_00": {
