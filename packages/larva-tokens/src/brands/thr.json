@@ -124,7 +124,7 @@
 			"category": "background-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "'Kepler Std', serif",
+			"value": "'kepler-std-semicondensed', serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."
@@ -136,7 +136,7 @@
 			"comment": "The fallback font for primary-fancy."
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "'Kepler Std', serif",
+			"value": "'kepler-std', serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."
@@ -160,7 +160,7 @@
 			"comment": "The fallback for the accent-fancy"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "'Kepler Std', serif",
+			"value": "'kepler-std', serif",
 			"type": "font-family",
 			"category": "font-family"
 		},

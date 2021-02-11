@@ -271,11 +271,11 @@
       "name": "COLOR_BRAND_SECONDARY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
-      "value": "'Kepler Std', serif",
+      "value": "'kepler-std-semicondensed', serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "Available via Typekit.",
-      "originalValue": "'Kepler Std', serif",
+      "originalValue": "'kepler-std-semicondensed', serif",
       "name": "FONT_FAMILY_PRIMARY_FANCY"
     },
     "FONT_FAMILY_PRIMARY": {
@@ -287,11 +287,11 @@
       "name": "FONT_FAMILY_PRIMARY"
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
-      "value": "'Kepler Std', serif",
+      "value": "'kepler-std', serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "Available via Typekit.",
-      "originalValue": "'Kepler Std', serif",
+      "originalValue": "'kepler-std', serif",
       "name": "FONT_FAMILY_SECONDARY_FANCY"
     },
     "FONT_FAMILY_SECONDARY": {
@@ -303,10 +303,10 @@
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {
-      "value": "'Kepler Std', serif",
+      "value": "'kepler-std', serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "'Kepler Std', serif",
+      "originalValue": "'kepler-std', serif",
       "name": "FONT_FAMILY_BODY"
     },
     "FONT_FAMILY_BASIC": {
