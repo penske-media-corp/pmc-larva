@@ -124,7 +124,7 @@
 			"category": "background-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "'kepler-std-semicondensed', serif",
+			"value": "'kepler-std-semicondensed-dis', serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."

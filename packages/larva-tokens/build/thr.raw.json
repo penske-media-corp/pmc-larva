@@ -271,11 +271,11 @@
       "name": "COLOR_BRAND_SECONDARY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
-      "value": "'kepler-std-semicondensed', serif",
+      "value": "'kepler-std-semicondensed-dis', serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "Available via Typekit.",
-      "originalValue": "'kepler-std-semicondensed', serif",
+      "originalValue": "'kepler-std-semicondensed-dis', serif",
       "name": "FONT_FAMILY_PRIMARY_FANCY"
     },
     "FONT_FAMILY_PRIMARY": {

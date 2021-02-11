@@ -6,7 +6,7 @@
   "COLOR_BLACK": "rgb(0, 0, 0)",
   "COLOR_BRAND_PRIMARY": "rgb(217, 33, 40)",
   "COLOR_BRAND_SECONDARY": "rgb(9, 38, 162)",
-  "FONT_FAMILY_PRIMARY_FANCY": "'kepler-std-semicondensed', serif",
+  "FONT_FAMILY_PRIMARY_FANCY": "'kepler-std-semicondensed-dis', serif",
   "FONT_FAMILY_PRIMARY": "'Times New Roman', serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'kepler-std', serif",
   "FONT_FAMILY_SECONDARY": "Georgia, serif",
