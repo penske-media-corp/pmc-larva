@@ -1,6 +1,5 @@
 {
   "name": "root",
-  "private": true,
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit"
   },
