@@ -1,0 +1,173 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#D92128",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#D92128",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#D92128",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "#0926A2",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "#0926A2",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "#0926A2",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "#101010",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "#101010",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "#101010",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHT": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY": {
+			"value": "#8C8C8C",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY": {
+			"value": "#8C8C8C",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY": {
+			"value": "#8C8C8C",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "#5A5A5A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "#5A5A5A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "#5A5A5A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARKEST": {
+			"value": "#323232",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARKEST": {
+			"value": "#323232",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"value": "#323232",
+			"type": "color",
+			"category": "background-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'kepler-std-semicondensed-dis', serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!TIMES_NEW_ROMAN}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback font for primary-fancy."
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'kepler-std', serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback font for secondary-fancy."
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "'Karla', sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via @font-face."
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "{!HELVETICA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the accent-fancy"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "'kepler-std', serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		}
+	}
+}

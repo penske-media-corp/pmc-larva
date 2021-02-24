@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * New feature: React site to create and update tokens
 * larva-tokens - Fix swapped tokens in default
 
+## 0.1.13 - 02-10-2021
+* larva-tokens - Add The Hollywood Reporter (THR) design tokens.
+
 ## 0.1.12 - 02-08-2021
 * Typo - Fix Variable typo
 
