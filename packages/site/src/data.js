@@ -8,6 +8,7 @@ export const brands = [
 	"rollingstone",
 	"sheknows",
 	"sportico",
+	"thr",
 	"variety-vip",
 	"variety",
 	"vibe",
