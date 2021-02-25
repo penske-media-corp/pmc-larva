@@ -71,7 +71,6 @@ if( appConfiguration.projectPatternsDir ) {
 	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
 }
 
-// appConfiguration.projectPatternsDir will be assets/src/patterns - move out to assets.
 app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
 
 app.get( '/', function (req, res) {
@@ -188,14 +187,15 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 		patternsPath = appConfiguration.larvaPatternsDir;
 	} else if ( 'project' === req.params.source ) {
 		patternsPath = appConfiguration.projectPatternsDir;
-	} else {
-		console.error( chalk.red.bold( 'Error loading the pattern route. \nCheck the structure of the URL. It should be: \nhttp://localhost:3000/{larva|project}/{components|objects|modules|one-offs}/{optional variant}.' ) );
+	} else if ( 'assets' === req.params.source ) {
+		return res.end();
 	}
+
 
 	// Support query parameters for conditionally loading stylesheets and scripts
 	req.params[ 'query' ] = req.query;
-	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'pattern_nav' ] = patterns;
+	req.params[ 'data' ] = undefined !== patternsPath ? getPatternData( patternsPath, req.params ) : null;
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
