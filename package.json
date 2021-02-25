@@ -2,7 +2,24 @@
   "name": "@penskemediacorp/larva",
   "version": "1.0.0",
   "scripts": {
-    "test": "./node_modules/.bin/jest --forceExit"
+    "test": "./node_modules/.bin/jest --forceExit",
+    "larva": "packages/larva/bin/larva.js server --watch ../larva-patterns --watch src -e twig,js,html",
+    "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
+    "prod": "packages/larva/bin/larva.js prod-scss && packages/larva/bin/larva.js prod-js",
+    "prod:scss": "packages/larva/bin/larva.js prod-scss",
+    "prod:js": "packages/larva/bin/larva.js prod-js",
+    "dev": "concurrently \"npm:dev:scss\" \"npm:dev:js\" --raw",
+    "dev:scss": "packages/larva/bin/larva.js dev-scss",
+    "dev:js": "packages/larva/bin/larva.js dev-js",
+    "lint": "packages/larva/bin/larva.js lint-scss & larva lint-js",
+    "lint:scss": "packages/larva/bin/larva.js lint-scss",
+    "lint:js": "packages/larva/bin/larva.js lint-js ./",
+    "lint-fix": "packages/larva/bin/larva.js lint-scss --fix && npm run lint:js --fix",
+    "lint-fix:scss": "packages/larva/bin/larva.js lint-scss --fix",
+    "lint-fix:js": "packages/larva/bin/larva.js lint-js --fix",
+    "write-json": "packages/larva/bin/larva.js write-json larva && packages/larva/bin/larva.js write-json",
+    "build-icons": "packages/larva/bin/larva.js build-icons",
+    "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project"
   },
   "bin": {
     "larva": "packages/larva/bin/larva.js"
