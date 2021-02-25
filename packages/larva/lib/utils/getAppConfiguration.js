@@ -16,6 +16,8 @@ const path = require( 'path' );
  * @returns value of the specified key.
  */
 
+const defaultConfig = require( path.join( __dirname, '../../../../larva.config.js' ) );
+
 module.exports = function getAppConfiguration( key, usePackageDefault ) {
 
 	try {
@@ -25,22 +27,18 @@ module.exports = function getAppConfiguration( key, usePackageDefault ) {
 			appRoot = path.join( __dirname, '../../__tests__/fixtures/' );
 		}
 
-		let config = require( `${appRoot}/larva.config.js` )[ key ];
+		let config = require( `${appRoot}/larva.config.js` )[key];
 
-		// If config not found in approot, fallback to package default
+		// If config not found in approot, fallback to package default in root
 		if ( undefined === config && usePackageDefault ) {
-			let configFile = path.join( __dirname, '../../larva.config.js' );
-			config = require( configFile )[ key ];
+			return defaultConfig[ key ];
 		}
 
-		return config;
+		return config[ key ];
 
 	} catch ( error ) {
 		console.warn( 'Using default configuration. ');
 
-		let configFile = path.join( __dirname, '../../larva.config.js' );
-		config = require( configFile )[ key ];
-
-		return config;
+		return defaultConfig[ key ];
 	}
 };

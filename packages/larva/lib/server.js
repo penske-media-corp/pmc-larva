@@ -72,8 +72,6 @@ if( appConfiguration.projectPatternsDir ) {
 }
 
 // appConfiguration.projectPatternsDir will be assets/src/patterns - move out to assets.
-app.use( '/larva-assets' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva' ) ) );
-console.log( path.join( appConfiguration.larvaPatternsDir, '../../larva' ) );
 app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
 
 app.get( '/', function (req, res) {

@@ -7,11 +7,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>LRVA: {{ source }} | {{ name }}</title>
 
-		{% block stylesheets %}
-			<link rel="stylesheet" href="/larva-assets/build/css/common.async.css">
-		{% endblock %}
+		<link rel="stylesheet" href="/assets/build/css/common.async.css">
+		<link rel="stylesheet" href="/assets/build/css/larva-ui.css">
 
-		<link rel="stylesheet" href="/larva-assets/build/css/larva-ui.css">
+		{% block stylesheets %}
+		{% endblock %}
 
 		<script>
 			// Stub in PMC cookie object so fonts load on Larva server
@@ -57,8 +57,9 @@
 			} %}
 		</div>
 
-		<script src="/larva-assets/public/webfontloader.js"></script>
-		<script src="/larva-assets/build/js/larva-ui.js"></script>
+		<script src="/assets/public/webfontloader.js"></script>
+		<script src="/assets/build/js/larva-ui.js"></script>
+		<script src="/assets/build/js/common.js"></script>
 
 		{% block scripts %}{% endblock %}
 	</body>

@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const LARVA_PORT = 3001;
+const LARVA_PORT = 3000;
 
 module.exports = {
 
@@ -38,7 +38,7 @@ module.exports = {
 	},
 
 	patterns: {
-		larvaPatternsDir: path.join( __dirname, '../larva-patterns' ),
-		projectPatternsDir: path.join( process.cwd(), './src/patterns' ),
+		larvaPatternsDir: path.join( __dirname, './packages/larva-patterns' ),
+		projectPatternsDir: path.join( __dirname, './src/patterns' ),
 	}
 };
