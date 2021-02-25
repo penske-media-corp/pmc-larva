@@ -1,3 +1,5 @@
+{% set tokens = query.tokens ? '?tokens=' ~ query.tokens : '' %}
+
 {% if 'larva' == source %}
 	{% set patterns = pattern_nav.larva %}
 {% else %}
@@ -24,7 +26,7 @@
 				{% include "@larva/components/c-link/c-link.twig" with {
 					c_link_text: t,
 					c_link_classes: 'lrv-u-display-block',
-					c_link_url: "/" ~ source ~ "/__tests__/" ~ t ~ "/",
+					c_link_url: "/" ~ source ~ "/__tests__/" ~ t ~ "/" ~ tokens,
 				} %}
 			{% endif %}
 		{% endfor %}
@@ -39,7 +41,7 @@
 				{% include "@larva/components/c-link/c-link.twig" with {
 					c_link_text: c,
 					c_link_classes: 'lrv-u-display-block',
-					c_link_url: "/" ~ source ~ "/components/" ~ c ~ "/",
+					c_link_url: "/" ~ source ~ "/components/" ~ c ~ "/" ~ tokens,
 				} %}
 			</li>
 		{% endfor %}
@@ -62,7 +64,7 @@
 			{% include "@larva/components/c-link/c-link.twig" with {
 				c_link_text: m,
 				c_link_classes: 'lrv-u-display-block',
-				c_link_url: "/" ~ source ~ "/modules/" ~ m ~ "/",
+				c_link_url: "/" ~ source ~ "/modules/" ~ m ~ "/" ~ tokens,
 			} %}
 		{% endfor %}
 	</ul>
@@ -76,7 +78,7 @@
 				{% include "@larva/components/c-link/c-link.twig" with {
 					c_link_text: o,
 					c_link_classes: 'lrv-u-display-block',
-					c_link_url: "/" ~ source ~ "/one-offs/" ~ o ~ "/",
+					c_link_url: "/" ~ source ~ "/one-offs/" ~ o ~ "/" ~ tokens,
 				} %}
 			{% endfor %}
 		</ul>
