@@ -1,4 +1,3 @@
-const chalk = require( 'chalk' );
 const path = require( 'path' );
 
 /**
@@ -34,13 +33,14 @@ module.exports = function getAppConfiguration( key, usePackageDefault ) {
 			config = require( configFile )[ key ];
 		}
 
-		if ( undefined === config ) {
-			throw new Error( `Configuration for \`${key}\` is required in larva.config.js. \nPlease refer to the Larva's docs for adding configuration: https://github.com/penske-media-corp/pmc-larva` );
-		}
-
 		return config;
 
 	} catch ( error ) {
-		console.error( chalk.red( chalk.bold( 'There is no larva.config.js in this directory.\n' ) + error ) );
+		console.warn( 'Using default configuration. ');
+
+		let configFile = path.join( __dirname, '../../larva.config.js' );
+		config = require( configFile )[ key ];
+
+		return config;
 	}
 };

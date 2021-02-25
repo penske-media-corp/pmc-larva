@@ -38,12 +38,7 @@ module.exports = {
 	},
 
 	patterns: {
-		larvaPatternsDir: path.resolve( '../larva-patterns' ),
-		projectPatternsDir: path.resolve( './src/patterns' ),
-		ignoredModules: [
-			'footer-menus',
-			'footer-social',
-			'footer-tip'
-		]
+		larvaPatternsDir: path.join( __dirname, '../larva-patterns' ),
+		projectPatternsDir: path.join( process.cwd(), './src/patterns' ),
 	}
 };
