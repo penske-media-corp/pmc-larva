@@ -27,14 +27,14 @@ module.exports = function getAppConfiguration( key, usePackageDefault ) {
 			appRoot = path.join( __dirname, '../../__tests__/fixtures/' );
 		}
 
-		let config = require( `${appRoot}/larva.config.js` )[key];
+		let config = require( `${appRoot}/larva.config.js` );
 
 		// If config not found in approot, fallback to package default in root
 		if ( undefined === config && usePackageDefault ) {
 			return defaultConfig[ key ];
 		}
 
-		return config[ key ];
+		return config[key];
 
 	} catch ( error ) {
 		console.warn( 'Using default configuration. ');
