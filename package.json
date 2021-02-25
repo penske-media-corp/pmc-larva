@@ -5,7 +5,7 @@
     "test": "./node_modules/.bin/jest --forceExit",
     "larva": "packages/larva/bin/larva.js server --watch ../larva-patterns --watch src -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
-    "prod": "packages/larva/bin/larva.js prod-scss && packages/larva/bin/larva.js prod-js",
+    "prod": "npm run prod:scss && npm run prod:js",
     "prod:scss": "packages/larva/bin/larva.js prod-scss",
     "prod:js": "packages/larva/bin/larva.js prod-js",
     "dev": "concurrently \"npm:dev:scss\" \"npm:dev:js\" --raw",
@@ -19,7 +19,8 @@
     "lint-fix:js": "packages/larva/bin/larva.js lint-js --fix",
     "write-json": "packages/larva/bin/larva.js write-json larva && packages/larva/bin/larva.js write-json",
     "build-icons": "packages/larva/bin/larva.js build-icons",
-    "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project"
+    "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
+    "build-tokens": "rm -r build/tokens && mkdir -p build/tokens && cp packages/larva-tokens/build/* build/tokens"
   },
   "bin": {
     "larva": "packages/larva/bin/larva.js"

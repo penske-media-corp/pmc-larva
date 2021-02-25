@@ -1,3 +1,4 @@
+{% set tokens = query.tokens %}
 {% set has_side_skins = query.has_side_skins %}
 
 <!doctype html>
@@ -7,7 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>LRVA: {{ source }} | {{ name }}</title>
 
-		<link rel="stylesheet" href="/assets/build/css/common.async.css">
+		<link rel="stylesheet" href="/assets/build/tokens/{{tokens ?? 'default'}}.custom-properties.css">
+		<link rel="stylesheet" href="/assets/build/css/larva.css">
 		<link rel="stylesheet" href="/assets/build/css/larva-ui.css">
 
 		{% block stylesheets %}
