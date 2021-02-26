@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
@@ -46,8 +46,8 @@
     "@penskemediacorp/backstopjs-config": "^0.1.10",
     "@penskemediacorp/eslint-config": "^0.1.10",
     "@penskemediacorp/larva-css": "^0.1.14",
-    "@penskemediacorp/larva-js": "^0.1.14",
-    "@penskemediacorp/larva-patterns": "^0.1.14",
+    "@penskemediacorp/larva-js": "^0.1.15",
+    "@penskemediacorp/larva-patterns": "^0.1.15",
     "@penskemediacorp/larva-scss": "^0.1.10",
     "@penskemediacorp/larva-svg": "^0.1.14",
     "@penskemediacorp/larva-tokens": "^0.1.14",
