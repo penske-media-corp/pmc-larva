@@ -63,7 +63,7 @@ For the above, be sure to update the paths with any project-level aliasing for i
 ## Things To Be Aware Of
 
 * Token names should be in CAPS
-* Colors that might be re-used between brands should be added in src/base/aliases.json in with a basic color name e.g. RED, BLUE, or GREEN, and followed by the lightness value in the color's HSL value which is the third value. For example a light purple like #B9C4F0 has an HSL of HSL(228, 65%, 83%). It would be called PURPLE_83. [This website](https://convertingcolors.com/) is useful for converting colors.
+* The src/base/aliases.json file is now deprecated and colors should always be defined in the brand's json. (Previously used for colors that might be shared between brands).
 * Only tokens in existing categories should be added e.g. there are no font-size tokens, so do not add them.
 * All tokens are prefixed with their CSS property, e.g. background is BACKGROUND_, text colors are COLOR_, and font family values prefixed with FONT_FAMILY_.
 * Font family values should be a short CSS font stack.
