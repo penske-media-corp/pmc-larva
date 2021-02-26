@@ -1,0 +1,61 @@
+{% set prefix = 'color' %}
+
+<div class="{{ prefix }} lrv-a-wrapper">
+
+	{# Generate HTML for all the variations #}
+	{% set properties = [
+		'background-color',
+		'border-color',
+		'color'
+	] %}
+
+	{% set variants = [
+		'grey',
+		'brand-primary',
+		'brand-secondary',
+		'accent',
+		'accent-a',
+	] %}
+
+	{% set tints = [
+		'darkest',
+		'dark',
+		'',
+		'light',
+		'lightest'
+	] %}
+
+	{% for property in properties %}
+		<h2 style="background-color: whitesmoke;" class="lrv-u-padding-a-1 lrv-u-margin-b-2">property: {{ property }} ( .lrv-u-{{ property }}-* )</h2>
+
+		{% for variant in variants %}
+			<div class="lrv-u-border-t-1 lrv-u-padding-b-2 lrv-u-margin-l-2">
+				<h3 style="background-color: azure;" class="lrv-u-padding-a-1">{{ variant }}</h3>
+
+				<div class="lrv-u-flex lrv-a-space-children-horizontal lrv-a-space-children--1 lrv-u-margin-tb-1">
+				{% for tint in tints %}
+					{% set class = 'lrv-u-' ~ property ~'-' ~ variant ~ ( tint ? '-' ~ tint )%}
+
+					{% if 'color' == property %}
+						<div class="lrv-u-flex lrv-u-flex-direction-column">
+							<strong class="lrv-u-width-100 {{ class }}">Here is some text</strong>
+							<p>{{ class }}</p>
+						</div>
+					{% endif %}
+
+					{% if 'background-color' == property or 'border-color' == property%}
+						<div class="lrv-u-flex lrv-u-flex-direction-column">
+							<div class="lrv-u-width-100 lrv-u-padding-a-1 lrv-u-border-a-1 {{ class }}"></div>
+							<p>{{ class }}</p>
+						</div>
+					{% endif %}
+
+				{% endfor %}
+				</div>
+
+			</div>
+		{% endfor %}
+
+	{% endfor %}
+
+</div>
