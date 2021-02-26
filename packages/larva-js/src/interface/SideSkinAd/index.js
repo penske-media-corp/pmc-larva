@@ -15,7 +15,7 @@ export default function initSideSkinAd ( e ) {
 		}
 	}
 
-	if ( 'string' === typeof e.data && 'object' === typeof window.pmc_dfp_skin ) {
+	if ( 'string' === typeof e.data && 'object' === typeof atlasSkinObj ) {
 		if ( parametersMessagePattern === e.data.substring( 0, parametersMessagePattern.length ) ) {
 			serializedParameters = e.data.substring( parametersMessagePattern.length );
 
