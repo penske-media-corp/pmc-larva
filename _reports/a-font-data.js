@@ -249,7 +249,26 @@ const fontDataByBrand = {
 	]
 };
 
-const brandNames = Object.keys( fontDataByBrand );
+const VY = false;
+
+const brandNames = ( () => {
+	let keys = Object.keys( fontDataByBrand );
+
+	if ( ! VY ) {
+		let index = keys.indexOf( 'variety' );
+		if (index > -1) {
+			keys.splice( index, 1 );
+		}
+	}
+
+	return keys;
+})();
+
+const brandCounts = brandNames.reduce( ( acc, curr) => {
+	acc[curr] = fontDataByBrand[curr].length;
+
+	return acc;
+}, {} );
 
 const allFontNames = brandNames.map( brand => {
 	return fontDataByBrand[brand];
@@ -298,3 +317,27 @@ const report = {
 
 console.log( 'Font Naming Consistency Report' );
 console.table( report );
+console.log( '\n\nBrand Counts' );
+console.table( brandCounts );
+
+const fontNames = [ 'primary', 'secondary', 'accent', 'body', 'basic' ];
+
+const fontsByFamily = uniqueFontNames.reduce( ( acc, curr ) => {
+
+	fontNames.forEach( ( name ) => {
+
+		if( ! acc.hasOwnProperty( name ) ) {
+			acc[name] = [];
+		}
+
+		if ( curr.includes( name ) ) {
+			acc[name].push(curr);
+		}
+
+
+	},{});
+
+	return acc;
+}, {});
+
+// console.log( fontsByFamily );
