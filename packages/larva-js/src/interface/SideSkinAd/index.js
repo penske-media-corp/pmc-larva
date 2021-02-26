@@ -1,16 +1,21 @@
-
+// eslint-disable camelcase
 import reflowForSideSkinAd from './SideSkinAd';
 
 export default function initSideSkinAd ( e ) {
 
 	const parametersMessagePattern = 'pmcadm:dfp:skinad:parameters';
 	let serializedParameters = '';
+	let atlasSkinObj = '';
 
-	if ( undefined !== window.pmc && undefined !== window.pmc.skinAds ) {
-		window['pmc_dfp_skin'] = window.pmc.skinAds;
+	if ( 'object' === typeof window.pmc_dfp_skin ) {
+		atlasSkinObj = window.pmc_dfp_skin;
+	} else {
+		if ( undefined !== window.pmc && undefined !== window.pmc.skinAds ) {
+			atlasSkinObj = window.pmc.skinAds;
+		}
 	}
 
-	if ( 'string' === typeof e.data && 'object' === typeof window.pmc_dfp_skin ) { // eslint-disable-line camelcase
+	if ( 'string' === typeof e.data && 'object' === typeof window.pmc_dfp_skin ) {
 		if ( parametersMessagePattern === e.data.substring( 0, parametersMessagePattern.length ) ) {
 			serializedParameters = e.data.substring( parametersMessagePattern.length );
 
@@ -18,9 +23,10 @@ export default function initSideSkinAd ( e ) {
 
 				reflowForSideSkinAd();
 
-				window.pmc_dfp_skin.refresh_skin_rails(); // eslint-disable-line camelcase
+				atlasSkinObj.refresh_skin_rails();
 			}
 
 		}
 	}
 }
+// eslint-enable camelcase
