@@ -2,32 +2,32 @@
 	"props": {
 		"PRIMARY": {
 			"value": [ "xs", "s", "m", "l", "xl"],
-			"category": "a-font",
+			"category": "a-font-sizes",
 			"type": "array"
 		},
 		"SECONDARY_BOLD": {
 			"value": ["xs", "s", "m", "l", "xl"],
-			"category": "a-font",
+			"category": "a-font-sizes",
 			"type": "array"
 		},
 		"SECONDARY_REGULAR": {
 			"value": ["xs", "s", "m", "l", "xl"],
-			"category": "a-font",
+			"category": "a-font-sizes",
 			"type": "array"
 		},
 		"ACCENT": {
 			"value": ["xs", "s", "m", "l"],
-			"category": "a-font",
+			"category": "a-font-sizes",
 			"type": "array"
 		},
 		"BASIC": {
 			"value": ["xs", "s", "m", "l", "xl"],
-			"category": "a-font",
+			"category": "a-font-sizes",
 			"type": "array"
 		},
 		"BODY": {
 			"value": ["s", "m" ],
-			"category": "a-font",
+			"category": "a-font-sizes",
 			"type": "array"
 		}
 	}

@@ -1,0 +1,21 @@
+
+{
+	"imports": [
+		"./aliases.json"
+	],
+	"global": {
+		"category": "letter-spacing",
+		"type": "unit"
+	},
+	"props": {
+		"LETTER_SPACING_S": {
+			"value": "0.12em"
+		},
+		"LETTER_SPACING_M": {
+			"value": "0.15em"
+		},
+		"LETTER_SPACING_L": {
+			"value": "0.2em"
+		}
+	}
+}
