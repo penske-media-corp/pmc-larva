@@ -8,6 +8,7 @@
  * dest file according to the changed file.
  */
 
+ const Fiber = require('fibers');
 const gulp = require( 'gulp' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
@@ -15,11 +16,14 @@ const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const clean = require( 'gulp-clean' );
 
+sass.compiler = require('sass');
+
 let sassOpts = {
 	includePaths: [
 		path.resolve( './node_modules' ),
 		path.resolve( './src' )
-	]
+	],
+	fiber: Fiber
 };
 
 const css_dest = './build/css/';
