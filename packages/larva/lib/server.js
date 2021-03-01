@@ -10,16 +10,16 @@ const {
 	TwingFilter
 } = require('twing');
 
-const getAppConfiguration = require( './utils/getAppConfiguration' );
+const getAppConfiguration = require('./utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
 const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
 
 const app = express();
 
-const appConfiguration = getAppConfiguration( 'patterns' );
-const twigPaths = getPatternPathsToLoad( appConfiguration );
-const brand = getAppConfiguration( 'brand' );
+const patternConfig = getAppConfiguration( 'patterns', true );
+const brandConfig = getAppConfiguration( 'brand', true );
+const twigPaths = getPatternPathsToLoad( patternConfig );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
 
@@ -53,10 +53,10 @@ const kebabify = ( name ) => {
 
 // TODO: Could be an array/iterator if the namespace can be extracted from the key, the larva.config API could
 // change to `patterns: { larva: /larva/path/here/, project: /project/path/here }`
-loader.addPath( appConfiguration.larvaPatternsDir, 'larva' );
+loader.addPath( patternConfig.larvaPatternsDir, 'larva' );
 
-if( appConfiguration.projectPatternsDir ) {
-	loader.addPath( appConfiguration.projectPatternsDir, 'project' );
+if( patternConfig.projectPatternsDir ) {
+	loader.addPath( patternConfig.projectPatternsDir, 'project' );
 }
 
 let twing = new TwingEnvironment( loader, { debug: true } );
@@ -68,27 +68,27 @@ let patterns = {
 	project: {}
 };
 
-app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
+app.use( '/packages/' , express.static( path.join( patternConfig.larvaPatternsDir, '../' ) ) );
 
 // NOTE: When the static site builder script is merged, this manual pattern
 // collection for the nav will come from an object based on the directory structure
 
-if( appConfiguration.larvaPatternsDir ) {
-	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
-	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
-	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
-	patterns.larva.tests = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/__tests__' ) );
+if( patternConfig.larvaPatternsDir ) {
+	patterns.larva.modules = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/modules' ) );
+	patterns.larva.objects = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/objects' ) );
+	patterns.larva.components = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/components' ) );
+	patterns.larva.tests = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/__tests__' ) );
 }
 
-if( appConfiguration.projectPatternsDir ) {
-	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
-	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
-	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
-	patterns.project.oneOffs = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/one-offs' ) );
-	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
+if( patternConfig.projectPatternsDir ) {
+	patterns.project.modules = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/modules' ) );
+	patterns.project.objects = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/objects' ) );
+	patterns.project.components = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/components' ) );
+	patterns.project.oneOffs = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/one-offs' ) );
+	patterns.project.tests = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/__tests__' ) );
 }
 
-app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
+app.use( '/assets' , express.static( path.join( patternConfig.projectPatternsDir, '../../' ) ) );
 
 app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
@@ -202,9 +202,9 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	let patternsPath;
 
 	if ( 'larva' === req.params.source ) {
-		patternsPath = appConfiguration.larvaPatternsDir;
+		patternsPath = patternConfig.larvaPatternsDir;
 	} else if ( 'project' === req.params.source ) {
-		patternsPath = appConfiguration.projectPatternsDir;
+		patternsPath = patternConfig.projectPatternsDir;
 	} else if ( 'assets' === req.params.source ) {
 		return res.end();
 	}
@@ -214,7 +214,7 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	req.params[ 'query' ] = req.query;
 	req.params[ 'pattern_nav' ] = patterns;
 	req.params[ 'data' ] = undefined !== patternsPath ? getPatternData( patternsPath, req.params ) : null;
-	req.params[ 'data' ][ 'brand' ] = brand;
+	req.params[ 'data' ][ 'brand' ] = brandConfig;
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
@@ -233,7 +233,7 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 
 app.get( '/style-guide', function (req, res ) {
 
-	const brand = req.query.tokens || brand;
+	const brand = req.query.tokens ? req.query.tokens : brandConfig;
 
 	const fontData = (() => {
 		try {
