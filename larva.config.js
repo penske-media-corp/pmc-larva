@@ -3,6 +3,8 @@ const LARVA_PORT = 3000;
 
 module.exports = {
 
+	brand: 'default',
+
 	eslint: {
 		configFile: path.join( __dirname, './scripts/config/.eslintrc.json' )
 	},

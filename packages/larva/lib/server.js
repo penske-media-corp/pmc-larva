@@ -3,7 +3,6 @@ const express = require('express');
 const marked = require( 'marked' );
 const fs = require( 'fs' );
 const globby = require( 'globby' );
-const chalk = require( 'chalk' );
 
 const {
 	TwingEnvironment,
@@ -20,6 +19,7 @@ const app = express();
 
 const appConfiguration = getAppConfiguration( 'patterns' );
 const twigPaths = getPatternPathsToLoad( appConfiguration );
+const brand = getAppConfiguration( 'brand' );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
 
@@ -33,6 +33,23 @@ const markdownFilter = new TwingFilter( 'markdown', ( string ) => {
 		return Promise.resolve( marked( noDocsMessage ) );
 	}
 });
+
+const kebabify = ( name ) => {
+	let kebabCase = [];
+
+	// TODO: find a more concise way of turning a string into an iterable
+	for (let i = 0; i < name.length; i++) {
+		let letter = name[i];
+		kebabCase[i] = letter;
+	}
+
+	return kebabCase.reduce( ( a, b ) => {
+		if ( '_' === b ) {
+			return a.toLowerCase() + '-';
+		}
+		return a.toLowerCase() + b.toLowerCase();
+	});
+};
 
 // TODO: Could be an array/iterator if the namespace can be extracted from the key, the larva.config API could
 // change to `patterns: { larva: /larva/path/here/, project: /project/path/here }`
@@ -72,7 +89,6 @@ if( appConfiguration.projectPatternsDir ) {
 }
 
 app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
-app.use( '/tokens' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-tokens/build' ) ) );
 
 app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
@@ -81,7 +97,7 @@ app.get( '/', function (req, res) {
 	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
 });
 
-app.get( '/:source/css', function (req, res) {
+app.get( '/:source?/css', function (req, res) {
 
 	/**
 	 * Generate Larva CSS Docs
@@ -103,10 +119,11 @@ app.get( '/:source/css', function (req, res) {
 	const sassPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-css/src/' );
 
 	const hasTokens = [
-		'u-font-family',
-		'u-color',
 		'u-background-color',
 		'u-border-color',
+		'u-color',
+		'u-font-family',
+		'u-letter-spacing',
 		'u-margin',
 		'u-padding',
 	];
@@ -197,6 +214,7 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	req.params[ 'query' ] = req.query;
 	req.params[ 'pattern_nav' ] = patterns;
 	req.params[ 'data' ] = undefined !== patternsPath ? getPatternData( patternsPath, req.params ) : null;
+	req.params[ 'data' ][ 'brand' ] = brand;
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
@@ -211,6 +229,65 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 
 		res.end( errorMessage );
 	} );
+});
+
+app.get( '/style-guide', function (req, res ) {
+
+	const brand = req.query.tokens || brand;
+
+	const fontData = (() => {
+		try {
+			return require( path.join( process.cwd(), `./build/tokens/${brand}.typography.json` ) );
+		} catch (e) {
+			return null;
+		}
+	})();
+
+	const tokensData = require( path.join( process.cwd(), `./build/tokens/${brand}.json` ) );
+
+	const fontStyles = ( () => {
+		if( ! fontData ) return;
+
+		return Object.keys( fontData ).map( variant => {
+			const key = kebabify( variant );
+			return {
+				class: `a-font-${key}`,
+				sizes: fontData[variant]
+			};
+		});
+	} )();
+
+	const colorTokens = Object.keys( tokensData ).filter( item => item.includes( 'COLOR' ) );
+	const colorNames = colorTokens.map( token => kebabify( token ) );
+
+	const colorsByProperty = colorNames.reduce( (acc, curr) => {
+		Object.keys( acc ).forEach( key => {
+			if ( curr.startsWith( key ) ) {
+				acc[key].push( 'lrv-u-' + curr );
+			}
+		});
+
+		return acc;
+	}, {
+		color: [],
+		'background-color': [],
+		'border-color': []
+	});
+
+	req.params[ 'name' ] = `${brand} Style Guide`;
+	req.params[ 'font_styles' ] = fontStyles;
+	req.params[ 'colors' ] = colorsByProperty;
+	req.params[ 'brand' ] = brand;
+	req.params[ 'pattern_nav' ] = patterns;
+
+	twing.render( 'style-guide/index.html', req.params ).then( output => res.end( output ) ).catch( e => {
+		const errorMessage = `Cannot render template! \n\n${e}`;
+
+		console.log( e );
+
+		res.end( errorMessage );
+	} );;
+
 });
 
 module.exports = app;

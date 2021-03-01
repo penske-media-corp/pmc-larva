@@ -39,6 +39,7 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	const builtAssets = [
 		'js',
 		'css',
+		'tokens',
 		'images',
 		'svg'
 	];
