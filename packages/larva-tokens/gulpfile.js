@@ -40,21 +40,6 @@ gulp.task('default', ( done ) => {
 		basicTokenBuild( format )
 	});
 
-	gulp.src([
-		'src/brands/*.json',
-		'!src/brands/*.typography.json'
-	])
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: {
-				type: 'html',
-				options: {
-					transformPropName: ( name ) => kebabify( name )
-				}
-			}
-		}))
-		.pipe(gulp.dest('./style-guides'));
-
 	gulp.src('src/brands/*.typography.json')
 		.pipe(theo({
 			transform: { type: 'web' },
