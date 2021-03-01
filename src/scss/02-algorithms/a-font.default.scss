@@ -1,0 +1,355 @@
+
+@import 'setup';
+
+
+[class*='a-font-primary'] {
+	// @include _font-family('font-family-primary-fancy', $corrected-variety-map);
+
+	font-weight: normal;
+}
+
+.a-font-primary-xl {
+	font-family: var(--font-family-primary);
+	font-size: pmc-rem(25);
+	line-height: pmc-rem(27);
+
+	@include pmc-breakpoint(desktop) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(28);
+		line-height: pmc-rem(32);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(36);
+		line-height: pmc-rem(40);
+	}
+
+}
+
+.a-font-primary-l {
+	font-family: var(--font-family-primary);
+	font-size: pmc-rem(22);
+	line-height: pmc-rem(25);
+
+	@include pmc-breakpoint(desktop) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(32);
+		line-height: pmc-rem(35);
+	}
+
+	@include pmc-breakpoint(desktop) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(36);
+		line-height: pmc-rem(40);
+	}
+}
+
+.a-font-primary-m {
+	font-family: var(--font-family-primary);
+	font-size: pmc-rem(18);
+	line-height: pmc-rem(22);
+
+	@include pmc-breakpoint(desktop) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(24);
+		line-height: pmc-rem(27);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(28);
+		line-height: pmc-rem(32);
+	}
+}
+
+.a-font-primary-s {
+	font-family: var(--font-family-primary);
+	font-size: pmc-rem(22);
+	line-height: pmc-rem(25);
+
+	@include pmc-breakpoint(desktop) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(24);
+		line-height: pmc-rem(29);
+	}
+}
+
+.a-font-primary-xs {
+	font-family: var(--font-family-primary);
+	font-size: pmc-rem(18);
+	line-height: pmc-rem(21);
+	letter-spacing: pmc-rem(0.5);
+
+	@include pmc-breakpoint(desktop-xl) {
+		font-family: var(--font-family-primary);
+		font-size: pmc-rem(21);
+		line-height: pmc-rem(24);
+	}
+}
+
+
+//
+// Secondary Bold
+//
+@mixin a-font-secondary-bold {
+	font-family: var(--font-family-secondary);
+	font-weight: 700;
+}
+
+.a-font-secondary-bold-xl {
+	@include a-font-secondary-bold;
+	font-size: pmc-rem(16);
+	letter-spacing: pmc-rem(3);
+	text-transform: uppercase;
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-secondary-bold;
+		font-size: pmc-rem(24);
+		letter-spacing: pmc-rem(3);
+		text-transform: uppercase;
+	}
+}
+
+.a-font-secondary-bold-l {
+	@include a-font-secondary-bold;
+	font-size: pmc-rem(18);
+	line-height: pmc-rem(21);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-secondary-bold;
+		font-size: pmc-rem(21);
+		line-height: pmc-rem(24);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		@include a-font-secondary-bold;
+		font-size: pmc-rem(24);
+		line-height: pmc-rem(27);
+	}
+}
+
+.a-font-secondary-bold-m {
+	@include a-font-secondary-bold;
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-secondary-bold;
+		font-size: pmc-rem(18);
+		line-height: pmc-rem(21);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		@include a-font-secondary-bold;
+		font-size: pmc-rem(21);
+		line-height: pmc-rem(24);
+	}
+}
+
+.a-font-secondary-bold-s {
+	@include a-font-secondary-bold;
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop-xl) {
+		@include a-font-secondary-bold;
+		font-size: pmc-rem(16);
+		line-height: pmc-rem(19);
+	}
+}
+
+.a-font-secondary-bold-xs {
+	@include a-font-secondary-bold;
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-secondary-bold;
+		font-size: pmc-rem(14);
+		line-height: pmc-rem(17);
+	}
+}
+
+//
+// Secondary Regular
+//
+
+@mixin a-font-secondary-regular {
+	font-family: var(--font-family-secondary);
+}
+
+.a-font-secondary-regular-l {
+	@include a-font-secondary-regular;
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop-xl) {
+		@include a-font-secondary-regular;
+		font-size: pmc-rem(18);
+		line-height: pmc-rem(21);
+	}
+}
+
+.a-font-secondary-regular-m {
+	@include a-font-secondary-regular;
+	font-size: pmc-rem(13);
+	line-height: pmc-rem(15);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-secondary-regular;
+		font-size: pmc-rem(15);
+		line-height: pmc-rem(18);
+	}
+}
+
+.a-font-secondary-regular-s {
+	@include a-font-secondary-regular;
+	font-size: pmc-rem(12);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-secondary-regular;
+		font-size: pmc-rem(14);
+	}
+}
+
+.a-font-secondary-regular-xs {
+	@include a-font-secondary-regular;
+	font-size: pmc-rem(12);
+	letter-spacing: pmc-rem(1.5);
+}
+
+//
+// Accent
+//
+
+@mixin a-font-accent {
+	font-family: var( --font-family-accent );
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.a-font-accent-l {
+	@include a-font-accent;
+	font-size: pmc-rem(30);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-accent;
+		font-size: pmc-rem(52);
+	}
+
+}
+
+.a-font-accent-m {
+	@include a-font-accent;
+	font-size: pmc-rem(35);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-accent;
+		font-size: pmc-rem(42);
+	}
+}
+
+.a-font-accent-s {
+	@include a-font-accent;
+	font-size: pmc-rem(24);
+	letter-spacing: pmc-rem(1.5);
+}
+
+//
+// Basic
+//
+
+@mixin a-font-basic {
+	font-family: var( --font-family-basic );
+}
+
+.a-font-basic-xl {
+	@include a-font-basic;
+	letter-spacing: pmc-rem(5);
+	font-size: pmc-rem(12);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-basic;
+		letter-spacing: pmc-rem(5);
+		font-size: pmc-rem(18);
+	}
+}
+
+.a-font-basic-l {
+	@include a-font-basic;
+	font-size: pmc-rem(15);
+	letter-spacing: pmc-rem(1);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-basic;
+		letter-spacing: pmc-rem(1);
+		font-size: pmc-rem(18);
+	}
+}
+
+.a-font-basic-m {
+	@include a-font-basic;
+	font-size: pmc-rem(12);
+	letter-spacing: pmc-rem(1);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-basic;
+		letter-spacing: pmc-rem(1);
+		font-size: pmc-rem(15);
+	}
+}
+
+.a-font-basic-s {
+	@include a-font-basic;
+	font-size: pmc-rem(12);
+	letter-spacing: pmc-rem(1);
+}
+
+.a-font-basic-xs {
+	@include a-font-basic;
+	font-size: pmc-rem(10);
+	letter-spacing: pmc-rem(1);
+
+	@include pmc-breakpoint(desktop) {
+		font-size: pmc-rem(11);
+	}
+}
+
+
+//
+// Body
+//
+
+@mixin a-font-body {
+	font-family: var( --font-family-body );
+}
+
+.a-font-body-m {
+	@include a-font-body;
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(24);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-body;
+		font-size: pmc-rem(18);
+		line-height: pmc-rem(26);
+	}
+}
+
+.a-font-body-s {
+	@include a-font-body;
+	font-size: pmc-rem(13);
+	line-height: pmc-rem(15);
+
+	@include pmc-breakpoint(desktop) {
+		@include a-font-body;
+		font-size: pmc-rem(16);
+		line-height: pmc-rem(21);
+	}
+
+	@include pmc-breakpoint(desktop-xl) {
+		@include a-font-body;
+		font-size: pmc-rem(18);
+	}
+}

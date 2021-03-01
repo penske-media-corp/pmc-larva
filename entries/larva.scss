@@ -3,17 +3,17 @@
 // Note: Commented out for feature testing - would use the $features value,
 // but Sass cannot parse imports inside conditional blocks.
 
-@import '@penskemediacorp/larva-css/build/css/generic.common.inline';
-// @import '@penskemediacorp/larva-css/build/css/generic.common.async';
+@import '../packages/larva-css/build/css/generic.common.inline';
+// @import '../larva-css/build/css/generic.common.async';
 // @import '01-generic/*.common.*.scss';
 
-@import '@penskemediacorp/larva-css/build/css/algorithms.common.inline';
-@import '@penskemediacorp/larva-css/build/css/algorithms.common.async';
+@import '../packages/larva-css/build/css/algorithms.common.inline';
+@import '../packages/larva-css/build/css/algorithms.common.async';
 // @import '02-algorithms/*.common.*.scss';
 
-@import '@penskemediacorp/larva-css/build/css/utilities.common.inline';
-@import '@penskemediacorp/larva-css/build/css/utilities.common.async';
+@import '../packages/larva-css/build/css/utilities.common.inline';
+@import '../packages/larva-css/build/css/utilities.common.async';
 // @import '03-utilities/*.common.*.scss';
 
-@import '@penskemediacorp/larva-css/src/04-js/*.scss';
+@import '../packages/larva-css/src/04-js/*.scss';
 @import '04-js/*.common.scss';
