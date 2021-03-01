@@ -1,26 +1,22 @@
-
 @import 'setup';
 
-
-[class*='a-font-primary'] {
-	// @include _font-family('font-family-primary-fancy', $corrected-variety-map);
-
-	font-weight: normal;
+@mixin a-font-primary {
+	font-family: var( --font-family-primary );
 }
 
 .a-font-primary-xl {
-	font-family: var(--font-family-primary);
+	@include a-font-primary;
 	font-size: pmc-rem(25);
 	line-height: pmc-rem(27);
 
 	@include pmc-breakpoint(desktop) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(28);
 		line-height: pmc-rem(32);
 	}
 
 	@include pmc-breakpoint(desktop-xl) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(36);
 		line-height: pmc-rem(40);
 	}
@@ -28,61 +24,61 @@
 }
 
 .a-font-primary-l {
-	font-family: var(--font-family-primary);
+	@include a-font-primary;
 	font-size: pmc-rem(22);
 	line-height: pmc-rem(25);
 
 	@include pmc-breakpoint(desktop) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(32);
 		line-height: pmc-rem(35);
 	}
 
 	@include pmc-breakpoint(desktop) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(36);
 		line-height: pmc-rem(40);
 	}
 }
 
 .a-font-primary-m {
-	font-family: var(--font-family-primary);
+	@include a-font-primary;
 	font-size: pmc-rem(18);
 	line-height: pmc-rem(22);
 
 	@include pmc-breakpoint(desktop) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(24);
 		line-height: pmc-rem(27);
 	}
 
 	@include pmc-breakpoint(desktop-xl) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(28);
 		line-height: pmc-rem(32);
 	}
 }
 
 .a-font-primary-s {
-	font-family: var(--font-family-primary);
+	@include a-font-primary;
 	font-size: pmc-rem(22);
 	line-height: pmc-rem(25);
 
 	@include pmc-breakpoint(desktop) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(24);
 		line-height: pmc-rem(29);
 	}
 }
 
 .a-font-primary-xs {
-	font-family: var(--font-family-primary);
+	@include a-font-primary;
 	font-size: pmc-rem(18);
 	line-height: pmc-rem(21);
 	letter-spacing: pmc-rem(0.5);
 
 	@include pmc-breakpoint(desktop-xl) {
-		font-family: var(--font-family-primary);
+		@include a-font-primary;
 		font-size: pmc-rem(21);
 		line-height: pmc-rem(24);
 	}
@@ -177,6 +173,18 @@
 
 @mixin a-font-secondary-regular {
 	font-family: var(--font-family-secondary);
+}
+
+.a-font-secondary-regular-xl {
+	@include a-font-secondary-regular;
+	font-size: pmc-rem(15);
+	line-height: pmc-rem(18);
+
+	@include pmc-breakpoint(desktop-xl) {
+		@include a-font-secondary-regular;
+		font-size: pmc-rem(23);
+		line-height: pmc-rem(25);
+	}
 }
 
 .a-font-secondary-regular-l {
