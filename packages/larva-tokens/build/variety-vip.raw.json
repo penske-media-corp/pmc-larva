@@ -221,33 +221,12 @@
     }
   },
   "props": {
-    "COLOR_WHITE": {
-      "category": "text-color",
+    "COLOR_BRAND_SECONDARY": {
+      "value": "rgb(40, 56, 66)",
       "type": "color",
-      "value": "rgb(255, 255, 255)",
-      "originalValue": "{!WHITE}",
-      "name": "COLOR_WHITE"
-    },
-    "COLOR_GREY_LIGHT": {
       "category": "text-color",
-      "type": "color",
-      "value": "rgb(230, 230, 230)",
-      "originalValue": "{!GREY_90}",
-      "name": "COLOR_GREY_LIGHT"
-    },
-    "COLOR_GREY": {
-      "category": "text-color",
-      "type": "color",
-      "value": "rgb(140, 140, 140)",
-      "originalValue": "{!GREY_50}",
-      "name": "COLOR_GREY"
-    },
-    "COLOR_GREY_DARK": {
-      "category": "text-color",
-      "type": "color",
-      "value": "rgb(106, 106, 106)",
-      "originalValue": "{!GREY_35}",
-      "name": "COLOR_GREY_DARK"
+      "originalValue": "{!BLUE_21}",
+      "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
       "category": "text-color",
@@ -256,6 +235,27 @@
       "originalValue": "{!BLACK}",
       "name": "COLOR_BLACK"
     },
+    "COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "COLOR_BRAND_PRIMARY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY_DARK"
+    },
+    "COLOR_WHITE": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(255, 255, 255)",
+      "originalValue": "{!WHITE}",
+      "name": "COLOR_WHITE"
+    },
     "COLOR_BRAND_PRIMARY": {
       "value": "rgb(215, 20, 64)",
       "type": "color",
@@ -263,12 +263,40 @@
       "originalValue": "{!RED_46}",
       "name": "COLOR_BRAND_PRIMARY"
     },
-    "COLOR_BRAND_SECONDARY": {
-      "value": "rgb(40, 56, 66)",
-      "type": "color",
+    "COLOR_GREY_LIGHT": {
       "category": "text-color",
-      "originalValue": "{!BLUE_21}",
-      "name": "COLOR_BRAND_SECONDARY"
+      "type": "color",
+      "value": "rgb(230, 230, 230)",
+      "originalValue": "{!GREY_90}",
+      "name": "COLOR_GREY_LIGHT"
+    },
+    "COLOR_BRAND_SECONDARY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_SECONDARY_DARK"
+    },
+    "COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "COLOR_GREY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(106, 106, 106)",
+      "originalValue": "{!GREY_35}",
+      "name": "COLOR_GREY_DARK"
+    },
+    "COLOR_GREY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(140, 140, 140)",
+      "originalValue": "{!GREY_50}",
+      "name": "COLOR_GREY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
       "value": "'Graphik XX Cond', sans-serif",
@@ -327,6 +355,20 @@
       "originalValue": "{!GREY_96}",
       "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
     },
+    "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
+    },
     "BACKGROUND_COLOR_GREY_DARK": {
       "category": "background-color",
       "type": "color",
@@ -362,6 +404,20 @@
       "value": "rgb(0, 0, 0)",
       "originalValue": "{!BLACK}",
       "name": "BACKGROUND_COLOR_BLACK"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
     },
     "BACKGROUND_COLOR_WHITE": {
       "category": "background-color",

@@ -221,19 +221,19 @@
     }
   },
   "props": {
-    "BORDER_COLOR_WHITE": {
-      "category": "hr-color",
-      "type": "color",
-      "value": "rgb(255, 255, 255)",
-      "originalValue": "rgb(255, 255, 255)",
-      "name": "BORDER_COLOR_WHITE"
-    },
     "BORDER_COLOR_GREY_LIGHTEST": {
       "category": "hr-color",
       "type": "color",
       "value": "rgb(247, 247, 247)",
       "originalValue": "rgb(247, 247, 247)",
       "name": "BORDER_COLOR_GREY_LIGHTEST"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
     },
     "BORDER_COLOR_GREY_LIGHT": {
       "category": "hr-color",
@@ -242,13 +242,6 @@
       "originalValue": "rgb(204, 204, 204)",
       "name": "BORDER_COLOR_GREY_LIGHT"
     },
-    "BORDER_COLOR_GREY": {
-      "category": "hr-color",
-      "type": "color",
-      "value": "rgb(140, 140, 140)",
-      "originalValue": "rgb(140, 140, 140)",
-      "name": "BORDER_COLOR_GREY"
-    },
     "BORDER_COLOR_GREY_DARK": {
       "category": "hr-color",
       "type": "color",
@@ -256,12 +249,12 @@
       "originalValue": "rgb(106, 106, 106)",
       "name": "BORDER_COLOR_GREY_DARK"
     },
-    "BORDER_COLOR_BRAND_PRIMARY": {
+    "BORDER_COLOR_BRAND_SECONDARY_DARK": {
       "category": "hr-color",
       "type": "color",
-      "value": "rgb(22, 49, 71)",
-      "originalValue": "#163147",
-      "name": "BORDER_COLOR_BRAND_PRIMARY"
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
     },
     "BORDER_COLOR_BRAND_SECONDARY": {
       "category": "hr-color",
@@ -269,6 +262,41 @@
       "value": "rgb(255, 213, 53)",
       "originalValue": "#FFD535",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
+    },
+    "BORDER_COLOR_GREY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(140, 140, 140)",
+      "originalValue": "rgb(140, 140, 140)",
+      "name": "BORDER_COLOR_GREY"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "BORDER_COLOR_WHITE": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(255, 255, 255)",
+      "originalValue": "rgb(255, 255, 255)",
+      "name": "BORDER_COLOR_WHITE"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(22, 49, 71)",
+      "originalValue": "#163147",
+      "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
       "category": "background-color",
@@ -283,6 +311,20 @@
       "value": "rgb(247, 247, 247)",
       "originalValue": "rgb(247, 247, 247)",
       "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
     },
     "BACKGROUND_COLOR_GREY_DARK": {
       "category": "background-color",
@@ -321,6 +363,20 @@
       "originalValue": "rgb(0, 0, 0)",
       "name": "BACKGROUND_COLOR_BLACK"
     },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
+    },
     "BACKGROUND_COLOR_WHITE": {
       "category": "background-color",
       "type": "color",
@@ -343,33 +399,12 @@
       "originalValue": "rgb(50, 50, 50)",
       "name": "BACKGROUND_COLOR_GREY_DARKEST"
     },
-    "COLOR_WHITE": {
+    "COLOR_BRAND_SECONDARY": {
       "category": "text-color",
       "type": "color",
-      "value": "rgb(255, 255, 255)",
-      "originalValue": "rgb(255, 255, 255)",
-      "name": "COLOR_WHITE"
-    },
-    "COLOR_GREY_LIGHT": {
-      "category": "text-color",
-      "type": "color",
-      "value": "rgb(230, 230, 230)",
-      "originalValue": "rgb(230, 230, 230)",
-      "name": "COLOR_GREY_LIGHT"
-    },
-    "COLOR_GREY": {
-      "category": "text-color",
-      "type": "color",
-      "value": "rgb(140, 140, 140)",
-      "originalValue": "rgb(140, 140, 140)",
-      "name": "COLOR_GREY"
-    },
-    "COLOR_GREY_DARK": {
-      "category": "text-color",
-      "type": "color",
-      "value": "rgb(106, 106, 106)",
-      "originalValue": "rgb(106, 106, 106)",
-      "name": "COLOR_GREY_DARK"
+      "value": "rgb(255, 213, 53)",
+      "originalValue": "#FFD535",
+      "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
       "category": "text-color",
@@ -378,6 +413,27 @@
       "originalValue": "rgb(0, 0, 0)",
       "name": "COLOR_BLACK"
     },
+    "COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "COLOR_BRAND_PRIMARY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY_DARK"
+    },
+    "COLOR_WHITE": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(255, 255, 255)",
+      "originalValue": "rgb(255, 255, 255)",
+      "name": "COLOR_WHITE"
+    },
     "COLOR_BRAND_PRIMARY": {
       "category": "text-color",
       "type": "color",
@@ -385,12 +441,40 @@
       "originalValue": "#163147",
       "name": "COLOR_BRAND_PRIMARY"
     },
-    "COLOR_BRAND_SECONDARY": {
+    "COLOR_GREY_LIGHT": {
       "category": "text-color",
       "type": "color",
-      "value": "rgb(255, 213, 53)",
-      "originalValue": "#FFD535",
-      "name": "COLOR_BRAND_SECONDARY"
+      "value": "rgb(230, 230, 230)",
+      "originalValue": "rgb(230, 230, 230)",
+      "name": "COLOR_GREY_LIGHT"
+    },
+    "COLOR_BRAND_SECONDARY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_SECONDARY_DARK"
+    },
+    "COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "COLOR_GREY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(106, 106, 106)",
+      "originalValue": "rgb(106, 106, 106)",
+      "name": "COLOR_GREY_DARK"
+    },
+    "COLOR_GREY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(140, 140, 140)",
+      "originalValue": "rgb(140, 140, 140)",
+      "name": "COLOR_GREY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
       "category": "font-family",
