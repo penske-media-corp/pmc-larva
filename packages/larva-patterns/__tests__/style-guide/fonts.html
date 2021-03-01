@@ -1,31 +1,11 @@
-{% set prefix = 'a-font' %}
+<div class="lrv-a-wrapper">
 
-<div class="{{ prefix }} lrv-a-wrapper">
-
-	{# Generate HTML for all the variations #}
-	{% set variants = [
-		'primary',
-		'secondary-bold',
-		'secondary-regular',
-		'accent',
-		'basic',
-		'body'
-	] %}
-
-	{% set sizes = [
-		'xl',
-		'l',
-		'm',
-		's',
-		'xs'
-	] %}
-
-	{% for variant in variants %}
+	{% for style in font_styles %}
 		<div class="lrv-u-border-t-1 lrv-u-padding-b-2">
-			<h2 class="lrv-u-padding-a-1" style="background-color: lemonchiffon;">{{ variant }}</h2>
+			<h2 class="lrv-u-padding-a-1" style="background-color: lemonchiffon;">{{ style.class }}</h2>
 
-			{% for size in sizes %}
-				{% set class = prefix ~ '-' ~ variant ~ '-' ~ size  %}
+			{% for size in style.sizes %}
+				{% set class = style.class ~ '-' ~ size  %}
 
 				<p class="{{ class }}">{{ class }}</p>
 			{% endfor %}
