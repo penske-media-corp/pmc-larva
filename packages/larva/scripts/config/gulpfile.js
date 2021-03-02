@@ -69,7 +69,6 @@ const emptyStream = () => {
  */
 const buildScss = ( done, minify = false ) => {
 
-	mkdirp( cssDest );
 	// This is redundant, but was having issue with conditionally
 	// minifying within the same stream with
 	// .pipe( minify ? postcss( [ cssnano() ] ) : emptyStream() )
@@ -94,6 +93,8 @@ const buildScss = ( done, minify = false ) => {
 const clean = ( done ) => {
 	gulp.src( cssDest , { read: false } )
 		.pipe( gulpClean() );
+
+	mkdirp( cssDest );
 	done();
 };
 
