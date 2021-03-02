@@ -1,6 +1,7 @@
 {
-  "name": "@penskemediacorp/pmc-larva",
+  "name": "pmc-larva",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
     "larva": "packages/larva/bin/larva.js server --watch ./packages -e twig,js,html",
