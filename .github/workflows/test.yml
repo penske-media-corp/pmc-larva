@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: ./node_modules/.bin/lerna bootstrap
+    - run: lerna bootstrap
     - run: npm test
       env:
         CI: true
