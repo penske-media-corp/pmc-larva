@@ -18,7 +18,7 @@ const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
 const app = express();
 
 const patternConfig = getAppConfiguration( 'patterns', true );
-const brandConfig = getAppConfiguration( 'brand', true );
+const brandConfig = getAppConfiguration( 'brand' );
 const twigPaths = getPatternPathsToLoad( patternConfig );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
@@ -87,6 +87,8 @@ if( patternConfig.projectPatternsDir ) {
 	patterns.project.oneOffs = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/one-offs' ) );
 	patterns.project.tests = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/__tests__' ) );
 }
+
+console.log(patternConfig.projectPatternsDir);
 
 app.use( '/assets' , express.static( path.join( patternConfig.projectPatternsDir, '../../' ) ) );
 
@@ -214,7 +216,7 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	req.params[ 'query' ] = req.query;
 	req.params[ 'pattern_nav' ] = patterns;
 	req.params[ 'data' ] = undefined !== patternsPath ? getPatternData( patternsPath, req.params ) : null;
-	req.params[ 'data' ][ 'brand' ] = brandConfig;
+	req.params[ 'brand' ] = brandConfig;
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
@@ -237,13 +239,13 @@ app.get( '/style-guide', function (req, res ) {
 
 	const fontData = (() => {
 		try {
-			return require( path.join( process.cwd(), `./build/tokens/${brand}.typography.json` ) );
+			return require( path.join( __dirname, `../../../build/tokens/${brand}.typography.json` ) );
 		} catch (e) {
 			return null;
 		}
 	})();
 
-	const tokensData = require( path.join( process.cwd(), `./build/tokens/${brand}.json` ) );
+	const tokensData = require( path.join( __dirname, `../../../build/tokens/${brand}.json` ) );
 
 	const fontStyles = ( () => {
 		if( ! fontData ) return;

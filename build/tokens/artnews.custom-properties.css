@@ -1,30 +1,42 @@
 
 :root {
-  --border-color-white: rgb(255, 255, 255);
   --border-color-grey-lightest: rgb(247, 247, 247);
+  --border-color-brand-secondary-light: rgb(0, 0, 0);
   --border-color-grey-light: rgb(204, 204, 204);
-  --border-color-grey: rgb(140, 140, 140);
   --border-color-grey-dark: rgb(106, 106, 106);
-  --border-color-brand-primary: rgb(229, 75, 39);
+  --border-color-brand-secondary-dark: rgb(0, 0, 0);
   --border-color-brand-secondary: rgb(241, 247, 252);
+  --border-color-grey: rgb(140, 140, 140);
+  --border-color-brand-primary-light: rgb(236, 28, 36);
+  --border-color-white: rgb(255, 255, 255);
+  --border-color-brand-primary-dark: rgb(236, 28, 36);
+  --border-color-brand-primary: rgb(229, 75, 39);
   --background-color-grey-light: rgb(204, 204, 204);
   --background-color-grey-lightest: rgb(247, 247, 247);
+  --background-color-brand-secondary-dark: rgb(0, 0, 0);
+  --background-color-brand-secondary-light: rgb(0, 0, 0);
   --background-color-grey-dark: rgb(106, 106, 106);
   --background-color-grey: rgb(140, 140, 140);
   /* The background color of the main body of the site. */
   --background-color-body: rgb(255, 255, 255);
   --background-color-brand-secondary: rgb(241, 247, 252);
   --background-color-black: rgb(0, 0, 0);
+  --background-color-brand-primary-light: rgb(236, 28, 36);
+  --background-color-brand-primary-dark: rgb(236, 28, 36);
   --background-color-white: rgb(255, 255, 255);
   --background-color-brand-primary: rgb(229, 75, 39);
   --background-color-grey-darkest: rgb(50, 50, 50);
-  --color-white: rgb(255, 255, 255);
-  --color-grey-light: rgb(230, 230, 230);
-  --color-grey: rgb(140, 140, 140);
-  --color-grey-dark: rgb(106, 106, 106);
-  --color-black: rgb(0, 0, 0);
-  --color-brand-primary: rgb(229, 75, 39);
   --color-brand-secondary: rgb(241, 247, 252);
+  --color-black: rgb(0, 0, 0);
+  --color-brand-primary-light: rgb(236, 28, 36);
+  --color-brand-primary-dark: rgb(236, 28, 36);
+  --color-white: rgb(255, 255, 255);
+  --color-brand-primary: rgb(229, 75, 39);
+  --color-grey-light: rgb(230, 230, 230);
+  --color-brand-secondary-dark: rgb(0, 0, 0);
+  --color-brand-secondary-light: rgb(0, 0, 0);
+  --color-grey-dark: rgb(106, 106, 106);
+  --color-grey: rgb(140, 140, 140);
   /* Available via Typekit. */
   --font-family-primary-fancy: 'neue-haas-unica', Helvetica, sans-serif;
   /* Fallback for primary-fancy. */
