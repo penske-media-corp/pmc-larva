@@ -22,7 +22,7 @@
   /* The background color of the main body of the site. */
   --background-color-body: rgb(255, 255, 255);
   /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
-  --background-color-brand-secondary: rgb(236, 28, 36);
+  --background-color-brand-secondary: rgb(0, 0, 0);
   --background-color-black: rgb(0, 0, 0);
   --background-color-white: rgb(255, 255, 255);
   --background-color-brand-primary: rgb(238, 232, 9);

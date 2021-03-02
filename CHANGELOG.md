@@ -4,6 +4,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.15 - 02-26-2021
+* larva-js - Fix sideskin ads
+
+## 0.1.14 - 02-25-2021
+* larva-svg - Update pmc logo
+
+## 0.1.13 - 02-10-2021
+* larva-tokens - Add The Hollywood Reporter (THR) design tokens.
+
+## 0.1.12 - 02-08-2021
+* Typo - Fix Variable typo
+
+## 0.1.11 - 02-08-2021
+* Accessibility - Add aria-label attribute to c-link component
+* PMCP-2796: Add focus trap to mega menu modal
+
+## 0.1.10 - 02-01-2021
+* Add support to use app root .eslintrc file
+* Add option to get config function to fallback to package global default
+
+## 0.1.9 - 01-14-2021
+* larva-tokens - Add json and raw json formats to tokens build, and run build.
+* Minor dependency updates
+
+## 0.1.8 - 01-05-2021
+* larva-tokens - Add Vibe design tokens.
+## 0.1.7 - 11-04-2020
+* Fix larva-patterns/modules/social-share/social-share.twig to use square bracket notation for accessing submodule values
+
+## 0.1.6 - 11-02-2020
+* Add aria-controls support for vlanding-video-card
+* Remove support for elseif in twig-to-php parser
+
+## 0.1.5 - 11-02-2020
+* Add support for elseif in twig-to-php parser
+
+## 0.1.4 - 11-02-2020
+* More accessibility fixes
+
 ## 0.1.3 - 10-27-2020
 
 * twig-to-php-parser - Fix bug in svg include replacement
