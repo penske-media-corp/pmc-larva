@@ -72,7 +72,6 @@ if( appConfiguration.projectPatternsDir ) {
 }
 
 app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
-app.use( '/tokens' , express.static( path.join( appConfiguration.larvaPatternsDir, '../larva-tokens/build' ) ) );
 
 app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
