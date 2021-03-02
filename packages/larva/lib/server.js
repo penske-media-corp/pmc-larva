@@ -236,7 +236,7 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	} );
 });
 
-app.get( '/style-guide', function (req, res ) {
+app.get( '/:source?/style-guide', function (req, res ) {
 
 	const brand = req.query.tokens ? req.query.tokens : brandConfig;
 
