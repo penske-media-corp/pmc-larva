@@ -41,6 +41,6 @@ module.exports = {
 
 	patterns: {
 		larvaPatternsDir: path.join( __dirname, './packages/larva-patterns' ),
-		projectPatternsDir: path.join( __dirname, './src/patterns' ),
+		projectPatternsDir: path.join( process.cwd(), './src/patterns' ),
 	}
 };
