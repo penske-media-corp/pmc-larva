@@ -1,8 +1,12 @@
 /**
- * Process:
+ * This report contains hard coded data about font variations in use
+ * for 6 different brands. This approach might be useful in the future, so
+ * it is committed as documentation.
+ *
+ * The process for forming this report:
  *
  * For each brand, go to https://<brand>.larva.pmcdev.io/project/__tests__/style-guide/
- * In the console, type:
+ * Get the font variations in use via the console:
 let arr = [];
 document.querySelectorAll( 'p[class^=a-font]').forEach( node => arr.push( node.classList[0] ) )
 console.log( arr )
@@ -340,4 +344,4 @@ const fontsByFamily = uniqueFontNames.reduce( ( acc, curr ) => {
 	return acc;
 }, {});
 
-// console.log( fontsByFamily );
+console.log( fontsByFamily );
