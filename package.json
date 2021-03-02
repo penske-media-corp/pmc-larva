@@ -33,6 +33,7 @@
   "dependencies": {
     "@penskemediacorp/backstopjs-config": "file:packages/backstopjs-config",
     "@penskemediacorp/eslint-config": "file:packages/eslint-config",
+    "@penskemediacorp/stylelint-config": "file:packages/stylelint-config",
     "@penskemediacorp/larva": "file:packages/larva",
     "@penskemediacorp/larva-css": "file:packages/larva-css",
     "@penskemediacorp/larva-js": "file:packages/larva-js",
