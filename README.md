@@ -19,7 +19,7 @@ These will setup the mono-repo and install dependencies for each of the packages
 
 ## Viewing Larva Patterns
 
-To view and develop Lara patterns, run the following command after the above installation setup:
+To view and develop Larva patterns, run the following command after the above installation setup:
 
 ```
 $ npm run larva
