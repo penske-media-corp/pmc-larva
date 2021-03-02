@@ -18,7 +18,7 @@ const path = require( 'path' );
 
 const defaultConfig = require( path.join( __dirname, '../../../../larva.config.js' ) );
 
-module.exports = function getAppConfiguration( key, usePackageDefault ) {
+module.exports = function getAppConfiguration( key, usePackageDefault = true ) {
 
 	try {
 		let appRoot = process.cwd();
@@ -30,7 +30,7 @@ module.exports = function getAppConfiguration( key, usePackageDefault ) {
 		let config = require( `${appRoot}/larva.config.js` );
 
 		// If config not found in approot, fallback to package default in root
-		if ( undefined === config && usePackageDefault ) {
+		if ( undefined === config[key] && usePackageDefault ) {
 			return defaultConfig[ key ];
 		}
 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-	<h1>Welcome to Larva!</h1>
+<div class="lrv-a-wrapper">
+	<h1>Welcome to the Larva pattern library for {{brand}}!</h1>
 	<p>This is a little baby server for building patterns. To navigate to a pattern, provide the route:</p>
 	<pre>http://localhost:3000/{project|larva}/{patternType}/{patternName}/{patternVariant}</pre>
 
@@ -16,4 +17,5 @@
 	<a href="http://localhost:3000/project/modules/breadcrumbs">
 		<pre>http://localhost:3000/project/modules/breadcrumbs</pre>
 	</a>
+</div>
 {% endblock %}

@@ -18,7 +18,7 @@ const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
 const app = express();
 
 const patternConfig = getAppConfiguration( 'patterns', true );
-const brandConfig = getAppConfiguration( 'brand' );
+const brandConfig = getAppConfiguration( 'brand', true );
 const twigPaths = getPatternPathsToLoad( patternConfig );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
@@ -55,7 +55,7 @@ const kebabify = ( name ) => {
 // change to `patterns: { larva: /larva/path/here/, project: /project/path/here }`
 loader.addPath( patternConfig.larvaPatternsDir, 'larva' );
 
-if( patternConfig.projectPatternsDir ) {
+if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
 	loader.addPath( patternConfig.projectPatternsDir, 'project' );
 }
 
@@ -80,7 +80,7 @@ if( patternConfig.larvaPatternsDir ) {
 	patterns.larva.tests = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/__tests__' ) );
 }
 
-if( patternConfig.projectPatternsDir ) {
+if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
 	patterns.project.modules = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/modules' ) );
 	patterns.project.objects = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/objects' ) );
 	patterns.project.components = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/components' ) );
@@ -88,14 +88,16 @@ if( patternConfig.projectPatternsDir ) {
 	patterns.project.tests = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/__tests__' ) );
 }
 
-console.log(patternConfig.projectPatternsDir);
-
-app.use( '/assets' , express.static( path.join( patternConfig.projectPatternsDir, '../../' ) ) );
+// Use the project version if it exists, else use the larva version
+if ( fs.existsSync( patternConfig.projectPatternsDir ) ) {
+	app.use( '/assets' , express.static( path.join( patternConfig.projectPatternsDir, '../../' ) ) );
+}
+app.use( '/assets' , express.static( path.join( patternConfig.larvaPatternsDir, '../../' ) ) );
 
 app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
 	req.params[ 'pattern_nav' ] = patterns;
-	req.params[ 'name' ] = 'Welcome';
+	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
 	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
 });
 
@@ -216,7 +218,8 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	req.params[ 'query' ] = req.query;
 	req.params[ 'pattern_nav' ] = patterns;
 	req.params[ 'data' ] = undefined !== patternsPath ? getPatternData( patternsPath, req.params ) : null;
-	req.params[ 'brand' ] = brandConfig;
+	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
+	;
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
@@ -279,7 +282,7 @@ app.get( '/style-guide', function (req, res ) {
 	req.params[ 'name' ] = `${brand} Style Guide`;
 	req.params[ 'font_styles' ] = fontStyles;
 	req.params[ 'colors' ] = colorsByProperty;
-	req.params[ 'brand' ] = brand;
+	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
 	req.params[ 'pattern_nav' ] = patterns;
 
 	twing.render( 'style-guide/index.html', req.params ).then( output => res.end( output ) ).catch( e => {

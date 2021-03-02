@@ -39,7 +39,9 @@
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
 				{% include "@larva/_templates/pattern-nav.html" with { source: 'larva' } %}
-				{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
+				{% if pattern_nav.project.length > 0 %}
+					{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
+				{% endif %}
 			</div>
 			<div class="lrv-u-flex-grow-1">
 				{% block content %}{% endblock %}
