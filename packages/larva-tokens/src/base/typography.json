@@ -7,22 +7,22 @@
 	},
 	"props": {
 		"PRIMARY": {
-			"value": [ "xs", "s", "m", "l", "xl"],
+			"value": [ "xs", "s", "m", "l", "xl"]
 		},
 		"SECONDARY_BOLD": {
-			"value": ["xs", "s", "m", "l", "xl"],
+			"value": ["xs", "s", "m", "l", "xl"]
 		},
 		"SECONDARY_REGULAR": {
-			"value": ["xs", "s", "m", "l", "xl"],
+			"value": ["xs", "s", "m", "l", "xl"]
 		},
 		"ACCENT": {
-			"value": ["xs", "s", "m", "l"],
+			"value": ["xs", "s", "m", "l"]
 		},
 		"BASIC": {
-			"value": ["xs", "s", "m", "l", "xl"],
+			"value": ["xs", "s", "m", "l", "xl"]
 		},
 		"BODY": {
-			"value": ["s", "m" ],
+			"value": ["s", "m" ]
 		}
 	}
 }
