@@ -32,9 +32,14 @@ const defaultConfig = {
 			common: path.resolve( './entries/common.entry.js' )
 		}
 	},
+
 	patterns: {
 		larvaPatternsDir: path.resolve( './node_modules/@penskemediacorp/larva-patterns' ),
 		projectPatternsDir: path.resolve( './src/patterns' ),
+	},
+
+	assets: {
+		path: path.resolve( './node_modules/@penskemediacorp/larva' )
 	}
 };
 

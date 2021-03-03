@@ -17,8 +17,9 @@ const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
 
 const app = express();
 
-const patternConfig = getAppConfiguration( 'patterns', true );
-const brandConfig = getAppConfiguration( 'brand', true );
+const patternConfig = getAppConfiguration( 'patterns' );
+const brandConfig = getAppConfiguration( 'brand' );
+const assetsConfig = getAppConfiguration( 'assets' );
 const twigPaths = getPatternPathsToLoad( patternConfig );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
@@ -68,8 +69,6 @@ let patterns = {
 	project: {}
 };
 
-app.use( '/packages/' , express.static( path.join( patternConfig.larvaPatternsDir, '../' ) ) );
-
 // NOTE: When the static site builder script is merged, this manual pattern
 // collection for the nav will come from an object based on the directory structure
 
@@ -89,10 +88,9 @@ if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
 }
 
 // Use the project version if it exists, else use the larva version
-if ( fs.existsSync( patternConfig.projectPatternsDir ) ) {
-	app.use( '/assets' , express.static( path.join( patternConfig.projectPatternsDir, '../../' ) ) );
+if ( fs.existsSync( assetsConfig.path ) ) {
+	app.use( '/assets' , express.static( assetsConfig.path ) );
 }
-app.use( '/assets' , express.static( path.join( patternConfig.larvaPatternsDir, '../../' ) ) );
 
 app.get( '/', function (req, res) {
 	req.params[ 'source' ] = 'larva';
@@ -239,19 +237,26 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 app.get( '/:source?/style-guide', function (req, res ) {
 
 	const brand = req.query.tokens ? req.query.tokens : brandConfig;
+	const tokensPath = path.join( assetsConfig.path, 'build/tokens' );
 
 	const fontData = (() => {
 		try {
-			return require( path.join( __dirname, `../../../build/tokens/${brand}.typography.json` ) );
+			return require( path.join( tokensPath, `${brand}.typography.json` ) );
 		} catch (e) {
 			return null;
 		}
 	})();
 
-	const tokensData = require( path.join( __dirname, `../../../build/tokens/${brand}.json` ) );
+	const tokensData = (() => {
+		try {
+			return require( path.join( tokensPath, `${brand}.json` ) );
+		} catch ( e ) {
+			return null;
+		}
+	})();
 
 	const fontStyles = ( () => {
-		if( ! fontData ) return;
+		if ( ! fontData ) return;
 
 		return Object.keys( fontData ).map( variant => {
 			const key = kebabify( variant );
@@ -262,22 +267,26 @@ app.get( '/:source?/style-guide', function (req, res ) {
 		});
 	} )();
 
-	const colorTokens = Object.keys( tokensData ).filter( item => item.includes( 'COLOR' ) );
-	const colorNames = colorTokens.map( token => kebabify( token ) );
+	const colorsByProperty = ( () => {
+		if ( ! tokensData ) return;
 
-	const colorsByProperty = colorNames.reduce( (acc, curr) => {
-		Object.keys( acc ).forEach( key => {
-			if ( curr.startsWith( key ) ) {
-				acc[key].push( 'lrv-u-' + curr );
-			}
+		const colorTokens = Object.keys( tokensData ).filter( item => item.includes( 'COLOR' ) );
+		const colorNames = colorTokens.map( token => kebabify( token ) );
+
+		return colorNames.reduce( (acc, curr) => {
+			Object.keys( acc ).forEach( key => {
+				if ( curr.startsWith( key ) ) {
+					acc[key].push( 'lrv-u-' + curr );
+				}
+			});
+
+			return acc;
+		}, {
+			color: [],
+			'background-color': [],
+			'border-color': []
 		});
-
-		return acc;
-	}, {
-		color: [],
-		'background-color': [],
-		'border-color': []
-	});
+	})();
 
 	req.params[ 'name' ] = `${brand} Style Guide`;
 	req.params[ 'font_styles' ] = fontStyles;
