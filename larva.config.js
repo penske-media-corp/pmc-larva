@@ -2,7 +2,7 @@ const path = require( 'path' );
 const LARVA_PORT = 3001;
 
 module.exports = {
-
+	brand: 'default',
 	webpack: {
 		aliases: {
 			'@js': path.resolve( './src/js' ),
