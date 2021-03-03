@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm:dev:scss\" \"npm:dev:js\" --raw",
     "dev:scss": "packages/larva/bin/larva.js dev-scss",
     "dev:js": "packages/larva/bin/larva.js dev-js",
-    "lint": "packages/larva/bin/larva.js lint-scss & larva lint-js",
+    "lint": "npm run lint:js && npm run lint:scss",
     "lint:scss": "packages/larva/bin/larva.js lint-scss",
     "lint:js": "packages/larva/bin/larva.js lint-js ./",
     "lint-fix": "packages/larva/bin/larva.js lint-scss --fix && npm run lint:js --fix",
