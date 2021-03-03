@@ -7,7 +7,7 @@ const expectedLarvaConfig = require( fixture + '/larva.config.js' );
 describe( 'getAppConfiguration', () => {
 
 	it( 'Get Larva Configuration', () => {
-		expect(getAppConfiguration( 'backstop' )).toStrictRqual( expectedLarvaConfig.backstop );
+		expect(getAppConfiguration( 'backstop' )).toStrictEqual( expectedLarvaConfig.backstop );
 	});
 
 });
