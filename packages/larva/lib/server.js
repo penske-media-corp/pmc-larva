@@ -288,7 +288,7 @@ app.get( '/:source?/style-guide', function (req, res ) {
 		});
 	})();
 
-	req.params[ 'name' ] = `${brand} Style Guide`;
+	req.params[ 'name' ] = `Style Guide`;
 	req.params[ 'font_styles' ] = fontStyles;
 	req.params[ 'colors' ] = colorsByProperty;
 	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
