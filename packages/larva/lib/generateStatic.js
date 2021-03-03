@@ -7,6 +7,8 @@ const axios = require( 'axios' );
 const getAppConfiguration = require( './utils/getAppConfiguration' );
 const copySyncHelper = require( './utils/copySyncHelper' );
 
+const assetsConfig = getAppConfiguration( 'assets' );
+
 /**
  * Generate Static HTML
  *
@@ -27,7 +29,6 @@ const copySyncHelper = require( './utils/copySyncHelper' );
 
 
 module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 'http://localhost:3000/larva' ) {
-	const patternConfig = getAppConfiguration( 'patterns' );
 	const errors = [];
 
 	fs.mkdirpSync( buildPath );
@@ -38,11 +39,11 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 	// assets/public dir contains fonts and non-built things.
 	const publicAssetsSrc = ( () => {
-		let pubPath = path.join( buildPath, `../../../public` );
+		let pubPath = path.join( assetsConfig.path, `public` );
 
 		// Fallback to assets in Larva
 		if ( ! fs.existsSync( pubPath ) ) {
-			pubPath = path.join( patternConfig.larvaPatternsDir, '../../public' )
+			pubPath = path.join( assetsConfig.path, 'public' )
 		}
 
 		return pubPath;
@@ -60,16 +61,7 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 
 	builtAssets.forEach( item => {
 		const dest = path.join( buildPath, `../assets/build/${item}` );
-		const src = ( () => {
-			let srcBase = path.join( buildPath, `../../${item}` );
-
-			// Fallback to assets in Larva
-			if ( ! fs.existsSync( srcBase ) ) {
-				srcBase = path.join( patternConfig.larvaPatternsDir, '../../build' )
-			}
-
-			return path.join( srcBase, `${item}` );
-		})();
+		const src = path.join( assetsConfig.path, `build/${item}` );
 
 		copySyncHelper( src, dest );
 	});
