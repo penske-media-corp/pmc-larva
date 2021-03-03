@@ -20,6 +20,7 @@
     "write-json": "packages/larva/bin/larva.js write-json larva && packages/larva/bin/larva.js write-json",
     "build-icons": "packages/larva/bin/larva.js build-icons",
     "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
+    "sync-tokens": "mkdir -p build/tokens && rm build/tokens/* && cp -r packages/larva-tokens/build/ build/tokens/",
     "sync-assets": "mkdir -p packages/larva/build && rm -r packages/larva/build && cp -r build/ packages/larva/build"
   },
   "bin": {
