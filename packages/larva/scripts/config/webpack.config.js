@@ -14,7 +14,8 @@ const aliases = {
 	... getConfig( 'webpack' ).aliases
 };
 
-const eslintConfigFile = fs.existsSync( path.resolve( './.eslintrc' ) ) ? path.resolve( './.eslintrc' ) : getConfig( 'eslint', true ).configFile;
+const eslintConfig = getConfig( 'eslint', true );
+const eslintConfigFile = undefined !== eslintConfig ? eslintConfig.configFile : null;
 
 // Tools
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
