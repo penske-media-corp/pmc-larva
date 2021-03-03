@@ -19,7 +19,8 @@
     "lint-fix:js": "packages/larva/bin/larva.js lint-js --fix",
     "write-json": "packages/larva/bin/larva.js write-json larva && packages/larva/bin/larva.js write-json",
     "build-icons": "packages/larva/bin/larva.js build-icons",
-    "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project"
+    "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
+    "sync-tokens": "mkdir -p build/tokens && rm build/tokens/* && cp -r packages/larva-tokens/build/ build/tokens/ "
   },
   "bin": {
     "larva": "packages/larva/bin/larva.js"
