@@ -20,5 +20,6 @@ jobs:
     - run: npm ci
     - run: ./node_modules/.bin/lerna bootstrap
     - run: npm test
+    - run: npm run lint:js
       env:
         CI: true
