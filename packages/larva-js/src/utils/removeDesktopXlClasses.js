@@ -15,24 +15,22 @@
  */
 
 export default function removeDesktopXlClasses() {
-
 	// Get all elements with desktop-xl styling
-	const desktopXlEls = [ ...document.querySelectorAll( '[class*="@desktop-xl"]' ) ];
+	const desktopXlEls = [
+		...document.querySelectorAll( '[class*="@desktop-xl"]' ),
+	];
 
 	// For each of these elements
 	// rebuild the className without the @desktop-xl classes
 	desktopXlEls.forEach( ( el ) => {
-
-		let classes = el.className.split( ' ' );
+		const classes = el.className.split( ' ' );
 
 		el.className = '';
 
 		classes.map( ( c ) => {
 			if ( ! c.includes( '@desktop-xl' ) ) {
-				el.className += ` ${c}`;
+				el.className += ` ${ c }`;
 			}
 		} );
-
 	} );
-
 }

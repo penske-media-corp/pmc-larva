@@ -4,7 +4,6 @@ import initLarvaUiButton from './LarvaUiButton';
 import '../vendor/prism';
 
 export default function initLarvaUi() {
-
 	document.addEventListener( 'DOMContentLoaded', () => {
 		initLarvaUiButton();
 
