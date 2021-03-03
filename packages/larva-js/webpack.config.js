@@ -1,4 +1,4 @@
-const path = require( 'path' );
+const path = require('path');
 
 const aliases = {
 	'@npm': path.resolve( './node_modules/' ),
@@ -10,9 +10,9 @@ module.exports = {
 	mode: 'development',
 	output: {
 		filename: 'common.js',
-		path: path.resolve( __dirname, 'build' ),
+		path: path.resolve(__dirname, 'build')
 	},
 	resolve: {
 		alias: aliases,
-	},
+	}
 };

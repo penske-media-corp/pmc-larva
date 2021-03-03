@@ -1,14 +1,12 @@
 // Copied from Deadline
 export default class Collapsible {
 	constructor( el ) {
-		this.el = el;
+		this.el       = el;
 		this.toggleEl = this.el.querySelector( '[data-collapsible-toggle]' );
-		this.panels = [
-			...this.el.querySelectorAll( '[data-collapsible-panel]' ),
-		];
-		this.group = this.findGroup();
+		this.panels   = [ ... this.el.querySelectorAll( '[data-collapsible-panel]' ) ];
+		this.group    = this.findGroup();
 
-		this.toggle = this.toggle.bind( this );
+		this.toggle  = this.toggle.bind( this );
 		this.onClick = this.onClick.bind( this );
 
 		if ( this.toggleEl ) {
@@ -53,10 +51,8 @@ export default class Collapsible {
 	}
 
 	findGroup() {
-		const groups = [
-			...document.body.querySelectorAll( '[data-collapsible-group]' ),
-		];
-		return groups.find( ( g ) => g.contains( this.el ) ) || null;
+		const groups = [ ... document.body.querySelectorAll( '[data-collapsible-group]' ) ];
+		return groups.find( g => g.contains( this.el ) ) || null;
 	}
 
 	onClick( e ) {
@@ -65,14 +61,12 @@ export default class Collapsible {
 	}
 
 	toggle() {
-		this.state = this.isCollapsed ? 'expanded' : 'collapsed';
+		this.state = ( this.isCollapsed ) ? 'expanded' : 'collapsed';
 		this.maybeRepositionPanel();
 		this.maybeCloseOnClick();
 
 		if ( 'expanded' === this.state ) {
-			document
-				.querySelector( '[data-collapsible-toggle] + li > a' )
-				.focus();
+			document.querySelector( '[data-collapsible-toggle] + li > a' ).focus();
 
 			if ( null !== this.group ) {
 				this.closeOthersInGroup();
@@ -87,13 +81,11 @@ export default class Collapsible {
 	}
 
 	closeOthersInGroup() {
-		[ ...this.group.querySelectorAll( '[data-collapsible]' ) ].forEach(
-			( collapsible ) => {
-				if ( collapsible !== this.el ) {
-					collapsible.pmcCollapsible.collapse();
-				}
+		[ ... this.group.querySelectorAll( '[data-collapsible]' ) ].forEach( collapsible => {
+			if ( collapsible !== this.el ) {
+				collapsible.pmcCollapsible.collapse();
 			}
-		);
+		} );
 	}
 
 	maybeRepositionPanel() {
@@ -102,22 +94,19 @@ export default class Collapsible {
 		}
 
 		if ( this.isCollapsed ) {
-			this.panels.forEach( ( panel ) => ( panel.style.marginLeft = '' ) );
+			this.panels.forEach( panel => panel.style.marginLeft = '' );
 		} else {
 			const containerLeft = this.container.getBoundingClientRect().left;
 
-			this.panels.forEach( ( panel ) => {
+			this.panels.forEach( panel => {
 				const panelRect = panel.getBoundingClientRect();
 
 				if ( 0 === panelRect.width && 0 === panelRect.height ) {
 					return;
 				}
 
-				const panelMarginLeft = parseInt(
-					window.getComputedStyle( panel ).marginLeft,
-					10
-				);
-				const left = panelRect.left - panelMarginLeft * 2;
+				const panelMarginLeft = parseInt( window.getComputedStyle( panel ).marginLeft, 10 );
+				const left = panelRect.left - ( panelMarginLeft * 2 );
 
 				if ( left < containerLeft ) {
 					panel.style.marginLeft = `${ containerLeft - left }px`;
@@ -134,10 +123,7 @@ export default class Collapsible {
 		if ( this.isCollapsed ) {
 			document.body.removeEventListener( 'click', this.toggle );
 		} else {
-			setTimeout(
-				() => document.body.addEventListener( 'click', this.toggle ),
-				1
-			);
+			setTimeout( () => document.body.addEventListener( 'click', this.toggle ), 1 );
 		}
 	}
 }
