@@ -16,7 +16,27 @@ const path = require( 'path' );
  * @returns value of the specified key.
  */
 
-const defaultConfig = require( path.join( __dirname, '../../../../larva.config.js' ) );
+const defaultConfig = {
+
+	eslint: {
+		configFile: path.join( __dirname, '../../scripts/config/.eslintrc.json' ),
+	},
+
+	webpack: {
+		aliases: {
+			'@js': path.resolve( './src/js' ),
+			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
+		},
+		entries: {
+			'larva-ui': path.resolve( './entries/larva-ui.entry.js' ),
+			common: path.resolve( './entries/common.entry.js' )
+		}
+	},
+	patterns: {
+		larvaPatternsDir: path.resolve( './node_modules/@penskemediacorp/larva-patterns' ),
+		projectPatternsDir: path.resolve( './src/patterns' ),
+	}
+};
 
 module.exports = function getAppConfiguration( key, usePackageDefault ) {
 
@@ -30,7 +50,7 @@ module.exports = function getAppConfiguration( key, usePackageDefault ) {
 		let config = require( `${appRoot}/larva.config.js` );
 
 		// If config not found in approot, fallback to package default in root
-		if ( undefined === config && usePackageDefault ) {
+		if ( undefined === config[key] && usePackageDefault ) {
 			return defaultConfig[ key ];
 		}
 

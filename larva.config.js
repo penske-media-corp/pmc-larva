@@ -3,10 +3,6 @@ const LARVA_PORT = 3001;
 
 module.exports = {
 
-	eslint: {
-		configFile: path.join( __dirname, './scripts/config/.eslintrc.json' )
-	},
-
 	webpack: {
 		aliases: {
 			'@js': path.resolve( './src/js' ),
@@ -36,9 +32,4 @@ module.exports = {
 			}
 		}
 	},
-
-	patterns: {
-		larvaPatternsDir: path.join( __dirname, './packages/larva-patterns' ),
-		projectPatternsDir: path.join( __dirname, './src/patterns' ),
-	}
 };
