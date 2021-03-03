@@ -2,14 +2,14 @@
 
 @mixin _a-screen-reader-only-base {
 	border: 0;
-	clip: rect(1px, 1px, 1px, 1px); // stylelint-disable-line unit-blacklist
+	clip: rect(1px, 1px, 1px, 1px); // stylelint-disable-line unit-disallowed-list
 	clip-path: inset(50%);
-	height: 1px; // stylelint-disable-line unit-blacklist
-	margin: -1px; // stylelint-disable-line unit-blacklist
+	height: 1px; // stylelint-disable-line unit-disallowed-list
+	margin: -1px; // stylelint-disable-line unit-disallowed-list
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
-	width: 1px; // stylelint-disable-line unit-blacklist
+	width: 1px; // stylelint-disable-line unit-disallowed-list
 	word-wrap: normal;
 }
 
