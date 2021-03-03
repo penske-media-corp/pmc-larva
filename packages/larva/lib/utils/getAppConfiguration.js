@@ -38,9 +38,10 @@ const defaultConfig = {
 	}
 };
 
-module.exports = function getAppConfiguration( key, usePackageDefault ) {
+module.exports = function getAppConfiguration( key, usePackageDefault = true ) {
 
 	try {
+
 		let appRoot = process.cwd();
 
 		if ( 'test' === process.env.NODE_ENV ) {
