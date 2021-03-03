@@ -40,13 +40,11 @@ export default class MobileHeightToggle {
 	}
 
 	onClick( e ) {
+
 		if ( undefined !== this.el.pmcMobileHeightToggle ) {
+
 			// Bubble event
-			if (
-				e.target.classList.contains(
-					'lrv-js-MobileHeightToggle-trigger'
-				)
-			) {
+			if ( e.target.classList.contains( 'lrv-js-MobileHeightToggle-trigger' ) ) {
 				this.toggle( e );
 			}
 		}
@@ -62,4 +60,5 @@ export default class MobileHeightToggle {
 			this.isExpanded = false;
 		}
 	}
+
 }
