@@ -1,4 +1,5 @@
 node_modules/**/*.js
+lib/**/*.js
 __tests__/**/*.js
 build/**/*.js
 src/js/vendor/*.js
