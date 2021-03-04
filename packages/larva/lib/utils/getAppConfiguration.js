@@ -1,3 +1,4 @@
+const fs = require( 'fs' );
 const path = require( 'path' );
 
 /**
@@ -39,7 +40,15 @@ const defaultConfig = {
 	},
 
 	assets: {
-		path: path.resolve( './node_modules/@penskemediacorp/larva' )
+		path: ( () => {
+
+			// Fragile way to detect existing Larva sites
+			if ( fs.existsSync( path.resolve( './build/css' ) ) ) {
+				return path.resolve( './' );
+			}
+
+			return path.resolve( './node_modules/@penskemediacorp/larva' );
+		})()
 	}
 };
 
