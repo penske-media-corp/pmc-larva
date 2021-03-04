@@ -250,7 +250,7 @@ app.get( '/:source?/style-guide', function (req, res ) {
 		return Object.keys( fontData ).map( variant => {
 			const key = kebabify( variant );
 			return {
-				class: `a-font-${key}`,
+				name: `${key}`,
 				sizes: fontData[variant]
 			};
 		});

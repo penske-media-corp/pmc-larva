@@ -10,11 +10,11 @@
 
 {% for style in font_styles %}
 	<div class="lrv-u-border-t-1 lrv-u-padding-b-2">
-		<h2 class="lrv-u-padding-a-1" style="background-color: lemonchiffon;">{{ style.class|replace({'a-font-': ''}) }}</h2>
+		<h2 class="lrv-u-padding-a-1" style="background-color: lemonchiffon;">{{ style.name }}</h2>
 
 		{% for size in style.sizes %}
 			<div class="lrv-u-border-b-1 lrv-u-border-color-grey lrv-u-margin-t-1">
-				{% set class = style.class ~ '-' ~ size  %}
+				{% set class = 'lrv-a-font-' ~ style.name ~ '-' ~ size  %}
 
 				<code>.{{class}}</code>
 				<p class="{{ class }}">Each of us knows a little, together we know a lot.</p>
