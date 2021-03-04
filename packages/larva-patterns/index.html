@@ -1,22 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="lrv-a-wrapper">
+	<div class="lrv-a-wrapper lrv-u-margin-tb-2">
 		<h1>Welcome to the Larva pattern library for {{brand}}!</h1>
-		<p>This is a little baby server for building patterns. To navigate to a pattern, provide the route:</p>
-		<pre>http://localhost:3000/{project|larva}/{patternType}/{patternName}/{patternVariant}</pre>
-
-		<p>For example:</p>
-		<a href="http://localhost:3000/larva/objects/o-nav">
-			<pre>http://localhost:3000/larva/objects/o-nav</pre>
-		</a>
-		<p>or</p>
-		<a href="http://localhost:3000/larva/objects/o-nav/horizontal">
-			<pre>http://localhost:3000/larva/objects/o-nav/horizontal</pre>
-		</a>
-		<p>or, if you are working in a project, point to the local project with:</p>
-		<a href="http://localhost:3000/project/modules/breadcrumbs">
-			<pre>http://localhost:3000/project/modules/breadcrumbs</pre>
-		</a>
+		<p>When viewing this page from a local server, you can use the server to quickly update and build front-end Larva modules. As a static site, this pattern library is for documentation.</p>
+		<p>View available patterns by clicking the "Show Larva UI" button on the bottom right. Anything under the "Larva" column is shared across all brands and themed with design tokens. Anything under the "Project" column is a brand-specific pattern. If there is no "Project" column, then the brand is only using shared patterns.</p>
 	</div>
 {% endblock %}
