@@ -6,7 +6,6 @@
 		"./color.json",
 		"./font-family.json",
 		"./font-weight.json",
-		"./letter-spacing.json",
 		"./line-height.json",
 		"./spacing.json"
 	]

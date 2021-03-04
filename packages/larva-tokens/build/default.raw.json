@@ -543,27 +543,6 @@
       "originalValue": "700",
       "name": "FONT_WEIGHT_BOLD"
     },
-    "LETTER_SPACING_S": {
-      "category": "letter-spacing",
-      "type": "unit",
-      "value": "0.12em",
-      "originalValue": "0.12em",
-      "name": "LETTER_SPACING_S"
-    },
-    "LETTER_SPACING_M": {
-      "category": "letter-spacing",
-      "type": "unit",
-      "value": "0.15em",
-      "originalValue": "0.15em",
-      "name": "LETTER_SPACING_M"
-    },
-    "LETTER_SPACING_L": {
-      "category": "letter-spacing",
-      "type": "unit",
-      "value": "0.2em",
-      "originalValue": "0.2em",
-      "name": "LETTER_SPACING_L"
-    },
     "LINE_HEIGHT_SMALL": {
       "category": "line-height",
       "type": "unit",

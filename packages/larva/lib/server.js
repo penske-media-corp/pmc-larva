@@ -117,7 +117,7 @@ app.get( '/:source?/css', function (req, res) {
 	 */
 
 	const postcss = require( 'postcss' );
-	const cssPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-css/build/' );
+	const cssPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva/build/css/larva.css' );
 	const sassPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-css/src/' );
 
 	const hasTokens = [
@@ -132,8 +132,10 @@ app.get( '/:source?/css', function (req, res) {
 
 	const baseNames = ( () => {
 
-		let files = globby.sync( sassPath + '/**/*.scss', {
-			expandDirectories: true
+		let files = globby.sync( sassPath, {
+			expandDirectories: {
+				files: ['*.scss']
+			}
 		} );
 
 		return files.map( ( item ) => {
@@ -143,20 +145,7 @@ app.get( '/:source?/css', function (req, res) {
 		} );
 	} )();
 
-	const cssFiles = globby.sync( cssPath + '/**/*.css', {
-		expandDirectories: true
-	});
-
-	const cssString = ( () => {
-		let string;
-
-		// Could use a different JS array helper here but idk
-		cssFiles.forEach( file => {
-			string += fs.readFileSync( file );
-		} );
-
-		return string;
-	 } ) ();
+	const cssString = fs.readFileSync( cssPath );
 
 	const cssRoot = postcss.parse( cssString )
 
