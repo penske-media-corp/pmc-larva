@@ -8,7 +8,7 @@
  * dest file according to the changed file.
  */
 
- const Fiber = require('fibers');
+const Fiber = require('fibers');
 const gulp = require( 'gulp' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
