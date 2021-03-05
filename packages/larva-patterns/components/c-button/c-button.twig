@@ -1,5 +1,10 @@
 {% if c_button_url %}
-	<a class="c-button larva {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}" target="{{ c_button_target_attr }}" rel="{{ c_button_rel_attr }}">
+	<a class="c-button larva {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}" target="{{ c_button_target_attr }}" rel="{{ c_button_rel_attr }}"
+	<?php
+		if ( ! empty( $tracking_data ) && ! empty( $tracking_label ) ) {
+			do_action( 'pmc_do_render_custom_track_data', $tracking_label, $tracking_data );
+		}
+	?>>
 {% else %}
 	<button class="c-button larva {{ modifier_class }} {{ c_button_classes }}" type="{{ c_button_type_attr }}">
 {% endif %}
