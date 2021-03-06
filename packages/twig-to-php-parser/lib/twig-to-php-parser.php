@@ -65,7 +65,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
 		// https://regex101.com/r/ACN0rE/5
-		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s*}})/';
+		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)\s*(.*)(\s*}})/';
 
 		// Get matches for {% include "path/c-element.twig" with data['some_data'] %}
 		// https://regex101.com/r/ns5kBR/3
@@ -134,6 +134,12 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			$is_action     = strpos( $match, '_wp_action' );
 			$has_filter    = strpos( $match, '|' );
 
+			switch( $variable_name ) {
+				case 'wp_action':
+					$is_action = true;
+					break;
+			}
+
 			// Remove the Twig filter from the variable name
 			if ( $has_filter ) {
 				$string_parts  = explode( '|', $variable_name );
@@ -157,7 +163,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			}
 
 			if ( ! empty( $is_action ) ) {
-				$mustache_replacements[ $count ] = '<?php do_action( \'' . $variable_name . '\' ); ?>';
+				$mustache_replacements[ $count ] = parse_wp_action( $variable_name, $mustache_matches[3][ $count ] );
 			}
 
 			$count ++;
@@ -282,7 +288,35 @@ function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
 		}
 	}
 
-	 return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
+	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
+}
+
+function parse_wp_action( $action_name, $variables ) {
+	$variables = trim($variables);
+	$var_string = '';
+	if ( 'wp_action' === $action_name ) {
+		$action_name = '';
+	}
+
+	if ( ! empty( $variables ) ) {
+		$variables = explode( ' ', $variables );
+		$variables = array_filter( $variables, function( $value ) {
+			return ! empty( trim( $value ) );
+		} );
+		if ( ! empty( $variables ) ) {
+			if ( empty( $action_name ) ) {
+				$action_name = array_shift( $variables );
+			}
+			// @TODO: We probably might want to sanitize the $variables array to make sure var has correct syntax
+			if ( ! empty( $variables ) ) {
+				$var_string = ', $' . implode(', $', (array) $variables );
+			}
+		}
+	}
+	if ( empty( $action_name ) ) {
+		return '';
+	}
+	return '<?php do_action( \'' . $action_name . '\'' . $var_string . ' ); ?>';
 }
 
 //EOF

@@ -6,5 +6,7 @@ module.exports = {
 	c_button_text: 'Sign Up',
 	c_button_screen_reader_text: 'Sign Up',
 	c_button_url: '',
+	c_button_tracking_label: '',
+	c_button_tracking_data: '',
 	c_button_type_attr: 'submit'
 }
