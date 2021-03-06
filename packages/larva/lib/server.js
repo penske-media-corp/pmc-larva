@@ -8,7 +8,8 @@ const chalk = require( 'chalk' );
 const {
 	TwingEnvironment,
 	TwingLoaderFilesystem,
-	TwingFilter
+	TwingFilter,
+	TwingFunction
 } = require('twing');
 
 const getAppConfiguration = require( './utils/getAppConfiguration' );
@@ -45,6 +46,9 @@ if( appConfiguration.projectPatternsDir ) {
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 twing.addFilter( markdownFilter );
+
+// @TODO: add custom function to support {{ wp_action( ... ) }}
+twing.addFunction( new TwingFunction('wp_action') );
 
 let patterns = {
 	larva: {},
