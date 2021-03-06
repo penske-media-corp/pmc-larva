@@ -136,8 +136,9 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 			switch( $variable_name ) {
 				case 'wp_action':
-					$is_action = true;
-					break;
+					$mustache_replacements[ $count ] = parse_wp_action( $mustache_matches[3][ $count ] );
+					continue 2;
+
 			}
 
 			// Remove the Twig filter from the variable name
@@ -163,7 +164,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			}
 
 			if ( ! empty( $is_action ) ) {
-				$mustache_replacements[ $count ] = parse_wp_action( $variable_name, $mustache_matches[3][ $count ] );
+				$mustache_replacements[ $count ] = '<?php do_action( \'' . $variable_name . '\' ); ?>';
 			}
 
 			$count ++;
@@ -291,32 +292,19 @@ function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
 	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
 }
 
-function parse_wp_action( $action_name, $variables ) {
-	$variables = trim($variables);
-	$var_string = '';
-	if ( 'wp_action' === $action_name ) {
-		$action_name = '';
-	}
-
-	if ( ! empty( $variables ) ) {
-		$variables = explode( ' ', $variables );
-		$variables = array_filter( $variables, function( $value ) {
-			return ! empty( trim( $value ) );
-		} );
-		if ( ! empty( $variables ) ) {
-			if ( empty( $action_name ) ) {
-				$action_name = array_shift( $variables );
-			}
-			// @TODO: We probably might want to sanitize the $variables array to make sure var has correct syntax
-			if ( ! empty( $variables ) ) {
-				$var_string = ', $' . implode(', $', (array) $variables );
-			}
+function parse_wp_action( $args ) {
+	$args = trim($args);
+	$args = preg_replace( '/^\(|\)$/', '', $args );
+	$args = preg_replace_callback( '/\s*([\'"])?(\w+)\1?\s*/', function( $matches ) {
+		$var = $matches[2];
+		if ( ! empty( $matches[1] ) ) {
+			return sprintf(' \'%s\'', $matches[2] );
+		} else {
+			return sprintf(' $%s', $matches[2] );
 		}
-	}
-	if ( empty( $action_name ) ) {
-		return '';
-	}
-	return '<?php do_action( \'' . $action_name . '\'' . $var_string . ' ); ?>';
+	}, $args );
+
+	return '<?php do_action('. $args .' ); ?>';
 }
 
 //EOF
