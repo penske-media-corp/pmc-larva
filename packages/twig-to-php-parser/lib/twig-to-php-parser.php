@@ -65,7 +65,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
 		// https://regex101.com/r/ACN0rE/5
-		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)\s*(.*?)(\s*}})/';
+		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s*}})/';
 
 		// Get matches for {% include "path/c-element.twig" with data['some_data'] %}
 		// https://regex101.com/r/ns5kBR/3
@@ -133,13 +133,6 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			$is_markup     = strpos( $match, '_markup' );
 			$is_action     = strpos( $match, '_wp_action' );
 			$has_filter    = strpos( $match, '|' );
-
-			switch( $variable_name ) {
-				case 'wp_action':
-					$mustache_replacements[ $count ] = parse_wp_action( $mustache_matches[3][ $count ] );
-					continue 2;
-
-			}
 
 			// Remove the Twig filter from the variable name
 			if ( $has_filter ) {
@@ -213,6 +206,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 		// First replace matches from the regex's, then apply the general replacements.
 		$twig_markup_replace_main     = str_replace( $all_matches, $all_replacements, $twig_markup );
+		$twig_markup_replace_main     = parse_wp_action( $twig_markup_replace_main );
 		$twig_markup_replace_complete = str_replace( array_keys( (array) $general_replacers ), array_values( $general_replacers ), $twig_markup_replace_main );
 
 		$php_markup  = "<?php\n// This is a generated file. Refer to the relevant Twig file for adjusting this markup.\n?>\n";
@@ -292,19 +286,25 @@ function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
 	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
 }
 
-function parse_wp_action( $args ) {
-	$args = trim($args);
-	$args = preg_replace( '/^\(|\)$/', '', $args );
-	$args = preg_replace_callback( '/\s*([\'"])?(\w+)\1?\s*/', function( $matches ) {
-		$var = $matches[2];
-		if ( ! empty( $matches[1] ) ) {
-			return sprintf(' \'%s\'', $matches[2] );
-		} else {
-			return sprintf(' $%s', $matches[2] );
-		}
-	}, $args );
+function parse_wp_action( $twig_markup ) {
 
-	return '<?php do_action('. $args .' ); ?>';
+	$twig_markup = preg_replace_callback( '/{{\s*wp_action\s*\(\s(.*?)\s*\)\s*}}/', function( $matches ) {
+
+		$args = $matches[1];
+
+		$args = preg_replace_callback( '/\s*([\'"])?(\w+)\1?\s*/', function( $matches ) {
+			if ( ! empty( $matches[1] ) ) {
+				return sprintf(' \'%s\'', $matches[2] );
+			} else {
+				return sprintf(' $%s', $matches[2] );
+			}
+		}, $args );
+
+		return '<?php do_action('. $args .' ); ?>';
+
+	}, $twig_markup );
+
+	return $twig_markup;
 }
 
 //EOF
