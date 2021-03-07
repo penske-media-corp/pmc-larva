@@ -46,9 +46,7 @@ if( appConfiguration.projectPatternsDir ) {
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 twing.addFilter( markdownFilter );
-
-// @TODO: add custom function to support {{ wp_action( ... ) }}
-twing.addFunction( new TwingFunction('wp_action') );
+twing.addFunction(new TwingFunction('wp_action'));
 
 let patterns = {
 	larva: {},
