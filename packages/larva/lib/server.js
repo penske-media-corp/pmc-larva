@@ -46,7 +46,9 @@ if( appConfiguration.projectPatternsDir ) {
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 twing.addFilter( markdownFilter );
-twing.addFunction(new TwingFunction('wp_action'));
+twing.addFunction(new TwingFunction('wp_action',() => {
+	return Promise.resolve('');
+}));
 
 let patterns = {
 	larva: {},
