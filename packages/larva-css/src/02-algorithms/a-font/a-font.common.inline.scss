@@ -21,13 +21,15 @@
 
 @mixin _a-font( $token, $value ) {
 
+	$full-token: $token;
 	$token: str-replace( $token, 'typography-' );
 
 	.lrv-a-font-#{$token} {
 		$font-family: _get-font-family( $token );
 
-		@include pmc-font-family( 'font-family-#{$font-family}-fancy' );
+		font-family: var( --font-family-#{$font-family} );
 		font-size: clamp(#{$value});
+		font-size: clamp(var(--#{$full-token}));
 		line-height: calc(2px + 2ex + 2px); // stylelint-disable-line unit-disallowed-list
 	}
 }
