@@ -14,7 +14,7 @@
 
 		{% for size in style.sizes %}
 			<div class="lrv-u-border-b-1 lrv-u-border-color-grey lrv-u-margin-t-1">
-				{% set class = 'lrv-a-font-' ~ style.name ~ '-' ~ size  %}
+				{% set class = 'lrv-a-font-' ~ style.name ~ '-' ~ size|lower  %}
 
 				<code>.{{class}}</code>
 				<p class="{{ class }}">Each of us knows a little, together we know a lot.</p>
