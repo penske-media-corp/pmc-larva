@@ -123,6 +123,9 @@
     "RED_49": {
       "value": "#D32531"
     },
+    "RED_39": {
+      "value": "#C10000"
+    },
     "RED_29": {
       "value": "#920200"
     },
@@ -264,10 +267,10 @@
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_BRAND_SECONDARY": {
-      "value": "rgb(9, 38, 162)",
+      "value": "rgb(193, 0, 0)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "{!BLUE_36}",
+      "originalValue": "{!RED_39}",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
@@ -353,10 +356,10 @@
       "name": "BACKGROUND_COLOR_BODY"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY": {
-      "value": "rgb(9, 38, 162)",
+      "value": "rgb(193, 0, 0)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "{!BLUE_36}",
+      "originalValue": "{!RED_39}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BLACK": {
@@ -479,10 +482,10 @@
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BORDER_COLOR_BRAND_SECONDARY": {
-      "value": "rgb(9, 38, 162)",
+      "value": "rgb(193, 0, 0)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "{!BLUE_36}",
+      "originalValue": "{!RED_39}",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "SPACING_00": {
