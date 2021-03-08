@@ -11,19 +11,17 @@ Consult each package's README for a description and directions for use.
 Clone this repository then, from the root, run the following commands:
 
 ```
-$ npm install
-$ ./node_modules/.bin/lerna bootstrap
+sh scripts/first-time-build.sh
 ```
 
 These will setup the mono-repo and install dependencies for each of the packages. This will take a few moments.
-
 
 ## Viewing Larva Patterns
 
 To view and develop Larva patterns, run the following command after the above installation setup:
 
 ```
-$ npm run larva
+npm run larva
 ```
 
 This will open a development server at localhost:3000. You can contribute to patterns in the packages/larva-patterns, and see the updates reflected here.
