@@ -108,11 +108,37 @@ function parseSvgPath( twigSvgIncludeStr, svgName, isUsingPlugin = false ) {
 
 };
 
+function parseWpAction( twigMarkup ) {
+	return new Promise( ( resolve, reject ) => {
+
+		execPhp( path.resolve( __dirname, './lib/twig-to-php-parser.php' ), config.phpBinaryPath, function( error, php, output ) {
+
+			if ( error ) {
+				reject( error );
+			}
+
+			php.parse_wp_action( twigMarkup, function( error, result, output, printed ) {
+
+				if ( error ) {
+					reject( error );
+				}
+
+				resolve( result );
+
+			});
+
+		});
+
+	});
+
+}
+
 module.exports = {
 	twigToPhpParser: twigToPhpParser,
 	methods: {
 		parseIncludePath: parseIncludePath,
-		parseSvgPath: parseSvgPath
+		parseSvgPath: parseSvgPath,
+		parseWpAction: parseWpAction
 	},
 	run: () => {
 		twigToPhpParser( config )

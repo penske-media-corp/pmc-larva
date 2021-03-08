@@ -293,9 +293,9 @@ function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
  * @param string $twig_markup
  * @return string
  */
-function parse_wp_action( string $twig_markup )  : string {
+function parse_wp_action( string $twig_markup ) : string {
 
-	$twig_markup = preg_replace_callback( '/{{\s*wp_action\s*\(\s(.*?)\s*\)\s*}}/', function( $matches ) {
+	$twig_markup = preg_replace_callback( '/{{\s*wp_action\s*\(\s*(.*?)\s*\)\s*}}/', function( $matches ) {
 
 		$args = $matches[1];
 
