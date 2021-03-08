@@ -1,0 +1,6 @@
+{
+	"imports": [
+		"../base/generated/typography.json"
+	],
+	"props": {}
+}

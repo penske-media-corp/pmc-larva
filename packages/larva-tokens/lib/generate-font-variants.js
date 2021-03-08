@@ -1,8 +1,9 @@
 const fs = require( 'fs-extra' );
+const path = require( 'path' );
 
 const families = [
 	'PRIMARY',
-	'SECONADRY',
+	'SECONDARY',
 	'ACCENT',
 	'BODY',
 	'BASIC'
@@ -14,9 +15,23 @@ const sizes = [
 	'L'
 ];
 
-const possibleNames = families.map( name => `${name}_` )
-							  .map( name => sizes.map( size => `${name}-${size}` ) ).flat();
+// const possibleNames = families.map( name => sizes.map( size => `${name}_${size}` ) ).flat();
 
+const data = families.reduce( ( acc, curr ) => {
 
-fs.writeFileSync( __dirname,
-module.exports = possibleNames;
+	acc.props[ `${curr}`] = {
+		"value": [ ... sizes ],
+		"scale": [ "" ]
+	};
+
+	return acc;
+}, {
+	"global": {
+		"category": "a-font-sizes",
+		"type": "array",
+		"comment": "Typography styles."
+	},
+	"props": {}
+});
+
+fs.writeFileSync( path.join( __dirname, '../src/base/generated/typography.json' ), JSON.stringify( data ) );
