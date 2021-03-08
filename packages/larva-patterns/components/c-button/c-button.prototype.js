@@ -8,7 +8,7 @@ module.exports = {
 	c_button_url: '',
 	c_button_ga_tracking: {
 		'label': '',
-		'data' : '',
+		'data' : {},
 	},
 	c_button_type_attr: 'submit'
 }
