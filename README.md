@@ -11,7 +11,7 @@ Consult each package's README for a description and directions for use.
 Clone this repository then, from the root, run the following commands:
 
 ```
-sh scripts/first-time-build.sh
+sh scripts/install-dependencies.sh
 ```
 
 These will setup the mono-repo and install dependencies for each of the packages. This will take a few moments.
