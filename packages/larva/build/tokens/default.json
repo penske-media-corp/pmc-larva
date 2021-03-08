@@ -55,5 +55,20 @@
   "SPACING_1": "1rem",
   "SPACING_125": "1.25rem",
   "SPACING_150": "1.5rem",
-  "SPACING_2": "2rem"
+  "SPACING_2": "2rem",
+  "TYPOGRAPHY_BODY_M": "1.2rem, 3vw, 1.8rem",
+  "TYPOGRAPHY_PRIMARY_M": "1.2rem, 3vw, 1.8rem",
+  "TYPOGRAPHY_BODY_S": "0.75rem, 3vw, 1rem",
+  "TYPOGRAPHY_PRIMARY_S": "0.75rem, 3vw, 1rem",
+  "TYPOGRAPHY_ACCENT_L": "2rem, 3vw, 3rem",
+  "TYPOGRAPHY_ACCENT_M": "1.2rem, 3vw, 1.8rem",
+  "TYPOGRAPHY_BASIC_L": "2rem, 3vw, 3rem",
+  "TYPOGRAPHY_BASIC_M": "1.2rem, 3vw, 1.8rem",
+  "TYPOGRAPHY_ACCENT_S": "0.75rem, 3vw, 1rem",
+  "TYPOGRAPHY_SECONDARY_L": "2rem, 3vw, 3rem",
+  "TYPOGRAPHY_SECONDARY_M": "1.2rem, 3vw, 1.8rem",
+  "TYPOGRAPHY_BASIC_S": "0.75rem, 3vw, 1rem",
+  "TYPOGRAPHY_SECONDARY_S": "0.75rem, 3vw, 1rem",
+  "TYPOGRAPHY_BODY_L": "2rem, 3vw, 3rem",
+  "TYPOGRAPHY_PRIMARY_L": "2rem, 3vw, 3rem"
 }

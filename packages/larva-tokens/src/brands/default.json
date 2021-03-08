@@ -1,6 +1,7 @@
 {
 	"imports": [
-		"../base/all.json"
+		"../base/all.json",
+		"../base/generated/typography.json"
 	],
 	"props": {
 	}
