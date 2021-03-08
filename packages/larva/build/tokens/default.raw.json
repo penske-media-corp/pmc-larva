@@ -634,6 +634,126 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
+    },
+    "TYPOGRAPHY_BODY_M": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "1.2rem, 3vw, 1.8rem",
+      "originalValue": "1.2rem, 3vw, 1.8rem",
+      "name": "TYPOGRAPHY_BODY_M"
+    },
+    "TYPOGRAPHY_PRIMARY_M": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "1.2rem, 3vw, 1.8rem",
+      "originalValue": "1.2rem, 3vw, 1.8rem",
+      "name": "TYPOGRAPHY_PRIMARY_M"
+    },
+    "TYPOGRAPHY_BODY_S": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "0.75rem, 3vw, 1rem",
+      "originalValue": "0.75rem, 3vw, 1rem",
+      "name": "TYPOGRAPHY_BODY_S"
+    },
+    "TYPOGRAPHY_PRIMARY_S": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "0.75rem, 3vw, 1rem",
+      "originalValue": "0.75rem, 3vw, 1rem",
+      "name": "TYPOGRAPHY_PRIMARY_S"
+    },
+    "TYPOGRAPHY_ACCENT_L": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "2rem, 3vw, 3rem",
+      "originalValue": "2rem, 3vw, 3rem",
+      "name": "TYPOGRAPHY_ACCENT_L"
+    },
+    "TYPOGRAPHY_ACCENT_M": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "1.2rem, 3vw, 1.8rem",
+      "originalValue": "1.2rem, 3vw, 1.8rem",
+      "name": "TYPOGRAPHY_ACCENT_M"
+    },
+    "TYPOGRAPHY_BASIC_L": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "2rem, 3vw, 3rem",
+      "originalValue": "2rem, 3vw, 3rem",
+      "name": "TYPOGRAPHY_BASIC_L"
+    },
+    "TYPOGRAPHY_BASIC_M": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "1.2rem, 3vw, 1.8rem",
+      "originalValue": "1.2rem, 3vw, 1.8rem",
+      "name": "TYPOGRAPHY_BASIC_M"
+    },
+    "TYPOGRAPHY_ACCENT_S": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "0.75rem, 3vw, 1rem",
+      "originalValue": "0.75rem, 3vw, 1rem",
+      "name": "TYPOGRAPHY_ACCENT_S"
+    },
+    "TYPOGRAPHY_SECONDARY_L": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "2rem, 3vw, 3rem",
+      "originalValue": "2rem, 3vw, 3rem",
+      "name": "TYPOGRAPHY_SECONDARY_L"
+    },
+    "TYPOGRAPHY_SECONDARY_M": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "1.2rem, 3vw, 1.8rem",
+      "originalValue": "1.2rem, 3vw, 1.8rem",
+      "name": "TYPOGRAPHY_SECONDARY_M"
+    },
+    "TYPOGRAPHY_BASIC_S": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "0.75rem, 3vw, 1rem",
+      "originalValue": "0.75rem, 3vw, 1rem",
+      "name": "TYPOGRAPHY_BASIC_S"
+    },
+    "TYPOGRAPHY_SECONDARY_S": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "0.75rem, 3vw, 1rem",
+      "originalValue": "0.75rem, 3vw, 1rem",
+      "name": "TYPOGRAPHY_SECONDARY_S"
+    },
+    "TYPOGRAPHY_BODY_L": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "2rem, 3vw, 3rem",
+      "originalValue": "2rem, 3vw, 3rem",
+      "name": "TYPOGRAPHY_BODY_L"
+    },
+    "TYPOGRAPHY_PRIMARY_L": {
+      "category": "a-font-sizes",
+      "type": "array",
+      "comment": "Typography styles.",
+      "value": "2rem, 3vw, 3rem",
+      "originalValue": "2rem, 3vw, 3rem",
+      "name": "TYPOGRAPHY_PRIMARY_L"
     }
   }
 }
