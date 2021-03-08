@@ -19,10 +19,25 @@ const sizes = [
 
 const data = families.reduce( ( acc, curr ) => {
 
-	acc.props[ `${curr}`] = {
-		"value": [ ... sizes ],
-		"scale": [ "" ]
-	};
+	sizes.map( size => {
+
+		const defaultClamp = ( () => {
+			switch (size) {
+				case 'S':
+					return '0.75rem, 3vw, 1rem';
+				case 'M':
+					return '1.2rem, 3vw, 1.8rem';
+				case 'L':
+					return '2rem, 3vw, 3rem';
+				default:
+					break;
+			}
+		})();
+
+		acc.props[ `TYPOGRAPHY_${curr}_${size}`] = {
+			"value": defaultClamp
+		};
+	})
 
 	return acc;
 }, {

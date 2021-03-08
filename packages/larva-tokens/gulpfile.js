@@ -24,7 +24,6 @@ const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
 const basicTokenBuild = ( format, dest = './build' ) => {
 	gulp.src( [
 		'src/brands/*.json',
-		'!src/brands/*.typography.json'
 	] )
 		.pipe(theo({
 			transform: { type: 'web' },
@@ -39,15 +38,6 @@ gulp.task('default', ( done ) => {
 	formats.forEach( format => {
 		basicTokenBuild( format )
 	});
-
-	gulp.src('src/brands/*.typography.json')
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: {
-				type: 'json'
-			}
-		}))
-		.pipe(gulp.dest( './build' ));
 
 	gulp.src('src/brands/*.json')
 		.pipe(theo({
