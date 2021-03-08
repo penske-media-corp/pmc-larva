@@ -230,7 +230,7 @@ app.get( '/:source?/style-guide', function (req, res ) {
 
 	const fontData = (() => {
 		try {
-			return require( path.join( tokensPath, `${brand}.typography.json` ) );
+			return require( path.join( tokensPath, `${brand}-typography.json` ) );
 		} catch (e) {
 			return null;
 		}
@@ -247,13 +247,33 @@ app.get( '/:source?/style-guide', function (req, res ) {
 	const fontStyles = ( () => {
 		if ( ! fontData ) return;
 
-		return Object.keys( fontData ).map( variant => {
-			const key = kebabify( variant );
-			return {
-				name: `${key}`,
-				sizes: fontData[variant]
-			};
-		});
+		const noRatios = Object.keys( fontData ).reduce( ( acc, curr ) => {
+			const key = kebabify( curr );
+
+			if ( ! key.includes( 'ratio' ) ) {
+				acc.push( key );
+			}
+
+			return acc;
+		}, []);
+
+		const ordered = noRatios.reduce( ( acc, curr ) => {
+
+			let temp = curr.split( '-' );
+			let variant = temp[1];
+
+			if ( ! acc[variant] ) {
+				acc[variant] = [];
+			}
+
+			acc[variant].push( curr );
+
+			return acc;
+
+		}, {});
+
+		return ordered;
+
 	} )();
 
 	const colorsByProperty = ( () => {

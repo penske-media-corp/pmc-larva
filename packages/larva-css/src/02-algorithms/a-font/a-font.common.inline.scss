@@ -1,42 +1,42 @@
 @import 'setup';
 
-$sizes: ( 's', 'm', 'l' );
-$variants: ( 'primary', 'secondary', 'accent', 'basic', 'body' );
+@function _get-font-family( $string ) {
 
-$type-ratios: (
-	'minorSecond': 1.067,
-	'majorSecond': 1.125,
-	'minorThird': 1.2,
-	'majorThird': 1.25,
-	'perfectFourth': 1.333,
-	'augmentedFourth': 1.414,
-	'perfectFifth': 1.5,
-	'goldenRatio': 1.618,
-);
+	$result: '';
 
-@mixin _a-font( $variant ) {
-	$type-base-size-max: 1rem; // token
-	$type-base-size-min: 0.75rem; // token
-	$type-base-value: 4vw; // token
-	$ratio: map-get($type-ratios, 'goldenRatio'); // token
+	@if ( str-index( $string, '-s' ) ) {
+		$result: str-replace( $string, '-s' );
+	}
 
-	$level-size-min: $type-base-size-min;
-	$level-size-max: $type-base-size-max;
-	$level-base-value: $type-base-value;
+	@if ( str-index( $string, '-m' ) ) {
+		$result: str-replace( $string, '-m' );
+	}
 
-	@each $size in $sizes {
-		$level-size-min: $level-size-min * $ratio;
-		$level-size-max: $level-size-max * $ratio;
-		$level-base-value: $level-base-value * $ratio;
+	@if ( str-index( $string, '-l' ) ) {
+		$result: str-replace( $string, '-l' );
+	}
 
-		.lrv-a-font-#{$variant}-#{$size} {
-			@include pmc-font-family( 'font-family-#{$variant}-fancy' );
-			font-size: clamp(#{$level-size-min}, #{$level-base-value}, #{$level-size-max});
-			line-height: calc(2px + 2ex + 2px); // stylelint-disable-line unit-disallowed-list
-		}
+	@return $result;
+}
+
+@mixin _a-font( $token, $value ) {
+
+	$token: str-replace( $token, 'typography-' );
+
+	.lrv-a-font-#{$token} {
+		$font-family: _get-font-family( $token );
+
+		@include pmc-font-family( 'font-family-#{$font-family}-fancy' );
+		font-size: clamp(#{$value});
+		line-height: calc(2px + 2ex + 2px); // stylelint-disable-line unit-disallowed-list
 	}
 }
 
-@each $variant in $variants {
-	@include _a-font( $variant );
+@each $token, $value in $TOKENS-MAP {
+
+	$token-str: quote( $token );
+
+	@if str-index( $token-str, 'typography' ) {
+		@include _a-font( $token, $value );
+	}
 }
