@@ -3,28 +3,36 @@
 $sizes: ( 's', 'm', 'l' );
 $variants: ( 'primary', 'secondary', 'accent', 'basic', 'body' );
 
-@mixin _font-styles( $variant ) {
-	@include pmc-font-family( 'font-family-#{$variant}-fancy' );
-	font-size: pmc-rem(28);
-	line-height: pmc-rem(32);
-	letter-spacing: pmc-rem(1);
-	font-weight: pmc-rem(40);
-}
+$type-ratios: (
+	'minorSecond': 1.067,
+	'majorSecond': 1.125,
+	'minorThird': 1.2,
+	'majorThird': 1.25,
+	'perfectFourth': 1.333,
+	'augmentedFourth': 1.414,
+	'perfectFifth': 1.5,
+	'goldenRatio': 1.618,
+);
 
 @mixin _a-font( $variant ) {
+	$type-base-size-max: 1rem; // token
+	$type-base-size-min: 0.75rem; // token
+	$type-base-value: 4vw; // token
+	$ratio: map-get($type-ratios, 'goldenRatio'); // token
+
+	$level-size-min: $type-base-size-min;
+	$level-size-max: $type-base-size-max;
+	$level-base-value: $type-base-value;
 
 	@each $size in $sizes {
+		$level-size-min: $level-size-min * $ratio;
+		$level-size-max: $level-size-max * $ratio;
+		$level-base-value: $level-base-value * $ratio;
 
 		.lrv-a-font-#{$variant}-#{$size} {
-			@include _font-styles( $variant );
-
-			@include pmc-breakpoint( desktop ) {
-				@include _font-styles( $variant );
-			}
-
-			@include pmc-breakpoint( desktop-xl ) {
-				@include _font-styles( $variant );
-			}
+			@include pmc-font-family( 'font-family-#{$variant}-fancy' );
+			font-size: clamp(#{$level-size-min}, #{$level-base-value}, #{$level-size-max});
+			line-height: calc(2px + 2ex + 2px); // stylelint-disable-line unit-disallowed-list
 		}
 	}
 }
