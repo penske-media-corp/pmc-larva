@@ -11,7 +11,7 @@ import {
 export const TokensView = () => {
 	let match = useRouteMatch();
 
-	const TOKENS_FETCH_URL = "https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/";
+	const TOKENS_FETCH_URL = "https://raw.githubusercontent.com/penske-media-corp/pmc-larva/feature/spy-tokens/packages/larva-tokens/build/";
 
 	const appActions = {
 		create: "create",
