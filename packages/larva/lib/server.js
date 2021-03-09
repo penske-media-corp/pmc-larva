@@ -228,14 +228,6 @@ app.get( '/:source?/style-guide', function (req, res ) {
 	const brand = req.query.tokens ? req.query.tokens : brandConfig;
 	const tokensPath = path.join( assetsConfig.path, 'build/tokens' );
 
-	const fontData = (() => {
-		try {
-			return require( path.join( tokensPath, `${brand}.typography.json` ) );
-		} catch (e) {
-			return null;
-		}
-	})();
-
 	const tokensData = (() => {
 		try {
 			return require( path.join( tokensPath, `${brand}.json` ) );
@@ -245,15 +237,37 @@ app.get( '/:source?/style-guide', function (req, res ) {
 	})();
 
 	const fontStyles = ( () => {
-		if ( ! fontData ) return;
+		if ( ! tokensData ) return;
 
-		return Object.keys( fontData ).map( variant => {
-			const key = kebabify( variant );
-			return {
-				name: `${key}`,
-				sizes: fontData[variant]
-			};
-		});
+		const fontTokens = Object.keys( tokensData ).filter( item => item.includes( 'TYPOGRAPHY' ) );
+
+		const formatted = fontTokens.reduce( ( acc, curr ) => {
+			const key = kebabify( curr );
+
+			if ( ! key.includes( 'ratio' ) ) {
+				acc.push( key );
+			}
+
+			return acc;
+		}, []);
+
+		const ordered = formatted.reduce( ( acc, curr ) => {
+
+			let temp = curr.split( '-' );
+			let variant = temp[1];
+
+			if ( ! acc[variant] ) {
+				acc[variant] = [];
+			}
+
+			acc[variant].push( curr );
+
+			return acc;
+
+		}, {});
+
+		return ordered;
+
 	} )();
 
 	const colorsByProperty = ( () => {

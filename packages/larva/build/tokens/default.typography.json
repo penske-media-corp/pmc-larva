@@ -1,40 +1,27 @@
 {
   "PRIMARY": [
-    "xs",
-    "s",
-    "m",
-    "l",
-    "xl"
+    "S",
+    "M",
+    "L"
   ],
-  "SECONDARY_BOLD": [
-    "xs",
-    "s",
-    "m",
-    "l",
-    "xl"
-  ],
-  "SECONDARY_REGULAR": [
-    "xs",
-    "s",
-    "m",
-    "l",
-    "xl"
+  "SECONDARY": [
+    "S",
+    "M",
+    "L"
   ],
   "ACCENT": [
-    "xs",
-    "s",
-    "m",
-    "l"
-  ],
-  "BASIC": [
-    "xs",
-    "s",
-    "m",
-    "l",
-    "xl"
+    "S",
+    "M",
+    "L"
   ],
   "BODY": [
-    "s",
-    "m"
+    "S",
+    "M",
+    "L"
+  ],
+  "BASIC": [
+    "S",
+    "M",
+    "L"
   ]
 }

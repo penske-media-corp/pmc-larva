@@ -1,0 +1,87 @@
+{
+  "aliases": {},
+  "props": {
+    "COLOR_BRAND_SECONDARY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(255, 213, 53)",
+      "originalValue": "rgb(255, 213, 53)",
+      "name": "COLOR_BRAND_SECONDARY"
+    },
+    "FONT_FAMILY_PRIMARY_FANCY": {
+      "category": "font-family",
+      "value": "PT Sans, Arial, Helvetica, sans-serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "PT Sans, Arial, Helvetica, sans-serif",
+      "name": "FONT_FAMILY_PRIMARY_FANCY"
+    },
+    "FONT_FAMILY_BASIC": {
+      "category": "font-family",
+      "value": "Arial, sans-serif",
+      "type": "font-family",
+      "originalValue": "Arial, sans-serif",
+      "name": "FONT_FAMILY_BASIC"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(255, 213, 53)",
+      "originalValue": "rgb(255, 213, 53)",
+      "name": "BORDER_COLOR_BRAND_SECONDARY"
+    },
+    "FONT_FAMILY_BODY": {
+      "category": "font-family",
+      "value": "Arial, sans-serif",
+      "type": "font",
+      "originalValue": "Arial, sans-serif",
+      "name": "FONT_FAMILY_BODY"
+    },
+    "COLOR_BRAND_PRIMARY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(22, 49, 71)",
+      "originalValue": "rgb(22, 49, 71)",
+      "name": "COLOR_BRAND_PRIMARY"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(255, 213, 53)",
+      "comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
+      "originalValue": "rgb(255, 213, 53)",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+    },
+    "FONT_FAMILY_SECONDARY_FANCY": {
+      "category": "font-family",
+      "value": "Biondi Sans, Helvetica, sans-serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "Biondi Sans, Helvetica, sans-serif",
+      "name": "FONT_FAMILY_SECONDARY_FANCY"
+    },
+    "FONT_FAMILY_PRIMARY": {
+      "category": "font-family",
+      "value": "Arial, Helvetica, sans-serif",
+      "type": "font",
+      "comment": "Fallback for primary-fancy",
+      "originalValue": "Arial, Helvetica, sans-serif",
+      "name": "FONT_FAMILY_PRIMARY"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(22, 49, 71)",
+      "originalValue": "rgb(22, 49, 71)",
+      "name": "BORDER_COLOR_BRAND_PRIMARY"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(22, 49, 71)",
+      "comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
+      "originalValue": "rgb(22, 49, 71)",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
+    }
+  }
+}

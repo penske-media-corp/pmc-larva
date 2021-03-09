@@ -1,0 +1,19 @@
+
+:root {
+  --color-brand-secondary: rgb(255, 213, 53);
+  /* The webfont, loaded async */
+  --font-family-primary-fancy: PT Sans, Arial, Helvetica, sans-serif;
+  --font-family-basic: Arial, sans-serif;
+  --border-color-brand-secondary: rgb(255, 213, 53);
+  --font-family-body: Arial, sans-serif;
+  --color-brand-primary: rgb(22, 49, 71);
+  /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
+  --background-color-brand-secondary: rgb(255, 213, 53);
+  /* The webfont, loaded async */
+  --font-family-secondary-fancy: Biondi Sans, Helvetica, sans-serif;
+  /* Fallback for primary-fancy */
+  --font-family-primary: Arial, Helvetica, sans-serif;
+  --border-color-brand-primary: rgb(22, 49, 71);
+  /* The primary brand color. This should be dark in hue, and have sufficient contrast with white text. */
+  --background-color-brand-primary: rgb(22, 49, 71);
+}

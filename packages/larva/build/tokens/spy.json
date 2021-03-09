@@ -1,0 +1,13 @@
+{
+  "COLOR_BRAND_SECONDARY": "rgb(255, 213, 53)",
+  "FONT_FAMILY_PRIMARY_FANCY": "PT Sans, Arial, Helvetica, sans-serif",
+  "FONT_FAMILY_BASIC": "Arial, sans-serif",
+  "BORDER_COLOR_BRAND_SECONDARY": "rgb(255, 213, 53)",
+  "FONT_FAMILY_BODY": "Arial, sans-serif",
+  "COLOR_BRAND_PRIMARY": "rgb(22, 49, 71)",
+  "BACKGROUND_COLOR_BRAND_SECONDARY": "rgb(255, 213, 53)",
+  "FONT_FAMILY_SECONDARY_FANCY": "Biondi Sans, Helvetica, sans-serif",
+  "FONT_FAMILY_PRIMARY": "Arial, Helvetica, sans-serif",
+  "BORDER_COLOR_BRAND_PRIMARY": "rgb(22, 49, 71)",
+  "BACKGROUND_COLOR_BRAND_PRIMARY": "rgb(22, 49, 71)"
+}
