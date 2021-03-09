@@ -7,8 +7,17 @@ module.exports = {
 	c_button_screen_reader_text: 'Sign Up',
 	c_button_url: '',
 	c_button_ga_tracking: {
-		'label': '',
-		'data' : {},
+		'details' : false, // text
+		'category': '',  // Amazon Inline Text
+		'label': '',  // eg. buy-now
+		'product': {
+			'id': '',
+			'name': '', // title
+			'brand': '',
+			'category': '',
+			'price': '', // numeric string
+		},
+		'url': false,
 	},
 	c_button_type_attr: 'submit'
 }
