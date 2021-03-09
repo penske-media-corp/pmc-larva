@@ -11,6 +11,8 @@ import {
 export const TokensView = () => {
 	let match = useRouteMatch();
 
+	const TOKENS_FETCH_URL = "https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/";
+
 	const appActions = {
 		create: "create",
 		update: "update",
@@ -25,6 +27,7 @@ export const TokensView = () => {
 		undefined !== window.showSaveFilePicker;
 
 	const [tokens, setTokens] = useState({});
+	const [defaultTokens, setDefaultTokens] = useState({});
 	const [copied, setCopied] = useState(false);
 	const [copyText, setCopyText] = useState("");
 	const [canSaveFile] = useState(supportsshowSaveFilePicker);
@@ -87,7 +90,7 @@ export const TokensView = () => {
 				: selectedBrand.brand;
 
 		let url =
-			"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/" +
+			TOKENS_FETCH_URL +
 			brand +
 			".raw.json";
 		let response = await fetch(url);
@@ -108,7 +111,25 @@ export const TokensView = () => {
 
 		setCoreColorTokens(sortedColorTokens);
 		setTokens(sortedTokens);
+
+		const fetchedDefaultTokens = ( async (e) => {
+			if ( 'default' === brand ) {
+				return sortedTokens;
+			} else {
+				let url = TOKENS_FETCH_URL + "/default.raw.json";
+				let response = await fetch(url);
+				let json = await response.json();
+				let tokens = await json.props;
+
+				return tokens;
+			}
+		})();
+
+		// Save unchanged tokens so we can tell what is
+		// different from the original
+		setDefaultTokens( await fetchedDefaultTokens);
 	};
+
 
 	/**
 	 * Save JSON to file for browsers that support it, and fallback to
@@ -117,8 +138,21 @@ export const TokensView = () => {
 	 * @see https://developer.mozilla.org/en-US/docs/Web/API/window/showSaveFilePicker
 	 */
 	const saveJsonToFile = async () => {
+
+		const diffedTokens =( ( changed, reference ) => {
+			const updatedTokenKeys = Object.keys( changed ).filter( key => {
+				return changed[key].value !== reference[key].value;
+			});
+
+			return updatedTokenKeys.reduce( ( acc, curr ) => {
+				acc[curr] = { ...changed[curr] };
+				return acc;
+			}, {} );
+
+		})( tokens, defaultTokens );
+
 		const tokensOutput = {
-			props: tokens,
+			props: diffedTokens,
 		};
 
 		if (canSaveFile) {
