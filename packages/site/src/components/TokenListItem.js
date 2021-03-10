@@ -74,9 +74,9 @@ export const TokenListItem = ({
 								be centrally managed from "Core Colors". Please
 								confirm this change.
 							</p>
-							<div class="ui two buttons">
+							<div className="ui two buttons">
 								<button
-									class="ui basic green button"
+									className="ui basic green button"
 									onClick={() => {
 										onClick(confirmingCoreColorChange);
 									}}
@@ -84,7 +84,7 @@ export const TokenListItem = ({
 									Confirm
 								</button>
 								<button
-									class="ui basic red button"
+									className="ui basic red button"
 									onClick={() => {
 										onClick(tokenData.value);
 									}}

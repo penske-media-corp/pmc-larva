@@ -112,9 +112,11 @@ export const TokensView = () => {
 		setCoreColorTokens(sortedColorTokens);
 		setTokens(sortedTokens);
 
-		const fetchedDefaultTokens = ( async (e) => {
+		const initialDefaultTokens = ( async (e) => {
 			if ( 'default' === brand ) {
-				return sortedTokens;
+
+				// Deep clone the object since we are checking equivalence later.
+				return JSON.parse( JSON.stringify( sortedTokens ) );
 			} else {
 				let url = TOKENS_FETCH_URL + "/default.raw.json";
 				let response = await fetch(url);
@@ -127,7 +129,7 @@ export const TokensView = () => {
 
 		// Save unchanged tokens so we can tell what is
 		// different from the original
-		setDefaultTokens( await fetchedDefaultTokens);
+		setDefaultTokens( await initialDefaultTokens);
 	};
 
 
@@ -139,7 +141,7 @@ export const TokensView = () => {
 	 */
 	const saveJsonToFile = async () => {
 
-		const diffedTokens =( ( changed, reference ) => {
+		const diffedTokens = ( ( changed, reference ) => {
 			const updatedTokenKeys = Object.keys( changed ).filter( key => {
 				return changed[key].value !== reference[key].value;
 			});
@@ -155,7 +157,7 @@ export const TokensView = () => {
 			imports: [
 				"../base/all.json"
 			],
-			props: diffedTokens,
+			props: { ... diffedTokens },
 		};
 
 		if (canSaveFile) {
