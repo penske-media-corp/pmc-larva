@@ -152,6 +152,9 @@ export const TokensView = () => {
 		})( tokens, defaultTokens );
 
 		const tokensOutput = {
+			imports: [
+				"../base/all.json"
+			],
 			props: diffedTokens,
 		};
 
