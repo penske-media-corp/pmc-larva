@@ -1,10 +1,9 @@
 const gulp = require( 'gulp' );
-const gulpPostcss = require( 'gulp-postcss' );
+const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
-const through2 = require( 'through2' );
 const cssnano = require( 'cssnano' );
 const path = require( 'path' );
-const postcss = require( 'postcss' );
+const postCss = require( 'postcss' );
 const sass = require( 'gulp-sass' );
 
 const gulpClean = require( 'gulp-clean' );
@@ -48,14 +47,17 @@ const stylelint = ( file ) => {
 	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
 };
 
-// We need an empty stream for the else condition when
-// minifying CSS below. Reference: https://stackoverflow.com/a/30000562
-const emptyStream = () => {
-	var pass = through2.obj();
-
-	process.nextTick( pass.end.bind(pass) );
-	return pass;
-}
+/**
+ * PostCSS plugin that does nothing, for conditionally minifying CSS.
+ *
+ * @param {Object} style  PostCSS Root object for current CSS.
+ * @param {Object} result PostCSS Result object containing transformed CSS.
+ * @return {Result} PostCSS Result object.
+ */
+const postCssNoop = ( style, result ) => {
+	result.root = postCss.parse( style );
+	return result;
+};
 
 /**
  * Add `!important` declarations to all rules, for use with older themes that
@@ -69,7 +71,7 @@ const emptyStream = () => {
  * @return {Result} PostCSS Result object.
  */
 const declareImportanceForAll = ( style, result ) => {
-	const root = postcss.parse( style );
+	const root = postCss.parse( style );
 
 	root.walkRules( ( rule ) => {
 		if ( 'atrule' === rule.parent.type && 'media' !== rule.parent.name ) {
@@ -100,34 +102,26 @@ const declareImportanceForAll = ( style, result ) => {
  * Consider updating the name 'minify' to 'post' if/when
  * more Post CSS functionality is added.
  *
- * @param {function} done
+ * @param {Function} done  Post-build callback.
  * @param {boolean} minify Run post CSS and minify output.
  */
 const buildScss = ( done, minify = false ) => {
+	const postCssPlugins = [];
 
-	// This is redundant, but was having issue with conditionally
-	// minifying within the same stream with
-	// .pipe( minify ? postcss( [ cssnano() ] ) : emptyStream() )
-	// In interest of time, use separate streams for now.
-
-	if ( true === minify ) {
-		gulp.src( './entries/*.scss' )
-			.pipe( gulpStylelint( stylelintOpts ) )
-			.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
-			.pipe( gulpPostcss( [ cssnano() ] ) )
-			.pipe( gulp.dest( cssDest ) )
-			.pipe( gulpPostcss( [ declareImportanceForAll ] ) )
-			.pipe( gulpRename( { suffix: '-important' } ) )
-			.pipe( gulp.dest( cssDest ) );
+	if ( minify ) {
+		postCssPlugins.push( cssnano() );
 	} else {
-		gulp.src( './entries/*.scss' )
-			.pipe( gulpStylelint( stylelintOpts ) )
-			.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
-			.pipe( gulp.dest( cssDest ) )
-			.pipe( gulpPostcss( [ declareImportanceForAll ] ) )
-			.pipe( gulpRename( { suffix: '-important' } ) )
-			.pipe( gulp.dest( cssDest ) );
+		postCssPlugins.push( postCssNoop );
 	}
+
+	gulp.src( './entries/*.scss' )
+		.pipe( gulpStylelint( stylelintOpts ) )
+		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
+		.pipe( gulpPostCss( postCssPlugins ) )
+		.pipe( gulp.dest( cssDest ) )
+		.pipe( gulpPostCss( [ declareImportanceForAll ] ) )
+		.pipe( gulpRename( { suffix: '-important' } ) )
+		.pipe( gulp.dest( cssDest ) );
 
 	done();
 };
