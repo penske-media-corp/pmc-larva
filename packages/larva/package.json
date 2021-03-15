@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva",
-  "version": "0.1.16",
+  "version": "0.1.17-develop.12+969ceb85",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
@@ -47,12 +47,12 @@
     "@penskemediacorp/eslint-config": "^0.1.10",
     "@penskemediacorp/larva-css": "^0.1.16",
     "@penskemediacorp/larva-js": "^0.1.16",
-    "@penskemediacorp/larva-patterns": "^0.1.16",
+    "@penskemediacorp/larva-patterns": "^0.1.17-develop.12+969ceb85",
     "@penskemediacorp/larva-scss": "^0.1.10",
     "@penskemediacorp/larva-svg": "^0.1.14",
     "@penskemediacorp/larva-tokens": "^0.1.16",
     "@penskemediacorp/stylelint-config": "^0.1.2",
-    "@penskemediacorp/twig-to-php-parser": "^0.1.10",
+    "@penskemediacorp/twig-to-php-parser": "^0.1.17-develop.12+969ceb85",
     "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
@@ -83,5 +83,6 @@
     "twing": "^5.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
-  }
+  },
+  "gitHead": "969ceb85566eea0d9baabf6681aeb355cb1019c3"
 }
