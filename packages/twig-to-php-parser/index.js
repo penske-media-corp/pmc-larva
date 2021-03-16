@@ -21,7 +21,19 @@ function twigToPhpParser( config = {} ) {
 	let isUsingPlugin = false;
 
 	if ( 'undefined' !== typeof config.twigDir ) {
-		twigDir = config.twigDir;
+		if ( config.twigDir.startsWith( '.' ) ) {
+			twigDir = path.join( process.cwd(), config.twigDir );
+		} else {
+			twigDir = config.twigDir;
+		}
+	}
+	else if ( 'undefined' !== typeof config.relativeSrcOverride ) {
+		if ( config.relativeSrcOverride.startsWith( '/' ) ) {
+			twigDir = config.relativeSrcOverride;
+		}
+		else {
+			twigDir = path.join( process.cwd(), config.relativeSrcOverride );
+		}
 	}
 
 	if ( 'undefined' !== typeof config.isUsingPlugin ) {

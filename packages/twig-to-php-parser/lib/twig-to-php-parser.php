@@ -37,6 +37,9 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		// Generate path where we wanna write php template
 		$path = $template_dir . '/' . str_replace( '.twig', '.php', $path_info[2] );
 
+		debug_log( sprintf("Source: %s", $twig_file ) );
+		debug_log( sprintf("Target: %s", $path ) );
+
 		if ( file_exists( $path ) ) {
 
 			// Get file time of template and twig
@@ -46,7 +49,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			// Compare twig file time to php template filetime. If twig file is newer than php template then overwrite the php template
 			// This is to make sure we are not unnecessarily overwriting the php template
 			if ( $fmtime_twig < $fmtime_template ) {
-
+				debug_log( sprintf( "  -> Skipped, twig timestamp: %s, template timestamp: %s\n", $fmtime_twig, $fmtime_template ) );
 				// NOTE: Ignoring this just to fixing pipeline, however it's showing 100% coverage in local.
 				// Ignoring this line is suggested by teach lead.
 				continue; // @codeCoverageIgnore
@@ -218,6 +221,8 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 		file_put_contents( $path, $php_markup );
 
+		debug_log( "  -> Template generated\n" );
+
 	}
 }
 
@@ -313,5 +318,21 @@ function parse_wp_action( string $twig_markup ) : string {
 
 	return $twig_markup;
 }
+
+function set_debug( bool $state ) {
+	global $debug_state;
+	$debug_state = $state;
+}
+
+function debug_log( string $msg ) {
+	global $debug_state;
+	// write out to stderr for now
+	if ( $debug_state ) {
+		fwrite( STDERR, sprintf("%s\n", $msg ) );
+	}
+}
+
+// Set default to debug mode
+set_debug( true );
 
 //EOF
