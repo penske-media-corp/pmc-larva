@@ -3,9 +3,7 @@ module.exports = {
 	testPathIgnorePatterns: [
 		'/fixtures/',
 		'/larva/src/patterns/',
-		'/larva-patterns/'
+		'/larva-patterns/',
 	],
-	setupFiles: [
-		'./jest-setup.js'
-	]
+	setupFiles: [ './jest-setup.js' ],
 };

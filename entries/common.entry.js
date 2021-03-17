@@ -5,6 +5,7 @@ import initCollapsible from '@larva-js/interface/Collapsible';
 
 ajaxIconSprite( '/assets/build/svg/defs/sprite.defs.svg' );
 
+// eslint-disable-next-line @wordpress/no-global-event-listener
 document.addEventListener( 'DOMContentLoaded', () => {
 	initCollapsible();
 	initFlickity();
