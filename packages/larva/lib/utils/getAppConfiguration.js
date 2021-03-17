@@ -1,4 +1,4 @@
-const chalk = require( 'chalk' );
+const fs = require( 'fs' );
 const path = require( 'path' );
 
 /**
@@ -17,30 +17,63 @@ const path = require( 'path' );
  * @returns value of the specified key.
  */
 
-module.exports = function getAppConfiguration( key, usePackageDefault ) {
+const defaultConfig = {
+
+	eslint: {
+		configFile: path.join( __dirname, '../../scripts/config/.eslintrc.json' ),
+	},
+
+	webpack: {
+		aliases: {
+			'@js': path.resolve( './src/js' ),
+			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
+		},
+		entries: {
+			'larva-ui': path.resolve( './entries/larva-ui.entry.js' ),
+			common: path.resolve( './entries/common.entry.js' )
+		}
+	},
+
+	patterns: {
+		larvaPatternsDir: path.resolve( './node_modules/@penskemediacorp/larva-patterns' ),
+		projectPatternsDir: path.resolve( './src/patterns' ),
+	},
+
+	assets: {
+		path: ( () => {
+
+			// Fragile way to detect existing Larva sites
+			if ( fs.existsSync( path.resolve( './build/css' ) ) ) {
+				return path.resolve( './' );
+			}
+
+			return path.resolve( './node_modules/@penskemediacorp/larva' );
+		})()
+	}
+};
+
+module.exports = function getAppConfiguration( key, usePackageDefault = true ) {
 
 	try {
+
 		let appRoot = process.cwd();
 
 		if ( 'test' === process.env.NODE_ENV ) {
 			appRoot = path.join( __dirname, '../../__tests__/fixtures/' );
 		}
 
-		let config = require( `${appRoot}/larva.config.js` )[ key ];
+		let config = require( `${appRoot}/larva.config.js` );
 
-		// If config not found in approot, fallback to package default
-		if ( undefined === config && usePackageDefault ) {
-			let configFile = path.join( __dirname, '../../larva.config.js' );
-			config = require( configFile )[ key ];
+		// If config not found in approot, fallback to package default in root
+		if ( undefined === config[key] && usePackageDefault ) {
+			return defaultConfig[ key ];
 		}
 
-		if ( undefined === config ) {
-			throw new Error( `Configuration for \`${key}\` is required in larva.config.js. \nPlease refer to the Larva's docs for adding configuration: https://github.com/penske-media-corp/pmc-larva` );
-		}
-
-		return config;
+		return config[key];
 
 	} catch ( error ) {
-		console.error( chalk.red( chalk.bold( 'There is no larva.config.js in this directory.\n' ) + error ) );
+		console.warn( 'Using default configuration. ');
+
+		return defaultConfig[ key ];
 	}
 };

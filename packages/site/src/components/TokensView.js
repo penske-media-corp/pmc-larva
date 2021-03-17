@@ -11,6 +11,9 @@ import {
 export const TokensView = () => {
 	let match = useRouteMatch();
 
+	const TOKENS_FETCH_URL =
+		"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/";
+
 	const appActions = {
 		create: "create",
 		update: "update",
@@ -25,6 +28,7 @@ export const TokensView = () => {
 		undefined !== window.showSaveFilePicker;
 
 	const [tokens, setTokens] = useState({});
+	const [defaultTokens, setDefaultTokens] = useState({});
 	const [copied, setCopied] = useState(false);
 	const [copyText, setCopyText] = useState("");
 	const [canSaveFile] = useState(supportsshowSaveFilePicker);
@@ -86,10 +90,7 @@ export const TokensView = () => {
 				? "default"
 				: selectedBrand.brand;
 
-		let url =
-			"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/" +
-			brand +
-			".raw.json";
+		let url = TOKENS_FETCH_URL + brand + ".raw.json";
 		let response = await fetch(url);
 		let json = await response.json();
 		let tokens = await json.props;
@@ -108,6 +109,24 @@ export const TokensView = () => {
 
 		setCoreColorTokens(sortedColorTokens);
 		setTokens(sortedTokens);
+
+		const initialDefaultTokens = (async (e) => {
+			if ("default" === brand) {
+				// Deep clone the object since we are checking equivalence later.
+				return JSON.parse(JSON.stringify(sortedTokens));
+			} else {
+				let url = TOKENS_FETCH_URL + "/default.raw.json";
+				let response = await fetch(url);
+				let json = await response.json();
+				let tokens = await json.props;
+
+				return tokens;
+			}
+		})();
+
+		// Save unchanged tokens so we can tell what is
+		// different from the original
+		setDefaultTokens(await initialDefaultTokens);
 	};
 
 	/**
@@ -117,8 +136,26 @@ export const TokensView = () => {
 	 * @see https://developer.mozilla.org/en-US/docs/Web/API/window/showSaveFilePicker
 	 */
 	const saveJsonToFile = async () => {
+		const diffedTokens = ((changed, reference) => {
+			const updatedTokenKeys = Object.keys(changed).filter((key) => {
+				// If changed key is not present in the reference, then it
+				// is a custom token, and we should keep it
+				if (undefined === reference[key]) {
+					return true;
+				}
+
+				return changed[key].value !== reference[key].value;
+			});
+
+			return updatedTokenKeys.reduce((acc, curr) => {
+				acc[curr] = { ...changed[curr] };
+				return acc;
+			}, {});
+		})(tokens, defaultTokens);
+
 		const tokensOutput = {
-			props: tokens,
+			imports: ["../base/all.json"],
+			props: { ...diffedTokens },
 		};
 
 		if (canSaveFile) {

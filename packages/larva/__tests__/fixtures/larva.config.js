@@ -32,8 +32,12 @@ module.exports = {
 		]
 	},
 
+	assets: {
+		path: __dirname
+	},
+
 	parser: {
 		isCore: false,
 	},
-	
+
 };

@@ -10,6 +10,7 @@ const gulpStylelint = require( 'gulp-stylelint' );
 const globImporter = require( 'node-sass-glob-importer' );
 
 const stylelintConfig = require( './stylelint.config' );
+const { mkdirp } = require('fs-extra');
 
 
 /**************
@@ -46,7 +47,7 @@ const stylelint = ( file ) => {
 	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
 };
 
-// We need an empty stream for the else condition when 
+// We need an empty stream for the else condition when
 // minifying CSS below. Reference: https://stackoverflow.com/a/30000562
 const emptyStream = () => {
 	var pass = through2.obj();
@@ -57,19 +58,19 @@ const emptyStream = () => {
 
 /**
  * Build CSS
- * 
+ *
  * Used for both prod and dev commands.
- * 
+ *
  * Consider updating the name 'minify' to 'post' if/when
  * more Post CSS functionality is added.
- * 
- * @param {function} done 
+ *
+ * @param {function} done
  * @param {boolean} minify Run post CSS and minify output.
  */
 const buildScss = ( done, minify = false ) => {
 
 	// This is redundant, but was having issue with conditionally
-	// minifying within the same stream with 
+	// minifying within the same stream with
 	// .pipe( minify ? postcss( [ cssnano() ] ) : emptyStream() )
 	// In interest of time, use separate streams for now.
 
@@ -92,6 +93,8 @@ const buildScss = ( done, minify = false ) => {
 const clean = ( done ) => {
 	gulp.src( cssDest , { read: false } )
 		.pipe( gulpClean() );
+
+	mkdirp( cssDest );
 	done();
 };
 

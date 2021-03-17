@@ -2,34 +2,52 @@
 const gulp = require('gulp')
 const theo = require('gulp-theo')
 
+const kebabify = ( name ) => {
+	let kebabCase = [];
+
+	// TODO: find a more concise way of turning a string into an iterable
+	for (let i = 0; i < name.length; i++) {
+		let letter = name[i];
+		kebabCase[i] = letter;
+	}
+
+	return kebabCase.reduce( ( a, b ) => {
+		if ( '_' === b ) {
+			return a.toLowerCase() + '-';
+		}
+		return a.toLowerCase() + b.toLowerCase();
+	});
+};
+
+const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
+
+const basicTokenBuild = ( format, dest = './build' ) => {
+	gulp.src( [
+		'src/brands/*.json',
+		'!src/brands/*.typography.json'
+	] )
+		.pipe(theo({
+			transform: { type: 'web' },
+			format: {
+				type: format,
+			}
+		}))
+		.pipe(gulp.dest( dest ));
+};
+
 gulp.task('default', ( done ) => {
-	gulp.src('src/brands/*.json')
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: { type: 'map.scss' }
-		}))
-		.pipe(gulp.dest('./build'));
+	formats.forEach( format => {
+		basicTokenBuild( format )
+	});
 
-	gulp.src('src/brands/*.json')
+	gulp.src('src/brands/*.typography.json')
 		.pipe(theo({
 			transform: { type: 'web' },
-			format: { type: 'custom-properties.css' }
+			format: {
+				type: 'json'
+			}
 		}))
-		.pipe(gulp.dest('./build'));
-
-	gulp.src('src/brands/*.json')
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: { type: 'json' }
-		}))
-		.pipe(gulp.dest('./build'));
-
-	gulp.src('src/brands/*.json')
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: { type: 'raw.json' }
-		}))
-		.pipe(gulp.dest('./build'));
+		.pipe(gulp.dest( './build' ));
 
 	gulp.src('src/brands/*.json')
 		.pipe(theo({
@@ -37,22 +55,7 @@ gulp.task('default', ( done ) => {
 			format: {
 				type: 'html',
 				options: {
-					transformPropName: ( name ) =>  {
-						let kebabCase = [];
-
-						// TODO: find a more concise way of turning a string into an iterable
-						for (let i = 0; i < name.length; i++) {
-							let letter = name[i];
-							kebabCase[i] = letter;
-						}
-
-						return kebabCase.reduce( ( a, b ) => {
-							if ( '_' === b ) {
-								return a.toLowerCase() + '-';
-							}
-							return a.toLowerCase() + b.toLowerCase();
-						});
-					}
+					transformPropName: ( name ) => kebabify( name )
 				}
 			}
 		}))
