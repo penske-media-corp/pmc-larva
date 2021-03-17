@@ -259,27 +259,12 @@
       "originalValue": "{!BLACK}",
       "name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
     },
-    "COLOR_BRAND_PRIMARY": {
-      "value": "rgb(242, 250, 51)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "{!YELLOW_59}",
-      "name": "COLOR_BRAND_PRIMARY"
-    },
-    "COLOR_BRAND_SECONDARY": {
+    "BORDER_COLOR_BRAND_SECONDARY": {
       "value": "rgb(193, 0, 0)",
       "type": "color",
-      "category": "text-color",
+      "category": "hr-color",
       "originalValue": "{!RED_39}",
-      "name": "COLOR_BRAND_SECONDARY"
-    },
-    "FONT_FAMILY_PRIMARY_FANCY": {
-      "value": "'aileron', Helvetica, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The webfont for font-family-primary.",
-      "originalValue": "{!AILERON}",
-      "name": "FONT_FAMILY_PRIMARY_FANCY"
+      "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "BORDER_COLOR_GREY": {
       "category": "hr-color",
@@ -416,10 +401,10 @@
       "name": "BACKGROUND_COLOR_GREY_DARKEST"
     },
     "COLOR_BRAND_SECONDARY": {
-      "value": "rgb(9, 38, 162)",
+      "value": "rgb(193, 0, 0)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "{!BLUE_36}",
+      "originalValue": "{!RED_39}",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
