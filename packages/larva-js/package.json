@@ -11,6 +11,8 @@
 		"url": "git+https://github.com/penske-media-corp/pmc-larva.git"
 	},
 	"scripts": {
+		"dev": "webpack",
+		"build": "webpack --mode=production",
 		"test": "../../node_modules/.bin/jest",
 		"watch": "node node_modules/@penskemediacorp/larva/lib/watch"
 	},
@@ -22,6 +24,8 @@
 	},
 	"dependencies": {
 		"@penskemediacorp/larva-css": "^0.1.17",
-		"flickity": "^2.2.1"
+		"flickity": "^2.2.1",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12"
 	}
 }
