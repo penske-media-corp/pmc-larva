@@ -1,5 +1,20 @@
 /**
  * JS class to create/handle tooltips
+ *
+ * * The required selectors for this script are:
+ * - .js-Tooltip-parent - Added to the parent of tooltip which opens the tooltip on hover/focus
+ * - .js-Tooltip - Added to the container of the actual tooltip which is displayed on parents hover/focus.
+ *
+ * Example:
+ * <button class="js-Tooltip-parent">
+ * Tooltip trigger
+ * <div class="js-tooltip">Tooltip content</div>
+ * </button>
+ *
+ * The script adds `is-Tooltip-open` class to the tooltip parent container the relevant CSS needs
+ * to be added in theme to show hide the tooltip based on this class.
+ * Use case scenario for this script is the author details module on the single post which should stay open on
+ * hover/focus due to accesibility requirements.
  */
 
 export default class Tooltip {
