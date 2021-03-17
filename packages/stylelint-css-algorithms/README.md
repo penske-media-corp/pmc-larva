@@ -41,7 +41,7 @@ In a project's stylelint.config.js, add the following entries to the rules objec
 
 ## Future of this plugin
 
-This plugin would potentially be useful with 1) a more generic name, not tied to PMC's naming conventions, and 2) possibly as a rule within the Stylelint repo called `selector-property-whitelist`. In either case, there would be a change to the configuration where the key – which is currently a string of the base naming of a pattern – would be a Regex or a specific selector. 
+This plugin would potentially be useful with 1) a more generic name, not tied to PMC's naming conventions, and 2) possibly as a rule within the Stylelint repo called `selector-property-allowlist`. In either case, there would be a change to the configuration where the key – which is currently a string of the base naming of a pattern – would be a Regex or a specific selector.
 
 If/when that happens, this plugin may be removed in favor of that, and we will need to update any configuration accordingly.
 

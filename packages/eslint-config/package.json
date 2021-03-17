@@ -24,6 +24,6 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@wordpress/eslint-plugin": "^7.1.0"
+    "@wordpress/eslint-plugin": "^8.0.2"
   }
 }

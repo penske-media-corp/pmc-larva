@@ -11,6 +11,7 @@ const gulpStylelint = require( 'gulp-stylelint' );
 const globImporter = require( 'node-sass-glob-importer' );
 
 const stylelintConfig = require( './stylelint.config' );
+const { mkdirp } = require('fs-extra');
 
 
 /**************
@@ -129,6 +130,8 @@ const buildScss = ( done, minify = false ) => {
 const clean = ( done ) => {
 	gulp.src( cssDest , { read: false } )
 		.pipe( gulpClean() );
+
+	mkdirp( cssDest );
 	done();
 };
 
