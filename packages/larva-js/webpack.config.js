@@ -7,7 +7,8 @@ const aliases = {
 module.exports = (env, argv) => {
 	return {
 		entry: {
-			common: './src/common.js'
+			common: './src/common.js',
+			'video-showcase': './src/interface/VideoShowcase/index.js',
 		},
 		watch: 'production' !== argv.mode,
 		mode: 'development',
