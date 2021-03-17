@@ -565,12 +565,12 @@
       "originalValue": "1.5",
       "name": "LINE_HEIGHT_COPY"
     },
-    "BORDER_COLOR_BRAND_SECONDARY": {
-      "value": "rgb(193, 0, 0)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "{!RED_39}",
-      "name": "BORDER_COLOR_BRAND_SECONDARY"
+    "LINE_HEIGHT_LARGE": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.85",
+      "originalValue": "1.85",
+      "name": "LINE_HEIGHT_LARGE"
     },
     "SPACING_00": {
       "category": "spacing",
