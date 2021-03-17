@@ -16,3 +16,4 @@ stylelint-config
 stylelint-css-algorithms
 larva
 backstop_data
+jest-setup.js
