@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="lrv-a-wrapper">
+		<header class="lrv-u-margin-tb-1">
+			<h1>Style Guide for <code class="lrv-u-background-color-grey-dark lrv-u-border-radius-5 lrv-u-padding-lr-050 lrv-u-padding-tb-025 lrv-u-color-white">{{brand}}</code></h1>
+			<p>This style guide is generated from design tokens. The correct way to set up and customize the style guide is outlined in <a href="https://confluence.pmcdev.io/x/TgmeAw"><u>this Confluence Page</u></a>.</p>
+		</header>
+		{% include "style-guide/fonts.html" %}
+		{% include "style-guide/colors.html" %}
+		{% block elements %}
+		{% endblock elements %}
+	</div>
+{% endblock content %}

@@ -1,0 +1,8 @@
+// If we need to separate inline and async CSS in the future, this entry point outputs only the
+// CSS properties that cause reflow and should be loaded in line.
+
+@import '@penskemediacorp/larva-css/build/css/generic.common.inline';
+@import '@penskemediacorp/larva-css/build/css/algorithms.common.inline';
+@import '02-algorithms/*.inline';
+@import '@penskemediacorp/larva-css/build/css/utilities.common.inline';
+@import '@penskemediacorp/larva-css/build/css/js.common.inline';

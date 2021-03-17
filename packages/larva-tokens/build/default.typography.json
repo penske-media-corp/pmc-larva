@@ -1,0 +1,40 @@
+{
+  "PRIMARY": [
+    "xs",
+    "s",
+    "m",
+    "l",
+    "xl"
+  ],
+  "SECONDARY_BOLD": [
+    "xs",
+    "s",
+    "m",
+    "l",
+    "xl"
+  ],
+  "SECONDARY_REGULAR": [
+    "xs",
+    "s",
+    "m",
+    "l",
+    "xl"
+  ],
+  "ACCENT": [
+    "xs",
+    "s",
+    "m",
+    "l"
+  ],
+  "BASIC": [
+    "xs",
+    "s",
+    "m",
+    "l",
+    "xl"
+  ],
+  "BODY": [
+    "s",
+    "m"
+  ]
+}

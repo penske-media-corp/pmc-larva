@@ -1,0 +1,15 @@
+@import 'setup';
+
+[data-collapsible].is-expanded [data-collapsible-toggle]:not([data-collapsible-toggle='always-show']) { // stylelint-disable-line selector-max-specificity
+	display: none;
+}
+
+[data-collapsible]:not(.is-expanded) [data-collapsible-panel] {
+	display: none;
+}
+
+[data-collapsible]:not(.is-expanded) [data-collapsible-panel][data-collapsible-breakpoint='mobile-only'] { // stylelint-disable-line selector-max-specificity
+	@include pmc-breakpoint( desktop ) {
+		display: block;
+	}
+}

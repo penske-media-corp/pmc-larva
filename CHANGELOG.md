@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished
+* root - Internal structuring to improve workflow
+* root - Consolidate built assets in root for local dev
+* larva - Render style guide from tokens data
+* larva - Support assets path and brand name in configuration
+
 ## 0.1.17 - 03-08-2021
 * larva-tokens - Update vibe secondary color
 
