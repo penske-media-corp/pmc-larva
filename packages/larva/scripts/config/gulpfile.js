@@ -18,6 +18,8 @@ const stylelintConfig = require( './stylelint.config' );
 Config
 **************/
 
+const cssDest = './build/css/';
+
 const sassOpts = {
 	includePaths: [
 		path.resolve( './node_modules' ),
@@ -37,65 +39,12 @@ const stylelintOpts = {
 	],
 };
 
-const cssDest = './build/css/';
-
 /**************
 Functions
 **************/
 
-const stylelint = ( file ) => {
-	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
-};
-
 /**
- * PostCSS plugin that does nothing, for conditionally minifying CSS.
- *
- * @param {Object} style  PostCSS Root object for current CSS.
- * @param {Object} result PostCSS Result object containing transformed CSS.
- * @return {Result} PostCSS Result object.
- */
-const postCssNoop = ( style, result ) => {
-	result.root = postCss.parse( style );
-	return result;
-};
-
-/**
- * Add `!important` declarations to all rules, for use with older themes that
- * have high specificity.
- *
- * Adapted from the `postcss-importantly` npm package, updated to work with
- * latest version of PostCSS.
- *
- * @param {Object} style  PostCSS Root object for current CSS.
- * @param {Object} result PostCSS Result object containing transformed CSS.
- * @return {Result} PostCSS Result object.
- */
-const declareImportanceForAll = ( style, result ) => {
-	const root = postCss.parse( style );
-
-	root.walkRules( ( rule ) => {
-		if ( 'atrule' === rule.parent.type && 'media' !== rule.parent.name ) {
-			return;
-		}
-
-		return rule.each( ( decl ) => {
-			if ( ! decl.value || decl.important ) {
-				return;
-			}
-
-			decl.value += ' !important';
-
-			return decl;
-		} );
-	} );
-
-	result.root = root;
-
-	return result;
-};
-
-/**
- * Build CSS
+ * Build CSS.
  *
  * Used for both prod and dev commands.
  *
@@ -167,6 +116,62 @@ const composeTask = ( done, generateImportantVariants = false ) => {
 		stylelint( './src/**/*.scss' );
 		buildScss( done, true, generateImportantVariants );
 	} );
+};
+
+/**
+ * Add `!important` declarations to all rules, for use with older themes that
+ * have high specificity.
+ *
+ * Adapted from the `postcss-importantly` npm package, updated to work with
+ * latest version of PostCSS.
+ *
+ * @param {Object} style  PostCSS Root object for current CSS.
+ * @param {Object} result PostCSS Result object containing transformed CSS.
+ * @return {Result} PostCSS Result object.
+ */
+const declareImportanceForAll = ( style, result ) => {
+	const root = postCss.parse( style );
+
+	root.walkRules( ( rule ) => {
+		if ( 'atrule' === rule.parent.type && 'media' !== rule.parent.name ) {
+			return;
+		}
+
+		return rule.each( ( decl ) => {
+			if ( ! decl.value || decl.important ) {
+				return;
+			}
+
+			decl.value += ' !important';
+
+			return decl;
+		} );
+	} );
+
+	result.root = root;
+
+	return result;
+};
+
+/**
+ * PostCSS plugin that does nothing, for conditionally minifying CSS.
+ *
+ * @param {Object} style  PostCSS Root object for current CSS.
+ * @param {Object} result PostCSS Result object containing transformed CSS.
+ * @return {Result} PostCSS Result object.
+ */
+const postCssNoop = ( style, result ) => {
+	result.root = postCss.parse( style );
+	return result;
+};
+
+/**
+ * Run stylelint.
+ *
+ * @param {string} file Filename or glob to process.
+ */
+const stylelint = ( file ) => {
+	gulp.src( file ).pipe( gulpStylelint( stylelintOpts ) );
 };
 
 /**************
