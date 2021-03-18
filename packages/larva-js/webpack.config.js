@@ -7,7 +7,7 @@ const aliases = {
 module.exports = (env, argv) => {
 	return {
 		entry: {
-			'video-showcase': './src/interface/VideoShowcase/index.js',
+			'video-showcase': './src/video-showcase.js',
 		},
 		watch: 'production' !== argv.mode,
 		mode: 'development',
