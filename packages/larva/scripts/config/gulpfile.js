@@ -1,4 +1,5 @@
 const gulp = require( 'gulp' );
+const gulpIf = require( 'gulp-if' );
 const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
 const cssnano = require( 'cssnano' );
@@ -84,7 +85,7 @@ const declareImportanceForAll = ( style, result ) => {
 				return;
 			}
 
-			decl.value += '!important';
+			decl.value += ' !important';
 
 			return decl;
 		} );
@@ -103,10 +104,17 @@ const declareImportanceForAll = ( style, result ) => {
  * Consider updating the name 'minify' to 'post' if/when
  * more Post CSS functionality is added.
  *
- * @param {Function} done  Post-build callback.
- * @param {boolean} minify Run post CSS and minify output.
+ * @param {Function} done                      Post-build callback.
+ * @param {boolean}  minify                    Run post CSS and minify output.
+ * @param {boolean}  generateImportantVariants Whether to build variations with
+ *                                             `!important` added to all rules.
  */
-const buildScss = ( done, minify = false ) => {
+const buildScss = (
+	done,
+	minify = false,
+	generateImportantVariants = false
+) => {
+	// gulp-if and cssnano are incompatible, which gulp-if warns to expect.
 	const postCssPlugins = [];
 
 	if ( minify ) {
@@ -115,16 +123,30 @@ const buildScss = ( done, minify = false ) => {
 		postCssPlugins.push( postCssNoop );
 	}
 
-	gulp.src( './entries/*.scss' )
-		.pipe( gulpStylelint( stylelintOpts ) )
-		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
-		.pipe( gulpPostCss( postCssPlugins ) )
-		.pipe( gulp.dest( cssDest ) )
-		.pipe( gulpPostCss( [ declareImportanceForAll ] ) )
-		.pipe( gulpRename( { suffix: '-important' } ) )
-		.pipe( gulp.dest( cssDest ) );
+	gulp.src('./entries/*.scss')
+		.pipe(gulpStylelint(stylelintOpts))
+		.pipe(sass(sassOpts).on('error', sass.logError))
+		.pipe(gulpPostCss( postCssPlugins ))
+		.pipe(gulp.dest(cssDest))
+		.pipe(gulpIf(generateImportantVariants, gulpPostCss([declareImportanceForAll])))
+		.pipe(gulpIf(generateImportantVariants, gulpRename({suffix: '-important'})))
+		.pipe(gulpIf(generateImportantVariants, gulp.dest(cssDest)));
 
 	done();
+};
+
+/**
+ * Build a task from dynamic input.
+ *
+ * @param {Function} done                      Function called upon completion.
+ * @param {boolean}  generateImportantVariants Whether to build variations with
+ *                                             `!important` added to all rules.
+ */
+const composeTask = ( done, generateImportantVariants = false ) => {
+	clean( () => {
+		stylelint( './src/**/*.scss' );
+		buildScss( done, true, generateImportantVariants );
+	});
 };
 
 const clean = ( done ) => {
@@ -153,8 +175,9 @@ exports['build-scss'] = ( done ) => {
 
 // Run PostCSS on CSS.
 exports['prod-scss'] = ( done ) => {
-	clean( () => {
-		stylelint( './src/**/*.scss' );
-		buildScss( done, true );
-	});
+	composeTask( done );
+};
+
+exports['prod-scss-with-important-variants'] = ( done ) => {
+	composeTask( done, true );
 };
