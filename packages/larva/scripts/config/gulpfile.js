@@ -142,7 +142,7 @@ const declareImportanceForAll = ( style, result ) => {
 				return;
 			}
 
-			decl.value += ' !important';
+			decl.value += '!important';
 
 			return decl;
 		} );
