@@ -1,19 +1,18 @@
 const gulp = require( 'gulp' );
+const gulpClean = require( 'gulp-clean' );
 const gulpIf = require( 'gulp-if' );
 const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
+const gulpStylelint = require( 'gulp-stylelint' );
+
 const cssnano = require( 'cssnano' );
+const globImporter = require( 'node-sass-glob-importer' );
+const { mkdirp } = require( 'fs-extra' );
 const path = require( 'path' );
 const postCss = require( 'postcss' );
 const sass = require( 'gulp-sass' );
 
-const gulpClean = require( 'gulp-clean' );
-const gulpStylelint = require( 'gulp-stylelint' );
-const globImporter = require( 'node-sass-glob-importer' );
-
 const stylelintConfig = require( './stylelint.config' );
-const { mkdirp } = require('fs-extra');
-
 
 /**************
 Config
@@ -22,9 +21,9 @@ Config
 const sassOpts = {
 	includePaths: [
 		path.resolve( './node_modules' ),
-		path.resolve( './src/scss' )
+		path.resolve( './src/scss' ),
 	],
-	importer: globImporter()
+	importer: globImporter(),
 };
 
 const stylelintOpts = {
@@ -33,13 +32,12 @@ const stylelintOpts = {
 	reporters: [
 		{
 			formatter: 'string',
-			console: true
-		} ]
+			console: true,
+		},
+	],
 };
 
 const cssDest = './build/css/';
-
-
 
 /**************
 Functions
@@ -123,14 +121,24 @@ const buildScss = (
 		postCssPlugins.push( postCssNoop );
 	}
 
-	gulp.src('./entries/*.scss')
-		.pipe(gulpStylelint(stylelintOpts))
-		.pipe(sass(sassOpts).on('error', sass.logError))
-		.pipe(gulpPostCss( postCssPlugins ))
-		.pipe(gulp.dest(cssDest))
-		.pipe(gulpIf(generateImportantVariants, gulpPostCss([declareImportanceForAll])))
-		.pipe(gulpIf(generateImportantVariants, gulpRename({suffix: '-important'})))
-		.pipe(gulpIf(generateImportantVariants, gulp.dest(cssDest)));
+	gulp.src( './entries/*.scss' )
+		.pipe( gulpStylelint( stylelintOpts ) )
+		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
+		.pipe( gulpPostCss( postCssPlugins ) )
+		.pipe( gulp.dest( cssDest ) )
+		.pipe(
+			gulpIf(
+				generateImportantVariants,
+				gulpPostCss( [ declareImportanceForAll ] )
+			)
+		)
+		.pipe(
+			gulpIf(
+				generateImportantVariants,
+				gulpRename( { suffix: '-important' } )
+			)
+		)
+		.pipe( gulpIf( generateImportantVariants, gulp.dest( cssDest ) ) );
 
 	done();
 };
@@ -146,12 +154,11 @@ const composeTask = ( done, generateImportantVariants = false ) => {
 	clean( () => {
 		stylelint( './src/**/*.scss' );
 		buildScss( done, true, generateImportantVariants );
-	});
+	} );
 };
 
 const clean = ( done ) => {
-	gulp.src( cssDest , { read: false } )
-		.pipe( gulpClean() );
+	gulp.src( cssDest, { read: false } ).pipe( gulpClean() );
 
 	mkdirp( cssDest );
 	done();
@@ -162,22 +169,25 @@ Tasks
 ***************/
 
 // Watch the changed file, compile and lint when changed.
-exports['dev-scss'] = () => {
-	gulp.watch( [ './src/**/*.scss', './entries/*.scss' ], buildScss ).on( 'change', function( file ) {
-		stylelint( file );
-	} );
+exports[ 'dev-scss' ] = () => {
+	gulp.watch( [ './src/**/*.scss', './entries/*.scss' ], buildScss ).on(
+		'change',
+		function ( file ) {
+			stylelint( file );
+		}
+	);
 };
 
 // Quickly build SCSS.
-exports['build-scss'] = ( done ) => {
+exports[ 'build-scss' ] = ( done ) => {
 	buildScss( done );
 };
 
 // Run PostCSS on CSS.
-exports['prod-scss'] = ( done ) => {
+exports[ 'prod-scss' ] = ( done ) => {
 	composeTask( done );
 };
 
-exports['prod-scss-with-important-variants'] = ( done ) => {
+exports[ 'prod-scss-with-important-variants' ] = ( done ) => {
 	composeTask( done, true );
 };
