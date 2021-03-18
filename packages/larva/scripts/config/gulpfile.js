@@ -144,6 +144,18 @@ const buildScss = (
 };
 
 /**
+ * Prepare destination directory.
+ *
+ * @param {Function} done Function called upon completion.
+ */
+const clean = ( done ) => {
+	gulp.src( cssDest, { read: false } ).pipe( gulpClean() );
+
+	mkdirp( cssDest );
+	done();
+};
+
+/**
  * Build a task from dynamic input.
  *
  * @param {Function} done                      Function called upon completion.
@@ -155,13 +167,6 @@ const composeTask = ( done, generateImportantVariants = false ) => {
 		stylelint( './src/**/*.scss' );
 		buildScss( done, true, generateImportantVariants );
 	} );
-};
-
-const clean = ( done ) => {
-	gulp.src( cssDest, { read: false } ).pipe( gulpClean() );
-
-	mkdirp( cssDest );
-	done();
 };
 
 /**************
