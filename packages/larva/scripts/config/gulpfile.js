@@ -6,6 +6,7 @@ const gulpRename = require( 'gulp-rename' );
 const gulpStylelint = require( 'gulp-stylelint' );
 
 const cssnano = require( 'cssnano' );
+const Fibers = require( 'fibers' );
 const globImporter = require( 'node-sass-glob-importer' );
 const { mkdirp } = require( 'fs-extra' );
 const path = require( 'path' );
@@ -20,7 +21,10 @@ Config
 
 const cssDest = './build/css/';
 
+sass.compiler = require( 'sass' );
+
 const sassOpts = {
+	fiber: Fibers,
 	includePaths: [
 		path.resolve( './node_modules' ),
 		path.resolve( './src/scss' ),
