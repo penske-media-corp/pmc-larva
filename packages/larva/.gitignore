@@ -1,4 +1,0 @@
-# Ignore certain build files copied from monorepo root.
-build/css/larva.inline-important.css
-build/css/larva-important.css
-build/css/larva-ui-important.css
