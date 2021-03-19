@@ -8,7 +8,7 @@
  * Example:
  * <button class="js-Tooltip-parent">
  * Tooltip trigger
- * <div class="js-tooltip">Tooltip content</div>
+ * <div class="js-Tooltip">Tooltip content</div>
  * </button>
  *
  * The script adds `is-Tooltip-open` class to the tooltip parent container the relevant CSS needs
