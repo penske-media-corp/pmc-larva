@@ -1,6 +1,7 @@
 const gulp = require( 'gulp' );
 const gulpClean = require( 'gulp-clean' );
 const gulpIf = require( 'gulp-if' );
+const gulpIgnore = require( 'gulp-ignore' );
 const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
 const gulpStylelint = require( 'gulp-stylelint' );
@@ -79,6 +80,7 @@ const buildScss = (
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
 		.pipe( gulpPostCss( postCssPlugins ) )
 		.pipe( gulp.dest( cssDest ) )
+		.pipe( gulpIgnore.exclude( 'larva-ui.css' ) )
 		.pipe(
 			gulpIf(
 				generateImportantVariants,
