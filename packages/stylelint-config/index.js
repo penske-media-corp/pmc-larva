@@ -72,7 +72,7 @@ module.exports = {
 		'unit-disallowed-list': [
 			'px', {
 				'ignoreProperties': {
-					'px': [ 'box-shadow', '/^border/' ]
+					'px': [ 'box-shadow', '/^border/', 'transform', 'clip' ]
 				}
 			}
 		],

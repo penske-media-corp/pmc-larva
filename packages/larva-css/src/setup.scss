@@ -1,6 +1,6 @@
-@import '@penskemediacorp/larva-scss/dist/generators';
-@import '@penskemediacorp/larva-scss/dist/tokens';
-@import '@penskemediacorp/larva-tokens/build/default.map.scss';
+@import '../../larva-scss/dist/generators';
+@import '../../larva-scss/dist/tokens';
+@import '../../larva-tokens/build/default.map.scss';
 
 $TOKENS-MAP: $default-map;
 

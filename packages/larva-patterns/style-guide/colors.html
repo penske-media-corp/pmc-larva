@@ -1,0 +1,33 @@
+<section>
+	<h2 style="background-color: whitesmoke;" class="lrv-u-padding-a-1 lrv-u-margin-b-2">Text Colors</h2>
+	<div class="lrv-a-grid lrv-a-cols3 lrv-a-cols4@tablet lrv-u-margin-tb-1">
+		{% for class in colors.color %}
+			<div class="lrv-u-flex lrv-u-flex-direction-column">
+				<strong class="lrv-u-width-100 {{ class }}">Here is some text</strong>
+				<p><code>.{{ class }}</code></p>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+<section>
+	<h2 style="background-color: whitesmoke;" class="lrv-u-padding-a-1 lrv-u-margin-b-2">Border Colors</h2>
+	<div class="lrv-a-grid lrv-a-cols3 lrv-a-cols4@tablet lrv-u-margin-tb-1">
+		{% for class in colors['border-color'] %}
+			<div class="lrv-u-flex lrv-u-flex-direction-column">
+				<div class="lrv-u-width-100 lrv-u-padding-a-025 lrv-u-border-a-3 {{ class }}"></div>
+				<p><code>.{{ class }}</code></p>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+<section>
+	<h2 style="background-color: whitesmoke;" class="lrv-u-padding-a-1 lrv-u-margin-b-2">Background Colors</h2>
+	<div class="lrv-a-grid lrv-a-cols3 lrv-u-margin-tb-1">
+		{% for class in colors['background-color'] %}
+			<div class="lrv-u-flex lrv-u-flex-direction-column">
+				<div class="lrv-u-width-100 lrv-u-border-a-1 lrv-u-padding-a-1 {{ class }}"></div>
+				<p><code>.{{ class }}</code></p>
+			</div>
+		{% endfor %}
+	</div>
+</section>

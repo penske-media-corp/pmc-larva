@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/eslint-config",
-  "version": "0.1.10",
+  "version": "0.1.18",
   "description": "Eslint base config and customizations.",
   "keywords": [
     "eslint",
@@ -24,6 +24,6 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@wordpress/eslint-plugin": "^7.1.0"
+    "@wordpress/eslint-plugin": "^8.0.2"
   }
 }
