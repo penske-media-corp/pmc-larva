@@ -6,8 +6,8 @@
     "larva": "packages/larva/bin/larva.js server --watch ./packages -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "npm run prod:scss && npm run prod:js",
-    "prod:scss": "cd packages/larva-css && npm run build && cd ../../ && packages/larva/bin/larva.js prod-scss --generate-important-variants && npm run sync-build",
-    "prod:js": "packages/larva/bin/larva.js prod-js && npm run sync-build",
+    "prod:scss": "npm --prefix=packages/larva-css run build && packages/larva/bin/larva.js prod-scss --generate-important-variants && npm run sync-build",
+    "prod:js": "npm run --prefix=packages/larva-js build && packages/larva/bin/larva.js prod-js && npm run sync-build",
     "dev": "concurrently \"npm:dev:scss\" \"npm:dev:js\" --raw",
     "dev:scss": "packages/larva/bin/larva.js dev-scss",
     "dev:js": "packages/larva/bin/larva.js dev-js",
@@ -22,7 +22,8 @@
     "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
     "sync-tokens": "mkdir -p build/tokens && cp -r packages/larva-tokens/build/ build/tokens/",
     "sync-public": "mkdir -p packages/larva/public && cp -r public packages/larva",
-    "sync-build": "npm run sync-public && npm run sync-tokens && mkdir -p packages/larva/build && rm -r packages/larva/build && cp -r build/ packages/larva/build"
+    "sync-built-js": "mkdir -p build/js/standalone && rm -r build/js/standalone && cp -r packages/larva-js/build build/js/standalone",
+    "sync-build": "npm run sync-public && npm run sync-tokens && npm run sync-built-js && mkdir -p packages/larva/build && rm -r packages/larva/build && cp -r build/ packages/larva/build"
   },
   "bin": {
     "larva": "packages/larva/bin/larva.js"
