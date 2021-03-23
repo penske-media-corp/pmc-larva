@@ -3,15 +3,15 @@ const path = require( 'path' );
 const { prepareTestPaths, prepareTestSelectors } = require( '../../lib/utils' );
 
 // Gets test app config from larva/__test__/fixtures/larva.config.js
-const getAppConfiguration = require( '@penskemediacorp/larva' ).getConfig;
+const getAppConfiguration = require( '../../lib/getConfig' );
 const appConfiguration = getAppConfiguration( 'backstop' );
 
 describe( 'backstop utils', function() {
 
 	it( 'prepareTestPaths - returns paths for modules if present', () => {
-		assert.deepEqual( 
-			prepareTestPaths( appConfiguration.larvaModules, appConfiguration.testPaths ), 
-			[ '/modules/footer', '/modules/mega-menu-content', '/modules/social-share' ] 
+		assert.deepEqual(
+			prepareTestPaths( appConfiguration.larvaModules, appConfiguration.testPaths ),
+			[ '/modules/footer', '/modules/mega-menu-content', '/modules/social-share' ]
 		);
 	});
 

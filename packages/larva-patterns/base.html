@@ -5,11 +5,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>LRVA: {{ source }} | {{ name }}</title>
+		<title>LRVA: {{brand}} | {{ source }} | {{ name }}</title>
 
-		{% block stylesheets %}{% endblock %}
-
+		<link rel="stylesheet" href="/assets/build/tokens/{{brand}}.custom-properties.css">
+		<link rel="stylesheet" href="/assets/build/css/larva.css">
 		<link rel="stylesheet" href="/assets/build/css/larva-ui.css">
+
+		{% block stylesheets %}
+		{% endblock %}
 
 		<script>
 			// Stub in PMC cookie object so fonts load on Larva server
@@ -36,7 +39,9 @@
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
 				{% include "@larva/_templates/pattern-nav.html" with { source: 'larva' } %}
-				{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
+				{% if pattern_nav.project %}
+					{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
+				{% endif %}
 			</div>
 			<div class="lrv-u-flex-grow-1">
 				{% block content %}{% endblock %}
@@ -57,6 +62,7 @@
 
 		<script src="/assets/public/webfontloader.js"></script>
 		<script src="/assets/build/js/larva-ui.js"></script>
+		<script src="/assets/build/js/common.js"></script>
 
 		{% block scripts %}{% endblock %}
 	</body>

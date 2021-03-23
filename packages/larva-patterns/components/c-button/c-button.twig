@@ -8,6 +8,10 @@
 		{{ c_button_text }}
 	</span>
 
+	{% if c_button_screen_reader_text %}
+		<span class="lrv-a-screen-reader-only">{{ c_button_screen_reader_text }}</span>
+	{% endif %}
+
 {% if c_button_url %}
 	</a>
 {% else %}

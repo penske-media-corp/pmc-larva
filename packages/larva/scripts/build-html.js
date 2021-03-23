@@ -25,6 +25,7 @@ const routesArr = getPatternRoutes( patternsObj );
 // Add a static, non-pattern path. If we need more paths like this,
 // this method should be called in its own function.
 routesArr.push( 'css' );
+routesArr.push( 'style-guide' );
 
 generateStatic( routesArr, buildPath, ( message ) => {
 

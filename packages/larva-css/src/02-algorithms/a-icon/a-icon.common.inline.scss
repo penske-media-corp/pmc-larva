@@ -29,7 +29,7 @@
 		height: initial;
 		width: initial;
 		// background okay for reset.
-		background: initial; // stylelint-disable-line property-blacklist
+		background: initial; // stylelint-disable-line property-disallowed-list
 		font-size: inherit;
 		color: currentColor;
 		margin: 0;

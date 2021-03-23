@@ -1,3 +1,4 @@
+const fs = require( 'fs' );
 const path = require( 'path' );
 
 const getConfig = require( '../../index' ).getConfig;
@@ -12,6 +13,9 @@ const aliases = {
 	'@npm': path.resolve( './node_modules/' ),
 	... getConfig( 'webpack' ).aliases
 };
+
+const eslintConfig = getConfig( 'eslint', true );
+const eslintConfigFile = undefined !== eslintConfig ? eslintConfig.configFile : null;
 
 // Tools
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
@@ -32,7 +36,7 @@ const rules = {
 		use: {
 			loader: 'eslint-loader',
 			options: {
-				configFile: path.join( __dirname, './.eslintrc.json' )
+				configFile: eslintConfigFile
 			}
 		}
 	},

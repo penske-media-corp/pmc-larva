@@ -105,6 +105,13 @@ Example of building HTML for project Larva patterns:
 Example of building HTML for Larva patterns with a server on port 2003:
 `npm run build-html -- larva 2003`.
 
+**`prod:scss`**
+
+This command accepts an optional flag, `--generate-important-variants`, which
+produces a second version of each entrypoint. In these variants, every rule
+includes the `!important` declaration. These stylesheets are used with themes
+that have not fully adopted Larva, allowing Larva to overcome the theme's
+styles' specificity.  
 
 ### Overview of Functionality
 

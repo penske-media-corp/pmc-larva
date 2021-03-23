@@ -1,0 +1,81 @@
+
+$dirt-map: (
+  'border-color-grey-lightest': (rgb(247, 247, 247)),
+  'border-color-brand-secondary-light': (rgb(33, 38, 52)),
+  'border-color-grey-light': (rgb(193, 193, 193)),
+  'border-color-grey-dark': (rgb(94, 94, 94)),
+  'border-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'border-color-brand-secondary': (rgb(21, 28, 45)),
+  'border-color-grey': (rgb(117, 117, 117)),
+  'border-color-brand-primary-light': (rgb(193, 149, 96)),
+  'border-color-white': (rgb(255, 255, 255)),
+  'border-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'border-color-brand-primary': (rgb(155, 109, 8)),
+  'background-color-grey-light': (rgb(193, 193, 193)),
+  'background-color-grey-lightest': (rgb(247, 247, 247)),
+  'background-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'background-color-brand-secondary-light': (rgb(33, 38, 52)),
+  'background-color-grey-dark': (rgb(94, 94, 94)),
+  'background-color-grey': (rgb(117, 117, 117)),
+  /* The background color of the main body of the site. */
+  'background-color-body': (rgb(255, 255, 255)),
+  'background-color-brand-secondary': (rgb(21, 28, 45)),
+  'background-color-black': (rgb(0, 0, 0)),
+  'background-color-brand-primary-light': (rgb(193, 149, 96)),
+  'background-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'background-color-white': (rgb(255, 255, 255)),
+  'background-color-brand-primary': (rgb(155, 109, 8)),
+  'background-color-grey-darkest': (rgb(51, 51, 51)),
+  'color-brand-secondary': (rgb(21, 28, 45)),
+  'color-black': (rgb(0, 0, 0)),
+  'color-brand-primary-light': (rgb(193, 149, 96)),
+  'color-brand-primary-dark': (rgb(236, 28, 36)),
+  'color-white': (rgb(255, 255, 255)),
+  'color-brand-primary': (rgb(155, 109, 8)),
+  'color-grey-light': (rgb(230, 230, 230)),
+  'color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'color-brand-secondary-light': (rgb(33, 38, 52)),
+  'color-grey-dark': (rgb(94, 94, 94)),
+  'color-grey': (rgb(117, 117, 117)),
+  /* The webfont for font-family-primary. */
+  'font-family-primary-fancy': ('fertigo-pro', serif),
+  /* The fallback font for font-family-primary. */
+  'font-family-primary': (Georgia, serif),
+  /* Available via Typekit. */
+  'font-family-secondary-fancy': ('astoria-sans', serif),
+  /* Fallback from secondary-fancy */
+  'font-family-secondary': (Georgia, serif),
+  'font-family-body': (Georgia, serif),
+  'font-family-basic': (Helvetica, sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
+  'line-height-small': (1.1),
+  'line-height-normal': (1.35),
+  'line-height-copy': (1.5),
+  'line-height-large': (1.85),
+  /* Used for margins and padding only. */
+  'spacing-00': (0),
+  /* Used for margins and padding only. */
+  'spacing-025': (0.25rem),
+  /* Used for margins and padding only. */
+  'spacing-050': (0.5rem),
+  /* Used for margins and padding only. */
+  'spacing-075': (0.75rem),
+  /* Used for margins and padding only. */
+  'spacing-1': (1rem),
+  /* Used for margins and padding only. */
+  'spacing-125': (1.25rem),
+  /* Used for margins and padding only. */
+  'spacing-150': (1.5rem),
+  /* Used for margins and padding only. */
+  'spacing-2': (2rem),
+  'color-brand-primary-lightest': (rgb(236, 210, 178)),
+  'color-grey-darkest': (rgb(51, 51, 51)),
+  'background-color-brand-primary-lightest': (rgb(236, 210, 178)),
+  /* Used for margins and padding only. */
+  'spacing-350': (3.5rem),
+  'background-color-grey-brand': (rgb(250, 250, 250)),
+  'border-color-brand-primary-lightest': (rgb(236, 210, 178)),
+  'border-color-grey-darkest': (rgb(51, 51, 51)),
+);

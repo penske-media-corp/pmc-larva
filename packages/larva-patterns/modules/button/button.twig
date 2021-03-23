@@ -1,1 +1,7 @@
-<a {% if button_url %}href="{{ button_url }}"{% endif %} class="button larva // {{ button_classes }}">{{ button_markup }}</a>
+<a class="button larva // {{ button_classes }}"
+	{% if button_url %}
+		href="{{ button_url }}"
+	{% endif %}
+>
+	{{ button_markup }}
+</a>

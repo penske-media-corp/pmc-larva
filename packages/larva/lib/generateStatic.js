@@ -4,7 +4,10 @@ const fs = require( 'fs-extra' );
 const chalk = require( 'chalk' );
 const axios = require( 'axios' );
 
+const getAppConfiguration = require( './utils/getAppConfiguration' );
 const copySyncHelper = require( './utils/copySyncHelper' );
+
+const assetsConfig = getAppConfiguration( 'assets' );
 
 /**
  * Generate Static HTML
@@ -24,31 +27,43 @@ const copySyncHelper = require( './utils/copySyncHelper' );
  * @see {@link getPatternRoutes}.
  */
 
+
 module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 'http://localhost:3000/larva' ) {
 	const errors = [];
+
+	fs.mkdirpSync( buildPath );
 
 	// Copy assets from assets/build and assets/public
 	// to the static site build directory.
 	console.log( '\nCopying assets...\n')
 
 	// assets/public dir contains fonts and non-built things.
-	const publicAssetsSrc = path.join( buildPath, `../../../public` );
+	const publicAssetsSrc = ( () => {
+		let pubPath = path.join( assetsConfig.path, `public` );
+
+		// Fallback to assets in Larva
+		if ( ! fs.existsSync( pubPath ) ) {
+			pubPath = path.join( assetsConfig.path, 'public' )
+		}
+
+		return pubPath;
+	})();
 	const publicAssetsDest = path.join( buildPath, '../assets/public' );
 
 	// Could do a globby here, but this won't change much so it might be okay.
 	const builtAssets = [
 		'js',
 		'css',
+		'tokens', // TODO: only copy tokens for the brand
 		'images',
 		'svg'
 	];
 
 	builtAssets.forEach( item => {
-		const src  = path.join( buildPath, `../../${item}` );
 		const dest = path.join( buildPath, `../assets/build/${item}` );
+		const src = path.join( assetsConfig.path, `build/${item}` );
 
 		copySyncHelper( src, dest );
-
 	});
 
 	copySyncHelper( publicAssetsSrc, publicAssetsDest );

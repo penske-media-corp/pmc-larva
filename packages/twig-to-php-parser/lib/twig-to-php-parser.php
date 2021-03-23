@@ -63,13 +63,13 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		// https://regex101.com/r/lceCnz/2/
 		$loop_regex = '/({% for item in\s*)(\w*)/';
 
-		// Get matches for {{ name }}
-		// https://regex101.com/r/ACN0rE/2
-		$mustache_regex = '/({{\s*)(\w*?\|?\w*)(\s*}})/';
+		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
+		// https://regex101.com/r/ACN0rE/5
+		$mustache_regex = '/({{\s*)(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s*}})/';
 
-		// Get matches for {% include "path/c-element.twig" with data %}
-		// https://regex101.com/r/ns5kBR/2
-		$include_regex = '/({%\sinclude ")(.*[c-|o-|l-].*\/)(.*)(.twig)(" with )(\w*)(.*\s%})/';
+		// Get matches for {% include "path/c-element.twig" with data['some_data'] %}
+		// https://regex101.com/r/ns5kBR/3
+		$include_regex = '/({%\sinclude ")(.*[c-|o-|l-].*\/)(.*)(.twig)(" with )(\w*?\[?\'?\w*\'?\]?\|?\w*)(\s%})/';
 
 		// Get matches for {% include '/path/here/' ~ variable_svg ~ '.svg' %}
 		// https://regex101.com/r/pdleQb/3
@@ -78,7 +78,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$twig_markup = \file_get_contents( $twig_file );
 
 		$general_replacers = [
-			'{#'           => '<?php /*' . "\n",
+			'{#'           => '<?php' . "\n/**" . "\n",
 			'#}'           => '*/' . "\n" . '?>',
 			'{% endif %}'  => '<?php } ?>',
 			'{% else %}'   => '<?php } else { ?>',
@@ -131,6 +131,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			$is_text       = strpos( $match, '_text' );
 			$is_data_attr  = strpos( $match, '_attributes' );
 			$is_markup     = strpos( $match, '_markup' );
+			$is_action     = strpos( $match, '_wp_action' );
 			$has_filter    = strpos( $match, '|' );
 
 			// Remove the Twig filter from the variable name
@@ -153,6 +154,10 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 			if ( ! empty( $is_markup ) ) {
 				$mustache_replacements[ $count ] = '<?php echo wp_kses_post( $' . $variable_name . ' ?? \'\' ); ?>';
+			}
+
+			if ( ! empty( $is_action ) ) {
+				$mustache_replacements[ $count ] = '<?php do_action( \'' . $variable_name . '\' ); ?>';
 			}
 
 			$count ++;
@@ -229,26 +234,27 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 	$brand_directory = 'CHILD_THEME_PATH';
 	$pattern_directory = '/template-parts/patterns/';
 	$start_name = substr( $pattern_name, 0, 2 );
+	$pattern_type = '';
 
-	if ( true === $is_using_plugin ) {
-		$pattern_directory = '/build/patterns/';
-		$key_name = strpos( $twig_include, '@larva' ) ? 'core_directory' : 'brand_directory';
-		$brand_directory = "\PMC\Larva\Config::get_instance()->get( '" . $key_name . "' )";
-	} else {
-		if ( strpos( $twig_include, '@larva' ) ) {
-			$brand_directory = 'PMC_CORE_PATH';
-		}
+	if ( strpos( $twig_include, '@larva' ) ) {
+		$brand_directory = 'PMC_CORE_PATH';
 	}
 
 	if ( 'c-' === $start_name ) {
-		$pattern_directory .= 'components';
+		$pattern_type = 'components';
 	} elseif ( 'o-' === $start_name ) {
-		$pattern_directory .= 'objects';
+		$pattern_type = 'objects';
 	} elseif ( '-' !== substr( $pattern_name, 1, 2 ) ) { // If there is no namespace, it is a module.
-		$pattern_directory .= 'modules';
+		$pattern_type = 'modules';
 	}
 
-	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $pattern_directory . "/" . $pattern_name . ".php', $" . $data_name . ', true ); ?>';
+	if ( $is_using_plugin ) {
+		return "<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( '" . $pattern_type . '/' . $pattern_name . "', $" . $data_name . ", true ); ?>";
+	} else {
+		$pattern_partial_path = $pattern_directory . $pattern_type . '/' . $pattern_name;
+
+		return '<?php \PMC::render_template( ' . $brand_directory . " . '" . $pattern_partial_path  . ".php', $" . $data_name . ', true ); ?>';
+	}
 
 }
 
@@ -264,7 +270,7 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
 	$brand_directory = 'CHILD_THEME_PATH';
 	$svg_directory = '/assets/build/svg/';
-	$start_name = substr( $pattern_name, 0, 2 );
+	$start_name = substr( $svg_name, 0, 2 );
 
 	if ( true === $is_using_plugin ) {
 		$svg_directory = '/build/svg/';
