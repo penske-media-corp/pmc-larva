@@ -52,7 +52,7 @@
     "@penskemediacorp/larva-svg": "^0.1.14",
     "@penskemediacorp/larva-tokens": "^0.1.18",
     "@penskemediacorp/stylelint-config": "^0.1.18",
-    "@penskemediacorp/twig-to-php-parser": "^0.1.17-develop.12+969ceb85",
+    "@penskemediacorp/twig-to-php-parser": "^0.1.18",
     "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
