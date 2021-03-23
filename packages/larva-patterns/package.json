@@ -24,6 +24,5 @@
     "@penskemediacorp/larva-js": "^0.1.18",
     "@penskemediacorp/larva-svg": "^0.1.14",
     "lodash.clonedeep": "^4.5.0"
-  },
-  "gitHead": "969ceb85566eea0d9baabf6681aeb355cb1019c3"
+  }
 }

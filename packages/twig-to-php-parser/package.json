@@ -25,6 +25,5 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "exec-php": "0.0.5"
-  },
-  "gitHead": "969ceb85566eea0d9baabf6681aeb355cb1019c3"
+  }
 }
