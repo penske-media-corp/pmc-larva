@@ -3,19 +3,6 @@ const LARVA_PORT = 3001;
 
 module.exports = {
 	brand: 'default',
-	webpack: {
-		aliases: {
-			'@js': path.resolve( './src/js' ),
-			'@larva-js': path.resolve(
-				'./node_modules/@penskemediacorp/larva-js/src'
-			),
-		},
-		entries: {
-			'larva-ui': './entries/larva-ui.entry.js',
-			common: './entries/common.entry.js',
-		},
-	},
-
 	backstop: {
 		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
 		testScenario: {
