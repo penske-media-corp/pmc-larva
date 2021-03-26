@@ -1,3 +1,10 @@
 {
-	"extends": "@penskemediacorp/eslint-config"
+	"extends": "@penskemediacorp/eslint-config",
+	"settings": {
+		"import/resolver": {
+			"webpack": {
+				"config": "./node_modules/@penskemediacorp/larva/scripts/config/webpack.config.js"
+			}
+		}
+	}
 }

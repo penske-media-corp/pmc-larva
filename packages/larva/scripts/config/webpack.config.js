@@ -1,5 +1,5 @@
-const fs = require( 'fs' );
 const path = require( 'path' );
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const getConfig = require( '../../index' ).getConfig;
 
@@ -33,12 +33,6 @@ const rules = {
 		enforce: 'pre',
 		test: /\.js$/,
 		exclude: /(node_modules|nobundle|vendor)/,
-		use: {
-			loader: 'eslint-loader',
-			options: {
-				configFile: eslintConfigFile
-			}
-		}
 	},
 	js: {
 		test: /\.js$/,
@@ -52,7 +46,10 @@ const rules = {
 };
 
 const plugins = {
-	cleanup: new CleanWebpackPlugin()
+	cleanup: new CleanWebpackPlugin(),
+	eslint: new ESLintPlugin({
+		overrideConfigFile: eslintConfigFile
+	})
 };
 
 //=========================================================
@@ -84,13 +81,14 @@ module.exports = ( env, argv ) => {
 	if ( 'development' === argv.mode ) {
 		config.devtool = 'source-map';
 		config.module.rules = ( config.module.rules || [] ).concat( [ rules.pre ] );
+		config.plugins = [ plugins.eslint ];
 	}
 
 	if ( 'production' === argv.mode ) {
 		console.log( 'Building Prod JS..' );
 
 		config.module.rules = ( config.module.rules || [] ).concat( [ rules.pre ] );
-		config.plugins = ( config.plugins || [] ).concat( [ plugins.cleanup ] );
+		config.plugins = [ plugins.eslint, plugins.cleanup ];
 	}
 
 	return config;
