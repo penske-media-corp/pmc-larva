@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Show variants in menu and pattern pages on Larva server
-
+* larva-patterns - Add story-card module and variants
+* larva - Fix bug with eslint resolving aliases, remove deprecated dependency
 ## 0.1.19 - 03-22-2021
 * larva-js - Add tooltip JS
 * twig-to-php-parser - Add support for custom twig-to-php-parser function: {{ wp_action( 'action_name', p1, p2, ... ) }}
