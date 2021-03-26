@@ -9,9 +9,18 @@
 
 	{% set path = type ~"/" ~ name ~ "/" ~ name ~ ext %}
 
-	<div class="lrv-u-background-color-grey-light js-to-hide">
-		<h1 class="lrv-u-font-family-basic lrv-u-padding-a-1 lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' }}<code>{{ name  }}{{ variant ? '.' ~ variant }}</code></h1>
-	</div>
+	<header class="lrv-u-background-color-grey-light lrv-u-padding-a-1  js-to-hide">
+		<h1 class="lrv-u-font-family-basic lrv-u-margin-a-00">{{ source ~ ' ' ~ type ~ ': ' }}<code>{{ name  }}{{ variant ? '.' ~ variant }}</code></h1>
+		<div class="lrv-u-flex lrv-u-align-items-center lrv-a-space-children-horizontal lrv-a-space-children--1">
+			<h2>Available Variants</h2>
+			{% for item in variants %}
+				{% set link = "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" ~ item %}
+				{% set current_class = variant == item ? 'lrv-u-background-color-brand-primary lrv-u-color-white lrv-u-color-white:hover' : '' %}
+
+				<a href="{{ link }}" class="lrv-u-padding-a-050 {{ current_class }}">{{ item }}</a>
+			{% endfor %}
+		</div>
+	</header>
 
 	{% if data.error %}
 		<div class="lrv-a-wrapper">

@@ -19,23 +19,33 @@
 
 		<h4 class="lrv-u-padding-tb-050">{{ type }}</h4>
 
-		{% for name, variants in value %}
-			<details>
-				<summary>{{ name }}</summary>
-				<ul>
-					{% for item in variants %}
-					{% set link = item == 'prototype' ? '' : item %}
-					<li>
-						{% include "@larva/components/c-link/c-link.twig" with {
-							c_link_text: item,
-							c_link_classes: 'lrv-u-display-block',
-							c_link_url: "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" ~ link,
-						} %}
-					</li>
-					{% endfor %}
-				</ul>
-			</details>
-		{% endfor %}
+		<ul class="lrv-a-unstyle-list">
+			{% for name, variants in value %}
+				<li>
+					{% set prototype_link = "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" %}
+
+					{% if variants|length > 1 %}
+						<details>
+							<summary>{{ name }}</summary>
+							<ul>
+								{% for item in variants %}
+									{% set link = item == 'prototype' ? '' : item %}
+									<li>
+										{% include "@larva/components/c-link/c-link.twig" with {
+											c_link_text: item,
+											c_link_classes: 'lrv-u-display-block',
+											c_link_url: "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" ~ link,
+										} %}
+									</li>
+								{% endfor %}
+							</ul>
+						</details>
+					{% else %}
+						<a href="{{ prototype_link }}">{{ name }}</a>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
 
 	{% endfor %}
 
