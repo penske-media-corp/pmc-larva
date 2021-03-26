@@ -14,7 +14,8 @@
 		<div class="lrv-u-flex lrv-u-align-items-center lrv-a-space-children-horizontal lrv-a-space-children--1">
 			<h2>Available Variants</h2>
 			{% for item in variants %}
-				{% set link = "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" ~ item %}
+				{% set slug = item == 'prototype' ? '' : item %}
+				{% set link = "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" ~ slug %}
 				{% set current_class = variant == item ? 'lrv-u-background-color-brand-primary lrv-u-color-white lrv-u-color-white:hover' : '' %}
 
 				<a href="{{ link }}" class="lrv-u-padding-a-050 {{ current_class }}">{{ item }}</a>
