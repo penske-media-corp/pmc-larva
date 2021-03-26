@@ -1,35 +1,51 @@
-{# Lots of space around on big screens, a little space around on small screens. #}
-<article class="story-card // {{ story_card_classes }} lrv-u-margin-a-075 lrv-u-margin-tb-2@desktop lrv-u-margin-lr-4@desktop">
-	<div class="lrv-a-story-card-grid lrv-u-border-a-1 lrv-u-border-color-brand-secondary lrv-u-background-color-white lrv-u-align-items-center // {{ story_card_inner_classes }}">
+<div class="story // {{ story_card_classes }}">
+	<div class="{{ story_card_grid_classes }}">
 
-		<div class="lrv-a-story-card-grid__header // {{ story_card_primary_classes }}">
-
-			{% if c_title %}
-				{% include "@larva/components/c-title/c-title.twig" with c_title %}
-			{% endif %}
-
-			{% if c_span %}
-				{% include "@larva/components/c-span/c-span.twig" with c_span %}
-			{% endif %}
-		</div>
-
-		<div class="lrv-a-story-card-grid__body a-font-body-m lrv-u-padding-b-1 // {{ story_card_primary_classes }}">
-			{% if c_dek %}
-				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
-			{% endif %}
-
-			<p class="lrv-u-margin-b-00 lrv-u-text-align-center@mobile-max">
-				{% include "@larva/components/c-link/c-link.twig" with c_link %}
-			</p>
-		</div>
-
-		{% if c_lazy_image %}
-			<div class="lrv-a-story-card-grid__image // {{ story_card_image_classes }}">
-
+		<div class="story_card__primary {{ story_card_grid_primary_classes }} // lrv-a-glue-parent lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-start">
+			<div class="lrv-a-glue-parent">
 				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 
+				{% if o_indicator %}
+					{% include "@larva/objects/o-indicator/o-indicator.twig" with o_indicator %}
+				{% endif %}
 			</div>
-		{% endif %}
+		</div>
+
+		<div class="story_card__secondary {{ story_card_grid_secondary_classes }} // lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-center">
+
+			{% if c_span %}
+				<div class="lrv-u-margin-b-1">
+					{% include "@larva/components/c-span/c-span.twig" with c_span %}
+				</div>
+			{% endif %}
+
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+
+			<div class="lrv-u-flex lrv-u-align-items-center lrv-u-color-black lrv-a-space-children-horizontal lrv-a-space-children--2 lrv-a-hidden@mobile-max lrv-u-margin-t-050 {{ story_card_nav_classes }}">
+
+				{% if c_tagline_author %}
+					{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_author %}
+				{% endif %}
+
+				{% if c_timestamp %}
+					{% include "@larva/components/c-timestamp/c-timestamp.twig" with c_timestamp %}
+				{% endif %}
+			</div>
+
+			{% if c_link %}
+				<div class="lrv-u-margin-t-1">
+					{% include "@larva/components/c-link/c-link.twig" with c_link %}
+				</div>
+			{% endif %}
+
+		</div>
 
 	</div>
-</article>
+
+	{% if story_card_arc_stories %}
+		<div class="lrv-u-margin-t-1 lrv-u-margin-t-2@desktop">
+			{% include "@larva/modules/story-arc-stories/story-arc-stories.twig" with story_card_arc_stories %}
+		</div>
+	{% endif %}
+</div>
