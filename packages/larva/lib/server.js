@@ -7,7 +7,8 @@ const globby = require( 'globby' );
 const {
 	TwingEnvironment,
 	TwingLoaderFilesystem,
-	TwingFilter
+	TwingFilter,
+	TwingFunction
 } = require('twing');
 
 const getAppConfiguration = require('./utils/getAppConfiguration' );
@@ -63,6 +64,12 @@ if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 twing.addFilter( markdownFilter );
+
+// Add custom function support for doing wp action: {{ wp_action( ... ) }}
+twing.addFunction(new TwingFunction('wp_action',() => {
+	// We're relying on twig-to-php-parser for translation, so just return empty string for now
+	return Promise.resolve('');
+}));
 
 let patterns = {
 	larva: {},

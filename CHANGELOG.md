@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-js - Add tooltip JS
+
+## 0.1.19 - 03-22-2021
+* Add support for custom twig-to-php-parser function: {{ wp_action( 'action_name', p1, p2, ... ) }}
+* fix backward compatible twig-to-php-parser config: twigDir & relativeSrcOverride
+
 ## 0.1.18 - 03-19-2021
 * root - Internal structuring to improve workflow
 * root - Consolidate built assets in root for local dev
