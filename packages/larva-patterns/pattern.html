@@ -56,7 +56,7 @@
 
 		{% if type != 'algorithms' %}
 			<details>
-				<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}{{ variant ? '.' ~ variant }}</code> Prototype <small class="lrv-u-font-size-16">The data object for this pattern.</small></summary>
+				<summary class="lrv-u-font-size-24 lrv-u-cursor-pointer"><code>{{ name }}{{ variant ? '.' ~ variant }}</code> JSON <small class="lrv-u-font-size-16">The data object for this pattern.</small></summary>
 				<pre class="lrv-a-wrapper language-json"><code>{{ json_pretty|raw }}</code></pre>
 			</details>
 		{% endif %}
