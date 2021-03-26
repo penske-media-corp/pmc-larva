@@ -1,0 +1,38 @@
+@import 'setup';
+
+.lrv-a-story-card-grid__header {
+	grid-area: image;
+}
+
+.lrv-a-story-card-grid__body {
+	grid-area: body;
+}
+
+.lrv-a-story-card-grid__image {
+	grid-area: main;
+}
+
+.lrv-a-story-card-grid {
+	display: grid;
+	grid-template: 'main image' auto
+	               'body  body' auto / pmc-rem(100) 1fr;
+	grid-column-gap: pmc-rem(15);
+	padding: pmc-rem(15);
+}
+
+@include pmc-breakpoint( mobile-max ) {
+	.lrv-a-story-card-grid {
+		// Make everything bigger
+		grid-template: 'main image' auto
+		               'main body' auto / pmc-rem(200) 1fr;
+		grid-column-gap: pmc-rem(30);
+		padding: pmc-rem(45) pmc-rem(60);
+	}
+
+	// Right variant
+	.lrv-a-story-card-grid--right {
+		// Swap the two column sizes
+		grid-template: 'image main' auto
+		               'body main' auto / 1fr pmc-rem(200);
+	}
+}

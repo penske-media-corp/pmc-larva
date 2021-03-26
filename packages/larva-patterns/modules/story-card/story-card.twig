@@ -1,0 +1,35 @@
+{# Lots of space around on big screens, a little space around on small screens. #}
+<article class="story-card // {{ story_card_classes }} lrv-u-margin-a-075 lrv-u-margin-tb-2@desktop lrv-u-margin-lr-4@desktop">
+	<div class="lrv-a-story-card-grid lrv-u-border-a-1 lrv-u-border-color-brand-secondary lrv-u-background-color-white lrv-u-align-items-center // {{ story_card_inner_classes }}">
+
+		<div class="lrv-a-story-card-grid__header // {{ story_card_primary_classes }}">
+
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
+
+			{% if c_span %}
+				{% include "@larva/components/c-span/c-span.twig" with c_span %}
+			{% endif %}
+		</div>
+
+		<div class="lrv-a-story-card-grid__body a-font-body-m lrv-u-padding-b-1 // {{ story_card_primary_classes }}">
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
+
+			<p class="lrv-u-margin-b-00 lrv-u-text-align-center@mobile-max">
+				{% include "@larva/components/c-link/c-link.twig" with c_link %}
+			</p>
+		</div>
+
+		{% if c_lazy_image %}
+			<div class="lrv-a-story-card-grid__image // {{ story_card_image_classes }}">
+
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+
+			</div>
+		{% endif %}
+
+	</div>
+</article>
