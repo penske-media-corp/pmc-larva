@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-js - Add tooltip JS
+* larva-patterns - Show variants in menu and pattern pages on Larva server
+
 ## 0.1.18 - 03-19-2021
 * root - Internal structuring to improve workflow
 * root - Consolidate built assets in root for local dev
