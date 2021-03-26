@@ -37,6 +37,9 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		// Generate path where we wanna write php template
 		$path = $template_dir . '/' . str_replace( '.twig', '.php', $path_info[2] );
 
+		debug_log( sprintf("Source: %s", $twig_file ) );
+		debug_log( sprintf("Target: %s", $path ) );
+
 		if ( file_exists( $path ) ) {
 
 			// Get file time of template and twig
@@ -46,7 +49,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			// Compare twig file time to php template filetime. If twig file is newer than php template then overwrite the php template
 			// This is to make sure we are not unnecessarily overwriting the php template
 			if ( $fmtime_twig < $fmtime_template ) {
-
+				debug_log( sprintf( "  -> Skipped, twig timestamp: %s, template timestamp: %s\n", $fmtime_twig, $fmtime_template ) );
 				// NOTE: Ignoring this just to fixing pipeline, however it's showing 100% coverage in local.
 				// Ignoring this line is suggested by teach lead.
 				continue; // @codeCoverageIgnore
@@ -206,6 +209,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 		// First replace matches from the regex's, then apply the general replacements.
 		$twig_markup_replace_main     = str_replace( $all_matches, $all_replacements, $twig_markup );
+		$twig_markup_replace_main     = parse_wp_action( $twig_markup_replace_main );
 		$twig_markup_replace_complete = str_replace( array_keys( (array) $general_replacers ), array_values( $general_replacers ), $twig_markup_replace_main );
 
 		$php_markup  = "<?php\n// This is a generated file. Refer to the relevant Twig file for adjusting this markup.\n?>\n";
@@ -216,6 +220,8 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		}
 
 		file_put_contents( $path, $php_markup );
+
+		debug_log( "  -> Template generated\n" );
 
 	}
 }
@@ -282,7 +288,51 @@ function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
 		}
 	}
 
-	 return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
+	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
 }
+
+/**
+ * Parser responsible for translation custom twig function: {{ wp_action( ... ) }}
+ * See larva/lib/server.js twing.addFunction for details
+ *
+ * @param string $twig_markup
+ * @return string
+ */
+function parse_wp_action( string $twig_markup ) : string {
+
+	$twig_markup = preg_replace_callback( '/{{\s*wp_action\s*\(\s*(.*?)\s*\)\s*}}/', function( $matches ) {
+
+		$args = $matches[1];
+
+		$args = preg_replace_callback( '/\s*([\'"])?(\w+)\1?\s*/', function( $matches ) {
+			if ( ! empty( $matches[1] ) ) {
+				return sprintf(' \'%s\'', $matches[2] );
+			} else {
+				return sprintf(' $%s', $matches[2] );
+			}
+		}, $args );
+
+		return '<?php do_action('. $args .' ); ?>';
+
+	}, $twig_markup );
+
+	return $twig_markup;
+}
+
+function set_debug( bool $state ) {
+	global $debug_state;
+	$debug_state = $state;
+}
+
+function debug_log( string $msg ) {
+	global $debug_state;
+	// write out to stderr for now
+	if ( $debug_state ) {
+		fwrite( STDERR, sprintf("%s\n", $msg ) );
+	}
+}
+
+// Set default to debug mode
+set_debug( true );
 
 //EOF
