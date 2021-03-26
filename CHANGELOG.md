@@ -5,11 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-js - Add tooltip JS
+* larva-patterns - Show variants in menu and pattern pages on Larva server
 
 ## 0.1.19 - 03-22-2021
-* Add support for custom twig-to-php-parser function: {{ wp_action( 'action_name', p1, p2, ... ) }}
-* fix backward compatible twig-to-php-parser config: twigDir & relativeSrcOverride
+* larva-js - Add tooltip JS
+* twig-to-php-parser - Add support for custom twig-to-php-parser function: {{ wp_action( 'action_name', p1, p2, ... ) }}
+* twig-to-php-parser -  fix backward compatible twig-to-php-parser config: twigDir & relativeSrcOverride
+* larva-js - build standalone VideoShowcase
+* larva - create version of CSS for high-specificity sites
 
 ## 0.1.18 - 03-19-2021
 * root - Internal structuring to improve workflow

@@ -14,7 +14,7 @@ const {
 const getAppConfiguration = require('./utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
-const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
+const getAllPatternsObj = require( './utils/getAllPatternsObj' );
 
 const app = express();
 
@@ -72,27 +72,9 @@ twing.addFunction(new TwingFunction('wp_action',() => {
 }));
 
 let patterns = {
-	larva: {},
-	project: {}
+	larva: getAllPatternsObj( patternConfig.larvaPatternsDir ),
+	project: getAllPatternsObj( patternConfig.projectPatternsDir )
 };
-
-// NOTE: When the static site builder script is merged, this manual pattern
-// collection for the nav will come from an object based on the directory structure
-
-if( patternConfig.larvaPatternsDir ) {
-	patterns.larva.modules = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/modules' ) );
-	patterns.larva.objects = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/objects' ) );
-	patterns.larva.components = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/components' ) );
-	patterns.larva.tests = getSubDirectoryNames( path.join( patternConfig.larvaPatternsDir + '/__tests__' ) );
-}
-
-if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
-	patterns.project.modules = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/modules' ) );
-	patterns.project.objects = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/objects' ) );
-	patterns.project.components = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/components' ) );
-	patterns.project.oneOffs = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/one-offs' ) );
-	patterns.project.tests = getSubDirectoryNames( path.join( patternConfig.projectPatternsDir + '/__tests__' ) );
-}
 
 // Use the project version if it exists, else use the larva version
 if ( fs.existsSync( assetsConfig.path ) ) {
@@ -213,7 +195,7 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	req.params[ 'pattern_nav' ] = patterns;
 	req.params[ 'data' ] = undefined !== patternsPath ? getPatternData( patternsPath, req.params ) : null;
 	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
-	;
+	req.params[ 'variants' ] = patterns[req.params.source][req.params.type][req.params.name];
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
