@@ -1,10 +1,11 @@
 {
 	"extends": "@penskemediacorp/eslint-config",
-	"settings": {
-		"import/resolver": {
-			"webpack": {
-				"config": "./node_modules/@penskemediacorp/larva/scripts/config/webpack.config.js"
-			}
+	"overrides": [ {
+		"files": [
+			"**/*.js"
+		],
+		"rules": {
+			"import/no-unresolved": "off"
 		}
-	}
+	} ]
 }
