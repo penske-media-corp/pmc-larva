@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Show variants in menu and pattern pages on Larva server
+* larva - Fix bug with eslint resolving aliases, remove deprecated dependency
 
 ## 0.1.19 - 03-22-2021
 * larva-js - Add tooltip JS

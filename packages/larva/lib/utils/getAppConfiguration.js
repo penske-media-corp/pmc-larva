@@ -26,6 +26,7 @@ const defaultConfig = {
 	webpack: {
 		aliases: {
 			'@js': path.resolve( './src/js' ),
+			'@npm': path.resolve( './node_modules' ),
 			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
 		},
 		entries: {
