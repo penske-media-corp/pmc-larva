@@ -21,7 +21,19 @@ function twigToPhpParser( config = {} ) {
 	let isUsingPlugin = false;
 
 	if ( 'undefined' !== typeof config.twigDir ) {
-		twigDir = config.twigDir;
+		if ( config.twigDir.startsWith( '.' ) ) {
+			twigDir = path.join( process.cwd(), config.twigDir );
+		} else {
+			twigDir = config.twigDir;
+		}
+	}
+	else if ( 'undefined' !== typeof config.relativeSrcOverride ) {
+		if ( config.relativeSrcOverride.startsWith( '/' ) ) {
+			twigDir = config.relativeSrcOverride;
+		}
+		else {
+			twigDir = path.join( process.cwd(), config.relativeSrcOverride );
+		}
 	}
 
 	if ( 'undefined' !== typeof config.isUsingPlugin ) {
@@ -108,11 +120,37 @@ function parseSvgPath( twigSvgIncludeStr, svgName, isUsingPlugin = false ) {
 
 };
 
+function parseWpAction( twigMarkup ) {
+	return new Promise( ( resolve, reject ) => {
+
+		execPhp( path.resolve( __dirname, './lib/twig-to-php-parser.php' ), config.phpBinaryPath, function( error, php, output ) {
+
+			if ( error ) {
+				reject( error );
+			}
+
+			php.parse_wp_action( twigMarkup, function( error, result, output, printed ) {
+
+				if ( error ) {
+					reject( error );
+				}
+
+				resolve( result );
+
+			});
+
+		});
+
+	});
+
+}
+
 module.exports = {
 	twigToPhpParser: twigToPhpParser,
 	methods: {
 		parseIncludePath: parseIncludePath,
-		parseSvgPath: parseSvgPath
+		parseSvgPath: parseSvgPath,
+		parseWpAction: parseWpAction
 	},
 	run: () => {
 		twigToPhpParser( config )

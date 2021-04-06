@@ -4,7 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unpublished
+## 0.1.20 - 03-22-2021
+* larva-patterns - Show variants in menu and pattern pages on Larva server
+* larva - Fix bug with eslint resolving aliases, remove deprecated dependency
+
+## 0.1.19 - 03-22-2021
+* larva-js - Add tooltip JS
+* twig-to-php-parser - Add support for custom twig-to-php-parser function: {{ wp_action( 'action_name', p1, p2, ... ) }}
+* twig-to-php-parser -  fix backward compatible twig-to-php-parser config: twigDir & relativeSrcOverride
+* larva-js - build standalone VideoShowcase
+* larva - create version of CSS for high-specificity sites
+
+## 0.1.18 - 03-19-2021
 * root - Internal structuring to improve workflow
 * root - Consolidate built assets in root for local dev
 * larva - Render style guide from tokens data

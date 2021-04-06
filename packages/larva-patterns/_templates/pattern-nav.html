@@ -15,76 +15,38 @@
 		</ul>
 	{% endif %}
 
-	<h4 class="lrv-u-padding-tb-050">Template Tests (.html)</h4>
+	{% for type, value in patterns %}
 
-	<ul class="lrv-a-unstyle-list">
-		{% for t in patterns.tests %}
-
-			{# Note:
-				This logic will be removed when nav is generated
-				from pattern object.
-			#}
-			{% if 'fixture' not in t   %}
-				{% include "@larva/components/c-link/c-link.twig" with {
-					c_link_text: t,
-					c_link_classes: 'lrv-u-display-block',
-					c_link_url: "/" ~ source ~ "/__tests__/" ~ t ~ "/",
-				} %}
-			{% endif %}
-		{% endfor %}
-
-	</ul>
-
-	<h4 class="lrv-u-padding-tb-050">Components</h4>
-
-	<ul class="lrv-a-unstyle-list">
-		{% for c in patterns.components %}
-			<li>
-				{% include "@larva/components/c-link/c-link.twig" with {
-					c_link_text: c,
-					c_link_classes: 'lrv-u-display-block',
-					c_link_url: "/" ~ source ~ "/components/" ~ c ~ "/",
-				} %}
-			</li>
-		{% endfor %}
-	</ul>
-
-	<h4 class="lrv-u-padding-tb-050">Objects</h4>
-	<ul class="lrv-a-unstyle-list">
-		{% for o in patterns.objects %}
-			{% include "@larva/components/c-link/c-link.twig" with {
-				c_link_text: o,
-				c_link_classes: 'lrv-u-display-block',
-				c_link_url: "/" ~ source ~ "/objects/" ~ o ~ "/",
-			} %}
-		{% endfor %}
-	</ul>
-
-	<h4 class="lrv-u-padding-tb-050">Modules</h4>
-	<ul class="lrv-a-unstyle-list">
-		{% for m in patterns.modules %}
-			{% include "@larva/components/c-link/c-link.twig" with {
-				c_link_text: m,
-				c_link_classes: 'lrv-u-display-block',
-				c_link_url: "/" ~ source ~ "/modules/" ~ m ~ "/",
-			} %}
-		{% endfor %}
-	</ul>
-
-	{% if 'project' == source %}
-
-		<h4 class="lrv-u-padding-tb-050">One-offs (.html)</h4>
+		<h4 class="lrv-u-padding-tb-050">{{ type }}</h4>
 
 		<ul class="lrv-a-unstyle-list">
-			{% for o in patterns.oneOffs %}
-				{% include "@larva/components/c-link/c-link.twig" with {
-					c_link_text: o,
-					c_link_classes: 'lrv-u-display-block',
-					c_link_url: "/" ~ source ~ "/one-offs/" ~ o ~ "/",
-				} %}
+			{% for name, variants in value %}
+				<li>
+					{% set prototype_link = "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" %}
+
+					{% if variants|length > 1 %}
+						<details>
+							<summary>{{ name }}</summary>
+							<ul>
+								{% for item in variants %}
+									{% set link = item == 'prototype' ? '' : item %}
+									<li>
+										{% include "@larva/components/c-link/c-link.twig" with {
+											c_link_text: item,
+											c_link_classes: 'lrv-u-display-block',
+											c_link_url: "/" ~ source ~ "/" ~ type ~ "/" ~ name ~ "/" ~ link,
+										} %}
+									</li>
+								{% endfor %}
+							</ul>
+						</details>
+					{% else %}
+						<a href="{{ prototype_link }}">{{ name }}</a>
+					{% endif %}
+				</li>
 			{% endfor %}
 		</ul>
 
-	{% endif %}
+	{% endfor %}
 
 </nav>
