@@ -1,5 +1,5 @@
-const fontPossibilities = require( './lib/font-possibilities' );
+const fontSelectors = require( './lib/font-selectors' );
 
 module.exports = {
-	fontPossibilities,
+	fontSelectors,
 };

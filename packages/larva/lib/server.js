@@ -11,7 +11,7 @@ const {
 	TwingFunction
 } = require('twing');
 
-const { fontPossibilities } = require( '@penskemediacorp/larva-tokens' );
+const { fontSelectors } = require( '@penskemediacorp/larva-tokens' );
 
 const getAppConfiguration = require('./utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
@@ -249,7 +249,7 @@ app.get( '/:source?/style-guide', function (req, res ) {
 	})();
 
 	req.params[ 'name' ] = `Style Guide`;
-	req.params[ 'font_styles' ] = fontPossibilities;
+	req.params[ 'font_styles' ] = fontSelectors;
 	req.params[ 'colors' ] = colorsByProperty;
 	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
 	req.params[ 'pattern_nav' ] = patterns;

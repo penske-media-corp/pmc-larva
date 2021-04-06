@@ -1,23 +1,4 @@
-const families = [
-	'primary',
-	'secondary',
-	'accent',
-	'body',
-	'basic'
-];
-
-const sizes = [
-	'xxxs',
-	'xxs',
-	'xs',
-	's',
-	'm',
-	'l',
-	'xl',
-	'xxl',
-	'xxxl'
-];
-
+const { families, sizes } = require( './font-data.json' );
 const PREFIX = 'lrv-a-font';
 
 const possibleNames = families.map( name => `${PREFIX}-${name}` )

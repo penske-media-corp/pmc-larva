@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "gulp"
+    "build": "node ./lib/font-tokens.js && gulp"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
