@@ -638,4325 +638,4325 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
-    "LETTER_SPACING_BODY_XS_DESKTOP": {
+    "BODY_XS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XS_DESKTOP"
+      "name": "BODY_XS_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_PRIMARY_XXXS_DESKTOPXL": {
+    "BASIC_XS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXXS_DESKTOPXL"
+      "name": "BASIC_XS_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BASIC_M_DESKTOPXL": {
+    "SECONDARY_XS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_M_DESKTOPXL"
+      "name": "SECONDARY_XS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_XXXS_MOBILE": {
+    "BODY_XS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXXS_MOBILE"
+      "name": "BODY_XS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XS_MOBILE": {
+    "SECONDARY_XXXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XS_MOBILE"
+      "name": "SECONDARY_XXXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_M_DESKTOP": {
+    "BODY_XXXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_M_DESKTOP"
+      "name": "BODY_XXXS_DESKTOPXL_LETTER_SPACING"
     },
-    "LETTER_SPACING_PRIMARY_XXS_MOBILE": {
+    "PRIMARY_XS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXS_MOBILE"
+      "name": "PRIMARY_XS_DESKTOPXL_LETTER_SPACING"
     },
-    "LETTER_SPACING_BODY_XXXS_DESKTOP": {
+    "PRIMARY_XXXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXXS_DESKTOP"
+      "name": "PRIMARY_XXXS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_BODY_XXXL_DESKTOP": {
+    "ACCENT_M_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXXL_DESKTOP"
+      "name": "ACCENT_M_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BODY_S_DESKTOP": {
+    "ACCENT_XXXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_S_DESKTOP"
+      "name": "ACCENT_XXXS_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_XS_DESKTOP": {
+    "BASIC_XXXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XS_DESKTOP"
+      "name": "BASIC_XXXS_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_BODY_XL_DESKTOP": {
+    "BODY_M_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XL_DESKTOP"
+      "name": "BODY_M_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_L_MOBILE": {
+    "BASIC_M_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_L_MOBILE"
+      "name": "BASIC_M_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_XS_MOBILE": {
+    "PRIMARY_M_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XS_MOBILE"
+      "name": "PRIMARY_M_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XS_DESKTOPXL": {
+    "PRIMARY_XXXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XS_DESKTOPXL"
+      "name": "PRIMARY_XXXL_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_S_MOBILE": {
+    "PRIMARY_XL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_S_MOBILE"
+      "name": "PRIMARY_XL_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XXL_MOBILE": {
+    "BODY_XXXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXL_MOBILE"
+      "name": "BODY_XXXL_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_BASIC_XS_DESKTOP": {
+    "ACCENT_M_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XS_DESKTOP"
+      "name": "ACCENT_M_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BODY_XXS_DESKTOP": {
+    "BODY_XL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXS_DESKTOP"
+      "name": "BODY_XL_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_ACCENT_XXXS_DESKTOP": {
+    "PRIMARY_XXXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXXS_DESKTOP"
+      "name": "PRIMARY_XXXS_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XXXS_MOBILE": {
+    "PRIMARY_XS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXXS_MOBILE"
+      "name": "PRIMARY_XS_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_XXXS_DESKTOP": {
+    "BODY_XXXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXXS_DESKTOP"
+      "name": "BODY_XXXS_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_M_DESKTOPXL": {
+    "ACCENT_XS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_M_DESKTOPXL"
+      "name": "ACCENT_XS_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BODY_L_DESKTOP": {
+    "ACCENT_XXXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_L_DESKTOP"
+      "name": "ACCENT_XXXL_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BODY_XXXL_DESKTOP": {
+    "BASIC_XXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXXL_DESKTOP"
+      "name": "BASIC_XXL_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BASIC_XXL_DESKTOP": {
+    "ACCENT_XXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXL_DESKTOP"
+      "name": "ACCENT_XXL_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_XXL_DESKTOP": {
+    "ACCENT_S_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXL_DESKTOP"
+      "name": "ACCENT_S_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_S_DESKTOP": {
+    "PRIMARY_XXXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_S_DESKTOP"
+      "name": "PRIMARY_XXXL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_XL_DESKTOP": {
+    "BODY_XXXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XL_DESKTOP"
+      "name": "BODY_XXXL_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BASIC_L_DESKTOP": {
+    "PRIMARY_XL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_L_DESKTOP"
+      "name": "PRIMARY_XL_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_BODY_XXS_DESKTOP": {
+    "BODY_XL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXS_DESKTOP"
+      "name": "BODY_XL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_L_DESKTOP": {
+    "ACCENT_XL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_L_DESKTOP"
+      "name": "ACCENT_XL_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BODY_XXL_DESKTOP": {
+    "ACCENT_L_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXL_DESKTOP"
+      "name": "ACCENT_L_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_S_DESKTOPXL": {
+    "BASIC_L_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_S_DESKTOPXL"
+      "name": "BASIC_L_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XXS_MOBILE": {
+    "ACCENT_XXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXS_MOBILE"
+      "name": "ACCENT_XXS_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_ACCENT_XXL_DESKTOP": {
+    "PRIMARY_S_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXL_DESKTOP"
+      "name": "PRIMARY_S_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_M_DESKTOP": {
+    "BODY_XXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_M_DESKTOP"
+      "name": "BODY_XXS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_XXS_DESKTOPXL": {
+    "BASIC_M_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXS_DESKTOPXL"
+      "name": "BASIC_M_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_M_DESKTOP": {
+    "BODY_S_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_M_DESKTOP"
+      "name": "BODY_S_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_ACCENT_L_DESKTOP": {
+    "ACCENT_XXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_L_DESKTOP"
+      "name": "ACCENT_XXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XS_DESKTOP": {
+    "SECONDARY_XXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XS_DESKTOP"
+      "name": "SECONDARY_XXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_S_MOBILE": {
+    "SECONDARY_S_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_S_MOBILE"
+      "name": "SECONDARY_S_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_PRIMARY_XXXL_MOBILE": {
+    "SECONDARY_S_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXXL_MOBILE"
+      "name": "SECONDARY_S_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XXXS_DESKTOP": {
+    "SECONDARY_XL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXXS_DESKTOP"
+      "name": "SECONDARY_XL_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XL_MOBILE": {
+    "SECONDARY_XXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XL_MOBILE"
+      "name": "SECONDARY_XXS_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BODY_M_DESKTOP": {
+    "SECONDARY_XXXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_M_DESKTOP"
+      "name": "SECONDARY_XXXL_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XXXL_DESKTOP": {
+    "BODY_XL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXXL_DESKTOP"
+      "name": "BODY_XL_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_M_MOBILE": {
+    "PRIMARY_XL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_M_MOBILE"
+      "name": "PRIMARY_XL_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_BASIC_XXL_DESKTOP": {
+    "ACCENT_S_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXL_DESKTOP"
+      "name": "ACCENT_S_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BODY_L_DESKTOP": {
+    "BODY_XXXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_L_DESKTOP"
+      "name": "BODY_XXXL_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_ACCENT_M_DESKTOP": {
+    "PRIMARY_XXXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_M_DESKTOP"
+      "name": "PRIMARY_XXXL_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XL_DESKTOP": {
+    "PRIMARY_XXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XL_DESKTOP"
+      "name": "PRIMARY_XXS_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BASIC_XXXL_DESKTOPXL": {
+    "BODY_XL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXXL_DESKTOPXL"
+      "name": "BODY_XL_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_XS_DESKTOP": {
+    "BODY_XXXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XS_DESKTOP"
+      "name": "BODY_XXXL_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XL_DESKTOPXL": {
+    "PRIMARY_XL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XL_DESKTOPXL"
+      "name": "PRIMARY_XL_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XXXL_MOBILE": {
+    "ACCENT_XS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXXL_MOBILE"
+      "name": "ACCENT_XS_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XXXS_DESKTOP": {
+    "ACCENT_XXXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXXS_DESKTOP"
+      "name": "ACCENT_XXXL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_XXXL_DESKTOPXL": {
+    "PRIMARY_XXXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXXL_DESKTOPXL"
+      "name": "PRIMARY_XXXL_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_L_DESKTOP": {
+    "BASIC_L_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_L_DESKTOP"
+      "name": "BASIC_L_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_PRIMARY_XL_MOBILE": {
+    "ACCENT_XL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XL_MOBILE"
+      "name": "ACCENT_XL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XL_DESKTOPXL": {
+    "PRIMARY_M_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XL_DESKTOPXL"
+      "name": "PRIMARY_M_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_BODY_XXL_DESKTOP": {
+    "BODY_M_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXL_DESKTOP"
+      "name": "BODY_M_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_L_MOBILE": {
+    "ACCENT_XL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_L_MOBILE"
+      "name": "ACCENT_XL_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_SECONDARY_XXS_DESKTOPXL": {
+    "ACCENT_XXXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXS_DESKTOPXL"
+      "name": "ACCENT_XXXS_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_ACCENT_S_DESKTOPXL": {
+    "BASIC_XXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_S_DESKTOPXL"
+      "name": "BASIC_XXL_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_XXXS_MOBILE": {
+    "ACCENT_XXXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXXS_MOBILE"
+      "name": "ACCENT_XXXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BODY_M_DESKTOP": {
+    "SECONDARY_XL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_M_DESKTOP"
+      "name": "SECONDARY_XL_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XXL_DESKTOPXL": {
+    "SECONDARY_XXXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXL_DESKTOPXL"
+      "name": "SECONDARY_XXXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XXXS_DESKTOPXL": {
+    "ACCENT_XXXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXXS_DESKTOPXL"
+      "name": "ACCENT_XXXS_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_M_MOBILE": {
+    "ACCENT_S_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_M_MOBILE"
+      "name": "ACCENT_S_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_SIZE_BASIC_XXXL_DESKTOPXL": {
+    "SECONDARY_S_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXXL_DESKTOPXL"
+      "name": "SECONDARY_S_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_ACCENT_XXS_DESKTOPXL": {
+    "ACCENT_XS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXS_DESKTOPXL"
+      "name": "ACCENT_XS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_SECONDARY_L_DESKTOPXL": {
+    "SECONDARY_XXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_L_DESKTOPXL"
+      "name": "SECONDARY_XXS_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_M_DESKTOP": {
+    "BASIC_M_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_M_DESKTOP"
+      "name": "BASIC_M_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_BASIC_XL_DESKTOPXL": {
+    "SECONDARY_XXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XL_DESKTOPXL"
+      "name": "SECONDARY_XXL_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_WEIGHT_SECONDARY_XS_MOBILE": {
+    "SECONDARY_XXXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XS_MOBILE"
+      "name": "SECONDARY_XXXS_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_S_DESKTOPXL": {
+    "PRIMARY_M_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_S_DESKTOPXL"
+      "name": "PRIMARY_M_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_BODY_XXL_MOBILE": {
+    "SECONDARY_L_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXL_MOBILE"
+      "name": "SECONDARY_L_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_SECONDARY_XS_DESKTOPXL": {
+    "ACCENT_XXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XS_DESKTOPXL"
+      "name": "ACCENT_XXS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_SIZE_SECONDARY_M_DESKTOPXL": {
+    "BODY_M_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_M_DESKTOPXL"
+      "name": "BODY_M_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_L_MOBILE": {
+    "PRIMARY_XXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_L_MOBILE"
+      "name": "PRIMARY_XXL_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_SECONDARY_XL_DESKTOPXL": {
+    "SECONDARY_XS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XL_DESKTOPXL"
+      "name": "SECONDARY_XS_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_L_DESKTOPXL": {
+    "PRIMARY_L_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_L_DESKTOPXL"
+      "name": "PRIMARY_L_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XXXL_MOBILE": {
+    "BODY_XXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXXL_MOBILE"
+      "name": "BODY_XXL_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_PRIMARY_XL_DESKTOP": {
+    "BODY_L_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XL_DESKTOP"
+      "name": "BODY_L_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_S_DESKTOPXL": {
+    "SECONDARY_XXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_S_DESKTOPXL"
+      "name": "SECONDARY_XXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BODY_XL_MOBILE": {
+    "SECONDARY_L_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XL_MOBILE"
+      "name": "SECONDARY_L_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XXXL_DESKTOPXL": {
+    "PRIMARY_XXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXXL_DESKTOPXL"
+      "name": "PRIMARY_XXL_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_BASIC_XXS_DESKTOPXL": {
+    "PRIMARY_L_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXS_DESKTOPXL"
+      "name": "PRIMARY_L_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BASIC_XXXL_MOBILE": {
+    "BODY_XXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXXL_MOBILE"
+      "name": "BODY_XXL_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XS_DESKTOPXL": {
+    "SECONDARY_M_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XS_DESKTOPXL"
+      "name": "SECONDARY_M_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XXS_DESKTOP": {
+    "BODY_L_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXS_DESKTOP"
+      "name": "BODY_L_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_XXXL_MOBILE": {
+    "BASIC_S_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXXL_MOBILE"
+      "name": "BASIC_S_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_ACCENT_XL_DESKTOPXL": {
+    "BASIC_XL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XL_DESKTOPXL"
+      "name": "BASIC_XL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_PRIMARY_S_DESKTOP": {
+    "SECONDARY_XL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_S_DESKTOP"
+      "name": "SECONDARY_XL_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BODY_XXL_MOBILE": {
+    "BASIC_XXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXL_MOBILE"
+      "name": "BASIC_XXS_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_SECONDARY_XXXL_DESKTOPXL": {
+    "SECONDARY_XXXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXXL_DESKTOPXL"
+      "name": "SECONDARY_XXXL_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XXXL_DESKTOP": {
+    "BODY_S_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXXL_DESKTOP"
+      "name": "BODY_S_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_SECONDARY_XXXS_DESKTOPXL": {
+    "BODY_XXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXXS_DESKTOPXL"
+      "name": "BODY_XXS_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_BASIC_XL_MOBILE": {
+    "PRIMARY_S_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XL_MOBILE"
+      "name": "PRIMARY_S_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_SECONDARY_XXL_DESKTOPXL": {
+    "PRIMARY_XXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXL_DESKTOPXL"
+      "name": "PRIMARY_XXS_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_ACCENT_XL_MOBILE": {
+    "BASIC_XXXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XL_MOBILE"
+      "name": "BASIC_XXXL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_S_DESKTOPXL": {
+    "ACCENT_XXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_S_DESKTOPXL"
+      "name": "ACCENT_XXS_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_ACCENT_XXXS_MOBILE": {
+    "ACCENT_L_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXXS_MOBILE"
+      "name": "ACCENT_L_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_ACCENT_XXS_DESKTOPXL": {
+    "SECONDARY_M_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXS_DESKTOPXL"
+      "name": "SECONDARY_M_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BASIC_S_DESKTOPXL": {
+    "BASIC_S_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_S_DESKTOPXL"
+      "name": "BASIC_S_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_M_MOBILE": {
+    "SECONDARY_XXXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_M_MOBILE"
+      "name": "SECONDARY_XXXS_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BASIC_XXS_DESKTOPXL": {
+    "BASIC_XXXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXS_DESKTOPXL"
+      "name": "BASIC_XXXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_S_MOBILE": {
+    "SECONDARY_XS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_S_MOBILE"
+      "name": "SECONDARY_XS_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_PRIMARY_XXS_DESKTOP": {
+    "ACCENT_S_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXS_DESKTOP"
+      "name": "ACCENT_S_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_ACCENT_XXXL_MOBILE": {
+    "BASIC_XXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXXL_MOBILE"
+      "name": "BASIC_XXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XS_MOBILE": {
+    "BODY_S_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XS_MOBILE"
+      "name": "BODY_S_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_S_DESKTOP": {
+    "BASIC_XS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_S_DESKTOP"
+      "name": "BASIC_XS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XXS_MOBILE": {
+    "ACCENT_XXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXS_MOBILE"
+      "name": "ACCENT_XXL_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_SECONDARY_M_DESKTOPXL": {
+    "BODY_XXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_M_DESKTOPXL"
+      "name": "BODY_XXS_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXXS_MOBILE": {
+    "PRIMARY_S_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXXS_MOBILE"
+      "name": "PRIMARY_S_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_ACCENT_XL_MOBILE": {
+    "PRIMARY_XXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XL_MOBILE"
+      "name": "PRIMARY_XXS_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XS_MOBILE": {
+    "SECONDARY_XXXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XS_MOBILE"
+      "name": "SECONDARY_XXXL_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_XL_MOBILE": {
+    "ACCENT_XXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XL_MOBILE"
+      "name": "ACCENT_XXL_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_L_MOBILE": {
+    "BASIC_XL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_L_MOBILE"
+      "name": "BASIC_XL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_XXL_DESKTOP": {
+    "BASIC_XS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXL_DESKTOP"
+      "name": "BASIC_XS_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_XS_MOBILE": {
+    "BASIC_XXXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XS_MOBILE"
+      "name": "BASIC_XXXL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XXXL_MOBILE": {
+    "ACCENT_L_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXXL_MOBILE"
+      "name": "ACCENT_L_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_SECONDARY_S_MOBILE": {
+    "BASIC_XXXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_S_MOBILE"
+      "name": "BASIC_XXXS_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_SECONDARY_XXXL_DESKTOPXL": {
+    "BODY_XL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXXL_DESKTOPXL"
+      "name": "BODY_XL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_BASIC_XXXS_MOBILE": {
+    "ACCENT_M_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXXS_MOBILE"
+      "name": "ACCENT_M_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_SECONDARY_XXS_MOBILE": {
+    "PRIMARY_XXXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXS_MOBILE"
+      "name": "PRIMARY_XXXS_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_XXXS_DESKTOP": {
+    "BODY_XXXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXXS_DESKTOP"
+      "name": "BODY_XXXL_DESKTOPXL_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_XXXL_MOBILE": {
+    "PRIMARY_XL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXXL_MOBILE"
+      "name": "PRIMARY_XL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XL_MOBILE": {
+    "SECONDARY_XXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XL_MOBILE"
+      "name": "SECONDARY_XXL_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_XXL_MOBILE": {
+    "PRIMARY_XS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXL_MOBILE"
+      "name": "PRIMARY_XS_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_XS_DESKTOP": {
+    "BODY_XXXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XS_DESKTOP"
+      "name": "BODY_XXXS_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_SECONDARY_XL_DESKTOPXL": {
+    "PRIMARY_XXXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XL_DESKTOPXL"
+      "name": "PRIMARY_XXXL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_L_DESKTOP": {
+    "SECONDARY_L_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_L_DESKTOP"
+      "name": "SECONDARY_L_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XS_MOBILE": {
+    "BODY_XS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XS_MOBILE"
+      "name": "BODY_XS_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XXS_DESKTOP": {
+    "SECONDARY_XL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXS_DESKTOP"
+      "name": "SECONDARY_XL_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_XXXS_MOBILE": {
+    "ACCENT_XS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXXS_MOBILE"
+      "name": "ACCENT_XS_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BASIC_XS_MOBILE": {
+    "BODY_XS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XS_MOBILE"
+      "name": "BODY_XS_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BODY_S_DESKTOP": {
+    "BASIC_XXXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_S_DESKTOP"
+      "name": "BASIC_XXXL_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_BASIC_XXXS_MOBILE": {
+    "SECONDARY_M_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXXS_MOBILE"
+      "name": "SECONDARY_M_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_M_MOBILE": {
+    "BASIC_S_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_M_MOBILE"
+      "name": "BASIC_S_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BODY_XXXS_DESKTOP": {
+    "PRIMARY_M_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXXS_DESKTOP"
+      "name": "PRIMARY_M_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_XXS_DESKTOP": {
+    "BODY_M_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXS_DESKTOP"
+      "name": "BODY_M_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_M_DESKTOP": {
+    "BASIC_XL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_M_DESKTOP"
+      "name": "BASIC_XL_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_ACCENT_XXS_DESKTOP": {
+    "BASIC_XXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXS_DESKTOP"
+      "name": "BASIC_XXS_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BODY_XS_DESKTOP": {
+    "BASIC_XS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XS_DESKTOP"
+      "name": "BASIC_XS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BASIC_S_DESKTOP": {
+    "ACCENT_XXXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_S_DESKTOP"
+      "name": "ACCENT_XXXS_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_S_DESKTOP": {
+    "BASIC_XXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_S_DESKTOP"
+      "name": "BASIC_XXS_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXL_DESKTOP": {
+    "BASIC_S_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXL_DESKTOP"
+      "name": "BASIC_S_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_L_DESKTOP": {
+    "BASIC_XXXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_L_DESKTOP"
+      "name": "BASIC_XXXS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XXL_DESKTOPXL": {
+    "ACCENT_M_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXL_DESKTOPXL"
+      "name": "ACCENT_M_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_L_MOBILE": {
+    "PRIMARY_XXXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_L_MOBILE"
+      "name": "PRIMARY_XXXS_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XXXL_DESKTOP": {
+    "SECONDARY_M_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXXL_DESKTOP"
+      "name": "SECONDARY_M_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XXL_DESKTOP": {
+    "PRIMARY_XS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXL_DESKTOP"
+      "name": "PRIMARY_XS_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_ACCENT_XXS_DESKTOP": {
+    "BODY_XXXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXS_DESKTOP"
+      "name": "BODY_XXXS_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_L_DESKTOPXL": {
+    "SECONDARY_XS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_L_DESKTOPXL"
+      "name": "SECONDARY_XS_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_WEIGHT_PRIMARY_XXL_MOBILE": {
+    "SECONDARY_XXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXL_MOBILE"
+      "name": "SECONDARY_XXL_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_SECONDARY_L_DESKTOP": {
+    "SECONDARY_L_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_L_DESKTOP"
+      "name": "SECONDARY_L_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_ACCENT_S_DESKTOP": {
+    "SECONDARY_XXXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_S_DESKTOP"
+      "name": "SECONDARY_XXXS_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_SECONDARY_XL_DESKTOP": {
+    "BASIC_XXXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XL_DESKTOP"
+      "name": "BASIC_XXXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BODY_XXS_DESKTOP": {
+    "SECONDARY_L_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXS_DESKTOP"
+      "name": "SECONDARY_L_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_XXXS_DESKTOP": {
+    "SECONDARY_XXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXXS_DESKTOP"
+      "name": "SECONDARY_XXL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_M_DESKTOPXL": {
+    "PRIMARY_XXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_M_DESKTOPXL"
+      "name": "PRIMARY_XXL_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BASIC_XXXS_DESKTOPXL": {
+    "BASIC_XL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXXS_DESKTOPXL"
+      "name": "BASIC_XL_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_BASIC_L_DESKTOP": {
+    "BODY_XXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_L_DESKTOP"
+      "name": "BODY_XXL_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BASIC_XS_DESKTOPXL": {
+    "PRIMARY_L_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XS_DESKTOPXL"
+      "name": "PRIMARY_L_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_XXXS_DESKTOPXL": {
+    "BODY_L_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXXS_DESKTOPXL"
+      "name": "BODY_L_DESKTOPXL_LETTER_SPACING"
     },
-    "LETTER_SPACING_SECONDARY_M_DESKTOP": {
+    "BODY_L_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_M_DESKTOP"
+      "name": "BODY_L_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_XXS_DESKTOP": {
+    "BODY_XXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXS_DESKTOP"
+      "name": "BODY_XXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BODY_S_DESKTOP": {
+    "PRIMARY_L_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_S_DESKTOP"
+      "name": "PRIMARY_L_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_XS_DESKTOP": {
+    "PRIMARY_XXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XS_DESKTOP"
+      "name": "PRIMARY_XXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_BASIC_XXL_DESKTOP": {
+    "BASIC_S_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXL_DESKTOP"
+      "name": "BASIC_S_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_XS_DESKTOPXL": {
+    "SECONDARY_XS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XS_DESKTOPXL"
+      "name": "SECONDARY_XS_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XL_DESKTOP": {
+    "SECONDARY_M_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XL_DESKTOP"
+      "name": "SECONDARY_M_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_ACCENT_M_DESKTOP": {
+    "BODY_M_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_M_DESKTOP"
+      "name": "BODY_M_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XXXL_DESKTOP": {
+    "SECONDARY_XXXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXXL_DESKTOP"
+      "name": "SECONDARY_XXXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_S_DESKTOP": {
+    "PRIMARY_M_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_S_DESKTOP"
+      "name": "PRIMARY_M_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XXS_DESKTOPXL": {
+    "ACCENT_XL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXS_DESKTOPXL"
+      "name": "ACCENT_XL_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_XXXS_DESKTOPXL": {
+    "SECONDARY_M_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXXS_DESKTOPXL"
+      "name": "SECONDARY_M_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_L_DESKTOP": {
+    "BASIC_S_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_L_DESKTOP"
+      "name": "BASIC_S_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_XL_MOBILE": {
+    "ACCENT_XS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XL_MOBILE"
+      "name": "ACCENT_XS_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_SECONDARY_S_DESKTOPXL": {
+    "BASIC_L_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_S_DESKTOPXL"
+      "name": "BASIC_L_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_M_DESKTOP": {
+    "BASIC_XXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_M_DESKTOP"
+      "name": "BASIC_XXS_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_BASIC_XS_DESKTOPXL": {
+    "BASIC_XXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XS_DESKTOPXL"
+      "name": "BASIC_XXS_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_XXL_DESKTOP": {
+    "ACCENT_XXXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXL_DESKTOP"
+      "name": "ACCENT_XXXL_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_BODY_XXXL_DESKTOPXL": {
+    "BASIC_XXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXXL_DESKTOPXL"
+      "name": "BASIC_XXL_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_BASIC_L_DESKTOP": {
+    "ACCENT_XXXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_L_DESKTOP"
+      "name": "ACCENT_XXXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_L_DESKTOPXL": {
+    "BASIC_M_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_L_DESKTOPXL"
+      "name": "BASIC_M_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_BASIC_XXL_DESKTOP": {
+    "BASIC_XXXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXL_DESKTOP"
+      "name": "BASIC_XXXL_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_SECONDARY_XXXL_MOBILE": {
+    "ACCENT_XL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXXL_MOBILE"
+      "name": "ACCENT_XL_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_XL_DESKTOPXL": {
+    "SECONDARY_XXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XL_DESKTOPXL"
+      "name": "SECONDARY_XXS_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XXL_DESKTOPXL": {
+    "SECONDARY_L_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXL_DESKTOPXL"
+      "name": "SECONDARY_L_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XL_DESKTOPXL": {
+    "SECONDARY_S_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XL_DESKTOPXL"
+      "name": "SECONDARY_S_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_BASIC_XXXL_DESKTOPXL": {
+    "SECONDARY_S_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXXL_DESKTOPXL"
+      "name": "SECONDARY_S_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_WEIGHT_ACCENT_S_MOBILE": {
+    "SECONDARY_XXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_S_MOBILE"
+      "name": "SECONDARY_XXL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_PRIMARY_XXXS_DESKTOP": {
+    "SECONDARY_XXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXXS_DESKTOP"
+      "name": "SECONDARY_XXS_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_BASIC_M_DESKTOP": {
+    "BASIC_L_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_M_DESKTOP"
+      "name": "BASIC_L_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_M_DESKTOPXL": {
+    "BASIC_XL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_M_DESKTOPXL"
+      "name": "BASIC_XL_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_M_MOBILE": {
+    "SECONDARY_XXXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_M_MOBILE"
+      "name": "SECONDARY_XXXL_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XXXS_DESKTOPXL": {
+    "SECONDARY_XL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXXS_DESKTOPXL"
+      "name": "SECONDARY_XL_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XS_DESKTOPXL": {
+    "PRIMARY_XXXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XS_DESKTOPXL"
+      "name": "PRIMARY_XXXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XS_DESKTOP": {
+    "BODY_XXXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XS_DESKTOP"
+      "name": "BODY_XXXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_ACCENT_XL_DESKTOPXL": {
+    "PRIMARY_XL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XL_DESKTOPXL"
+      "name": "PRIMARY_XL_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXXS_DESKTOPXL": {
+    "ACCENT_XXXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXXS_DESKTOPXL"
+      "name": "ACCENT_XXXL_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XXS_MOBILE": {
+    "BASIC_XXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXS_MOBILE"
+      "name": "BASIC_XXL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XXS_DESKTOPXL": {
+    "BODY_XL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXS_DESKTOPXL"
+      "name": "BODY_XL_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BASIC_S_MOBILE": {
+    "ACCENT_S_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_S_MOBILE"
+      "name": "ACCENT_S_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XS_DESKTOPXL": {
+    "SECONDARY_XS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XS_DESKTOPXL"
+      "name": "SECONDARY_XS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XXS_MOBILE": {
+    "SECONDARY_XXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXS_MOBILE"
+      "name": "SECONDARY_XXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_ACCENT_XXXL_DESKTOPXL": {
+    "SECONDARY_XXXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXXL_DESKTOPXL"
+      "name": "SECONDARY_XXXS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_M_DESKTOP": {
+    "SECONDARY_S_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_M_DESKTOP"
+      "name": "SECONDARY_S_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_S_DESKTOPXL": {
+    "SECONDARY_S_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_S_DESKTOPXL"
+      "name": "SECONDARY_S_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_L_MOBILE": {
+    "BASIC_XS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_L_MOBILE"
+      "name": "BASIC_XS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_SECONDARY_M_MOBILE": {
+    "SECONDARY_XXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_M_MOBILE"
+      "name": "SECONDARY_XXS_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XL_MOBILE": {
+    "ACCENT_XL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XL_MOBILE"
+      "name": "ACCENT_XL_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XXXL_DESKTOPXL": {
+    "ACCENT_XXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXXL_DESKTOPXL"
+      "name": "ACCENT_XXS_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XXL_MOBILE": {
+    "BASIC_XXXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXL_MOBILE"
+      "name": "BASIC_XXXS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_SECONDARY_XXXS_MOBILE": {
+    "ACCENT_XXXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXXS_MOBILE"
+      "name": "ACCENT_XXXL_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_BODY_L_DESKTOPXL": {
+    "BASIC_M_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_L_DESKTOPXL"
+      "name": "BASIC_M_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXXL_MOBILE": {
+    "ACCENT_XL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXXL_MOBILE"
+      "name": "ACCENT_XL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XL_MOBILE": {
+    "BASIC_XXXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XL_MOBILE"
+      "name": "BASIC_XXXL_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_XL_DESKTOPXL": {
+    "ACCENT_S_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XL_DESKTOPXL"
+      "name": "ACCENT_S_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_SECONDARY_XS_MOBILE": {
+    "SECONDARY_XXXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XS_MOBILE"
+      "name": "SECONDARY_XXXL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_XL_DESKTOPXL": {
+    "SECONDARY_XL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XL_DESKTOPXL"
+      "name": "SECONDARY_XL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_BASIC_XXS_MOBILE": {
+    "BASIC_XL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXS_MOBILE"
+      "name": "BASIC_XL_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BODY_XXL_DESKTOPXL": {
+    "ACCENT_XXXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXL_DESKTOPXL"
+      "name": "ACCENT_XXXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XXXL_MOBILE": {
+    "SECONDARY_XXXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXXL_MOBILE"
+      "name": "SECONDARY_XXXS_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_ACCENT_XXXL_DESKTOPXL": {
+    "ACCENT_XXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXXL_DESKTOPXL"
+      "name": "ACCENT_XXS_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_BASIC_XXXL_DESKTOPXL": {
+    "SECONDARY_XS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXXL_DESKTOPXL"
+      "name": "SECONDARY_XS_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_S_MOBILE": {
+    "BASIC_XXXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_S_MOBILE"
+      "name": "BASIC_XXXL_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XL_DESKTOPXL": {
+    "ACCENT_S_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XL_DESKTOPXL"
+      "name": "ACCENT_S_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_M_DESKTOPXL": {
+    "SECONDARY_XS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_M_DESKTOPXL"
+      "name": "SECONDARY_XS_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_SECONDARY_XXXS_MOBILE": {
+    "ACCENT_XXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXXS_MOBILE"
+      "name": "ACCENT_XXS_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_SECONDARY_XXL_MOBILE": {
+    "SECONDARY_XXXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXL_MOBILE"
+      "name": "SECONDARY_XXXS_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_S_DESKTOP": {
+    "BASIC_M_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_S_DESKTOP"
+      "name": "BASIC_M_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_S_MOBILE": {
+    "SECONDARY_XXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_S_MOBILE"
+      "name": "SECONDARY_XXS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_SECONDARY_XXXS_DESKTOPXL": {
+    "SECONDARY_S_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXXS_DESKTOPXL"
+      "name": "SECONDARY_S_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXS_MOBILE": {
+    "SECONDARY_XXXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXS_MOBILE"
+      "name": "SECONDARY_XXXS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_BODY_L_DESKTOPXL": {
+    "ACCENT_XXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_L_DESKTOPXL"
+      "name": "ACCENT_XXS_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XS_MOBILE": {
+    "SECONDARY_XS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XS_MOBILE"
+      "name": "SECONDARY_XS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_BODY_XXL_DESKTOPXL": {
+    "BASIC_XL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXL_DESKTOPXL"
+      "name": "BASIC_XL_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_SECONDARY_S_MOBILE": {
+    "ACCENT_S_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_S_MOBILE"
+      "name": "ACCENT_S_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_XXS_DESKTOP": {
+    "SECONDARY_XL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXS_DESKTOP"
+      "name": "SECONDARY_XL_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_SECONDARY_XS_DESKTOPXL": {
+    "SECONDARY_XXXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XS_DESKTOPXL"
+      "name": "SECONDARY_XXXL_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_XL_MOBILE": {
+    "ACCENT_XXXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XL_MOBILE"
+      "name": "ACCENT_XXXL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_SECONDARY_L_MOBILE": {
+    "BASIC_XS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_L_MOBILE"
+      "name": "BASIC_XS_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_ACCENT_XXS_MOBILE": {
+    "BASIC_XL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXS_MOBILE"
+      "name": "BASIC_XL_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_BASIC_XXXL_MOBILE": {
+    "BASIC_XXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXXL_MOBILE"
+      "name": "BASIC_XXL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XL_DESKTOP": {
+    "SECONDARY_XL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XL_DESKTOP"
+      "name": "SECONDARY_XL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XL_DESKTOPXL": {
+    "SECONDARY_XXXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XL_DESKTOPXL"
+      "name": "SECONDARY_XXXL_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XL_MOBILE": {
+    "ACCENT_XL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XL_MOBILE"
+      "name": "ACCENT_XL_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XXXL_DESKTOPXL": {
+    "ACCENT_XL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXXL_DESKTOPXL"
+      "name": "ACCENT_XL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_XXXL_MOBILE": {
+    "BASIC_L_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXXL_MOBILE"
+      "name": "BASIC_L_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XXXL_DESKTOP": {
+    "BASIC_XXXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXXL_DESKTOP"
+      "name": "BASIC_XXXL_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XL_MOBILE": {
+    "BASIC_XXXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XL_MOBILE"
+      "name": "BASIC_XXXS_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_BASIC_XL_DESKTOP": {
+    "ACCENT_XXXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XL_DESKTOP"
+      "name": "ACCENT_XXXL_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XXXL_MOBILE": {
+    "BODY_S_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXXL_MOBILE"
+      "name": "BODY_S_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XXXL_DESKTOP": {
+    "BODY_XXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXXL_DESKTOP"
+      "name": "BODY_XXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_BODY_M_DESKTOPXL": {
+    "PRIMARY_S_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_M_DESKTOPXL"
+      "name": "PRIMARY_S_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_S_DESKTOP": {
+    "SECONDARY_XXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_S_DESKTOP"
+      "name": "SECONDARY_XXL_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_SECONDARY_XXS_MOBILE": {
+    "PRIMARY_XXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXS_MOBILE"
+      "name": "PRIMARY_XXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XS_DESKTOP": {
+    "SECONDARY_L_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XS_DESKTOP"
+      "name": "SECONDARY_L_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_SECONDARY_XXS_DESKTOP": {
+    "SECONDARY_XXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXS_DESKTOP"
+      "name": "SECONDARY_XXS_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_PRIMARY_XL_DESKTOPXL": {
+    "SECONDARY_S_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XL_DESKTOPXL"
+      "name": "SECONDARY_S_DESKTOPXL_LETTER_SPACING"
     },
-    "LETTER_SPACING_ACCENT_S_DESKTOP": {
+    "SECONDARY_S_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_S_DESKTOP"
+      "name": "SECONDARY_S_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_PRIMARY_XXXL_DESKTOPXL": {
+    "BASIC_XXXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXXL_DESKTOPXL"
+      "name": "BASIC_XXXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_S_DESKTOPXL": {
+    "SECONDARY_XXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_S_DESKTOPXL"
+      "name": "SECONDARY_XXS_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_SECONDARY_XXXS_DESKTOP": {
+    "BASIC_XS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXXS_DESKTOP"
+      "name": "BASIC_XS_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XXL_DESKTOP": {
+    "BASIC_M_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXL_DESKTOP"
+      "name": "BASIC_M_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_S_MOBILE": {
+    "BASIC_L_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_S_MOBILE"
+      "name": "BASIC_L_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_BASIC_XXXL_DESKTOP": {
+    "BASIC_XXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXXL_DESKTOP"
+      "name": "BASIC_XXS_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_ACCENT_XXS_DESKTOP": {
+    "ACCENT_XXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXS_DESKTOP"
+      "name": "ACCENT_XXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_SECONDARY_L_DESKTOP": {
+    "BASIC_S_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_L_DESKTOP"
+      "name": "BASIC_S_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_XL_DESKTOP": {
+    "ACCENT_XL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XL_DESKTOP"
+      "name": "ACCENT_XL_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_PRIMARY_XXS_DESKTOPXL": {
+    "SECONDARY_M_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXS_DESKTOPXL"
+      "name": "SECONDARY_M_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_SECONDARY_XS_DESKTOP": {
+    "ACCENT_L_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XS_DESKTOP"
+      "name": "ACCENT_L_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XL_DESKTOP": {
+    "SECONDARY_M_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XL_DESKTOP"
+      "name": "SECONDARY_M_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_SECONDARY_XXXL_DESKTOP": {
+    "SECONDARY_XXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXXL_DESKTOP"
+      "name": "SECONDARY_XXL_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XXXS_DESKTOP": {
+    "BASIC_XXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXXS_DESKTOP"
+      "name": "BASIC_XXL_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_SECONDARY_XXL_DESKTOP": {
+    "BASIC_S_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXL_DESKTOP"
+      "name": "BASIC_S_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_SECONDARY_M_DESKTOP": {
+    "ACCENT_XXXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_M_DESKTOP"
+      "name": "ACCENT_XXXL_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_SECONDARY_XL_DESKTOP": {
+    "SECONDARY_L_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XL_DESKTOP"
+      "name": "SECONDARY_L_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_L_DESKTOP": {
+    "BASIC_XXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_L_DESKTOP"
+      "name": "BASIC_XXS_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_S_DESKTOP": {
+    "PRIMARY_XS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_S_DESKTOP"
+      "name": "PRIMARY_XS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XXXL_DESKTOP": {
+    "BODY_XXXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXXL_DESKTOP"
+      "name": "BODY_XXXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_BASIC_XXS_DESKTOP": {
+    "BODY_XS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXS_DESKTOP"
+      "name": "BODY_XS_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XS_MOBILE": {
+    "SECONDARY_M_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XS_MOBILE"
+      "name": "SECONDARY_M_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BODY_XXXS_DESKTOPXL": {
+    "BASIC_XS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXXS_DESKTOPXL"
+      "name": "BASIC_XS_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_M_DESKTOP": {
+    "BASIC_S_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_M_DESKTOP"
+      "name": "BASIC_S_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_XXL_DESKTOPXL": {
+    "BODY_L_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXL_DESKTOPXL"
+      "name": "BODY_L_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_S_DESKTOPXL": {
+    "BODY_XS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_S_DESKTOPXL"
+      "name": "BODY_XS_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_XS_DESKTOPXL": {
+    "BODY_XXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XS_DESKTOPXL"
+      "name": "BODY_XXL_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_L_DESKTOPXL": {
+    "PRIMARY_L_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_L_DESKTOPXL"
+      "name": "PRIMARY_L_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_WEIGHT_ACCENT_S_DESKTOP": {
+    "SECONDARY_XXXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_S_DESKTOP"
+      "name": "SECONDARY_XXXS_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BASIC_M_MOBILE": {
+    "PRIMARY_XS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_M_MOBILE"
+      "name": "PRIMARY_XS_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XXXS_MOBILE": {
+    "BASIC_XXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXXS_MOBILE"
+      "name": "BASIC_XXS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XXS_DESKTOP": {
+    "BODY_XXXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXS_DESKTOP"
+      "name": "BODY_XXXS_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BASIC_S_DESKTOP": {
+    "SECONDARY_XS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_S_DESKTOP"
+      "name": "SECONDARY_XS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_M_MOBILE": {
+    "PRIMARY_XXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_M_MOBILE"
+      "name": "PRIMARY_XXL_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XXS_DESKTOPXL": {
+    "PRIMARY_XXXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXS_DESKTOPXL"
+      "name": "PRIMARY_XXXS_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BODY_XS_DESKTOPXL": {
+    "ACCENT_M_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XS_DESKTOPXL"
+      "name": "ACCENT_M_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_XXXS_DESKTOPXL": {
+    "BASIC_XXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXXS_DESKTOPXL"
+      "name": "BASIC_XXS_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XXS_DESKTOP": {
+    "BASIC_S_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXS_DESKTOP"
+      "name": "BASIC_S_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_M_DESKTOPXL": {
+    "SECONDARY_L_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_M_DESKTOPXL"
+      "name": "SECONDARY_L_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_PRIMARY_XXL_DESKTOPXL": {
+    "SECONDARY_M_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXL_DESKTOPXL"
+      "name": "SECONDARY_M_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XXL_MOBILE": {
+    "SECONDARY_XXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXL_MOBILE"
+      "name": "SECONDARY_XXL_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_PRIMARY_L_DESKTOPXL": {
+    "BASIC_XXXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_L_DESKTOPXL"
+      "name": "BASIC_XXXS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_SECONDARY_XL_DESKTOP": {
+    "ACCENT_M_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XL_DESKTOP"
+      "name": "ACCENT_M_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BASIC_L_MOBILE": {
+    "PRIMARY_XXXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_L_MOBILE"
+      "name": "PRIMARY_XXXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XXL_MOBILE": {
+    "ACCENT_XS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXL_MOBILE"
+      "name": "ACCENT_XS_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_ACCENT_XS_DESKTOPXL": {
+    "SECONDARY_L_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XS_DESKTOPXL"
+      "name": "SECONDARY_L_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_L_MOBILE": {
+    "BASIC_XXXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_L_MOBILE"
+      "name": "BASIC_XXXL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_BASIC_M_MOBILE": {
+    "SECONDARY_XXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_M_MOBILE"
+      "name": "SECONDARY_XXL_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_ACCENT_XXXS_DESKTOPXL": {
+    "ACCENT_XXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXXS_DESKTOPXL"
+      "name": "ACCENT_XXL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_SECONDARY_XXXL_DESKTOP": {
+    "ACCENT_XXXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXXL_DESKTOP"
+      "name": "ACCENT_XXXS_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XXXS_DESKTOPXL": {
+    "BODY_M_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXXS_DESKTOPXL"
+      "name": "BODY_M_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_XXXL_DESKTOPXL": {
+    "BODY_L_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXXL_DESKTOPXL"
+      "name": "BODY_L_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_BASIC_XXL_MOBILE": {
+    "PRIMARY_M_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXL_MOBILE"
+      "name": "PRIMARY_M_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XS_MOBILE": {
+    "BODY_XXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XS_MOBILE"
+      "name": "BODY_XXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BODY_S_MOBILE": {
+    "PRIMARY_L_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_S_MOBILE"
+      "name": "PRIMARY_L_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_XXS_MOBILE": {
+    "PRIMARY_XXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXS_MOBILE"
+      "name": "PRIMARY_XXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_S_DESKTOPXL": {
+    "ACCENT_L_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_S_DESKTOPXL"
+      "name": "ACCENT_L_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_M_MOBILE": {
+    "BASIC_XL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_M_MOBILE"
+      "name": "BASIC_XL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_BODY_XL_DESKTOPXL": {
+    "PRIMARY_M_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XL_DESKTOPXL"
+      "name": "PRIMARY_M_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_BASIC_L_MOBILE": {
+    "BASIC_XL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_L_MOBILE"
+      "name": "BASIC_XL_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_ACCENT_XS_DESKTOPXL": {
+    "SECONDARY_XXXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XS_DESKTOPXL"
+      "name": "SECONDARY_XXXL_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_BASIC_XS_DESKTOPXL": {
+    "BODY_XS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XS_DESKTOPXL"
+      "name": "BODY_XS_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BODY_XXS_DESKTOPXL": {
+    "SECONDARY_XL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXS_DESKTOPXL"
+      "name": "SECONDARY_XL_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XXXS_MOBILE": {
+    "BODY_XXXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXXS_MOBILE"
+      "name": "BODY_XXXS_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XXS_MOBILE": {
+    "PRIMARY_XXXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXS_MOBILE"
+      "name": "PRIMARY_XXXL_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_ACCENT_XXXS_DESKTOPXL": {
+    "PRIMARY_XS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXXS_DESKTOPXL"
+      "name": "PRIMARY_XS_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_XXXS_DESKTOPXL": {
+    "PRIMARY_XXXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXXS_DESKTOPXL"
+      "name": "PRIMARY_XXXS_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_S_MOBILE": {
+    "PRIMARY_XL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_S_MOBILE"
+      "name": "PRIMARY_XL_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_SECONDARY_XXXL_MOBILE": {
+    "BODY_XXXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXXL_MOBILE"
+      "name": "BODY_XXXL_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XS_DESKTOPXL": {
+    "ACCENT_XS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XS_DESKTOPXL"
+      "name": "ACCENT_XS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_M_MOBILE": {
+    "PRIMARY_XXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_M_MOBILE"
+      "name": "PRIMARY_XXS_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_M_DESKTOPXL": {
+    "ACCENT_M_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_M_DESKTOPXL"
+      "name": "ACCENT_M_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_SECONDARY_XL_MOBILE": {
+    "BASIC_XXXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XL_MOBILE"
+      "name": "BASIC_XXXS_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_XXL_DESKTOPXL": {
+    "BODY_XL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXL_DESKTOPXL"
+      "name": "BODY_XL_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_S_DESKTOPXL": {
+    "PRIMARY_S_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_S_DESKTOPXL"
+      "name": "PRIMARY_S_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BODY_XL_DESKTOPXL": {
+    "BODY_XXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XL_DESKTOPXL"
+      "name": "BODY_XXS_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_L_DESKTOP": {
+    "BODY_S_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_L_DESKTOP"
+      "name": "BODY_S_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_ACCENT_XXS_MOBILE": {
+    "BASIC_XS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXS_MOBILE"
+      "name": "BASIC_XS_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_L_DESKTOPXL": {
+    "BASIC_XXXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_L_DESKTOPXL"
+      "name": "BASIC_XXXL_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_XXS_DESKTOPXL": {
+    "ACCENT_XXXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXS_DESKTOPXL"
+      "name": "ACCENT_XXXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_L_DESKTOPXL": {
+    "BODY_M_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_L_DESKTOPXL"
+      "name": "BODY_M_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XXL_MOBILE": {
+    "ACCENT_XXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXL_MOBILE"
+      "name": "ACCENT_XXS_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XXL_DESKTOPXL": {
+    "BASIC_XXXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXL_DESKTOPXL"
+      "name": "BASIC_XXXL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XXXL_MOBILE": {
+    "ACCENT_XXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXXL_MOBILE"
+      "name": "ACCENT_XXL_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_ACCENT_L_MOBILE": {
+    "BODY_L_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_L_MOBILE"
+      "name": "BODY_L_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XXL_DESKTOP": {
+    "BASIC_XL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXL_DESKTOP"
+      "name": "BASIC_XL_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXL_MOBILE": {
+    "BODY_XXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXL_MOBILE"
+      "name": "BODY_XXL_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XL_MOBILE": {
+    "PRIMARY_L_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XL_MOBILE"
+      "name": "PRIMARY_L_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BODY_L_DESKTOPXL": {
+    "BASIC_L_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_L_DESKTOPXL"
+      "name": "BASIC_L_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_ACCENT_S_MOBILE": {
+    "PRIMARY_XXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_S_MOBILE"
+      "name": "PRIMARY_XXL_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BODY_XXXL_DESKTOPXL": {
+    "SECONDARY_XXXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXXL_DESKTOPXL"
+      "name": "SECONDARY_XXXL_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_L_MOBILE": {
+    "SECONDARY_XL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_L_MOBILE"
+      "name": "SECONDARY_XL_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BASIC_XXL_DESKTOPXL": {
+    "PRIMARY_XXXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXL_DESKTOPXL"
+      "name": "PRIMARY_XXXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_M_DESKTOPXL": {
+    "ACCENT_S_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_M_DESKTOPXL"
+      "name": "ACCENT_S_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_BODY_XS_MOBILE": {
+    "PRIMARY_XL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XS_MOBILE"
+      "name": "PRIMARY_XL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XS_DESKTOP": {
+    "BODY_XXXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XS_DESKTOP"
+      "name": "BODY_XXXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_XXS_MOBILE": {
+    "ACCENT_L_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXS_MOBILE"
+      "name": "ACCENT_L_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_M_MOBILE": {
+    "BASIC_XXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_M_MOBILE"
+      "name": "BASIC_XXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XXXS_DESKTOP": {
+    "BODY_XL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXXS_DESKTOP"
+      "name": "BODY_XL_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BASIC_XXS_MOBILE": {
+    "SECONDARY_XS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXS_MOBILE"
+      "name": "SECONDARY_XS_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_ACCENT_L_DESKTOPXL": {
+    "SECONDARY_XXXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_L_DESKTOPXL"
+      "name": "SECONDARY_XXXS_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_BODY_XXXS_MOBILE": {
+    "SECONDARY_XS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXXS_MOBILE"
+      "name": "SECONDARY_XS_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XS_DESKTOPXL": {
+    "SECONDARY_XXXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XS_DESKTOPXL"
+      "name": "SECONDARY_XXXS_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XS_DESKTOP": {
+    "ACCENT_XS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XS_DESKTOP"
+      "name": "ACCENT_XS_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BODY_S_MOBILE": {
+    "PRIMARY_XXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_S_MOBILE"
+      "name": "PRIMARY_XXS_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_PRIMARY_XXXS_DESKTOPXL": {
+    "PRIMARY_S_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXXS_DESKTOPXL"
+      "name": "PRIMARY_S_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_BODY_M_DESKTOPXL": {
+    "BODY_XXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_M_DESKTOPXL"
+      "name": "BODY_XXS_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_BODY_XXS_MOBILE": {
+    "BODY_S_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXS_MOBILE"
+      "name": "BODY_S_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_S_MOBILE": {
+    "ACCENT_XXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_S_MOBILE"
+      "name": "ACCENT_XXS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_ACCENT_XXL_DESKTOPXL": {
+    "BASIC_XXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXL_DESKTOPXL"
+      "name": "BASIC_XXS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_M_DESKTOPXL": {
+    "ACCENT_XXXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_M_DESKTOPXL"
+      "name": "ACCENT_XXXS_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BASIC_XXXS_DESKTOP": {
+    "BASIC_S_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXXS_DESKTOP"
+      "name": "BASIC_S_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_S_MOBILE": {
+    "SECONDARY_M_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_S_MOBILE"
+      "name": "SECONDARY_M_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_PRIMARY_M_DESKTOP": {
+    "BODY_M_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_M_DESKTOP"
+      "name": "BODY_M_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_SIZE_BODY_XS_MOBILE": {
+    "BASIC_M_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XS_MOBILE"
+      "name": "BASIC_M_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_BASIC_XS_DESKTOP": {
+    "PRIMARY_M_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XS_DESKTOP"
+      "name": "PRIMARY_M_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BODY_XXXL_DESKTOP": {
+    "ACCENT_S_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXXL_DESKTOP"
+      "name": "ACCENT_S_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_XS_DESKTOPXL": {
+    "BASIC_M_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XS_DESKTOPXL"
+      "name": "BASIC_M_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XXXS_DESKTOPXL": {
+    "SECONDARY_XXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXXS_DESKTOPXL"
+      "name": "SECONDARY_XXS_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_XXXS_MOBILE": {
+    "SECONDARY_S_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXXS_MOBILE"
+      "name": "SECONDARY_S_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_L_DESKTOP": {
+    "PRIMARY_XXXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_L_DESKTOP"
+      "name": "PRIMARY_XXXL_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_XL_DESKTOP": {
+    "PRIMARY_XL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XL_DESKTOP"
+      "name": "PRIMARY_XL_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_L_DESKTOPXL": {
+    "BODY_XXXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_L_DESKTOPXL"
+      "name": "BODY_XXXL_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BODY_XXL_DESKTOPXL": {
+    "BODY_XL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXL_DESKTOPXL"
+      "name": "BODY_XL_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_SECONDARY_XXL_MOBILE": {
+    "BODY_L_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXL_MOBILE"
+      "name": "BODY_L_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_PRIMARY_XXXL_DESKTOPXL": {
+    "BODY_XXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXXL_DESKTOPXL"
+      "name": "BODY_XXL_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_PRIMARY_XXL_DESKTOP": {
+    "PRIMARY_L_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXL_DESKTOP"
+      "name": "PRIMARY_L_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XL_DESKTOP": {
+    "PRIMARY_XXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XL_DESKTOP"
+      "name": "PRIMARY_XXL_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_XXXL_DESKTOP": {
+    "SECONDARY_L_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXXL_DESKTOP"
+      "name": "SECONDARY_L_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_SECONDARY_XXS_DESKTOP": {
+    "SECONDARY_XXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXS_DESKTOP"
+      "name": "SECONDARY_XXL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_SIZE_BASIC_XXXS_DESKTOP": {
+    "BODY_M_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXXS_DESKTOP"
+      "name": "BODY_M_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_XXL_DESKTOPXL": {
+    "PRIMARY_M_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXL_DESKTOPXL"
+      "name": "PRIMARY_M_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_L_DESKTOPXL": {
+    "BASIC_M_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_L_DESKTOPXL"
+      "name": "BASIC_M_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_ACCENT_M_DESKTOPXL": {
+    "BASIC_XXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_M_DESKTOPXL"
+      "name": "BASIC_XXL_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_SECONDARY_S_DESKTOP": {
+    "ACCENT_XL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_S_DESKTOP"
+      "name": "ACCENT_XL_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_SECONDARY_L_MOBILE": {
+    "SECONDARY_XXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_L_MOBILE"
+      "name": "SECONDARY_XXS_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_XL_DESKTOPXL": {
+    "SECONDARY_S_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XL_DESKTOPXL"
+      "name": "SECONDARY_S_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_XXXS_DESKTOP": {
+    "ACCENT_XXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXXS_DESKTOP"
+      "name": "ACCENT_XXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_S_MOBILE": {
+    "ACCENT_XS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_S_MOBILE"
+      "name": "ACCENT_XS_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_PRIMARY_XXS_MOBILE": {
+    "BASIC_L_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXS_MOBILE"
+      "name": "BASIC_L_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_ACCENT_XS_DESKTOP": {
+    "ACCENT_XXXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XS_DESKTOP"
+      "name": "ACCENT_XXXL_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_ACCENT_XL_DESKTOP": {
+    "ACCENT_S_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XL_DESKTOP"
+      "name": "ACCENT_S_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXXS_DESKTOP": {
+    "ACCENT_XXXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXXS_DESKTOP"
+      "name": "ACCENT_XXXS_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_SECONDARY_XXS_DESKTOP": {
+    "PRIMARY_XXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXS_DESKTOP"
+      "name": "PRIMARY_XXS_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_WEIGHT_BODY_M_DESKTOPXL": {
+    "SECONDARY_XL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_M_DESKTOPXL"
+      "name": "SECONDARY_XL_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XS_DESKTOP": {
+    "SECONDARY_XXXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XS_DESKTOP"
+      "name": "SECONDARY_XXXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_ACCENT_XXXL_DESKTOP": {
+    "BODY_XL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXXL_DESKTOP"
+      "name": "BODY_XL_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_S_DESKTOP": {
+    "BASIC_XXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_S_DESKTOP"
+      "name": "BASIC_XXL_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_M_DESKTOPXL": {
+    "BODY_XXXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_M_DESKTOPXL"
+      "name": "BODY_XXXL_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_M_DESKTOP": {
+    "PRIMARY_XL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_M_DESKTOP"
+      "name": "PRIMARY_XL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XXXL_MOBILE": {
+    "PRIMARY_XXXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXXL_MOBILE"
+      "name": "PRIMARY_XXXL_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BODY_XXXL_DESKTOP": {
+    "ACCENT_XL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXXL_DESKTOP"
+      "name": "ACCENT_XL_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_S_MOBILE": {
+    "BASIC_L_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_S_MOBILE"
+      "name": "BASIC_L_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_XXS_DESKTOPXL": {
+    "PRIMARY_XXXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXS_DESKTOPXL"
+      "name": "PRIMARY_XXXL_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_PRIMARY_XXS_MOBILE": {
+    "PRIMARY_XL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXS_MOBILE"
+      "name": "PRIMARY_XL_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BODY_L_DESKTOP": {
+    "BODY_XXXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_L_DESKTOP"
+      "name": "BODY_XXXL_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_PRIMARY_S_DESKTOPXL": {
+    "ACCENT_XXXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_S_DESKTOPXL"
+      "name": "ACCENT_XXXL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_XL_DESKTOP": {
+    "BODY_XL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XL_DESKTOP"
+      "name": "BODY_XL_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_PRIMARY_XXXL_DESKTOPXL": {
+    "SECONDARY_XXXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXXL_DESKTOPXL"
+      "name": "SECONDARY_XXXL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_XL_DESKTOP": {
+    "BODY_S_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XL_DESKTOP"
+      "name": "BODY_S_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_BODY_XXL_DESKTOP": {
+    "SECONDARY_XL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXL_DESKTOP"
+      "name": "SECONDARY_XL_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_PRIMARY_XL_MOBILE": {
+    "BODY_XXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XL_MOBILE"
+      "name": "BODY_XXS_DESKTOPXL_FONT_SIZE"
     },
-    "LINE_HEIGHT_ACCENT_XXXL_DESKTOP": {
+    "PRIMARY_S_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXXL_DESKTOP"
+      "name": "PRIMARY_S_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_WEIGHT_BASIC_XXXL_DESKTOP": {
+    "ACCENT_S_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXXL_DESKTOP"
+      "name": "ACCENT_S_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_PRIMARY_XL_DESKTOPXL": {
+    "ACCENT_XXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XL_DESKTOPXL"
+      "name": "ACCENT_XXL_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XL_DESKTOP": {
+    "ACCENT_XXXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XL_DESKTOP"
+      "name": "ACCENT_XXXS_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_S_DESKTOPXL": {
+    "ACCENT_XXS_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_S_DESKTOPXL"
+      "name": "ACCENT_XXS_DESKTOPXL_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_XXXS_DESKTOP": {
+    "ACCENT_L_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXXS_DESKTOP"
+      "name": "ACCENT_L_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_L_DESKTOP": {
+    "ACCENT_XS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_L_DESKTOP"
+      "name": "ACCENT_XS_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_BODY_XXL_DESKTOP": {
+    "BODY_S_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXL_DESKTOP"
+      "name": "BODY_S_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_M_MOBILE": {
+    "PRIMARY_M_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_M_MOBILE"
+      "name": "PRIMARY_M_MOBILE_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_SECONDARY_XS_DESKTOP": {
+    "BODY_XXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XS_DESKTOP"
+      "name": "BODY_XXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BODY_M_MOBILE": {
+    "PRIMARY_S_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_M_MOBILE"
+      "name": "PRIMARY_S_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XXS_DESKTOPXL": {
+    "PRIMARY_XXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXS_DESKTOPXL"
+      "name": "PRIMARY_XXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_M_DESKTOP": {
+    "BODY_M_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_M_DESKTOP"
+      "name": "BODY_M_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_BODY_XS_DESKTOPXL": {
+    "BODY_XXXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XS_DESKTOPXL"
+      "name": "BODY_XXXS_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_WEIGHT_SECONDARY_L_DESKTOPXL": {
+    "ACCENT_XXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_L_DESKTOPXL"
+      "name": "ACCENT_XXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BASIC_L_MOBILE": {
+    "PRIMARY_XS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_L_MOBILE"
+      "name": "PRIMARY_XS_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XXXS_MOBILE": {
+    "BODY_XS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXXS_MOBILE"
+      "name": "BODY_XS_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XS_MOBILE": {
+    "SECONDARY_XXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XS_MOBILE"
+      "name": "SECONDARY_XXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XL_DESKTOP": {
+    "BASIC_XS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XL_DESKTOP"
+      "name": "BASIC_XS_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_PRIMARY_XXXL_DESKTOP": {
+    "SECONDARY_L_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXXL_DESKTOP"
+      "name": "SECONDARY_L_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_XL_MOBILE": {
+    "BODY_XL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XL_MOBILE"
+      "name": "BODY_XL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_SECONDARY_XXL_DESKTOPXL": {
+    "PRIMARY_XXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_XXL_DESKTOPXL"
+      "name": "PRIMARY_XXL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_ACCENT_M_MOBILE": {
+    "BODY_XXXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_M_MOBILE"
+      "name": "BODY_XXXL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_L_MOBILE": {
+    "PRIMARY_XL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_L_MOBILE"
+      "name": "PRIMARY_XL_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_XXL_MOBILE": {
+    "BODY_XS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXL_MOBILE"
+      "name": "BODY_XS_MOBILE_FONT_SIZE"
     },
-    "FONT_SIZE_BODY_XXXS_DESKTOPXL": {
+    "PRIMARY_L_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXXS_DESKTOPXL"
+      "name": "PRIMARY_L_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_XXXL_MOBILE": {
+    "BODY_XXL_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXXL_MOBILE"
+      "name": "BODY_XXL_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_BODY_M_DESKTOP": {
+    "BODY_XXXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_M_DESKTOP"
+      "name": "BODY_XXXS_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_BODY_XXL_MOBILE": {
+    "PRIMARY_XXXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXL_MOBILE"
+      "name": "PRIMARY_XXXL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_S_DESKTOPXL": {
+    "PRIMARY_XS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_S_DESKTOPXL"
+      "name": "PRIMARY_XS_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_M_MOBILE": {
+    "BODY_L_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_M_MOBILE"
+      "name": "BODY_L_MOBILE_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_S_DESKTOPXL": {
+    "PRIMARY_XXXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_S_DESKTOPXL"
+      "name": "PRIMARY_XXXS_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_PRIMARY_XXXS_MOBILE": {
+    "ACCENT_M_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXXS_MOBILE"
+      "name": "ACCENT_M_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_PRIMARY_XS_MOBILE": {
+    "ACCENT_L_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XS_MOBILE"
+      "name": "ACCENT_L_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_XL_DESKTOP": {
+    "BASIC_XXXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XL_DESKTOP"
+      "name": "BASIC_XXXS_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_XXXL_DESKTOP": {
+    "ACCENT_M_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXXL_DESKTOP"
+      "name": "ACCENT_M_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_ACCENT_L_MOBILE": {
+    "PRIMARY_XXXS_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_L_MOBILE"
+      "name": "PRIMARY_XXXS_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_BODY_XXS_DESKTOPXL": {
+    "BASIC_XS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXS_DESKTOPXL"
+      "name": "BASIC_XS_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_S_DESKTOP": {
+    "BODY_XXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_S_DESKTOP"
+      "name": "BODY_XXS_DESKTOP_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_M_MOBILE": {
+    "PRIMARY_S_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_M_MOBILE"
+      "name": "PRIMARY_S_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BODY_S_DESKTOPXL": {
+    "PRIMARY_XXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_S_DESKTOPXL"
+      "name": "PRIMARY_XXS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BASIC_M_MOBILE": {
+    "ACCENT_XXXS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_M_MOBILE"
+      "name": "ACCENT_XXXS_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_ACCENT_XXL_MOBILE": {
+    "BODY_XS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXL_MOBILE"
+      "name": "BODY_XS_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_XXXS_DESKTOPXL": {
+    "BODY_XXXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXXS_DESKTOPXL"
+      "name": "BODY_XXXS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_BASIC_XXS_DESKTOPXL": {
+    "PRIMARY_XS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXS_DESKTOPXL"
+      "name": "PRIMARY_XS_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_SECONDARY_M_DESKTOPXL": {
+    "PRIMARY_XXXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_SECONDARY_M_DESKTOPXL"
+      "name": "PRIMARY_XXXS_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_XXS_DESKTOPXL": {
+    "ACCENT_M_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXS_DESKTOPXL"
+      "name": "ACCENT_M_MOBILE_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_PRIMARY_XXS_DESKTOP": {
+    "ACCENT_XXL_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_PRIMARY_XXS_DESKTOP"
+      "name": "ACCENT_XXL_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_BODY_XS_DESKTOPXL": {
+    "SECONDARY_M_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XS_DESKTOPXL"
+      "name": "SECONDARY_M_DESKTOPXL_FONT_WEIGHT"
     },
-    "FONT_SIZE_ACCENT_S_DESKTOPXL": {
+    "ACCENT_XS_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_S_DESKTOPXL"
+      "name": "ACCENT_XS_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_SECONDARY_XL_DESKTOPXL": {
+    "BASIC_S_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XL_DESKTOPXL"
+      "name": "BASIC_S_DESKTOPXL_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BODY_XXL_MOBILE": {
+    "BASIC_XXXS_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXL_MOBILE"
+      "name": "BASIC_XXXS_DESKTOP_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_XXL_DESKTOPXL": {
+    "ACCENT_M_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_XXL_DESKTOPXL"
+      "name": "ACCENT_M_DESKTOPXL_LINE_HEIGHT"
     },
-    "LETTER_SPACING_ACCENT_L_DESKTOPXL": {
+    "PRIMARY_XXXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_L_DESKTOPXL"
+      "name": "PRIMARY_XXXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_ACCENT_L_MOBILE": {
+    "PRIMARY_XS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_L_MOBILE"
+      "name": "PRIMARY_XS_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_SECONDARY_XXXL_DESKTOPXL": {
+    "BODY_XXXS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_SECONDARY_XXXL_DESKTOPXL"
+      "name": "BODY_XXXS_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_BODY_XXS_MOBILE": {
+    "PRIMARY_M_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXS_MOBILE"
+      "name": "PRIMARY_M_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_L_MOBILE": {
+    "BASIC_XXS_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_L_MOBILE"
+      "name": "BASIC_XXS_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BODY_XL_MOBILE": {
+    "ACCENT_L_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XL_MOBILE"
+      "name": "ACCENT_L_MOBILE_FONT_SIZE"
     },
-    "LETTER_SPACING_ACCENT_XXL_DESKTOPXL": {
+    "BODY_XS_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_XXL_DESKTOPXL"
+      "name": "BODY_XS_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_BODY_S_MOBILE": {
+    "BASIC_M_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_S_MOBILE"
+      "name": "BASIC_M_DESKTOPXL_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_XXL_MOBILE": {
+    "BODY_S_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXL_MOBILE"
+      "name": "BODY_S_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_WEIGHT_BASIC_XXL_MOBILE": {
+    "BODY_M_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXL_MOBILE"
+      "name": "BODY_M_DESKTOP_LETTER_SPACING"
     },
-    "FONT_SIZE_ACCENT_XXS_DESKTOPXL": {
+    "PRIMARY_XXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXS_DESKTOPXL"
+      "name": "PRIMARY_XXL_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_BODY_XXXL_MOBILE": {
+    "BASIC_L_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXXL_MOBILE"
+      "name": "BASIC_L_DESKTOPXL_LETTER_SPACING"
     },
-    "LETTER_SPACING_BODY_L_MOBILE": {
+    "ACCENT_XXL_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_L_MOBILE"
+      "name": "ACCENT_XXL_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_L_DESKTOPXL": {
+    "ACCENT_XXL_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_L_DESKTOPXL"
+      "name": "ACCENT_XXL_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XXXL_DESKTOPXL": {
+    "PRIMARY_L_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XXXL_DESKTOPXL"
+      "name": "PRIMARY_L_DESKTOP_LETTER_SPACING"
     },
-    "LETTER_SPACING_BASIC_S_DESKTOPXL": {
+    "BODY_XXL_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_S_DESKTOPXL"
+      "name": "BODY_XXL_DESKTOP_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BASIC_XXXS_MOBILE": {
+    "BODY_L_DESKTOP_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XXXS_MOBILE"
+      "name": "BODY_L_DESKTOP_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_XXXS_MOBILE": {
+    "PRIMARY_XXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XXXS_MOBILE"
+      "name": "PRIMARY_XXS_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_BODY_XXXS_DESKTOP": {
+    "PRIMARY_S_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXXS_DESKTOP"
+      "name": "PRIMARY_S_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_BODY_XXS_DESKTOPXL": {
+    "BODY_XXS_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XXS_DESKTOPXL"
+      "name": "BODY_XXS_MOBILE_FONT_SIZE"
     },
-    "LINE_HEIGHT_BODY_XXS_MOBILE": {
+    "ACCENT_L_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_XXS_MOBILE"
+      "name": "ACCENT_L_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_PRIMARY_XXXS_DESKTOPXL": {
+    "BODY_S_MOBILE_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXXS_DESKTOPXL"
+      "name": "BODY_S_MOBILE_FONT_SIZE"
     },
-    "FONT_WEIGHT_BASIC_XS_MOBILE": {
+    "ACCENT_L_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BASIC_XS_MOBILE"
+      "name": "ACCENT_L_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_XXL_DESKTOP": {
+    "BASIC_XXL_DESKTOPXL_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_XXL_DESKTOP"
+      "name": "BASIC_XXL_DESKTOPXL_LETTER_SPACING"
     },
-    "LETTER_SPACING_PRIMARY_S_DESKTOP": {
+    "PRIMARY_XXXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_S_DESKTOP"
+      "name": "PRIMARY_XXXS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_SIZE_BODY_XL_MOBILE": {
+    "PRIMARY_XXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XL_MOBILE"
+      "name": "PRIMARY_XXS_MOBILE_LETTER_SPACING"
     },
-    "LINE_HEIGHT_ACCENT_XS_MOBILE": {
+    "BODY_XXXS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_ACCENT_XS_MOBILE"
+      "name": "BODY_XXXS_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_XS_DESKTOP": {
+    "PRIMARY_XS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XS_DESKTOP"
+      "name": "PRIMARY_XS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_SIZE_PRIMARY_L_DESKTOP": {
+    "BODY_XS_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_L_DESKTOP"
+      "name": "BODY_XS_DESKTOP_FONT_WEIGHT"
     },
-    "FONT_SIZE_BASIC_L_DESKTOPXL": {
+    "PRIMARY_XXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_L_DESKTOPXL"
+      "name": "PRIMARY_XXS_MOBILE_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_BODY_S_MOBILE": {
+    "BODY_XXS_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BODY_S_MOBILE"
+      "name": "BODY_XXS_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_SECONDARY_M_DESKTOPXL": {
+    "PRIMARY_S_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_SECONDARY_M_DESKTOPXL"
+      "name": "PRIMARY_S_MOBILE_LINE_HEIGHT"
     },
-    "FONT_SIZE_BODY_XXXL_MOBILE": {
+    "BODY_S_MOBILE_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BODY_XXXL_MOBILE"
+      "name": "BODY_S_MOBILE_LINE_HEIGHT"
     },
-    "LETTER_SPACING_BODY_XXXS_MOBILE": {
+    "BODY_L_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XXXS_MOBILE"
+      "name": "BODY_L_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_BASIC_XXS_DESKTOPXL": {
+    "PRIMARY_L_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXS_DESKTOPXL"
+      "name": "PRIMARY_L_DESKTOP_FONT_SIZE"
     },
-    "FONT_WEIGHT_BODY_S_DESKTOPXL": {
+    "BODY_XXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_S_DESKTOPXL"
+      "name": "BODY_XXL_DESKTOP_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XS_DESKTOPXL": {
+    "BASIC_L_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XS_DESKTOPXL"
+      "name": "BASIC_L_DESKTOPXL_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_XXL_DESKTOPXL": {
+    "PRIMARY_XXL_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_XXL_DESKTOPXL"
+      "name": "PRIMARY_XXL_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_PRIMARY_M_MOBILE": {
+    "BASIC_XS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_M_MOBILE"
+      "name": "BASIC_XS_MOBILE_FONT_WEIGHT"
     },
-    "FONT_SIZE_SECONDARY_XL_DESKTOPXL": {
+    "BASIC_XXL_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_SECONDARY_XL_DESKTOPXL"
+      "name": "BASIC_XXL_DESKTOPXL_FONT_SIZE"
     },
-    "LETTER_SPACING_PRIMARY_XXS_DESKTOP": {
+    "BODY_S_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_PRIMARY_XXS_DESKTOP"
+      "name": "BODY_S_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_BODY_XS_DESKTOP": {
+    "BASIC_XXXS_MOBILE_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_BODY_XS_DESKTOP"
+      "name": "BASIC_XXXS_MOBILE_FONT_WEIGHT"
     },
-    "LETTER_SPACING_BASIC_XXXS_DESKTOP": {
+    "PRIMARY_S_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BASIC_XXXS_DESKTOP"
+      "name": "PRIMARY_S_MOBILE_LETTER_SPACING"
     },
-    "LETTER_SPACING_BODY_XS_MOBILE": {
+    "ACCENT_M_DESKTOP_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_BODY_XS_MOBILE"
+      "name": "ACCENT_M_DESKTOP_FONT_WEIGHT"
     },
-    "LETTER_SPACING_ACCENT_M_DESKTOPXL": {
+    "BODY_XXS_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LETTER_SPACING_ACCENT_M_DESKTOPXL"
+      "name": "BODY_XXS_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_ACCENT_XXXS_MOBILE": {
+    "PRIMARY_M_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXXS_MOBILE"
+      "name": "PRIMARY_M_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_BASIC_M_DESKTOPXL": {
+    "ACCENT_XXL_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_BASIC_M_DESKTOPXL"
+      "name": "ACCENT_XXL_MOBILE_LETTER_SPACING"
     },
-    "FONT_WEIGHT_ACCENT_L_DESKTOPXL": {
+    "BODY_L_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_L_DESKTOPXL"
+      "name": "BODY_L_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_SIZE_PRIMARY_M_DESKTOP": {
+    "BODY_XXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_M_DESKTOP"
+      "name": "BODY_XXL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XXL_DESKTOP": {
+    "PRIMARY_L_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXL_DESKTOP"
+      "name": "PRIMARY_L_DESKTOP_LINE_HEIGHT"
     },
-    "FONT_WEIGHT_ACCENT_XXL_DESKTOPXL": {
+    "BASIC_L_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_WEIGHT_ACCENT_XXL_DESKTOPXL"
+      "name": "BASIC_L_DESKTOPXL_LINE_HEIGHT"
     },
-    "FONT_SIZE_ACCENT_XS_MOBILE": {
+    "PRIMARY_XXL_DESKTOP_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XS_MOBILE"
+      "name": "PRIMARY_XXL_DESKTOP_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_L_DESKTOP": {
+    "BASIC_XXXL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_L_DESKTOP"
+      "name": "BASIC_XXXL_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_BASIC_L_DESKTOPXL": {
+    "ACCENT_XS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_L_DESKTOPXL"
+      "name": "ACCENT_XS_DESKTOP_FONT_SIZE"
     },
-    "LINE_HEIGHT_BASIC_XXL_DESKTOPXL": {
+    "ACCENT_L_MOBILE_LETTER_SPACING": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_BASIC_XXL_DESKTOPXL"
+      "name": "ACCENT_L_MOBILE_LETTER_SPACING"
     },
-    "FONT_SIZE_ACCENT_XS_DESKTOP": {
+    "BASIC_XXL_DESKTOPXL_LINE_HEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XS_DESKTOP"
+      "name": "BASIC_XXL_DESKTOPXL_LINE_HEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_L_MOBILE": {
+    "BASIC_XL_DESKTOPXL_FONT_WEIGHT": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_L_MOBILE"
+      "name": "BASIC_XL_DESKTOPXL_FONT_WEIGHT"
     },
-    "LINE_HEIGHT_PRIMARY_XXL_MOBILE": {
+    "ACCENT_XXXS_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "LINE_HEIGHT_PRIMARY_XXL_MOBILE"
+      "name": "ACCENT_XXXS_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_PRIMARY_M_MOBILE": {
+    "BODY_M_DESKTOP_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_PRIMARY_M_MOBILE"
+      "name": "BODY_M_DESKTOP_FONT_SIZE"
     },
-    "FONT_SIZE_ACCENT_XXXS_DESKTOP": {
+    "BASIC_M_DESKTOPXL_FONT_SIZE": {
       "category": "font-size",
       "type": "array",
       "comment": "Typography styles.",
       "value": "",
       "originalValue": "",
-      "name": "FONT_SIZE_ACCENT_XXXS_DESKTOP"
+      "name": "BASIC_M_DESKTOPXL_FONT_SIZE"
     }
   }
 }

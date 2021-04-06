@@ -42,3 +42,39 @@
 		@include _a-font( $token, $value );
 	}
 }
+
+
+
+
+
+
+
+
+
+.lrv-a-font-body-m {
+	font-family: var( --font-family-#{$font-family} );
+	font-size: var( --a-font-body-m--font-size );
+	line-height: var( --a-font-body-m--line-height, calc(2px + 2ex + 2px) ); // stylelint-disable-line unit-disallowed-list
+}
+
+@include pmc-breakpoint( desktop ) {
+	.lrv-a-font-body-m {
+		--a-font-body-m--font-size:
+		--a-font-body-m--line-height: var( --a-font-body-m--line-height/@desktop );
+		--a-font-body-m--letter-spacing: var( --a-font-body-m--letter-spacing/@desktop );
+
+		font-family: var( --font-family-#{$font-family} );
+		font-size: clamp(#{$value});
+		font-size: clamp(var(--#{$full-token}));
+		line-height: calc(2px + 2ex + 2px); // stylelint-disable-line unit-disallowed-list
+	}
+}
+
+@include pmc-breakpoint( desktop-xl ) {
+	.lrv-a-font-body-m {
+		font-family: var( --font-family-#{$font-family} );
+		font-size: clamp(#{$value});
+		font-size: clamp(var(--#{$full-token}));
+		line-height: calc(2px + 2ex + 2px); // stylelint-disable-line unit-disallowed-list
+	}
+}

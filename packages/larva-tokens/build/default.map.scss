@@ -73,1083 +73,1083 @@ $default-map: (
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
   /* Typography styles. */
-  'letter-spacing-body-xs-desktop': (),
+  'body-xs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-primary-xxxs-desktopxl': (),
+  'basic-xs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-basic-m-desktopxl': (),
+  'secondary-xs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxxs-mobile': (),
+  'body-xs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xs-mobile': (),
+  'secondary-xxxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-m-desktop': (),
+  'body-xxxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxs-mobile': (),
+  'primary-xs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-body-xxxs-desktop': (),
+  'primary-xxxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-body-xxxl-desktop': (),
+  'accent-m-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-body-s-desktop': (),
+  'accent-xxxs-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-accent-xs-desktop': (),
+  'basic-xxxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-body-xl-desktop': (),
+  'body-m-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-primary-l-mobile': (),
+  'basic-m-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-xs-mobile': (),
+  'primary-m-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-primary-xs-desktopxl': (),
+  'primary-xxxl-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-s-mobile': (),
+  'primary-xl-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xxl-mobile': (),
+  'body-xxxl-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-basic-xs-desktop': (),
+  'accent-m-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-body-xxs-desktop': (),
+  'body-xl-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-accent-xxxs-desktop': (),
+  'primary-xxxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xxxs-mobile': (),
+  'primary-xs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-xxxs-desktop': (),
+  'body-xxxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-m-desktopxl': (),
+  'accent-xs-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-body-l-desktop': (),
+  'accent-xxxl-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-body-xxxl-desktop': (),
+  'basic-xxl-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-basic-xxl-desktop': (),
+  'accent-xxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-xxl-desktop': (),
+  'accent-s-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-body-s-desktop': (),
+  'primary-xxxl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-body-xl-desktop': (),
+  'body-xxxl-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-basic-l-desktop': (),
+  'primary-xl-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-body-xxs-desktop': (),
+  'body-xl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-accent-l-desktop': (),
+  'accent-xl-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-body-xxl-desktop': (),
+  'accent-l-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-s-desktopxl': (),
+  'basic-l-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-xxs-mobile': (),
+  'accent-xxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-accent-xxl-desktop': (),
+  'primary-s-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-m-desktop': (),
+  'body-xxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-xxs-desktopxl': (),
+  'basic-m-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-accent-m-desktop': (),
+  'body-s-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-accent-l-desktop': (),
+  'accent-xxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-primary-xs-desktop': (),
+  'secondary-xxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-s-mobile': (),
+  'secondary-s-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-primary-xxxl-mobile': (),
+  'secondary-s-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-xxxs-desktop': (),
+  'secondary-xl-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xl-mobile': (),
+  'secondary-xxs-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-body-m-desktop': (),
+  'secondary-xxxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxxl-desktop': (),
+  'body-xl-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-body-m-mobile': (),
+  'primary-xl-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxl-desktop': (),
+  'accent-s-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-weight-body-l-desktop': (),
+  'body-xxxl-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-accent-m-desktop': (),
+  'primary-xxxl-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xl-desktop': (),
+  'primary-xxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-basic-xxxl-desktopxl': (),
+  'body-xl-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-primary-xs-desktop': (),
+  'body-xxxl-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-basic-xl-desktopxl': (),
+  'primary-xl-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-primary-xxxl-mobile': (),
+  'accent-xs-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xxxs-desktop': (),
+  'accent-xxxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-xxxl-desktopxl': (),
+  'primary-xxxl-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-l-desktop': (),
+  'basic-l-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-primary-xl-mobile': (),
+  'accent-xl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-xl-desktopxl': (),
+  'primary-m-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-body-xxl-desktop': (),
+  'body-m-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-body-l-mobile': (),
+  'accent-xl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxs-desktopxl': (),
+  'accent-xxxs-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-accent-s-desktopxl': (),
+  'basic-xxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-xxxs-mobile': (),
+  'accent-xxxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-body-m-desktop': (),
+  'secondary-xl-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-secondary-xxl-desktopxl': (),
+  'secondary-xxxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-xxxs-desktopxl': (),
+  'accent-xxxs-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-body-m-mobile': (),
+  'accent-s-desktop-font-weight': (),
   /* Typography styles. */
-  'font-size-basic-xxxl-desktopxl': (),
+  'secondary-s-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxs-desktopxl': (),
+  'accent-xs-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-secondary-l-desktopxl': (),
+  'secondary-xxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-m-desktop': (),
+  'basic-m-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-basic-xl-desktopxl': (),
+  'secondary-xxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-weight-secondary-xs-mobile': (),
+  'secondary-xxxs-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-s-desktopxl': (),
+  'primary-m-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-body-xxl-mobile': (),
+  'secondary-l-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-secondary-xs-desktopxl': (),
+  'accent-xxs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-size-secondary-m-desktopxl': (),
+  'body-m-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-body-l-mobile': (),
+  'primary-xxl-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xl-desktopxl': (),
+  'secondary-xs-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-l-desktopxl': (),
+  'primary-l-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xxxl-mobile': (),
+  'body-xxl-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-primary-xl-desktop': (),
+  'body-l-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-basic-s-desktopxl': (),
+  'secondary-xxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-body-xl-mobile': (),
+  'secondary-l-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxxl-desktopxl': (),
+  'primary-xxl-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-basic-xxs-desktopxl': (),
+  'primary-l-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-basic-xxxl-mobile': (),
+  'body-xxl-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-secondary-xs-desktopxl': (),
+  'secondary-m-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xxs-desktop': (),
+  'body-l-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-accent-xxxl-mobile': (),
+  'basic-s-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-accent-xl-desktopxl': (),
+  'basic-xl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-primary-s-desktop': (),
+  'secondary-xl-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-body-xxl-mobile': (),
+  'basic-xxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxxl-desktopxl': (),
+  'secondary-xxxl-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-xxxl-desktop': (),
+  'body-s-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-secondary-xxxs-desktopxl': (),
+  'body-xxs-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-basic-xl-mobile': (),
+  'primary-s-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-secondary-xxl-desktopxl': (),
+  'primary-xxs-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-accent-xl-mobile': (),
+  'basic-xxxl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-s-desktopxl': (),
+  'accent-xxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxxs-mobile': (),
+  'accent-l-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-accent-xxs-desktopxl': (),
+  'secondary-m-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-basic-s-desktopxl': (),
+  'basic-s-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-primary-m-mobile': (),
+  'secondary-xxxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-basic-xxs-desktopxl': (),
+  'basic-xxxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-s-mobile': (),
+  'secondary-xs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-primary-xxs-desktop': (),
+  'accent-s-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-accent-xxxl-mobile': (),
+  'basic-xxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xs-mobile': (),
+  'body-s-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-primary-s-desktop': (),
+  'basic-xs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-xxs-mobile': (),
+  'accent-xxl-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-secondary-m-desktopxl': (),
+  'body-xxs-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxxs-mobile': (),
+  'primary-s-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-accent-xl-mobile': (),
+  'primary-xxs-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-xs-mobile': (),
+  'secondary-xxxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-xl-mobile': (),
+  'accent-xxl-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-primary-l-mobile': (),
+  'basic-xl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-xxl-desktop': (),
+  'basic-xs-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-basic-xs-mobile': (),
+  'basic-xxxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xxxl-mobile': (),
+  'accent-l-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-secondary-s-mobile': (),
+  'basic-xxxs-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-secondary-xxxl-desktopxl': (),
+  'body-xl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-basic-xxxs-mobile': (),
+  'accent-m-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-secondary-xxs-mobile': (),
+  'primary-xxxs-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-body-xxxs-desktop': (),
+  'body-xxxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxxl-mobile': (),
+  'primary-xl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xl-mobile': (),
+  'secondary-xxl-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxl-mobile': (),
+  'primary-xs-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-body-xs-desktop': (),
+  'body-xxxs-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-secondary-xl-desktopxl': (),
+  'primary-xxxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-l-desktop': (),
+  'secondary-l-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-xs-mobile': (),
+  'body-xs-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xxs-desktop': (),
+  'secondary-xl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-xxxs-mobile': (),
+  'accent-xs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-basic-xs-mobile': (),
+  'body-xs-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-body-s-desktop': (),
+  'basic-xxxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-basic-xxxs-mobile': (),
+  'secondary-m-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-m-mobile': (),
+  'basic-s-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-body-xxxs-desktop': (),
+  'primary-m-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-xxs-desktop': (),
+  'body-m-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-m-desktop': (),
+  'basic-xl-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-accent-xxs-desktop': (),
+  'basic-xxs-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-body-xs-desktop': (),
+  'basic-xs-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-basic-s-desktop': (),
+  'accent-xxxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-s-desktop': (),
+  'basic-xxs-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxl-desktop': (),
+  'basic-s-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-l-desktop': (),
+  'basic-xxxs-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-primary-xxl-desktopxl': (),
+  'accent-m-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-primary-l-mobile': (),
+  'primary-xxxs-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-xxxl-desktop': (),
+  'secondary-m-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxl-desktop': (),
+  'primary-xs-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-accent-xxs-desktop': (),
+  'body-xxxs-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-primary-l-desktopxl': (),
+  'secondary-xs-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-weight-primary-xxl-mobile': (),
+  'secondary-xxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-secondary-l-desktop': (),
+  'secondary-l-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-accent-s-desktop': (),
+  'secondary-xxxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-secondary-xl-desktop': (),
+  'basic-xxxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-weight-body-xxs-desktop': (),
+  'secondary-l-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxxs-desktop': (),
+  'secondary-xxl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-m-desktopxl': (),
+  'primary-xxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-basic-xxxs-desktopxl': (),
+  'basic-xl-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-basic-l-desktop': (),
+  'body-xxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-basic-xs-desktopxl': (),
+  'primary-l-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-xxxs-desktopxl': (),
+  'body-l-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-secondary-m-desktop': (),
+  'body-l-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxs-desktop': (),
+  'body-xxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-body-s-desktop': (),
+  'primary-l-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-xs-desktop': (),
+  'primary-xxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-basic-xxl-desktop': (),
+  'basic-s-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-xs-desktopxl': (),
+  'secondary-xs-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-secondary-xl-desktop': (),
+  'secondary-m-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-accent-m-desktop': (),
+  'body-m-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-secondary-xxxl-desktop': (),
+  'secondary-xxxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-s-desktop': (),
+  'primary-m-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-secondary-xxs-desktopxl': (),
+  'accent-xl-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-basic-xxxs-desktopxl': (),
+  'secondary-m-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-l-desktop': (),
+  'basic-s-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-xl-mobile': (),
+  'accent-xs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-secondary-s-desktopxl': (),
+  'basic-l-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-basic-m-desktop': (),
+  'basic-xxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-basic-xs-desktopxl': (),
+  'basic-xxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-xxl-desktop': (),
+  'accent-xxxl-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-body-xxxl-desktopxl': (),
+  'basic-xxl-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-basic-l-desktop': (),
+  'accent-xxxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-l-desktopxl': (),
+  'basic-m-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-basic-xxl-desktop': (),
+  'basic-xxxl-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-secondary-xxxl-mobile': (),
+  'accent-xl-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-xl-desktopxl': (),
+  'secondary-xxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxl-desktopxl': (),
+  'secondary-l-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xl-desktopxl': (),
+  'secondary-s-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxxl-desktopxl': (),
+  'secondary-s-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-weight-accent-s-mobile': (),
+  'secondary-xxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-primary-xxxs-desktop': (),
+  'secondary-xxs-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-basic-m-desktop': (),
+  'basic-l-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-primary-m-desktopxl': (),
+  'basic-xl-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-m-mobile': (),
+  'secondary-xxxl-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxxs-desktopxl': (),
+  'secondary-xl-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-xs-desktopxl': (),
+  'primary-xxxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-xs-desktop': (),
+  'body-xxxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-accent-xl-desktopxl': (),
+  'primary-xl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxxs-desktopxl': (),
+  'accent-xxxl-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-basic-xxs-mobile': (),
+  'basic-xxl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-xxs-desktopxl': (),
+  'body-xl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-basic-s-mobile': (),
+  'accent-s-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xs-desktopxl': (),
+  'secondary-xs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-xxs-mobile': (),
+  'secondary-xxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-accent-xxxl-desktopxl': (),
+  'secondary-xxxs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-m-desktop': (),
+  'secondary-s-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-s-desktopxl': (),
+  'secondary-s-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-l-mobile': (),
+  'basic-xs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-secondary-m-mobile': (),
+  'secondary-xxs-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xl-mobile': (),
+  'accent-xl-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xxxl-desktopxl': (),
+  'accent-xxs-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-xxl-mobile': (),
+  'basic-xxxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-secondary-xxxs-mobile': (),
+  'accent-xxxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-body-l-desktopxl': (),
+  'basic-m-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxxl-mobile': (),
+  'accent-xl-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-xl-mobile': (),
+  'basic-xxxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-xl-desktopxl': (),
+  'accent-s-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-secondary-xs-mobile': (),
+  'secondary-xxxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-xl-desktopxl': (),
+  'secondary-xl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-basic-xxs-mobile': (),
+  'basic-xl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-body-xxl-desktopxl': (),
+  'accent-xxxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxxl-mobile': (),
+  'secondary-xxxs-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-accent-xxxl-desktopxl': (),
+  'accent-xxs-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-basic-xxxl-desktopxl': (),
+  'secondary-xs-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-basic-s-mobile': (),
+  'basic-xxxl-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xl-desktopxl': (),
+  'accent-s-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-body-m-desktopxl': (),
+  'secondary-xs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-secondary-xxxs-mobile': (),
+  'accent-xxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-secondary-xxl-mobile': (),
+  'secondary-xxxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-s-desktop': (),
+  'basic-m-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-s-mobile': (),
+  'secondary-xxs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-secondary-xxxs-desktopxl': (),
+  'secondary-s-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxs-mobile': (),
+  'secondary-xxxs-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-body-l-desktopxl': (),
+  'accent-xxs-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-xs-mobile': (),
+  'secondary-xs-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-body-xxl-desktopxl': (),
+  'basic-xl-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-secondary-s-mobile': (),
+  'accent-s-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-xxs-desktop': (),
+  'secondary-xl-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-secondary-xs-desktopxl': (),
+  'secondary-xxxl-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-basic-xl-mobile': (),
+  'accent-xxxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-secondary-l-mobile': (),
+  'basic-xs-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxs-mobile': (),
+  'basic-xl-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-basic-xxxl-mobile': (),
+  'basic-xxl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-xl-desktop': (),
+  'secondary-xl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-primary-xl-desktopxl': (),
+  'secondary-xxxl-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-accent-xl-mobile': (),
+  'accent-xl-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-xxxl-desktopxl': (),
+  'accent-xl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-xxxl-mobile': (),
+  'basic-l-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-basic-xxxl-desktop': (),
+  'basic-xxxl-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-basic-xl-mobile': (),
+  'basic-xxxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-basic-xl-desktop': (),
+  'accent-xxxl-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-basic-xxxl-mobile': (),
+  'body-s-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-xxxl-desktop': (),
+  'body-xxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-body-m-desktopxl': (),
+  'primary-s-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-s-desktop': (),
+  'secondary-xxl-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-secondary-xxs-mobile': (),
+  'primary-xxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-xs-desktop': (),
+  'secondary-l-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxs-desktop': (),
+  'secondary-xxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-primary-xl-desktopxl': (),
+  'secondary-s-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-accent-s-desktop': (),
+  'secondary-s-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-primary-xxxl-desktopxl': (),
+  'basic-xxxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-weight-primary-s-desktopxl': (),
+  'secondary-xxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-secondary-xxxs-desktop': (),
+  'basic-xs-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-secondary-xxl-desktop': (),
+  'basic-m-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-s-mobile': (),
+  'basic-l-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-basic-xxxl-desktop': (),
+  'basic-xxs-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxs-desktop': (),
+  'accent-xxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-secondary-l-desktop': (),
+  'basic-s-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-basic-xl-desktop': (),
+  'accent-xl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-primary-xxs-desktopxl': (),
+  'secondary-m-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-secondary-xs-desktop': (),
+  'accent-l-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-xl-desktop': (),
+  'secondary-m-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxxl-desktop': (),
+  'secondary-xxl-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-secondary-xxxs-desktop': (),
+  'basic-xxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-secondary-xxl-desktop': (),
+  'basic-s-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-secondary-m-desktop': (),
+  'accent-xxxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xl-desktop': (),
+  'secondary-l-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-l-desktop': (),
+  'basic-xxs-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-basic-s-desktop': (),
+  'primary-xs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxxl-desktop': (),
+  'body-xxxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-basic-xxs-desktop': (),
+  'body-xs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-xs-mobile': (),
+  'secondary-m-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-body-xxxs-desktopxl': (),
+  'basic-xs-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-m-desktop': (),
+  'basic-s-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-primary-xxl-desktopxl': (),
+  'body-l-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-s-desktopxl': (),
+  'body-xs-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-xs-desktopxl': (),
+  'body-xxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-primary-l-desktopxl': (),
+  'primary-l-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-weight-accent-s-desktop': (),
+  'secondary-xxxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-basic-m-mobile': (),
+  'primary-xs-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-xxxs-mobile': (),
+  'basic-xxs-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-accent-xxs-desktop': (),
+  'body-xxxs-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-basic-s-desktop': (),
+  'secondary-xs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-m-mobile': (),
+  'primary-xxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxs-desktopxl': (),
+  'primary-xxxs-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-body-xs-desktopxl': (),
+  'accent-m-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxxs-desktopxl': (),
+  'basic-xxs-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-basic-xxs-desktop': (),
+  'basic-s-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-primary-m-desktopxl': (),
+  'secondary-l-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-primary-xxl-desktopxl': (),
+  'secondary-m-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-basic-xxl-mobile': (),
+  'secondary-xxl-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-primary-l-desktopxl': (),
+  'basic-xxxs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-secondary-xl-desktop': (),
+  'accent-m-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-basic-l-mobile': (),
+  'primary-xxxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-xxl-mobile': (),
+  'accent-xs-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-accent-xs-desktopxl': (),
+  'secondary-l-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-accent-l-mobile': (),
+  'basic-xxxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-basic-m-mobile': (),
+  'secondary-xxl-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-accent-xxxs-desktopxl': (),
+  'accent-xxl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-secondary-xxxl-desktop': (),
+  'accent-xxxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xxxs-desktopxl': (),
+  'body-m-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-body-xxxl-desktopxl': (),
+  'body-l-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-basic-xxl-mobile': (),
+  'primary-m-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xs-mobile': (),
+  'body-xxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-weight-body-s-mobile': (),
+  'primary-l-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxs-mobile': (),
+  'primary-xxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-body-s-desktopxl': (),
+  'accent-l-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-m-mobile': (),
+  'basic-xl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-body-xl-desktopxl': (),
+  'primary-m-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-basic-l-mobile': (),
+  'basic-xl-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-accent-xs-desktopxl': (),
+  'secondary-xxxl-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-basic-xs-desktopxl': (),
+  'body-xs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-body-xxs-desktopxl': (),
+  'secondary-xl-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxxs-mobile': (),
+  'body-xxxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xxs-mobile': (),
+  'primary-xxxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-accent-xxxs-desktopxl': (),
+  'primary-xs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-xxxs-desktopxl': (),
+  'primary-xxxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-s-mobile': (),
+  'primary-xl-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-secondary-xxxl-mobile': (),
+  'body-xxxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xs-desktopxl': (),
+  'accent-xs-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-m-mobile': (),
+  'primary-xxs-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-m-desktopxl': (),
+  'accent-m-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-secondary-xl-mobile': (),
+  'basic-xxxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-xxl-desktopxl': (),
+  'body-xl-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-body-s-desktopxl': (),
+  'primary-s-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-body-xl-desktopxl': (),
+  'body-xxs-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-l-desktop': (),
+  'body-s-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-accent-xxs-mobile': (),
+  'basic-xs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-l-desktopxl': (),
+  'basic-xxxl-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-body-xxs-desktopxl': (),
+  'accent-xxxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-accent-l-desktopxl': (),
+  'body-m-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxl-mobile': (),
+  'accent-xxs-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xxl-desktopxl': (),
+  'basic-xxxl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-xxxl-mobile': (),
+  'accent-xxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-accent-l-mobile': (),
+  'body-l-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-xxl-desktop': (),
+  'basic-xl-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxl-mobile': (),
+  'body-xxl-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-xl-mobile': (),
+  'primary-l-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-body-l-desktopxl': (),
+  'basic-l-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-accent-s-mobile': (),
+  'primary-xxl-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-body-xxxl-desktopxl': (),
+  'secondary-xxxl-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-l-mobile': (),
+  'secondary-xl-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-basic-xxl-desktopxl': (),
+  'primary-xxxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-accent-m-desktopxl': (),
+  'accent-s-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-body-xs-mobile': (),
+  'primary-xl-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-basic-xs-desktop': (),
+  'body-xxxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-accent-xxs-mobile': (),
+  'accent-l-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-m-mobile': (),
+  'basic-xxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-weight-accent-xxxs-desktop': (),
+  'body-xl-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-weight-basic-xxs-mobile': (),
+  'secondary-xs-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-accent-l-desktopxl': (),
+  'secondary-xxxs-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-body-xxxs-mobile': (),
+  'secondary-xs-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-primary-xs-desktopxl': (),
+  'secondary-xxxs-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-accent-xs-desktop': (),
+  'accent-xs-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-body-s-mobile': (),
+  'primary-xxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-primary-xxxs-desktopxl': (),
+  'primary-s-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-body-m-desktopxl': (),
+  'body-xxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-body-xxs-mobile': (),
+  'body-s-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-s-mobile': (),
+  'accent-xxs-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-accent-xxl-desktopxl': (),
+  'basic-xxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-m-desktopxl': (),
+  'accent-xxxs-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-basic-xxxs-desktop': (),
+  'basic-s-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-s-mobile': (),
+  'secondary-m-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-primary-m-desktop': (),
+  'body-m-desktop-font-weight': (),
   /* Typography styles. */
-  'font-size-body-xs-mobile': (),
+  'basic-m-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-basic-xs-desktop': (),
+  'primary-m-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-body-xxxl-desktop': (),
+  'accent-s-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-primary-xs-desktopxl': (),
+  'basic-m-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xxxs-desktopxl': (),
+  'secondary-xxs-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-body-xxxs-mobile': (),
+  'secondary-s-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-l-desktop': (),
+  'primary-xxxl-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-xl-desktop': (),
+  'primary-xl-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-l-desktopxl': (),
+  'body-xxxl-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-body-xxl-desktopxl': (),
+  'body-xl-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-secondary-xxl-mobile': (),
+  'body-l-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxxl-desktopxl': (),
+  'body-xxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxl-desktop': (),
+  'primary-l-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xl-desktop': (),
+  'primary-xxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxxl-desktop': (),
+  'secondary-l-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-secondary-xxs-desktop': (),
+  'secondary-xxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-size-basic-xxxs-desktop': (),
+  'body-m-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxl-desktopxl': (),
+  'primary-m-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-l-desktopxl': (),
+  'basic-m-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-accent-m-desktopxl': (),
+  'basic-xxl-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-secondary-s-desktop': (),
+  'accent-xl-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-secondary-l-mobile': (),
+  'secondary-xxs-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-primary-xl-desktopxl': (),
+  'secondary-s-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxxs-desktop': (),
+  'accent-xxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-s-mobile': (),
+  'accent-xs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-primary-xxs-mobile': (),
+  'basic-l-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-accent-xs-desktop': (),
+  'accent-xxxl-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-accent-xl-desktop': (),
+  'accent-s-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxxs-desktop': (),
+  'accent-xxxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-secondary-xxs-desktop': (),
+  'primary-xxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-weight-body-m-desktopxl': (),
+  'secondary-xl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xs-desktop': (),
+  'secondary-xxxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-accent-xxxl-desktop': (),
+  'body-xl-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-secondary-s-desktop': (),
+  'basic-xxl-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-m-desktopxl': (),
+  'body-xxxl-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-m-desktop': (),
+  'primary-xl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-primary-xxxl-mobile': (),
+  'primary-xxxl-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-body-xxxl-desktop': (),
+  'accent-xl-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-primary-s-mobile': (),
+  'basic-l-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-primary-xxs-desktopxl': (),
+  'primary-xxxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-primary-xxs-mobile': (),
+  'primary-xl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-body-l-desktop': (),
+  'body-xxxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-primary-s-desktopxl': (),
+  'accent-xxxl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-accent-xl-desktop': (),
+  'body-xl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-primary-xxxl-desktopxl': (),
+  'secondary-xxxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-xl-desktop': (),
+  'body-s-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-body-xxl-desktop': (),
+  'secondary-xl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-primary-xl-mobile': (),
+  'body-xxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'line-height-accent-xxxl-desktop': (),
+  'primary-s-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-weight-basic-xxxl-desktop': (),
+  'accent-s-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-primary-xl-desktopxl': (),
+  'accent-xxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xl-desktop': (),
+  'accent-xxxs-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-s-desktopxl': (),
+  'accent-xxs-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-xxxs-desktop': (),
+  'accent-l-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-body-l-desktop': (),
+  'accent-xs-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-body-xxl-desktop': (),
+  'body-s-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-m-mobile': (),
+  'primary-m-mobile-font-weight': (),
   /* Typography styles. */
-  'font-weight-secondary-xs-desktop': (),
+  'body-xxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-weight-body-m-mobile': (),
+  'primary-s-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-primary-xxs-desktopxl': (),
+  'primary-xxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-body-m-desktop': (),
+  'body-m-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-body-xs-desktopxl': (),
+  'body-xxxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-weight-secondary-l-desktopxl': (),
+  'accent-xxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-basic-l-mobile': (),
+  'primary-xs-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xxxs-mobile': (),
+  'body-xs-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xs-mobile': (),
+  'secondary-xxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-xl-desktop': (),
+  'basic-xs-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-primary-xxxl-desktop': (),
+  'secondary-l-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-xl-mobile': (),
+  'body-xl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-secondary-xxl-desktopxl': (),
+  'primary-xxl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-accent-m-mobile': (),
+  'body-xxxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-l-mobile': (),
+  'primary-xl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxl-mobile': (),
+  'body-xs-mobile-font-size': (),
   /* Typography styles. */
-  'font-size-body-xxxs-desktopxl': (),
+  'primary-l-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxxl-mobile': (),
+  'body-xxl-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-body-m-desktop': (),
+  'body-xxxs-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-body-xxl-mobile': (),
+  'primary-xxxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-s-desktopxl': (),
+  'primary-xs-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-m-mobile': (),
+  'body-l-mobile-font-weight': (),
   /* Typography styles. */
-  'line-height-accent-s-desktopxl': (),
+  'primary-xxxs-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-primary-xxxs-mobile': (),
+  'accent-m-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-primary-xs-mobile': (),
+  'accent-l-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-primary-xl-desktop': (),
+  'basic-xxxs-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-primary-xxxl-desktop': (),
+  'accent-m-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-accent-l-mobile': (),
+  'primary-xxxs-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-body-xxs-desktopxl': (),
+  'basic-xs-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-primary-s-desktop': (),
+  'body-xxs-desktop-font-weight': (),
   /* Typography styles. */
-  'line-height-accent-m-mobile': (),
+  'primary-s-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-body-s-desktopxl': (),
+  'primary-xxs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-basic-m-mobile': (),
+  'accent-xxxs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-accent-xxl-mobile': (),
+  'body-xs-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-body-xxxs-desktopxl': (),
+  'body-xxxs-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-basic-xxs-desktopxl': (),
+  'primary-xs-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-secondary-m-desktopxl': (),
+  'primary-xxxs-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-accent-xxs-desktopxl': (),
+  'accent-m-mobile-line-height': (),
   /* Typography styles. */
-  'font-weight-primary-xxs-desktop': (),
+  'accent-xxl-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-body-xs-desktopxl': (),
+  'secondary-m-desktopxl-font-weight': (),
   /* Typography styles. */
-  'font-size-accent-s-desktopxl': (),
+  'accent-xs-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-secondary-xl-desktopxl': (),
+  'basic-s-desktopxl-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-body-xxl-mobile': (),
+  'basic-xxxs-desktop-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-xxl-desktopxl': (),
+  'accent-m-desktopxl-line-height': (),
   /* Typography styles. */
-  'letter-spacing-accent-l-desktopxl': (),
+  'primary-xxxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-accent-l-mobile': (),
+  'primary-xs-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-secondary-xxxl-desktopxl': (),
+  'body-xxxs-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-body-xxs-mobile': (),
+  'primary-m-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-l-mobile': (),
+  'basic-xxs-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-body-xl-mobile': (),
+  'accent-l-mobile-font-size': (),
   /* Typography styles. */
-  'letter-spacing-accent-xxl-desktopxl': (),
+  'body-xs-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-body-s-mobile': (),
+  'basic-m-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-xxl-mobile': (),
+  'body-s-desktop-font-weight': (),
   /* Typography styles. */
-  'font-weight-basic-xxl-mobile': (),
+  'body-m-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-size-accent-xxs-desktopxl': (),
+  'primary-xxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-body-xxxl-mobile': (),
+  'basic-l-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-body-l-mobile': (),
+  'accent-xxl-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-l-desktopxl': (),
+  'accent-xxl-desktop-font-weight': (),
   /* Typography styles. */
-  'font-size-secondary-xxxl-desktopxl': (),
+  'primary-l-desktop-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-basic-s-desktopxl': (),
+  'body-xxl-desktop-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-basic-xxxs-mobile': (),
+  'body-l-desktop-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-xxxs-mobile': (),
+  'primary-xxs-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-body-xxxs-desktop': (),
+  'primary-s-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-body-xxs-desktopxl': (),
+  'body-xxs-mobile-font-size': (),
   /* Typography styles. */
-  'line-height-body-xxs-mobile': (),
+  'accent-l-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxxs-desktopxl': (),
+  'body-s-mobile-font-size': (),
   /* Typography styles. */
-  'font-weight-basic-xs-mobile': (),
+  'accent-l-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-primary-xxl-desktop': (),
+  'basic-xxl-desktopxl-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-primary-s-desktop': (),
+  'primary-xxxs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-size-body-xl-mobile': (),
+  'primary-xxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'line-height-accent-xs-mobile': (),
+  'body-xxxs-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-xs-desktop': (),
+  'primary-xs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-size-primary-l-desktop': (),
+  'body-xs-desktop-font-weight': (),
   /* Typography styles. */
-  'font-size-basic-l-desktopxl': (),
+  'primary-xxs-mobile-line-height': (),
   /* Typography styles. */
-  'line-height-body-s-mobile': (),
+  'body-xxs-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-secondary-m-desktopxl': (),
+  'primary-s-mobile-line-height': (),
   /* Typography styles. */
-  'font-size-body-xxxl-mobile': (),
+  'body-s-mobile-line-height': (),
   /* Typography styles. */
-  'letter-spacing-body-xxxs-mobile': (),
+  'body-l-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxs-desktopxl': (),
+  'primary-l-desktop-font-size': (),
   /* Typography styles. */
-  'font-weight-body-s-desktopxl': (),
+  'body-xxl-desktop-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xs-desktopxl': (),
+  'basic-l-desktopxl-font-size': (),
   /* Typography styles. */
-  'font-size-basic-xxl-desktopxl': (),
+  'primary-xxl-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-primary-m-mobile': (),
+  'basic-xs-mobile-font-weight': (),
   /* Typography styles. */
-  'font-size-secondary-xl-desktopxl': (),
+  'basic-xxl-desktopxl-font-size': (),
   /* Typography styles. */
-  'letter-spacing-primary-xxs-desktop': (),
+  'body-s-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-body-xs-desktop': (),
+  'basic-xxxs-mobile-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-basic-xxxs-desktop': (),
+  'primary-s-mobile-letter-spacing': (),
   /* Typography styles. */
-  'letter-spacing-body-xs-mobile': (),
+  'accent-m-desktop-font-weight': (),
   /* Typography styles. */
-  'letter-spacing-accent-m-desktopxl': (),
+  'body-xxs-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-accent-xxxs-mobile': (),
+  'primary-m-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-basic-m-desktopxl': (),
+  'accent-xxl-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-weight-accent-l-desktopxl': (),
+  'body-l-desktop-line-height': (),
   /* Typography styles. */
-  'font-size-primary-m-desktop': (),
+  'body-xxl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-primary-xxl-desktop': (),
+  'primary-l-desktop-line-height': (),
   /* Typography styles. */
-  'font-weight-accent-xxl-desktopxl': (),
+  'basic-l-desktopxl-line-height': (),
   /* Typography styles. */
-  'font-size-accent-xs-mobile': (),
+  'primary-xxl-desktop-line-height': (),
   /* Typography styles. */
-  'line-height-primary-l-desktop': (),
+  'basic-xxxl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-basic-l-desktopxl': (),
+  'accent-xs-desktop-font-size': (),
   /* Typography styles. */
-  'line-height-basic-xxl-desktopxl': (),
+  'accent-l-mobile-letter-spacing': (),
   /* Typography styles. */
-  'font-size-accent-xs-desktop': (),
+  'basic-xxl-desktopxl-line-height': (),
   /* Typography styles. */
-  'line-height-primary-l-mobile': (),
+  'basic-xl-desktopxl-font-weight': (),
   /* Typography styles. */
-  'line-height-primary-xxl-mobile': (),
+  'accent-xxxs-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-primary-m-mobile': (),
+  'body-m-desktop-font-size': (),
   /* Typography styles. */
-  'font-size-accent-xxxs-desktop': (),
+  'basic-m-desktopxl-font-size': (),
 );

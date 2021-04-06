@@ -10,7 +10,7 @@ const data = families.reduce( ( acc, curr ) => {
 
 			breakpoints.map( breakpoint => {
 
-				acc.props[ `${property}_${curr}_${size}_${breakpoint}`.toUpperCase() ] = {
+				acc.props[ `${curr}_${size}_${breakpoint}_${property}`.toUpperCase() ] = {
 					"value": ""
 				};
 			});
