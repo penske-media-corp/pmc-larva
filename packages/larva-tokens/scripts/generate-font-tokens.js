@@ -1,8 +1,11 @@
 const fs = require( 'fs-extra' );
 const path = require( 'path' );
 
-const { tokensByProperty } = require('../lib/font-tokens' );
+const { kebabify } = require('../lib/utils' );
+const { properties, tokensFileContentsByProperty } = require('../lib/font-data' );
 
 properties.forEach( ( property ) => {
-	fs.writeFileSync( path.join( __dirname, `../src/base/generated/${property}.json` ), JSON.stringify( tokensByProperty[property] ) );
+	const fileName = kebabify(property);
+
+	fs.writeFileSync( path.join( __dirname, `../src/base/generated/${fileName}.json` ), JSON.stringify( tokensFileContentsByProperty[property] ) );
 });
