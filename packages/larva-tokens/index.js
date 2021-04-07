@@ -1,5 +1,5 @@
-const fontSelectors = require( './lib/font-selectors' );
+const { groupedSelectors } = require( './lib/font-data' );
 
 module.exports = {
-	fontSelectors,
+	fontSelectors: groupedSelectors,
 };

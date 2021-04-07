@@ -1,5 +1,4 @@
-const fontSelectors = require( '../../lib/font-selectors' );
-const { allAllowedNames, allAllowedTokens } = require( '../../lib/font-data' );
+const { allSelectors, allAllowedNames, allAllowedTokens, groupedSelectors } = require( '../../lib/font-data' );
 const { tokensByProperty } = require( '../../lib/font-tokens' );
 
 describe( 'Font generators', () => {
@@ -26,9 +25,29 @@ describe( 'Font generators', () => {
 	});
 
 	it( 'should transform allowed names into selectors', () => {
-		expect(fontSelectors['primary-regular']).toContain( 'lrv-a-font-primary-regular-xxs' );
-		expect(fontSelectors['secondary']).toContain( 'lrv-a-font-secondary-l' );
-		expect(fontSelectors['body-regular']).toContain( 'lrv-a-font-body-regular-xxs' );
+		[
+			'lrv-a-font-primary-regular-xxs',
+			'lrv-a-font-secondary-l',
+			'lrv-a-font-body-regular-xxs',
+			'lrv-a-font-basic-s'
+		].forEach( selector => {
+			expect(allSelectors).toContain( selector );
+		});
+	});
+
+	it( 'should group selectors', () => {
+		[
+			'secondary',
+			'primary-regular',
+			'basic'
+		].forEach( name => {
+			expect(groupedSelectors).toHaveProperty( name );
+		});
+	});
+
+	it( 'should not contain selectors with a weight in the no-weight group', () => {
+		expect(groupedSelectors['secondary'].includes('lrv-a-font-secondary-bold-m')).toBe(false);
+		expect(groupedSelectors['basic'].includes('lrv-a-font-basic-bold-m')).toBe(false);
 	});
 
 	it.skip( 'should define tokens JSON for line-height', () => {
