@@ -1,17 +1,6 @@
-const { allSelectors, allAllowedNames, allAllowedTokens, groupedSelectors } = require( '../../lib/font-data' );
-const { tokensByProperty } = require( '../../lib/font-tokens' );
+const { allSelectors, allAllowedNames, allAllowedTokens, groupedSelectors, tokensFileContentsByProperty } = require( '../../lib/font-data' );
 
-describe( 'Font generators', () => {
-	it( 'should assemble all allowed tokens for font styles', () => {
-		[
-			'primary_regular_xxl_desktop',
-			'body_m_mobile',
-			'accent_medium_m_desktopxl',
-			'basic_m_mobile',
-		].forEach( name => {
-			expect(allAllowedTokens).toContain( name );
-		});
-	});
+describe( 'Font Data', () => {
 
 	it( 'should assemble all allowed names for selectors', () => {
 		[
@@ -50,8 +39,20 @@ describe( 'Font generators', () => {
 		expect(groupedSelectors['basic'].includes('lrv-a-font-basic-bold-m')).toBe(false);
 	});
 
-	it.skip( 'should define tokens JSON for line-height', () => {
-		expect(tokensByProperty['line-height'] ).toBeDefined();
+	it( 'should allow tokens for every possible decalration', () => {
+		[
+			'PRIMARY_REGULAR_S_LETTER_SPACING_DESKTOP',
+			'ACCENT_M_FONT_SIZE_DESKTOPXL',
+			'SECONDARY_MEDIUM_XS_LETTER_SPACING_DESKTOP',
+			'BASIC_REGULAR_XXXL_FONT_SIZE_BASE',
+		].forEach( name => {
+			expect(allAllowedTokens).toContain( name );
+		});
+	});
+
+	it( 'should create an object with tokens file contents', () => {
+		expect(tokensFileContentsByProperty['line_height'].props ).toHaveProperty( 'PRIMARY_REGULAR_S_LINE_HEIGHT_DESKTOP' );
+		expect(tokensFileContentsByProperty['font_size'].props ).toHaveProperty( 'SECONDARY_XXS_FONT_SIZE_BASE' );
 	});
 
 });

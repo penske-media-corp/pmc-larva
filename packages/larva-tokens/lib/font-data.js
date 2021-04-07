@@ -28,7 +28,7 @@ export const sizes = [
 ];
 
 export const breakpoints = [
-	'mobile',
+	'base',
 	'desktop',
 	'desktopxl'
 ];
@@ -44,10 +44,6 @@ export const allAllowedNames = families.map( name => {
 	return weights.map( weight => {
 		return sizes.map( size => `${name}_${weight ? weight + '_' : ''}${size}` ).flat();
 	}).flat();
-}).flat();
-
-export const allAllowedTokens = allAllowedNames.map( name => {
-		return breakpoints.map( breakpoint => `${name}_${breakpoint}` ).flat();
 }).flat();
 
 export const PREFIX = 'lrv-a-font';
@@ -82,3 +78,42 @@ export const groupedSelectors = (() => {
 		return groupsObj;
 	}, {} );
 })();
+
+
+/**
+ * Tokens Data
+ */
+
+export const allAllowedTokens = allAllowedNames.map( name => {
+	return properties.map( property => {
+		return breakpoints.map( breakpoint => `${name}_${property}_${breakpoint}`.toUpperCase() ).flat();
+	}).flat();
+}).flat();
+
+export const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currProperty ) => {
+
+	const tokenNames = ( () => {
+		return allAllowedNames.map( name => {
+			return breakpoints.map( breakpoint => `${name}_${currProperty}_${breakpoint}`.toUpperCase() ).flat();
+		}).flat();
+	})();
+
+	const tokens = tokenNames.reduce( ( tokensAcc, currToken ) => {
+		tokensAcc[currToken] = {
+			"value": ""
+		};
+
+		return tokensAcc;
+	}, {});
+
+	propertiesAcc[currProperty] = {
+		"global": {
+			"category": `${kebabify(currProperty)}`,
+			"type": "number"
+		},
+		"props": { ... tokens }
+	};
+
+	return propertiesAcc;
+
+}, {});
