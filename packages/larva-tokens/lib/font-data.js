@@ -9,10 +9,10 @@ const families = [
 ];
 
 const weights = [
+	'',
 	'regular',
 	'bold',
 	'medium',
-	''
 ];
 
 const sizes = [
