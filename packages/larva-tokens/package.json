@@ -18,13 +18,15 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "node ./lib/font-tokens.js && gulp"
+    "build": "gulp"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
+    "fs-extra": "^9.1.0",
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
     "gulp-theo": "^2.0.1",
     "lodash.template": ">=4.5.0",
     "theo": "^8.1.5"
