@@ -1,6 +1,6 @@
 const { kebabify } = require( './utils' );
 
-export const families = [
+const families = [
 	'primary',
 	'secondary',
 	'accent',
@@ -8,14 +8,14 @@ export const families = [
 	'basic'
 ];
 
-export const weights = [
+const weights = [
 	'regular',
 	'bold',
 	'medium',
 	''
 ];
 
-export const sizes = [
+const sizes = [
 	'xxxl',
 	'xxl',
 	'xl',
@@ -27,35 +27,35 @@ export const sizes = [
 	'xxxs'
 ];
 
-export const breakpoints = [
+const breakpoints = [
 	'base',
 	'desktop',
 	'desktopxl'
 ];
 
-export const properties = [
+const properties = [
 	'font_size',
 	'line_height',
 	'letter_spacing',
 	'font_weight'
 ];
 
-export const allAllowedNames = families.map( name => {
+const allAllowedNames = families.map( name => {
 	return weights.map( weight => {
 		return sizes.map( size => `${name}_${weight ? weight + '_' : ''}${size}` ).flat();
 	}).flat();
 }).flat();
 
-export const PREFIX = 'lrv-a-font';
+const PREFIX = 'lrv-a-font';
 
-export const allSelectors = allAllowedNames.reduce( ( acc, curr ) => {
+const allSelectors = allAllowedNames.reduce( ( acc, curr ) => {
 	const selector = PREFIX.concat( '-', kebabify(curr) );
 	acc.push( selector );
 
 	return acc;
 }, [] );
 
-export const groupedSelectors = (() => {
+const groupedSelectors = (() => {
 	const groups = families.map( name => {
 		return weights.map( weight => `${name}${weight ?  '-' + weight : ''}` );
 	}).flat();
@@ -84,13 +84,13 @@ export const groupedSelectors = (() => {
  * Tokens Data
  */
 
-export const allAllowedTokens = allAllowedNames.map( name => {
+const allAllowedTokens = allAllowedNames.map( name => {
 	return properties.map( property => {
 		return breakpoints.map( breakpoint => `${name}_${property}_${breakpoint}`.toUpperCase() ).flat();
 	}).flat();
 }).flat();
 
-export const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currProperty ) => {
+const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currProperty ) => {
 
 	const tokenNames = ( () => {
 		return allAllowedNames.map( name => {
@@ -117,3 +117,13 @@ export const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, 
 	return propertiesAcc;
 
 }, {});
+
+
+module.exports = {
+	properties,
+	groupedSelectors,
+	tokensFileContentsByProperty,
+	allSelectors,
+	allAllowedNames,
+	allAllowedTokens,
+};

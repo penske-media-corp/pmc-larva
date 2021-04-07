@@ -1,4 +1,4 @@
-export const kebabify = ( name ) => {
+const kebabify = ( name ) => {
 	const kebabCase = name.split('');
 
 	return kebabCase.reduce( ( a, b ) => {
@@ -7,4 +7,8 @@ export const kebabify = ( name ) => {
 		}
 		return a.toLowerCase() + b.toLowerCase();
 	});
+};
+
+module.exports = {
+	kebabify,
 };
