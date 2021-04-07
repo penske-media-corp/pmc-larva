@@ -1,11 +1,13 @@
-const { families, sizes } = require( './font-data.json' );
-const PREFIX = 'lrv-a-font';
+const { kebabify } = require( './utils' );
 
-const possibleNames = families.map( name => `${PREFIX}-${name}` )
-							  .map( name => sizes.map( size => `${name}-${size}` ) );
+const { allAllowedNames, familyGroups } = require( './font-data' );
+// const PREFIX = 'lrv-a-font';
 
-const groupedNames = possibleNames.reduce( ( acc, curr ) => {
-	const slug = curr[0].split('-')[3];
+// const prefixedNames = allAllowedNames.map( name => `${PREFIX}-${kebabify(name)}` );
+
+const groupedNames = allAllowedNames.reduce( ( acc, curr ) => {
+	const slug = curr.split('_').pop();
+	console.log( slug );
 
 	acc[slug] = [ ...curr];
 

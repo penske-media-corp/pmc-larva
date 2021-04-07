@@ -1,30 +1,22 @@
-const fs = require( 'fs-extra' );
-const path = require( 'path' );
-const { families, sizes, properties, breakpoints } = require( './font-data.json' );
+const { allAllowedNames, properties } = require( './font-data' );
 
-const data = families.reduce( ( acc, curr ) => {
+export const tokensByProperty = properties.reduce( ( propertiesAcc, currProperty ) => {
 
-	sizes.map( size => {
+	const data = allAllowedNames.reduce( ( namesAcc, currName ) => {
+		namesAcc.props[ `${currName}_${currProperty}`.toUpperCase() ] = {
+			"value": ""
+		};
 
-		properties.map( property => {
+		return namesAcc;
+	}, {
+		"global": {
+			"category": `"${currProperty}"`,
+			"type": "number"
+		},
+		"props": {}
+	}, {});
 
-			breakpoints.map( breakpoint => {
+	propertiesAcc[currProperty] = {...data};
 
-				acc.props[ `${curr}_${size}_${breakpoint}_${property}`.toUpperCase() ] = {
-					"value": ""
-				};
-			});
-		});
-	})
-
-	return acc;
-}, {
-	"global": {
-		"category": "font-size",
-		"type": "array",
-		"comment": "Typography styles."
-	},
-	"props": {}
-});
-
-fs.writeFileSync( path.join( __dirname, '../src/base/generated/typography.json' ), JSON.stringify( data ) );
+	return propertiesAcc;
+}, {});
