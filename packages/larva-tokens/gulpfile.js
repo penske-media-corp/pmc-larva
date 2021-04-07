@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const theo = require('gulp-theo')
-const gulpClean = require( 'gulp-clean' );
+const del = require( 'del' );
 const { mkdirpSync } = require( 'fs-extra' );
 
 const { kebabify } = require( './lib/utils' );
@@ -13,13 +13,17 @@ const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
  * @param {Function} done Function called upon completion.
  */
  const clean = ( dest, done ) => {
-	gulp.src( dest, { read: false } ).pipe( gulpClean() );
+	del( dest );
 
 	mkdirpSync( dest );
 	done();
 };
 
-const basicTokenBuild = ( format, dest = './build' ) => {
+const basicTokenBuild = (
+	format,
+	done,
+	dest = './build'
+) => {
 	gulp.src( [
 		'src/brands/*.json',
 	] )
@@ -30,13 +34,17 @@ const basicTokenBuild = ( format, dest = './build' ) => {
 			}
 		}))
 		.pipe(gulp.dest( dest ));
+
+		done();
 };
 
 gulp.task('default', ( done ) => {
 
 	clean( './build', () => {
 		formats.forEach( format => {
-			basicTokenBuild( format )
+			basicTokenBuild( format, () => {
+				console.log( `Built tokens in ${format}`);
+			} )
 		});
 	});
 
