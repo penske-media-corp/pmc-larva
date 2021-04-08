@@ -51,6 +51,9 @@ $indiewire-map: (
   'font-family-accent': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
   /* Used for margins and padding only. */
   'spacing-00': (0),
   /* Used for margins and padding only. */
@@ -67,9 +70,6 @@ $indiewire-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
-  'font-weight-light': (300),
-  'font-weight-normal': (400),
-  'font-weight-bold': (700),
   'background-color-brand-accent': (rgb(251, 75, 34)),
   'border-color-brand-accent': (rgb(251, 75, 34)),
   'color-brand-accent': (rgb(251, 75, 34)),

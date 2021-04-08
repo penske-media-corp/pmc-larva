@@ -43,6 +43,9 @@
   "FONT_FAMILY_ACCENT": "Verdana, sans-serif",
   "FONT_FAMILY_BODY": "'Helvetica Neue', Helvetica, Arial, sans-serif",
   "FONT_FAMILY_BASIC": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+  "FONT_WEIGHT_LIGHT": "300",
+  "FONT_WEIGHT_NORMAL": "400",
+  "FONT_WEIGHT_BOLD": "700",
   "SPACING_00": "0",
   "SPACING_025": "0.25rem",
   "SPACING_050": "0.5rem",
@@ -51,8 +54,5 @@
   "SPACING_125": "1.25rem",
   "SPACING_150": "1.5rem",
   "SPACING_2": "2rem",
-  "FONT_WEIGHT_LIGHT": "300",
-  "FONT_WEIGHT_NORMAL": "400",
-  "FONT_WEIGHT_BOLD": "700",
   "BACKGROUND_COLOR_BRAND_ACCENT": "rgb(240, 241, 242)"
 }

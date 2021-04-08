@@ -539,6 +539,27 @@
       "originalValue": "'Helvetica Neue', sans-serif",
       "name": "FONT_FAMILY_BASIC"
     },
+    "FONT_WEIGHT_LIGHT": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "300",
+      "originalValue": "300",
+      "name": "FONT_WEIGHT_LIGHT"
+    },
+    "FONT_WEIGHT_NORMAL": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "400",
+      "originalValue": "400",
+      "name": "FONT_WEIGHT_NORMAL"
+    },
+    "FONT_WEIGHT_BOLD": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "FONT_WEIGHT_BOLD"
+    },
     "SPACING_00": {
       "category": "spacing",
       "type": "unit",
@@ -602,27 +623,6 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
-    },
-    "FONT_WEIGHT_LIGHT": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "FONT_WEIGHT_LIGHT"
-    },
-    "FONT_WEIGHT_NORMAL": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "400",
-      "originalValue": "400",
-      "name": "FONT_WEIGHT_NORMAL"
-    },
-    "FONT_WEIGHT_BOLD": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "FONT_WEIGHT_BOLD"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT_SECONDARY": {
       "value": "rgb(250, 220, 171)",

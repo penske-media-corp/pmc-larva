@@ -50,6 +50,9 @@
   --font-family-accent: Verdana, sans-serif;
   --font-family-body: 'Times New Roman', serif;
   --font-family-basic: Helvetica, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
@@ -66,9 +69,6 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
   --background-color-brand-accent: rgb(1, 165, 237);
   --color-brand-accent: rgb(1, 165, 237);
 }

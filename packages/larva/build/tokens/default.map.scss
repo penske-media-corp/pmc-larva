@@ -53,6 +53,9 @@ $default-map: (
   'font-family-accent': (Verdana, sans-serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
   /* Used for margins and padding only. */
   'spacing-00': (0),
   /* Used for margins and padding only. */
@@ -69,9 +72,6 @@ $default-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
-  'font-weight-light': (300),
-  'font-weight-normal': (400),
-  'font-weight-bold': (700),
   'primary-medium-xl-font-size-base': (1em),
   'basic-s-font-size-desktopxl': (1em),
   'secondary-m-font-size-desktopxl': (1em),

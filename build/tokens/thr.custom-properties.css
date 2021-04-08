@@ -51,6 +51,9 @@
   --font-family-accent: Helvetica, sans-serif;
   --font-family-body: 'kepler-std', serif;
   --font-family-basic: Georgia, serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
@@ -67,9 +70,6 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
   --color-grey-darkest: rgb(50, 50, 50);
   --background-color-brand-accent: rgb(16, 16, 16);
   --border-color-brand-accent: rgb(16, 16, 16);

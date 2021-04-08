@@ -53,6 +53,9 @@
   --font-family-accent: Verdana, sans-serif;
   --font-family-body: Arial, sans-serif;
   --font-family-basic: Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
@@ -69,9 +72,6 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
   --line-height-copy: 1.5;
   --line-height-large: 1.85;
   --line-height-normal: 1.35;

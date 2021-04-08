@@ -51,6 +51,9 @@ $artnews-map: (
   'font-family-accent': (Verdana, sans-serif),
   'font-family-body': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'font-family-basic': (Helvetica, sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
   /* Used for margins and padding only. */
   'spacing-00': (0),
   /* Used for margins and padding only. */
@@ -67,7 +70,4 @@ $artnews-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
-  'font-weight-light': (300),
-  'font-weight-normal': (400),
-  'font-weight-bold': (700),
 );
