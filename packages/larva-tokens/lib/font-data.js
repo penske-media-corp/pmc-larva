@@ -37,10 +37,10 @@ const breakpoints = [
  * Property and its default value
  */
 const tokenDefaults = {
-	'font_size': '',
-	'line_height': '',
-	'letter_spacing': '',
-	'font_weight': ''
+	'font_size': '100%',
+	'line_height': 'inherit',
+	'letter_spacing': 'normal',
+	'font_weight': 'normal'
 };
 
 const allAllowedNames = families.map( name => {

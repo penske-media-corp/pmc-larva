@@ -70,7 +70,9 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
+  --primary-xxl-font-size-base: 20px;
   --background-color-brand-accent: rgb(251, 75, 34);
   --border-color-brand-accent: rgb(251, 75, 34);
   --color-brand-accent: rgb(251, 75, 34);
+  --primary-xxl-font-size-desktop: 50px;
 }

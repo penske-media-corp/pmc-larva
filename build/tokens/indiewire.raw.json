@@ -624,6 +624,13 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
+    "PRIMARY_XXL__FONT_SIZE_BASE": {
+      "value": "20px",
+      "type": "font-size",
+      "category": "font-size",
+      "originalValue": "20px",
+      "name": "PRIMARY_XXL__FONT_SIZE_BASE"
+    },
     "BACKGROUND_COLOR_BRAND_ACCENT": {
       "value": "rgb(251, 75, 34)",
       "type": "color",
@@ -644,6 +651,13 @@
       "category": "text-color",
       "originalValue": "#FB4B22",
       "name": "COLOR_BRAND_ACCENT"
+    },
+    "PRIMARY_XXL__FONT_SIZE_DESKTOP": {
+      "value": "50px",
+      "type": "font-size",
+      "category": "font-size",
+      "originalValue": "50px",
+      "name": "PRIMARY_XXL__FONT_SIZE_DESKTOP"
     }
   }
 }
