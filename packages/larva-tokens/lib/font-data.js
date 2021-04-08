@@ -33,12 +33,15 @@ const breakpoints = [
 	'desktopxl'
 ];
 
-const properties = [
-	'font_size',
-	'line_height',
-	'letter_spacing',
-	'font_weight'
-];
+/**
+ * Property and its default value
+ */
+const tokenDefaults = {
+	'font_size': '1em',
+	'line_height': 'calc(2px + 2ex + 2px)',
+	'letter_spacing': 'normal',
+	'font_weight': 'normal'
+};
 
 const allAllowedNames = families.map( name => {
 	return weights.map( weight => {
@@ -84,13 +87,16 @@ const groupedSelectors = (() => {
  * Tokens Data
  */
 
+const tokenProperties = Object.keys( tokenDefaults );
+
 const allAllowedTokens = allAllowedNames.map( name => {
-	return properties.map( property => {
+
+	return tokenProperties.map( property => {
 		return breakpoints.map( breakpoint => `${name}_${property}_${breakpoint}`.toUpperCase() ).flat();
 	}).flat();
 }).flat();
 
-const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currProperty ) => {
+const tokensFileContentsByProperty = tokenProperties.reduce( ( propertiesAcc, currProperty ) => {
 
 	const tokenNames = ( () => {
 		return allAllowedNames.map( name => {
@@ -100,7 +106,7 @@ const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currPro
 
 	const tokens = tokenNames.reduce( ( tokensAcc, currToken ) => {
 		tokensAcc[currToken] = {
-			"value": "initial"
+			"value": tokenDefaults[currProperty]
 		};
 
 		return tokensAcc;
@@ -120,7 +126,7 @@ const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currPro
 
 
 module.exports = {
-	properties,
+	tokenProperties,
 	groupedSelectors,
 	tokensFileContentsByProperty,
 	allSelectors,

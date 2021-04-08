@@ -3,7 +3,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) and $value != '' {
+	@if str-index( $token-str, 'line-height' ) and not str-index( $token-str, '-line-height-' ) {
 		.lrv-u-#{$token} {
 			line-height: $value;
 		}
@@ -18,7 +18,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) and $value != '' {
+	@if str-index( $token-str, 'line-height' ) and not str-index( $token-str, '-line-height-' ) {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
