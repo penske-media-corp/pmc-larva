@@ -3,7 +3,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) {
+	@if str-index( $token-str, 'line-height' ) and $value != () {
 		.lrv-u-#{$token} {
 			line-height: $value;
 		}
@@ -18,7 +18,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) {
+	@if str-index( $token-str, 'line-height' ) and $value != () {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
@@ -31,7 +31,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) {
+	@if str-index( $token-str, 'line-height' ) and $value != () {
 
 		@include pmc-breakpoint( desktop-xl ) {
 			.lrv-u-#{$token}\@desktop-xl {

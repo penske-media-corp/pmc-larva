@@ -3,7 +3,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-weight' ) {
+	@if str-index( $token-str, 'font-weight' ) and $value != () {
 		.lrv-u-#{$token} {
 			font-weight: $value;
 		}
@@ -18,7 +18,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-weight' ) {
+	@if str-index( $token-str, 'font-weight' ) and $value != () {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
@@ -31,7 +31,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-weight' ) {
+	@if str-index( $token-str, 'font-weight' ) and $value != () {
 
 		@include pmc-breakpoint( desktop-xl ) {
 			.lrv-u-#{$token}\@desktop-xl {
