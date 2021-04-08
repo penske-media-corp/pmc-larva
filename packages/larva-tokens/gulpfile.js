@@ -3,8 +3,8 @@ const theo = require('gulp-theo')
 const del = require( 'del' );
 
 const { kebabify } = require( './lib/utils' );
-const { mkdirpSync, existsSync } = require('fs-extra');
-
+const { generateAFont, generateFontTokens } = require( './lib/generators');
+const { existsSync, mkdirpSync } = require('fs-extra');
 const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
 
 /**
@@ -45,6 +45,14 @@ const basicTokenBuild = (
 		done();
 };
 
+const generateTokens = ( done ) => {
+	mkdirpSync( 'build' );
+	generateFontTokens();
+	generateAFont();
+
+	done();
+};
+
 const build = ( done ) => {
 
 	formats.forEach( format => {
@@ -68,4 +76,4 @@ const build = ( done ) => {
 	done();
 };
 
-exports.default = gulp.series( clean, build );
+exports.default = gulp.series( clean, generateTokens, build );
