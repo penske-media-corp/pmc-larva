@@ -513,18 +513,18 @@
     },
     "FONT_FAMILY_ACCENT_FANCY": {
       "category": "font-family",
-      "value": "Papyrus, serif",
+      "value": "Verdana, sans-serif",
       "type": "font",
       "comment": "The webfont, loaded async",
-      "originalValue": "Papyrus, serif",
+      "originalValue": "Verdana, sans-serif",
       "name": "FONT_FAMILY_ACCENT_FANCY"
     },
     "FONT_FAMILY_ACCENT": {
       "category": "font-family",
-      "value": "Helvetica, serif",
+      "value": "Verdana, sans-serif",
       "type": "font",
       "comment": "Fallback for accent-fancy",
-      "originalValue": "Helvetica, serif",
+      "originalValue": "Verdana, sans-serif",
       "name": "FONT_FAMILY_ACCENT"
     },
     "FONT_FAMILY_BODY": {
