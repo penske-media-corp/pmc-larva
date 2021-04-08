@@ -1,4 +1,9 @@
-const { allSelectors, allAllowedNames, allAllowedTokens, groupedSelectors, tokensFileContentsByProperty } = require( '../../lib/font-data' );
+const {
+	allSelectors,
+	allAllowedNames,
+	groupedSelectors,
+	tokensFileContentsByProperty
+} = require( '../../lib/font-data' );
 
 describe( 'Font Data', () => {
 
@@ -39,20 +44,9 @@ describe( 'Font Data', () => {
 		expect(groupedSelectors['basic'].includes('lrv-a-font-basic-bold-m')).toBe(false);
 	});
 
-	it( 'should allow tokens for every possible decalration', () => {
-		[
-			'PRIMARY_REGULAR_S_LETTER_SPACING_DESKTOP',
-			'ACCENT_M_FONT_SIZE_DESKTOPXL',
-			'SECONDARY_MEDIUM_XS_LETTER_SPACING_DESKTOP',
-			'BASIC_REGULAR_XXXL_FONT_SIZE_BASE',
-		].forEach( name => {
-			expect(allAllowedTokens).toContain( name );
-		});
-	});
-
 	it( 'should create an object with tokens file contents', () => {
-		expect(tokensFileContentsByProperty['line_height'].props ).toHaveProperty( 'PRIMARY_REGULAR_S_LINE_HEIGHT_DESKTOP' );
-		expect(tokensFileContentsByProperty['font_size'].props ).toHaveProperty( 'SECONDARY_XXS_FONT_SIZE_BASE' );
+		expect(tokensFileContentsByProperty['line_height'].props ).toHaveProperty( 'PRIMARY_REGULAR_S__LINE_HEIGHT_DESKTOP' );
+		expect(tokensFileContentsByProperty['font_size'].props ).toHaveProperty( 'SECONDARY_XXS__FONT_SIZE_BASE' );
 	});
 
 });

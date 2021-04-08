@@ -89,13 +89,6 @@ const groupedSelectors = (() => {
 
 const tokenProperties = Object.keys( tokenDefaults );
 
-const allAllowedTokens = allAllowedNames.map( name => {
-
-	return tokenProperties.map( property => {
-		return breakpoints.map( breakpoint => `${name}_${property}_${breakpoint}`.toUpperCase() ).flat();
-	}).flat();
-}).flat();
-
 const tokensFileContentsByProperty = tokenProperties.reduce( ( propertiesAcc, currProperty ) => {
 
 	const tokenNames = ( () => {
@@ -131,5 +124,4 @@ module.exports = {
 	tokensFileContentsByProperty,
 	allSelectors,
 	allAllowedNames,
-	allAllowedTokens,
 };
