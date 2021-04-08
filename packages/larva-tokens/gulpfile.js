@@ -3,6 +3,7 @@ const theo = require('gulp-theo')
 const del = require( 'del' );
 
 const { kebabify } = require( './lib/utils' );
+const { mkdirpSync, existsSync } = require('fs-extra');
 
 const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
 
@@ -12,7 +13,7 @@ const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
  * @param {Function} done Function called upon completion.
  */
  const clean = ( done ) => {
-	del( [ 'build', 'style-guides' ] );
+	del.sync( [ 'build', 'style-guides' ] );
 	done();
 };
 
@@ -58,4 +59,4 @@ const build = ( done ) => {
 	done();
 };
 
-exports.default = gulp.series( clean, build )
+exports.default = gulp.series( clean, build );
