@@ -1,8 +1,13 @@
 @import 'setup';
 
+$warned-font-weight: false;
+
 @each $token, $value in $TOKENS-MAP {
 
-	@warn 'Font weight tokens are deprecated. Please use a-font.';
+	@if $warned-font-weight == false {
+		@warn 'Font weight tokens are deprecated. Please use a-font.';
+		$warned-font-weight: true;
+	}
 
 	$token-str: quote( $token );
 
