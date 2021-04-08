@@ -1,0 +1,8 @@
+{
+	"imports": [
+		"./generated/font-size.json",
+		"./generated/letter-spacing.json",
+		"./generated/font-weight.json",
+		"./generated/line-height.json"
+	]
+}

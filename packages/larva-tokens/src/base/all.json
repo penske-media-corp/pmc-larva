@@ -5,8 +5,7 @@
 		"./background-color.json",
 		"./color.json",
 		"./font-family.json",
-		"./font-weight.json",
-		"./line-height.json",
-		"./spacing.json"
+		"./spacing.json",
+		"./deprecated/font-weight.json"
 	]
 }
