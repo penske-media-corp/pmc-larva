@@ -11,7 +11,7 @@ $warned-font-weight: false;
 
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-weight' ) and $value != '' {
+	@if str-index( $token-str, 'font-weight' ) and not str-index( $token-str, '-font-weight-' ) {
 		.lrv-u-#{$token} {
 			font-weight: $value;
 		}
