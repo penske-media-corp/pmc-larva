@@ -100,7 +100,7 @@ const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currPro
 
 	const tokens = tokenNames.reduce( ( tokensAcc, currToken ) => {
 		tokensAcc[currToken] = {
-			"value": ""
+			"value": "initial"
 		};
 
 		return tokensAcc;

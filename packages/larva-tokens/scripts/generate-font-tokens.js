@@ -8,4 +8,6 @@ properties.forEach( ( property ) => {
 	const fileName = kebabify(property);
 
 	fs.writeFileSync( path.join( __dirname, `../src/base/generated/${fileName}.json` ), JSON.stringify( tokensFileContentsByProperty[property] ) );
+
+	console.log( `Generated tokens for ${fileName}.` );
 });

@@ -29,13 +29,16 @@
 }
 
 @mixin u-line-height( $tokens, $available_tokens, $NAMESPACE: '' ) {
+	@warn 'The line-height utility is deprecated. Please use a-font.';
 	@include _text-class-generator('line-height', $tokens, $NAMESPACE, $available_tokens );
 }
 
 @mixin u-font-size( $tokens, $NAMESPACE: '' ) {
+	@warn 'The font-size utility is deprecated. Please use a-font.';
 	@include _text-class-generator( 'font-size', $tokens, $NAMESPACE );
 }
 
 @mixin u-font-weight( $tokens, $available_tokens, $NAMESPACE: '' ) {
+	@warn 'The font-weight utility is deprecated. Please use a-font.';
 	@include _text-class-generator('font-weight', $tokens, $NAMESPACE, $available_tokens );
 }
