@@ -1,3 +1,28 @@
+html {
+	// Use whitespace and initial in custom properties to invalidate values
+	// for simplification of media queries.
+	// Explanation::
+	// https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/
+	// Reduced example:
+	// https://codepen.io/laras126/pen/ExZbvPY
+
+	--desktop-off: ;
+	--desktopxl-off: ;
+
+	@include pmc-breakpoint( mobile-max ) {
+		--desktop-off: ;
+		--desktopxl-off: ;
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		--desktop-off: initial;
+	}
+
+	@include pmc-breakpoint( desktop-xl ) {
+		--desktop-off: initial;
+	}
+}
+
 *,
 ::before,
 ::after {

@@ -2,15 +2,14 @@
 
 body {
 
-	// stylelint-disable property-blacklist
+	// stylelint-disable property-disallowed-list
 	font-family: map-get( $TOKENS-MAP, font-family-basic );
 	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
 
 	margin: $spacer-0;
+	// stylelint-enable property-disallowed-list
 
-	// stylelint-enable property-blacklist
-
-	line-height: $line-height-normal;
+	line-height: calc(2px + 2ex + 2px); // stylelint-disable unit-disallowed-list
 }
 
 // Apply the webfont when fonts are loaded.
