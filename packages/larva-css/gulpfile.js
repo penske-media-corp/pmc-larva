@@ -15,6 +15,7 @@ const sass = require( 'gulp-sass' );
 const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const clean = require( 'gulp-clean' );
+const { mkdirpSync } = require('fs-extra');
 
 sass.compiler = require('sass');
 
@@ -74,6 +75,8 @@ const css_files = {
 };
 
 function clean_css() {
+	mkdirpSync( css_dest );
+
 	return gulp.src( css_dest, { read: false } ).pipe( clean() );
 }
 

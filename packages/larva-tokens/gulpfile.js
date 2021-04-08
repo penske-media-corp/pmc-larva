@@ -13,7 +13,16 @@ const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
  * @param {Function} done Function called upon completion.
  */
  const clean = ( done ) => {
-	del.sync( [ 'build', 'style-guides' ] );
+
+	const dirs = [ 'build', 'style-guides' ];
+
+	dirs.forEach( dir => {
+		if ( existsSync( dir ) ) {
+			del.sync( [ dir ] );
+		}
+	});
+
+
 	done();
 };
 
