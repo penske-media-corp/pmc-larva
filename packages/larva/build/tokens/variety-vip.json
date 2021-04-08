@@ -14,6 +14,8 @@
   "FONT_FAMILY_PRIMARY": "Georgia, serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'IBM Plex Sans', sans-serif",
   "FONT_FAMILY_SECONDARY": "Helvetica, sans-serif",
+  "FONT_FAMILY_ACCENT_FANCY": "'IBM Plex Mono', monospace",
+  "FONT_FAMILY_ACCENT": "Helvetica, sans-serif",
   "FONT_FAMILY_BODY": "Georgia, serif",
   "FONT_FAMILY_BASIC": "Helvetica, sans-serif",
   "BACKGROUND_COLOR_GREY_LIGHT": "rgb(204, 204, 204)",
@@ -33,9 +35,7 @@
   "FONT_FAMILY_BASIC_FANCY": "'Para Supreme Regular', serif",
   "BORDER_COLOR_BRAND_SECONDARY": "rgb(40, 56, 66)",
   "BACKGROUND_COLOR_BRAND_ACCENT": "rgb(240, 241, 242)",
-  "FONT_FAMILY_ACCENT": "Helvetica, sans-serif",
   "FONT_FAMILY_BODY_FANCY": "'IBM Plex Serif', serif",
   "BORDER_COLOR_BRAND_PRIMARY": "rgb(215, 20, 64)",
-  "COLOR_BRAND_ACCENT": "rgb(243, 112, 33)",
-  "FONT_FAMILY_ACCENT_FANCY": "'IBM Plex Mono', monospace"
+  "COLOR_BRAND_ACCENT": "rgb(243, 112, 33)"
 }

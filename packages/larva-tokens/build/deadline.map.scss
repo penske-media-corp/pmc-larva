@@ -46,15 +46,12 @@ $deadline-map: (
   'font-family-secondary-fancy': ('Eksell', Georgia, serif),
   /* Fallback for secondary-fancy */
   'font-family-secondary': (Georgia, serif),
+  /* The webfont, loaded async */
+  'font-family-accent-fancy': (Papyrus, serif),
+  /* Fallback for accent-fancy */
+  'font-family-accent': (Helvetica, serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
-  'font-weight-light': (300),
-  'font-weight-normal': (400),
-  'font-weight-bold': (700),
-  'line-height-small': (1.1),
-  'line-height-normal': (1.35),
-  'line-height-copy': (1.5),
-  'line-height-large': (1.85),
   /* Used for margins and padding only. */
   'spacing-00': (0),
   /* Used for margins and padding only. */
@@ -71,4 +68,7 @@ $deadline-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
 );

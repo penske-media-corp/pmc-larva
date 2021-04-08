@@ -94,7 +94,7 @@ const tokensFileContentsByProperty = properties.reduce( ( propertiesAcc, currPro
 
 	const tokenNames = ( () => {
 		return allAllowedNames.map( name => {
-			return breakpoints.map( breakpoint => `${name}_${currProperty}_${breakpoint}`.toUpperCase() ).flat();
+			return breakpoints.map( breakpoint => `${name}__${currProperty}_${breakpoint}`.toUpperCase() ).flat();
 		}).flat();
 	})();
 

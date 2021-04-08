@@ -509,6 +509,22 @@
       "originalValue": "{!GEORGIA}",
       "name": "FONT_FAMILY_SECONDARY"
     },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "category": "font-family",
+      "value": "Papyrus, serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "Papyrus, serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "category": "font-family",
+      "value": "Helvetica, serif",
+      "type": "font",
+      "comment": "Fallback for accent-fancy",
+      "originalValue": "Helvetica, serif",
+      "name": "FONT_FAMILY_ACCENT"
+    },
     "FONT_FAMILY_BODY": {
       "value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
       "type": "font-family",
@@ -522,55 +538,6 @@
       "type": "font-family",
       "originalValue": "Helvetica, sans-serif",
       "name": "FONT_FAMILY_BASIC"
-    },
-    "FONT_WEIGHT_LIGHT": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "FONT_WEIGHT_LIGHT"
-    },
-    "FONT_WEIGHT_NORMAL": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "400",
-      "originalValue": "400",
-      "name": "FONT_WEIGHT_NORMAL"
-    },
-    "FONT_WEIGHT_BOLD": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "FONT_WEIGHT_BOLD"
-    },
-    "LINE_HEIGHT_SMALL": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.1",
-      "originalValue": "1.1",
-      "name": "LINE_HEIGHT_SMALL"
-    },
-    "LINE_HEIGHT_NORMAL": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.35",
-      "originalValue": "1.35",
-      "name": "LINE_HEIGHT_NORMAL"
-    },
-    "LINE_HEIGHT_COPY": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.5",
-      "originalValue": "1.5",
-      "name": "LINE_HEIGHT_COPY"
-    },
-    "LINE_HEIGHT_LARGE": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.85",
-      "originalValue": "1.85",
-      "name": "LINE_HEIGHT_LARGE"
     },
     "SPACING_00": {
       "category": "spacing",
@@ -635,6 +602,27 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
+    },
+    "FONT_WEIGHT_LIGHT": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "300",
+      "originalValue": "300",
+      "name": "FONT_WEIGHT_LIGHT"
+    },
+    "FONT_WEIGHT_NORMAL": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "400",
+      "originalValue": "400",
+      "name": "FONT_WEIGHT_NORMAL"
+    },
+    "FONT_WEIGHT_BOLD": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "FONT_WEIGHT_BOLD"
     }
   }
 }

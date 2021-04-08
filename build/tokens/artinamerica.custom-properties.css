@@ -44,15 +44,12 @@
   --font-family-secondary-fancy: 'warnock-pro', 'Times New Roman', serif;
   /* Fallback from secondary-fancy */
   --font-family-secondary: Georgia, serif;
+  /* The webfont, loaded async */
+  --font-family-accent-fancy: Papyrus, serif;
+  /* Fallback for accent-fancy */
+  --font-family-accent: Helvetica, serif;
   --font-family-body: 'Times New Roman', serif;
   --font-family-basic: Helvetica, sans-serif;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --line-height-small: 1.1;
-  --line-height-normal: 1.35;
-  --line-height-copy: 1.5;
-  --line-height-large: 1.85;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
@@ -69,6 +66,9 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
   --background-color-brand-accent: rgb(1, 165, 237);
   --color-brand-accent: rgb(1, 165, 237);
 }
