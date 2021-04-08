@@ -73,33 +73,1083 @@
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
   /* Typography styles. */
-  --typography-body-m: 1.2rem, 3vw, 1.8rem;
+  --body-l-font-size-mobile: ;
   /* Typography styles. */
-  --typography-primary-m: 1.2rem, 3vw, 1.8rem;
+  --basic-m-line-height-desktopxl: ;
   /* Typography styles. */
-  --typography-body-s: 0.75rem, 3vw, 1rem;
+  --secondary-xxxs-letter-spacing-desktop: ;
   /* Typography styles. */
-  --typography-primary-s: 0.75rem, 3vw, 1rem;
+  --secondary-xs-letter-spacing-desktop: ;
   /* Typography styles. */
-  --typography-accent-l: 2rem, 3vw, 3rem;
+  --secondary-xxs-letter-spacing-mobile: ;
   /* Typography styles. */
-  --typography-accent-m: 1.2rem, 3vw, 1.8rem;
+  --accent-xs-line-height-desktop: ;
   /* Typography styles. */
-  --typography-basic-l: 2rem, 3vw, 3rem;
+  --secondary-s-letter-spacing-mobile: ;
   /* Typography styles. */
-  --typography-basic-m: 1.2rem, 3vw, 1.8rem;
+  --primary-xxxl-font-size-desktop: ;
   /* Typography styles. */
-  --typography-accent-s: 0.75rem, 3vw, 1rem;
+  --body-xs-font-weight-mobile: ;
   /* Typography styles. */
-  --typography-secondary-l: 2rem, 3vw, 3rem;
+  --primary-xl-font-size-desktop: ;
   /* Typography styles. */
-  --typography-secondary-m: 1.2rem, 3vw, 1.8rem;
+  --body-xxxl-font-size-desktop: ;
   /* Typography styles. */
-  --typography-basic-s: 0.75rem, 3vw, 1rem;
+  --body-xxxs-font-weight-mobile: ;
   /* Typography styles. */
-  --typography-secondary-s: 0.75rem, 3vw, 1rem;
+  --primary-xs-font-weight-mobile: ;
   /* Typography styles. */
-  --typography-body-l: 2rem, 3vw, 3rem;
+  --body-xl-font-size-desktop: ;
   /* Typography styles. */
-  --typography-primary-l: 2rem, 3vw, 3rem;
+  --primary-xxxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-m-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-xxxs-line-height-desktop: ;
+  /* Typography styles. */
+  --body-m-line-height-desktop: ;
+  /* Typography styles. */
+  --primary-m-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-xs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxl-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-l-font-size-mobile: ;
+  /* Typography styles. */
+  --body-xxl-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-xxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --basic-l-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xxxl-line-height-desktop: ;
+  /* Typography styles. */
+  --body-xxxl-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-xl-line-height-desktop: ;
+  /* Typography styles. */
+  --body-xl-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --basic-xl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --accent-l-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-s-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xs-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-s-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-s-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxs-line-height-mobile: ;
+  /* Typography styles. */
+  --primary-xxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-s-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-xxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-s-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-xs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-m-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-xxxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-xs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --accent-m-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-l-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-xs-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxs-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xxxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-xxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-xxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-s-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-l-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-s-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-s-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-m-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-s-font-weight-desktop: ;
+  /* Typography styles. */
+  --secondary-xl-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-s-font-size-desktop: ;
+  /* Typography styles. */
+  --body-xxs-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-s-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxs-font-size-desktop: ;
+  /* Typography styles. */
+  --accent-xxxl-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-xxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-l-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-xl-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-m-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-l-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-s-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-s-line-height-desktop: ;
+  /* Typography styles. */
+  --body-xxs-line-height-desktop: ;
+  /* Typography styles. */
+  --primary-xxs-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-xxxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-xs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-xl-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xxl-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-s-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-xxs-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-m-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-l-font-size-desktop: ;
+  /* Typography styles. */
+  --basic-s-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-s-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxxl-font-size-mobile: ;
+  /* Typography styles. */
+  --secondary-xxxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --secondary-xl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-xl-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-xxl-line-height-desktop: ;
+  /* Typography styles. */
+  --body-xxxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-xl-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-xxxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-m-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-xxxs-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-xs-font-size-desktop: ;
+  /* Typography styles. */
+  --body-xxxs-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-xxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-xs-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-s-font-size-mobile: ;
+  /* Typography styles. */
+  --secondary-l-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-l-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-xxs-font-size-mobile: ;
+  /* Typography styles. */
+  --body-xxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-l-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-l-line-height-desktop: ;
+  /* Typography styles. */
+  --primary-xxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --body-m-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-xxxs-line-height-desktop: ;
+  /* Typography styles. */
+  --primary-xs-line-height-desktop: ;
+  /* Typography styles. */
+  --body-xxxs-line-height-desktop: ;
+  /* Typography styles. */
+  --body-xs-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxs-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xxxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --basic-xl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xs-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-s-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --accent-xs-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-xxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-xxxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --basic-xxxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-m-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-m-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-m-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --basic-s-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-m-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-m-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-xs-font-size-mobile: ;
+  /* Typography styles. */
+  --basic-xxxl-line-height-mobile: ;
+  /* Typography styles. */
+  --body-xl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-xl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --body-xxxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-xxxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-l-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-xxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-l-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-l-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-l-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-xxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-xxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-xl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --body-xxxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --body-xl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --basic-xxxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xl-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-xl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxs-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xxxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxl-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-l-font-size-desktop: ;
+  /* Typography styles. */
+  --basic-m-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-xs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxl-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-xs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-m-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xl-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-m-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-m-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --body-m-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-l-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --body-xxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-l-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-s-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xl-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-xxxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-xl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-xxxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-xl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-l-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-m-font-size-desktop: ;
+  /* Typography styles. */
+  --basic-l-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-xxxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxl-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-m-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-s-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-m-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xxxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-xs-font-weight-mobile: ;
+  /* Typography styles. */
+  --secondary-s-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xs-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xxs-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-xxxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xxxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-xxxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-s-font-size-mobile: ;
+  /* Typography styles. */
+  --secondary-m-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xxs-font-size-desktop: ;
+  /* Typography styles. */
+  --accent-xl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-l-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-xxl-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-xxs-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-s-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-xxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xxxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-s-font-weight-desktop: ;
+  /* Typography styles. */
+  --accent-s-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-xl-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxl-font-size-desktop: ;
+  /* Typography styles. */
+  --body-s-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-l-font-size-mobile: ;
+  /* Typography styles. */
+  --basic-xs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-s-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --body-xs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-xxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-xxs-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-xxl-font-size-mobile: ;
+  /* Typography styles. */
+  --body-xxxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-xs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-xxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-xxxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-m-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-xxxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --secondary-xl-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xl-font-weight-desktop: ;
+  /* Typography styles. */
+  --accent-l-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-l-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-xl-font-weight-mobile: ;
+  /* Typography styles. */
+  --basic-xxxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xl-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxl-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-xxxl-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-xs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxl-font-size-mobile: ;
+  /* Typography styles. */
+  --secondary-xl-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-s-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-s-font-weight-mobile: ;
+  /* Typography styles. */
+  --secondary-xxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-s-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-xxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-s-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-m-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-xxxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-xxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-xxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxl-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-xs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --body-xxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-xxxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-s-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --secondary-l-font-size-desktop: ;
+  /* Typography styles. */
+  --body-s-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-xs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-xxs-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-xxxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxs-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-l-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --secondary-m-font-size-desktop: ;
+  /* Typography styles. */
+  --basic-s-font-size-desktop: ;
+  /* Typography styles. */
+  --accent-xxxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxs-font-size-desktop: ;
+  /* Typography styles. */
+  --accent-s-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxl-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-l-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --body-xxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-l-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-m-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-s-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-m-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xxxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-xs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-xxxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxs-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-m-line-height-mobile: ;
+  /* Typography styles. */
+  --body-xs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xs-font-weight-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --secondary-s-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xs-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-l-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-l-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-m-font-size-mobile: ;
+  /* Typography styles. */
+  --body-l-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-l-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-l-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-xxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-m-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-m-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --basic-xl-font-weight-mobile: ;
+  /* Typography styles. */
+  --basic-xxl-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-xxxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-xl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-xxxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-xl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxl-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-xxxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxl-font-size-desktop: ;
+  /* Typography styles. */
+  --body-m-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-m-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --primary-m-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-l-font-size-mobile: ;
+  /* Typography styles. */
+  --basic-xl-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --accent-xs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --body-xxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-l-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xxxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-xxxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-xl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxl-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-xl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xs-font-size-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxs-font-size-desktop: ;
+  /* Typography styles. */
+  --basic-xl-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-xxxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --body-xl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-xxxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-xl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-xxxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-l-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-l-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-xs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-xxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-xs-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxs-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-m-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-m-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-m-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-m-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-m-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-s-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --basic-xxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-xs-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xxxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-xxxs-line-height-mobile: ;
+  /* Typography styles. */
+  --primary-xs-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xs-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xxxs-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-m-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-s-font-weight-mobile: ;
+  /* Typography styles. */
+  --secondary-m-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-xxxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xl-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-xxxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-xl-font-weight-desktop: ;
+  /* Typography styles. */
+  --accent-l-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-l-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-xs-font-size-mobile: ;
+  /* Typography styles. */
+  --secondary-xxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-xxxs-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-xs-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-xxxs-font-size-mobile: ;
+  /* Typography styles. */
+  --accent-m-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-xxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-xxl-line-height-mobile: ;
+  /* Typography styles. */
+  --primary-l-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --body-xxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --secondary-xl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-xxs-font-size-desktop: ;
+  /* Typography styles. */
+  --body-l-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-s-font-size-desktop: ;
+  /* Typography styles. */
+  --basic-s-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-m-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxxl-font-size-desktop: ;
+  /* Typography styles. */
+  --accent-s-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxl-font-size-mobile: ;
+  /* Typography styles. */
+  --secondary-xxs-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-s-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-xxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxs-line-height-mobile: ;
+  /* Typography styles. */
+  --primary-s-line-height-mobile: ;
+  /* Typography styles. */
+  --body-xxs-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xl-font-size-desktop: ;
+  /* Typography styles. */
+  --body-s-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-l-font-size-mobile: ;
+  /* Typography styles. */
+  --secondary-l-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --accent-xl-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-xl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxs-font-size-mobile: ;
+  /* Typography styles. */
+  --body-s-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-s-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --secondary-xxxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --primary-s-font-size-mobile: ;
+  /* Typography styles. */
+  --body-xxs-font-size-mobile: ;
+  /* Typography styles. */
+  --body-xxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-s-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-xxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xl-font-weight-mobile: ;
+  /* Typography styles. */
+  --secondary-xxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-xxxl-line-height-desktop: ;
+  /* Typography styles. */
+  --secondary-l-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-s-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-l-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-m-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --body-s-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-s-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --body-xxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --primary-s-line-height-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxs-font-weight-mobile: ;
+  /* Typography styles. */
+  --basic-xs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-xxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --secondary-xxxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxs-font-size-desktop: ;
+  /* Typography styles. */
+  --accent-xxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-m-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --primary-xs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-xxxs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-xxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xs-font-size-desktop: ;
+  /* Typography styles. */
+  --body-xs-font-size-desktopxl: ;
+  /* Typography styles. */
+  --secondary-l-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-l-line-height-desktopxl: ;
+  /* Typography styles. */
+  --secondary-m-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xs-line-height-desktop: ;
+  /* Typography styles. */
+  --basic-s-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-m-line-height-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --basic-m-font-weight-mobile: ;
+  /* Typography styles. */
+  --primary-xs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-xxxs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-xs-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-s-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxs-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --body-s-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-xxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-s-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xxxs-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxs-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxxl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --accent-xl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --accent-l-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xl-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --basic-xxl-font-weight-mobile: ;
+  /* Typography styles. */
+  --body-xl-line-height-mobile: ;
+  /* Typography styles. */
+  --body-xxxl-line-height-mobile: ;
+  /* Typography styles. */
+  --primary-xl-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-xxxl-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --primary-xxxl-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-l-font-weight-mobile: ;
+  /* Typography styles. */
+  --accent-xxl-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-l-font-size-desktop: ;
+  /* Typography styles. */
+  --body-xxl-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-l-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-xxl-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-m-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-l-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-m-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-m-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxxs-line-height-mobile: ;
+  /* Typography styles. */
+  --accent-m-font-weight-desktop: ;
+  /* Typography styles. */
+  --basic-xxl-font-size-desktopxl: ;
+  /* Typography styles. */
+  --body-xl-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-xxxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --body-xxxl-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-xl-font-size-mobile: ;
+  /* Typography styles. */
+  --body-xxxs-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xs-font-weight-desktop: ;
+  /* Typography styles. */
+  --primary-xxxl-font-size-mobile: ;
+  /* Typography styles. */
+  --body-xs-font-weight-desktop: ;
+  /* Typography styles. */
+  --accent-xs-line-height-mobile: ;
+  /* Typography styles. */
+  --secondary-s-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --secondary-xs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-xxxs-letter-spacing-mobile: ;
+  /* Typography styles. */
+  --secondary-xxs-letter-spacing-desktop: ;
+  /* Typography styles. */
+  --basic-xxl-line-height-desktopxl: ;
+  /* Typography styles. */
+  --accent-xs-font-size-mobile: ;
+  /* Typography styles. */
+  --basic-xl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --basic-xxl-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --body-l-line-height-desktop: ;
+  /* Typography styles. */
+  --body-xxl-line-height-desktop: ;
+  /* Typography styles. */
+  --primary-l-line-height-desktop: ;
+  /* Typography styles. */
+  --accent-xxxs-font-size-desktop: ;
+  /* Typography styles. */
+  --primary-xxl-line-height-desktop: ;
+  /* Typography styles. */
+  --primary-m-font-size-mobile: ;
+  /* Typography styles. */
+  --body-m-font-size-desktop: ;
+  /* Typography styles. */
+  --body-m-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-m-font-size-desktop: ;
+  /* Typography styles. */
+  --basic-l-letter-spacing-desktopxl: ;
+  /* Typography styles. */
+  --primary-xxl-line-height-mobile: ;
+  /* Typography styles. */
+  --body-xxl-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-m-font-size-desktopxl: ;
+  /* Typography styles. */
+  --accent-xxxs-font-size-mobile: ;
+  /* Typography styles. */
+  --primary-l-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-l-line-height-desktopxl: ;
+  /* Typography styles. */
+  --body-l-line-height-mobile: ;
+  /* Typography styles. */
+  --basic-xxxl-font-weight-desktopxl: ;
+  /* Typography styles. */
+  --accent-xs-font-size-desktop: ;
 }
