@@ -1,9 +1,12 @@
 @import 'setup';
 
 @each $token, $value in $TOKENS-MAP {
+
+	@warn 'Font weight tokens are deprecated. Please use a-font.';
+
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-weight' ) and $value != () {
+	@if str-index( $token-str, 'font-weight' ) and $value != '' {
 		.lrv-u-#{$token} {
 			font-weight: $value;
 		}
@@ -18,7 +21,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-weight' ) and $value != () {
+	@if str-index( $token-str, 'font-weight' ) and $value != '' {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
@@ -31,7 +34,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-weight' ) and $value != () {
+	@if str-index( $token-str, 'font-weight' ) and $value != initial {
 
 		@include pmc-breakpoint( desktop-xl ) {
 			.lrv-u-#{$token}\@desktop-xl {
