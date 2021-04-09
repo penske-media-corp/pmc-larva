@@ -5,7 +5,7 @@ $warned-font-weight: false;
 @each $token, $value in $TOKENS-MAP {
 
 	@if $warned-font-weight == false {
-		@warn 'Font weight tokens are deprecated. Please use a-font.';
+		@warn 'Font weight tokens will be deprecated. Please set up a-font using a style guide.';
 		$warned-font-weight: true;
 	}
 
