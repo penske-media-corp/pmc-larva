@@ -37,7 +37,7 @@ const breakpoints = [
  * Property and its default value
  */
 const tokenDefaults = {
-	'font_size': '100%',
+	'font_size': 'initial',
 	'line_height': 'inherit',
 	'letter_spacing': 'normal',
 	'font_weight': 'normal'
