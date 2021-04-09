@@ -13,6 +13,7 @@
 	--font-style-base: var(--desktop-off) var( --primary-xl-font-style-base);
 	--font-family-desktop: var( --primary-xl-font-family-desktop, var( --primary-xl-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-xl-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -52,6 +53,7 @@
 	--font-style-base: var(--desktop-off) var( --primary-l-font-style-base);
 	--font-family-desktop: var( --primary-l-font-family-desktop, var( --primary-l-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-l-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -91,6 +93,7 @@
 	--font-style-base: var(--desktop-off) var( --primary-m-font-style-base);
 	--font-family-desktop: var( --primary-m-font-family-desktop, var( --primary-m-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-m-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -130,6 +133,7 @@
 	--font-style-base: var(--desktop-off) var( --primary-s-font-style-base);
 	--font-family-desktop: var( --primary-s-font-family-desktop, var( --primary-s-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-s-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -169,6 +173,7 @@
 	--font-style-base: var(--desktop-off) var( --primary-xs-font-style-base);
 	--font-family-desktop: var( --primary-xs-font-family-desktop, var( --primary-xs-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-xs-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -208,6 +213,7 @@
 	--font-style-base: var(--desktop-off) var( --primary-xxs-font-style-base);
 	--font-family-desktop: var( --primary-xxs-font-family-desktop, var( --primary-xxs-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-xxs-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -247,6 +253,7 @@
 	--font-style-base: var(--desktop-off) var( --primary-xxxs-font-style-base);
 	--font-family-desktop: var( --primary-xxxs-font-family-desktop, var( --primary-xxxs-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-xxxs-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -286,6 +293,7 @@
 	--font-style-base: var(--desktop-off) var( --secondary-l-font-style-base);
 	--font-family-desktop: var( --secondary-l-font-family-desktop, var( --secondary-l-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --secondary-l-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -325,6 +333,7 @@
 	--font-style-base: var(--desktop-off) var( --secondary-m-font-style-base);
 	--font-family-desktop: var( --secondary-m-font-family-desktop, var( --secondary-m-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --secondary-m-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -364,6 +373,7 @@
 	--font-style-base: var(--desktop-off) var( --secondary-s-font-style-base);
 	--font-family-desktop: var( --secondary-s-font-family-desktop, var( --secondary-s-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --secondary-s-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -403,6 +413,7 @@
 	--font-style-base: var(--desktop-off) var( --secondary-regular-m-font-style-base);
 	--font-family-desktop: var( --secondary-regular-m-font-family-desktop, var( --secondary-regular-m-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --secondary-regular-m-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -442,6 +453,7 @@
 	--font-style-base: var(--desktop-off) var( --accent-l-font-style-base);
 	--font-family-desktop: var( --accent-l-font-family-desktop, var( --accent-l-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --accent-l-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -481,6 +493,7 @@
 	--font-style-base: var(--desktop-off) var( --accent-m-font-style-base);
 	--font-family-desktop: var( --accent-m-font-family-desktop, var( --accent-m-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --accent-m-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -520,6 +533,7 @@
 	--font-style-base: var(--desktop-off) var( --accent-s-font-style-base);
 	--font-family-desktop: var( --accent-s-font-family-desktop, var( --accent-s-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --accent-s-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -559,6 +573,7 @@
 	--font-style-base: var(--desktop-off) var( --accent-xs-font-style-base);
 	--font-family-desktop: var( --accent-xs-font-family-desktop, var( --accent-xs-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --accent-xs-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -598,6 +613,7 @@
 	--font-style-base: var(--desktop-off) var( --accent-xxs-font-style-base);
 	--font-family-desktop: var( --accent-xxs-font-family-desktop, var( --accent-xxs-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --accent-xxs-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -637,6 +653,7 @@
 	--font-style-base: var(--desktop-off) var( --accent-regular-xxs-font-style-base);
 	--font-family-desktop: var( --accent-regular-xxs-font-family-desktop, var( --accent-regular-xxs-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --accent-regular-xxs-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -676,6 +693,7 @@
 	--font-style-base: var(--desktop-off) var( --body-m-font-style-base);
 	--font-family-desktop: var( --body-m-font-family-desktop, var( --body-m-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --body-m-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -715,6 +733,7 @@
 	--font-style-base: var(--desktop-off) var( --body-s-font-style-base);
 	--font-family-desktop: var( --body-s-font-family-desktop, var( --body-s-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --body-s-font-family-base);
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
