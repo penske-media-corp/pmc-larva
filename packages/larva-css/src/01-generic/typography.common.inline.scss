@@ -9,7 +9,7 @@ body {
 	margin: $spacer-0;
 	// stylelint-enable property-disallowed-list
 
-	line-height: 1.2;
+	line-height: $line-height-normal;
 }
 
 // Apply the webfont when fonts are loaded.
