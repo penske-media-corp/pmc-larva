@@ -8,7 +8,7 @@ describe( 'Font Generators', () => {
 
 	it( 'should output a CSS ruleset containing a-font CSS', () => {
 
-		const output = generate( ['lrv-a-font-primary-xxxl'] );
+		const output = generate( ['lrv-a-font-primary-xxl'] );
 
 		expect( output ).toEqual( expected.ruleset );
 

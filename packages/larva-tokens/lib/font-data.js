@@ -84,8 +84,8 @@ const groupedSelectors = ( () => {
  *
  * @returns Array of all selectors
  */
-const allSelectors = families.reduce( ( selectorsAcc, currFamily ) => {
-	return selectorsAcc.concat( groupedSelectors[currFamily] );
+const allSelectors = Object.keys( groupedSelectors ).reduce( ( selectorsAcc, currFamily ) => {
+	return [ ...selectorsAcc, ...groupedSelectors[currFamily] ];
 }, []);
 
 /**

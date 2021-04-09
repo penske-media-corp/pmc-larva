@@ -27,6 +27,8 @@ describe( 'Font Data', () => {
 		].forEach( selector => {
 			expect(allSelectors).toContain( selector );
 		});
+
+		expect(allSelectors).not.toContain( undefined );
 	});
 
 	it( 'should group selectors', () => {
