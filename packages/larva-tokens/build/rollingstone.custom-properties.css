@@ -43,10 +43,6 @@
   /* The webfont, loaded async */
   --font-family-secondary-fancy: Papyrus, serif;
   --font-family-secondary: 'Publico', serif;
-  /* The webfont, loaded async */
-  --font-family-accent-fancy: Verdana, sans-serif;
-  /* Fallback for accent-fancy */
-  --font-family-accent: Verdana, sans-serif;
   --font-family-body: 'Graphik', sans-serif;
   --font-family-basic: 'Graphik', sans-serif;
   --font-weight-light: 300;

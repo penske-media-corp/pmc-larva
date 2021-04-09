@@ -47,10 +47,6 @@
   --font-family-secondary-fancy: Papyrus, serif;
   /* Fallback for secondary-fancy */
   --font-family-secondary: Helvetica, serif;
-  /* The webfont, loaded async */
-  --font-family-accent-fancy: Verdana, sans-serif;
-  /* Fallback for accent-fancy */
-  --font-family-accent: Verdana, sans-serif;
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;

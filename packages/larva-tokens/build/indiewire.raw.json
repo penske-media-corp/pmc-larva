@@ -509,22 +509,6 @@
       "originalValue": "{!HELVETICA_NEUE}",
       "name": "FONT_FAMILY_SECONDARY"
     },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'Teko', 'Open Sans', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The accent webfont, loaded async",
-      "originalValue": "'Teko', 'Open Sans', sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
-    },
-    "FONT_FAMILY_ACCENT": {
-      "value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The fallback for the accent font",
-      "originalValue": "{!HELVETICA_NEUE}",
-      "name": "FONT_FAMILY_ACCENT"
-    },
     "FONT_FAMILY_BODY": {
       "value": "Georgia, serif",
       "type": "font-family",
@@ -666,12 +650,28 @@
       "originalValue": "#FB4B22",
       "name": "BORDER_COLOR_BRAND_ACCENT"
     },
+    "FONT_FAMILY_ACCENT": {
+      "value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the accent font",
+      "originalValue": "{!HELVETICA_NEUE}",
+      "name": "FONT_FAMILY_ACCENT"
+    },
     "COLOR_BRAND_ACCENT": {
       "value": "rgb(251, 75, 34)",
       "type": "color",
       "category": "text-color",
       "originalValue": "#FB4B22",
       "name": "COLOR_BRAND_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'Teko', 'Open Sans', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The accent webfont, loaded async",
+      "originalValue": "'Teko', 'Open Sans', sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }

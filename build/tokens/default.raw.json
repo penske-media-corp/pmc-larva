@@ -511,22 +511,6 @@
       "originalValue": "Helvetica, serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "category": "font-family",
-      "value": "Verdana, sans-serif",
-      "type": "font",
-      "comment": "The webfont, loaded async",
-      "originalValue": "Verdana, sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
-    },
-    "FONT_FAMILY_ACCENT": {
-      "category": "font-family",
-      "value": "Verdana, sans-serif",
-      "type": "font",
-      "comment": "Fallback for accent-fancy",
-      "originalValue": "Verdana, sans-serif",
-      "name": "FONT_FAMILY_ACCENT"
-    },
     "FONT_FAMILY_BODY": {
       "category": "font-family",
       "value": "Georgia, serif",

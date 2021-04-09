@@ -45,10 +45,6 @@ $indiewire-map: (
   'font-family-secondary-fancy': ('PT Sans', sans-serif),
   /* The fallback for the secondary font */
   'font-family-secondary': ('Helvetica Neue', Helvetica, Arial, sans-serif),
-  /* The accent webfont, loaded async */
-  'font-family-accent-fancy': ('Teko', 'Open Sans', sans-serif),
-  /* The fallback for the accent font */
-  'font-family-accent': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'font-family-body': (Georgia, serif),
   'font-family-basic': (Helvetica, sans-serif),
   'font-weight-light': (300),
@@ -76,5 +72,9 @@ $indiewire-map: (
   'spacing-2': (2rem),
   'background-color-brand-accent': (rgb(251, 75, 34)),
   'border-color-brand-accent': (rgb(251, 75, 34)),
+  /* The fallback for the accent font */
+  'font-family-accent': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'color-brand-accent': (rgb(251, 75, 34)),
+  /* The accent webfont, loaded async */
+  'font-family-accent-fancy': ('Teko', 'Open Sans', sans-serif),
 );

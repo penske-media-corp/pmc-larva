@@ -45,10 +45,6 @@
   --font-family-secondary-fancy: 'Domaine Display Narrow Test', Georgia, serif;
   /* Fallback for secondary-fancy */
   --font-family-secondary: Georgia, serif;
-  /* The webfont, loaded async */
-  --font-family-accent-fancy: Verdana, sans-serif;
-  /* Fallback for accent-fancy */
-  --font-family-accent: Verdana, sans-serif;
   --font-family-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;

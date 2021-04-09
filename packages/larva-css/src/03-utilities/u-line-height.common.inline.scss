@@ -6,7 +6,7 @@ $warned-line-height: false;
 	$token-str: quote( $token );
 
 	@if $warned-line-height == false {
-		@warn 'Line height tokens will be deprecated. Please set up a-font using a style guide.';
+		@warn 'Line height utilities will be will be deprecated. Please set up a-font using a style guide.';
 		$warned-line-height: true;
 	}
 

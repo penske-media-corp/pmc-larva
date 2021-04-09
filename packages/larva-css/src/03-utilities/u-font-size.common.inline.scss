@@ -1,5 +1,7 @@
 @import 'setup';
 
+@warn 'Font size utilities will be deprecated. Please set up a-font using a style guide.';
+
 // Generates classes .lrv-u-font-size-{int}
 @include u-font-size(
 	(
