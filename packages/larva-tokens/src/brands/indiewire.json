@@ -104,16 +104,6 @@
 			"value": "{!GEORGIA}",
 			"type": "font-family",
 			"category": "font-family"
-		},
-		"PRIMARY_XXXL__FONT_SIZE_BASE": {
-			"value": "20px",
-			"type": "font-size",
-			"category": "font-size"
-		},
-		"PRIMARY_XXXL__FONT_SIZE_DESKTOP": {
-			"value": "50px",
-			"type": "font-size",
-			"category": "font-size"
 		}
 	}
 }
