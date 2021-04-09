@@ -9,10 +9,10 @@ describe( 'Font Data', () => {
 
 	it( 'should assemble all allowed names for selectors', () => {
 		[
-			'primary_regular_xxl',
+			'primary_xl',
 			'body_m',
-			'accent_medium_xxs',
-			'basic_l',
+			'accent_regular_xxs',
+			'body_m',
 		].forEach( name => {
 			expect(allAllowedNames).toContain( name );
 		});
@@ -20,10 +20,10 @@ describe( 'Font Data', () => {
 
 	it( 'should transform allowed names into selectors', () => {
 		[
-			'lrv-a-font-primary-regular-xxs',
+			'lrv-a-font-primary-xxs',
 			'lrv-a-font-secondary-l',
-			'lrv-a-font-body-regular-xxs',
-			'lrv-a-font-basic-s'
+			'lrv-a-font-body-m',
+			'lrv-a-font-accent-m',
 		].forEach( selector => {
 			expect(allSelectors).toContain( selector );
 		});
@@ -32,21 +32,21 @@ describe( 'Font Data', () => {
 	it( 'should group selectors', () => {
 		[
 			'secondary',
-			'primary-regular',
-			'basic'
+			'accent-regular',
+			'body'
 		].forEach( name => {
 			expect(groupedSelectors).toHaveProperty( name );
 		});
 	});
 
 	it( 'should not contain selectors with a weight in the no-weight group', () => {
-		expect(groupedSelectors['secondary'].includes('lrv-a-font-secondary-bold-m')).toBe(false);
-		expect(groupedSelectors['basic'].includes('lrv-a-font-basic-bold-m')).toBe(false);
+		expect(groupedSelectors['accent'].includes('lrv-a-font-accent-regular-m')).toBe(false);
+		expect(groupedSelectors['secondary'].includes('lrv-a-secondary-regular-m')).toBe(false);
 	});
 
 	it( 'should create an object with tokens file contents', () => {
-		expect(tokensFileContentsByProperty['line_height'].props ).toHaveProperty( 'PRIMARY_REGULAR_S__LINE_HEIGHT_DESKTOP' );
-		expect(tokensFileContentsByProperty['font_size'].props ).toHaveProperty( 'SECONDARY_XXS__FONT_SIZE_BASE' );
+		expect(tokensFileContentsByProperty['line_height'].props ).toHaveProperty( 'PRIMARY_S__LINE_HEIGHT_DESKTOP' );
+		expect(tokensFileContentsByProperty['font_size'].props ).toHaveProperty( 'SECONDARY_S__FONT_SIZE_BASE' );
 	});
 
 });

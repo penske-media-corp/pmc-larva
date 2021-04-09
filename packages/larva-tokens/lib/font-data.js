@@ -1,87 +1,92 @@
 const { kebabify } = require( './utils' );
 
-const families = [
-	'primary',
-	'secondary',
-	'accent',
-	'body',
-	'basic'
-];
+/**
+ * All style names and corresponding sizes.
+ */
+const styles = {
+	'primary': [ 'xl', 'l', 'm', 's', 'xs', 'xxs', 'xxxs' ],
+	'secondary': [ 'l', 'm', 's' ],
+	'secondary_regular': [ 'm' ],
+	'accent': [ 'l', 'm', 's', 'xs', 'xxs' ],
+	'accent_regular': [ 'xxs' ],
+	'body': [ 'm', 's' ],
+};
 
-const weights = [
-	'',
-	'regular',
-	'bold',
-	'medium',
-];
+const families = Object.keys( styles );
 
-const sizes = [
-	'xxxl',
-	'xxl',
-	'xl',
-	'l',
-	'm',
-	's',
-	'xs',
-	'xxs',
-	'xxxs'
-];
-
+/**
+ * Breakpoints that will be supported in tokens.
+ *
+ * Note: Desktop-xl is not required for the hubs
+ *       style guide, and can be added here,
+ *       in GUT Phase 3, if required.
+ */
 const breakpoints = [
 	'base',
 	'desktop',
-	'desktopxl'
 ];
 
 /**
- * Property and its default value
+ * Properties for tokens and their defaults.
  */
 const tokenDefaults = {
 	'font_size': 'initial',
 	'line_height': 'inherit',
 	'letter_spacing': 'normal',
-	'font_weight': 'normal'
+	'font_weight': 'normal',
+	'font_style': 'normal'
 };
 
-const allAllowedNames = families.map( name => {
-	return weights.map( weight => {
-		return sizes.map( size => `${name}_${weight ? weight + '_' : ''}${size}` ).flat();
-	}).flat();
+/**
+ * Determine all allowed names from the styles
+ * object. These values will be transformed into
+ * both tokens and selectors.
+ *
+ * @returns Array of allowed names e.g. [ 'primary_l', 'accent_m' ]
+ */
+const allAllowedNames = Object.keys( styles ).map( name => {
+	return styles[name].map( size => `${name}_${size}` ).flat();
 }).flat();
 
-const PREFIX = 'lrv-a-font';
+/**
+ * Transformt the name into a CSS selector.
+ *
+ * @param {string} name e.g. primary_xl
+ * @returns lrv-a-font-primary-xl
+ */
+const nameToSelector = ( name ) => {
+	const SELECTOR_PREFIX = 'lrv-a-font';
+	return SELECTOR_PREFIX.concat( '-', kebabify(name) );
+}
 
-const allSelectors = allAllowedNames.reduce( ( acc, curr ) => {
-	const selector = PREFIX.concat( '-', kebabify(curr) );
-	acc.push( selector );
+/**
+ * Get object of selectors by group.
+ *
+ * Example:
+ * {
+ * 	'primary': [ 'lrv-a-font-primary-s' ],
+ * 	'accent-regular': [ 'lrv-a-font-accent-regular-l' ],
+ * }
+ *
+ * @returns Object containing key value pair of
+ *          family name and associated selectors
+ */
+const groupedSelectors = ( () => {
+	return families.reduce( ( groupsAcc, currGroup ) => {
+		groupsAcc[kebabify(currGroup)] = styles[currGroup].map( size => nameToSelector( `${currGroup}_${size}` ) ).flat();
 
-	return acc;
-}, [] );
-
-const groupedSelectors = (() => {
-	const groups = families.map( name => {
-		return weights.map( weight => `${name}${weight ?  '-' + weight : ''}` );
-	}).flat();
-
-	return groups.reduce( ( groupsObj, groupName ) => {
-
-		// https://regex101.com/r/MLRVk2/1
-		const pattern = new RegExp( `${groupName}-(s|m|l|x)`, 'g' );
-
-		if ( ! groupsObj.hasOwnProperty( groupName ) ) {
-			groupsObj[groupName] = [];
-		}
-
-		allSelectors.map( selector => {
-			if ( selector.match( pattern ) ) {
-				groupsObj[groupName].push( selector );
-			}
-		});
-
-		return groupsObj;
-	}, {} );
+		return groupsAcc;
+	}, {});
 })();
 
+/**
+ * Get list of all selectors.
+ *
+ * @returns Array of all selectors
+ */
+const allSelectors = families.reduce( ( selectorsAcc, currFamily ) => {
+	return selectorsAcc.concat( groupedSelectors[currFamily] );
+}, []);
 
 /**
  * Tokens Data
@@ -89,6 +94,13 @@ const groupedSelectors = (() => {
 
 const tokenProperties = Object.keys( tokenDefaults );
 
+/**
+ * For each property controlled by tokens, build all possible values
+ * needed for each style and each breakpoint.
+ *
+ * @returns A key value pair of the property and the contents formatted
+ *          for a tokens file to be processed by Theo.
+ */
 const tokensFileContentsByProperty = tokenProperties.reduce( ( propertiesAcc, currProperty ) => {
 
 	const tokenNames = ( () => {
