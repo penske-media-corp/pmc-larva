@@ -1,5 +1,10 @@
 @import 'setup';
 
+:root {
+	--ON: initial;
+	--OFF: ;
+}
+
 html {
 	// Use whitespace and initial in custom properties to invalidate values
 	// for simplification of media queries.
@@ -8,20 +13,15 @@ html {
 	// Reduced example:
 	// https://codepen.io/laras126/pen/ExZbvPY
 
-	--desktop-off: ;
-	--desktopxl-off: ;
-
-	@include pmc-breakpoint( mobile-max ) {
-		--desktop-off: ;
-		--desktopxl-off: ;
-	}
+	--is-desktop: var( --OFF );
+	--is-desktopxl: var( --OFF );
 
 	@include pmc-breakpoint( desktop ) {
-		--desktop-off: initial;
+		--is-desktop: var( --ON );
 	}
 
 	@include pmc-breakpoint( desktop-xl ) {
-		--desktop-off: initial;
+		--is-desktopxl: var( --ON );
 	}
 }
 
