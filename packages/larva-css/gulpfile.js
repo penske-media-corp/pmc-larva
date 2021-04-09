@@ -14,8 +14,10 @@ const path = require( 'path' );
 const sass = require( 'gulp-sass' );
 const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
-const clean = require( 'gulp-clean' );
-const { mkdirpSync } = require('fs-extra');
+const del = require( 'del' );
+const { mkdirpSync, existsSync } = require('fs-extra');
+
+const { generateAFontScss } = require( './lib/generators' );
 
 sass.compiler = require('sass');
 
@@ -27,7 +29,8 @@ let sassOpts = {
 	fiber: Fiber
 };
 
-const css_dest = './build/css/';
+const cssDest = './build/css/';
+const scssDest = './src/_generated';
 
 const css_files = {
 	generic_inline: {
@@ -74,14 +77,27 @@ const css_files = {
 	}
 };
 
-function clean_css() {
-	mkdirpSync( css_dest );
+const generateScssFromTokens = ( done ) => {
+	mkdirpSync( scssDest );
+	generateAFontScss( scssDest );
+	done();
+};
 
-	return gulp.src( css_dest, { read: false } ).pipe( clean() );
-}
+const clean = ( done ) => {
 
-function styles( done ) {
-	clean_css();
+	const dirs = [ scssDest, cssDest ];
+
+	dirs.forEach( dir => {
+		if ( existsSync( dir ) ) {
+			del.sync( [ dir ] );
+		}
+	});
+
+	done();
+};
+
+const styles = ( done ) => {
+	mkdirpSync( cssDest );
 
 	sassOpts.outputStyle = 'compressed';
 
@@ -98,7 +114,7 @@ function styles( done ) {
 				} ) ).
 				pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
 				pipe( concat( css_files[val].css.file ) ).
-				pipe( gulp.dest( css_dest ) );
+				pipe( gulp.dest( cssDest ) );
 
 	} );
 	done();
@@ -108,4 +124,4 @@ exports.watch = function() {
 	gulp.watch( './src/**/*.scss', styles );
 };
 
-exports.default = styles;
+exports.default = gulp.series( clean, generateScssFromTokens, styles );

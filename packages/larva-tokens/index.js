@@ -1,5 +1,7 @@
-const { groupedSelectors } = require( './lib/font-data' );
+const { kebabify } = require( './lib/utils' );
+const fontData = require( './lib/font-data' );
 
 module.exports = {
-	fontSelectors: groupedSelectors,
+	fontData,
+	kebabify,
 };

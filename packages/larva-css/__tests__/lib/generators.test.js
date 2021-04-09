@@ -4,7 +4,7 @@ const {
 
 const expected = require( './expected' );
 
-describe( 'Font Generators', () => {
+describe( 'A-Font Generator', () => {
 
 	it( 'should output a CSS ruleset containing a-font CSS', () => {
 

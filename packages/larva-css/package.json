@@ -24,6 +24,7 @@
   "devDependencies": {
     "@penskemediacorp/larva-scss": "^0.1.20",
     "@penskemediacorp/larva-tokens": "^0.1.20",
+    "del": "^6.0.0",
     "fibers": "^5.0.0",
     "gulp": "^4.0.2",
     "sass": "^1.32.8"
