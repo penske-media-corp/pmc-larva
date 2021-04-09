@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-tokens - Add generated tokens for typography.
 * larva-css - Generate SCSS according to typography tokens.
 * root - Add build script for tokens updates.
+* larva-scss/css - Add warnings for future deprecation of previous font-related utilities.
 ## 0.1.20 - 03-22-2021
 * larva-patterns - Show variants in menu and pattern pages on Larva server
 * larva - Fix bug with eslint resolving aliases, remove deprecated dependency
