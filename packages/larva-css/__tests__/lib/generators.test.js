@@ -2,7 +2,7 @@ const {
 	generate,
 } = require( '../../lib/generators' );
 
-const expected = require( './expected' );
+const expected = require( '../fixtures/expected' );
 
 describe( 'A-Font Generator', () => {
 
