@@ -25,7 +25,6 @@ const ruleset = ( selector ) => {
 	let css = '';
 
 	const nameSlugs = selector.split('-');
-	const family = nameSlugs[3];
 	const tokenBase = [...nameSlugs].slice(3, nameSlugs.length ).join('-');
 
 	properties.map( property => {
@@ -34,11 +33,7 @@ const ruleset = ( selector ) => {
 	--${property}-base: var(--desktop-off) var( --${tokenBase}-${property}-base);`
 	});
 
-	// If this font-family value needs to be overridden when incorporating
-	// existing style guides, it can be abstracted from this declaration as
-	// a separate custom property.
-	css += `\n
-	font-family: var( --font-family-${family} );`;
+	css += '\n';
 
 	properties.map( property => {
 

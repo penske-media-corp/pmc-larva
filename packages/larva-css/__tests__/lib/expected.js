@@ -11,8 +11,9 @@ module.exports = {
 	--font-weight-base: var(--desktop-off) var( --primary-xxl-font-weight-base);
 	--font-style-desktop: var( --primary-xxl-font-style-desktop, var( --primary-xxl-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-xxl-font-style-base);
+	--font-family-desktop: var( --primary-xxl-font-family-desktop, var( --primary-xxl-font-family-base ) );
+	--font-family-base: var(--desktop-off) var( --primary-xxl-font-family-base);
 
-	font-family: var( --font-family-primary );
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
@@ -32,6 +33,10 @@ module.exports = {
 	font-style: var(
 		--font-style-base,
 		var(--font-style-desktop)
+	);
+	font-family: var(
+		--font-family-base,
+		var(--font-family-desktop)
 	);
 }\n`
 }

@@ -37,7 +37,8 @@ const tokenDefaults = {
 	'line_height': 'inherit',
 	'letter_spacing': 'normal',
 	'font_weight': 'normal',
-	'font_style': 'normal'
+	'font_style': 'normal',
+	'font_family': 'initial'
 };
 
 /**
