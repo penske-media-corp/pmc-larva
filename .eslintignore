@@ -4,11 +4,9 @@ public
 vendor
 site
 larva-patterns
-larva-css
 larva-scss
 larva-js
 larva-svg
-larva-tokens
 twig-to-php-parser
 backstopjs-config
 eslint-config
@@ -17,3 +15,6 @@ stylelint-css-algorithms
 larva
 backstop_data
 jest-setup.js
+
+a-space-children.browser-test.js
+browser-test-setup.js

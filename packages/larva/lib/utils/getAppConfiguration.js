@@ -14,7 +14,7 @@ const path = require( 'path' );
  * @param {string} key string that indicates a specific configuration property, e.g. patterns.
  * @param {boolean} usePackageDefault fall back to package default if not defined in app
  *
- * @returns value of the specified key.
+ * @return value of the specified key.
  */
 
 const defaultConfig = {

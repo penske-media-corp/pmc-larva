@@ -38,5 +38,5 @@ module.exports = {
 		--font-family-base,
 		var(--font-family-desktop)
 	);
-}\n`
-}
+}\n`,
+};

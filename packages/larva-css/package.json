@@ -26,7 +26,11 @@
     "@penskemediacorp/larva-tokens": "^0.1.20",
     "del": "^6.0.0",
     "fibers": "^5.0.0",
+    "fs-extra": "^9.1.0",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-stylelint": "^13.0.0",
     "sass": "^1.32.8"
   },
   "gitHead": "81e44e19c2f1b63291b27fbfd6fd146321686c78"
