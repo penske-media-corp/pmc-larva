@@ -559,6 +559,34 @@
       "originalValue": "700",
       "name": "FONT_WEIGHT_BOLD"
     },
+    "LINE_HEIGHT_SMALL": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.1",
+      "originalValue": "1.1",
+      "name": "LINE_HEIGHT_SMALL"
+    },
+    "LINE_HEIGHT_NORMAL": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.35",
+      "originalValue": "1.35",
+      "name": "LINE_HEIGHT_NORMAL"
+    },
+    "LINE_HEIGHT_COPY": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.5",
+      "originalValue": "1.5",
+      "name": "LINE_HEIGHT_COPY"
+    },
+    "LINE_HEIGHT_LARGE": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.85",
+      "originalValue": "1.85",
+      "name": "LINE_HEIGHT_LARGE"
+    },
     "SPACING_00": {
       "category": "spacing",
       "type": "unit",

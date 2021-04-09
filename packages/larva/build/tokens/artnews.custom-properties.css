@@ -54,6 +54,10 @@
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+  --line-height-small: 1.1;
+  --line-height-normal: 1.35;
+  --line-height-copy: 1.5;
+  --line-height-large: 1.85;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
