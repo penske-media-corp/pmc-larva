@@ -26,16 +26,6 @@
 			"type": "font",
 			"comment": "Fallback for secondary-fancy"
 		},
-		"FONT_FAMILY_ACCENT_FANCY": {
-			"value": "Verdana, sans-serif",
-			"type": "font",
-			"comment": "The webfont, loaded async"
-		},
-		"FONT_FAMILY_ACCENT": {
-			"value": "Verdana, sans-serif",
-			"type": "font",
-			"comment": "Fallback for accent-fancy"
-		},
 		"FONT_FAMILY_BODY": {
 			"value": "Georgia, serif",
 			"type": "font"
