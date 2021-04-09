@@ -5,25 +5,22 @@ function describe( testString, tests ) {
 }
 
 function it( testString, test ) {
-	const testResult = test();
-	const color = false === testResult.result ? 'red' : 'green';
+	let testResult = test();
+	let color = ( false === testResult.result ) ? 'red' : 'green';
 
-	console.log(
-		`%c ${ testString } ${ testResult.message }`,
-		`color:${ color }`
-	);
+	console.log( `%c ${testString} ${testResult.message}`, `color:${color}` );
 }
 
 function assertEquals( value1, value2 ) {
 	let message = '';
-	const expression = value1 % value2 < 1;
+	let expression = value1 % value2 < 1;
 
 	if ( false === expression ) {
-		message = '\n \t Fail: ' + ( value1 % value2 ).toFixed( 1 );
+		message = '\n \t Fail: ' + (value1 % value2).toFixed(1);
 	}
 
 	return {
 		result: expression,
-		message,
+		message: message
 	};
 }
