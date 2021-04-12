@@ -8,3 +8,5 @@ cp -r packages/site/build/* build/html
 # Generate Larva static site
 nohup node ./packages/larva/lib/start.js > /dev/null 2>&1 &
 npm run build-html
+
+cp -r build/html public
