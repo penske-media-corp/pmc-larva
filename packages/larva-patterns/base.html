@@ -37,7 +37,7 @@
 	<body class="lrv-u-margin-a-00">
 
 		<main class="lrv-u-flex">
-			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
+			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-LarvaUiToggle-panel">
 				{% include "@larva/_templates/pattern-nav.html" with { source: 'larva' } %}
 				{% if pattern_nav.project %}
 					{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
@@ -55,8 +55,8 @@
 					right: 0;
 					z-index: 9999999;">
 			{% include "@larva/components/c-button/c-button.twig" with {
-				"c_button_text": "Show Larva UI",
-				"c_button_classes": "js-hide-button lrv-a-unstyle-button lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-1 lrv-u-cursor-pointer"
+				"c_button_text": "Hide Larva UI",
+				"c_button_classes": "js-LarvaUiToggle-button lrv-a-unstyle-button lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-1 lrv-u-cursor-pointer"
 			} %}
 		</div>
 
