@@ -12,7 +12,7 @@ $warned-font-family: false;
 
 	// example: font-family-primary-fancy, 'Graphik', sans-serif
 	// example: font-family-primary, Helvetica
-	@if str-index( $token-str, 'font-family' ) {
+	@if str-index( $token-str, 'font-family' ) and not str-index( $token-str, '-font-family-' ) {
 
 		// The webfont/'fancy' variation is added via custom property
 		// in generic/typography
@@ -33,7 +33,7 @@ $warned-font-family: false;
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-family' ) {
+	@if str-index( $token-str, 'font-family' ) and not str-index( $token-str, '-font-family-' ) {
 
 		@if not str-index( $token-str, 'fancy' ) {
 
