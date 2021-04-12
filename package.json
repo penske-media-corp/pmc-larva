@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
-    "build": "sh scripts/build-static.sh",
+    "vercel-build": "sh scripts/vercel-build.sh",
     "larva": "packages/larva/bin/larva.js server --watch ./packages -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "npm run prod:scss && npm run prod:js",
