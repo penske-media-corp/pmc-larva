@@ -12,7 +12,7 @@ describe( 'Larva UI Toggle', () => {
 		const panel = document.querySelector( '.js-LarvaUiToggle-panel' );
 
 		expect( panel.classList.contains( 'is-ui-hidden' ) ).toBe( false );
-		expect( button.state.isVisible ).toBe( true );
+		expect( button.state.isHidden ).toBe( false );
 	} );
 
 	it( 'should hide larva ui when clicked', () => {

@@ -10,7 +10,7 @@ export default class LarvaUiToggle {
 
 		// Indicate the class has been created by creating this property on the DOM node.
 		this.el.pmcLarvaUiToggle = this;
-		this.KEY = 'LarvaUiIsVisible';
+		this.KEY = 'LarvaUiIsHidden';
 
 		// Bind an event listener like so:
 		this.onClick = this.onClick.bind( this );
@@ -22,27 +22,30 @@ export default class LarvaUiToggle {
 		}
 
 		this.state = {
-			isVisible: true
+			isHidden: false
 		};
 	}
 
 	onClick() {
-		if ( true === this.state.isVisible ) {
+		localStorage.setItem( this.KEY, this.state.isHidden );
+
+		if ( true === this.state.isHidden ) {
 			this.hide();
 		} else {
 			this.show();
 		}
+
 	}
 
 	hide() {
-		this.state.isVisible = false;
+		this.state.isHidden = false;
 		this.ui.panels.forEach( el => {
 			el.classList.add( 'is-ui-hidden' );
 		});
 	}
 
 	show() {
-		this.state.isVisible = true;
+		this.state.isHidden = true;
 		this.ui.panels.forEach( el => {
 			el.classList.remove( 'is-ui-hidden' );
 		});
