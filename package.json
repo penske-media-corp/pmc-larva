@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
-    "vercel-build": "sh scripts/vercel-build.sh",
     "larva": "packages/larva/bin/larva.js server --watch ./packages -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "npm run prod:scss && npm run prod:js",
@@ -19,6 +18,7 @@
     "lint-fix:scss": "packages/larva/bin/larva.js lint-scss --fix",
     "lint-fix:js": "packages/larva/bin/larva.js lint-js ./ --fix",
     "write-json": "packages/larva/bin/larva.js write-json larva && packages/larva/bin/larva.js write-json",
+    "build-vercel": "sh scripts/build-vercel.sh",
     "build-icons": "packages/larva/bin/larva.js build-icons",
     "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
     "sync-tokens": "mkdir -p build/tokens && cp -r packages/larva-tokens/build/ build/tokens/",
