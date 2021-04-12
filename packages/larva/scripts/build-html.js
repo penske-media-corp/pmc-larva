@@ -22,10 +22,17 @@ const patternsObj = ( () => {
 
 const routesArr = getPatternRoutes( patternsObj );
 
-// Add a static, non-pattern path. If we need more paths like this,
-// this method should be called in its own function.
-routesArr.push( 'css' );
-routesArr.push( 'style-guide' );
+// Add a static, non-pattern paths.
+const staticPaths = [
+	'css',
+	'style-guide',
+	'components',
+	'objects',
+	'modules',
+	'',
+];
+
+staticPaths.forEach( p => routesArr.push( p ) );
 
 generateStatic( routesArr, buildPath, ( message ) => {
 
