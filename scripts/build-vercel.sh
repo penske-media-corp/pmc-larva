@@ -2,6 +2,7 @@
 
 # Build React site and copy to to build/html
 mkdir -p build/html/site
+npm install --prefix=packages/site
 npm run build --prefix=packages/site
 cp -r packages/site/build/* build/html
 
