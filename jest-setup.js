@@ -1,7 +1,6 @@
 'use strict';
 
 // JSDOM
-
 const { JSDOM } = require( 'jsdom' );
 
 const jsdom = new JSDOM(
@@ -9,8 +8,23 @@ const jsdom = new JSDOM(
 );
 const { window } = jsdom;
 
+class LocalStorageMock {
+	constructor() {
+		this.store = {};
+	}
+
+	getItem(key) {
+		return this.store[key];
+	}
+
+	setItem( key, value) {
+		this.store[key] = value;
+	}
+};
+
 global.window = window;
 global.document = window.document;
+global.localStorage = new LocalStorageMock();
 
 // Please note, this is copy pasta from: https://github.com/kristerkari/stylelint-high-performance-animation/blob/master/jest-setup.js
 // Styleint does not provide a tester for Jest: https://github.com/stylelint/stylelint/issues/815
