@@ -9,7 +9,6 @@
  */
 
 export default class LarvaUiToggle {
-
 	constructor( el ) {
 		this.el = el;
 
@@ -23,43 +22,42 @@ export default class LarvaUiToggle {
 
 		this.ui = {
 			button: el,
-			panels: document.querySelectorAll( '.js-LarvaUiToggle-panel' )
-		}
+			panels: document.querySelectorAll( '.js-LarvaUiToggle-panel' ),
+		};
 
 		this.init();
 	}
 
 	init() {
-		const isHidden = localStorage.getItem( this.KEY );
+		const isHidden = window.localStorage.getItem( this.KEY );
 
 		// Default to false,
 		// or if true, add the hidden class
 		if ( undefined === isHidden ) {
-			this.setStore( "false" );
-		} else if ( "true" === isHidden ) {
+			this.setStore( 'false' );
+		} else if ( 'true' === isHidden ) {
 			this.togglePanels();
 		}
 	}
 
 	onClick() {
-		const currentValue = localStorage.getItem( this.KEY );
+		const currentValue = window.localStorage.getItem( this.KEY );
 
 		// Firefox only stores strings in localStorage.
-		const newValue = "true" === currentValue ? "false" : "true";
+		const newValue = 'true' === currentValue ? 'false' : 'true';
 
 		this.setStore( newValue );
 	}
 
 	setStore( newValue ) {
-		localStorage.setItem( this.KEY, newValue );
+		window.localStorage.setItem( this.KEY, newValue );
 
 		this.togglePanels();
 	}
 
 	togglePanels() {
-		this.ui.panels.forEach( el => {
+		this.ui.panels.forEach( ( el ) => {
 			el.classList.toggle( 'is-ui-hidden' );
-		});
+		} );
 	}
-
 }

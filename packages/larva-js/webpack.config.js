@@ -1,10 +1,10 @@
-const path = require('path');
+const path = require( 'path' );
 
 const aliases = {
 	'@npm': path.resolve( './node_modules/' ),
 };
 
-module.exports = (env, argv) => {
+module.exports = ( env, argv ) => {
 	return {
 		entry: {
 			'video-showcase': './src/video-showcase.js',
@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
 		mode: 'development',
 		output: {
 			filename: '[name].js',
-			path: path.resolve(__dirname, 'build')
+			path: path.resolve( __dirname, 'build' ),
 		},
 		resolve: {
 			alias: aliases,

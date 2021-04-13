@@ -4,15 +4,19 @@ import LarvaUiToggle from './LarvaUiToggle';
 import '../vendor/prism';
 
 export default function initLarvaUi() {
-
+	// This rule is meant for React components.
+	// eslint-disable-next-line @wordpress/no-global-event-listener
 	document.addEventListener( 'DOMContentLoaded', () => {
-
 		/**
 		 * Initialize local storage toggle button.
 		 */
-		const buttons = [ ... document.querySelectorAll( '.js-LarvaUiToggle-button' ) ];
+		const buttons = [
+			...document.querySelectorAll( '.js-LarvaUiToggle-button' ),
+		];
 
-		buttons.forEach( el => el.pmcLarvaUiToggle = new LarvaUiToggle( el ) );
+		buttons.forEach(
+			( el ) => ( el.pmcLarvaUiToggle = new LarvaUiToggle( el ) )
+		);
 
 		/**
 		 * Side Skins
