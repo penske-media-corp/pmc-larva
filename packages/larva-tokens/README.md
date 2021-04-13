@@ -43,7 +43,7 @@ If working in a project that does not design tokens setup, but already has the b
 ## Things To Be Aware Of
 
 * Token names should be in CAPS
-* The src/base/aliases.json file is now deprecated and colors should always be defined in the brand's json. (Previously used for colors that might be shared between brands).
+* The src/base/deprecated/aliases.json file is now deprecated and colors should always be defined in the brand's json. (Previously used for colors that might be shared between brands).
 * Only tokens in existing categories should be added e.g. there are no font-size tokens, so do not add them.
 * All tokens are prefixed with their CSS property, e.g. background is BACKGROUND_, text colors are COLOR_, and font family values prefixed with FONT_FAMILY_.
 * Font family values should be a short CSS font stack.

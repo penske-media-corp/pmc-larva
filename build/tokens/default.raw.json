@@ -479,164 +479,271 @@
       "originalValue": "{!GREY_50}",
       "name": "COLOR_GREY"
     },
-    "FONT_FAMILY_PRIMARY_FANCY": {
+    "ACCENT_REGULAR_XXS_FONT_FAMILY_BASE": {
       "category": "font-family",
-      "value": "Courier, serif",
-      "type": "font",
-      "comment": "The webfont, loaded async",
-      "originalValue": "Courier, serif",
-      "name": "FONT_FAMILY_PRIMARY_FANCY"
-    },
-    "FONT_FAMILY_PRIMARY": {
-      "category": "font-family",
-      "value": "Georgia, serif",
-      "type": "font",
-      "comment": "Fallback for primary-fancy",
-      "originalValue": "Georgia, serif",
-      "name": "FONT_FAMILY_PRIMARY"
-    },
-    "FONT_FAMILY_SECONDARY_FANCY": {
-      "category": "font-family",
-      "value": "Papyrus, serif",
-      "type": "font",
-      "comment": "The webfont, loaded async",
-      "originalValue": "Papyrus, serif",
-      "name": "FONT_FAMILY_SECONDARY_FANCY"
-    },
-    "FONT_FAMILY_SECONDARY": {
-      "category": "font-family",
-      "value": "Helvetica, serif",
-      "type": "font",
-      "comment": "Fallback for secondary-fancy",
-      "originalValue": "Helvetica, serif",
-      "name": "FONT_FAMILY_SECONDARY"
-    },
-    "FONT_FAMILY_BODY": {
-      "category": "font-family",
-      "value": "Georgia, serif",
-      "type": "font",
-      "originalValue": "Georgia, serif",
-      "name": "FONT_FAMILY_BODY"
-    },
-    "FONT_FAMILY_BASIC": {
-      "category": "font-family",
-      "value": "Helvetica, sans-serif",
-      "type": "font-family",
-      "originalValue": "Helvetica, sans-serif",
-      "name": "FONT_FAMILY_BASIC"
-    },
-    "FONT_WEIGHT_LIGHT": {
-      "category": "font-weight",
       "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "FONT_WEIGHT_LIGHT"
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_REGULAR_XXS_FONT_FAMILY_BASE"
     },
-    "FONT_WEIGHT_NORMAL": {
-      "category": "font-weight",
+    "PRIMARY_L_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
       "type": "number",
-      "value": "400",
-      "originalValue": "400",
-      "name": "FONT_WEIGHT_NORMAL"
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_L_FONT_FAMILY_DESKTOP"
     },
-    "FONT_WEIGHT_BOLD": {
-      "category": "font-weight",
+    "BODY_M_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "FONT_WEIGHT_BOLD"
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "BODY_M_FONT_FAMILY_DESKTOP"
     },
-    "LINE_HEIGHT_SMALL": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.1",
-      "originalValue": "1.1",
-      "name": "LINE_HEIGHT_SMALL"
+    "PRIMARY_M_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_M_FONT_FAMILY_DESKTOP"
     },
-    "LINE_HEIGHT_NORMAL": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.35",
-      "originalValue": "1.35",
-      "name": "LINE_HEIGHT_NORMAL"
+    "ACCENT_XS_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_XS_FONT_FAMILY_DESKTOP"
     },
-    "LINE_HEIGHT_COPY": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.5",
-      "originalValue": "1.5",
-      "name": "LINE_HEIGHT_COPY"
+    "PRIMARY_XL_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XL_FONT_FAMILY_DESKTOP"
     },
-    "LINE_HEIGHT_LARGE": {
-      "category": "line-height",
-      "type": "unit",
-      "value": "1.85",
-      "originalValue": "1.85",
-      "name": "LINE_HEIGHT_LARGE"
+    "PRIMARY_XS_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XS_FONT_FAMILY_BASE"
     },
-    "SPACING_00": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "0",
-      "originalValue": "0",
-      "name": "SPACING_00"
+    "PRIMARY_XXXS_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XXXS_FONT_FAMILY_BASE"
     },
-    "SPACING_025": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "0.25rem",
-      "originalValue": "0.25rem",
-      "name": "SPACING_025"
+    "ACCENT_M_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_M_FONT_FAMILY_BASE"
     },
-    "SPACING_050": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "0.5rem",
-      "originalValue": "0.5rem",
-      "name": "SPACING_050"
+    "ACCENT_L_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_L_FONT_FAMILY_BASE"
     },
-    "SPACING_075": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "0.75rem",
-      "originalValue": "0.75rem",
-      "name": "SPACING_075"
+    "PRIMARY_XXS_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XXS_FONT_FAMILY_BASE"
     },
-    "SPACING_1": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "1rem",
-      "originalValue": "1rem",
-      "name": "SPACING_1"
+    "PRIMARY_S_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_S_FONT_FAMILY_BASE"
     },
-    "SPACING_125": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "1.25rem",
-      "originalValue": "1.25rem",
-      "name": "SPACING_125"
+    "BODY_S_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "BODY_S_FONT_FAMILY_BASE"
     },
-    "SPACING_150": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "1.5rem",
-      "originalValue": "1.5rem",
-      "name": "SPACING_150"
+    "BODY_S_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "BODY_S_FONT_FAMILY_DESKTOP"
     },
-    "SPACING_2": {
-      "category": "spacing",
-      "type": "unit",
-      "comment": "Used for margins and padding only.",
-      "value": "2rem",
-      "originalValue": "2rem",
-      "name": "SPACING_2"
+    "PRIMARY_S_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_S_FONT_FAMILY_DESKTOP"
+    },
+    "PRIMARY_XXS_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XXS_FONT_FAMILY_DESKTOP"
+    },
+    "ACCENT_L_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_L_FONT_FAMILY_DESKTOP"
+    },
+    "PRIMARY_XL_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XL_FONT_FAMILY_BASE"
+    },
+    "ACCENT_M_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_M_FONT_FAMILY_DESKTOP"
+    },
+    "PRIMARY_XXXS_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XXXS_FONT_FAMILY_DESKTOP"
+    },
+    "PRIMARY_XS_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_XS_FONT_FAMILY_DESKTOP"
+    },
+    "ACCENT_XS_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_XS_FONT_FAMILY_BASE"
+    },
+    "PRIMARY_M_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_M_FONT_FAMILY_BASE"
+    },
+    "BODY_M_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "BODY_M_FONT_FAMILY_BASE"
+    },
+    "PRIMARY_L_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_L_FONT_FAMILY_BASE"
+    },
+    "ACCENT_REGULAR_XXS_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_REGULAR_XXS_FONT_FAMILY_DESKTOP"
+    },
+    "ACCENT_S_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_S_FONT_FAMILY_DESKTOP"
+    },
+    "ACCENT_XXS_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_XXS_FONT_FAMILY_DESKTOP"
+    },
+    "SECONDARY_REGULAR_M_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_REGULAR_M_FONT_FAMILY_DESKTOP"
+    },
+    "SECONDARY_S_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_S_FONT_FAMILY_BASE"
+    },
+    "SECONDARY_L_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_L_FONT_FAMILY_DESKTOP"
+    },
+    "SECONDARY_M_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_M_FONT_FAMILY_DESKTOP"
+    },
+    "SECONDARY_M_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_M_FONT_FAMILY_BASE"
+    },
+    "SECONDARY_S_FONT_FAMILY_DESKTOP": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_S_FONT_FAMILY_DESKTOP"
+    },
+    "SECONDARY_L_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_L_FONT_FAMILY_BASE"
+    },
+    "SECONDARY_REGULAR_M_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_REGULAR_M_FONT_FAMILY_BASE"
+    },
+    "ACCENT_XXS_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_XXS_FONT_FAMILY_BASE"
+    },
+    "ACCENT_S_FONT_FAMILY_BASE": {
+      "category": "font-family",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "ACCENT_S_FONT_FAMILY_BASE"
     },
     "ACCENT_S_FONT_SIZE_BASE": {
       "category": "font-size",
@@ -1701,6 +1808,165 @@
       "value": "23px",
       "originalValue": "23px",
       "name": "ACCENT_S_LINE_HEIGHT_BASE"
+    },
+    "SPACING_00": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0",
+      "originalValue": "0",
+      "name": "SPACING_00"
+    },
+    "SPACING_025": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0.25rem",
+      "originalValue": "0.25rem",
+      "name": "SPACING_025"
+    },
+    "SPACING_050": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
+      "name": "SPACING_050"
+    },
+    "SPACING_075": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0.75rem",
+      "originalValue": "0.75rem",
+      "name": "SPACING_075"
+    },
+    "SPACING_1": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "1rem",
+      "originalValue": "1rem",
+      "name": "SPACING_1"
+    },
+    "SPACING_125": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "1.25rem",
+      "originalValue": "1.25rem",
+      "name": "SPACING_125"
+    },
+    "SPACING_150": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "1.5rem",
+      "originalValue": "1.5rem",
+      "name": "SPACING_150"
+    },
+    "SPACING_2": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "2rem",
+      "originalValue": "2rem",
+      "name": "SPACING_2"
+    },
+    "FONT_FAMILY_PRIMARY_FANCY": {
+      "category": "font-family",
+      "value": "Courier, serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "Courier, serif",
+      "name": "FONT_FAMILY_PRIMARY_FANCY"
+    },
+    "FONT_FAMILY_PRIMARY": {
+      "category": "font-family",
+      "value": "Georgia, serif",
+      "type": "font",
+      "comment": "Fallback for primary-fancy",
+      "originalValue": "Georgia, serif",
+      "name": "FONT_FAMILY_PRIMARY"
+    },
+    "FONT_FAMILY_SECONDARY_FANCY": {
+      "category": "font-family",
+      "value": "Papyrus, serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "Papyrus, serif",
+      "name": "FONT_FAMILY_SECONDARY_FANCY"
+    },
+    "FONT_FAMILY_SECONDARY": {
+      "category": "font-family",
+      "value": "Helvetica, serif",
+      "type": "font",
+      "comment": "Fallback for secondary-fancy",
+      "originalValue": "Helvetica, serif",
+      "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_BODY": {
+      "category": "font-family",
+      "value": "Georgia, serif",
+      "type": "font",
+      "originalValue": "Georgia, serif",
+      "name": "FONT_FAMILY_BODY"
+    },
+    "FONT_FAMILY_BASIC": {
+      "category": "font-family",
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
+      "originalValue": "Helvetica, sans-serif",
+      "name": "FONT_FAMILY_BASIC"
+    },
+    "FONT_WEIGHT_LIGHT": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "300",
+      "originalValue": "300",
+      "name": "FONT_WEIGHT_LIGHT"
+    },
+    "FONT_WEIGHT_NORMAL": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "400",
+      "originalValue": "400",
+      "name": "FONT_WEIGHT_NORMAL"
+    },
+    "FONT_WEIGHT_BOLD": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "FONT_WEIGHT_BOLD"
+    },
+    "LINE_HEIGHT_SMALL": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.1",
+      "originalValue": "1.1",
+      "name": "LINE_HEIGHT_SMALL"
+    },
+    "LINE_HEIGHT_NORMAL": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.35",
+      "originalValue": "1.35",
+      "name": "LINE_HEIGHT_NORMAL"
+    },
+    "LINE_HEIGHT_COPY": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.5",
+      "originalValue": "1.5",
+      "name": "LINE_HEIGHT_COPY"
+    },
+    "LINE_HEIGHT_LARGE": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.85",
+      "originalValue": "1.85",
+      "name": "LINE_HEIGHT_LARGE"
     }
   }
 }

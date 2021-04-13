@@ -39,39 +39,44 @@
   --color-brand-secondary-light: rgb(0, 0, 0);
   --color-grey-dark: rgb(106, 106, 106);
   --color-grey: rgb(140, 140, 140);
-  /* The webfont, loaded async */
-  --font-family-primary-fancy: Courier, serif;
-  /* Fallback for primary-fancy */
-  --font-family-primary: Georgia, serif;
-  /* The webfont, loaded async */
-  --font-family-secondary-fancy: Papyrus, serif;
-  /* Fallback for secondary-fancy */
-  --font-family-secondary: Helvetica, serif;
-  --font-family-body: Georgia, serif;
-  --font-family-basic: Helvetica, sans-serif;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --line-height-small: 1.1;
-  --line-height-normal: 1.35;
-  --line-height-copy: 1.5;
-  --line-height-large: 1.85;
-  /* Used for margins and padding only. */
-  --spacing-00: 0;
-  /* Used for margins and padding only. */
-  --spacing-025: 0.25rem;
-  /* Used for margins and padding only. */
-  --spacing-050: 0.5rem;
-  /* Used for margins and padding only. */
-  --spacing-075: 0.75rem;
-  /* Used for margins and padding only. */
-  --spacing-1: 1rem;
-  /* Used for margins and padding only. */
-  --spacing-125: 1.25rem;
-  /* Used for margins and padding only. */
-  --spacing-150: 1.5rem;
-  /* Used for margins and padding only. */
-  --spacing-2: 2rem;
+  --accent-regular-xxs-font-family-base: initial;
+  --primary-l-font-family-desktop: initial;
+  --body-m-font-family-desktop: initial;
+  --primary-m-font-family-desktop: initial;
+  --accent-xs-font-family-desktop: initial;
+  --primary-xl-font-family-desktop: initial;
+  --primary-xs-font-family-base: initial;
+  --primary-xxxs-font-family-base: initial;
+  --accent-m-font-family-base: initial;
+  --accent-l-font-family-base: initial;
+  --primary-xxs-font-family-base: initial;
+  --primary-s-font-family-base: initial;
+  --body-s-font-family-base: initial;
+  --body-s-font-family-desktop: initial;
+  --primary-s-font-family-desktop: initial;
+  --primary-xxs-font-family-desktop: initial;
+  --accent-l-font-family-desktop: initial;
+  --primary-xl-font-family-base: initial;
+  --accent-m-font-family-desktop: initial;
+  --primary-xxxs-font-family-desktop: initial;
+  --primary-xs-font-family-desktop: initial;
+  --accent-xs-font-family-base: initial;
+  --primary-m-font-family-base: initial;
+  --body-m-font-family-base: initial;
+  --primary-l-font-family-base: initial;
+  --accent-regular-xxs-font-family-desktop: initial;
+  --accent-s-font-family-desktop: initial;
+  --accent-xxs-font-family-desktop: initial;
+  --secondary-regular-m-font-family-desktop: initial;
+  --secondary-s-font-family-base: initial;
+  --secondary-l-font-family-desktop: initial;
+  --secondary-m-font-family-desktop: initial;
+  --secondary-m-font-family-base: initial;
+  --secondary-s-font-family-desktop: initial;
+  --secondary-l-font-family-base: initial;
+  --secondary-regular-m-font-family-base: initial;
+  --accent-xxs-font-family-base: initial;
+  --accent-s-font-family-base: initial;
   --accent-s-font-size-base: 23px;
   --primary-xl-font-size-desktop: initial;
   --accent-xxs-font-size-base: 14px;
@@ -224,4 +229,37 @@
   --accent-xxs-line-height-base: 0.4px;
   --primary-l-line-height-desktop: inherit;
   --accent-s-line-height-base: 23px;
+  /* Used for margins and padding only. */
+  --spacing-00: 0;
+  /* Used for margins and padding only. */
+  --spacing-025: 0.25rem;
+  /* Used for margins and padding only. */
+  --spacing-050: 0.5rem;
+  /* Used for margins and padding only. */
+  --spacing-075: 0.75rem;
+  /* Used for margins and padding only. */
+  --spacing-1: 1rem;
+  /* Used for margins and padding only. */
+  --spacing-125: 1.25rem;
+  /* Used for margins and padding only. */
+  --spacing-150: 1.5rem;
+  /* Used for margins and padding only. */
+  --spacing-2: 2rem;
+  /* The webfont, loaded async */
+  --font-family-primary-fancy: Courier, serif;
+  /* Fallback for primary-fancy */
+  --font-family-primary: Georgia, serif;
+  /* The webfont, loaded async */
+  --font-family-secondary-fancy: Papyrus, serif;
+  /* Fallback for secondary-fancy */
+  --font-family-secondary: Helvetica, serif;
+  --font-family-body: Georgia, serif;
+  --font-family-basic: Helvetica, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-small: 1.1;
+  --line-height-normal: 1.35;
+  --line-height-copy: 1.5;
+  --line-height-large: 1.85;
 }
