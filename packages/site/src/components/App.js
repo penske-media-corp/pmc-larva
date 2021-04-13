@@ -21,9 +21,9 @@ export const App = () => (
 							</Link>
 						</li>
 						<li>
-							<Link to="/larva" className="ui button">
+							<a href="/patterns" className="ui button">
 								Larva Patterns
-							</Link>
+							</a>
 						</li>
 					</ul>
 				</nav>
