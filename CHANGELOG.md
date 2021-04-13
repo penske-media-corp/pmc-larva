@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* root - Add build script for Larva Patterns to deploy to vercel
+* site - Update welcome page to include link to patterns
+* larva-patterns - Support index files for /source/type routes
+* larva-js - Refactor Toggle Larva UI button to use localStorage
 * larva-tokens - Add generated tokens for typography.
 * larva-css - Generate SCSS according to typography tokens.
 * larva-css - Add warnings for future deprecation of previous font-related utilities.

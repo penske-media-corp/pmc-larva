@@ -20,6 +20,11 @@ export const App = () => (
 								Design Tokens
 							</Link>
 						</li>
+						<li>
+							<a href="/patterns" className="ui button">
+								Larva Patterns
+							</a>
+						</li>
 					</ul>
 				</nav>
 			</header>
@@ -28,9 +33,11 @@ export const App = () => (
 					<TokensView />
 				</Route>
 				<Route path="/">
+					<p>Welcome to the Larva helpers site!</p>
 					<p>
-						Welcome to the Larva helpers site! So far, this site
-						contains a tool for helping to create design tokens.
+						So far, this site contains a tool for helping to create
+						design tokens, and a static build of Larva Patterns
+						component library.
 					</p>
 				</Route>
 			</Switch>

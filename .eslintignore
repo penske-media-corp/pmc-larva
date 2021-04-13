@@ -5,7 +5,9 @@ vendor
 site
 larva-patterns
 larva-scss
-larva-js
+packages/larva-js/src/interface/*
+packages/larva-js/src/utils/*
+packages/larva-js/src/__tests__/*
 larva-svg
 twig-to-php-parser
 backstopjs-config

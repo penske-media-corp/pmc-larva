@@ -83,8 +83,9 @@ if ( fs.existsSync( assetsConfig.path ) ) {
 	app.use( '/assets' , express.static( assetsConfig.path ) );
 }
 
-app.get( '/', function (req, res) {
+app.get( '/:source?/:type?', function (req, res) {
 	req.params[ 'source' ] = 'larva';
+	req.params[ 'type' ] = req.params.type;
 	req.params[ 'pattern_nav' ] = patterns;
 	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
 	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
