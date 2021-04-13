@@ -1,17 +1,16 @@
 const path = require( 'path' );
-const fs = require( 'fs' );
 
 const rules = {
-	'extends': path.resolve( __dirname, '../stylelint-config/index.js' ),
-	'plugins': path.resolve( __dirname, '../stylelint-css-algorithms/index.js' ),
-	'rules': {
+	extends: path.resolve( __dirname, '../stylelint-config/index.js' ),
+	plugins: path.resolve( __dirname, '../stylelint-css-algorithms/index.js' ),
+	rules: {
 		'plugin/css-algorithms': {
 			'pmc-a-space-children': [
 				'margin-top',
 				'margin-left',
 				'display',
 				'--a-space-children-spacer',
-				'flex-wrap'
+				'flex-wrap',
 			],
 			'a-glue': [
 				'top',
@@ -23,7 +22,7 @@ const rules = {
 				'--a-glue-bottom',
 				'--a-glue-top',
 				'--a-glue-right',
-				'--a-glue-left'
+				'--a-glue-left',
 			],
 			'pmc-a-hover-dropup': [
 				'min-width',
@@ -37,10 +36,10 @@ const rules = {
 				'cursor',
 				'--a-icon-transform',
 				'z-index',
-				'max-height'
-			]
-		}
-	}
+				'max-height',
+			],
+		},
+	},
 };
 
 module.exports = rules;

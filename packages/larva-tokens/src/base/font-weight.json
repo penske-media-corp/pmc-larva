@@ -1,8 +1,5 @@
 
 {
-	"imports": [
-		"./aliases.json"
-	],
 	"global": {
 		"category": "font-weight",
 		"type": "number"

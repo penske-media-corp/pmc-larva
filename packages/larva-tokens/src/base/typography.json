@@ -1,28 +1,8 @@
-
 {
-	"global": {
-		"category": "a-font-sizes",
-		"type": "array",
-		"comment": "Typography styles."
-	},
-	"props": {
-		"PRIMARY": {
-			"value": [ "xs", "s", "m", "l", "xl"]
-		},
-		"SECONDARY_BOLD": {
-			"value": ["xs", "s", "m", "l", "xl"]
-		},
-		"SECONDARY_REGULAR": {
-			"value": ["xs", "s", "m", "l", "xl"]
-		},
-		"ACCENT": {
-			"value": ["xs", "s", "m", "l"]
-		},
-		"BASIC": {
-			"value": ["xs", "s", "m", "l", "xl"]
-		},
-		"BODY": {
-			"value": ["s", "m" ]
-		}
-	}
+	"imports": [
+		"./generated/font-size.json",
+		"./generated/letter-spacing.json",
+		"./generated/font-weight.json",
+		"./generated/line-height.json"
+	]
 }
