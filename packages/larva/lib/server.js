@@ -83,14 +83,6 @@ if ( fs.existsSync( assetsConfig.path ) ) {
 	app.use( '/assets' , express.static( assetsConfig.path ) );
 }
 
-app.get( '/:source?/:type?', function (req, res) {
-	req.params[ 'source' ] = 'larva';
-	req.params[ 'type' ] = req.params.type;
-	req.params[ 'pattern_nav' ] = patterns;
-	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
-	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
-});
-
 app.get( '/:source?/css', function (req, res) {
 
 	/**
@@ -192,7 +184,6 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 		return res.end();
 	}
 
-
 	// Support query parameters for conditionally loading stylesheets and scripts
 	req.params[ 'query' ] = req.query;
 	req.params[ 'pattern_nav' ] = patterns;
@@ -261,8 +252,16 @@ app.get( '/:source?/style-guide', function (req, res ) {
 		console.log( e );
 
 		res.end( errorMessage );
-	} );;
+	} );
 
+});
+
+app.get( '/:source?/:type?', function (req, res) {
+	req.params[ 'source' ] = 'larva';
+	req.params[ 'type' ] = req.params.type;
+	req.params[ 'pattern_nav' ] = patterns;
+	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
+	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
 });
 
 module.exports = app;
