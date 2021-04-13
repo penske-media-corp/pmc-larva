@@ -34,7 +34,11 @@ export const App = () => (
 				</Route>
 				<Route path="/">
 					<p>Welcome to the Larva helpers site!</p>
-					<p>So far, this site contains a tool for helping to create design tokens, and a static build of Larva Patterns component library.</p>
+					<p>
+						So far, this site contains a tool for helping to create
+						design tokens, and a static build of Larva Patterns
+						component library.
+					</p>
 				</Route>
 			</Switch>
 		</div>
