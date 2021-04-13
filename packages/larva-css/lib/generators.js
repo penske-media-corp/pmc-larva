@@ -8,7 +8,7 @@ const { kebabify, fontData } = require( '@penskemediacorp/larva-tokens' );
 const { allSelectors, tokenProperties } = fontData;
 
 /**
- * Transform properties into CSS friendle format.
+ * Transform properties into CSS-friendly format.
  *
  * @return Array of properties in kebab-case.
  */

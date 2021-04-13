@@ -23,6 +23,7 @@ sass.compiler = require( 'sass' );
 
 const sassOpts = {
 	includePaths: [ path.resolve( './node_modules' ), path.resolve( './src' ) ],
+	outputStyle: 'compressed',
 	fiber: Fiber,
 };
 
@@ -94,8 +95,6 @@ const clean = ( done ) => {
 
 const styles = ( done ) => {
 	mkdirpSync( cssDest );
-
-	sassOpts.outputStyle = 'compressed';
 
 	Object.keys( cssFiles ).forEach( ( val ) => {
 		gulp.src( cssFiles[ val ].css.orig )

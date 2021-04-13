@@ -52,15 +52,12 @@ const allAllowedNames = Object.keys( styles )
 	.flat();
 
 /**
- * Transformt the name into a CSS selector.
+ * Transform the name into a CSS selector.
  *
  * @param {string} name e.g. primary_xl
  * @return {string} Selector e.g. lrv-a-font-primary-xl
  */
-const nameToSelector = ( name ) => {
-	const SELECTOR_PREFIX = 'lrv-a-font';
-	return SELECTOR_PREFIX.concat( '-', kebabify( name ) );
-};
+const nameToSelector = ( name ) => `lrv-a-font-${ kebabify( name ) }`;
 
 /**
  * Get object of selectors by group.
@@ -72,7 +69,7 @@ const nameToSelector = ( name ) => {
  * }
  *
  * @return {Object} Key value pairings of family name
- *                   and associated selectors.
+ *                  and associated selectors.
  */
 const groupedSelectors = ( () => {
 	return families.reduce( ( groupsAcc, currGroup ) => {
@@ -90,9 +87,10 @@ const groupedSelectors = ( () => {
  * @return Array of all selectors
  */
 const allSelectors = Object.keys( groupedSelectors ).reduce(
-	( selectorsAcc, currFamily ) => {
-		return [ ...selectorsAcc, ...groupedSelectors[ currFamily ] ];
-	},
+	( selectorsAcc, currFamily ) => [
+		...selectorsAcc,
+		...groupedSelectors[ currFamily ],
+	],
 	[]
 );
 
@@ -111,17 +109,16 @@ const tokenProperties = Object.keys( tokenDefaults );
  */
 const tokensFileContentsByProperty = tokenProperties.reduce(
 	( propertiesAcc, currProperty ) => {
-		const tokenNames = ( () => {
-			return allAllowedNames
-				.map( ( name ) => {
-					return breakpoints
+		const tokenNames = ( () =>
+			allAllowedNames
+				.map( ( name ) =>
+					breakpoints
 						.map( ( breakpoint ) =>
 							`${ name }_${ currProperty }_${ breakpoint }`.toUpperCase()
 						)
-						.flat();
-				} )
-				.flat();
-		} )();
+						.flat()
+				)
+				.flat() )();
 
 		const tokens = tokenNames.reduce( ( tokensAcc, currToken ) => {
 			tokensAcc[ currToken ] = {
