@@ -2,13 +2,12 @@
 
 body {
 
-	// stylelint-disable property-blacklist
+	// stylelint-disable property-disallowed-list
 	font-family: map-get( $TOKENS-MAP, font-family-basic );
 	font-family: var( --font-family-basic, #{map-get( $TOKENS-MAP, font-family-basic )} );
 
 	margin: $spacer-0;
-
-	// stylelint-enable property-blacklist
+	// stylelint-enable property-disallowed-list
 
 	line-height: $line-height-normal;
 }

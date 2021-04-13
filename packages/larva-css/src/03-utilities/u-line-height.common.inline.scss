@@ -1,9 +1,16 @@
 @import 'setup';
 
+$warned-line-height: false;
+
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) {
+	@if $warned-line-height == false {
+		@warn 'Line height utilities will be will be deprecated. Please set up a-font using a style guide.';
+		$warned-line-height: true;
+	}
+
+	@if str-index( $token-str, 'line-height' ) and not str-index( $token-str, '-line-height-' ) {
 		.lrv-u-#{$token} {
 			line-height: $value;
 		}
@@ -18,7 +25,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) {
+	@if str-index( $token-str, 'line-height' ) and not str-index( $token-str, '-line-height-' ) {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
@@ -31,7 +38,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'line-height' ) {
+	@if str-index( $token-str, 'line-height' ) and not str-index( $token-str, '-line-height-' ) {
 
 		@include pmc-breakpoint( desktop-xl ) {
 			.lrv-u-#{$token}\@desktop-xl {

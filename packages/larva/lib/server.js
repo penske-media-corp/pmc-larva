@@ -11,6 +11,8 @@ const {
 	TwingFunction
 } = require('twing');
 
+const { fontData } = require( '@penskemediacorp/larva-tokens' );
+
 const getAppConfiguration = require('./utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
@@ -218,14 +220,6 @@ app.get( '/:source?/style-guide', function (req, res ) {
 	const brand = req.query.tokens ? req.query.tokens : brandConfig;
 	const tokensPath = path.join( assetsConfig.path, 'build/tokens' );
 
-	const fontData = (() => {
-		try {
-			return require( path.join( tokensPath, `${brand}.typography.json` ) );
-		} catch (e) {
-			return null;
-		}
-	})();
-
 	const tokensData = (() => {
 		try {
 			return require( path.join( tokensPath, `${brand}.json` ) );
@@ -233,18 +227,6 @@ app.get( '/:source?/style-guide', function (req, res ) {
 			return null;
 		}
 	})();
-
-	const fontStyles = ( () => {
-		if ( ! fontData ) return;
-
-		return Object.keys( fontData ).map( variant => {
-			const key = kebabify( variant );
-			return {
-				name: `${key}`,
-				sizes: fontData[variant]
-			};
-		});
-	} )();
 
 	const colorsByProperty = ( () => {
 		if ( ! tokensData ) return;
@@ -268,7 +250,7 @@ app.get( '/:source?/style-guide', function (req, res ) {
 	})();
 
 	req.params[ 'name' ] = `Style Guide`;
-	req.params[ 'font_styles' ] = fontStyles;
+	req.params[ 'font_styles' ] = fontData.groupedSelectors;
 	req.params[ 'colors' ] = colorsByProperty;
 	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
 	req.params[ 'pattern_nav' ] = patterns;

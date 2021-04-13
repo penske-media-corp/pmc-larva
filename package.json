@@ -21,6 +21,7 @@
     "build-vercel": "sh scripts/build-vercel.sh",
     "build-icons": "packages/larva/bin/larva.js build-icons",
     "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
+    "build-tokens": "sh scripts/tokens.sh",
     "sync-tokens": "mkdir -p build/tokens && cp -r packages/larva-tokens/build/ build/tokens/",
     "sync-public": "mkdir -p packages/larva/public && cp -r public packages/larva",
     "sync-built-js": "mkdir -p build/js/standalone && rm -r build/js/standalone && cp -r packages/larva-js/build build/js/standalone",

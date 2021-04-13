@@ -1,11 +1,18 @@
 @import 'setup';
 
+$warned-font-family: false;
+
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
+	@if $warned-font-family == false {
+		@warn 'Font family utilities will be will be deprecated. Please set up a-font using a style guide.';
+		$warned-font-family: true;
+	}
+
 	// example: font-family-primary-fancy, 'Graphik', sans-serif
 	// example: font-family-primary, Helvetica
-	@if str-index( $token-str, 'font-family' ) {
+	@if str-index( $token-str, 'font-family' ) and not str-index( $token-str, '-font-family-' ) {
 
 		// The webfont/'fancy' variation is added via custom property
 		// in generic/typography
@@ -26,7 +33,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-family' ) {
+	@if str-index( $token-str, 'font-family' ) and not str-index( $token-str, '-font-family-' ) {
 
 		@if not str-index( $token-str, 'fancy' ) {
 

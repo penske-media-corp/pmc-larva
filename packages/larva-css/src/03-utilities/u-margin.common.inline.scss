@@ -113,7 +113,7 @@ $breakpoints: (
 		$token-str: quote( $token );
 
 		// No negative spacing for padding
-		@if str-index( $token-str, 'spacing' ) {
+		@if str-index( $token-str, 'spacing' ) and not str-index( $token-str, 'letter-spacing' ) {
 
 			$token-name: $token;
 			$token-selector: str-replace( $token-str, 'spacing-', '' );

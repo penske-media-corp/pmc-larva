@@ -1,3 +1,30 @@
+@import 'setup';
+
+:root {
+	--ON: initial;
+	--OFF: ;
+}
+
+html {
+	// Use whitespace and initial in custom properties to invalidate values
+	// for simplification of media queries.
+	// Explanation::
+	// https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/
+	// Reduced example:
+	// https://codepen.io/laras126/pen/ExZbvPY
+
+	--is-desktop: var( --OFF );
+	--is-desktopxl: var( --OFF );
+
+	@include pmc-breakpoint( desktop ) {
+		--is-desktop: var( --ON );
+	}
+
+	@include pmc-breakpoint( desktop-xl ) {
+		--is-desktopxl: var( --ON );
+	}
+}
+
 *,
 ::before,
 ::after {

@@ -24,6 +24,8 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
+    "del": "^6.0.0",
+    "fs-extra": "^9.1.0",
     "gulp": "^4.0.2",
     "gulp-theo": "^2.0.1",
     "lodash.template": ">=4.5.0",
