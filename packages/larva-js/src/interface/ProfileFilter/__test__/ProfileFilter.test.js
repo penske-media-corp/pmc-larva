@@ -1,7 +1,7 @@
 const assert = require( 'assert' );
 
-import initProfileFilter from './index';
-import ProfileFilter from './ProfileFilter';
+import initProfileFilter from '../index';
+import ProfileFilter from '../ProfileFilter';
 
 document.querySelector( '.test' ).innerHTML = `
 <div class="js-ProfileFilter">

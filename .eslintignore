@@ -6,7 +6,9 @@ site
 larva-patterns
 larva-css
 larva-scss
-larva-js
+packages/larva-js/src/interface/*
+packages/larva-js/src/utils/*
+packages/larva-js/src/__tests__/*
 larva-svg
 larva-tokens
 twig-to-php-parser
