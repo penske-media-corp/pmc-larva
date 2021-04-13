@@ -1,8 +1,8 @@
 {
 	"imports": [
-		"../base/aliases.json",
+		"../base/deprecated/aliases.json",
 		"../base/color.json",
-		"../base/font-family.json",
+		"../base/deprecated/font-family.json",
 		"../base/background-color.json"
 	],
 	"props": {

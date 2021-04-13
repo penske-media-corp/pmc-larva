@@ -1,6 +1,6 @@
 {
 	"imports": [
-		"./aliases.json"
+		"./deprecated/aliases.json"
 	],
 	"global": {
 		"category": "text-color",
