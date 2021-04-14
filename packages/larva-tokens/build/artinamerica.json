@@ -47,6 +47,8 @@
   "FONT_FAMILY_PRIMARY": "Georgia, serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'warnock-pro', 'Times New Roman', serif",
   "FONT_FAMILY_SECONDARY": "Georgia, serif",
+  "FONT_FAMILY_ACCENT": "Verdana, serif",
+  "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif",
   "FONT_FAMILY_BODY": "'Times New Roman', serif",
   "FONT_FAMILY_BASIC": "Helvetica, sans-serif",
   "FONT_WEIGHT_LIGHT": "300",

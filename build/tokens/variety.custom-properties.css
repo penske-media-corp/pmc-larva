@@ -17,6 +17,8 @@
   --font-family-secondary-fancy: 'IBM Plex Sans', sans-serif;
   /* Fallback for secondary-fancy */
   --font-family-secondary: Helvetica, serif;
+  --font-family-accent: Helvetica, sans-serif;
+  --font-family-accent-fancy: 'Graphik XX Cond', sans-serif;
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
   --background-color-grey-light: rgb(204, 204, 204);
@@ -38,9 +40,7 @@
   --font-family-basic-fancy: 'IBM Plex Mono', monospace;
   --border-color-brand-secondary: rgb(65, 126, 244);
   --background-color-brand-accent: rgb(26, 40, 47);
-  --font-family-accent: Helvetica, sans-serif;
   --font-family-body-fancy: 'IBM Plex Serif', serif;
   --border-color-brand-primary: rgb(238, 232, 9);
   --color-brand-accent: rgb(243, 112, 33);
-  --font-family-accent-fancy: 'Graphik XX Cond', sans-serif;
 }

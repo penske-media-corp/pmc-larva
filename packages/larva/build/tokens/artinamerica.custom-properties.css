@@ -60,6 +60,8 @@
   --font-family-secondary-fancy: 'warnock-pro', 'Times New Roman', serif;
   /* Fallback from secondary-fancy */
   --font-family-secondary: Georgia, serif;
+  --font-family-accent: Verdana, serif;
+  --font-family-accent-fancy: Verdana, sans-serif;
   --font-family-body: 'Times New Roman', serif;
   --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;

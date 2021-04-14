@@ -573,6 +573,22 @@
       "originalValue": "{!GEORGIA}",
       "name": "FONT_FAMILY_SECONDARY"
     },
+    "FONT_FAMILY_ACCENT": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the accent-fancy",
+      "originalValue": "{!HELVETICA}",
+      "name": "FONT_FAMILY_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'Karla', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "Available via @font-face.",
+      "originalValue": "'Karla', sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
     "FONT_FAMILY_BODY": {
       "value": "'kepler-std', serif",
       "type": "font-family",
@@ -664,14 +680,6 @@
       "originalValue": "#EFEFEF",
       "name": "COLOR_GREY_LIGHTEST"
     },
-    "FONT_FAMILY_ACCENT": {
-      "value": "Helvetica, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The fallback for the accent-fancy",
-      "originalValue": "{!HELVETICA}",
-      "name": "FONT_FAMILY_ACCENT"
-    },
     "COLOR_BRAND_ACCENT": {
       "value": "rgb(16, 16, 16)",
       "type": "color",
@@ -685,14 +693,6 @@
       "category": "hr-color",
       "originalValue": "#323232",
       "name": "BORDER_COLOR_GREY_DARKEST"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'Karla', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "Available via @font-face.",
-      "originalValue": "'Karla', sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }

@@ -16,6 +16,8 @@
   --font-family-primary: Georgia, serif;
   --font-family-secondary-fancy: 'IBM Plex Sans', sans-serif;
   --font-family-secondary: Helvetica, sans-serif;
+  --font-family-accent: Helvetica, sans-serif;
+  --font-family-accent-fancy: 'IBM Plex Mono', monospace;
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
   --background-color-grey-light: rgb(204, 204, 204);
@@ -36,9 +38,7 @@
   --font-family-basic-fancy: 'Para Supreme Regular', serif;
   --border-color-brand-secondary: rgb(40, 56, 66);
   --background-color-brand-accent: rgb(240, 241, 242);
-  --font-family-accent: Helvetica, sans-serif;
   --font-family-body-fancy: 'IBM Plex Serif', serif;
   --border-color-brand-primary: rgb(215, 20, 64);
   --color-brand-accent: rgb(243, 112, 33);
-  --font-family-accent-fancy: 'IBM Plex Mono', monospace;
 }

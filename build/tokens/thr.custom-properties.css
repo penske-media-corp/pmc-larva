@@ -61,6 +61,10 @@
   --font-family-secondary-fancy: 'kepler-std', serif;
   /* The fallback font for secondary-fancy. */
   --font-family-secondary: Georgia, serif;
+  /* The fallback for the accent-fancy */
+  --font-family-accent: Helvetica, sans-serif;
+  /* Available via @font-face. */
+  --font-family-accent-fancy: 'Karla', sans-serif;
   --font-family-body: 'kepler-std', serif;
   --font-family-basic: Georgia, serif;
   --font-weight-light: 300;
@@ -74,10 +78,6 @@
   --background-color-brand-accent: rgb(16, 16, 16);
   --border-color-brand-accent: rgb(16, 16, 16);
   --color-grey-lightest: rgb(239, 239, 239);
-  /* The fallback for the accent-fancy */
-  --font-family-accent: Helvetica, sans-serif;
   --color-brand-accent: rgb(16, 16, 16);
   --border-color-grey-darkest: rgb(50, 50, 50);
-  /* Available via @font-face. */
-  --font-family-accent-fancy: 'Karla', sans-serif;
 }

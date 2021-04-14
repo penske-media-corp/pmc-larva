@@ -61,6 +61,10 @@ $sheknows-map: (
   'font-family-secondary-fancy': ('sofia-pro', sans-serif),
   /* The fallback for the secondary font */
   'font-family-secondary': ('Helvetica Neue', sans-serif),
+  /* The fallback for the accent font */
+  'font-family-accent': (Georgia, serif),
+  /* The accent webfont, loaded async */
+  'font-family-accent-fancy': (Lust, serif),
   'font-family-body': ('Helvetica Neue', sans-serif),
   'font-family-basic': ('Helvetica Neue', sans-serif),
   'font-weight-light': (300),
@@ -81,12 +85,8 @@ $sheknows-map: (
   'border-color-brand-accent': (rgb(207, 227, 249)),
   'color-brand-accent-secondary': (rgb(250, 220, 171)),
   'color-brand-accent-light': (rgb(249, 250, 251)),
-  /* The fallback for the accent font */
-  'font-family-accent': (Georgia, serif),
   'color-brand-accent-dark': (rgb(23, 51, 81)),
   'background-color-brand-accent-secondary-light': (rgb(254, 249, 228)),
   'border-color-brand-accent-secondary-light': (rgb(254, 249, 228)),
   'color-brand-accent': (rgb(207, 227, 249)),
-  /* The accent webfont, loaded async */
-  'font-family-accent-fancy': (Lust, serif),
 );

@@ -573,6 +573,20 @@
       "originalValue": "{!GEORGIA}",
       "name": "FONT_FAMILY_SECONDARY"
     },
+    "FONT_FAMILY_ACCENT": {
+      "category": "font-family",
+      "value": "Verdana, serif",
+      "type": "font",
+      "originalValue": "Verdana, serif",
+      "name": "FONT_FAMILY_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "category": "font-family",
+      "value": "Verdana, sans-serif",
+      "type": "font-family",
+      "originalValue": "Verdana, sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
     "FONT_FAMILY_BODY": {
       "value": "Georgia, serif",
       "type": "font-family",

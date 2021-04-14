@@ -47,6 +47,8 @@
   "FONT_FAMILY_PRIMARY": "Georgia, serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'sofia-pro', sans-serif",
   "FONT_FAMILY_SECONDARY": "'Helvetica Neue', sans-serif",
+  "FONT_FAMILY_ACCENT": "Georgia, serif",
+  "FONT_FAMILY_ACCENT_FANCY": "Lust, serif",
   "FONT_FAMILY_BODY": "'Helvetica Neue', sans-serif",
   "FONT_FAMILY_BASIC": "'Helvetica Neue', sans-serif",
   "FONT_WEIGHT_LIGHT": "300",
@@ -67,10 +69,8 @@
   "BORDER_COLOR_BRAND_ACCENT": "rgb(207, 227, 249)",
   "COLOR_BRAND_ACCENT_SECONDARY": "rgb(250, 220, 171)",
   "COLOR_BRAND_ACCENT_LIGHT": "rgb(249, 250, 251)",
-  "FONT_FAMILY_ACCENT": "Georgia, serif",
   "COLOR_BRAND_ACCENT_DARK": "rgb(23, 51, 81)",
   "BACKGROUND_COLOR_BRAND_ACCENT_SECONDARY_LIGHT": "rgb(254, 249, 228)",
   "BORDER_COLOR_BRAND_ACCENT_SECONDARY_LIGHT": "rgb(254, 249, 228)",
-  "COLOR_BRAND_ACCENT": "rgb(207, 227, 249)",
-  "FONT_FAMILY_ACCENT_FANCY": "Lust, serif"
+  "COLOR_BRAND_ACCENT": "rgb(207, 227, 249)"
 }
