@@ -24,7 +24,7 @@ const families = Object.keys( styles );
  *       style guide, and can be added here,
  *       in GUT Phase 3, if required.
  */
-const breakpoints = [ 'base', 'desktop' ];
+const breakpoints = [ 'mobile', 'desktop' ];
 
 /**
  * Properties for tokens and their defaults.
