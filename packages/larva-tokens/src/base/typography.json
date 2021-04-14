@@ -479,6 +479,20 @@
 			"originalValue": "initial",
 			"name": "PRIMARY_S_FONT_SIZE_MOBILE"
 		},
+		"PRIMARY_S_FONT_WEIGHT_DESKTOP": {
+			"category": "font-weight",
+			"type": "number",
+			"value": "700",
+			"originalValue": "initial",
+			"name": "PRIMARY_S_FONT_WEIGHT_DESKTOP"
+		},
+		"PRIMARY_S_FONT_WEIGHT_MOBILE": {
+			"category": "font-weight",
+			"type": "number",
+			"value": "700",
+			"originalValue": "initial",
+			"name": "PRIMARY_S_FONT_WEIGHT_MOBILE"
+		},
 		"PRIMARY_S_LINE_HEIGHT_DESKTOP": {
 			"category": "line-height",
 			"type": "number",

@@ -1328,10 +1328,12 @@
       "name": "PRIMARY_XXS_FONT_WEIGHT_MOBILE"
     },
     "PRIMARY_S_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "700",
+      "originalValue": "700",
       "name": "PRIMARY_S_FONT_WEIGHT_MOBILE"
     },
     "BODY_S_FONT_WEIGHT_MOBILE": {
@@ -1521,10 +1523,12 @@
       "name": "BODY_S_FONT_WEIGHT_DESKTOP"
     },
     "PRIMARY_S_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "700",
+      "originalValue": "700",
       "name": "PRIMARY_S_FONT_WEIGHT_DESKTOP"
     },
     "PRIMARY_XXS_FONT_WEIGHT_DESKTOP": {

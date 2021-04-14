@@ -156,7 +156,7 @@
   --accent-regular-xxs-font-weight-desktop: initial;
   --accent-l-font-weight-mobile: initial;
   --primary-xxs-font-weight-mobile: 700;
-  --primary-s-font-weight-mobile: initial;
+  --primary-s-font-weight-mobile: 700;
   --body-s-font-weight-mobile: initial;
   --accent-xxs-font-weight-desktop: initial;
   --accent-s-font-weight-desktop: initial;
@@ -181,7 +181,7 @@
   --accent-s-font-weight-mobile: initial;
   --accent-xxs-font-weight-mobile: initial;
   --body-s-font-weight-desktop: initial;
-  --primary-s-font-weight-desktop: initial;
+  --primary-s-font-weight-desktop: 700;
   --primary-xxs-font-weight-desktop: 700;
   --accent-regular-xxs-font-weight-mobile: 600;
   --accent-l-font-weight-desktop: initial;
