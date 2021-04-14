@@ -604,51 +604,58 @@
     "FONT_WEIGHT_LIGHT": {
       "category": "font-weight",
       "type": "number",
-      "name": "FONT_WEIGHT_LIGHT",
+      "status": "deprecated",
       "value": "300",
-      "originalValue": "300"
+      "originalValue": "300",
+      "name": "FONT_WEIGHT_LIGHT"
     },
     "FONT_WEIGHT_NORMAL": {
       "category": "font-weight",
       "type": "number",
-      "name": "FONT_WEIGHT_NORMAL",
+      "status": "deprecated",
       "value": "400",
-      "originalValue": "400"
+      "originalValue": "400",
+      "name": "FONT_WEIGHT_NORMAL"
     },
     "FONT_WEIGHT_BOLD": {
       "category": "font-weight",
       "type": "number",
-      "name": "FONT_WEIGHT_BOLD",
+      "status": "deprecated",
       "value": "700",
-      "originalValue": "700"
+      "originalValue": "700",
+      "name": "FONT_WEIGHT_BOLD"
     },
     "LINE_HEIGHT_SMALL": {
       "category": "line-height",
       "type": "unit",
-      "name": "LINE_HEIGHT_SMALL",
+      "status": "deprecated",
       "value": "1.1",
-      "originalValue": "1.1"
+      "originalValue": "1.1",
+      "name": "LINE_HEIGHT_SMALL"
     },
     "LINE_HEIGHT_NORMAL": {
       "category": "line-height",
       "type": "unit",
-      "name": "LINE_HEIGHT_NORMAL",
+      "status": "deprecated",
       "value": "1.35",
-      "originalValue": "1.35"
+      "originalValue": "1.35",
+      "name": "LINE_HEIGHT_NORMAL"
     },
     "LINE_HEIGHT_COPY": {
       "category": "line-height",
       "type": "unit",
-      "name": "LINE_HEIGHT_COPY",
+      "status": "deprecated",
       "value": "1.5",
-      "originalValue": "1.5"
+      "originalValue": "1.5",
+      "name": "LINE_HEIGHT_COPY"
     },
     "LINE_HEIGHT_LARGE": {
       "category": "line-height",
       "type": "unit",
-      "name": "LINE_HEIGHT_LARGE",
+      "status": "deprecated",
       "value": "1.85",
-      "originalValue": "1.85"
+      "originalValue": "1.85",
+      "name": "LINE_HEIGHT_LARGE"
     },
     "COLOR_BRAND_PRIMARY_LIGHTEST": {
       "value": "rgb(236, 210, 178)",

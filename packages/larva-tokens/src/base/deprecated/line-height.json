@@ -3,9 +3,7 @@
 	"global": {
 		"category": "line-height",
 		"type": "unit",
-		"meta": {
-			"status": "deprecated"
-		}
+		"status": "deprecated"
 	},
 	"props": {
 		"LINE_HEIGHT_SMALL": {

@@ -3,9 +3,7 @@
 	"global": {
 		"category": "font-weight",
 		"type": "number",
-		"meta": {
-			"status": "deprecated"
-		}
+		"status": "deprecated"
 	},
 	"props": {
 		"FONT_WEIGHT_LIGHT": {

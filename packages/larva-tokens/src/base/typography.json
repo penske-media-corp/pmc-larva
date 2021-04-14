@@ -5,6 +5,10 @@
 		"./generated/font-weight.json",
 		"./generated/line-height.json"
 	],
+	"global": {
+		"selector": "lrv-a-font",
+		"status": "alpha"
+	},
 	"props": {
 		"ACCENT_L_FONT_SIZE_BASE": {
 			"category": "font-size",
