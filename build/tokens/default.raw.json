@@ -1296,15 +1296,15 @@
       "name": "PRIMARY_XXXS_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_M_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_M_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
       "category": "font-weight",
       "type": "number",
       "value": "initial",
@@ -1312,10 +1312,12 @@
       "name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP"
     },
     "ACCENT_L_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_L_FONT_WEIGHT_MOBILE"
     },
     "PRIMARY_XXS_FONT_WEIGHT_MOBILE": {
@@ -1388,10 +1390,12 @@
       "name": "BODY_M_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_XS_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_XS_FONT_WEIGHT_MOBILE"
     },
     "SECONDARY_M_FONT_WEIGHT_DESKTOP": {
@@ -1502,17 +1506,21 @@
       "name": "SECONDARY_REGULAR_M_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_S_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_S_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_XXS_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_XXS_FONT_WEIGHT_MOBILE"
     },
     "BODY_S_FONT_WEIGHT_DESKTOP": {
@@ -1545,8 +1553,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "400",
+      "originalValue": "400",
       "name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_L_FONT_WEIGHT_DESKTOP": {

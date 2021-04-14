@@ -90,16 +90,9 @@
 		"ACCENT_REGULAR_XXS_FONT_WEIGHT_MOBILE": {
 			"category": "font-weight",
 			"type": "number",
-			"value": "600",
+			"value": "400",
 			"originalValue": "normal",
 			"name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_MOBILE"
-		},
-		"ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP": {
-			"category": "font-weight",
-			"type": "number",
-			"value": "initial",
-			"originalValue": "normal",
-			"name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP"
 		},
 		"ACCENT_REGULAR_XXS_LETTER_SPACING_MOBILE": {
 			"category": "letter-spacing",
@@ -233,6 +226,41 @@
 			"value": "18px",
 			"originalValue": "inherit",
 			"name": "ACCENT_XXS_LINE_HEIGHT_DESKTOP"
+		},
+		"ACCENT_L_FONT_WEIGHT_MOBILE": {
+			"category": "font-weight",
+			"type": "number",
+			"value": "300",
+			"originalValue": "initial",
+			"name": "ACCENT_L_FONT_WEIGHT_MOBILE"
+		},
+		"ACCENT_M_FONT_WEIGHT_MOBILE": {
+			"category": "font-weight",
+			"type": "number",
+			"value": "300",
+			"originalValue": "initial",
+			"name": "ACCENT_M_FONT_WEIGHT_MOBILE"
+		},
+		"ACCENT_S_FONT_WEIGHT_MOBILE": {
+			"category": "font-weight",
+			"type": "number",
+			"value": "300",
+			"originalValue": "initial",
+			"name": "ACCENT_S_FONT_WEIGHT_MOBILE"
+		},
+		"ACCENT_XS_FONT_WEIGHT_MOBILE": {
+			"category": "font-weight",
+			"type": "number",
+			"value": "300",
+			"originalValue": "initial",
+			"name": "ACCENT_XS_FONT_WEIGHT_MOBILE"
+		},
+		"ACCENT_XXS_FONT_WEIGHT_MOBILE": {
+			"category": "font-weight",
+			"type": "number",
+			"value": "300",
+			"originalValue": "initial",
+			"name": "ACCENT_XXS_FONT_WEIGHT_MOBILE"
 		},
 		"BODY_M_FONT_SIZE_MOBILE": {
 			"category": "font-size",
