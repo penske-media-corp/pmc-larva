@@ -33,9 +33,9 @@ const breakpoints = [ 'mobile', 'desktop' ];
  */
 const tokenDefaults = {
 	font_size: 'initial',
-	line_height: 'inherit',
+	line_height: 'initial',
 	letter_spacing: 'normal',
-	font_weight: 'normal',
+	font_weight: 'initial',
 	font_style: 'normal',
 };
 
