@@ -4,9 +4,8 @@
 		"./border-color.json",
 		"./background-color.json",
 		"./color.json",
-		"./typography.json",
 		"./spacing.json",
-		"./deprecated/font-family.json",
+		"./font-family.json",
 		"./deprecated/font-weight.json",
 		"./deprecated/line-height.json"
 	]

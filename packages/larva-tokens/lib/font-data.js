@@ -132,6 +132,10 @@ const tokensFileContentsByProperty = tokenProperties.reduce(
 			global: {
 				category: `${ kebabify( currProperty ) }`,
 				type: 'number',
+				meta: {
+					status: 'unstable',
+					selector: 'lrv-a-font'
+				}
 			},
 			props: { ...tokens },
 		};

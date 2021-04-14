@@ -2,7 +2,7 @@
 	"imports": [
 		"../base/deprecated/aliases.json",
 		"../base/color.json",
-		"../base/deprecated/font-family.json",
+		"../base/font-family.json",
 		"../base/background-color.json",
 		"./variety.json"
 	],
