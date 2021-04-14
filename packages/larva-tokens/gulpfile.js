@@ -4,7 +4,7 @@ const del = require( 'del' );
 
 const { kebabify } = require( './lib/utils' );
 const { generateFontTokens } = require( './lib/generators' );
-const { existsSync } = require( 'fs-extra' );
+const { existsSync, mkdirpSync } = require( 'fs-extra' );
 const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
 
 /**
@@ -13,7 +13,7 @@ const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
  * @param {Function} done Function called upon completion.
  */
 const clean = ( done ) => {
-	const dirs = [ 'build', 'style-guides' ];
+	const dirs = [ 'build', 'style-guides', 'src/base/generated' ];
 
 	dirs.forEach( ( dir ) => {
 		if ( existsSync( dir ) ) {
@@ -40,6 +40,8 @@ const basicTokenBuild = ( format, done, dest = 'build' ) => {
 };
 
 const generateTypography = ( done ) => {
+	mkdirpSync( 'src/base/generated' );
+
 	generateFontTokens();
 
 	done();
