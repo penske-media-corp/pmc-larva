@@ -31,7 +31,7 @@ const ruleset = ( selector ) => {
 	properties.forEach( ( property ) => {
 		css += `
 	--${ property }-desktop: var( --${ tokenBase }-${ property }-desktop, var( --${ tokenBase }-${ property }-mobile ) );
-	--${ property }-base: var(--desktop-off) var( --${ tokenBase }-${ property }-mobile);`;
+	--${ property }-mobile: var(--is-desktop) var( --${ tokenBase }-${ property }-mobile);`;
 	} );
 
 	css += `\n
