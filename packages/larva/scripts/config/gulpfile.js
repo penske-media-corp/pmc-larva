@@ -6,10 +6,9 @@ const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
 const gulpStylelint = require( 'gulp-stylelint' );
 
-const cssnano = require( 'cssnano' );
 const Fibers = require( 'fibers' );
 const globImporter = require( 'node-sass-glob-importer' );
-const { mkdirp } = require( 'fs-extra' );
+const { mkdirpSync } = require( 'fs-extra' );
 const path = require( 'path' );
 const postCss = require( 'postcss' );
 const sass = require( 'gulp-sass' );
@@ -66,19 +65,14 @@ const buildScss = (
 	minify = false,
 	generateImportantVariants = false
 ) => {
-	// gulp-if and cssnano are incompatible, which gulp-if warns to expect.
-	const postCssPlugins = [];
 
 	if ( minify ) {
-		postCssPlugins.push( cssnano() );
-	} else {
-		postCssPlugins.push( postCssNoop );
+		sassOpts.outputStyle = 'compressed';
 	}
 
 	gulp.src( './entries/*.scss' )
 		.pipe( gulpStylelint( stylelintOpts ) )
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
-		.pipe( gulpPostCss( postCssPlugins ) )
 		.pipe( gulp.dest( cssDest ) )
 		.pipe( gulpIgnore.exclude( 'larva-ui.css' ) )
 		.pipe(
@@ -106,7 +100,7 @@ const buildScss = (
 const clean = ( done ) => {
 	gulp.src( cssDest, { read: false } ).pipe( gulpClean() );
 
-	mkdirp( cssDest );
+	mkdirpSync( cssDest );
 	done();
 };
 

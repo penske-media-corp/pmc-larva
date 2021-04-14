@@ -1,10 +1,5 @@
 @import 'setup';
 
-:root {
-	--ON: initial;
-	--OFF: ;
-}
-
 html {
 	// Use whitespace and initial in custom properties to invalidate values
 	// for simplification of media queries.
@@ -12,6 +7,9 @@ html {
 	// https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/
 	// Reduced example:
 	// https://codepen.io/laras126/pen/ExZbvPY
+
+	--ON: initial;
+	--OFF: /*! whitespace toggle */;
 
 	--is-desktop: var( --OFF );
 	--is-desktopxl: var( --OFF );
