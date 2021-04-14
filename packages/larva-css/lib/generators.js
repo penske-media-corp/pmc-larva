@@ -25,6 +25,7 @@ const ruleset = ( selector ) => {
 	let css = '';
 
 	const nameSlugs = selector.split( '-' );
+	const family = nameSlugs[3];
 	const tokenBase = [ ...nameSlugs ].slice( 3, nameSlugs.length ).join( '-' );
 
 	properties.forEach( ( property ) => {
@@ -32,6 +33,11 @@ const ruleset = ( selector ) => {
 	--${ property }-desktop: var( --${ tokenBase }-${ property }-desktop, var( --${ tokenBase }-${ property }-base ) );
 	--${ property }-base: var(--desktop-off) var( --${ tokenBase }-${ property }-base);`;
 	} );
+
+	css += `\n
+	--${ tokenBase }-font-family: var( --font-family-${family} );
+
+	font-family: var( --${ tokenBase }-font-family );`;
 
 	css += '\n';
 

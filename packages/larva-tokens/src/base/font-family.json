@@ -23,6 +23,14 @@
 			"type": "font",
 			"comment": "Fallback for secondary-fancy"
 		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "Verdana, serif",
+			"type": "font"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "Verdana, sans-serif",
+			"type": "font-family"
+		},
 		"FONT_FAMILY_BODY": {
 			"value": "Georgia, serif",
 			"type": "font"

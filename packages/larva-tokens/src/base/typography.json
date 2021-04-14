@@ -1,6 +1,5 @@
 {
 	"imports": [
-		"./generated/font-family.json",
 		"./generated/font-size.json",
 		"./generated/letter-spacing.json",
 		"./generated/font-weight.json",

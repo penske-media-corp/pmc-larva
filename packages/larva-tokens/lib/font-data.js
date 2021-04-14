@@ -28,6 +28,8 @@ const breakpoints = [ 'base', 'desktop' ];
 
 /**
  * Properties for tokens and their defaults.
+ *
+ * Note: In Phase 3, we may want to control font-family here.
  */
 const tokenDefaults = {
 	font_size: 'initial',
@@ -35,7 +37,6 @@ const tokenDefaults = {
 	letter_spacing: 'normal',
 	font_weight: 'normal',
 	font_style: 'normal',
-	font_family: 'initial',
 };
 
 /**
