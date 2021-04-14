@@ -12,6 +12,7 @@
 	--font-style-desktop: var( --primary-xl-font-style-desktop, var( --primary-xl-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-xl-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--primary-xl-font-family: var( --font-family-primary );
 
 	font-family: var( --primary-xl-font-family );
@@ -50,6 +51,7 @@
 	--font-style-desktop: var( --primary-l-font-style-desktop, var( --primary-l-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-l-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--primary-l-font-family: var( --font-family-primary );
 
 	font-family: var( --primary-l-font-family );
@@ -88,6 +90,7 @@
 	--font-style-desktop: var( --primary-m-font-style-desktop, var( --primary-m-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-m-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--primary-m-font-family: var( --font-family-primary );
 
 	font-family: var( --primary-m-font-family );
@@ -126,6 +129,7 @@
 	--font-style-desktop: var( --primary-s-font-style-desktop, var( --primary-s-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-s-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--primary-s-font-family: var( --font-family-primary );
 
 	font-family: var( --primary-s-font-family );
@@ -164,6 +168,7 @@
 	--font-style-desktop: var( --primary-xs-font-style-desktop, var( --primary-xs-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-xs-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--primary-xs-font-family: var( --font-family-primary );
 
 	font-family: var( --primary-xs-font-family );
@@ -202,6 +207,7 @@
 	--font-style-desktop: var( --primary-xxs-font-style-desktop, var( --primary-xxs-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-xxs-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--primary-xxs-font-family: var( --font-family-primary );
 
 	font-family: var( --primary-xxs-font-family );
@@ -240,6 +246,7 @@
 	--font-style-desktop: var( --primary-xxxs-font-style-desktop, var( --primary-xxxs-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --primary-xxxs-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--primary-xxxs-font-family: var( --font-family-primary );
 
 	font-family: var( --primary-xxxs-font-family );
@@ -278,6 +285,7 @@
 	--font-style-desktop: var( --secondary-l-font-style-desktop, var( --secondary-l-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --secondary-l-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--secondary-l-font-family: var( --font-family-secondary );
 
 	font-family: var( --secondary-l-font-family );
@@ -316,6 +324,7 @@
 	--font-style-desktop: var( --secondary-m-font-style-desktop, var( --secondary-m-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --secondary-m-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--secondary-m-font-family: var( --font-family-secondary );
 
 	font-family: var( --secondary-m-font-family );
@@ -354,6 +363,7 @@
 	--font-style-desktop: var( --secondary-s-font-style-desktop, var( --secondary-s-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --secondary-s-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--secondary-s-font-family: var( --font-family-secondary );
 
 	font-family: var( --secondary-s-font-family );
@@ -392,6 +402,7 @@
 	--font-style-desktop: var( --secondary-regular-m-font-style-desktop, var( --secondary-regular-m-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --secondary-regular-m-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--secondary-regular-m-font-family: var( --font-family-secondary );
 
 	font-family: var( --secondary-regular-m-font-family );
@@ -430,6 +441,7 @@
 	--font-style-desktop: var( --accent-l-font-style-desktop, var( --accent-l-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --accent-l-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--accent-l-font-family: var( --font-family-accent );
 
 	font-family: var( --accent-l-font-family );
@@ -468,6 +480,7 @@
 	--font-style-desktop: var( --accent-m-font-style-desktop, var( --accent-m-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --accent-m-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--accent-m-font-family: var( --font-family-accent );
 
 	font-family: var( --accent-m-font-family );
@@ -506,6 +519,7 @@
 	--font-style-desktop: var( --accent-s-font-style-desktop, var( --accent-s-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --accent-s-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--accent-s-font-family: var( --font-family-accent );
 
 	font-family: var( --accent-s-font-family );
@@ -544,6 +558,7 @@
 	--font-style-desktop: var( --accent-xs-font-style-desktop, var( --accent-xs-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --accent-xs-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--accent-xs-font-family: var( --font-family-accent );
 
 	font-family: var( --accent-xs-font-family );
@@ -582,6 +597,7 @@
 	--font-style-desktop: var( --accent-xxs-font-style-desktop, var( --accent-xxs-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --accent-xxs-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--accent-xxs-font-family: var( --font-family-accent );
 
 	font-family: var( --accent-xxs-font-family );
@@ -620,6 +636,7 @@
 	--font-style-desktop: var( --accent-regular-xxs-font-style-desktop, var( --accent-regular-xxs-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --accent-regular-xxs-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--accent-regular-xxs-font-family: var( --font-family-accent );
 
 	font-family: var( --accent-regular-xxs-font-family );
@@ -658,6 +675,7 @@
 	--font-style-desktop: var( --body-m-font-style-desktop, var( --body-m-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --body-m-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--body-m-font-family: var( --font-family-body );
 
 	font-family: var( --body-m-font-family );
@@ -696,6 +714,7 @@
 	--font-style-desktop: var( --body-s-font-style-desktop, var( --body-s-font-style-base ) );
 	--font-style-base: var(--desktop-off) var( --body-s-font-style-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--body-s-font-family: var( --font-family-body );
 
 	font-family: var( --body-s-font-family );

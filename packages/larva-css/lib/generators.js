@@ -35,6 +35,7 @@ const ruleset = ( selector ) => {
 	} );
 
 	css += `\n
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--${ tokenBase }-font-family: var( --font-family-${family} );
 
 	font-family: var( --${ tokenBase }-font-family );`;

@@ -42,6 +42,7 @@ If working in a project that does not design tokens setup, but already has the b
 
 ## Things To Be Aware Of
 
+* The tokens used with the `lrv-a-font` selector are generated via font-data.js
 * Token names should be in CAPS
 * The src/base/deprecated/aliases.json file is now deprecated and colors should always be defined in the brand's json. (Previously used for colors that might be shared between brands).
 * Only tokens in existing categories should be added e.g. there are no font-size tokens, so do not add them.

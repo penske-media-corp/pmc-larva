@@ -14,6 +14,11 @@ module.exports = {
 	--font-family-desktop: var( --primary-xxl-font-family-desktop, var( --primary-xxl-font-family-base ) );
 	--font-family-base: var(--desktop-off) var( --primary-xxl-font-family-base);
 
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--primary-xxl-font-family: var( --font-family-primary );
+
+	font-family: var( --primary-xxl-font-family );
+
 	font-size: var(
 		--font-size-base,
 		var(--font-size-desktop)
