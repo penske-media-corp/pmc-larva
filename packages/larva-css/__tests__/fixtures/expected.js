@@ -2,17 +2,17 @@ module.exports = {
 	ruleset: `
 .lrv-a-font-primary-xxl {
 	--font-size-desktop: var( --primary-xxl-font-size-desktop, var( --primary-xxl-font-size-mobile ) );
-	--font-size-mobile: var(--desktop-off) var( --primary-xxl-font-size-mobile);
+	--font-size-mobile: var(--is-desktop) var( --primary-xxl-font-size-mobile);
 	--line-height-desktop: var( --primary-xxl-line-height-desktop, var( --primary-xxl-line-height-mobile ) );
-	--line-height-mobile: var(--desktop-off) var( --primary-xxl-line-height-mobile);
+	--line-height-mobile: var(--is-desktop) var( --primary-xxl-line-height-mobile);
 	--letter-spacing-desktop: var( --primary-xxl-letter-spacing-desktop, var( --primary-xxl-letter-spacing-mobile ) );
-	--letter-spacing-mobile: var(--desktop-off) var( --primary-xxl-letter-spacing-mobile);
+	--letter-spacing-mobile: var(--is-desktop) var( --primary-xxl-letter-spacing-mobile);
 	--font-weight-desktop: var( --primary-xxl-font-weight-desktop, var( --primary-xxl-font-weight-mobile ) );
-	--font-weight-mobile: var(--desktop-off) var( --primary-xxl-font-weight-mobile);
+	--font-weight-mobile: var(--is-desktop) var( --primary-xxl-font-weight-mobile);
 	--font-style-desktop: var( --primary-xxl-font-style-desktop, var( --primary-xxl-font-style-mobile ) );
-	--font-style-mobile: var(--desktop-off) var( --primary-xxl-font-style-mobile);
+	--font-style-mobile: var(--is-desktop) var( --primary-xxl-font-style-mobile);
 	--font-family-desktop: var( --primary-xxl-font-family-desktop, var( --primary-xxl-font-family-mobile ) );
-	--font-family-mobile: var(--desktop-off) var( --primary-xxl-font-family-mobile);
+	--font-family-mobile: var(--is-desktop) var( --primary-xxl-font-family-mobile);
 
 	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--font-family: var( --font-family-primary );
