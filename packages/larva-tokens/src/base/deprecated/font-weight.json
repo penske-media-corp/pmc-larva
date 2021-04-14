@@ -2,8 +2,7 @@
 {
 	"global": {
 		"category": "font-weight",
-		"type": "number",
-		"status": "deprecated"
+		"type": "number"
 	},
 	"props": {
 		"FONT_WEIGHT_LIGHT": {

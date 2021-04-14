@@ -10,6 +10,16 @@
 		"status": "alpha"
 	},
 	"props": {
+		"FONT_FAMILY_ACCENT": {
+			"value": "Verdana, serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "Verdana, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
 		"ACCENT_L_FONT_SIZE_MOBILE": {
 			"category": "font-size",
 			"type": "number",

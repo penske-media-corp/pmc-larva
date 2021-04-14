@@ -39,8 +39,6 @@
   "FONT_FAMILY_PRIMARY": "'Times New Roman', serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'kepler-std', serif",
   "FONT_FAMILY_SECONDARY": "Georgia, serif",
-  "FONT_FAMILY_ACCENT": "Helvetica, sans-serif",
-  "FONT_FAMILY_ACCENT_FANCY": "'Karla', sans-serif",
   "FONT_FAMILY_BODY": "'kepler-std', serif",
   "FONT_FAMILY_BASIC": "Georgia, serif",
   "FONT_WEIGHT_LIGHT": "300",
@@ -62,6 +60,8 @@
   "BACKGROUND_COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
   "BORDER_COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
   "COLOR_GREY_LIGHTEST": "rgb(239, 239, 239)",
+  "FONT_FAMILY_ACCENT": "Helvetica, sans-serif",
   "COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
-  "BORDER_COLOR_GREY_DARKEST": "rgb(50, 50, 50)"
+  "BORDER_COLOR_GREY_DARKEST": "rgb(50, 50, 50)",
+  "FONT_FAMILY_ACCENT_FANCY": "'Karla', sans-serif"
 }

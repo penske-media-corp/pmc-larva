@@ -47,8 +47,6 @@
   --font-family-secondary-fancy: Papyrus, serif;
   /* Fallback for secondary-fancy */
   --font-family-secondary: Helvetica, serif;
-  --font-family-accent: Verdana, serif;
-  --font-family-accent-fancy: Verdana, sans-serif;
   --font-family-body: Georgia, serif;
   --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;
@@ -226,4 +224,6 @@
   --accent-xs-line-height-mobile: 19px;
   --primary-l-line-height-desktop: 42px;
   --primary-l-line-height-mobile: 31px;
+  --font-family-accent: Verdana, serif;
+  --font-family-accent-fancy: Verdana, sans-serif;
 }

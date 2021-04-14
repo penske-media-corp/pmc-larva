@@ -331,20 +331,6 @@
       "originalValue": "Helvetica, serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
-    "FONT_FAMILY_ACCENT": {
-      "value": "Helvetica, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "{!HELVETICA}",
-      "name": "FONT_FAMILY_ACCENT"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'Graphik XX Cond', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "{!GRAPHIK_COND}",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
-    },
     "FONT_FAMILY_BODY": {
       "category": "font-family",
       "value": "Georgia, serif",
@@ -480,6 +466,13 @@
       "originalValue": "{!MIRAGE_14}",
       "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
+    "FONT_FAMILY_ACCENT": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "{!HELVETICA}",
+      "name": "FONT_FAMILY_ACCENT"
+    },
     "FONT_FAMILY_BODY_FANCY": {
       "value": "'IBM Plex Serif', serif",
       "type": "font-family",
@@ -500,6 +493,13 @@
       "category": "text-color",
       "originalValue": "{!ORANGE_54}",
       "name": "COLOR_BRAND_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'Graphik XX Cond', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "{!GRAPHIK_COND}",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }

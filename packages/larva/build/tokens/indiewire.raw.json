@@ -509,22 +509,6 @@
       "originalValue": "{!HELVETICA_NEUE}",
       "name": "FONT_FAMILY_SECONDARY"
     },
-    "FONT_FAMILY_ACCENT": {
-      "value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The fallback for the accent font",
-      "originalValue": "{!HELVETICA_NEUE}",
-      "name": "FONT_FAMILY_ACCENT"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'Teko', 'Open Sans', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The accent webfont, loaded async",
-      "originalValue": "'Teko', 'Open Sans', sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
-    },
     "FONT_FAMILY_BODY": {
       "value": "Georgia, serif",
       "type": "font-family",
@@ -542,7 +526,6 @@
     "FONT_WEIGHT_LIGHT": {
       "category": "font-weight",
       "type": "number",
-      "status": "deprecated",
       "value": "300",
       "originalValue": "300",
       "name": "FONT_WEIGHT_LIGHT"
@@ -550,7 +533,6 @@
     "FONT_WEIGHT_NORMAL": {
       "category": "font-weight",
       "type": "number",
-      "status": "deprecated",
       "value": "400",
       "originalValue": "400",
       "name": "FONT_WEIGHT_NORMAL"
@@ -558,7 +540,6 @@
     "FONT_WEIGHT_BOLD": {
       "category": "font-weight",
       "type": "number",
-      "status": "deprecated",
       "value": "700",
       "originalValue": "700",
       "name": "FONT_WEIGHT_BOLD"
@@ -566,7 +547,6 @@
     "LINE_HEIGHT_SMALL": {
       "category": "line-height",
       "type": "unit",
-      "status": "deprecated",
       "value": "1.1",
       "originalValue": "1.1",
       "name": "LINE_HEIGHT_SMALL"
@@ -574,7 +554,6 @@
     "LINE_HEIGHT_NORMAL": {
       "category": "line-height",
       "type": "unit",
-      "status": "deprecated",
       "value": "1.35",
       "originalValue": "1.35",
       "name": "LINE_HEIGHT_NORMAL"
@@ -582,7 +561,6 @@
     "LINE_HEIGHT_COPY": {
       "category": "line-height",
       "type": "unit",
-      "status": "deprecated",
       "value": "1.5",
       "originalValue": "1.5",
       "name": "LINE_HEIGHT_COPY"
@@ -590,7 +568,6 @@
     "LINE_HEIGHT_LARGE": {
       "category": "line-height",
       "type": "unit",
-      "status": "deprecated",
       "value": "1.85",
       "originalValue": "1.85",
       "name": "LINE_HEIGHT_LARGE"
@@ -1920,6 +1897,22 @@
       "value": "31px",
       "originalValue": "31px",
       "name": "PRIMARY_L_LINE_HEIGHT_MOBILE"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the accent font",
+      "originalValue": "{!HELVETICA_NEUE}",
+      "name": "FONT_FAMILY_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'Teko', 'Open Sans', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The accent webfont, loaded async",
+      "originalValue": "'Teko', 'Open Sans', sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT": {
       "value": "rgb(251, 75, 34)",

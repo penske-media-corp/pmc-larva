@@ -39,8 +39,6 @@
   "FONT_FAMILY_PRIMARY": "Georgia, serif",
   "FONT_FAMILY_SECONDARY_FANCY": "Papyrus, serif",
   "FONT_FAMILY_SECONDARY": "Helvetica, serif",
-  "FONT_FAMILY_ACCENT": "Verdana, serif",
-  "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif",
   "FONT_FAMILY_BODY": "Georgia, serif",
   "FONT_FAMILY_BASIC": "Helvetica, sans-serif",
   "FONT_WEIGHT_LIGHT": "300",
@@ -209,5 +207,7 @@
   "BODY_M_LINE_HEIGHT_MOBILE": "24px",
   "ACCENT_XS_LINE_HEIGHT_MOBILE": "19px",
   "PRIMARY_L_LINE_HEIGHT_DESKTOP": "42px",
-  "PRIMARY_L_LINE_HEIGHT_MOBILE": "31px"
+  "PRIMARY_L_LINE_HEIGHT_MOBILE": "31px",
+  "FONT_FAMILY_ACCENT": "Verdana, serif",
+  "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif"
 }
