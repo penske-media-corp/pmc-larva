@@ -15,9 +15,9 @@ module.exports = {
 	--font-family-mobile: var(--desktop-off) var( --primary-xxl-font-family-mobile);
 
 	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
-	--primary-xxl-font-family: var( --font-family-primary );
+	--font-family: var( --font-family-primary );
 
-	font-family: var( --primary-xxl-font-family );
+	font-family: var( --font-family );
 
 	font-size: var(
 		--font-size-mobile,
