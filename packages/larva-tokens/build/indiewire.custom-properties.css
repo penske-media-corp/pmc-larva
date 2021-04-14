@@ -37,6 +37,20 @@
   --color-brand-secondary-light: rgb(219, 239, 255);
   --color-grey-dark: rgb(106, 106, 106);
   --color-grey: rgb(140, 140, 140);
+  /* The primary webfont, loaded async */
+  --font-family-primary-fancy: 'Argent CF', serif;
+  /* The fallback for the primary font */
+  --font-family-primary: Georgia, serif;
+  /* The secondary webfont, loaded async */
+  --font-family-secondary-fancy: 'PT Sans', sans-serif;
+  /* The fallback for the secondary font */
+  --font-family-secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* The fallback for the accent font */
+  --font-family-accent: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* The accent webfont, loaded async */
+  --font-family-accent-fancy: 'Teko', 'Open Sans', sans-serif;
+  --font-family-body: Georgia, serif;
+  --font-family-basic: Helvetica, sans-serif;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
@@ -53,20 +67,6 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
-  /* The primary webfont, loaded async */
-  --font-family-primary-fancy: 'Argent CF', serif;
-  /* The fallback for the primary font */
-  --font-family-primary: Georgia, serif;
-  /* The secondary webfont, loaded async */
-  --font-family-secondary-fancy: 'PT Sans', sans-serif;
-  /* The fallback for the secondary font */
-  --font-family-secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /* The fallback for the accent font */
-  --font-family-accent: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /* The accent webfont, loaded async */
-  --font-family-accent-fancy: 'Teko', 'Open Sans', sans-serif;
-  --font-family-body: Georgia, serif;
-  --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;

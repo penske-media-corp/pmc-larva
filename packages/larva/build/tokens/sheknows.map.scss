@@ -37,6 +37,20 @@ $sheknows-map: (
   'color-brand-secondary-light': (rgb(246, 161, 151)),
   'color-grey-dark': (rgb(106, 106, 106)),
   'color-grey': (rgb(140, 140, 140)),
+  /* The primary webfont, loaded async */
+  'font-family-primary-fancy': ('Playfair Display', serif),
+  /* The fallback for the primary font */
+  'font-family-primary': (Georgia, serif),
+  /* The secondary webfont, loaded async */
+  'font-family-secondary-fancy': ('sofia-pro', sans-serif),
+  /* The fallback for the secondary font */
+  'font-family-secondary': ('Helvetica Neue', sans-serif),
+  /* The fallback for the accent font */
+  'font-family-accent': (Georgia, serif),
+  /* The accent webfont, loaded async */
+  'font-family-accent-fancy': (Lust, serif),
+  'font-family-body': ('Helvetica Neue', sans-serif),
+  'font-family-basic': ('Helvetica Neue', sans-serif),
   /* Used for margins and padding only. */
   'spacing-00': (0),
   /* Used for margins and padding only. */
@@ -53,20 +67,6 @@ $sheknows-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
-  /* The primary webfont, loaded async */
-  'font-family-primary-fancy': ('Playfair Display', serif),
-  /* The fallback for the primary font */
-  'font-family-primary': (Georgia, serif),
-  /* The secondary webfont, loaded async */
-  'font-family-secondary-fancy': ('sofia-pro', sans-serif),
-  /* The fallback for the secondary font */
-  'font-family-secondary': ('Helvetica Neue', sans-serif),
-  /* The fallback for the accent font */
-  'font-family-accent': (Georgia, serif),
-  /* The accent webfont, loaded async */
-  'font-family-accent-fancy': (Lust, serif),
-  'font-family-body': ('Helvetica Neue', sans-serif),
-  'font-family-basic': ('Helvetica Neue', sans-serif),
   'font-weight-light': (300),
   'font-weight-normal': (400),
   'font-weight-bold': (700),

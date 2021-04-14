@@ -479,6 +479,66 @@
       "originalValue": "{!GREY_50}",
       "name": "COLOR_GREY"
     },
+    "FONT_FAMILY_PRIMARY_FANCY": {
+      "category": "font-family",
+      "value": "Courier, serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "Courier, serif",
+      "name": "FONT_FAMILY_PRIMARY_FANCY"
+    },
+    "FONT_FAMILY_PRIMARY": {
+      "category": "font-family",
+      "value": "Georgia, serif",
+      "type": "font",
+      "comment": "Fallback for primary-fancy",
+      "originalValue": "Georgia, serif",
+      "name": "FONT_FAMILY_PRIMARY"
+    },
+    "FONT_FAMILY_SECONDARY_FANCY": {
+      "category": "font-family",
+      "value": "Papyrus, serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "Papyrus, serif",
+      "name": "FONT_FAMILY_SECONDARY_FANCY"
+    },
+    "FONT_FAMILY_SECONDARY": {
+      "category": "font-family",
+      "value": "Helvetica, serif",
+      "type": "font",
+      "comment": "Fallback for secondary-fancy",
+      "originalValue": "Helvetica, serif",
+      "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "category": "font-family",
+      "value": "Verdana, serif",
+      "type": "font",
+      "originalValue": "Verdana, serif",
+      "name": "FONT_FAMILY_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "category": "font-family",
+      "value": "Verdana, sans-serif",
+      "type": "font-family",
+      "originalValue": "Verdana, sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "FONT_FAMILY_BODY": {
+      "category": "font-family",
+      "value": "Georgia, serif",
+      "type": "font",
+      "originalValue": "Georgia, serif",
+      "name": "FONT_FAMILY_BODY"
+    },
+    "FONT_FAMILY_BASIC": {
+      "category": "font-family",
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
+      "originalValue": "Helvetica, sans-serif",
+      "name": "FONT_FAMILY_BASIC"
+    },
     "SPACING_00": {
       "category": "spacing",
       "type": "unit",
@@ -542,66 +602,6 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
-    },
-    "FONT_FAMILY_PRIMARY_FANCY": {
-      "category": "font-family",
-      "value": "Courier, serif",
-      "type": "font",
-      "comment": "The webfont, loaded async",
-      "originalValue": "Courier, serif",
-      "name": "FONT_FAMILY_PRIMARY_FANCY"
-    },
-    "FONT_FAMILY_PRIMARY": {
-      "category": "font-family",
-      "value": "Georgia, serif",
-      "type": "font",
-      "comment": "Fallback for primary-fancy",
-      "originalValue": "Georgia, serif",
-      "name": "FONT_FAMILY_PRIMARY"
-    },
-    "FONT_FAMILY_SECONDARY_FANCY": {
-      "category": "font-family",
-      "value": "Papyrus, serif",
-      "type": "font",
-      "comment": "The webfont, loaded async",
-      "originalValue": "Papyrus, serif",
-      "name": "FONT_FAMILY_SECONDARY_FANCY"
-    },
-    "FONT_FAMILY_SECONDARY": {
-      "category": "font-family",
-      "value": "Helvetica, serif",
-      "type": "font",
-      "comment": "Fallback for secondary-fancy",
-      "originalValue": "Helvetica, serif",
-      "name": "FONT_FAMILY_SECONDARY"
-    },
-    "FONT_FAMILY_ACCENT": {
-      "category": "font-family",
-      "value": "Verdana, serif",
-      "type": "font",
-      "originalValue": "Verdana, serif",
-      "name": "FONT_FAMILY_ACCENT"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "category": "font-family",
-      "value": "Verdana, sans-serif",
-      "type": "font-family",
-      "originalValue": "Verdana, sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
-    },
-    "FONT_FAMILY_BODY": {
-      "category": "font-family",
-      "value": "Georgia, serif",
-      "type": "font",
-      "originalValue": "Georgia, serif",
-      "name": "FONT_FAMILY_BODY"
-    },
-    "FONT_FAMILY_BASIC": {
-      "category": "font-family",
-      "value": "Helvetica, sans-serif",
-      "type": "font-family",
-      "originalValue": "Helvetica, sans-serif",
-      "name": "FONT_FAMILY_BASIC"
     },
     "FONT_WEIGHT_LIGHT": {
       "category": "font-weight",

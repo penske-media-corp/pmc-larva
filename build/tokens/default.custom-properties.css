@@ -39,6 +39,18 @@
   --color-brand-secondary-light: rgb(0, 0, 0);
   --color-grey-dark: rgb(106, 106, 106);
   --color-grey: rgb(140, 140, 140);
+  /* The webfont, loaded async */
+  --font-family-primary-fancy: Courier, serif;
+  /* Fallback for primary-fancy */
+  --font-family-primary: Georgia, serif;
+  /* The webfont, loaded async */
+  --font-family-secondary-fancy: Papyrus, serif;
+  /* Fallback for secondary-fancy */
+  --font-family-secondary: Helvetica, serif;
+  --font-family-accent: Verdana, serif;
+  --font-family-accent-fancy: Verdana, sans-serif;
+  --font-family-body: Georgia, serif;
+  --font-family-basic: Helvetica, sans-serif;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
@@ -55,18 +67,6 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
-  /* The webfont, loaded async */
-  --font-family-primary-fancy: Courier, serif;
-  /* Fallback for primary-fancy */
-  --font-family-primary: Georgia, serif;
-  /* The webfont, loaded async */
-  --font-family-secondary-fancy: Papyrus, serif;
-  /* Fallback for secondary-fancy */
-  --font-family-secondary: Helvetica, serif;
-  --font-family-accent: Verdana, serif;
-  --font-family-accent-fancy: Verdana, sans-serif;
-  --font-family-body: Georgia, serif;
-  --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;

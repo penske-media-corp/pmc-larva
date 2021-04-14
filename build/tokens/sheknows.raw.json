@@ -477,6 +477,68 @@
       "originalValue": "{!GREY_50}",
       "name": "COLOR_GREY"
     },
+    "FONT_FAMILY_PRIMARY_FANCY": {
+      "value": "'Playfair Display', serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The primary webfont, loaded async",
+      "originalValue": "'Playfair Display', serif",
+      "name": "FONT_FAMILY_PRIMARY_FANCY"
+    },
+    "FONT_FAMILY_PRIMARY": {
+      "value": "Georgia, serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the primary font",
+      "originalValue": "{!GEORGIA}",
+      "name": "FONT_FAMILY_PRIMARY"
+    },
+    "FONT_FAMILY_SECONDARY_FANCY": {
+      "value": "'sofia-pro', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The secondary webfont, loaded async",
+      "originalValue": "'sofia-pro', sans-serif",
+      "name": "FONT_FAMILY_SECONDARY_FANCY"
+    },
+    "FONT_FAMILY_SECONDARY": {
+      "value": "'Helvetica Neue', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the secondary font",
+      "originalValue": "'Helvetica Neue', sans-serif",
+      "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "value": "Georgia, serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the accent font",
+      "originalValue": "{!GEORGIA}",
+      "name": "FONT_FAMILY_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "Lust, serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The accent webfont, loaded async",
+      "originalValue": "Lust, serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "FONT_FAMILY_BODY": {
+      "value": "'Helvetica Neue', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "'Helvetica Neue', sans-serif",
+      "name": "FONT_FAMILY_BODY"
+    },
+    "FONT_FAMILY_BASIC": {
+      "value": "'Helvetica Neue', sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "'Helvetica Neue', sans-serif",
+      "name": "FONT_FAMILY_BASIC"
+    },
     "SPACING_00": {
       "category": "spacing",
       "type": "unit",
@@ -540,68 +602,6 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
-    },
-    "FONT_FAMILY_PRIMARY_FANCY": {
-      "value": "'Playfair Display', serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The primary webfont, loaded async",
-      "originalValue": "'Playfair Display', serif",
-      "name": "FONT_FAMILY_PRIMARY_FANCY"
-    },
-    "FONT_FAMILY_PRIMARY": {
-      "value": "Georgia, serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The fallback for the primary font",
-      "originalValue": "{!GEORGIA}",
-      "name": "FONT_FAMILY_PRIMARY"
-    },
-    "FONT_FAMILY_SECONDARY_FANCY": {
-      "value": "'sofia-pro', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The secondary webfont, loaded async",
-      "originalValue": "'sofia-pro', sans-serif",
-      "name": "FONT_FAMILY_SECONDARY_FANCY"
-    },
-    "FONT_FAMILY_SECONDARY": {
-      "value": "'Helvetica Neue', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The fallback for the secondary font",
-      "originalValue": "'Helvetica Neue', sans-serif",
-      "name": "FONT_FAMILY_SECONDARY"
-    },
-    "FONT_FAMILY_ACCENT": {
-      "value": "Georgia, serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The fallback for the accent font",
-      "originalValue": "{!GEORGIA}",
-      "name": "FONT_FAMILY_ACCENT"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "Lust, serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The accent webfont, loaded async",
-      "originalValue": "Lust, serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
-    },
-    "FONT_FAMILY_BODY": {
-      "value": "'Helvetica Neue', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "'Helvetica Neue', sans-serif",
-      "name": "FONT_FAMILY_BODY"
-    },
-    "FONT_FAMILY_BASIC": {
-      "value": "'Helvetica Neue', sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "'Helvetica Neue', sans-serif",
-      "name": "FONT_FAMILY_BASIC"
     },
     "FONT_WEIGHT_LIGHT": {
       "category": "font-weight",

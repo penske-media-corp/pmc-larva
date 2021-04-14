@@ -38,6 +38,18 @@
   --color-brand-secondary-light: rgb(0, 0, 0);
   --color-grey-dark: rgb(106, 106, 106);
   --color-grey: rgb(140, 140, 140);
+  /* Available via Typekit. */
+  --font-family-primary-fancy: 'Balto', Helvetica, sans-serif;
+  /* Fallback for primary-fancy. */
+  --font-family-primary: Helvetica, sans-serif;
+  /* Available via @font-face. */
+  --font-family-secondary-fancy: 'Eksell', Georgia, serif;
+  /* Fallback for secondary-fancy */
+  --font-family-secondary: Georgia, serif;
+  --font-family-accent: Verdana, serif;
+  --font-family-accent-fancy: Verdana, sans-serif;
+  --font-family-body: Georgia, serif;
+  --font-family-basic: Helvetica, sans-serif;
   /* Used for margins and padding only. */
   --spacing-00: 0;
   /* Used for margins and padding only. */
@@ -54,18 +66,6 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
-  /* Available via Typekit. */
-  --font-family-primary-fancy: 'Balto', Helvetica, sans-serif;
-  /* Fallback for primary-fancy. */
-  --font-family-primary: Helvetica, sans-serif;
-  /* Available via @font-face. */
-  --font-family-secondary-fancy: 'Eksell', Georgia, serif;
-  /* Fallback for secondary-fancy */
-  --font-family-secondary: Georgia, serif;
-  --font-family-accent: Verdana, serif;
-  --font-family-accent-fancy: Verdana, sans-serif;
-  --font-family-body: Georgia, serif;
-  --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
