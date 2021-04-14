@@ -47,6 +47,13 @@ $rollingstone-map: (
   'font-family-accent-fancy': (Verdana, sans-serif),
   'font-family-body': ('Graphik', sans-serif),
   'font-family-basic': ('Graphik', sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
+  'line-height-small': (1.1),
+  'line-height-normal': (1.35),
+  'line-height-copy': (1.5),
+  'line-height-large': (1.85),
   /* Used for margins and padding only. */
   'spacing-00': (0),
   /* Used for margins and padding only. */
@@ -63,12 +70,5 @@ $rollingstone-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
-  'font-weight-light': (300),
-  'font-weight-normal': (400),
-  'font-weight-bold': (700),
-  'line-height-small': (1.1),
-  'line-height-normal': (1.35),
-  'line-height-copy': (1.5),
-  'line-height-large': (1.85),
   'background-color-brand-accent': (rgb(240, 241, 242)),
 );
