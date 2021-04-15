@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-patterns",
-  "version": "0.1.20",
+  "version": "0.2.0-alpha.0",
   "description": "Larva markup patterns.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/patterns#readme",
@@ -20,8 +20,8 @@
     "url": "https://github.com/Penske-Media-Corp/pmc-larva/issues"
   },
   "dependencies": {
-    "@penskemediacorp/larva-css": "^0.1.20",
-    "@penskemediacorp/larva-js": "^0.1.20",
+    "@penskemediacorp/larva-css": "^0.2.0-alpha.0",
+    "@penskemediacorp/larva-js": "^0.2.0-alpha.0",
     "@penskemediacorp/larva-svg": "^0.1.14",
     "lodash.clonedeep": "^4.5.0"
   }
