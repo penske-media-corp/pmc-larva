@@ -25,7 +25,7 @@ const ruleset = ( selector ) => {
 	let css = '';
 
 	const nameSlugs = selector.split( '-' );
-	const family = nameSlugs[3];
+	const family = nameSlugs[ 3 ];
 	const tokenBase = [ ...nameSlugs ].slice( 3, nameSlugs.length ).join( '-' );
 
 	properties.forEach( ( property ) => {
@@ -36,7 +36,7 @@ const ruleset = ( selector ) => {
 
 	css += `\n
 	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
-	--font-family: var( --font-family-${family} );
+	--font-family: var( --font-family-${ family } );
 
 	font-family: var( --font-family );`;
 

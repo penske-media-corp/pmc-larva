@@ -132,7 +132,7 @@ const tokensFileContentsByProperty = tokenProperties.reduce(
 		propertiesAcc[ currProperty ] = {
 			global: {
 				category: `${ kebabify( currProperty ) }`,
-				type: 'number'
+				type: 'number',
 			},
 			props: { ...tokens },
 		};
