@@ -1,8 +1,5 @@
 
 {
-	"imports": [
-		"./aliases.json"
-	],
 	"global": {
 		"category": "spacing",
 		"type": "unit",

@@ -1,69 +1,50 @@
 # Larva Design Tokens
 
-This package provides a default set of design tokens for colors and font families, and specific per-brand configurations. It uses [Theo](https://github.com/salesforce-ux/theo/) for generating the token files.
-
 **Design tokens** are platform-agnostic values for color, typography, and spacing that can be built into variable files that are consumable by different applications.
+
+This package provides a default set of design tokens for colors and font families, and specific per-brand configurations. It uses [Theo](https://github.com/salesforce-ux/theo/) in order to transform data about tokens into different formats. We use the following formats:
+
+* SCSS map
+* CSS custom properties
+* JSON
 
 ## Overview of Functionality
 
-1. Tokens are added to JSON files in src/. The values in src/base/ provide defaults that are pulled in and then overridden as needed in the JSON files in src/brands.
-2. A Gulp task builds each of the JSON tokens into CSS file containing custom properties, a Sass map, and an HTML style guide.
+1. Default values for tokens are imported into a JSON file for a specific brand, and in that file, overrides for brand-specific values are specified.
+2. A Gulp task builds each of the JSON tokens into various formats.
 3. The built files are available for use by other applications, such as larva-css which generates utility classes according to the Sass map, and makes them available for quick theme-ing with custom properties.
 
-The values in larva-tokens are strictly controlled, and should originate from a style guide provided by design, such as [this one from ArtNews](https://projects.invisionapp.com/share/FVQGKHESJQZ#/screens/384190276).
+The values in larva-tokens are strictly controlled, and must originate from a style guide provided by design, such as [this one from ArtNews](https://projects.invisionapp.com/share/FVQGKHESJQZ#/screens/384190276).
+
+Given that tokens are strictly controlled, contributions should be relatively infrequent and should mainly revolve around redesigns or adding Larva to a brand that doesn't currently have it. Occasionially, however, individual tokens will be updated with new values for a new brand, or new tokens will be added to the system / deprecated tokens removed.
 
 ## Development Setup
 
-Given that tokens are strictly controlled, contributions should be relatively infrequent.
+**Prerequisite:** A style guide must be provided by design that follows the design token naming conventions.
 
-### Use cases for updating larva-tokens
+1. Clone this repository, and follow the setup instructions in the root README.
+2. Make changes to packages/larva-tokens/src, e.g. adding a new {brand}.json tokens file, or updating a value in an existing brand.
+5. From the root of this repo, run `npm run build-tokens`.
+6. Record changed in CHANGELOG.md, and open a pull request with your changes.
+7. Once the PR is merged and the release published, update the larva npm package in a consuming project.
 
-1. Setting up tokens for a new brand
-	1. Make a copy of _template.txt in src/brands and rename it to brand-name.json.
-	4. Refer to the style guide from design. Add values to JSON following the existing naming conventions*.
-2. Adding a new default, required token for all brands e.g. `color-sponsored`.
-	1. Find the related property in src/base. For the above example, you would contribute `COLOR_SPONSORED` to src/base/color.json and `BACKGROUND_COLOR_SPONSORED` to src/base/background-color.json.
-3. Updating a brand's tokens to use something other than default values
-	1. If a specific brand wants to override the default value for a token, this can be done by adding a token **of the same name** (this is VERY important) to brands/brand-name.json. For example, if I want to change the hue of `BACKGROUND_COLOR_GREY_LIGHTEST` for WWD, I would add a token to wwd.json in this format:
-	```
-	"BACKGROUND_COLOR_GREY_LIGHTEST": {
-		"value": "#FAFAFA",
-		"type": "color",
-		"category": "background-color"
-	},
-	```
-	2. Note that the `type` and `category` for the token overrides does not carry over from their defaults, so they must be added in the top-level brand-name.json files.
+## Updating and Adding Design Tokens
 
-If these sound like your needs, proceed!
+Please use [the Design Tokens Form tool](https://confluence.pmcdev.io/x/f4GzB) for adding new brands' tokens, and for updating design tokens in existing brands. The tool provides an interface for ensuring correct token formatting. After configuring tokens values, save the file and contribute the changes to this repo.
 
-### Updating or Adding Tokens
+## Using Design Tokens in Projects
 
-**Prerequisite:** A style guide provided by design (or otherwise advised by product to use tokens) that follows the design system naming conventions.
-
-1. Clone this repository, i.e. the pmc-larva monorepo.
-2. In packages/larva-tokens, run `npm install`.
-3. Make necessary changes according to the above guidelines.
-5. Run `npm run build` to generate the custom properties, Sass map, and style guide.
-6. Add a note to the monorepo CHANGELOG.md, and open a pull request with your changes.
-7. Once the PR is merged and the release published, update the npm package in your project.
-8. If working in a project with Larva already setup, update the name of the custom-properties map in common.inline.scss, and the name of the Sass map in setup.scss.
-
-
-**Note:** Adding new tokens is tedious, but _extremely important_ to do correctly. Please be very detailed and take care to follow existing naming conventions and ask your tech lead for help where you aren't sure.
-
-### Consuming Tokens in Projects
-
-If working in a project that does not have tokens setup by default, there are two options for consuming tokens:
+If working in a project that does not design tokens setup, but already has the brand tokens contributed, there following are options for accessing the tokens' data:
 
 1. Pull in the Sass map of tokens with `@import './node_modules/@penskemediacorp/larva-tokens/build/brand.map.scss';` and access values with `map-get( $brand-map, token-name )`.
-2. Add the custom properties map to the beginning of your CSS build with from `./node_modules/@penskemediacorp/larva-tokens/build/brand.custom-properties.scss`. Access the custom property values using the `var( --token-name )` CSS syntax.
-
-For the above, be sure to update the paths with any project-level aliasing for include paths.
+2. Add the custom properties map to the beginning of your CSS build with from `./node_modules/@penskemediacorp/larva-tokens/build/brand.custom-properties.css`. Access the custom property values using the `var( --token-name )` CSS syntax.
+3. Import the JSON build of the tokens into a JavaScript application.
 
 ## Things To Be Aware Of
 
+* The tokens used with the `lrv-a-font` selector are generated via font-data.js
 * Token names should be in CAPS
-* The src/base/aliases.json file is now deprecated and colors should always be defined in the brand's json. (Previously used for colors that might be shared between brands).
+* The src/base/deprecated/aliases.json file is now deprecated and colors should always be defined in the brand's json. (Previously used for colors that might be shared between brands).
 * Only tokens in existing categories should be added e.g. there are no font-size tokens, so do not add them.
 * All tokens are prefixed with their CSS property, e.g. background is BACKGROUND_, text colors are COLOR_, and font family values prefixed with FONT_FAMILY_.
 * Font family values should be a short CSS font stack.

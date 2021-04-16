@@ -1,7 +1,4 @@
 {
-	"imports": [
-		"./aliases.json"
-	],
 	"global": {
 		"category": "font-family"
 	},

@@ -47,7 +47,7 @@ describe( 'Font Data', () => {
 			'PRIMARY_S_LINE_HEIGHT_DESKTOP'
 		);
 		expect( tokensFileContentsByProperty.font_size.props ).toHaveProperty(
-			'SECONDARY_S_FONT_SIZE_BASE'
+			'SECONDARY_S_FONT_SIZE_MOBILE'
 		);
 	} );
 } );

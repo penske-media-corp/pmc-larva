@@ -25,20 +25,27 @@ const ruleset = ( selector ) => {
 	let css = '';
 
 	const nameSlugs = selector.split( '-' );
+	const family = nameSlugs[ 3 ];
 	const tokenBase = [ ...nameSlugs ].slice( 3, nameSlugs.length ).join( '-' );
 
 	properties.forEach( ( property ) => {
 		css += `
-	--${ property }-desktop: var( --${ tokenBase }-${ property }-desktop, var( --${ tokenBase }-${ property }-base ) );
-	--${ property }-base: var(--desktop-off) var( --${ tokenBase }-${ property }-base);`;
+	--${ property }-desktop: var( --${ tokenBase }-${ property }-desktop, var( --${ tokenBase }-${ property }-mobile ) );
+	--${ property }-mobile: var(--is-desktop) var( --${ tokenBase }-${ property }-mobile);`;
 	} );
+
+	css += `\n
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-${ family } );
+
+	font-family: var( --font-family );`;
 
 	css += '\n';
 
 	properties.forEach( ( property ) => {
 		css += `
 	${ property }: var(
-		--${ property }-base,
+		--${ property }-mobile,
 		var(--${ property }-desktop)
 	);`;
 	} );

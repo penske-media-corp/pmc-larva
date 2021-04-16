@@ -24,18 +24,19 @@ const families = Object.keys( styles );
  *       style guide, and can be added here,
  *       in GUT Phase 3, if required.
  */
-const breakpoints = [ 'base', 'desktop' ];
+const breakpoints = [ 'mobile', 'desktop' ];
 
 /**
  * Properties for tokens and their defaults.
+ *
+ * Note: In Phase 3, we may want to control font-family here.
  */
 const tokenDefaults = {
 	font_size: 'initial',
-	line_height: 'inherit',
+	line_height: 'initial',
 	letter_spacing: 'normal',
-	font_weight: 'normal',
+	font_weight: 'initial',
 	font_style: 'normal',
-	font_family: 'initial',
 };
 
 /**

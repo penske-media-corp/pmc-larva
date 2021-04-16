@@ -57,7 +57,7 @@ export default class LarvaUiToggle {
 
 	togglePanels() {
 		this.ui.panels.forEach( ( el ) => {
-			el.classList.toggle( 'is-ui-hidden' );
+			el.classList.toggle( 'lrv-a-hidden' );
 		} );
 	}
 }
