@@ -154,18 +154,6 @@ const declareImportanceForAll = ( style, result ) => {
 };
 
 /**
- * PostCSS plugin that does nothing, for conditionally minifying CSS.
- *
- * @param {Object} style  PostCSS Root object for current CSS.
- * @param {Object} result PostCSS Result object containing transformed CSS.
- * @return {Result} PostCSS Result object.
- */
-const postCssNoop = ( style, result ) => {
-	result.root = postCss.parse( style );
-	return result;
-};
-
-/**
  * Run stylelint.
  *
  * @param {string} file Filename or glob to process.
