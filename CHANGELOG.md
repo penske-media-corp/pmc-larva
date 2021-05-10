@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-tokens - Adding WWD redesign as wwd-2021 to tokens.
+* larva-tokens - Add Sourcing Journal (SJ) design tokens.
 ## 0.2.0 - 04-16-2021
 * root - Add build script for Larva Patterns to deploy to vercel
 * site - Update welcome page to include link to patterns
