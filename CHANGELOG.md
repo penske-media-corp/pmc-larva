@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished
+* Allow o-icon-button to be used in o-social-list.
+
 ## 0.2.1 - 05-11-2021
 * larva-tokens - Add Sourcing Journal (SJ) design tokens.
 * larva-tokens - Adding WWD redesign as wwd-2021 to tokens.
