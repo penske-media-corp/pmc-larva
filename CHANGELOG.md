@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.2.3 - 05-12-2021
+* Changing just the version. Last publish failed because of npm auth failed
+
 ## 0.2.2 - 05-12-2021
 * Allow o-icon-button to be used in o-social-list.
 
