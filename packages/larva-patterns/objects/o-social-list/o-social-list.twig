@@ -5,7 +5,11 @@
 >
 	{% for item in o_social_list_icons %}
 		<li class="o-social-list__item {{ o_social_list_item_classes }}">
-			{% include "@larva/components/c-icon/c-icon.twig" with item %}
+			{% if o_social_list_is_icon_button %}
+				{% include "@larva/objects/o-icon-button/o-icon-button.twig" with item %}
+			{% else %}
+				{% include "@larva/components/c-icon/c-icon.twig" with item %}
+			{% endif %}
 		</li>
 	{% endfor %}
 </ul>
