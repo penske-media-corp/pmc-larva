@@ -4,47 +4,62 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "#ED1D25",
+			"value": "#FFD300",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "#ED1D25",
+			"value": "#FFD300",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
+			"value": "#FFD300",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "#4A90E2",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "#4A90E2",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "#4A90E2",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_SOURCINGJOURNAL": {
+			"value": "#ED1D25",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_SOURCINGJOURNAL": {
+			"value": "#ED1D25",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_SOURCINGJOURNAL": {
 			"value": "#ED1D25",
 			"type": "color",
 			"category": "text-color"
 		},
-		"BACKGROUND_COLOR_RIVET": {
-			"value": "#FFD300",
-			"type": "color",
-			"category": "background-color"
-		},
-		"BORDER_COLOR_RIVET": {
-			"value": "#FFD300",
-			"type": "color",
-			"category": "hr-color"
-		},
-		"COLOR_RIVET": {
-			"value": "#FFD300",
-			"type": "color",
-			"category": "text-color"
-		},
 		"COLOR_GREY_LIGHTEST": {
-			"value": "#F5F7FA",
+			"value": "#F7F7F7",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_LIGHTEST": {
-			"value": "#F5F7FA",
+			"value": "#F7F7F7",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_LIGHTEST": {
-			"value": "#F5F7FA",
+			"value": "#F7F7F7",
 			"type": "color",
 			"category": "background-color"
 		},

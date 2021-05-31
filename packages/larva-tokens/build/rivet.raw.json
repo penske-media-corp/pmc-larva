@@ -225,10 +225,10 @@
   },
   "props": {
     "BORDER_COLOR_GREY_LIGHTEST": {
-      "value": "rgb(245, 247, 250)",
+      "value": "rgb(247, 247, 247)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#F5F7FA",
+      "originalValue": "#F7F7F7",
       "name": "BORDER_COLOR_GREY_LIGHTEST"
     },
     "BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
@@ -260,10 +260,10 @@
       "name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
     },
     "BORDER_COLOR_BRAND_SECONDARY": {
-      "category": "hr-color",
+      "value": "rgb(74, 144, 226)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "category": "hr-color",
+      "originalValue": "#4A90E2",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "BORDER_COLOR_GREY": {
@@ -295,10 +295,10 @@
       "name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
     },
     "BORDER_COLOR_BRAND_PRIMARY": {
-      "value": "rgb(237, 29, 37)",
+      "value": "rgb(255, 211, 0)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#ED1D25",
+      "originalValue": "#FFD300",
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
@@ -309,10 +309,10 @@
       "name": "BACKGROUND_COLOR_GREY_LIGHT"
     },
     "BACKGROUND_COLOR_GREY_LIGHTEST": {
-      "value": "rgb(245, 247, 250)",
+      "value": "rgb(247, 247, 247)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#F5F7FA",
+      "originalValue": "#F7F7F7",
       "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
@@ -352,11 +352,10 @@
       "name": "BACKGROUND_COLOR_BODY"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY": {
-      "category": "background-color",
+      "value": "rgb(74, 144, 226)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
-      "originalValue": "{!BLACK}",
+      "category": "background-color",
+      "originalValue": "#4A90E2",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BLACK": {
@@ -388,10 +387,10 @@
       "name": "BACKGROUND_COLOR_WHITE"
     },
     "BACKGROUND_COLOR_BRAND_PRIMARY": {
-      "value": "rgb(237, 29, 37)",
+      "value": "rgb(255, 211, 0)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#ED1D25",
+      "originalValue": "#FFD300",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_DARKEST": {
@@ -402,10 +401,10 @@
       "name": "BACKGROUND_COLOR_GREY_DARKEST"
     },
     "COLOR_BRAND_SECONDARY": {
-      "category": "text-color",
+      "value": "rgb(74, 144, 226)",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "category": "text-color",
+      "originalValue": "#4A90E2",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
@@ -437,10 +436,10 @@
       "name": "COLOR_WHITE"
     },
     "COLOR_BRAND_PRIMARY": {
-      "value": "rgb(237, 29, 37)",
+      "value": "rgb(255, 211, 0)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#ED1D25",
+      "originalValue": "#FFD300",
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_GREY_LIGHT": {
@@ -637,19 +636,19 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
-    "BACKGROUND_COLOR_RIVET": {
-      "value": "rgb(255, 211, 0)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "#FFD300",
-      "name": "BACKGROUND_COLOR_RIVET"
-    },
     "COLOR_GREY_LIGH": {
       "value": "rgb(126, 141, 150)",
       "type": "color",
       "category": "text-color",
       "originalValue": "#7E8D96",
       "name": "COLOR_GREY_LIGH"
+    },
+    "COLOR_SOURCINGJOURNAL": {
+      "value": "rgb(237, 29, 37)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "#ED1D25",
+      "name": "COLOR_SOURCINGJOURNAL"
     },
     "COLOR_GREY_DARKEST": {
       "value": "rgb(72, 83, 91)",
@@ -665,6 +664,13 @@
       "originalValue": "#7E8D96",
       "name": "BORDER_COLOR_GREY_LIGH"
     },
+    "BORDER_COLOR_SOURCINGJOURNAL": {
+      "value": "rgb(237, 29, 37)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#ED1D25",
+      "name": "BORDER_COLOR_SOURCINGJOURNAL"
+    },
     "BACKGROUND_COLOR_GREY_LIGH": {
       "value": "rgb(126, 141, 150)",
       "type": "color",
@@ -672,18 +678,18 @@
       "originalValue": "#7E8D96",
       "name": "BACKGROUND_COLOR_GREY_LIGH"
     },
-    "COLOR_RIVET": {
-      "value": "rgb(255, 211, 0)",
+    "BACKGROUND_COLOR_SOURCINGJOURNAL": {
+      "value": "rgb(237, 29, 37)",
       "type": "color",
-      "category": "text-color",
-      "originalValue": "#FFD300",
-      "name": "COLOR_RIVET"
+      "category": "background-color",
+      "originalValue": "#ED1D25",
+      "name": "BACKGROUND_COLOR_SOURCINGJOURNAL"
     },
     "COLOR_GREY_LIGHTEST": {
-      "value": "rgb(245, 247, 250)",
+      "value": "rgb(247, 247, 247)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#F5F7FA",
+      "originalValue": "#F7F7F7",
       "name": "COLOR_GREY_LIGHTEST"
     },
     "FONT_FAMILY_ACCENT": {
@@ -693,13 +699,6 @@
       "comment": "Fallback from ACCENT-fancy",
       "originalValue": "Georgia, serif",
       "name": "FONT_FAMILY_ACCENT"
-    },
-    "BORDER_COLOR_RIVET": {
-      "value": "rgb(255, 211, 0)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#FFD300",
-      "name": "BORDER_COLOR_RIVET"
     },
     "BORDER_COLOR_GREY_DARKEST": {
       "value": "rgb(72, 83, 91)",
