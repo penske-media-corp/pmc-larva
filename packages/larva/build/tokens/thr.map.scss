@@ -1,0 +1,83 @@
+
+$thr-map: (
+  'border-color-grey-lightest': (rgb(239, 239, 239)),
+  'border-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'border-color-grey-light': (rgb(220, 220, 220)),
+  'border-color-grey-dark': (rgb(90, 90, 90)),
+  'border-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'border-color-brand-secondary': (rgb(9, 38, 162)),
+  'border-color-grey': (rgb(140, 140, 140)),
+  'border-color-brand-primary-light': (rgb(236, 28, 36)),
+  'border-color-white': (rgb(255, 255, 255)),
+  'border-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'border-color-brand-primary': (rgb(217, 33, 40)),
+  'background-color-grey-light': (rgb(220, 220, 220)),
+  'background-color-grey-lightest': (rgb(239, 239, 239)),
+  'background-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'background-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'background-color-grey-dark': (rgb(90, 90, 90)),
+  'background-color-grey': (rgb(140, 140, 140)),
+  /* The background color of the main body of the site. */
+  'background-color-body': (rgb(255, 255, 255)),
+  'background-color-brand-secondary': (rgb(9, 38, 162)),
+  'background-color-black': (rgb(0, 0, 0)),
+  'background-color-brand-primary-light': (rgb(236, 28, 36)),
+  'background-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'background-color-white': (rgb(255, 255, 255)),
+  'background-color-brand-primary': (rgb(217, 33, 40)),
+  'background-color-grey-darkest': (rgb(50, 50, 50)),
+  'color-brand-secondary': (rgb(9, 38, 162)),
+  'color-black': (rgb(0, 0, 0)),
+  'color-brand-primary-light': (rgb(236, 28, 36)),
+  'color-brand-primary-dark': (rgb(236, 28, 36)),
+  'color-white': (rgb(255, 255, 255)),
+  'color-brand-primary': (rgb(217, 33, 40)),
+  'color-grey-light': (rgb(220, 220, 220)),
+  'color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'color-brand-secondary-light': (rgb(0, 0, 0)),
+  'color-grey-dark': (rgb(90, 90, 90)),
+  'color-grey': (rgb(140, 140, 140)),
+  /* Available via Typekit. */
+  'font-family-primary-fancy': ('kepler-std-semicondensed-dis', serif),
+  /* The fallback font for primary-fancy. */
+  'font-family-primary': ('Times New Roman', serif),
+  /* Available via Typekit. */
+  'font-family-secondary-fancy': ('kepler-std', serif),
+  /* The fallback font for secondary-fancy. */
+  'font-family-secondary': (Georgia, serif),
+  'font-family-body': ('kepler-std', serif),
+  'font-family-basic': (Georgia, serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
+  'line-height-small': (1.1),
+  'line-height-normal': (1.35),
+  'line-height-copy': (1.5),
+  'line-height-large': (1.85),
+  /* Used for margins and padding only. */
+  'spacing-00': (0),
+  /* Used for margins and padding only. */
+  'spacing-025': (0.25rem),
+  /* Used for margins and padding only. */
+  'spacing-050': (0.5rem),
+  /* Used for margins and padding only. */
+  'spacing-075': (0.75rem),
+  /* Used for margins and padding only. */
+  'spacing-1': (1rem),
+  /* Used for margins and padding only. */
+  'spacing-125': (1.25rem),
+  /* Used for margins and padding only. */
+  'spacing-150': (1.5rem),
+  /* Used for margins and padding only. */
+  'spacing-2': (2rem),
+  'color-grey-darkest': (rgb(50, 50, 50)),
+  'background-color-brand-accent': (rgb(16, 16, 16)),
+  'border-color-brand-accent': (rgb(16, 16, 16)),
+  'color-grey-lightest': (rgb(239, 239, 239)),
+  /* The fallback for the accent-fancy */
+  'font-family-accent': (Helvetica, sans-serif),
+  'color-brand-accent': (rgb(16, 16, 16)),
+  'border-color-grey-darkest': (rgb(50, 50, 50)),
+  /* Available via @font-face. */
+  'font-family-accent-fancy': ('Karla', sans-serif),
+);

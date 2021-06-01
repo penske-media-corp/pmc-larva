@@ -1,0 +1,113 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#ED1D25",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#ED1D25",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#ED1D25",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGH": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGH": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGH": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "#5A5A5A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "#5A5A5A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "#5A5A5A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'playfair-display', Times New Roman, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The webfont for font-family-primary."
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "'Times New Roman', serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback font for font-family-primary."
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'trade-gothic-next', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "Arial, serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from secondary-fancy"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "'oswald', Helvetica, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "Georgia, serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from ACCENT-fancy"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "'trade-gothic-next', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "Helvetica, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		}
+	}
+}

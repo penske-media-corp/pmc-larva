@@ -3,23 +3,27 @@ const express = require('express');
 const marked = require( 'marked' );
 const fs = require( 'fs' );
 const globby = require( 'globby' );
-const chalk = require( 'chalk' );
 
 const {
 	TwingEnvironment,
 	TwingLoaderFilesystem,
-	TwingFilter
+	TwingFilter,
+	TwingFunction
 } = require('twing');
 
-const getAppConfiguration = require( './utils/getAppConfiguration' );
+const { fontData } = require( '@penskemediacorp/larva-tokens' );
+
+const getAppConfiguration = require('./utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );
 const getPatternData = require( './utils/getPatternData' );
-const getSubDirectoryNames = require( './utils/getSubDirectoryNames' );
+const getAllPatternsObj = require( './utils/getAllPatternsObj' );
 
 const app = express();
 
-const appConfiguration = getAppConfiguration( 'patterns' );
-const twigPaths = getPatternPathsToLoad( appConfiguration );
+const patternConfig = getAppConfiguration( 'patterns' );
+const brandConfig = getAppConfiguration( 'brand' );
+const assetsConfig = getAppConfiguration( 'assets' );
+const twigPaths = getPatternPathsToLoad( patternConfig );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
 
@@ -34,54 +38,52 @@ const markdownFilter = new TwingFilter( 'markdown', ( string ) => {
 	}
 });
 
+const kebabify = ( name ) => {
+	let kebabCase = [];
+
+	// TODO: find a more concise way of turning a string into an iterable
+	for (let i = 0; i < name.length; i++) {
+		let letter = name[i];
+		kebabCase[i] = letter;
+	}
+
+	return kebabCase.reduce( ( a, b ) => {
+		if ( '_' === b ) {
+			return a.toLowerCase() + '-';
+		}
+		return a.toLowerCase() + b.toLowerCase();
+	});
+};
+
 // TODO: Could be an array/iterator if the namespace can be extracted from the key, the larva.config API could
 // change to `patterns: { larva: /larva/path/here/, project: /project/path/here }`
-loader.addPath( appConfiguration.larvaPatternsDir, 'larva' );
+loader.addPath( patternConfig.larvaPatternsDir, 'larva' );
 
-if( appConfiguration.projectPatternsDir ) {
-	loader.addPath( appConfiguration.projectPatternsDir, 'project' );
+if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
+	loader.addPath( patternConfig.projectPatternsDir, 'project' );
 }
 
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 twing.addFilter( markdownFilter );
 
+// Add custom function support for doing wp action: {{ wp_action( ... ) }}
+twing.addFunction(new TwingFunction('wp_action',() => {
+	// We're relying on twig-to-php-parser for translation, so just return empty string for now
+	return Promise.resolve('');
+}));
+
 let patterns = {
-	larva: {},
-	project: {}
+	larva: getAllPatternsObj( patternConfig.larvaPatternsDir ),
+	project: getAllPatternsObj( patternConfig.projectPatternsDir )
 };
 
-app.use( '/packages/' , express.static( path.join( appConfiguration.larvaPatternsDir, '../' ) ) );
-
-// NOTE: When the static site builder script is merged, this manual pattern
-// collection for the nav will come from an object based on the directory structure
-
-if( appConfiguration.larvaPatternsDir ) {
-	patterns.larva.modules = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/modules' ) );
-	patterns.larva.objects = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/objects' ) );
-	patterns.larva.components = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/components' ) );
-	patterns.larva.tests = getSubDirectoryNames( path.join( appConfiguration.larvaPatternsDir + '/__tests__' ) );
+// Use the project version if it exists, else use the larva version
+if ( fs.existsSync( assetsConfig.path ) ) {
+	app.use( '/assets' , express.static( assetsConfig.path ) );
 }
 
-if( appConfiguration.projectPatternsDir ) {
-	patterns.project.modules = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/modules' ) );
-	patterns.project.objects = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/objects' ) );
-	patterns.project.components = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/components' ) );
-	patterns.project.oneOffs = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/one-offs' ) );
-	patterns.project.tests = getSubDirectoryNames( path.join( appConfiguration.projectPatternsDir + '/__tests__' ) );
-}
-
-// appConfiguration.projectPatternsDir will be assets/src/patterns - move out to assets.
-app.use( '/assets' , express.static( path.join( appConfiguration.projectPatternsDir, '../../' ) ) );
-
-app.get( '/', function (req, res) {
-	req.params[ 'source' ] = 'larva';
-	req.params[ 'pattern_nav' ] = patterns;
-	req.params[ 'name' ] = 'Welcome';
-	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
-});
-
-app.get( '/:source/css', function (req, res) {
+app.get( '/:source?/css', function (req, res) {
 
 	/**
 	 * Generate Larva CSS Docs
@@ -99,22 +101,25 @@ app.get( '/:source/css', function (req, res) {
 	 */
 
 	const postcss = require( 'postcss' );
-	const cssPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-css/build/' );
+	const cssPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva/build/css/larva.css' );
 	const sassPath = path.join( process.cwd(), './node_modules/@penskemediacorp/larva-css/src/' );
 
 	const hasTokens = [
-		'u-font-family',
-		'u-color',
 		'u-background-color',
 		'u-border-color',
+		'u-color',
+		'u-font-family',
+		'u-letter-spacing',
 		'u-margin',
 		'u-padding',
 	];
 
 	const baseNames = ( () => {
 
-		let files = globby.sync( sassPath + '/**/*.scss', {
-			expandDirectories: true
+		let files = globby.sync( sassPath, {
+			expandDirectories: {
+				files: ['*.scss']
+			}
 		} );
 
 		return files.map( ( item ) => {
@@ -124,20 +129,7 @@ app.get( '/:source/css', function (req, res) {
 		} );
 	} )();
 
-	const cssFiles = globby.sync( cssPath + '/**/*.css', {
-		expandDirectories: true
-	});
-
-	const cssString = ( () => {
-		let string;
-
-		// Could use a different JS array helper here but idk
-		cssFiles.forEach( file => {
-			string += fs.readFileSync( file );
-		} );
-
-		return string;
-	 } ) ();
+	const cssString = fs.readFileSync( cssPath );
 
 	const cssRoot = postcss.parse( cssString )
 
@@ -185,17 +177,19 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 	let patternsPath;
 
 	if ( 'larva' === req.params.source ) {
-		patternsPath = appConfiguration.larvaPatternsDir;
+		patternsPath = patternConfig.larvaPatternsDir;
 	} else if ( 'project' === req.params.source ) {
-		patternsPath = appConfiguration.projectPatternsDir;
-	} else {
-		console.error( chalk.red.bold( 'Error loading the pattern route. \nCheck the structure of the URL. It should be: \nhttp://localhost:3000/{larva|project}/{components|objects|modules|one-offs}/{optional variant}.' ) );
+		patternsPath = patternConfig.projectPatternsDir;
+	} else if ( 'assets' === req.params.source ) {
+		return res.end();
 	}
 
 	// Support query parameters for conditionally loading stylesheets and scripts
 	req.params[ 'query' ] = req.query;
-	req.params[ 'data' ] = getPatternData( patternsPath, req.params );
 	req.params[ 'pattern_nav' ] = patterns;
+	req.params[ 'data' ] = undefined !== patternsPath ? getPatternData( patternsPath, req.params ) : null;
+	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
+	req.params[ 'variants' ] = patterns[req.params.source][req.params.type][req.params.name];
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params[ 'json_pretty' ] = JSON.stringify( req.params[ 'data' ], null, '\t' );
@@ -210,6 +204,64 @@ app.get( '/:source/:type/:name/:variant?', function (req, res) {
 
 		res.end( errorMessage );
 	} );
+});
+
+app.get( '/:source?/style-guide', function (req, res ) {
+
+	const brand = req.query.tokens ? req.query.tokens : brandConfig;
+	const tokensPath = path.join( assetsConfig.path, 'build/tokens' );
+
+	const tokensData = (() => {
+		try {
+			return require( path.join( tokensPath, `${brand}.json` ) );
+		} catch ( e ) {
+			return null;
+		}
+	})();
+
+	const colorsByProperty = ( () => {
+		if ( ! tokensData ) return;
+
+		const colorTokens = Object.keys( tokensData ).filter( item => item.includes( 'COLOR' ) );
+		const colorNames = colorTokens.map( token => kebabify( token ) );
+
+		return colorNames.reduce( (acc, curr) => {
+			Object.keys( acc ).forEach( key => {
+				if ( curr.startsWith( key ) ) {
+					acc[key].push( 'lrv-u-' + curr );
+				}
+			});
+
+			return acc;
+		}, {
+			color: [],
+			'background-color': [],
+			'border-color': []
+		});
+	})();
+
+	req.params[ 'name' ] = `Style Guide`;
+	req.params[ 'font_styles' ] = fontData.groupedSelectors;
+	req.params[ 'colors' ] = colorsByProperty;
+	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
+	req.params[ 'pattern_nav' ] = patterns;
+
+	twing.render( 'style-guide/index.html', req.params ).then( output => res.end( output ) ).catch( e => {
+		const errorMessage = `Cannot render template! \n\n${e}`;
+
+		console.log( e );
+
+		res.end( errorMessage );
+	} );
+
+});
+
+app.get( '/:source?/:type?', function (req, res) {
+	req.params[ 'source' ] = 'larva';
+	req.params[ 'type' ] = req.params.type;
+	req.params[ 'pattern_nav' ] = patterns;
+	req.params[ 'brand' ] = req.query.tokens ? req.query.tokens : brandConfig;
+	twing.render( 'index.html', req.params ).then( output => res.end( output ) );
 });
 
 module.exports = app;

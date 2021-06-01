@@ -1,0 +1,22 @@
+{% if not font_styles %}
+	<section class="lrv-a-wrapper lrv-u-width-50p lrv-u-color-white lrv-u-margin-tb-2 lrv-u-padding-a-1 lrv-u-background-color-grey-darkest">
+		{% set url = 'https://' ~ brand ~ '.larva.pmcdev.io/project/__tests__/style-guide' %}
+		<h2>This brand does not have typography tokens yet.</h2>
+		<p>Visit this documentation to learn how to set them up in Larva, and in the mean time, the brand's typography styles may be available at the legacy URL:</p>
+		<a href="{{url}}">{{url}}</a></p>
+	</section>
+
+{% endif %}
+
+{% for key, sizes in font_styles %}
+	<div class="lrv-u-border-t-1 lrv-u-padding-b-2">
+		<h2 class="lrv-u-padding-a-1" style="background-color: lemonchiffon;">{{ key }}</h2>
+
+		{% for class in sizes %}
+			<div class="lrv-u-border-b-1 lrv-u-border-color-grey lrv-u-margin-t-1">
+				<code>.{{class}}</code>
+				<p class="{{ class }}">Each of us knows a little, together we know a lot.</p>
+			</div>
+		{% endfor %}
+	</div>
+{% endfor %}

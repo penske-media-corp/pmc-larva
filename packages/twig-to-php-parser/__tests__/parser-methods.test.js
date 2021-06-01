@@ -84,3 +84,25 @@ describe( 'parse SVG includes', function () {
 	});
 } );
 
+describe( 'parse custom functions', function () {
+	it( 'parses wp_action function', ( done ) => {
+
+		parserMethods.parseWpAction("{{wp_action('test','param',variable)}}")
+			.catch( e => console.log( e ) )
+			.then( ( result ) => {
+				assert.equal( result, "<?php do_action( 'test', 'param', $variable ); ?>" );
+				done();
+			});
+
+		// Test spacing
+		parserMethods.parseWpAction("{{ 	wp_action( 	'test', 	'param', 	variable 	) 	}}")
+			.catch( e => console.log( e ) )
+			.then( ( result ) => {
+				assert.equal( result, "<?php do_action( 'test', 'param', $variable ); ?>" );
+				done();
+			});
+
+	} );
+
+} );
+

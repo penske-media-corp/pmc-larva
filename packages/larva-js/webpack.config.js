@@ -1,18 +1,22 @@
-const path = require('path');
+const path = require( 'path' );
 
 const aliases = {
 	'@npm': path.resolve( './node_modules/' ),
 };
 
-module.exports = {
-	entry: './src/common.js',
-	watch: true,
-	mode: 'development',
-	output: {
-		filename: 'common.js',
-		path: path.resolve(__dirname, 'build')
-	},
-	resolve: {
-		alias: aliases,
-	}
+module.exports = ( env, argv ) => {
+	return {
+		entry: {
+			'video-showcase': './src/video-showcase.js',
+		},
+		watch: 'production' !== argv.mode,
+		mode: 'development',
+		output: {
+			filename: '[name].js',
+			path: path.resolve( __dirname, 'build' ),
+		},
+		resolve: {
+			alias: aliases,
+		},
+	};
 };

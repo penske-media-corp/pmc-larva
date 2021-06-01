@@ -1,5 +1,5 @@
 {% if c_button_url %}
-	<a class="c-button larva {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}" target="{{ c_button_target_attr }}" rel="{{ c_button_rel_attr }}">
+	<a class="c-button larva {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}" target="{{ c_button_target_attr }}" rel="{{ c_button_rel_attr }}" {{ wp_action( 'pmc_do_render_custom_ga_tracking_attr', c_button_ga_tracking ) }}>
 {% else %}
 	<button class="c-button larva {{ modifier_class }} {{ c_button_classes }}" type="{{ c_button_type_attr }}">
 {% endif %}
@@ -7,6 +7,10 @@
 	<span class="c-button__inner {{ c_button_inner_classes }}">
 		{{ c_button_text }}
 	</span>
+
+	{% if c_button_screen_reader_text %}
+		<span class="lrv-a-screen-reader-only">{{ c_button_screen_reader_text }}</span>
+	{% endif %}
 
 {% if c_button_url %}
 	</a>

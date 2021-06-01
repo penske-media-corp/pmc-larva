@@ -4,6 +4,120 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.2.4 - 05-26-2021
+* larva-patterns - Add newsletter-cta module
+
+## 0.2.3 - 05-12-2021
+* Changing just the version. Last publish failed because of npm auth failed
+
+## 0.2.2 - 05-12-2021
+* Allow o-icon-button to be used in o-social-list.
+
+## 0.2.1 - 05-11-2021
+* larva-tokens - Add Sourcing Journal (SJ) design tokens.
+* larva-tokens - Adding WWD redesign as wwd-2021 to tokens.
+
+## 0.2.0 - 04-16-2021
+* root - Add build script for Larva Patterns to deploy to vercel
+* site - Update welcome page to include link to patterns
+* larva-patterns - Support index files for /source/type routes
+* larva-js - Refactor Toggle Larva UI button to use localStorage
+* larva-tokens - Add generated tokens for typography, apply to `default` and `indiewire`.
+* larva-css - Generate SCSS according to typography tokens.
+* larva-css - Add warnings for future deprecation of previous font-related utilities.
+* root - Add build script for tokens updates.
+
+## 0.1.20 - 03-22-2021
+* larva-patterns - Show variants in menu and pattern pages on Larva server
+* larva - Fix bug with eslint resolving aliases, remove deprecated dependency
+
+## 0.1.19 - 03-22-2021
+* larva-js - Add tooltip JS
+* twig-to-php-parser - Add support for custom twig-to-php-parser function: {{ wp_action( 'action_name', p1, p2, ... ) }}
+* twig-to-php-parser -  fix backward compatible twig-to-php-parser config: twigDir & relativeSrcOverride
+* larva-js - build standalone VideoShowcase
+* larva - create version of CSS for high-specificity sites
+
+## 0.1.18 - 03-19-2021
+* root - Internal structuring to improve workflow
+* root - Consolidate built assets in root for local dev
+* larva - Render style guide from tokens data
+* larva - Support assets path and brand name in configuration
+
+## 0.1.17 - 03-08-2021
+* larva-tokens - Update vibe secondary color
+
+## 0.1.16 - 03-04-2021
+* Accessibility - Add aria-label attribute to c-timestamp component
+
+## 0.1.15 - 02-26-2021
+* larva-js - Fix sideskin ads
+
+## 0.1.14 - 02-25-2021
+* larva-svg - Update pmc logo
+
+## 0.1.13 - 02-10-2021
+* larva-tokens - Add The Hollywood Reporter (THR) design tokens.
+
+## 0.1.12 - 02-08-2021
+* Typo - Fix Variable typo
+
+## 0.1.11 - 02-08-2021
+* Accessibility - Add aria-label attribute to c-link component
+* PMCP-2796: Add focus trap to mega menu modal
+
+## 0.1.10 - 02-01-2021
+* Add support to use app root .eslintrc file
+* Add option to get config function to fallback to package global default
+
+## 0.1.9 - 01-14-2021
+* larva-tokens - Add json and raw json formats to tokens build, and run build.
+* Minor dependency updates
+
+## 0.1.8 - 01-05-2021
+* larva-tokens - Add Vibe design tokens.
+## 0.1.7 - 11-04-2020
+* Fix larva-patterns/modules/social-share/social-share.twig to use square bracket notation for accessing submodule values
+
+## 0.1.6 - 11-02-2020
+* Add aria-controls support for vlanding-video-card
+* Remove support for elseif in twig-to-php parser
+
+## 0.1.5 - 11-02-2020
+* Add support for elseif in twig-to-php parser
+
+## 0.1.4 - 11-02-2020
+* More accessibility fixes
+
+## 0.1.3 - 10-27-2020
+
+* twig-to-php-parser - Fix bug in svg include replacement
+* repo - Add travis build
+* repo - Bump node-fetch version
+* accessibility fixes
+
+## 0.1.1 - 9-2-2020
+
+* stylelint-config - Remove oppressive language based on stylelint update
+* larva-patterns - Add condition to check before adding aria-labelledby attribute to o-nav
+
+## 0.1.0 - 9-2-2020
+
+* twig-to-php-parser - Update support for WordPress style do_action token. Use _wp_action keyword rather than _action
+* twig-to-php-parser - Add support for item['submodule'] in for include and mustache regex
+
+## [8.14.26-alpha] - 08-26-2020
+
+* larva-css - Add a-show-on-hover Algorithm
+* larva-css - Add max-width 1000 utility
+* twig-to-php-parser - Add support for WordPress style do_action token
+
+## [8.14.25-alpha] - 08-20-2020
+
+* larva-css - Add mobile-max breakpoint for margin utilities.
+* larva-css - Add space-children--150 utility.
+* larva-tokens - Add grey color tokens for Dirt.
+
 ## [8.14.24-alpha] - 08-18-2020
 
 * larva-tokens - Update fonts for Dirt.

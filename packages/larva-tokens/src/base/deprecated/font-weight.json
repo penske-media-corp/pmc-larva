@@ -1,0 +1,18 @@
+
+{
+	"global": {
+		"category": "font-weight",
+		"type": "number"
+	},
+	"props": {
+		"FONT_WEIGHT_LIGHT": {
+			"value": "300"
+		},
+		"FONT_WEIGHT_NORMAL": {
+			"value": "400"
+		},
+		"FONT_WEIGHT_BOLD": {
+			"value": "700"
+		}
+	}
+}

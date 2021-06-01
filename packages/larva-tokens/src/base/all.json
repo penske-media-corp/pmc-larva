@@ -1,12 +1,12 @@
 {
 	"imports": [
-		"./aliases.json",
+		"./deprecated/aliases.json",
+		"./border-color.json",
+		"./background-color.json",
 		"./color.json",
 		"./font-family.json",
-		"./background-color.json",
-		"./line-height.json",
-		"./font-weight.json",
-		"./border-color.json",
+		"./deprecated/font-weight.json",
+		"./deprecated/line-height.json",
 		"./spacing.json"
 	]
 }

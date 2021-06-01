@@ -16,7 +16,7 @@ const path = require( 'path' );
  *
  * @param tool string that indicates a specific configuration property, e.g. patterns.
  *
- * @returns value of the specified key.
+ * @return value of the specified key.
  */
 
 module.exports = function getAppConfiguration( key ) {

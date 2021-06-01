@@ -1,11 +1,11 @@
-const path = require( 'path' );
-
-const eslintConfigPath = path.join( __dirname, './config/.eslintrc.json' );
+const getAppConfiguration = require( '../lib/utils/getAppConfiguration' );
 const spawnScript = require( '../lib/utils/spawnScript' );
+
+const { configFile } = getAppConfiguration( 'eslint' );
 
 const args = [
 	'--c',
-	eslintConfigPath
+	configFile
 ];
 
 spawnScript( './node_modules/.bin/eslint', args );

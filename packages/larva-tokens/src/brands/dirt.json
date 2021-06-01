@@ -78,10 +78,75 @@
 			"type": "color",
 			"category": "text-color"
 		},
-		"COLOR_DARK_GREY": {
-			"value": "5A5A5A",
+		"COLOR_GREY": {
+			"value": "757575",
 			"type": "color",
 			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY": {
+			"value": "757575",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY": {
+			"value": "757575",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "5E5E5E",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "5E5E5E",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "5E5E5E",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARKEST": {
+			"value": "333333",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARKEST": {
+			"value": "333333",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"value": "333333",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_GREY_BRAND": {
+			"value": "{!GREY_98}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_96}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "C1C1C1",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "C1C1C1",
+			"type": "color",
+			"category": "hr-color"
 		},
 		"FONT_FAMILY_PRIMARY_FANCY": {
 			"value": "{!FERTIGO_PRO}",

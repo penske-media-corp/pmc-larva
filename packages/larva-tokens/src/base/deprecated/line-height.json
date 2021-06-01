@@ -1,0 +1,21 @@
+
+{
+	"global": {
+		"category": "line-height",
+		"type": "unit"
+	},
+	"props": {
+		"LINE_HEIGHT_SMALL": {
+			"value": "1.1"
+		},
+		"LINE_HEIGHT_NORMAL": {
+			"value": "1.35"
+		},
+		"LINE_HEIGHT_COPY": {
+			"value": "1.5"
+		},
+		"LINE_HEIGHT_LARGE": {
+			"value": "1.85"
+		}
+	}
+}

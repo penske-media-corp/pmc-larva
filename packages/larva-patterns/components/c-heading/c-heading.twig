@@ -3,9 +3,9 @@
 {% endif %}
 
 {% if c_heading_is_primary_heading %}
-	<h1 class="c-heading larva {{ modifier_class }} {{ c_heading_classes }}">
+	<h1 id="{{ c_heading_id_attr }}" class="c-heading larva {{ modifier_class }} {{ c_heading_classes }}">
 {% else %}
-	<h2 class="c-heading larva {{ modifier_class }} {{ c_heading_classes }}">
+	<h2 id="{{ c_heading_id_attr }}" class="c-heading larva {{ modifier_class }} {{ c_heading_classes }}">
 {% endif %}
 
 	{% if c_heading_url %}

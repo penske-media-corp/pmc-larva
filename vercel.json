@@ -1,0 +1,12 @@
+{
+	"redirects": [
+		{
+			"source": "/tokens",
+			"destination": "/"
+		},
+		{
+			"source": "/patterns",
+			"destination": "/larva"
+		}
+	]
+}

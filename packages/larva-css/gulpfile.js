@@ -8,97 +8,116 @@
  * dest file according to the changed file.
  */
 
+const Fiber = require( 'fibers' );
 const gulp = require( 'gulp' );
 const path = require( 'path' );
 const sass = require( 'gulp-sass' );
 const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
-const clean = require( 'gulp-clean' );
+const del = require( 'del' );
+const { mkdirpSync, existsSync } = require( 'fs-extra' );
 
-let sassOpts = {
-	includePaths: [
-		path.resolve( './node_modules' ),
-		path.resolve( './src' )
-	]
+const { generateAFontScss } = require( './lib/generators' );
+
+sass.compiler = require( 'sass' );
+
+const sassOpts = {
+	includePaths: [ path.resolve( './node_modules' ), path.resolve( './src' ) ],
+	outputStyle: 'compressed',
+	fiber: Fiber,
 };
 
-const css_dest = './build/css/';
+const cssDest = './build/css/';
+const scssDest = './src/_generated';
 
-const css_files = {
+const cssFiles = {
 	generic_inline: {
 		css: {
-			orig: ['./src/01-generic/*.common.inline.scss'],
-			file: 'generic.common.inline.css'
-		}
+			orig: [ './src/01-generic/*.common.inline.scss' ],
+			file: 'generic.common.inline.css',
+		},
 	},
 	algorithms_async: {
 		css: {
-			orig: ['./src/**/a-*.common.async.scss'],
-			file: 'algorithms.common.async.css'
-		}
+			orig: [ './src/**/a-*.common.async.scss' ],
+			file: 'algorithms.common.async.css',
+		},
 	},
 	algorithms_inline: {
 		css: {
-			orig: ['./src/**/a-*.common.inline.scss'],
-			file: 'algorithms.common.inline.css'
-		}
+			orig: [ './src/**/a-*.common.inline.scss' ],
+			file: 'algorithms.common.inline.css',
+		},
 	},
 	utilities_async: {
 		css: {
-			orig: ['./src/**/u-*.common.async.scss'],
-			file: 'utilities.common.async.css'
-		}
+			orig: [ './src/**/u-*.common.async.scss' ],
+			file: 'utilities.common.async.css',
+		},
 	},
 	utilities_inline: {
 		css: {
-			orig: ['./src/**/u-*.common.inline.scss'],
-			file: 'utilities.common.inline.css'
-		}
+			orig: [ './src/**/u-*.common.inline.scss' ],
+			file: 'utilities.common.inline.css',
+		},
 	},
 	js_async: {
 		css: {
-			orig: ['./src/**/js-*.common.async.scss'],
-			file: 'js.common.async.css'
-		}
+			orig: [ './src/**/js-*.common.async.scss' ],
+			file: 'js.common.async.css',
+		},
 	},
 	js_inline: {
 		css: {
-			orig: ['./src/**/js-*.common.inline.scss'],
-			file: 'js.common.inline.css'
-		}
-	}
+			orig: [ './src/**/js-*.common.inline.scss' ],
+			file: 'js.common.inline.css',
+		},
+	},
 };
 
-function clean_css() {
-	return gulp.src( css_dest, { read: false } ).pipe( clean() );
-}
+const generateScssFromTokens = ( done ) => {
+	mkdirpSync( scssDest );
+	generateAFontScss( scssDest );
+	done();
+};
 
-function styles( done ) {
-	clean_css();
+const clean = ( done ) => {
+	const dirs = [ scssDest, cssDest ];
 
-	sassOpts.outputStyle = 'compressed';
+	dirs.forEach( ( dir ) => {
+		if ( existsSync( dir ) ) {
+			del.sync( [ dir ] );
+		}
+	} );
 
-	Object.keys( css_files ).forEach( val => {
+	done();
+};
 
-		gulp.src( css_files[val].css.orig ).
-				pipe( gulpStylelint( {
+const styles = ( done ) => {
+	mkdirpSync( cssDest );
+
+	Object.keys( cssFiles ).forEach( ( val ) => {
+		gulp.src( cssFiles[ val ].css.orig )
+			.pipe(
+				gulpStylelint( {
 					failAfterError: false,
 					reporters: [
 						{
 							formatter: 'string',
-							console: true
-						}]
-				} ) ).
-				pipe( sass( sassOpts ).on( 'error', sass.logError ) ).
-				pipe( concat( css_files[val].css.file ) ).
-				pipe( gulp.dest( css_dest ) );
-
+							console: true,
+						},
+					],
+				} )
+			)
+			.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
+			.pipe( concat( cssFiles[ val ].css.file ) )
+			.pipe( gulp.dest( cssDest ) );
 	} );
 	done();
-}
+};
 
-exports.watch = function() {
+exports.watch = function () {
 	gulp.watch( './src/**/*.scss', styles );
 };
 
-exports.default = styles;
+exports.default = gulp.series( clean, generateScssFromTokens, styles );

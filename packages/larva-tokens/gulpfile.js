@@ -1,48 +1,74 @@
-// gulpfile.js
-const gulp = require('gulp')
-const theo = require('gulp-theo')
+const gulp = require( 'gulp' );
+const theo = require( 'gulp-theo' );
+const del = require( 'del' );
 
-gulp.task('default', ( done ) => {
-	gulp.src('src/brands/*.json')
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: { type: 'map.scss' }
-		}))
-		.pipe(gulp.dest('./build'));
-	
-	gulp.src('src/brands/*.json')
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: { type: 'custom-properties.css' }
-		}))
-		.pipe(gulp.dest('./build'));
+const { kebabify } = require( './lib/utils' );
+const { generateFontTokens } = require( './lib/generators' );
+const { existsSync, mkdirpSync } = require( 'fs-extra' );
+const formats = [ 'map.scss', 'custom-properties.css', 'json', 'raw.json' ];
 
-	gulp.src('src/brands/*.json')
-		.pipe(theo({
-			transform: { type: 'web' },
-			format: { 
-				type: 'html',
-				options: {
-					transformPropName: ( name ) =>  {
-						let kebabCase = [];
+/**
+ * Prepare destination directory.
+ *
+ * @param {Function} done Function called upon completion.
+ */
+const clean = ( done ) => {
+	const dirs = [ 'build', 'style-guides', 'src/base/generated' ];
 
-						// TODO: find a more concise way of turning a string into an iterable
-						for (let i = 0; i < name.length; i++) {
-							let letter = name[i];
-							kebabCase[i] = letter;
-						}
-
-						return kebabCase.reduce( ( a, b ) => {
-							if ( '_' === b ) {
-								return a.toLowerCase() + '-';
-							}
-							return a.toLowerCase() + b.toLowerCase();
-						});
-					}
-				} 
-			}
-		}))
-		.pipe(gulp.dest('./style-guides'));
+	dirs.forEach( ( dir ) => {
+		if ( existsSync( dir ) ) {
+			del.sync( [ dir ] );
+		}
+	} );
 
 	done();
-});
+};
+
+const basicTokenBuild = ( format, done, dest = 'build' ) => {
+	gulp.src( [ 'src/brands/*.json' ] )
+		.pipe(
+			theo( {
+				transform: { type: 'web' },
+				format: {
+					type: format,
+				},
+			} )
+		)
+		.pipe( gulp.dest( dest ) );
+
+	done();
+};
+
+const generateTypography = ( done ) => {
+	mkdirpSync( 'src/base/generated' );
+
+	generateFontTokens();
+
+	done();
+};
+
+const build = ( done ) => {
+	formats.forEach( ( format ) => {
+		basicTokenBuild( format, () => {
+			console.log( `Built ${ format } format.` ); // eslint-disable-line no-console
+		} );
+	} );
+
+	gulp.src( 'src/brands/*.json' )
+		.pipe(
+			theo( {
+				transform: { type: 'web' },
+				format: {
+					type: 'html',
+					options: {
+						transformPropName: ( name ) => kebabify( name ),
+					},
+				},
+			} )
+		)
+		.pipe( gulp.dest( 'style-guides' ) );
+
+	done();
+};
+
+exports.default = gulp.series( clean, generateTypography, build );

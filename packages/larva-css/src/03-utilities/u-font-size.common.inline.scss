@@ -3,7 +3,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-size' ) {
+	@if str-index( $token-str, 'font-size' ) and not str-index( $token-str, '-font-size-' ) {
 		.lrv-u-#{$token} {
 			font-size: $value;
 		}
@@ -63,7 +63,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-size' ) {
+	@if str-index( $token-str, 'font-size' ) and not str-index( $token-str, '-font-size-' ) {
 
 		@include pmc-breakpoint( desktop ) {
 			.lrv-u-#{$token}\@desktop {
@@ -76,7 +76,7 @@
 @each $token, $value in $TOKENS-MAP {
 	$token-str: quote( $token );
 
-	@if str-index( $token-str, 'font-size' ) {
+	@if str-index( $token-str, 'font-size' ) and not str-index( $token-str, '-font-size-' ) {
 
 		@include pmc-breakpoint( desktop-xl ) {
 			.lrv-u-#{$token}\@desktop-xl {

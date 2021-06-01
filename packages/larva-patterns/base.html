@@ -5,11 +5,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>LRVA: {{ source }} | {{ name }}</title>
+		<title>LRVA: {{brand}} | {{ source }} | {{ name }}</title>
 
-		{% block stylesheets %}{% endblock %}
-
+		<link rel="stylesheet" href="/assets/build/tokens/{{brand}}.custom-properties.css">
+		<link rel="stylesheet" href="/assets/build/css/larva.css">
 		<link rel="stylesheet" href="/assets/build/css/larva-ui.css">
+
+		{% block stylesheets %}
+		{% endblock %}
 
 		<script>
 			// Stub in PMC cookie object so fonts load on Larva server
@@ -34,9 +37,11 @@
 	<body class="lrv-u-margin-a-00">
 
 		<main class="lrv-u-flex">
-			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-to-hide">
+			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-LarvaUiToggle-panel">
 				{% include "@larva/_templates/pattern-nav.html" with { source: 'larva' } %}
-				{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
+				{% if pattern_nav.project %}
+					{% include "@larva/_templates/pattern-nav.html" with { source: 'project' } %}
+				{% endif %}
 			</div>
 			<div class="lrv-u-flex-grow-1">
 				{% block content %}{% endblock %}
@@ -50,13 +55,14 @@
 					right: 0;
 					z-index: 9999999;">
 			{% include "@larva/components/c-button/c-button.twig" with {
-				"c_button_text": "Show Larva UI",
-				"c_button_classes": "js-hide-button lrv-a-unstyle-button lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-1 lrv-u-cursor-pointer"
+				"c_button_text": "Toggle Larva UI",
+				"c_button_classes": "js-LarvaUiToggle-button lrv-a-unstyle-button lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-1 lrv-u-cursor-pointer"
 			} %}
 		</div>
 
 		<script src="/assets/public/webfontloader.js"></script>
 		<script src="/assets/build/js/larva-ui.js"></script>
+		<script src="/assets/build/js/common.js"></script>
 
 		{% block scripts %}{% endblock %}
 	</body>

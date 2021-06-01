@@ -1,6 +1,6 @@
 {
 	"name": "@penskemediacorp/larva-js",
-	"version": "8.14.24-alpha.0",
+	"version": "0.2.3",
 	"description": "Larva JS patterns.",
 	"author": "laras126 <laras126@gmail.com>",
 	"homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -11,8 +11,9 @@
 		"url": "git+https://github.com/penske-media-corp/pmc-larva.git"
 	},
 	"scripts": {
-		"test": "../../node_modules/.bin/jest",
-		"watch": "node node_modules/@penskemediacorp/larva/lib/watch"
+		"dev": "webpack",
+		"build": "webpack --mode=production",
+		"test": "../../node_modules/.bin/jest"
 	},
 	"bugs": {
 		"url": "https://github.com/penske-media-corp/pmc-larva/issues"
@@ -21,7 +22,8 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@penskemediacorp/larva-css": "^8.14.24-alpha.0",
-		"flickity": "^2.2.1"
+		"flickity": "^2.2.1",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12"
 	}
 }

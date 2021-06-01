@@ -17,3 +17,9 @@
 		@include _a-hidden;
 	}
 }
+
+.lrv-a-hidden\@desktop-max {
+	@include pmc-breakpoint( desktop-max ) {
+		@include _a-hidden;
+	}
+}
