@@ -21,6 +21,7 @@ nbproject/
 
 /test-errors.log
 node_modules
+npm-debug.log
 
 # For the package preview tool
 pnpm-lock.yaml
