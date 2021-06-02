@@ -38,14 +38,14 @@
   --color-grey-dark: rgb(90, 101, 109);
   --color-grey: rgb(100, 116, 125);
   /* The webfont for font-family-primary. */
-  --font-family-primary-fancy: 'playfair-display', Times New Roman, sans-serif;
+  --font-family-primary-fancy: 'Giorgio Sans', Helvetica, sans-serif;
   /* The fallback font for font-family-primary. */
-  --font-family-primary: 'Times New Roman', serif;
+  --font-family-primary: 'Helvetica', serif;
   /* Available via Typekit. */
-  --font-family-secondary-fancy: 'trade-gothic-next', Arial, sans-serif;
+  --font-family-secondary-fancy: 'Barlow', Helvetica, sans-serif;
   /* Fallback from secondary-fancy */
-  --font-family-secondary: Arial, serif;
-  --font-family-body: 'trade-gothic-next', Arial, sans-serif;
+  --font-family-secondary: Helvetica, serif;
+  --font-family-body: 'Lato', Helvetica, sans-serif;
   --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -78,9 +78,5 @@
   --background-color-grey-ligh: rgb(126, 141, 150);
   --background-color-sourcingjournal: rgb(237, 29, 37);
   --color-grey-lightest: rgb(247, 247, 247);
-  /* Fallback from ACCENT-fancy */
-  --font-family-accent: Georgia, serif;
   --border-color-grey-darkest: rgb(72, 83, 91);
-  /* Available via Typekit. */
-  --font-family-accent-fancy: 'oswald', Helvetica, sans-serif;
 }

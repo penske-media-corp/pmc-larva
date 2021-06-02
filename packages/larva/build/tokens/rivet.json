@@ -35,11 +35,11 @@
   "COLOR_BRAND_SECONDARY_LIGHT": "rgb(0, 0, 0)",
   "COLOR_GREY_DARK": "rgb(90, 101, 109)",
   "COLOR_GREY": "rgb(100, 116, 125)",
-  "FONT_FAMILY_PRIMARY_FANCY": "'playfair-display', Times New Roman, sans-serif",
-  "FONT_FAMILY_PRIMARY": "'Times New Roman', serif",
-  "FONT_FAMILY_SECONDARY_FANCY": "'trade-gothic-next', Arial, sans-serif",
-  "FONT_FAMILY_SECONDARY": "Arial, serif",
-  "FONT_FAMILY_BODY": "'trade-gothic-next', Arial, sans-serif",
+  "FONT_FAMILY_PRIMARY_FANCY": "'Giorgio Sans', Helvetica, sans-serif",
+  "FONT_FAMILY_PRIMARY": "'Helvetica', serif",
+  "FONT_FAMILY_SECONDARY_FANCY": "'Barlow', Helvetica, sans-serif",
+  "FONT_FAMILY_SECONDARY": "Helvetica, serif",
+  "FONT_FAMILY_BODY": "'Lato', Helvetica, sans-serif",
   "FONT_FAMILY_BASIC": "Helvetica, sans-serif",
   "FONT_WEIGHT_LIGHT": "300",
   "FONT_WEIGHT_NORMAL": "400",
@@ -64,7 +64,5 @@
   "BACKGROUND_COLOR_GREY_LIGH": "rgb(126, 141, 150)",
   "BACKGROUND_COLOR_SOURCINGJOURNAL": "rgb(237, 29, 37)",
   "COLOR_GREY_LIGHTEST": "rgb(247, 247, 247)",
-  "FONT_FAMILY_ACCENT": "Georgia, serif",
-  "BORDER_COLOR_GREY_DARKEST": "rgb(72, 83, 91)",
-  "FONT_FAMILY_ACCENT_FANCY": "'oswald', Helvetica, sans-serif"
+  "BORDER_COLOR_GREY_DARKEST": "rgb(72, 83, 91)"
 }
