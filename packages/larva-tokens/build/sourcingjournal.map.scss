@@ -1,22 +1,22 @@
 
 $sourcingjournal-map: (
-  'border-color-grey-lightest': (rgb(239, 239, 239)),
+  'border-color-grey-lightest': (rgb(245, 247, 250)),
   'border-color-brand-secondary-light': (rgb(0, 0, 0)),
   'border-color-grey-light': (rgb(204, 204, 204)),
-  'border-color-grey-dark': (rgb(90, 90, 90)),
+  'border-color-grey-dark': (rgb(90, 101, 109)),
   'border-color-brand-secondary-dark': (rgb(0, 0, 0)),
   'border-color-brand-secondary': (rgb(0, 0, 0)),
-  'border-color-grey': (rgb(140, 140, 140)),
+  'border-color-grey': (rgb(100, 116, 125)),
   'border-color-brand-primary-light': (rgb(236, 28, 36)),
   'border-color-white': (rgb(255, 255, 255)),
   'border-color-brand-primary-dark': (rgb(236, 28, 36)),
   'border-color-brand-primary': (rgb(237, 29, 37)),
   'background-color-grey-light': (rgb(204, 204, 204)),
-  'background-color-grey-lightest': (rgb(239, 239, 239)),
+  'background-color-grey-lightest': (rgb(245, 247, 250)),
   'background-color-brand-secondary-dark': (rgb(0, 0, 0)),
   'background-color-brand-secondary-light': (rgb(0, 0, 0)),
-  'background-color-grey-dark': (rgb(90, 90, 90)),
-  'background-color-grey': (rgb(140, 140, 140)),
+  'background-color-grey-dark': (rgb(90, 101, 109)),
+  'background-color-grey': (rgb(100, 116, 125)),
   /* The background color of the main body of the site. */
   'background-color-body': (rgb(255, 255, 255)),
   /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
@@ -26,7 +26,7 @@ $sourcingjournal-map: (
   'background-color-brand-primary-dark': (rgb(236, 28, 36)),
   'background-color-white': (rgb(255, 255, 255)),
   'background-color-brand-primary': (rgb(237, 29, 37)),
-  'background-color-grey-darkest': (rgb(50, 50, 50)),
+  'background-color-grey-darkest': (rgb(72, 83, 91)),
   'color-brand-secondary': (rgb(0, 0, 0)),
   'color-black': (rgb(0, 0, 0)),
   'color-brand-primary-light': (rgb(236, 28, 36)),
@@ -36,8 +36,8 @@ $sourcingjournal-map: (
   'color-grey-light': (rgb(230, 230, 230)),
   'color-brand-secondary-dark': (rgb(0, 0, 0)),
   'color-brand-secondary-light': (rgb(0, 0, 0)),
-  'color-grey-dark': (rgb(90, 90, 90)),
-  'color-grey': (rgb(140, 140, 140)),
+  'color-grey-dark': (rgb(90, 101, 109)),
+  'color-grey': (rgb(100, 116, 125)),
   /* The webfont for font-family-primary. */
   'font-family-primary-fancy': ('playfair-display', Times New Roman, sans-serif),
   /* The fallback font for font-family-primary. */
@@ -71,12 +71,17 @@ $sourcingjournal-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
-  'color-grey-ligh': (rgb(220, 220, 220)),
-  'border-color-grey-ligh': (rgb(220, 220, 220)),
-  'background-color-grey-ligh': (rgb(220, 220, 220)),
-  'color-grey-lightest': (rgb(239, 239, 239)),
+  'background-color-rivet': (rgb(255, 211, 0)),
+  'color-grey-ligh': (rgb(126, 141, 150)),
+  'color-grey-darkest': (rgb(72, 83, 91)),
+  'border-color-grey-ligh': (rgb(126, 141, 150)),
+  'background-color-grey-ligh': (rgb(126, 141, 150)),
+  'color-rivet': (rgb(255, 211, 0)),
+  'color-grey-lightest': (rgb(245, 247, 250)),
   /* Fallback from ACCENT-fancy */
   'font-family-accent': (Georgia, serif),
+  'border-color-rivet': (rgb(255, 211, 0)),
+  'border-color-grey-darkest': (rgb(72, 83, 91)),
   /* Available via Typekit. */
   'font-family-accent-fancy': ('oswald', Helvetica, sans-serif),
 );
