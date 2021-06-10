@@ -1,0 +1,29 @@
+name: Test themes
+
+on: [ push ]
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+        bitbucket-repo-slug: [
+            'pmc-artnews-2019',
+            'pmc-indiewire-2016'
+        ]
+
+    steps:
+      - name: Prepare node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Check out themes
+        run: |
+          which git
+          git --version
+          pwd
+          ls -la
+          echo $BITBUCKET_REPO_SLUG
+        with:
+          bitbucket-repo-slug: ${{ matrix.bitbucket-repo-slug }}
