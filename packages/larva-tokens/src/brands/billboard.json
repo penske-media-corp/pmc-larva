@@ -34,32 +34,17 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT": {
-			"value": "#8289A1",
+			"value": "#CFD5E6",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT": {
-			"value": "#8289A1",
+			"value": "#CFD5E6",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT": {
-			"value": "#8289A1",
-			"type": "color",
-			"category": "text-color"
-		},
-		"BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#A6B0CB",
-			"type": "color",
-			"category": "background-color"
-		},
-		"BORDER_COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#A6B0CB",
-			"type": "color",
-			"category": "hr-color"
-		},
-		"COLOR_BRAND_ACCENT_LIGHT": {
-			"value": "#A6B0CB",
+			"value": "#CFD5E6",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -88,83 +73,108 @@
 			"type": "color",
 			"category": "hr-color"
 		},
-		"COLOR_BRAND_ACCENT_GREEN": {
-			"value": "#00DDA1",
+		"COLOR_BRAND_ACCENT_BLUE": {
+			"value": "#76BADF",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_BLUE": {
+			"value": "#76BADF",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_BLUE": {
+			"value": "#76BADF",
 			"type": "color",
 			"category": "text-color"
 		},
 		"COLOR_GREY_LIGHTEST": {
-			"value": "#EFEFEF",
+			"value": "#EDEBEB",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_LIGHTEST": {
-			"value": "#EFEFEF",
+			"value": "#EDEBEB",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_LIGHTEST": {
-			"value": "#EFEFEF",
+			"value": "#EDEBEB",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY_LIGH": {
-			"value": "#DCDCDC",
+			"value": "#D5D5D5",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_LIGH": {
-			"value": "#DCDCDC",
+			"value": "#D5D5D5",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_LIGH": {
-			"value": "#DCDCDC",
+			"value": "#D5D5D5",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY": {
-			"value": "#8C8C8C",
+			"value": "#8289A1",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY": {
-			"value": "#8C8C8C",
+			"value": "#8289A1",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY": {
-			"value": "#8C8C8C",
+			"value": "#8289A1",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY_DARK": {
-			"value": "#5A5A5A",
+			"value": "#4C5167",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_DARK": {
-			"value": "#5A5A5A",
+			"value": "#4C5167",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_DARK": {
-			"value": "#5A5A5A",
+			"value": "#4C5167",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY_DARKEST": {
-			"value": "#323232",
+			"value": "#2B2E3C",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_DARKEST": {
-			"value": "#323232",
+			"value": "#2B2E3C",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_DARKEST": {
-			"value": "#323232",
+			"value": "#2B2E3C",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_BLACK": {
+			"value": "#101119",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_BLACK": {
+			"value": "#101119",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_BLACK": {
+			"value": "#101119",
 			"type": "color",
 			"category": "background-color"
 		},
