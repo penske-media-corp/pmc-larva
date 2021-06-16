@@ -650,6 +650,13 @@
       "originalValue": "#D5D5D5",
       "name": "COLOR_GREY_LIGH"
     },
+    "COLOR_BRAND_ACCENT_GREEN": {
+      "value": "rgb(0, 221, 161)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "#00DDA1",
+      "name": "COLOR_BRAND_ACCENT_GREEN"
+    },
     "BORDER_COLOR_BRAND_ACCENT_RED": {
       "value": "rgb(251, 103, 107)",
       "type": "color",
@@ -663,6 +670,13 @@
       "category": "hr-color",
       "originalValue": "#76BADF",
       "name": "BORDER_COLOR_BRAND_ACCENT_BLUE"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT_BLUE": {
+      "value": "rgb(118, 186, 223)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "#76BADF",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_BLUE"
     },
     "COLOR_GREY_DARKEST": {
       "value": "rgb(43, 46, 60)",
@@ -764,11 +778,11 @@
       "name": "BORDER_COLOR_GREY_DARKEST"
     },
     "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'Barlow', Arial, sans-serif",
+      "value": "'acumin-pro-condensed', Arial, sans-serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "The accent webfont, loaded async",
-      "originalValue": "'Barlow', Arial, sans-serif",
+      "originalValue": "'acumin-pro-condensed', Arial, sans-serif",
       "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }

@@ -72,8 +72,10 @@
   --spacing-2: 2rem;
   --background-color-brand-accent-red: rgb(251, 103, 107);
   --color-grey-ligh: rgb(213, 213, 213);
+  --color-brand-accent-green: rgb(0, 221, 161);
   --border-color-brand-accent-red: rgb(251, 103, 107);
   --border-color-brand-accent-blue: rgb(118, 186, 223);
+  --background-color-brand-accent-blue: rgb(118, 186, 223);
   --color-grey-darkest: rgb(43, 46, 60);
   --border-color-grey-ligh: rgb(213, 213, 213);
   --background-color-brand-accent: rgb(207, 213, 230);
@@ -90,5 +92,5 @@
   --color-brand-accent: rgb(207, 213, 230);
   --border-color-grey-darkest: rgb(43, 46, 60);
   /* The accent webfont, loaded async */
-  --font-family-accent-fancy: 'Barlow', Arial, sans-serif;
+  --font-family-accent-fancy: 'acumin-pro-condensed', Arial, sans-serif;
 }
