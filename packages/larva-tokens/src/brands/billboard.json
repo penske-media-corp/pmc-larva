@@ -73,10 +73,15 @@
 			"type": "color",
 			"category": "hr-color"
 		},
-		"COLOR_BRAND_ACCENT_BLUE": {
-			"value": "#76BADF",
+		"COLOR_BRAND_ACCENT_GREEN": {
+			"value": "#00DDA1",
 			"type": "color",
 			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_BLUE": {
+			"value": "#76BADF",
+			"type": "color",
+			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT_BLUE": {
 			"value": "#76BADF",
@@ -191,7 +196,7 @@
 			"comment": "The fallback font for font-family-primary."
 		},
 		"FONT_FAMILY_ACCENT_FANCY": {
-			"value": "'Barlow', Arial, sans-serif",
+			"value": "'acumin-pro-condensed', Arial, sans-serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "The accent webfont, loaded async"
