@@ -27,6 +27,9 @@ jobs:
           cd "${THEME_DIR}/assets"
           npm ci
           npm run prod
+
+          # TODO: remove these after build issues are resolved.
+          git status
         env:
           BITBUCKET_READ_ONLY_SSH_KEY: ${{ secrets.BITBUCKET_READ_ONLY_SSH_KEY }}
           BITBUCKET_REPO_SLUG: pmc-artnews-2019
