@@ -16,7 +16,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Check out themes
         run: |
-          git clone https://${BITBUCKET_READ_ONLY_USER_NAME}:${BITBUCKET_READ_ONLY_USER_PASS}@bitbucket.org/penskemediacorp/${BITBUCKET_REPO_SLUG}.git theme
+          mkdir ~/.ssh/
+          echo ${BITBUCKET_READ_ONLY_SSH_KEY} > ~/.ssh/id_rsa
+          chmod 400 ~/.ssh/id_rsa
+
+          git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git
 
           ls -la theme
 
@@ -24,6 +28,5 @@ jobs:
           npm ci
           npm run prod
         env:
-          BITBUCKET_READ_ONLY_USER_NAME: ${{ secrets.BITBUCKET_READ_ONLY_USER_NAME }}
-          BITBUCKET_READ_ONLY_USER_PASS: ${{ secrets.BITBUCKET_READ_ONLY_USER_PASS }}
+          BITBUCKET_READ_ONLY_SSH_KEY: ${{ secrets.BITBUCKET_READ_ONLY_SSH_KEY }}
           BITBUCKET_REPO_SLUG: pmc-artnews-2019
