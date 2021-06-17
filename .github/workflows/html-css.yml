@@ -19,7 +19,7 @@ jobs:
           mkdir ~/.ssh/
           echo ${BITBUCKET_READ_ONLY_SSH_KEY} > ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
-          ssh-keyscan bitbucket.org
+          ssh-keyscan bitbucket.org > ~/.ssh/known_hosts
 
           git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git
 
