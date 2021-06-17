@@ -21,5 +21,8 @@ jobs:
           pwd
           ls -la
           echo $BITBUCKET_REPO_SLUG
+
+          git clone https://${BITBUCKET_READ_ONLY_USER_NAME}:${BITBUCKET_READ_ONLY_USER_PASS}@bitbucket.org/penskemediacorp/pmc-artnews-2019.git theme
+          ls -la theme
         env:
           BITBUCKET_REPO_SLUG: pmc-artnews-2019
