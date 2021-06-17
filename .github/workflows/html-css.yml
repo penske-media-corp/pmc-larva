@@ -16,14 +16,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Check out themes
         run: |
-          which git
-          git --version
-          pwd
-          ls -la
-          echo $BITBUCKET_REPO_SLUG
-
           git clone https://${BITBUCKET_READ_ONLY_USER_NAME}:${BITBUCKET_READ_ONLY_USER_PASS}@bitbucket.org/penskemediacorp/${BITBUCKET_REPO_SLUG}.git theme
+
           ls -la theme
+
+          cd theme
+          npm ci
+          npm run prod
         env:
           BITBUCKET_READ_ONLY_USER_NAME: ${{ secrets.BITBUCKET_READ_ONLY_USER_NAME }}
           BITBUCKET_READ_ONLY_USER_PASS: ${{ secrets.BITBUCKET_READ_ONLY_USER_PASS }}
