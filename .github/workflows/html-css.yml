@@ -24,7 +24,7 @@ jobs:
           git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git "${THEME_DIR}"
           ls -la "${THEME_DIR}"
 
-          cd "${THEME_DIR}"
+          cd "${THEME_DIR}/assets"
           npm ci
           npm run prod
         env:
