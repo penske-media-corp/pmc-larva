@@ -17,7 +17,7 @@ jobs:
       - name: Check out themes
         run: |
           mkdir ~/.ssh/
-          echo ${BITBUCKET_READ_ONLY_SSH_KEY} > ~/.ssh/id_rsa
+          echo "${BITBUCKET_READ_ONLY_SSH_KEY}" > ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
           ssh-keyscan bitbucket.org > ~/.ssh/known_hosts
 
