@@ -1,0 +1,37 @@
+@import 'setup';
+
+.is-style-3-up {
+	display: grid;
+	grid-gap: var(--spacing-1);
+	grid-template-columns: 1fr 1fr;
+
+	@include pmc-breakpoint( desktop ) {
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
+.is-style-3-up *:first-child {
+	grid-column: 1 / span 2;
+
+	@include pmc-breakpoint( desktop ) {
+		grid-row: 1 / span 2;
+		height: 100%;
+	}
+}
+
+// .is-style-3-up {
+// 	counter-reset: boxes;
+// }
+
+.box {
+	// counter-increment: boxes;
+	background-color: green;
+	height: 300px;
+	border: 3px solid limegreen;
+}
+
+// .box::before {
+// 	content: counter(boxes);
+// }
+

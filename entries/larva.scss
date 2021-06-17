@@ -11,3 +11,72 @@
 
 @import '@penskemediacorp/larva-css/build/css/js.common.inline';
 @import '@penskemediacorp/larva-css/build/css/js.common.async';
+
+
+// tester styles.
+
+.box-counter-start {
+	counter-reset: boxes;
+}
+
+.box {
+	counter-increment: boxes;
+	background-color: green;
+	border: 3px solid limegreen;
+}
+
+.box::before {
+	content: counter(boxes);
+}
+
+
+
+// This will be copied into larva-css/src/02-algorithms/a-3-up.scss
+
+@import 'setup';
+
+.lrv-a-3-up,
+.is-style-3-up {
+	display: grid;
+	grid-gap: var(--spacing-1);
+	grid-template-columns: 1fr 1fr;
+
+	@include pmc-breakpoint( desktop ) {
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
+.lrv-a-3-up__primary,
+.is-style-3-up__primary {
+	grid-column: 1 / span 2;
+
+	@include pmc-breakpoint( desktop ) {
+		grid-column: unset;
+		grid-row: 1 / span 2;
+		height: 100%;
+	}
+}
+
+// This will be copied into larva-css/src/02-algorithms/a-4-up.scss
+
+.lrv-a-4-up,
+.is-style-4-up {
+	display: grid;
+	grid-gap: var(--spacing-1);
+	grid-template-columns: 1fr 1fr;
+
+	@include pmc-breakpoint( desktop ) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto-fill 1fr;
+	}
+}
+
+.lrv-a-4-up__primary,
+.is-style-4-up__primary {
+	grid-column: 1 / -1;
+
+	@include pmc-breakpoint( desktop ) {
+		height: 100%;
+	}
+}
