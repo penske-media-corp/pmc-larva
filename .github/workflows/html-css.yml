@@ -4,7 +4,7 @@ on: [ push ]
 
 jobs:
   test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 14.x ]
@@ -32,5 +32,5 @@ jobs:
           git status
         env:
           BITBUCKET_READ_ONLY_SSH_KEY: ${{ secrets.BITBUCKET_READ_ONLY_SSH_KEY }}
-          BITBUCKET_REPO_SLUG: pmc-artnews-2019
+          BITBUCKET_REPO_SLUG: pmc-hollywoodreporter-2021
           THEME_DIR: theme
