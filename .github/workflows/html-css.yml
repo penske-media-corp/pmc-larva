@@ -21,13 +21,13 @@ jobs:
           chmod 400 ~/.ssh/id_rsa
           ssh-keyscan bitbucket.org > ~/.ssh/known_hosts
 
-          git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git
+          git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git "${THEME_DIR}"
+          ls -la "${THEME_DIR}"
 
-          ls -la theme
-
-          cd theme
+          cd "${THEME_DIR}"
           npm ci
           npm run prod
         env:
           BITBUCKET_READ_ONLY_SSH_KEY: ${{ secrets.BITBUCKET_READ_ONLY_SSH_KEY }}
           BITBUCKET_REPO_SLUG: pmc-artnews-2019
+          THEME_DIR: theme
