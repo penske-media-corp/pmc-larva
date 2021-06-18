@@ -239,10 +239,10 @@
       "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
     },
     "BORDER_COLOR_GREY_LIGHT": {
-      "category": "hr-color",
+      "value": "rgb(126, 141, 150)",
       "type": "color",
-      "value": "rgb(204, 204, 204)",
-      "originalValue": "{!GREY_80}",
+      "category": "hr-color",
+      "originalValue": "#7E8D96",
       "name": "BORDER_COLOR_GREY_LIGHT"
     },
     "BORDER_COLOR_GREY_DARK": {
@@ -302,10 +302,10 @@
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
-      "category": "background-color",
+      "value": "rgb(126, 141, 150)",
       "type": "color",
-      "value": "rgb(204, 204, 204)",
-      "originalValue": "{!GREY_80}",
+      "category": "background-color",
+      "originalValue": "#7E8D96",
       "name": "BACKGROUND_COLOR_GREY_LIGHT"
     },
     "BACKGROUND_COLOR_GREY_LIGHTEST": {
@@ -444,10 +444,10 @@
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_GREY_LIGHT": {
-      "category": "text-color",
+      "value": "rgb(126, 141, 150)",
       "type": "color",
-      "value": "rgb(230, 230, 230)",
-      "originalValue": "{!GREY_90}",
+      "category": "text-color",
+      "originalValue": "#7E8D96",
       "name": "COLOR_GREY_LIGHT"
     },
     "COLOR_BRAND_SECONDARY_DARK": {
@@ -644,33 +644,12 @@
       "originalValue": "#FFD300",
       "name": "BACKGROUND_COLOR_RIVET"
     },
-    "COLOR_GREY_LIGH": {
-      "value": "rgb(126, 141, 150)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "#7E8D96",
-      "name": "COLOR_GREY_LIGH"
-    },
     "COLOR_GREY_DARKEST": {
       "value": "rgb(72, 83, 91)",
       "type": "color",
       "category": "text-color",
       "originalValue": "#48535B",
       "name": "COLOR_GREY_DARKEST"
-    },
-    "BORDER_COLOR_GREY_LIGH": {
-      "value": "rgb(126, 141, 150)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#7E8D96",
-      "name": "BORDER_COLOR_GREY_LIGH"
-    },
-    "BACKGROUND_COLOR_GREY_LIGH": {
-      "value": "rgb(126, 141, 150)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "#7E8D96",
-      "name": "BACKGROUND_COLOR_GREY_LIGH"
     },
     "COLOR_RIVET": {
       "value": "rgb(255, 211, 0)",

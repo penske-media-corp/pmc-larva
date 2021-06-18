@@ -48,17 +48,17 @@
 			"type": "color",
 			"category": "background-color"
 		},
-		"COLOR_GREY_LIGH": {
+		"COLOR_GREY_LIGHT": {
 			"value": "#7E8D96",
 			"type": "color",
 			"category": "text-color"
 		},
-		"BORDER_COLOR_GREY_LIGH": {
+		"BORDER_COLOR_GREY_LIGHT": {
 			"value": "#7E8D96",
 			"type": "color",
 			"category": "hr-color"
 		},
-		"BACKGROUND_COLOR_GREY_LIGH": {
+		"BACKGROUND_COLOR_GREY_LIGHT": {
 			"value": "#7E8D96",
 			"type": "color",
 			"category": "background-color"

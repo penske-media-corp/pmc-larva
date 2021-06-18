@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 * larva-tokens - Update Billboard Accent font and color
+* larva-tokens - Fix typo
 
 ## 0.2.6 - 06-11-2021
 * larva-tokens - Add Billboard tokens
