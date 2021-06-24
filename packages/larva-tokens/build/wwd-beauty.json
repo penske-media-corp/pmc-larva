@@ -57,11 +57,11 @@
   "SPACING_150": "1.5rem",
   "SPACING_2": "2rem",
   "COLOR_GREY_DARKEST": "rgb(50, 50, 50)",
-  "FONT_FAMILY_BRAND_ACCENT": "Helvetica, serif",
   "BACKGROUND_COLOR_BRAND_ACCENT": "rgb(224, 215, 194)",
   "BORDER_COLOR_BRAND_ACCENT": "rgb(224, 215, 194)",
   "COLOR_GREY_LIGHTEST": "rgb(239, 239, 239)",
-  "FONT_FAMILY_BRAND_ACCENT_FANCY": "'sweet-sans-pro', Helvetica, sans-serif",
+  "FONT_FAMILY_ACCENT": "Helvetica, serif",
   "COLOR_BRAND_ACCENT": "rgb(224, 215, 194)",
-  "BORDER_COLOR_GREY_DARKEST": "rgb(50, 50, 50)"
+  "BORDER_COLOR_GREY_DARKEST": "rgb(50, 50, 50)",
+  "FONT_FAMILY_ACCENT_FANCY": "'sweet-sans-pro', Helvetica, sans-serif"
 }

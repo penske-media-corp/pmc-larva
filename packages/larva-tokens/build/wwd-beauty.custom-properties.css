@@ -71,13 +71,13 @@
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
   --color-grey-darkest: rgb(50, 50, 50);
-  /* Fallback from secondary-fancy */
-  --font-family-brand-accent: Helvetica, serif;
   --background-color-brand-accent: rgb(224, 215, 194);
   --border-color-brand-accent: rgb(224, 215, 194);
   --color-grey-lightest: rgb(239, 239, 239);
-  /* Available via Typekit. */
-  --font-family-brand-accent-fancy: 'sweet-sans-pro', Helvetica, sans-serif;
+  /* Fallback from secondary-fancy */
+  --font-family-accent: Helvetica, serif;
   --color-brand-accent: rgb(224, 215, 194);
   --border-color-grey-darkest: rgb(50, 50, 50);
+  /* Available via Typekit. */
+  --font-family-accent-fancy: 'sweet-sans-pro', Helvetica, sans-serif;
 }

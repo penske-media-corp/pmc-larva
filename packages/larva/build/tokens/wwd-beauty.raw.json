@@ -643,14 +643,6 @@
       "originalValue": "#323232",
       "name": "COLOR_GREY_DARKEST"
     },
-    "FONT_FAMILY_BRAND_ACCENT": {
-      "value": "Helvetica, serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "Fallback from secondary-fancy",
-      "originalValue": "Helvetica, serif",
-      "name": "FONT_FAMILY_BRAND_ACCENT"
-    },
     "BACKGROUND_COLOR_BRAND_ACCENT": {
       "value": "rgb(224, 215, 194)",
       "type": "color",
@@ -672,13 +664,13 @@
       "originalValue": "#EFEFEF",
       "name": "COLOR_GREY_LIGHTEST"
     },
-    "FONT_FAMILY_BRAND_ACCENT_FANCY": {
-      "value": "'sweet-sans-pro', Helvetica, sans-serif",
+    "FONT_FAMILY_ACCENT": {
+      "value": "Helvetica, serif",
       "type": "font-family",
       "category": "font-family",
-      "comment": "Available via Typekit.",
-      "originalValue": "'sweet-sans-pro', Helvetica, sans-serif",
-      "name": "FONT_FAMILY_BRAND_ACCENT_FANCY"
+      "comment": "Fallback from secondary-fancy",
+      "originalValue": "Helvetica, serif",
+      "name": "FONT_FAMILY_ACCENT"
     },
     "COLOR_BRAND_ACCENT": {
       "value": "rgb(224, 215, 194)",
@@ -693,6 +685,14 @@
       "category": "hr-color",
       "originalValue": "#323232",
       "name": "BORDER_COLOR_GREY_DARKEST"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'sweet-sans-pro', Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "Available via Typekit.",
+      "originalValue": "'sweet-sans-pro', Helvetica, sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }

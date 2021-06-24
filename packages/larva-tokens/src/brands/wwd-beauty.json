@@ -168,13 +168,13 @@
 			"category": "font-family",
 			"comment": "Fallback from secondary-fancy"
 		},
-		"FONT_FAMILY_BRAND_ACCENT_FANCY": {
+		"FONT_FAMILY_ACCENT_FANCY": {
 			"value": "'sweet-sans-pro', Helvetica, sans-serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Available via Typekit."
 		},
-		"FONT_FAMILY_BRAND_ACCENT": {
+		"FONT_FAMILY_ACCENT": {
 			"value": "Helvetica, serif",
 			"type": "font-family",
 			"category": "font-family",
