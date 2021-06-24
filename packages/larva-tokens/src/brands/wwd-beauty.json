@@ -25,17 +25,17 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
-			"value": "#6F0835",
+			"value": "#FDF6F0",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
-			"value": "#6F0835",
+			"value": "#FDF6F0",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY_LIGHT": {
-			"value": "#6F0835",
+			"value": "#FDF6F0",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -55,17 +55,17 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT": {
-			"value": "#ED1D25",
+			"value": "#E0D7C2",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT": {
-			"value": "#ED1D25",
+			"value": "#E0D7C2",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT": {
-			"value": "#ED1D25",
+			"value": "#E0D7C2",
 			"type": "color",
 			"category": "text-color"
 		},

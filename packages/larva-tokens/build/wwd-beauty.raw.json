@@ -274,10 +274,10 @@
       "name": "BORDER_COLOR_GREY"
     },
     "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
-      "value": "rgb(111, 8, 53)",
+      "value": "rgb(253, 246, 240)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#6F0835",
+      "originalValue": "#FDF6F0",
       "name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
     },
     "BORDER_COLOR_WHITE": {
@@ -366,10 +366,10 @@
       "name": "BACKGROUND_COLOR_BLACK"
     },
     "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
-      "value": "rgb(111, 8, 53)",
+      "value": "rgb(253, 246, 240)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#6F0835",
+      "originalValue": "#FDF6F0",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
     },
     "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
@@ -415,10 +415,10 @@
       "name": "COLOR_BLACK"
     },
     "COLOR_BRAND_PRIMARY_LIGHT": {
-      "value": "rgb(111, 8, 53)",
+      "value": "rgb(253, 246, 240)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#6F0835",
+      "originalValue": "#FDF6F0",
       "name": "COLOR_BRAND_PRIMARY_LIGHT"
     },
     "COLOR_BRAND_PRIMARY_DARK": {
@@ -652,17 +652,17 @@
       "name": "FONT_FAMILY_BRAND_ACCENT"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT": {
-      "value": "rgb(237, 29, 37)",
+      "value": "rgb(224, 215, 194)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#ED1D25",
+      "originalValue": "#E0D7C2",
       "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "BORDER_COLOR_BRAND_ACCENT": {
-      "value": "rgb(237, 29, 37)",
+      "value": "rgb(224, 215, 194)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#ED1D25",
+      "originalValue": "#E0D7C2",
       "name": "BORDER_COLOR_BRAND_ACCENT"
     },
     "COLOR_GREY_LIGHTEST": {
@@ -681,10 +681,10 @@
       "name": "FONT_FAMILY_BRAND_ACCENT_FANCY"
     },
     "COLOR_BRAND_ACCENT": {
-      "value": "rgb(237, 29, 37)",
+      "value": "rgb(224, 215, 194)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#ED1D25",
+      "originalValue": "#E0D7C2",
       "name": "COLOR_BRAND_ACCENT"
     },
     "BORDER_COLOR_GREY_DARKEST": {
