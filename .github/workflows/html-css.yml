@@ -21,7 +21,7 @@ jobs:
           chmod 400 ~/.ssh/id_rsa
           ssh-keyscan bitbucket.org > ~/.ssh/known_hosts
 
-          git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git "${THEME_DIR}"
+          git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git -b fix/webpack-build-case-sensitive "${THEME_DIR}"
           ls -la "${THEME_DIR}"
 
           cd "${THEME_DIR}/assets"
