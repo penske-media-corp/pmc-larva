@@ -19,6 +19,7 @@ jobs:
     env:
       BITBUCKET_REPO_SLUG: ${{ matrix.bitbucket-repo-slug }}
       BITBUCKET_READ_ONLY_SSH_KEY: ${{ secrets.BITBUCKET_READ_ONLY_SSH_KEY }}
+      ASSETS_DIR: theme/assets
       THEME_DIR: theme
 
     steps:
@@ -26,20 +27,29 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Check out themes
+
+      - name: Prepare SSH
         run: |
           mkdir ~/.ssh/
           echo "${BITBUCKET_READ_ONLY_SSH_KEY}" > ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
           ssh-keyscan bitbucket.org > ~/.ssh/known_hosts
 
+      - name: Check out theme
+        run: |
           git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git "${THEME_DIR}"
           ls -la "${THEME_DIR}"
 
-          cd "${THEME_DIR}/assets"
-          npm ci
-          npm run prod
+      - name: Install Larva
+        run: |
+          npm ci --prefix="${ASSETS_DIR}"
 
+      - name: Build
+        run: |
+          npm run prod --prefix="${ASSETS_DIR}"
+
+      - name: Report status
+        run: |
           # TODO: remove these after build issues are resolved.
-          git status
-          git diff --exit-code --quiet
+          git status "${THEME_DIR}"
+          git diff --exit-code --quiet "${THEME_DIR}"
