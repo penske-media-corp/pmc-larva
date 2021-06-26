@@ -21,6 +21,7 @@ jobs:
           'pmc-indiewire-2016',
           'pmc-sheknows-2020',
           'pmc-sourcingjournal-2021',
+          'pmc-spark',
           'pmc-sportico-2020',
           'pmc-variety-2020',
           'pmc-vibe-2021',
