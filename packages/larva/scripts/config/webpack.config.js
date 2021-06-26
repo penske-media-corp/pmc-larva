@@ -89,6 +89,8 @@ module.exports = ( env, argv ) => {
 
 		config.module.rules = ( config.module.rules || [] ).concat( [ rules.pre ] );
 		config.plugins = [ plugins.eslint, plugins.cleanup ];
+
+		config.bail = true;
 	}
 
 	return config;
