@@ -50,6 +50,6 @@ jobs:
 
       - name: Report status
         run: |
-          # TODO: remove these after build issues are resolved.
-          git status "${THEME_DIR}"
-          git diff --exit-code --quiet "${THEME_DIR}"
+          cd "${THEME_DIR}"
+          git status
+          git diff --exit-code --quiet
