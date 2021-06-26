@@ -12,8 +12,19 @@ jobs:
         node-version: [ 14.x ]
         bitbucket-repo-slug: [
           'pmc-artnews-2019',
-          'pmc-indiewire-2016',
+          'pmc-billboard-2021',
+          'pmc-blogher-2020',
+          'pmc-core-v2',
+          'pmc-deadline-2019',
+          'pmc-dirt-2020',
           'pmc-hollywoodreporter-2021',
+          'pmc-indiewire-2016',
+          'pmc-sheknows-2020',
+          'pmc-sourcingjournal-2021',
+          'pmc-sportico-2020',
+          'pmc-variety-2020',
+          'pmc-vibe-2021',
+          'pmc-wwd-2021',
         ]
 
     env:
