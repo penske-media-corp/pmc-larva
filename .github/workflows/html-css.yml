@@ -50,6 +50,7 @@ jobs:
 
       - name: Report status
         run: |
-          cd "${THEME_DIR}"
+          cd "${GITHUB_WORKSPACE}/${THEME_DIR}"
+          pwd
           git status
           git diff --exit-code --quiet
