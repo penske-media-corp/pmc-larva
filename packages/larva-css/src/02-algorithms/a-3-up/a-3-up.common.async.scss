@@ -1,0 +1,22 @@
+@import 'setup';
+
+.lrv-a-3-up,
+.is-style-3-up {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include pmc-breakpoint( tablet ) {
+        grid-gap: var(--spacing-1);
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.lrv-a-3-up__primary,
+.is-style-3-up__primary {
+    grid-column: 1 / span 2;
+    
+    @include pmc-breakpoint( tablet ) {
+        grid-column: unset;
+        height: 100%;
+    }
+}
