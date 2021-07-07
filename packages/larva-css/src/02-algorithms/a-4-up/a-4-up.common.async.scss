@@ -1,0 +1,30 @@
+@import 'setup';
+
+.lrv-a-4-up,
+.is-style-4-up {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include pmc-breakpoint( tablet ) {
+        grid-gap: var(--spacing-1);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto-fill 1fr;
+    }
+}
+
+.lrv-a-4-up__primary,
+.is-style-4-up__primary {
+    grid-column: 1 / -1;
+
+    @include pmc-breakpoint( tablet ) {
+        height: 100%;
+    }
+}
+
+.lrv-a-4-up__secondary {
+    @include pmc-breakpoint( tablet ) {
+        grid-column: 1/-1;
+        display: flex;
+        gap: var(--spacing-1);
+    }
+}
