@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
 
     @include pmc-breakpoint( tablet ) {
-        grid-gap: var(--spacing-1);
+        // grid-gap: var(--spacing-1);
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto-fill 1fr;
     }

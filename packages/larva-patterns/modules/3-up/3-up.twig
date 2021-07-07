@@ -3,10 +3,10 @@
         <div class="lrv-a-3-up">
 
             <div class="lrv-a-3-up__primary lrv-u-padding-a-1">
-					{% include "@larva/objects/o-card/o-card.twig" with o_card_large %}
+				{% include "@larva/objects/o-card/o-card.twig" with o_card_large %}
             </div>
             
-            <div class="lrv-u-padding-a-1">
+            <div class="lrv-a-3-up__secondary lrv-u-padding-a-1">
                 {% for item in o_card_items %}
 					{% include "@larva/objects/o-card/o-card.twig" with item %}
 				{% endfor %}

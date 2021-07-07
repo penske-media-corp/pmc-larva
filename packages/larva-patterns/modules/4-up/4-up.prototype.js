@@ -32,6 +32,7 @@ module.exports = {
     o_card_large: o_card_large,
 	o_card_items: [
 		o_card,
-		o_card
+		o_card,
+        o_card
 	]
 };
