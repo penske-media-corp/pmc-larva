@@ -24,12 +24,6 @@
 					</li>
 				{% endif %}
 
-				{% if c_link_top %}
-					<li>
-						{% include "@larva/components/c-link/c-link.twig" with c_link_top %}
-					</li>
-				{% endif %}
-
 				{% if c_span %}
 					<li>
 						{% include "@larva/components/c-span/c-span.twig" with c_span %}
@@ -58,7 +52,7 @@
 			</ul>
 
 			{% if c_link_bottom %}
-				<ul class="lrv-u-flex lrv-u-order-n1 lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-b-050 u-letter-spacing-012">
+				<ul class="lrv-u-flex lrv-u-order-100 lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-b-050 u-letter-spacing-012">
 					{% if c_link_bottom %}
 						<li>
 							{% include "@larva/components/c-link/c-link.twig" with c_link_bottom %}

@@ -35,7 +35,6 @@ module.exports = {
 	c_span: c_span,
 	c_link: false,
 	c_link_bottom: false,
-	c_link_top: false,
 	c_title: c_title,
 	c_dek: c_dek,
 	c_lazy_image: c_lazy_image,
