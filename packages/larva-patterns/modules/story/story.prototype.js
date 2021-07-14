@@ -30,7 +30,7 @@ module.exports = {
 	story_classes: '',
 	story_nav_classes: 'lrv-u-font-size-12 lrv-u-font-family-primary lrv-u-text-transform-uppercase lrv-u-font-weight-bold',
 	story_grid_classes: 'lrv-a-grid lrv-a-cols3',
-	story_grid_primary_classes: '',
+	story_grid_primary_classes: 'lrv-u-margin-r-2@desktop-xl lrv-u-margin-r-00 lrv-u-margin-r-1@desktop',
 	story_grid_secondary_classes: 'lrv-a-span2',
 	c_span: c_span,
 	c_link: false,
