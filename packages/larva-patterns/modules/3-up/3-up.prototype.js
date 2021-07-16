@@ -40,7 +40,8 @@ o_card_large.o_card_content_classes = 'lrv-u-padding-a-1 lrv-u-padding-a-2@deskt
 o_card_large.c_title.c_title_classes = 'lrv-u-font-size-28@desktop-xl lrv-u-font-size-26@tablet lrv-u-font-size-22@mobile-max lrv-u-margin-tb-050';
 
 module.exports = {
-    o_card_large: o_card_large,
+    // o_card_large: o_card_large,
+    o_card_large,
 	o_card_items: [
 		o_card,
 		o_card
