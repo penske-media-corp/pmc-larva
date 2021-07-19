@@ -1,6 +1,7 @@
 @import 'setup';
 
-.lrv-a-3-up,
+// .lrv-a-3-up,
+.lrv-a-carousel-grid,
 .is-style-3-up {
     display: grid;
     grid-template-columns: 1fr;
@@ -11,7 +12,8 @@
     }
 }
 
-.lrv-a-3-up__primary,
+// .lrv-a-3-up__primary,
+.lrv-a-carousel-grid__primary,
 .is-style-3-up__primary {
     grid-column: 1 / span 2;
     
