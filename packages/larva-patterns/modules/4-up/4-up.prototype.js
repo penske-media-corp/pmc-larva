@@ -37,7 +37,7 @@ o_card_large.o_author.c_span.c_span_text = 'Author Name';
 o_card_large.o_author.c_timestamp.c_timestamp_text = 'July 7, 2021';
 
 o_card_large.o_card_classes = 'lrv-a-4-up__primary';
-o_card_large.c_lazy_image.c_lazy_image_classes = 'u-box-shadow-dark a-hidden@mobile-max lrv-a-4-up__primary-image'
+o_card_large.c_lazy_image.c_lazy_image_classes = 'u-box-shadow-dark a-hidden@mobile-max lrv-a-4-up__primary-image';
 o_card_large.o_card_content_classes = 'lrv-a-4-up__primary-content lrv-u-padding-a-1 lrv-u-padding-a-2@desktop';
 o_card_large.c_title.c_title_classes = 'lrv-u-font-size-28 lrv-u-font-size-22@mobile-max lrv-u-margin-tb-050';
 
