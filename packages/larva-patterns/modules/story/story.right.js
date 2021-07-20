@@ -5,7 +5,7 @@ const story_right = clonedeep( require( './story.prototype' ) );
 const horizontal_alignment = ' lrv-u-justify-content-end';
 
 story_right.story_grid_primary_classes = story_right.story_grid_primary_classes.replace(
-	'margin-r',
+	/margin-r/g,
 	'margin-l'
 );
 
