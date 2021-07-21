@@ -10,6 +10,8 @@ o_card.o_card_content_classes = 'lrv-u-margin-t-1';
 o_card.c_lazy_image.c_lazy_image_classes += ' u-box-shadow-dark a-hidden@mobile-max';
 o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
 
+o_card.c_lazy_image.c_lazy_image_link_url = '#';
+
 o_card.c_span.c_span_url = '#';
 o_card.c_span.c_span_text = false;
 
