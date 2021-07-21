@@ -1,10 +1,81 @@
-<div class="lrv-a-carousel-grid {{ modifier_classes }}">
-    <div class="lrv-a-carousel-grid__primary lrv-u-padding-a-1">
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. Euismod in pellentesque massa placerat duis. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Pharetra magna ac placerat vestibulum lectus mauris. Cras adipiscing enim eu turpis. Cursus in hac habitasse platea. Nisl tincidunt eget nullam non nisi. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo.</div>
+<style>
+    .lrv-a-carousel-grid1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    @media(min-width: 768px) {
+        .lrv-a-carousel-grid1 {
+            grid-gap: var(--spacing-1);
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .lrv-a-carousel-grid1__overlay {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .lrv-a-carousel-grid1__primary--overlay {
+            display: grid;
+            grid-template-columns: 1fr 1.5rem 2fr;
+            align-items: center;
+            grid-auto-flow: column;
+            height: 100%;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .lrv-a-carousel-grid1__secondary--flex {
+            display: flex;
+            gap: var(--spacing-1);
+        }
+    }
+
+    @media(min-width: 768px){
+        .lrv-a-carousel-grid1__overlay-img {
+            grid-column: 2/4;
+            grid-row: 1;
+        }
+    }
+
+    @media(min-width: 768px){
+        .lrv-a-carousel-grid1__overlay-content {
+            grid-column: 1/3;
+            grid-row: 1;
+            padding: 1.875rem;
+            z-index: 1;
+            background-color: #fff;
+        }
+    }
+</style>
+
+<div class="lrv-a-wrapper">
+<div class="lrv-a-carousel-grid1 {{ modifier_classes5 }}">
+    <div class="lrv-a-carousel-grid1__primary lrv-u-padding-a-1">
+        <div class="lrv-a-carousel-grid1__primary-item {{ modifier_classes1 }}">
+            <div class="{{modifier_classes3}}" style="background-color: #f7f7f7; height: 300px;"></div>
+            <div class="{{modifier_classes4}}" style="background-color:lightgrey;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
     </div>
-    <div class="lrv-u-padding-a-1">
-        <div>Cat ipsum dolor sit amet, Why dog in house? i'm the sole ruler of this home and its inhabitants smelly, stupid dogs, inferior furballs time for night-hunt, human freakout and sometimes switches in french and say "miaou" just because well why not, steal the warm chair right.</div>
+
+    <div class="lrv-a-carousel-grid1__secondary {{ modifier_classes2 }} lrv-u-padding-a-1">
+        <div class="lrv-a-carousel-grid1__secondary-item {{ modifier_classes6 }}">
+            <div class="lrv-a-carousel-grid1__secondary-image {{ modifier_classes7}}" style="background-color: #f7f7f7; height: 150px;"></div>
+            <div>Magna hexagon stumptown pork belly paleo tilde.</div>
+        </div>
         <br>
-        <div>Magna hexagon stumptown pork belly paleo tilde. XOXO incididunt before they sold out, anim consectetur slow-carb polaroid. Tbh 3 wolf moon tousled, dolore hoodie marfa church-key keytar. Polaroid deserunt aliquip distillery you probably haven't heard of them.</div>
+        <div class="lrv-a-carousel-grid1__secondary-item {{ modifier_classes6 }}">
+            <div class="lrv-a-carousel-grid1__secondary-image {{ modifier_classes7}}" style="background-color: #f7f7f7; height: 150px;"></div>
+            <div>Cat ipsum dolor sit amet, Why dog in house?</div>
+        </div>
+        <br>
+        <div class="lrv-a-carousel-grid1__secondary-item {{ modifier_classes6 }}">
+            <div class="lrv-a-carousel-grid1__secondary-image {{ modifier_classes7}}" style="background-color: #f7f7f7; height: 150px;"></div>
+            <div>Cat ipsum dolor sit amet, Why dog in house?</div>
+        </div>
     </div>
+</div>
 </div>

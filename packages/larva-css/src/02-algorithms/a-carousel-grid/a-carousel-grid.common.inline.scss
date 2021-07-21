@@ -1,27 +1,29 @@
 @import 'setup';
 
 // .lrv-a-3-up,
-.lrv-a-carousel-grid,
-.is-style-3-up {
-    display: grid;
-    grid-template-columns: 1fr;
+// .is-style-3-up
 
-    @include pmc-breakpoint( tablet ) {
-        grid-gap: var(--spacing-1);
-        grid-template-columns: 2fr 1fr;
-    }
-}
+// .lrv-a-carousel-grid {
+//     display: grid;
+//     grid-template-columns: 1fr;
+
+//     @include pmc-breakpoint( tablet ) {
+//         grid-gap: var(--spacing-1);
+//         grid-template-columns: 2fr 1fr;
+//     }
+// }
 
 // .lrv-a-3-up__primary,
-.lrv-a-carousel-grid__primary,
-.is-style-3-up__primary {
-    grid-column: 1 / span 2;
+// .is-style-3-up__primary
+
+// .lrv-a-carousel-grid__primary {
+    // grid-column: 1 / span 2;
     
-    @include pmc-breakpoint( tablet ) {
-        grid-column: unset;
-        height: 100%;
-    }
-}
+    // @include pmc-breakpoint( tablet ) {
+    //     grid-column: unset;
+    //     height: 100%;
+    // }
+// }
 
 
 // Overlay classes
