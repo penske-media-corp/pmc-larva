@@ -7,8 +7,8 @@ const o_card = clonedeep( o_card_prototype );
 o_card.o_card_classes = 'lrv-u-margin-b-2@mobile-max lrv-u-flex';
 o_card.o_card_content_classes = 'lrv-u-margin-l-1';
 
-o_card.c_lazy_image.c_lazy_image_src_url = "https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg";
-o_card.c_lazy_image.c_lazy_image_placeholder_url = "https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg";
+// o_card.c_lazy_image.c_lazy_image_src_url = "https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg";
+// o_card.c_lazy_image.c_lazy_image_placeholder_url = "https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg";
 
 o_card.c_lazy_image.c_lazy_image_classes += ' u-box-shadow-dark a-hidden@mobile-max lrv-u-width-75p';
 o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1';
