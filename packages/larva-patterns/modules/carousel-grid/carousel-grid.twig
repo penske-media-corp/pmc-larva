@@ -1,17 +1,17 @@
 <div class="carousel-grid //">
 	<div class="lrv-a-wrapper">
-        <div class="lrv-a-carousel-grid {{ carousel_grid_overlay_modifier_class1 }}">
+		<div class="lrv-a-carousel-grid {{ carousel_grid_overlay_modifier_class1 }}">
 
-            <div class="lrv-u-padding-a-1 lrv-a-carousel-grid__primary">
+			<div class="lrv-u-padding-a-1 lrv-a-carousel-grid__primary">
 				{% include "@larva/objects/o-card/o-card.twig" with o_card_large %}
-            </div>
-            
-            <div class="lrv-u-padding-a-1  lrv-a-carousel-grid__secondary {{ carousel_grid_overlay_modifier_class2 }}">
-                {% for item in o_card_items %}
+			</div>
+
+			<div class="lrv-u-padding-a-1  lrv-a-carousel-grid__secondary {{ carousel_grid_overlay_modifier_class2 }}">
+				{% for item in o_card_items %}
 					{% include "@larva/objects/o-card/o-card.twig" with item %}
 				{% endfor %}
-            </div>
+			</div>
 
-        </div>
+		</div>
 	</div>
 </div>
