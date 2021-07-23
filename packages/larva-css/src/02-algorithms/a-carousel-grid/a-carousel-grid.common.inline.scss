@@ -19,7 +19,7 @@
 
 .lrv-a-carousel-grid__primary--overlay {
 
-    @include pmc-breakpoint( tablet ) {
+    @include pmc-breakpoint( desktop ) {
         display: grid;
         grid-template-columns: 1fr 1.5rem 2fr;
         align-items: center;
@@ -28,17 +28,9 @@
     }
 }
 
-.lrv-a-carousel-grid__secondary--flex {
-
-    @include pmc-breakpoint( tablet ) {
-        display: flex;
-        gap: var(--spacing-1);
-    }
-}
-
 .lrv-a-carousel-grid__overlay-img {
 
-    @include pmc-breakpoint( tablet ) {
+    @include pmc-breakpoint( desktop ) {
         grid-column: 2/4;
         grid-row: 1;
     }
@@ -46,11 +38,26 @@
 
 .lrv-a-carousel-grid__overlay-content {
 
-    @include pmc-breakpoint( tablet ) {
+    @include pmc-breakpoint( desktop ) {
         grid-column: 1/3;
         grid-row: 1;
         padding: 1.875rem;
         z-index: 1;
         background-color: #fff;
     }
+}
+
+.lrv-a-carousel-grid__secondary--grid {
+
+    @include pmc-breakpoint( desktop ) {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1.25rem;
+    }
+}
+
+.lrv-a-carousel-grid__secondary--item {
+    display: grid;
+    grid-template-columns: 6.25rem 1fr;
+    grid-gap: 1rem;
 }
