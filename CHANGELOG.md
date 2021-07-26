@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * larva-patterns - Add alignment and color classes to heading module, use standard lrv-a-font
 * larva-patterns - Adding a new module (`container`) for containing markup.
+* larva-patterns - Add `story` module variations.
 
 ## 0.2.9 - 06-25-2021
 * larva-tokens - Fix incorrect brand colors for wwd beauty Inc
