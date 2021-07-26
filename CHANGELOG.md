@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
-* larva-patterns - Add alignment and color classes to heading module, use standard lrv-a-font
+* larva-patterns - Add alignment and color classes to heading, paragraph, and container modules, update to use standard lrv-a-font.
 * larva-patterns - Adding a new module (`container`) for containing markup.
 * larva-patterns - Add `story` module variations.
 
