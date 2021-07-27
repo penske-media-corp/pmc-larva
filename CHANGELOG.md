@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
+* larva-patterns - Fix `story-grid` padding and fonts.
+
 ## 0.3.0 - 7-26-2021
 
 * larva-patterns - Add alignment and color classes to heading, paragraph, and container modules, update to use standard lrv-a-font.
