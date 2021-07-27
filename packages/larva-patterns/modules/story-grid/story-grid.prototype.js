@@ -2,9 +2,12 @@ const clonedeep = require( 'lodash.clonedeep' );
 
 const story_card = clonedeep( require( '../story/story.vertical' ) );
 
-story_card.story_nav_classes = 'lrv-u-font-size-12 lrv-u-font-family-secondary';
+story_card.c_dek.c_dek_classes = 'lrv-a-font-body-s lrv-a-hidden@mobile-max lrv-u-margin-a-00';
+story_card.c_title.c_title_classes = 'lrv-a-font-primary-xxs lrv-u-display-block lrv-u-margin-b-050';
+story_card.c_tagline_author.c_tagline_classes += ' lrv-u-margin-tb-00 lrv-u-padding-l-050';
 story_card.story_grid_secondary_classes = 'lrv-a-span2';
-story_card.c_dek.c_dek_classes += ' lrv-u-font-family-body';
+story_card.story_links_classes += ' lrv-u-margin-t-050';
+story_card.story_nav_classes = 'lrv-a-font-secondary-m';
 
 module.exports = {
 	story_grid_classes: '',
