@@ -39,7 +39,7 @@
 				{% endif %}
 
 				{% if c_tagline_author %}
-					<li class="lrv-u-flex">
+					<li class="lrv-u-flex // {{ c_tagline_author_wrapper_classes }}">
 						By {% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_author %}
 					</li>
 				{% endif %}
