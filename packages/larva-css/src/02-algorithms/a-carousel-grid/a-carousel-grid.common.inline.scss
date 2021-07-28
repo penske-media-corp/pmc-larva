@@ -5,7 +5,7 @@
     grid-template-columns: 1fr;
 
     @include pmc-breakpoint( tablet ) {
-        grid-gap: var(--spacing-1);
+        grid-gap: var(--spacing-050);
         grid-template-columns: 2fr 1fr;
     }
 }
