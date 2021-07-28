@@ -21,7 +21,7 @@ o_card_item.o_card_classes += ' lrv-a-carousel-grid__secondary--item lrv-u-align
 
 o_card_item.c_title.c_title_classes = 'lrv-u-font-size-14';
 
-o_card_item.c_lazy_image.c_lazy_image_classes += ' u-box-shadow-dark a-hidden@mobile-max lrv-u-width-100p';
+o_card_item.c_lazy_image.c_lazy_image_classes += ' lrv-u-width-100p';
 o_card_item.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1';
 
 module.exports = carousel_grid_overlay;

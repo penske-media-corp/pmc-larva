@@ -7,7 +7,7 @@ const o_card = clonedeep( o_card_prototype );
 o_card.o_card_classes = 'lrv-u-margin-b-2';
 o_card.o_card_content_classes = 'lrv-u-margin-t-1';
 
-o_card.c_lazy_image.c_lazy_image_classes += ' u-box-shadow-dark a-hidden@mobile-max';
+o_card.c_lazy_image.c_lazy_image_classes += ' ';
 o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
 
 o_card.c_lazy_image.c_lazy_image_link_url = '#';
