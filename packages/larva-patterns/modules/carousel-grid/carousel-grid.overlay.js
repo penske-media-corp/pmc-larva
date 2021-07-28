@@ -19,7 +19,7 @@ carousel_grid_overlay.o_card_items = [o_card_item, o_card_item, o_card_item];
 
 o_card_item.o_card_classes += ' lrv-a-carousel-grid__secondary--item lrv-u-align-items-center';
 
-o_card_item.c_title.c_title_classes = 'lrv-u-font-size-14';
+o_card_item.c_title.c_title_classes = 'lrv-a-font-secondary-m';
 
 o_card_item.c_lazy_image.c_lazy_image_classes += ' lrv-u-width-100p';
 o_card_item.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1';

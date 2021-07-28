@@ -16,7 +16,7 @@ o_card.c_span.c_span_url = '#';
 o_card.c_span.c_span_text = false;
 
 o_card.c_title.c_title_text = '‘Solo: A Star Wars Story’ Is Going to Cannes, So Does That Mean It’s Good?';
-o_card.c_title.c_title_classes = 'lrv-a-font-primary-xs';
+o_card.c_title.c_title_classes = 'lrv-a-font-primary-xxxs';
 o_card.c_title.c_title_link_classes = 'lrv-a-unstyle-link';
 
 o_card.c_timestamp.c_timestamp_text = false;
@@ -39,7 +39,8 @@ o_card.o_author = false;
 
 o_card_large.o_card_classes = '';
 o_card_large.o_card_content_classes = 'lrv-u-padding-a-1 lrv-u-padding-a-2@desktop';
-o_card_large.c_title.c_title_classes = 'lrv-a-font-primary-s@desktop-xl lrv-a-font-primary-s@tablet lrv-a-font-primary-xs@mobile-max lrv-u-margin-tb-050';
+// o_card_large.c_title.c_title_classes = 'lrv-a-font-primary-s@desktop-xl lrv-a-font-primary-s@tablet lrv-a-font-primary-xs@mobile-max lrv-u-margin-tb-050';
+o_card_large.c_title.c_title_classes = 'lrv-a-font-primary-xs lrv-u-margin-tb-050';
 
 module.exports = {
     o_card_large,
