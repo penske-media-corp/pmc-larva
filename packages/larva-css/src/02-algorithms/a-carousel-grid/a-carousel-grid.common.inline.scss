@@ -1,8 +1,6 @@
 @import 'setup';
 
 .lrv-a-carousel-grid {
-    --overlay: 1fr;
-
     display: grid;
     grid-template-columns: 1fr;
 
@@ -13,7 +11,8 @@
 }
 
 .lrv-a-carousel-grid__overlay {
-
+    --grid-overlay: grid;
+    
     @include pmc-breakpoint( tablet ) {
         grid-template-columns: 1fr;
     }
@@ -23,7 +22,7 @@
 .lrv-a-carousel-grid__overlay--primary {
 
     @include pmc-breakpoint( desktop ) {
-        display: grid;
+        display: var(--grid-overlay);
         grid-template-columns: 1fr 1.5rem 2fr;
         align-items: center;
         grid-auto-flow: column;
@@ -53,15 +52,14 @@
 .lrv-a-carousel-grid__overlay--secondary {
 
     @include pmc-breakpoint( desktop ) {
-        display: grid;
+        display: var(--grid-overlay);
         grid-template-columns: repeat(3,1fr);
-        // grid-gap: 1.25rem;
         grid-gap: var(--spacing-125);
     }
 }
 
-.lrv-a-carousel-grid__overlay--secondary-item {
-    display: grid;
+.lrv-a-carousel-grid__overlay--secondary-card {
+    display: var(--grid-overlay);
     grid-template-columns: 6.25rem 1fr;
     grid-gap: var(--spacing-1);
 }

@@ -17,7 +17,7 @@ const o_card_item = clonedeep( carousel_grid_overlay.o_card_items[0] );
 
 carousel_grid_overlay.o_card_items = [o_card_item, o_card_item, o_card_item];
 
-o_card_item.o_card_classes += ' lrv-a-carousel-grid__overlay--secondary-item lrv-u-align-items-center';
+o_card_item.o_card_classes += ' lrv-a-carousel-grid__overlay--secondary-card lrv-u-align-items-center';
 
 o_card_item.c_title.c_title_classes = 'lrv-a-font-secondary-m';
 

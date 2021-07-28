@@ -2,11 +2,11 @@
 	<div class="lrv-a-wrapper">
 		<div class="lrv-a-carousel-grid {{ carousel_grid_overlay_layout_classes }}">
 
-			<div class="lrv-u-padding-a-1 lrv-a-carousel-grid__primary">
+			<div class="lrv-u-padding-a-1">
 				{% include "@larva/objects/o-card/o-card.twig" with o_card_large %}
 			</div>
 
-			<div class="lrv-u-padding-a-1 lrv-a-carousel-grid__secondary {{ carousel_grid_overlay_secondary_classes }}">
+			<div class="lrv-u-padding-a-1 {{ carousel_grid_overlay_secondary_classes }}">
 				{% for item in o_card_items %}
 					{% include "@larva/objects/o-card/o-card.twig" with item %}
 				{% endfor %}
@@ -15,16 +15,3 @@
 		</div>
 	</div>
 </div>
-{# carousel_grid_overlay_primary_classes = 'lrv-a-carousel-grid__overlay'
-
-carousel_grid_overlay_secondary_classes = 'lrv-a-carousel-grid__secondary--grid
-
-lrv-a-carousel-grid__primary--overlay
-
-lrv-a-carousel-grid__overlay-content
-
-lrv-a-carousel-grid__overlay-img
-
-lrv-a-carousel-grid__secondary--item 
-
- #}
