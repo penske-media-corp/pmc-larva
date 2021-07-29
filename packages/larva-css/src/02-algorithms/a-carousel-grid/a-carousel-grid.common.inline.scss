@@ -1,6 +1,8 @@
 @import 'setup';
 
 .lrv-a-carousel-grid {
+    --grid-overlay: initial;
+
     display: grid;
     grid-template-columns: 1fr;
 
@@ -12,7 +14,7 @@
 
 .lrv-a-carousel-grid__overlay {
     --grid-overlay: grid;
-    
+
     @include pmc-breakpoint( tablet ) {
         grid-template-columns: 1fr;
     }
