@@ -3,13 +3,18 @@ const clonedeep = require( 'lodash.clonedeep' );
 const c_heading_prototype = require( '../../components/c-heading/c-heading.prototype' );
 const c_heading = clonedeep( c_heading_prototype );
 
+const c_icon_prototype = require( '../../components/c-icon/c-icon.prototype' );
+const c_icon = clonedeep( c_icon_prototype );
+
 const o_card_prototype = require( '../../objects/o-card/o-card.prototype' );
 const o_card = clonedeep( o_card_prototype );
 
 const o_indicator_prototype = require( '../../objects/o-indicator/o-indicator.prototype' );
 const o_indicator = clonedeep( o_indicator_prototype );
 
-o_indicator.c_icon = false;
+
+
+o_indicator.c_icon = clonedeep( c_icon );
 o_indicator.c_span.c_span_text = 'Photos';
 o_indicator.c_span.c_span_classes += ' lrv-u-text-transform-uppercase lrv-u-font-family-primary lrv-u-font-size-12 a-icon-gallery lrv-a-icon-after';
 o_indicator.o_indicator_classes += ' lrv-u-background-color-brand-primary lrv-u-color-white lrv-u-padding-a-050';
