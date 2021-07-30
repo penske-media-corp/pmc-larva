@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 
 * larva-patterns - Fix `story-grid` padding and fonts.
+* larva-patterns - Create new module `carousel-grid` and a variant `overlay`.
 
 ## 0.3.0 - 7-26-2021
 
