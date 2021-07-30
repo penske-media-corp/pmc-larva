@@ -1,7 +1,7 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
 const o_card_prototype = require( '../../objects/o-card/o-card.prototype' );
-
+const o_author = clonedeep(require('../../objects/o-author/o-author.prototype'));
 const o_card = clonedeep( o_card_prototype );
 
 o_card.o_card_classes = 'lrv-u-margin-b-1';
@@ -21,14 +21,13 @@ o_card.c_title.c_title_link_classes = 'lrv-a-unstyle-link';
 
 o_card.c_timestamp.c_timestamp_text = false;
 
-o_card.c_tagline.c_tagline_text = false;
-
 const o_card_large = clonedeep( o_card );
 
 o_card_large.c_span.c_span_text = 'Film';
 
 o_card_large.c_title.c_title_text = '‘Avengers: Infinity War’ vs. ‘Black Panther’: 10 Factors That Will Determine Which Film Is Box-Office King';
 
+o_card_large.o_author = clonedeep( o_author );
 o_card_large.o_author.o_author_text = 'By ';
 o_card_large.o_author.c_span.c_span_text = 'Author Name';
 o_card_large.o_author.c_timestamp.c_timestamp_text = 'July 7, 2021';
