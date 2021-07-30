@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished
+
+* larva-patterns - Fix `story-grid` padding and fonts.
+
+## 0.3.0 - 7-26-2021
+
+* larva-patterns - Add alignment and color classes to heading, paragraph, and container modules, update to use standard lrv-a-font.
+* larva-patterns - Adding a new module (`container`) for containing markup.
+* larva-patterns - Add `story` module variations.
+* larva-patterns - Add `story-grid` module.
+* all - Version bumps from Dependabot.
+
 ## 0.2.9 - 06-25-2021
 * larva-tokens - Fix incorrect brand colors for wwd beauty Inc
 
