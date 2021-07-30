@@ -42,7 +42,7 @@ o_card_large.o_card_content_classes = 'lrv-u-padding-a-1';
 o_card_large.c_title.c_title_classes = 'lrv-a-font-primary-xs lrv-u-margin-tb-050';
 
 module.exports = {
-    o_card_large,
+	o_card_large,
 	o_card_items: [
 		o_card,
 		o_card
