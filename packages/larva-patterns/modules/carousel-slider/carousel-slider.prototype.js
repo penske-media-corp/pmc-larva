@@ -12,12 +12,10 @@ const o_card = clonedeep( o_card_prototype );
 const o_indicator_prototype = require( '../../objects/o-indicator/o-indicator.prototype' );
 const o_indicator = clonedeep( o_indicator_prototype );
 
-
-
 o_indicator.c_icon = clonedeep( c_icon );
 o_indicator.c_span.c_span_text = 'Photos';
-o_indicator.c_span.c_span_classes += ' lrv-u-text-transform-uppercase lrv-u-font-family-primary lrv-u-font-size-12 a-icon-gallery lrv-a-icon-after';
-o_indicator.o_indicator_classes += ' lrv-u-background-color-brand-primary lrv-u-color-white lrv-u-padding-a-050';
+o_indicator.c_span.c_span_classes += ' lrv-u-margin-l-050 lrv-u-text-transform-uppercase lrv-u-font-family-primary lrv-u-font-size-12 a-icon-gallery lrv-a-icon-after';
+o_indicator.o_indicator_classes += ' lrv-u-flex lrv-u-background-color-brand-primary lrv-u-color-white lrv-u-padding-a-050';
 
 o_card.o_indicator = o_indicator;
 
