@@ -13,9 +13,10 @@ const o_indicator_prototype = require( '../../objects/o-indicator/o-indicator.pr
 const o_indicator = clonedeep( o_indicator_prototype );
 
 o_indicator.c_icon = clonedeep( c_icon );
+o_indicator.c_icon.c_icon_name = 'gallery';
 o_indicator.c_span.c_span_text = 'Photos';
-o_indicator.c_span.c_span_classes += ' lrv-u-margin-l-050 lrv-u-text-transform-uppercase lrv-u-font-family-primary lrv-u-font-size-12 a-icon-gallery lrv-a-icon-after';
-o_indicator.o_indicator_classes += ' lrv-u-flex lrv-u-background-color-brand-primary lrv-u-color-white lrv-u-padding-a-050';
+o_indicator.c_span.c_span_classes += ' lrv-u-margin-l-050 lrv-u-text-transform-uppercase lrv-a-font-secondary-s';
+o_indicator.o_indicator_classes += ' lrv-u-flex lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-050 lrv-u-border-radius-5 lrv-u-margin-a-050';
 
 o_card.o_indicator = o_indicator;
 
@@ -33,6 +34,7 @@ o_card.c_timestamp = false;
 o_card.c_title.c_title_link_classes = 'lrv-a-unstyle-link';
 o_card.c_title.c_title_classes = 'lrv-a-font-primary-xxs lrv-u-text-align-center';
 o_card.c_title.c_title_url = false;
+o_card.c_title.c_title_id_attr = false;
 
 const titles = [
 	'Banksy Painting Sells for Record-Demolishing $12.2 M. at Sotheby’s London',

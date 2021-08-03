@@ -14,7 +14,7 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "build": "print 'larva-svg is built with `npm run build-icons` from packages/larva.'"
+    "build": "print 'larva-svg is built with `npm run build-icons` from the root.'"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
