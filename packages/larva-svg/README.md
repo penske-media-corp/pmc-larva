@@ -42,6 +42,7 @@ Examples are provided in this documentation, but this package does not provide t
 2. Copy the file into src/svg in this repository.
 3. Run `npm run build-icons` from pmc-larva/packages/larva
 4. Run `npm run prod` from the root of this repository.
+
 ## Development Setup
 
 ### To copy the icon sprite from this package into a consuming project:
