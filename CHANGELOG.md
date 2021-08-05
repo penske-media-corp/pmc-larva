@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 
 * larva-patterns - Add `carousel-slider` module.
+* larva-patterns - Add separator border color class.
 * larva-css - Add style for 1/3 cell width in Flickity slider.
 * larva-svg - Add gallery icon.
 
