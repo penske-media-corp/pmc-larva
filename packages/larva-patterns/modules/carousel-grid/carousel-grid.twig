@@ -1,0 +1,17 @@
+<div class="carousel-grid //">
+	<div class="lrv-a-wrapper">
+		<div class="lrv-a-carousel-grid {{ carousel_grid_overlay_layout_classes }}">
+
+			<div class="lrv-u-padding-a-1">
+				{% include "@larva/objects/o-card/o-card.twig" with o_card_large %}
+			</div>
+
+			<div class="lrv-u-padding-a-1 {{ carousel_grid_overlay_secondary_classes }}">
+				{% for item in o_card_items %}
+					{% include "@larva/objects/o-card/o-card.twig" with item %}
+				{% endfor %}
+			</div>
+
+		</div>
+	</div>
+</div>

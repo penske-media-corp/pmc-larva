@@ -6,9 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
+## 0.3.1 - 07-30-2021
 * larva-patterns - Fix `story-grid` padding and fonts.
+* larva-patterns - Create new module `carousel-grid` and a variant `overlay`.
+* all - Version bumps from Dependabot.
 
-## 0.3.0 - 7-26-2021
+## 0.3.0 - 07-26-2021
 
 * larva-patterns - Add alignment and color classes to heading, paragraph, and container modules, update to use standard lrv-a-font.
 * larva-patterns - Adding a new module (`container`) for containing markup.
