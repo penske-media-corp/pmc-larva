@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
+* larva-patterns - Add `carousel-slider` module.
+* larva-css - Add style for 1/3 cell width in Flickity slider.
+* larva-svg - Add gallery icon.
+
 ## 0.3.1 - 07-30-2021
 * larva-patterns - Fix `story-grid` padding and fonts.
 * larva-patterns - Create new module `carousel-grid` and a variant `overlay`.
