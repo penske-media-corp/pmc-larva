@@ -69,6 +69,21 @@
 			"type": "color",
 			"category": "text-color"
 		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+			"value": "#A58A4E",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_DARK": {
+			"value": "#A58A4E",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_DARK": {
+			"value": "#A58A4E",
+			"type": "color",
+			"category": "text-color"
+		},
 		"COLOR_GREY_LIGHTEST": {
 			"value": "#EFEFEF",
 			"type": "color",
