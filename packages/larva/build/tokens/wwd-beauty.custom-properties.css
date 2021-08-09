@@ -70,12 +70,15 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
+  --border-color-brand-accent-dark: rgb(165, 138, 78);
+  --background-color-brand-accent-dark: rgb(165, 138, 78);
   --color-grey-darkest: rgb(50, 50, 50);
   --background-color-brand-accent: rgb(224, 215, 194);
   --border-color-brand-accent: rgb(224, 215, 194);
   --color-grey-lightest: rgb(239, 239, 239);
   /* Fallback from secondary-fancy */
   --font-family-accent: Helvetica, serif;
+  --color-brand-accent-dark: rgb(165, 138, 78);
   --color-brand-accent: rgb(224, 215, 194);
   --border-color-grey-darkest: rgb(50, 50, 50);
   /* Available via Typekit. */

@@ -636,6 +636,20 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
+    "BORDER_COLOR_BRAND_ACCENT_DARK": {
+      "value": "rgb(165, 138, 78)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#A58A4E",
+      "name": "BORDER_COLOR_BRAND_ACCENT_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+      "value": "rgb(165, 138, 78)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "#A58A4E",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_DARK"
+    },
     "COLOR_GREY_DARKEST": {
       "value": "rgb(50, 50, 50)",
       "type": "color",
@@ -671,6 +685,13 @@
       "comment": "Fallback from secondary-fancy",
       "originalValue": "Helvetica, serif",
       "name": "FONT_FAMILY_ACCENT"
+    },
+    "COLOR_BRAND_ACCENT_DARK": {
+      "value": "rgb(165, 138, 78)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "#A58A4E",
+      "name": "COLOR_BRAND_ACCENT_DARK"
     },
     "COLOR_BRAND_ACCENT": {
       "value": "rgb(224, 215, 194)",
