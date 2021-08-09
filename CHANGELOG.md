@@ -3,14 +3,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## 0.3.2 - 08-06-2021
-* larva-tokens - Add accent dark color to Beauty Inc tokens.
-
+## Unpublished
 * larva-patterns - Add `carousel-slider` module.
 * larva-patterns - Add separator border color class.
 * larva-css - Add style for 1/3 cell width in Flickity slider.
 * larva-svg - Add gallery icon.
+
+## 0.3.2 - 08-06-2021
+* larva-tokens - Add accent dark color to Beauty Inc tokens.
 
 ## 0.3.1 - 07-30-2021
 * larva-patterns - Fix `story-grid` padding and fonts.
