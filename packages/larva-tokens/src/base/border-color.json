@@ -40,5 +40,14 @@
 		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
 			"value": "{!BLACK}"
 		},
+		"BORDER_COLOR_BRAND_ACCENT_DARK": {
+			"value": "{!BLACK}"
+		},
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK}"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_LIGHT": {
+			"value": "{!BLACK}"
+		}
 	}
 }

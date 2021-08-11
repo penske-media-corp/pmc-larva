@@ -238,6 +238,13 @@
       "originalValue": "{!BLACK}",
       "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "BORDER_COLOR_BRAND_ACCENT_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT_DARK"
+    },
     "BORDER_COLOR_GREY_LIGHT": {
       "category": "hr-color",
       "type": "color",
@@ -251,6 +258,13 @@
       "category": "hr-color",
       "originalValue": "#5A656D",
       "name": "BORDER_COLOR_GREY_DARK"
+    },
+    "BORDER_COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT_LIGHT"
     },
     "BORDER_COLOR_BRAND_SECONDARY_DARK": {
       "category": "hr-color",
@@ -272,6 +286,13 @@
       "category": "hr-color",
       "originalValue": "#64747D",
       "name": "BORDER_COLOR_GREY"
+    },
+    "BORDER_COLOR_BRAND_ACCENT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT"
     },
     "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
       "category": "hr-color",
@@ -329,6 +350,20 @@
       "originalValue": "{!BLACK}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT"
+    },
     "BACKGROUND_COLOR_GREY_DARK": {
       "value": "rgb(90, 101, 109)",
       "type": "color",
@@ -358,6 +393,13 @@
       "comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
       "originalValue": "{!BLACK}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "BACKGROUND_COLOR_BLACK": {
       "category": "background-color",
@@ -450,6 +492,13 @@
       "originalValue": "{!GREY_90}",
       "name": "COLOR_GREY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_LIGHT"
+    },
     "COLOR_BRAND_SECONDARY_DARK": {
       "category": "text-color",
       "type": "color",
@@ -464,6 +513,13 @@
       "originalValue": "{!BLACK}",
       "name": "COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_DARK"
+    },
     "COLOR_GREY_DARK": {
       "value": "rgb(90, 101, 109)",
       "type": "color",
@@ -477,6 +533,13 @@
       "category": "text-color",
       "originalValue": "#64747D",
       "name": "COLOR_GREY"
+    },
+    "COLOR_BRAND_ACCENT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
       "value": "'playfair-display', Times New Roman, sans-serif",
@@ -509,6 +572,22 @@
       "comment": "Fallback from secondary-fancy",
       "originalValue": "Arial, serif",
       "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'oswald', Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "Available via Typekit.",
+      "originalValue": "'oswald', Helvetica, sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "value": "Georgia, serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "Fallback from ACCENT-fancy",
+      "originalValue": "Georgia, serif",
+      "name": "FONT_FAMILY_ACCENT"
     },
     "FONT_FAMILY_BODY": {
       "value": "'trade-gothic-next', Arial, sans-serif",
@@ -686,14 +765,6 @@
       "originalValue": "#F5F7FA",
       "name": "COLOR_GREY_LIGHTEST"
     },
-    "FONT_FAMILY_ACCENT": {
-      "value": "Georgia, serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "Fallback from ACCENT-fancy",
-      "originalValue": "Georgia, serif",
-      "name": "FONT_FAMILY_ACCENT"
-    },
     "BORDER_COLOR_RIVET": {
       "value": "rgb(255, 211, 0)",
       "type": "color",
@@ -707,14 +778,6 @@
       "category": "hr-color",
       "originalValue": "#48535B",
       "name": "BORDER_COLOR_GREY_DARKEST"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'oswald', Helvetica, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "Available via Typekit.",
-      "originalValue": "'oswald', Helvetica, sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }

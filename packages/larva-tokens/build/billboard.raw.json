@@ -238,6 +238,13 @@
       "originalValue": "{!BLACK}",
       "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "BORDER_COLOR_BRAND_ACCENT_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT_DARK"
+    },
     "BORDER_COLOR_GREY_LIGHT": {
       "category": "hr-color",
       "type": "color",
@@ -251,6 +258,13 @@
       "category": "hr-color",
       "originalValue": "#4C5167",
       "name": "BORDER_COLOR_GREY_DARK"
+    },
+    "BORDER_COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT_LIGHT"
     },
     "BORDER_COLOR_BRAND_SECONDARY_DARK": {
       "category": "hr-color",
@@ -272,6 +286,13 @@
       "category": "hr-color",
       "originalValue": "#8289A1",
       "name": "BORDER_COLOR_GREY"
+    },
+    "BORDER_COLOR_BRAND_ACCENT": {
+      "value": "rgb(207, 213, 230)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#CFD5E6",
+      "name": "BORDER_COLOR_BRAND_ACCENT"
     },
     "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
       "category": "hr-color",
@@ -329,6 +350,20 @@
       "originalValue": "{!BLACK}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT"
+    },
     "BACKGROUND_COLOR_GREY_DARK": {
       "value": "rgb(76, 81, 103)",
       "type": "color",
@@ -357,6 +392,13 @@
       "category": "background-color",
       "originalValue": "#CB001B",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "value": "rgb(207, 213, 230)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "#CFD5E6",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "BACKGROUND_COLOR_BLACK": {
       "value": "rgb(16, 17, 25)",
@@ -449,6 +491,13 @@
       "originalValue": "{!GREY_90}",
       "name": "COLOR_GREY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_LIGHT"
+    },
     "COLOR_BRAND_SECONDARY_DARK": {
       "category": "text-color",
       "type": "color",
@@ -463,6 +512,13 @@
       "originalValue": "{!BLACK}",
       "name": "COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_DARK"
+    },
     "COLOR_GREY_DARK": {
       "value": "rgb(76, 81, 103)",
       "type": "color",
@@ -476,6 +532,13 @@
       "category": "text-color",
       "originalValue": "#8289A1",
       "name": "COLOR_GREY"
+    },
+    "COLOR_BRAND_ACCENT": {
+      "value": "rgb(207, 213, 230)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "#CFD5E6",
+      "name": "COLOR_BRAND_ACCENT"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
       "value": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
@@ -508,6 +571,22 @@
       "comment": "Fallback for secondary-fancy",
       "originalValue": "Helvetica, serif",
       "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'acumin-pro-condensed', Arial, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The accent webfont, loaded async",
+      "originalValue": "'acumin-pro-condensed', Arial, sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "value": "Arial, serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the accent font",
+      "originalValue": "Arial, serif",
+      "name": "FONT_FAMILY_ACCENT"
     },
     "FONT_FAMILY_BODY": {
       "value": "'open-sans', Helvetica, sans-serif",
@@ -692,13 +771,6 @@
       "originalValue": "#D5D5D5",
       "name": "BORDER_COLOR_GREY_LIGH"
     },
-    "BACKGROUND_COLOR_BRAND_ACCENT": {
-      "value": "rgb(207, 213, 230)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "#CFD5E6",
-      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
-    },
     "BORDER_COLOR_BLACK": {
       "value": "rgb(16, 17, 25)",
       "type": "color",
@@ -719,13 +791,6 @@
       "category": "background-color",
       "originalValue": "#D5D5D5",
       "name": "BACKGROUND_COLOR_GREY_LIGH"
-    },
-    "BORDER_COLOR_BRAND_ACCENT": {
-      "value": "rgb(207, 213, 230)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#CFD5E6",
-      "name": "BORDER_COLOR_BRAND_ACCENT"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT_GREEN": {
       "value": "rgb(0, 221, 161)",
@@ -748,14 +813,6 @@
       "originalValue": "#00DDA1",
       "name": "BORDER_COLOR_BRAND_ACCENT_GREEN"
     },
-    "FONT_FAMILY_ACCENT": {
-      "value": "Arial, serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The fallback for the accent font",
-      "originalValue": "Arial, serif",
-      "name": "FONT_FAMILY_ACCENT"
-    },
     "COLOR_BRAND_ACCENT_BLUE": {
       "value": "rgb(118, 186, 223)",
       "type": "color",
@@ -763,27 +820,12 @@
       "originalValue": "#76BADF",
       "name": "COLOR_BRAND_ACCENT_BLUE"
     },
-    "COLOR_BRAND_ACCENT": {
-      "value": "rgb(207, 213, 230)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "#CFD5E6",
-      "name": "COLOR_BRAND_ACCENT"
-    },
     "BORDER_COLOR_GREY_DARKEST": {
       "value": "rgb(43, 46, 60)",
       "type": "color",
       "category": "hr-color",
       "originalValue": "#2B2E3C",
       "name": "BORDER_COLOR_GREY_DARKEST"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'acumin-pro-condensed', Arial, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "The accent webfont, loaded async",
-      "originalValue": "'acumin-pro-condensed', Arial, sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }
