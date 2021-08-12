@@ -1,5 +1,8 @@
 <section class="carousel-slider //">
 	<div class="lrv-a-wrapper lrv-u-padding-tb-1">
+		{% if c_heading %}
+			{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+		{% endif %}
 		<div class="js-Flickity js-Flickity--one-thirds js-Flickity--nav-top-right js-Flickity--hide-nav@mobile-max">
 			{% for item in galleries %}
 				<div class="js-Flickity-cell lrv-u-margin-r-150">

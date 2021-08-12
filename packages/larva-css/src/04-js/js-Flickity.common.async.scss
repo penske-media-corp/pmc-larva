@@ -59,10 +59,8 @@
 .js-Flickity--nav-top-right {
 	--button-size: 0; // Hide arrows for mobile screen.
 
-	margin-top: var( --button-size );
-
 	@include pmc-breakpoint( tablet ) {
-		--button-size: #{pmc-rem(44)};
+		--button-size: #{pmc-rem(40)};
 	}
 }
 

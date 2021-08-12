@@ -12,6 +12,10 @@ const o_card = clonedeep( o_card_prototype );
 const o_indicator_prototype = require( '../../objects/o-indicator/o-indicator.prototype' );
 const o_indicator = clonedeep( o_indicator_prototype );
 
+c_heading.c_heading_text = 'Gallery Heading';
+c_heading.c_heading_classes =
+	'lrv-a-font-primary-m lrv-u-text-transform-uppercase lrv-u-margin-b-125';
+
 o_indicator.c_icon = clonedeep( c_icon );
 o_indicator.c_icon.c_icon_name = 'gallery';
 o_indicator.c_span.c_span_text = 'Photos';
@@ -58,5 +62,6 @@ for (let i = 0; i < titles.length; i++) {
 }
 
 module.exports = {
-	galleries: galleries,
+	c_heading,
+	galleries: galleries
 };
