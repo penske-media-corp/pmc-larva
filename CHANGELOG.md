@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
-## 0.3.5 - 09-23-2021
+## 0.3.6 - 09-23-2021
 * larva-tokens - Add BBPro tokens
+* 
+## 0.3.5 - 09-23-2021
+* Re-release 0.3.4 as `latest` after it was released as `next`.
 
 ## 0.3.4 - 09-23-2021
 * larva-patterns - Fix `story` module's use of `c_dek` component.
