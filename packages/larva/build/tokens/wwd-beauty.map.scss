@@ -2,11 +2,14 @@
 $wwd-beauty-map: (
   'border-color-grey-lightest': (rgb(239, 239, 239)),
   'border-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'border-color-brand-accent-dark': (rgb(165, 138, 78)),
   'border-color-grey-light': (rgb(220, 220, 220)),
   'border-color-grey-dark': (rgb(72, 61, 50)),
+  'border-color-brand-accent-light': (rgb(0, 0, 0)),
   'border-color-brand-secondary-dark': (rgb(0, 0, 0)),
   'border-color-brand-secondary': (rgb(37, 83, 78)),
   'border-color-grey': (rgb(140, 140, 140)),
+  'border-color-brand-accent': (rgb(224, 215, 194)),
   'border-color-brand-primary-light': (rgb(253, 246, 240)),
   'border-color-white': (rgb(255, 255, 255)),
   'border-color-brand-primary-dark': (rgb(236, 28, 36)),
@@ -15,11 +18,14 @@ $wwd-beauty-map: (
   'background-color-grey-lightest': (rgb(239, 239, 239)),
   'background-color-brand-secondary-dark': (rgb(0, 0, 0)),
   'background-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'background-color-brand-accent-dark': (rgb(165, 138, 78)),
+  'background-color-brand-accent-light': (rgb(0, 0, 0)),
   'background-color-grey-dark': (rgb(72, 61, 50)),
   'background-color-grey': (rgb(140, 140, 140)),
   /* The background color of the main body of the site. */
   'background-color-body': (rgb(255, 254, 248)),
   'background-color-brand-secondary': (rgb(37, 83, 78)),
+  'background-color-brand-accent': (rgb(224, 215, 194)),
   'background-color-black': (rgb(0, 0, 0)),
   'background-color-brand-primary-light': (rgb(253, 246, 240)),
   'background-color-brand-primary-dark': (rgb(236, 28, 36)),
@@ -33,10 +39,13 @@ $wwd-beauty-map: (
   'color-white': (rgb(255, 255, 255)),
   'color-brand-primary': (rgb(111, 8, 53)),
   'color-grey-light': (rgb(220, 220, 220)),
+  'color-brand-accent-light': (rgb(0, 0, 0)),
   'color-brand-secondary-dark': (rgb(0, 0, 0)),
   'color-brand-secondary-light': (rgb(0, 0, 0)),
+  'color-brand-accent-dark': (rgb(165, 138, 78)),
   'color-grey-dark': (rgb(72, 61, 50)),
   'color-grey': (rgb(140, 140, 140)),
+  'color-brand-accent': (rgb(224, 215, 194)),
   /* The webfont for font-family-primary. */
   'font-family-primary-fancy': ('Publico Banner', Times New Roman, sans-serif),
   /* The fallback font for font-family-primary. */
@@ -45,6 +54,10 @@ $wwd-beauty-map: (
   'font-family-secondary-fancy': ('BentoSans', Arial, sans-serif),
   /* Fallback from secondary-fancy */
   'font-family-secondary': (Arial, serif),
+  /* Available via Typekit. */
+  'font-family-accent-fancy': ('sweet-sans-pro', Helvetica, sans-serif),
+  /* Fallback from secondary-fancy */
+  'font-family-accent': (Helvetica, serif),
   'font-family-body': ('BentoSans', Arial, sans-serif),
   'font-family-basic': (Arial, sans-serif),
   'font-weight-light': (300),
@@ -70,17 +83,7 @@ $wwd-beauty-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
-  'border-color-brand-accent-dark': (rgb(165, 138, 78)),
-  'background-color-brand-accent-dark': (rgb(165, 138, 78)),
   'color-grey-darkest': (rgb(50, 50, 50)),
-  'background-color-brand-accent': (rgb(224, 215, 194)),
-  'border-color-brand-accent': (rgb(224, 215, 194)),
   'color-grey-lightest': (rgb(239, 239, 239)),
-  /* Fallback from secondary-fancy */
-  'font-family-accent': (Helvetica, serif),
-  'color-brand-accent-dark': (rgb(165, 138, 78)),
-  'color-brand-accent': (rgb(224, 215, 194)),
   'border-color-grey-darkest': (rgb(50, 50, 50)),
-  /* Available via Typekit. */
-  'font-family-accent-fancy': ('sweet-sans-pro', Helvetica, sans-serif),
 );

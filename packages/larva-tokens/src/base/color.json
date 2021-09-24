@@ -40,5 +40,14 @@
 		"COLOR_BRAND_SECONDARY_DARK": {
 			"value": "{!BLACK}"
 		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK}"
+		},
+		"COLOR_BRAND_ACCENT_LIGHT": {
+			"value": "{!BLACK}"
+		},
+		"COLOR_BRAND_ACCENT_DARK": {
+			"value": "{!BLACK}"
+		}
 	}
 }

@@ -238,6 +238,13 @@
       "originalValue": "{!BLACK}",
       "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "BORDER_COLOR_BRAND_ACCENT_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT_DARK"
+    },
     "BORDER_COLOR_GREY_LIGHT": {
       "category": "hr-color",
       "type": "color",
@@ -251,6 +258,13 @@
       "value": "rgb(106, 106, 106)",
       "originalValue": "{!GREY_35}",
       "name": "BORDER_COLOR_GREY_DARK"
+    },
+    "BORDER_COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT_LIGHT"
     },
     "BORDER_COLOR_BRAND_SECONDARY_DARK": {
       "category": "hr-color",
@@ -272,6 +286,13 @@
       "value": "rgb(140, 140, 140)",
       "originalValue": "{!GREY_50}",
       "name": "BORDER_COLOR_GREY"
+    },
+    "BORDER_COLOR_BRAND_ACCENT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_ACCENT"
     },
     "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
       "category": "hr-color",
@@ -329,6 +350,20 @@
       "originalValue": "{!BLACK}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT"
+    },
     "BACKGROUND_COLOR_GREY_DARK": {
       "category": "background-color",
       "type": "color",
@@ -357,6 +392,13 @@
       "category": "background-color",
       "originalValue": "{!RED_49}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "value": "rgb(240, 241, 242)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "{!WHITE_95}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "BACKGROUND_COLOR_BLACK": {
       "category": "background-color",
@@ -449,6 +491,13 @@
       "originalValue": "{!GREY_90}",
       "name": "COLOR_GREY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_LIGHT"
+    },
     "COLOR_BRAND_SECONDARY_DARK": {
       "category": "text-color",
       "type": "color",
@@ -463,6 +512,13 @@
       "originalValue": "{!BLACK}",
       "name": "COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_DARK"
+    },
     "COLOR_GREY_DARK": {
       "category": "text-color",
       "type": "color",
@@ -476,6 +532,13 @@
       "value": "rgb(140, 140, 140)",
       "originalValue": "{!GREY_50}",
       "name": "COLOR_GREY"
+    },
+    "COLOR_BRAND_ACCENT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
       "category": "font-family",
@@ -506,6 +569,22 @@
       "category": "font-family",
       "originalValue": "{!PUBLICO}",
       "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "category": "font-family",
+      "value": "Verdana, serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "Verdana, serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "category": "font-family",
+      "value": "Helvetica, serif",
+      "type": "font",
+      "comment": "Fallback for secondary-fancy",
+      "originalValue": "Helvetica, serif",
+      "name": "FONT_FAMILY_ACCENT"
     },
     "FONT_FAMILY_BODY": {
       "value": "'Graphik', sans-serif",
@@ -633,13 +712,6 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
-    },
-    "BACKGROUND_COLOR_BRAND_ACCENT": {
-      "value": "rgb(240, 241, 242)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "{!WHITE_95}",
-      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     }
   }
 }

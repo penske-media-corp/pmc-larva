@@ -273,6 +273,13 @@
       "originalValue": "{!GREY_90}",
       "name": "COLOR_GREY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_LIGHT"
+    },
     "COLOR_BRAND_SECONDARY_DARK": {
       "category": "text-color",
       "type": "color",
@@ -287,6 +294,13 @@
       "originalValue": "{!BLACK}",
       "name": "COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_ACCENT_DARK"
+    },
     "COLOR_GREY_DARK": {
       "category": "text-color",
       "type": "color",
@@ -300,6 +314,13 @@
       "value": "rgb(140, 140, 140)",
       "originalValue": "{!GREY_50}",
       "name": "COLOR_GREY"
+    },
+    "COLOR_BRAND_ACCENT": {
+      "value": "rgb(243, 112, 33)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "{!ORANGE_54}",
+      "name": "COLOR_BRAND_ACCENT"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
       "value": "'Graphik XX Cond', sans-serif",
@@ -329,6 +350,20 @@
       "category": "font-family",
       "originalValue": "{!HELVETICA}",
       "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'IBM Plex Mono', monospace",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "{!IBM_PLEX_MONO}",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "{!HELVETICA}",
+      "name": "FONT_FAMILY_ACCENT"
     },
     "FONT_FAMILY_BODY": {
       "category": "font-family",
@@ -372,6 +407,20 @@
       "originalValue": "{!BLACK}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT_LIGHT"
+    },
     "BACKGROUND_COLOR_GREY_DARK": {
       "category": "background-color",
       "type": "color",
@@ -400,6 +449,13 @@
       "category": "background-color",
       "originalValue": "{!BLUE_21}",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "value": "rgb(240, 241, 242)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "{!WHITE_95}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "BACKGROUND_COLOR_BLACK": {
       "category": "background-color",
@@ -457,20 +513,6 @@
       "originalValue": "{!BLUE_21}",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
-    "BACKGROUND_COLOR_BRAND_ACCENT": {
-      "value": "rgb(240, 241, 242)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "{!WHITE_95}",
-      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
-    },
-    "FONT_FAMILY_ACCENT": {
-      "value": "Helvetica, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "{!HELVETICA}",
-      "name": "FONT_FAMILY_ACCENT"
-    },
     "FONT_FAMILY_BODY_FANCY": {
       "value": "'IBM Plex Serif', serif",
       "type": "font-family",
@@ -484,20 +526,6 @@
       "category": "hr-color",
       "originalValue": "{!RED_46}",
       "name": "BORDER_COLOR_BRAND_PRIMARY"
-    },
-    "COLOR_BRAND_ACCENT": {
-      "value": "rgb(243, 112, 33)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "{!ORANGE_54}",
-      "name": "COLOR_BRAND_ACCENT"
-    },
-    "FONT_FAMILY_ACCENT_FANCY": {
-      "value": "'IBM Plex Mono', monospace",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "{!IBM_PLEX_MONO}",
-      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }

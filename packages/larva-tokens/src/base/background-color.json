@@ -51,6 +51,15 @@
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
 			"value": "{!BLACK}"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+			"value": "{!BLACK}"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK}"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
+			"value": "{!BLACK}"
 		}
 	}
 }
