@@ -137,13 +137,13 @@
       "originalValue": "Helvetica, sans-serif",
       "name": "FONT_FAMILY_BASIC"
     },
-    "FONT_FAMILY_PRIMARY": {
+    "FONT_FAMILY_PRIMARY_FANCY": {
       "category": "font-family",
       "value": "Rocky, serif",
       "type": "font",
-      "comment": "Fallback for primary-fancy",
-      "originalValue": "Georgia, serif",
-      "name": "FONT_FAMILY_PRIMARY"
+      "comment": "Webfont for primary-fancy",
+      "originalValue": "Courier, serif",
+      "name": "FONT_FAMILY_PRIMARY_FANCY"
     },
     "PRIMARY_L_FONT_SIZE_DESKTOP": {
       "selector": "lrv-a-font",
