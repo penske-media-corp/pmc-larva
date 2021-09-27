@@ -1,0 +1,212 @@
+{
+  "imports": [
+    "../base/all.json"
+  ],
+  "props": {
+    "BACKGROUND_COLOR_BRAND_PRIMARY": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "BACKGROUND_COLOR_GREY": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(147, 153, 160)",
+      "originalValue": "{!GREY_50}",
+      "name": "BACKGROUND_COLOR_GREY"
+    },
+    "BACKGROUND_COLOR_GREY_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(112, 117, 123)",
+      "originalValue": "{!GREY_35}",
+      "name": "BACKGROUND_COLOR_GREY_DARK"
+    },
+    "BACKGROUND_COLOR_GREY_DARKEST": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(28, 28, 29)",
+      "originalValue": "{!GREY_20}",
+      "name": "BACKGROUND_COLOR_GREY_DARKEST"
+    },
+    "BACKGROUND_COLOR_GREY_LIGHTEST": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(241, 244, 247)",
+      "originalValue": "{!GREY_96}",
+      "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "BORDER_COLOR_GREY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(147, 153, 160)",
+      "originalValue": "{!GREY_50}",
+      "name": "BORDER_COLOR_GREY"
+    },
+    "BORDER_COLOR_GREY_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(112, 117, 123)",
+      "originalValue": "{!GREY_35}",
+      "name": "BORDER_COLOR_GREY_DARK"
+    },
+    "BORDER_COLOR_GREY_LIGHTEST": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(241, 244, 247)",
+      "originalValue": "{!GREY_96}",
+      "name": "BORDER_COLOR_GREY_LIGHTEST"
+    },
+    "COLOR_BRAND_PRIMARY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY"
+    },
+    "COLOR_BRAND_PRIMARY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY_DARK"
+    },
+    "COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(224, 32, 32)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "COLOR_GREY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(147, 153, 160)",
+      "originalValue": "{!GREY_50}",
+      "name": "COLOR_GREY"
+    },
+    "COLOR_GREY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(112, 117, 123)",
+      "originalValue": "{!GREY_35}",
+      "name": "COLOR_GREY_DARK"
+    },
+    "FONT_FAMILY_BASIC": {
+      "category": "font-family",
+      "value": "Arial, sans-serif",
+      "type": "font-family",
+      "originalValue": "Helvetica, sans-serif",
+      "name": "FONT_FAMILY_BASIC"
+    },
+    "FONT_FAMILY_PRIMARY": {
+      "category": "font-family",
+      "value": "Rocky, serif",
+      "type": "font",
+      "comment": "Fallback for primary-fancy",
+      "originalValue": "Georgia, serif",
+      "name": "FONT_FAMILY_PRIMARY"
+    },
+    "PRIMARY_L_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "36px",
+      "originalValue": "45px",
+      "name": "PRIMARY_L_FONT_SIZE_DESKTOP"
+    },
+    "PRIMARY_L_FONT_SIZE_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "30px",
+      "originalValue": "34px",
+      "name": "PRIMARY_L_FONT_SIZE_MOBILE"
+    },
+    "PRIMARY_M_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "32px",
+      "originalValue": "36px",
+      "name": "PRIMARY_M_FONT_SIZE_DESKTOP"
+    },
+    "PRIMARY_M_FONT_SIZE_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "23px",
+      "originalValue": "32px",
+      "name": "PRIMARY_M_FONT_SIZE_MOBILE"
+    },
+    "PRIMARY_S_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "23px",
+      "originalValue": "36px",
+      "name": "PRIMARY_S_FONT_SIZE_DESKTOP"
+    },
+    "PRIMARY_XL_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "40px",
+      "originalValue": "58px",
+      "name": "PRIMARY_XL_FONT_SIZE_DESKTOP"
+    },
+    "PRIMARY_XL_FONT_SIZE_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "40px",
+      "originalValue": "37px",
+      "name": "PRIMARY_XL_FONT_SIZE_MOBILE"
+    }
+  }
+}
