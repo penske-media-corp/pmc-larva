@@ -109,6 +109,13 @@
 			"originalValue": "{!PMC_RED}",
 			"name": "COLOR_BRAND_PRIMARY_LIGHT"
 		},
+		"COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(247,244,242)",
+			"originalValue": "{!GREY_90}",
+			"name": "COLOR_BRAND_PRIMARY_LIGHTEST"
+		},
 		"COLOR_GREY_DARK": {
 			"category": "text-color",
 			"type": "color",

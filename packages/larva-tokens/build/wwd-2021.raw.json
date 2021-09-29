@@ -638,6 +638,13 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
+    "COLOR_BRAND_PRIMARY_LIGHTEST": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(247, 244, 242)",
+      "originalValue": "rgb(247,244,242)",
+      "name": "COLOR_BRAND_PRIMARY_LIGHTEST"
+    },
     "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST": {
       "category": "background-color",
       "type": "color",
