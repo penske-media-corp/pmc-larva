@@ -1,178 +1,184 @@
 {
 	"imports": [
-	  "../base/all.json"
+		"../base/all.json"
 	],
 	"props": {
-	  "BACKGROUND_COLOR_BRAND_PRIMARY": {
-		"category": "background-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
-		"originalValue": "{!PMC_RED}",
-		"name": "BACKGROUND_COLOR_BRAND_PRIMARY"
-	  },
-	  "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
-		"category": "background-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
-	  },
-	  "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
-		"category": "background-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
-	  },
-	  "BACKGROUND_COLOR_GREY_DARK": {
-		"category": "background-color",
-		"type": "color",
-		"value": "rgb(90,90,90)",
-		"originalValue": "{!GREY_35}",
-		"name": "BACKGROUND_COLOR_GREY_DARK"
-	  },
-	  "BACKGROUND_COLOR_GREY_DARKEST": {
-		"category": "background-color",
-		"type": "color",
-		"value": "rgb(50,50,50)",
-		"originalValue": "{!GREY_20}",
-		"name": "BACKGROUND_COLOR_GREY_DARKEST"
-	  },
-	  "BACKGROUND_COLOR_GREY_LIGHTEST": {
-		"category": "background-color",
-		"type": "color",
-		"value": "rgb(239,239,239)",
-		"originalValue": "{!GREY_96}",
-		"name": "BACKGROUND_COLOR_GREY_LIGHTEST"
-	  },
-	  "BORDER_COLOR_BRAND_PRIMARY": {
-		"category": "hr-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "BORDER_COLOR_BRAND_PRIMARY"
-	  },
-	  "BORDER_COLOR_BRAND_PRIMARY_DARK": {
-		"category": "hr-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
-	  },
-	  "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
-		"category": "hr-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
-	  },
-	  "BORDER_COLOR_GREY_DARK": {
-		"category": "hr-color",
-		"type": "color",
-		"value": "rgb(90,90,90)",
-		"originalValue": "{!GREY_35}",
-		"name": "BORDER_COLOR_GREY_DARK"
-	  },
-	  "BORDER_COLOR_GREY_LIGHTEST": {
-		"category": "hr-color",
-		"type": "color",
-		"value": "rgb(239,239,239)",
-		"originalValue": "{!GREY_96}",
-		"name": "BORDER_COLOR_GREY_LIGHTEST"
-	  },
-	  "COLOR_BRAND_PRIMARY": {
-		"category": "text-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "COLOR_BRAND_PRIMARY"
-	  },
-	  "COLOR_BRAND_PRIMARY_DARK": {
-		"category": "text-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "COLOR_BRAND_PRIMARY_DARK"
-	  },
-	  "COLOR_BRAND_PRIMARY_LIGHT": {
-		"category": "text-color",
-		"type": "color",
-		"value": "rgb(217,33,40)",
-		"originalValue": "{!PMC_RED}",
-		"name": "COLOR_BRAND_PRIMARY_LIGHT"
-	  },
-	  "COLOR_GREY_DARK": {
-		"category": "text-color",
-		"type": "color",
-		"value": "rgb(90,90,90)",
-		"originalValue": "{!GREY_35}",
-		"name": "COLOR_GREY_DARK"
-	  },
-	  "FONT_FAMILY_ACCENT": {
-		"selector": "lrv-a-font",
-		"status": "alpha",
-		"value": "oswald, Helvetica, sans-serif",
-		"type": "font-family",
-		"category": "font-family",
-		"originalValue": "Verdana, serif",
-		"name": "FONT_FAMILY_ACCENT"
-	  },
-	  "FONT_FAMILY_ACCENT_FANCY": {
-		"selector": "lrv-a-font",
-		"status": "alpha",
-		"value": "oswald, Helvetica, sans-serif",
-		"type": "font-family",
-		"category": "font-family",
-		"originalValue": "Verdana, sans-serif",
-		"name": "FONT_FAMILY_ACCENT_FANCY"
-	  },
-	  "FONT_FAMILY_BASIC": {
-		"category": "font-family",
-		"value": "lora, Georgia, serif",
-		"type": "font-family",
-		"originalValue": "Helvetica, sans-serif",
-		"name": "FONT_FAMILY_BASIC"
-	  },
-	  "FONT_FAMILY_BODY": {
-		"category": "font-family",
-		"value": "lora, Georgia, serif",
-		"type": "font",
-		"originalValue": "Georgia, serif",
-		"name": "FONT_FAMILY_BODY"
-	  },
-	  "FONT_FAMILY_PRIMARY": {
-		"category": "font-family",
-		"value": "ivypresto-headline, 'Times New Roman', serif",
-		"type": "font",
-		"comment": "Fallback for primary-fancy",
-		"originalValue": "Georgia, serif",
-		"name": "FONT_FAMILY_PRIMARY"
-	  },
-	  "FONT_FAMILY_PRIMARY_FANCY": {
-		"category": "font-family",
-		"value": "ivypresto-headline, 'Times New Roman', serif",
-		"type": "font",
-		"comment": "The webfont, loaded async",
-		"originalValue": "Courier, serif",
-		"name": "FONT_FAMILY_PRIMARY_FANCY"
-	  },
-	  "FONT_FAMILY_SECONDARY": {
-		"category": "font-family",
-		"value": "proxima-nova, Arial, sans-serif",
-		"type": "font",
-		"comment": "Fallback for secondary-fancy",
-		"originalValue": "Helvetica, serif",
-		"name": "FONT_FAMILY_SECONDARY"
-	  },
-	  "FONT_FAMILY_SECONDARY_FANCY": {
-		"category": "font-family",
-		"value": "proxima-nova, Arial, sans-serif",
-		"type": "font",
-		"comment": "The webfont, loaded async",
-		"originalValue": "Papyrus, serif",
-		"name": "FONT_FAMILY_SECONDARY_FANCY"
-	  }
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"category": "background-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
+			"originalValue": "{!PMC_RED}",
+			"name": "BACKGROUND_COLOR_BRAND_PRIMARY"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+			"category": "background-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+			"category": "background-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"category": "background-color",
+			"type": "color",
+			"value": "rgb(247,244,242)",
+			"originalValue": "{!GREY_90}",
+			"name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"category": "background-color",
+			"type": "color",
+			"value": "rgb(90,90,90)",
+			"originalValue": "{!GREY_35}",
+			"name": "BACKGROUND_COLOR_GREY_DARK"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"category": "background-color",
+			"type": "color",
+			"value": "rgb(50,50,50)",
+			"originalValue": "{!GREY_20}",
+			"name": "BACKGROUND_COLOR_GREY_DARKEST"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"category": "background-color",
+			"type": "color",
+			"value": "rgb(239,239,239)",
+			"originalValue": "{!GREY_96}",
+			"name": "BACKGROUND_COLOR_GREY_LIGHTEST"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"category": "hr-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "BORDER_COLOR_BRAND_PRIMARY"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_DARK": {
+			"category": "hr-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+			"category": "hr-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"category": "hr-color",
+			"type": "color",
+			"value": "rgb(90,90,90)",
+			"originalValue": "{!GREY_35}",
+			"name": "BORDER_COLOR_GREY_DARK"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"category": "hr-color",
+			"type": "color",
+			"value": "rgb(239,239,239)",
+			"originalValue": "{!GREY_96}",
+			"name": "BORDER_COLOR_GREY_LIGHTEST"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "COLOR_BRAND_PRIMARY"
+		},
+		"COLOR_BRAND_PRIMARY_DARK": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "COLOR_BRAND_PRIMARY_DARK"
+		},
+		"COLOR_BRAND_PRIMARY_LIGHT": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(217,33,40)",
+			"originalValue": "{!PMC_RED}",
+			"name": "COLOR_BRAND_PRIMARY_LIGHT"
+		},
+		"COLOR_GREY_DARK": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(90,90,90)",
+			"originalValue": "{!GREY_35}",
+			"name": "COLOR_GREY_DARK"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"selector": "lrv-a-font",
+			"status": "alpha",
+			"value": "oswald, Helvetica, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"originalValue": "Verdana, serif",
+			"name": "FONT_FAMILY_ACCENT"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"selector": "lrv-a-font",
+			"status": "alpha",
+			"value": "oswald, Helvetica, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"originalValue": "Verdana, sans-serif",
+			"name": "FONT_FAMILY_ACCENT_FANCY"
+		},
+		"FONT_FAMILY_BASIC": {
+			"category": "font-family",
+			"value": "lora, Georgia, serif",
+			"type": "font-family",
+			"originalValue": "Helvetica, sans-serif",
+			"name": "FONT_FAMILY_BASIC"
+		},
+		"FONT_FAMILY_BODY": {
+			"category": "font-family",
+			"value": "lora, Georgia, serif",
+			"type": "font",
+			"originalValue": "Georgia, serif",
+			"name": "FONT_FAMILY_BODY"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"category": "font-family",
+			"value": "ivypresto-headline, 'Times New Roman', serif",
+			"type": "font",
+			"comment": "Fallback for primary-fancy",
+			"originalValue": "Georgia, serif",
+			"name": "FONT_FAMILY_PRIMARY"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"category": "font-family",
+			"value": "ivypresto-headline, 'Times New Roman', serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "Courier, serif",
+			"name": "FONT_FAMILY_PRIMARY_FANCY"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"category": "font-family",
+			"value": "proxima-nova, Arial, sans-serif",
+			"type": "font",
+			"comment": "Fallback for secondary-fancy",
+			"originalValue": "Helvetica, serif",
+			"name": "FONT_FAMILY_SECONDARY"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"category": "font-family",
+			"value": "proxima-nova, Arial, sans-serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "Papyrus, serif",
+			"name": "FONT_FAMILY_SECONDARY_FANCY"
+		}
 	}
-  }
-  
+}
