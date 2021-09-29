@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-tokens - Update class that applies typography to heading module.
 * larva-tokens - Capture build files missed in `0.3.6`.
 * larva-css - Add two-column grid algorithm for tablet breakpoint.
+* site - Support updating `wwd-2021` tokens.
 * root - fix `prettier` build dependency.
 
 ## 0.3.6 - 09-23-2021
