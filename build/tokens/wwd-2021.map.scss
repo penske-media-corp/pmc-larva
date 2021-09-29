@@ -19,7 +19,6 @@ $wwd-2021-map: (
   'background-color-grey': (rgb(140, 140, 140)),
   /* The background color of the main body of the site. */
   'background-color-body': (rgb(255, 255, 255)),
-  /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
   'background-color-brand-secondary': (rgb(0, 0, 0)),
   'background-color-black': (rgb(0, 0, 0)),
   'background-color-brand-primary-light': (rgb(217, 33, 40)),
@@ -72,6 +71,12 @@ $wwd-2021-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
+  'background-color-brand-secondary-lightest': (rgb(248, 248, 248)),
+  'color-brand-primary-lightest': (rgb(247, 244, 242)),
+  'border-color-brand-secondary-lightest': (rgb(248, 248, 248)),
+  'color-brand-secondary-lightest': (rgb(248, 248, 248)),
+  'background-color-brand-primary-lightest': (rgb(247, 244, 242)),
+  'border-color-brand-primary-lightest': (rgb(247, 244, 242)),
   'font-family-accent': (oswald, Helvetica, sans-serif),
   'font-family-accent-fancy': (oswald, Helvetica, sans-serif),
 );
