@@ -74,6 +74,13 @@
 			"originalValue": "{!PMC_RED}",
 			"name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
 		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHTEST": {
+			"category": "hr-color",
+			"type": "color",
+			"value": "rgb(247,244,242)",
+			"originalValue": "{!GREY_90}",
+			"name": "BORDER_COLOR_BRAND_PRIMARY_LIGHTEST"
+		},
 		"BORDER_COLOR_GREY_DARK": {
 			"category": "hr-color",
 			"type": "color",

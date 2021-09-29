@@ -58,6 +58,7 @@
   "SPACING_2": "2rem",
   "COLOR_BRAND_PRIMARY_LIGHTEST": "rgb(247, 244, 242)",
   "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST": "rgb(247, 244, 242)",
+  "BORDER_COLOR_BRAND_PRIMARY_LIGHTEST": "rgb(247, 244, 242)",
   "FONT_FAMILY_ACCENT": "oswald, Helvetica, sans-serif",
   "FONT_FAMILY_ACCENT_FANCY": "oswald, Helvetica, sans-serif"
 }

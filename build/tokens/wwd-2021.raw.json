@@ -652,6 +652,13 @@
       "originalValue": "rgb(247,244,242)",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST"
     },
+    "BORDER_COLOR_BRAND_PRIMARY_LIGHTEST": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(247, 244, 242)",
+      "originalValue": "rgb(247,244,242)",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_LIGHTEST"
+    },
     "FONT_FAMILY_ACCENT": {
       "selector": "lrv-a-font",
       "status": "alpha",
