@@ -638,6 +638,13 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(247, 244, 242)",
+      "originalValue": "rgb(247,244,242)",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST"
+    },
     "FONT_FAMILY_ACCENT": {
       "selector": "lrv-a-font",
       "status": "alpha",

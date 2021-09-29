@@ -72,6 +72,7 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
+  --background-color-brand-primary-lightest: rgb(247, 244, 242);
   --font-family-accent: oswald, Helvetica, sans-serif;
   --font-family-accent-fancy: oswald, Helvetica, sans-serif;
 }
