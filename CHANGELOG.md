@@ -5,10 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-tokens - Add additional colors for WWD 2021.
+* larva-tokens - Add variations for all heading levels.
+* larva-tokens - Update class that applies typography to heading module.
+* larva-tokens - Capture build files missed in `0.3.6`.
+* larva-css - Add two-column grid algorithm for tablet breakpoint.
+* site - Support updating `wwd-2021` tokens.
+* root - fix `prettier` build dependency.
 
 ## 0.3.6 - 09-23-2021
-* larva-tokens - Add BBPro tokens
-* 
+* larva-tokens - Add BBPro tokens.
+
 ## 0.3.5 - 09-23-2021
 * Re-release 0.3.4 as `latest` after it was released as `next`.
 

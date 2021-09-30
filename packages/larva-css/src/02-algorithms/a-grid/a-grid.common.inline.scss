@@ -15,7 +15,7 @@
 }
 
 .lrv-a-grid-item {
-	// Remove flex charactaristics to honor flex-basis value.
+	// Remove flex characteristics to honor flex-basis value.
 	flex: none;
 	padding: 0.625rem;
 
@@ -31,6 +31,10 @@ $grids: (
 	(
 		columns: 3,
 		spans: ( 2 ),
+	),
+	(
+		columns: 2,
+		breakpoint: tablet,
 	),
 	(
 		columns: 3,
