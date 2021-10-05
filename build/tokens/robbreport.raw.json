@@ -696,8 +696,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
+      "value": "14px",
+      "originalValue": "14px",
       "name": "BODY_S_FONT_SIZE_DESKTOP"
     },
     "PRIMARY_S_FONT_SIZE_DESKTOP": {
