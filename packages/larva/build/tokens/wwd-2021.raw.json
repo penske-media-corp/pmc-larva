@@ -263,7 +263,7 @@
       "category": "hr-color",
       "type": "color",
       "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "originalValue": "rgb(0,0,0)",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "BORDER_COLOR_GREY": {
@@ -355,8 +355,7 @@
       "category": "background-color",
       "type": "color",
       "value": "rgb(0, 0, 0)",
-      "comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
-      "originalValue": "{!BLACK}",
+      "originalValue": "rgb(0,0,0)",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BLACK": {
@@ -406,7 +405,7 @@
       "category": "text-color",
       "type": "color",
       "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "originalValue": "rgb(0,0,0)",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
@@ -637,6 +636,48 @@
       "value": "2rem",
       "originalValue": "2rem",
       "name": "SPACING_2"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHTEST": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(248, 248, 248)",
+      "originalValue": "rgb(248,248,248)",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHTEST"
+    },
+    "COLOR_BRAND_PRIMARY_LIGHTEST": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(247, 244, 242)",
+      "originalValue": "rgb(247,244,242)",
+      "name": "COLOR_BRAND_PRIMARY_LIGHTEST"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY_LIGHTEST": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(248, 248, 248)",
+      "originalValue": "rgb(248,248,248)",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHTEST"
+    },
+    "COLOR_BRAND_SECONDARY_LIGHTEST": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(248, 248, 248)",
+      "originalValue": "rgb(248,248,248)",
+      "name": "COLOR_BRAND_SECONDARY_LIGHTEST"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(247, 244, 242)",
+      "originalValue": "rgb(247,244,242)",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHTEST"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_LIGHTEST": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(247, 244, 242)",
+      "originalValue": "rgb(247,244,242)",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_LIGHTEST"
     },
     "FONT_FAMILY_ACCENT": {
       "selector": "lrv-a-font",
