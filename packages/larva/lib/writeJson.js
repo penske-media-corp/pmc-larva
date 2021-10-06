@@ -6,6 +6,7 @@ const getPatternData = require( './utils/getPatternData' );
 const getModuleNamesFromDirectory = require( './utils/getModuleNamesFromDirectory' );
 const getPatternVariants = require( './utils/getPatternVariants' );
 const writeJsonToFile = require( './utils/writeJsonToFile' );
+const { exit } = require('process');
 
 // The fromLarva flag can come from CLI argument
 module.exports = function writeJson( patternConfig, fromLarva = false ) {
@@ -26,6 +27,15 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 				name: moduleName,
 				variant: variant
 			} );
+
+			if ( moduleData.error ) {
+				console.warn(
+					chalk.red( moduleData.error.stack )
+				);
+
+				// Terminate process at error.
+				exit();
+			}
 
 			const jsonDestPath = path.resolve( patternConfig.projectPatternsDir, '../../build/json/modules/' + moduleName + '.' + variant + '.json' );
 
