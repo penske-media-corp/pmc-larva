@@ -21,7 +21,7 @@ jobs:
       run: |
         chmod +x ./scripts/install-dependencies.sh
         ./scripts/install-dependencies.sh
-	  shell: bash
+      shell: bash
     - run: ./node_modules/.bin/lerna bootstrap
     - name: Run Tests
       run: npm test
