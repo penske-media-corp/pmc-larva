@@ -26,3 +26,5 @@ jobs:
       run: npm run lint
       env:
         CI: true
+	- name: Confirm successful build
+	  run: npm run prod
