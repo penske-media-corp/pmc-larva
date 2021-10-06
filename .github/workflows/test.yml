@@ -19,8 +19,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Dependencies
       run: |
-	    chmod +x ./scripts/install-dependencies.sh
-	    ./scripts/install-dependencies.sh
+        chmod +x ./scripts/install-dependencies.sh
+        ./scripts/install-dependencies.sh
 	  shell: bash
     - run: ./node_modules/.bin/lerna bootstrap
     - name: Run Tests
