@@ -2,11 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Prefix entries in the changelog with {package} - description of change.
 
 ## Unpublished
 * larva-tokens - Add Robb Report tokens
-* writeJSON will fail on syntax errors
+* larva - writeJSON will fail on syntax errors
 
 ## 0.3.7 - 09-30-2021
 * larva-tokens - Add additional colors for WWD 2021.
