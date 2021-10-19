@@ -9,8 +9,8 @@ This is configuration only instance of Larva. There should be no CSS or JS compi
 ## Links
 
 * [{Project} design tokens]().
-* [{Project} style guide on Invision or XD](https://xd.adobe.com/view/18b9cd46-8ded-4ab8-8df7-f813b705b129-4dea/screen/aa08e6ab-e6f3-4630-b69a-745b1c0263c6/specs/).
-* [{Project} style guide to the static site]().
+* [{Project} style guide on Invision or XD]().
+* [{Project} style guide on the static site]().
 
 ## Development
 
