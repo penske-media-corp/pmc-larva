@@ -16,7 +16,7 @@ This is configuration only instance of Larva. There should be no CSS or JS compi
 
 To start developing:
 
-1. Run `npm install` from assets/.
+1. Run `npm install` from theme-directory/assets.
 2. Run `npm run larva` to open the Larva server.
 
 Add pattern configurations by creating variants for modules.
