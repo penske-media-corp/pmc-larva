@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva - Support configuration for copying local webfonts from the theme to the static sites
+* larva - Support configuration for copying local assets from the theme to the static sites
 * larva-patterns - Add template level test with hub modules
 
 ## 0.3.8 - 10-19-2021
