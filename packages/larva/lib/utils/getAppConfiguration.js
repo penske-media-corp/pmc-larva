@@ -52,9 +52,7 @@ const defaultConfig = {
 		})(),
 	},
 
-	webfonts: {
-		path: path.resolve( './src/fonts' )
-	},
+	themeAssets: {},
 };
 
 module.exports = function getAppConfiguration( key, usePackageDefault = true ) {

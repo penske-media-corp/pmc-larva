@@ -8,7 +8,7 @@ const getAppConfiguration = require( './utils/getAppConfiguration' );
 const copySyncHelper = require( './utils/copySyncHelper' );
 
 const assetsConfig = getAppConfiguration( 'assets' );
-const webfontsConfig = getAppConfiguration( 'webfonts' );
+const themeAssetsConfig = getAppConfiguration( 'themeAssets' );
 
 /**
  * Generate Static HTML
@@ -67,7 +67,15 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	});
 
 	copySyncHelper( publicAssetsSrc, publicAssetsDest );
-	copySyncHelper( webfontsConfig.path, path.join( publicAssetsDest, 'webfonts' ) );
+
+	const themeAssetKeys = Object.keys( themeAssetsConfig );
+
+	themeAssetKeys.forEach( key => {
+		const src = themeAssetsConfig[key];
+		const dest = path.join( buildPath, `../assets/theme/${key}` );
+
+		copySyncHelper( src, dest );
+	});
 
 	// Build the site.
 	// Cycle through the list of routes and write the response
