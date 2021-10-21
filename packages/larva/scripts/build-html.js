@@ -32,7 +32,16 @@ const staticPaths = [
 	'',
 ];
 
-staticPaths.forEach( p => routesArr.push( p ) );
+staticPaths.forEach( p => {
+	// Only build these paths for the larva source.
+	if ( p === 'style-guide' || p === 'css' ) {
+		if ( 'larva' !== source ) {
+			return;
+		}
+	}
+
+	routesArr.push( p )
+});
 
 generateStatic( routesArr, buildPath, ( message ) => {
 
