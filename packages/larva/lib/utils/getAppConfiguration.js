@@ -50,7 +50,11 @@ const defaultConfig = {
 
 			return path.resolve( './node_modules/@penskemediacorp/larva' );
 		})(),
-	}
+	},
+
+	webfonts: {
+		path: path.resolve( './src/fonts' )
+	},
 };
 
 module.exports = function getAppConfiguration( key, usePackageDefault = true ) {
