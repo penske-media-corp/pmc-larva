@@ -23,6 +23,7 @@ const app = express();
 const patternConfig = getAppConfiguration( 'patterns' );
 const brandConfig = getAppConfiguration( 'brand' );
 const assetsConfig = getAppConfiguration( 'assets' );
+const webfontsConfig = getAppConfiguration( 'webfonts' );
 const twigPaths = getPatternPathsToLoad( patternConfig );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
@@ -83,7 +84,11 @@ if ( fs.existsSync( assetsConfig.path ) ) {
 	app.use( '/assets' , express.static( assetsConfig.path ) );
 }
 
-app.get( '/:source?/css', function (req, res) {
+if ( fs.existsSync( webfontsConfig.path ) ) {
+	app.use( '/assets/public/webfonts' , express.static( webfontsConfig.path ) );
+}
+
+app.use( '/:source?/css', function (req, res) {
 
 	/**
 	 * Generate Larva CSS Docs

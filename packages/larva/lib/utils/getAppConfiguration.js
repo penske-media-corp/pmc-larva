@@ -49,7 +49,7 @@ const defaultConfig = {
 			}
 
 			return path.resolve( './node_modules/@penskemediacorp/larva' );
-		})()
+		})(),
 	}
 };
 

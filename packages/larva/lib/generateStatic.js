@@ -8,6 +8,7 @@ const getAppConfiguration = require( './utils/getAppConfiguration' );
 const copySyncHelper = require( './utils/copySyncHelper' );
 
 const assetsConfig = getAppConfiguration( 'assets' );
+const webfontsConfig = getAppConfiguration( 'webfonts' );
 
 /**
  * Generate Static HTML
@@ -50,11 +51,10 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	})();
 	const publicAssetsDest = path.join( buildPath, '../assets/public' );
 
-	// Could do a globby here, but this won't change much so it might be okay.
 	const builtAssets = [
 		'js',
 		'css',
-		'tokens', // TODO: only copy tokens for the brand
+		'tokens',
 		'images',
 		'svg'
 	];
@@ -67,6 +67,7 @@ module.exports = function generateStatic( routesArr, buildPath, done, urlBase = 
 	});
 
 	copySyncHelper( publicAssetsSrc, publicAssetsDest );
+	copySyncHelper( webfontsConfig.path, path.join( publicAssetsDest, 'webfonts' ) );
 
 	// Build the site.
 	// Cycle through the list of routes and write the response
