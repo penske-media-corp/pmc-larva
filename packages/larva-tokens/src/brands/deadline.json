@@ -1,46 +1,222 @@
 {
 	"imports": [
-		"../base/all.json"
+	  "../base/all.json"
 	],
 	"props": {
-		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "{!BALTO}",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "Available via Typekit."
-		},
-		"FONT_FAMILY_PRIMARY": {
-			"value": "{!HELVETICA}",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "Fallback for primary-fancy."
-		},
-		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "{!EKSELL}",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "Available via @font-face."
-		},
-		"FONT_FAMILY_SECONDARY": {
-			"value": "{!GEORGIA}",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "Fallback for secondary-fancy"
-		},
-		"FONT_FAMILY_BODY": {
-			"value": "{!GEORGIA}",
-			"type": "font-family",
-			"category": "font-family"
-		},
-		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "{!RED_29}",
-			"type": "color",
-			"category": "background-color"
-		},
-		"COLOR_BRAND_PRIMARY": {
-			"value": "{!RED_29}",
-			"type": "color",
-			"category": "text-color"
-		}
+	  "BACKGROUND_COLOR_BRAND_PRIMARY": {
+		"value": "rgb(146, 2, 0)",
+		"type": "color",
+		"category": "background-color",
+		"originalValue": "{!RED_29}",
+		"name": "BACKGROUND_COLOR_BRAND_PRIMARY"
+	  },
+	  "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#550100",
+		"originalValue": "{!PMC_RED}",
+		"name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
+	  },
+	  "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#CF3535",
+		"originalValue": "{!PMC_RED}",
+		"name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
+	  },
+	  "BACKGROUND_COLOR_BRAND_SECONDARY": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#4670D2",
+		"comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
+		"originalValue": "{!BLACK}",
+		"name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+	  },
+	  "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#E0EDF5",
+		"originalValue": "{!BLACK}",
+		"name": "BACKGROUND_COLOR_BRAND_SECONDARY_DARK"
+	  },
+	  "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#F1F8FC",
+		"originalValue": "{!BLACK}",
+		"name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
+	  },
+	  "BACKGROUND_COLOR_GREY": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#9B9B9B",
+		"originalValue": "{!GREY_50}",
+		"name": "BACKGROUND_COLOR_GREY"
+	  },
+	  "BACKGROUND_COLOR_GREY_DARK": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#616161",
+		"originalValue": "{!GREY_35}",
+		"name": "BACKGROUND_COLOR_GREY_DARK"
+	  },
+	  "BACKGROUND_COLOR_GREY_DARKEST": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#191919",
+		"originalValue": "{!GREY_20}",
+		"name": "BACKGROUND_COLOR_GREY_DARKEST"
+	  },
+	  "BACKGROUND_COLOR_GREY_LIGHTEST": {
+		"category": "background-color",
+		"type": "color",
+		"value": "#DDDEE4",
+		"originalValue": "{!GREY_96}",
+		"name": "BACKGROUND_COLOR_GREY_LIGHTEST"
+	  },
+	  "BORDER_COLOR_BRAND_PRIMARY_DARK": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#550100",
+		"originalValue": "{!PMC_RED}",
+		"name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
+	  },
+	  "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#CF3535",
+		"originalValue": "{!PMC_RED}",
+		"name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
+	  },
+	  "BORDER_COLOR_BRAND_SECONDARY": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#4670D2",
+		"originalValue": "{!BLACK}",
+		"name": "BORDER_COLOR_BRAND_SECONDARY"
+	  },
+	  "BORDER_COLOR_BRAND_SECONDARY_DARK": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#E0EDF5",
+		"originalValue": "{!BLACK}",
+		"name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
+	  },
+	  "BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#F1F8FC",
+		"originalValue": "{!BLACK}",
+		"name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
+	  },
+	  "BORDER_COLOR_GREY": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#9B9B9B",
+		"originalValue": "{!GREY_50}",
+		"name": "BORDER_COLOR_GREY"
+	  },
+	  "BORDER_COLOR_GREY_DARK": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#616161",
+		"originalValue": "{!GREY_35}",
+		"name": "BORDER_COLOR_GREY_DARK"
+	  },
+	  "BORDER_COLOR_GREY_LIGHTEST": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "#DDDEE4",
+		"originalValue": "{!GREY_96}",
+		"name": "BORDER_COLOR_GREY_LIGHTEST"
+	  },
+	  "COLOR_BRAND_PRIMARY": {
+		"value": "rgb(146, 2, 0)",
+		"type": "color",
+		"category": "text-color",
+		"originalValue": "{!RED_29}",
+		"name": "COLOR_BRAND_PRIMARY"
+	  },
+	  "COLOR_BRAND_PRIMARY_DARK": {
+		"category": "text-color",
+		"type": "color",
+		"value": "#550100",
+		"originalValue": "{!PMC_RED}",
+		"name": "COLOR_BRAND_PRIMARY_DARK"
+	  },
+	  "COLOR_BRAND_PRIMARY_LIGHT": {
+		"category": "text-color",
+		"type": "color",
+		"value": "#CF3535",
+		"originalValue": "{!PMC_RED}",
+		"name": "COLOR_BRAND_PRIMARY_LIGHT"
+	  },
+	  "COLOR_BRAND_SECONDARY": {
+		"category": "text-color",
+		"type": "color",
+		"value": "#4670D2",
+		"originalValue": "{!BLACK}",
+		"name": "COLOR_BRAND_SECONDARY"
+	  },
+	  "COLOR_BRAND_SECONDARY_DARK": {
+		"category": "text-color",
+		"type": "color",
+		"value": "#E0EDF5",
+		"originalValue": "{!BLACK}",
+		"name": "COLOR_BRAND_SECONDARY_DARK"
+	  },
+	  "COLOR_BRAND_SECONDARY_LIGHT": {
+		"category": "text-color",
+		"type": "color",
+		"value": "#F1F8FC",
+		"originalValue": "{!BLACK}",
+		"name": "COLOR_BRAND_SECONDARY_LIGHT"
+	  },
+	  "COLOR_GREY": {
+		"category": "text-color",
+		"type": "color",
+		"value": "#9B9B9B",
+		"originalValue": "{!GREY_50}",
+		"name": "COLOR_GREY"
+	  },
+	  "COLOR_GREY_DARK": {
+		"category": "text-color",
+		"type": "color",
+		"value": "#616161",
+		"originalValue": "{!GREY_35}",
+		"name": "COLOR_GREY_DARK"
+	  },
+	  "FONT_FAMILY_PRIMARY": {
+		"value": "Helvetica, sans-serif",
+		"type": "font-family",
+		"category": "font-family",
+		"comment": "Fallback for primary-fancy.",
+		"originalValue": "{!HELVETICA}",
+		"name": "FONT_FAMILY_PRIMARY"
+	  },
+	  "FONT_FAMILY_PRIMARY_FANCY": {
+		"value": "'Balto', Helvetica, sans-serif",
+		"type": "font-family",
+		"category": "font-family",
+		"comment": "Available via Typekit.",
+		"originalValue": "{!BALTO}",
+		"name": "FONT_FAMILY_PRIMARY_FANCY"
+	  },
+	  "FONT_FAMILY_SECONDARY": {
+		"value": "Georgia, serif",
+		"type": "font-family",
+		"category": "font-family",
+		"comment": "Fallback for secondary-fancy",
+		"originalValue": "{!GEORGIA}",
+		"name": "FONT_FAMILY_SECONDARY"
+	  },
+	  "FONT_FAMILY_SECONDARY_FANCY": {
+		"value": "'Eksell', Georgia, serif",
+		"type": "font-family",
+		"category": "font-family",
+		"comment": "Available via @font-face.",
+		"originalValue": "{!EKSELL}",
+		"name": "FONT_FAMILY_SECONDARY_FANCY"
+	  }
 	}
-}
+  }
