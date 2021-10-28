@@ -7,6 +7,7 @@ const fixture = path.join( __dirname, '../fixtures' );
 const getAppConfiguration = require( '../../lib/utils/getAppConfiguration' );
 const writeJson = require( '../../lib/writeJson' );
 const patternConfig = getAppConfiguration( 'patterns' );
+console.log(patternConfig);
 
 const expectedJsonPath = path.join( fixture, './build/json/modules/' );
 
@@ -15,8 +16,9 @@ describe( 'writeJson', () => {
 	let testPrototypePath = path.join( fixture, './src/patterns/modules/test-module/test-module.prototype.js' );
 	let testVariantJsonPath = path.join( expectedJsonPath, 'test-module.featured.json' );
 	let testIgnoredJsonPath = path.join( expectedJsonPath, 'ignore-me.prototype.json' );
+	// let testBrokenJSONPath = path.join( expectedJsonPath, '/src/patterns/modules/broken-prototype/broken-prototype.json ')
 
-	beforeAll( ( done ) => {
+	const doWork = ( done ) => {
 		exec( 'mkdirp ' + expectedJsonPath, ( err ) => {
 			if ( err ) {
 				console.error( err );
@@ -26,7 +28,9 @@ describe( 'writeJson', () => {
 				done();
 			}
 		});
-	});
+	};
+
+	beforeAll(doWork);
 
 	it( 'creates a JSON file', () => {
 		assert.equal( fs.existsSync( testJsonPath ), true );
@@ -42,6 +46,19 @@ describe( 'writeJson', () => {
 
 	it( 'creates a variant JSON', () => {
 		assert.equal( fs.existsSync( testVariantJsonPath ), true );
+	});
+
+	it.only('should exit if there is an error in the module data', async () => {
+		const malFormedJSON = "{ notAnObject: [ 'but has properties': 'like one' ] }";
+		fs.writeFileSync( `${expectedJsonPath}/badJson.prototype.js`, malFormedJSON );
+		// console.log( fs.existsSync( `${expectedJsonPath}/badJson.prototype.js` ));
+		// console.log( JSON.parse( require( `${expectedJsonPath}/badJson.prototype.js` )));
+
+		await writeJson(patternConfig);
+
+		// expect(
+		// 	writeJson()
+		// )
 	});
 
 	afterAll( ( done ) => {
