@@ -228,7 +228,7 @@
       "value": "rgb(65, 126, 244)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "{!BLUE_61}",
+      "originalValue": "rgb(65, 126, 244)",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
@@ -263,7 +263,7 @@
       "value": "rgb(238, 232, 9)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "{!YELLOW_48}",
+      "originalValue": "rgb(238, 232, 9)",
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_GREY_LIGHT": {
@@ -305,7 +305,7 @@
       "value": "'Para Supreme Regular', serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "{!PARA_SUPREME}",
+      "originalValue": "'Para Supreme Regular', serif",
       "name": "FONT_FAMILY_PRIMARY_FANCY"
     },
     "FONT_FAMILY_PRIMARY": {
@@ -320,7 +320,7 @@
       "value": "'IBM Plex Sans', sans-serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "{!IBM_PLEX_SANS}",
+      "originalValue": "'IBM Plex Sans', sans-serif",
       "name": "FONT_FAMILY_SECONDARY_FANCY"
     },
     "FONT_FAMILY_SECONDARY": {
@@ -435,7 +435,7 @@
       "value": "rgb(238, 232, 9)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "{!YELLOW_48}",
+      "originalValue": "rgb(238, 232, 9)",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_DARKEST": {
@@ -527,8 +527,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "11px",
-      "originalValue": "11px",
+      "value": "14px",
+      "originalValue": "14px",
       "name": "SECONDARY_S_FONT_SIZE_MOBILE"
     },
     "ACCENT_REGULAR_XXS_FONT_SIZE_DESKTOP": {
@@ -545,8 +545,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "11px",
-      "originalValue": "11px",
+      "value": "18px",
+      "originalValue": "18px",
       "name": "SECONDARY_M_FONT_SIZE_MOBILE"
     },
     "ACCENT_XXS_FONT_SIZE_DESKTOP": {
@@ -577,8 +577,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "17px",
-      "originalValue": "17px",
+      "value": "18px",
+      "originalValue": "18px",
       "name": "SECONDARY_L_FONT_SIZE_MOBILE"
     },
     "SECONDARY_L_FONT_SIZE_DESKTOP": {
@@ -586,8 +586,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "30px",
-      "originalValue": "30px",
+      "value": "initial",
+      "originalValue": "initial",
       "name": "SECONDARY_L_FONT_SIZE_DESKTOP"
     },
     "SECONDARY_REGULAR_M_FONT_SIZE_MOBILE": {
@@ -595,8 +595,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "15px",
-      "originalValue": "15px",
+      "value": "16px",
+      "originalValue": "16px",
       "name": "SECONDARY_REGULAR_M_FONT_SIZE_MOBILE"
     },
     "ACCENT_XXS_FONT_SIZE_MOBILE": {
@@ -613,8 +613,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "14px",
-      "originalValue": "14px",
+      "value": "initial",
+      "originalValue": "initial",
       "name": "SECONDARY_M_FONT_SIZE_DESKTOP"
     },
     "ACCENT_S_FONT_SIZE_MOBILE": {
@@ -667,8 +667,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "12px",
-      "originalValue": "12px",
+      "value": "initial",
+      "originalValue": "initial",
       "name": "SECONDARY_S_FONT_SIZE_DESKTOP"
     },
     "ACCENT_L_FONT_SIZE_MOBILE": {
@@ -1221,8 +1221,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "bold",
+      "originalValue": "bold",
       "name": "SECONDARY_S_FONT_WEIGHT_MOBILE"
     },
     "PRIMARY_L_FONT_WEIGHT_DESKTOP": {
@@ -1280,8 +1280,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "bold",
+      "originalValue": "bold",
       "name": "SECONDARY_L_FONT_WEIGHT_MOBILE"
     },
     "SECONDARY_REGULAR_M_FONT_WEIGHT_MOBILE": {
@@ -1432,8 +1432,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "14px",
-      "originalValue": "14px",
+      "value": "21px",
+      "originalValue": "21px",
       "name": "SECONDARY_S_LINE_HEIGHT_MOBILE"
     },
     "BODY_S_LINE_HEIGHT_DESKTOP": {
@@ -1491,8 +1491,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "15px",
-      "originalValue": "15px",
+      "value": "21px",
+      "originalValue": "21px",
       "name": "SECONDARY_M_LINE_HEIGHT_MOBILE"
     },
     "SECONDARY_L_LINE_HEIGHT_MOBILE": {
@@ -1525,8 +1525,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "15px",
-      "originalValue": "15px",
+      "value": "21px",
+      "originalValue": "21px",
       "name": "SECONDARY_REGULAR_M_LINE_HEIGHT_MOBILE"
     },
     "SECONDARY_REGULAR_M_LINE_HEIGHT_DESKTOP": {
@@ -1559,8 +1559,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "35px",
-      "originalValue": "35px",
+      "value": "initial",
+      "originalValue": "initial",
       "name": "SECONDARY_L_LINE_HEIGHT_DESKTOP"
     },
     "SECONDARY_M_LINE_HEIGHT_DESKTOP": {
@@ -1568,8 +1568,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "17px",
-      "originalValue": "17px",
+      "value": "initial",
+      "originalValue": "initial",
       "name": "SECONDARY_M_LINE_HEIGHT_DESKTOP"
     },
     "ACCENT_REGULAR_XXS_LINE_HEIGHT_MOBILE": {
@@ -1622,8 +1622,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "17px",
-      "originalValue": "17px",
+      "value": "initial",
+      "originalValue": "initial",
       "name": "SECONDARY_S_LINE_HEIGHT_DESKTOP"
     },
     "PRIMARY_XXS_LINE_HEIGHT_MOBILE": {
@@ -1711,56 +1711,56 @@
       "value": "Helvetica, sans-serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "{!HELVETICA}",
+      "originalValue": "Helvetica, sans-serif",
       "name": "FONT_FAMILY_ACCENT"
     },
     "FONT_FAMILY_ACCENT_FANCY": {
       "value": "'Graphik XX Cond', sans-serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "{!GRAPHIK_COND}",
+      "originalValue": "'Graphik XX Cond', sans-serif",
       "name": "FONT_FAMILY_ACCENT_FANCY"
     },
     "FONT_FAMILY_BASIC_FANCY": {
       "value": "'IBM Plex Mono', monospace",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "{!IBM_PLEX_MONO}",
+      "originalValue": "'IBM Plex Mono', monospace",
       "name": "FONT_FAMILY_BASIC_FANCY"
     },
     "BORDER_COLOR_BRAND_SECONDARY": {
       "value": "rgb(65, 126, 244)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "{!BLUE_61}",
+      "originalValue": "rgb(65, 126, 244)",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT": {
       "value": "rgb(26, 40, 47)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "{!MIRAGE_14}",
+      "originalValue": "rgb(26, 40, 47)",
       "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "FONT_FAMILY_BODY_FANCY": {
       "value": "'IBM Plex Serif', serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "{!IBM_PLEX_SERIF}",
+      "originalValue": "'IBM Plex Serif', serif",
       "name": "FONT_FAMILY_BODY_FANCY"
     },
     "BORDER_COLOR_BRAND_PRIMARY": {
       "value": "rgb(238, 232, 9)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "{!YELLOW_48}",
+      "originalValue": "rgb(238, 232, 9)",
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "COLOR_BRAND_ACCENT": {
       "value": "rgb(243, 112, 33)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "{!ORANGE_54}",
+      "originalValue": "rgb(243, 112, 33)",
       "name": "COLOR_BRAND_ACCENT"
     }
   }
