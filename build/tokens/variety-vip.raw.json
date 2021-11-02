@@ -241,8 +241,8 @@
     "COLOR_BRAND_PRIMARY_LIGHT": {
       "category": "text-color",
       "type": "color",
-      "value": "rgb(236, 28, 36)",
-      "originalValue": "{!PMC_RED}",
+      "value": "rgb(243, 245, 203)",
+      "originalValue": "#F3F5CB",
       "name": "COLOR_BRAND_PRIMARY_LIGHT"
     },
     "COLOR_BRAND_PRIMARY_DARK": {
@@ -276,8 +276,8 @@
     "COLOR_BRAND_SECONDARY_DARK": {
       "category": "text-color",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "value": "rgb(36, 56, 66)",
+      "originalValue": "#243842",
       "name": "COLOR_BRAND_SECONDARY_DARK"
     },
     "COLOR_BRAND_SECONDARY_LIGHT": {
@@ -361,8 +361,8 @@
     "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
       "category": "background-color",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "value": "rgb(36, 56, 66)",
+      "originalValue": "#243842",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY_DARK"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
@@ -411,8 +411,8 @@
     "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
       "category": "background-color",
       "type": "color",
-      "value": "rgb(236, 28, 36)",
-      "originalValue": "{!PMC_RED}",
+      "value": "rgb(243, 245, 203)",
+      "originalValue": "#F3F5CB",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
     },
     "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
@@ -443,6 +443,196 @@
       "originalValue": "{!GREY_20}",
       "name": "BACKGROUND_COLOR_GREY_DARKEST"
     },
+    "BORDER_COLOR_GREY_LIGHTEST": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(247, 247, 247)",
+      "originalValue": "{!GREY_96}",
+      "name": "BORDER_COLOR_GREY_LIGHTEST"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "BORDER_COLOR_GREY_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(204, 204, 204)",
+      "originalValue": "{!GREY_80}",
+      "name": "BORDER_COLOR_GREY_LIGHT"
+    },
+    "BORDER_COLOR_GREY_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(106, 106, 106)",
+      "originalValue": "{!GREY_35}",
+      "name": "BORDER_COLOR_GREY_DARK"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY": {
+      "value": "rgb(40, 56, 66)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "{!BLUE_21}",
+      "name": "BORDER_COLOR_BRAND_SECONDARY"
+    },
+    "BORDER_COLOR_GREY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(140, 140, 140)",
+      "originalValue": "{!GREY_50}",
+      "name": "BORDER_COLOR_GREY"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
+    },
+    "BORDER_COLOR_WHITE": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(255, 255, 255)",
+      "originalValue": "{!WHITE}",
+      "name": "BORDER_COLOR_WHITE"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(236, 28, 36)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY": {
+      "value": "rgb(215, 20, 64)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "{!RED_46}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY"
+    },
+    "FONT_WEIGHT_LIGHT": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "300",
+      "originalValue": "300",
+      "name": "FONT_WEIGHT_LIGHT"
+    },
+    "FONT_WEIGHT_NORMAL": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "400",
+      "originalValue": "400",
+      "name": "FONT_WEIGHT_NORMAL"
+    },
+    "FONT_WEIGHT_BOLD": {
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "FONT_WEIGHT_BOLD"
+    },
+    "LINE_HEIGHT_SMALL": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.1",
+      "originalValue": "1.1",
+      "name": "LINE_HEIGHT_SMALL"
+    },
+    "LINE_HEIGHT_NORMAL": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.35",
+      "originalValue": "1.35",
+      "name": "LINE_HEIGHT_NORMAL"
+    },
+    "LINE_HEIGHT_COPY": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.5",
+      "originalValue": "1.5",
+      "name": "LINE_HEIGHT_COPY"
+    },
+    "LINE_HEIGHT_LARGE": {
+      "category": "line-height",
+      "type": "unit",
+      "value": "1.85",
+      "originalValue": "1.85",
+      "name": "LINE_HEIGHT_LARGE"
+    },
+    "SPACING_00": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0",
+      "originalValue": "0",
+      "name": "SPACING_00"
+    },
+    "SPACING_025": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0.25rem",
+      "originalValue": "0.25rem",
+      "name": "SPACING_025"
+    },
+    "SPACING_050": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0.5rem",
+      "originalValue": "0.5rem",
+      "name": "SPACING_050"
+    },
+    "SPACING_075": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "0.75rem",
+      "originalValue": "0.75rem",
+      "name": "SPACING_075"
+    },
+    "SPACING_1": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "1rem",
+      "originalValue": "1rem",
+      "name": "SPACING_1"
+    },
+    "SPACING_125": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "1.25rem",
+      "originalValue": "1.25rem",
+      "name": "SPACING_125"
+    },
+    "SPACING_150": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "1.5rem",
+      "originalValue": "1.5rem",
+      "name": "SPACING_150"
+    },
+    "SPACING_2": {
+      "category": "spacing",
+      "type": "unit",
+      "comment": "Used for margins and padding only.",
+      "value": "2rem",
+      "originalValue": "2rem",
+      "name": "SPACING_2"
+    },
     "PRIMARY_XL_FONT_SIZE_DESKTOP": {
       "selector": "lrv-a-font",
       "status": "alpha",
@@ -451,6 +641,15 @@
       "value": "initial",
       "originalValue": "initial",
       "name": "PRIMARY_XL_FONT_SIZE_DESKTOP"
+    },
+    "PRIMARY_M_LINE_HEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "line-height",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_M_LINE_HEIGHT_DESKTOP"
     },
     "PRIMARY_L_FONT_SIZE_MOBILE": {
       "selector": "lrv-a-font",
@@ -461,657 +660,14 @@
       "originalValue": "24px",
       "name": "PRIMARY_L_FONT_SIZE_MOBILE"
     },
-    "BODY_S_FONT_SIZE_DESKTOP": {
-      "category": "font-size",
+    "PRIMARY_XL_LINE_HEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "line-height",
       "type": "number",
       "value": "initial",
       "originalValue": "initial",
-      "name": "BODY_S_FONT_SIZE_DESKTOP"
-    },
-    "PRIMARY_S_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "PRIMARY_S_FONT_SIZE_DESKTOP"
-    },
-    "PRIMARY_XXS_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "24px",
-      "originalValue": "24px",
-      "name": "PRIMARY_XXS_FONT_SIZE_DESKTOP"
-    },
-    "ACCENT_L_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "58px",
-      "originalValue": "58px",
-      "name": "ACCENT_L_FONT_SIZE_DESKTOP"
-    },
-    "ACCENT_M_FONT_SIZE_DESKTOP": {
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_M_FONT_SIZE_DESKTOP"
-    },
-    "PRIMARY_XXXS_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "20px",
-      "originalValue": "20px",
-      "name": "PRIMARY_XXXS_FONT_SIZE_DESKTOP"
-    },
-    "PRIMARY_XS_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "26px",
-      "originalValue": "26px",
-      "name": "PRIMARY_XS_FONT_SIZE_DESKTOP"
-    },
-    "SECONDARY_S_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "14px",
-      "originalValue": "14px",
-      "name": "SECONDARY_S_FONT_SIZE_MOBILE"
-    },
-    "ACCENT_REGULAR_XXS_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
-      "name": "ACCENT_REGULAR_XXS_FONT_SIZE_DESKTOP"
-    },
-    "SECONDARY_M_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
-      "name": "SECONDARY_M_FONT_SIZE_MOBILE"
-    },
-    "ACCENT_XXS_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
-      "name": "ACCENT_XXS_FONT_SIZE_DESKTOP"
-    },
-    "ACCENT_S_FONT_SIZE_DESKTOP": {
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_S_FONT_SIZE_DESKTOP"
-    },
-    "SECONDARY_REGULAR_M_FONT_SIZE_DESKTOP": {
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_REGULAR_M_FONT_SIZE_DESKTOP"
-    },
-    "SECONDARY_L_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
-      "name": "SECONDARY_L_FONT_SIZE_MOBILE"
-    },
-    "SECONDARY_L_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_L_FONT_SIZE_DESKTOP"
-    },
-    "SECONDARY_REGULAR_M_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "16px",
-      "originalValue": "16px",
-      "name": "SECONDARY_REGULAR_M_FONT_SIZE_MOBILE"
-    },
-    "ACCENT_XXS_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "14px",
-      "originalValue": "14px",
-      "name": "ACCENT_XXS_FONT_SIZE_MOBILE"
-    },
-    "SECONDARY_M_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_M_FONT_SIZE_DESKTOP"
-    },
-    "ACCENT_S_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "23px",
-      "originalValue": "23px",
-      "name": "ACCENT_S_FONT_SIZE_MOBILE"
-    },
-    "ACCENT_REGULAR_XXS_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "14px",
-      "originalValue": "14px",
-      "name": "ACCENT_REGULAR_XXS_FONT_SIZE_MOBILE"
-    },
-    "PRIMARY_XS_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
-      "name": "PRIMARY_XS_FONT_SIZE_MOBILE"
-    },
-    "PRIMARY_XXXS_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "19px",
-      "originalValue": "19px",
-      "name": "PRIMARY_XXXS_FONT_SIZE_MOBILE"
-    },
-    "ACCENT_M_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "42px",
-      "originalValue": "42px",
-      "name": "ACCENT_M_FONT_SIZE_MOBILE"
-    },
-    "SECONDARY_S_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_S_FONT_SIZE_DESKTOP"
-    },
-    "ACCENT_L_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "40px",
-      "originalValue": "40px",
-      "name": "ACCENT_L_FONT_SIZE_MOBILE"
-    },
-    "PRIMARY_XXS_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "22px",
-      "originalValue": "22px",
-      "name": "PRIMARY_XXS_FONT_SIZE_MOBILE"
-    },
-    "PRIMARY_S_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "21px",
-      "originalValue": "21px",
-      "name": "PRIMARY_S_FONT_SIZE_MOBILE"
-    },
-    "BODY_S_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "16px",
-      "originalValue": "16px",
-      "name": "BODY_S_FONT_SIZE_MOBILE"
-    },
-    "PRIMARY_L_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "PRIMARY_L_FONT_SIZE_DESKTOP"
-    },
-    "PRIMARY_XL_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "28px",
-      "originalValue": "28px",
-      "name": "PRIMARY_XL_FONT_SIZE_MOBILE"
-    },
-    "ACCENT_XS_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
-      "name": "ACCENT_XS_FONT_SIZE_MOBILE"
-    },
-    "PRIMARY_M_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "24px",
-      "originalValue": "24px",
-      "name": "PRIMARY_M_FONT_SIZE_MOBILE"
-    },
-    "BODY_M_FONT_SIZE_DESKTOP": {
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "BODY_M_FONT_SIZE_DESKTOP"
-    },
-    "BODY_M_FONT_SIZE_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "16px",
-      "originalValue": "16px",
-      "name": "BODY_M_FONT_SIZE_MOBILE"
-    },
-    "PRIMARY_M_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "PRIMARY_M_FONT_SIZE_DESKTOP"
-    },
-    "ACCENT_XS_FONT_SIZE_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-size",
-      "type": "number",
-      "value": "23px",
-      "originalValue": "23px",
-      "name": "ACCENT_XS_FONT_SIZE_DESKTOP"
-    },
-    "SECONDARY_S_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_S_LETTER_SPACING_MOBILE"
-    },
-    "SECONDARY_M_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_M_LETTER_SPACING_DESKTOP"
-    },
-    "SECONDARY_L_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_L_LETTER_SPACING_DESKTOP"
-    },
-    "PRIMARY_L_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_L_LETTER_SPACING_MOBILE"
-    },
-    "SECONDARY_REGULAR_M_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_REGULAR_M_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_XS_LETTER_SPACING_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "0.52px",
-      "originalValue": "0.52px",
-      "name": "ACCENT_XS_LETTER_SPACING_MOBILE"
-    },
-    "ACCENT_S_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "ACCENT_S_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_XXS_LETTER_SPACING_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": ".52px",
-      "originalValue": ".52px",
-      "name": "ACCENT_XXS_LETTER_SPACING_DESKTOP"
-    },
-    "BODY_M_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "BODY_M_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_M_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_M_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_XL_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XL_LETTER_SPACING_MOBILE"
-    },
-    "ACCENT_REGULAR_XXS_LETTER_SPACING_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "0.52px",
-      "originalValue": "0.52px",
-      "name": "ACCENT_REGULAR_XXS_LETTER_SPACING_DESKTOP"
-    },
-    "BODY_S_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "BODY_S_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_S_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_S_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_XS_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XS_LETTER_SPACING_DESKTOP"
-    },
-    "PRIMARY_XXS_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XXS_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_XXXS_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XXXS_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_M_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "ACCENT_M_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_L_LETTER_SPACING_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "1.66px",
-      "originalValue": "1.66px",
-      "name": "ACCENT_L_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_L_LETTER_SPACING_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "1.14px",
-      "originalValue": "1.14px",
-      "name": "ACCENT_L_LETTER_SPACING_MOBILE"
-    },
-    "ACCENT_M_LETTER_SPACING_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "2.1px",
-      "originalValue": "2.1px",
-      "name": "ACCENT_M_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_XXXS_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XXXS_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_XXS_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XXS_LETTER_SPACING_DESKTOP"
-    },
-    "PRIMARY_XS_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XS_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_S_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_S_LETTER_SPACING_DESKTOP"
-    },
-    "BODY_S_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "BODY_S_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_REGULAR_XXS_LETTER_SPACING_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "0.4px",
-      "originalValue": "0.4px",
-      "name": "ACCENT_REGULAR_XXS_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_XL_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XL_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_XS_LETTER_SPACING_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "0.66px",
-      "originalValue": "0.66px",
-      "name": "ACCENT_XS_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_XXS_LETTER_SPACING_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": ".4px",
-      "originalValue": ".4px",
-      "name": "ACCENT_XXS_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_M_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_M_LETTER_SPACING_DESKTOP"
-    },
-    "BODY_M_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "BODY_M_LETTER_SPACING_DESKTOP"
-    },
-    "ACCENT_S_LETTER_SPACING_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "letter-spacing",
-      "type": "number",
-      "value": ".66px",
-      "originalValue": ".66px",
-      "name": "ACCENT_S_LETTER_SPACING_MOBILE"
-    },
-    "SECONDARY_REGULAR_M_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_REGULAR_M_LETTER_SPACING_MOBILE"
-    },
-    "PRIMARY_L_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_L_LETTER_SPACING_DESKTOP"
-    },
-    "SECONDARY_L_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_L_LETTER_SPACING_MOBILE"
-    },
-    "SECONDARY_M_LETTER_SPACING_MOBILE": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_M_LETTER_SPACING_MOBILE"
-    },
-    "SECONDARY_S_LETTER_SPACING_DESKTOP": {
-      "category": "letter-spacing",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "SECONDARY_S_LETTER_SPACING_DESKTOP"
-    },
-    "PRIMARY_XS_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "PRIMARY_XS_FONT_WEIGHT_MOBILE"
-    },
-    "PRIMARY_XXXS_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "PRIMARY_XXXS_FONT_WEIGHT_MOBILE"
-    },
-    "ACCENT_M_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "ACCENT_M_FONT_WEIGHT_MOBILE"
-    },
-    "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP"
-    },
-    "ACCENT_L_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "ACCENT_L_FONT_WEIGHT_MOBILE"
-    },
-    "PRIMARY_XXS_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "PRIMARY_XXS_FONT_WEIGHT_MOBILE"
+      "name": "PRIMARY_XL_LINE_HEIGHT_DESKTOP"
     },
     "PRIMARY_S_FONT_WEIGHT_MOBILE": {
       "selector": "lrv-a-font",
@@ -1122,33 +678,32 @@
       "originalValue": "normal",
       "name": "PRIMARY_S_FONT_WEIGHT_MOBILE"
     },
-    "BODY_S_FONT_WEIGHT_MOBILE": {
-      "category": "font-weight",
+    "PRIMARY_S_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
       "type": "number",
       "value": "initial",
       "originalValue": "initial",
-      "name": "BODY_S_FONT_WEIGHT_MOBILE"
+      "name": "PRIMARY_S_FONT_SIZE_DESKTOP"
     },
-    "ACCENT_XXS_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
+    "PRIMARY_S_LINE_HEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "line-height",
       "type": "number",
       "value": "initial",
       "originalValue": "initial",
-      "name": "ACCENT_XXS_FONT_WEIGHT_DESKTOP"
+      "name": "PRIMARY_S_LINE_HEIGHT_DESKTOP"
     },
-    "ACCENT_S_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
+    "SECONDARY_S_LINE_HEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "line-height",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_S_FONT_WEIGHT_DESKTOP"
-    },
-    "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP"
+      "value": "21px",
+      "originalValue": "21px",
+      "name": "SECONDARY_S_LINE_HEIGHT_MOBILE"
     },
     "PRIMARY_XL_FONT_WEIGHT_MOBILE": {
       "selector": "lrv-a-font",
@@ -1159,35 +714,14 @@
       "originalValue": "normal",
       "name": "PRIMARY_XL_FONT_WEIGHT_MOBILE"
     },
-    "SECONDARY_L_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_L_FONT_WEIGHT_DESKTOP"
-    },
-    "BODY_M_FONT_WEIGHT_MOBILE": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "BODY_M_FONT_WEIGHT_MOBILE"
-    },
-    "ACCENT_XS_FONT_WEIGHT_MOBILE": {
+    "SECONDARY_S_FONT_SIZE_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "font-weight",
+      "category": "font-size",
       "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "ACCENT_XS_FONT_WEIGHT_MOBILE"
-    },
-    "SECONDARY_M_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_M_FONT_WEIGHT_DESKTOP"
+      "value": "14px",
+      "originalValue": "14px",
+      "name": "SECONDARY_S_FONT_SIZE_MOBILE"
     },
     "PRIMARY_M_FONT_WEIGHT_MOBILE": {
       "selector": "lrv-a-font",
@@ -1207,283 +741,6 @@
       "originalValue": "normal",
       "name": "PRIMARY_L_FONT_WEIGHT_MOBILE"
     },
-    "SECONDARY_S_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_S_FONT_WEIGHT_DESKTOP"
-    },
-    "SECONDARY_S_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "bold",
-      "originalValue": "bold",
-      "name": "SECONDARY_S_FONT_WEIGHT_MOBILE"
-    },
-    "PRIMARY_L_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_L_FONT_WEIGHT_DESKTOP"
-    },
-    "BODY_M_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "BODY_M_FONT_WEIGHT_DESKTOP"
-    },
-    "PRIMARY_M_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_M_FONT_WEIGHT_DESKTOP"
-    },
-    "ACCENT_XS_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_XS_FONT_WEIGHT_DESKTOP"
-    },
-    "SECONDARY_M_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "600",
-      "originalValue": "600",
-      "name": "SECONDARY_M_FONT_WEIGHT_MOBILE"
-    },
-    "PRIMARY_XL_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_XL_FONT_WEIGHT_DESKTOP"
-    },
-    "SECONDARY_L_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "bold",
-      "originalValue": "bold",
-      "name": "SECONDARY_L_FONT_WEIGHT_MOBILE"
-    },
-    "SECONDARY_REGULAR_M_FONT_WEIGHT_MOBILE": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "SECONDARY_REGULAR_M_FONT_WEIGHT_MOBILE"
-    },
-    "ACCENT_S_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "ACCENT_S_FONT_WEIGHT_MOBILE"
-    },
-    "ACCENT_XXS_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "300",
-      "originalValue": "300",
-      "name": "ACCENT_XXS_FONT_WEIGHT_MOBILE"
-    },
-    "BODY_S_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "BODY_S_FONT_WEIGHT_DESKTOP"
-    },
-    "PRIMARY_S_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "normal",
-      "originalValue": "normal",
-      "name": "PRIMARY_S_FONT_WEIGHT_DESKTOP"
-    },
-    "PRIMARY_XXS_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "PRIMARY_XXS_FONT_WEIGHT_DESKTOP"
-    },
-    "ACCENT_REGULAR_XXS_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "400",
-      "originalValue": "400",
-      "name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_MOBILE"
-    },
-    "ACCENT_L_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_L_FONT_WEIGHT_DESKTOP"
-    },
-    "ACCENT_M_FONT_WEIGHT_DESKTOP": {
-      "category": "font-weight",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_M_FONT_WEIGHT_DESKTOP"
-    },
-    "PRIMARY_XXXS_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "PRIMARY_XXXS_FONT_WEIGHT_DESKTOP"
-    },
-    "PRIMARY_XS_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "font-weight",
-      "type": "number",
-      "value": "700",
-      "originalValue": "700",
-      "name": "PRIMARY_XS_FONT_WEIGHT_DESKTOP"
-    },
-    "ACCENT_XS_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "24px",
-      "originalValue": "24px",
-      "name": "ACCENT_XS_LINE_HEIGHT_DESKTOP"
-    },
-    "BODY_M_LINE_HEIGHT_DESKTOP": {
-      "category": "line-height",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "BODY_M_LINE_HEIGHT_DESKTOP"
-    },
-    "PRIMARY_M_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "PRIMARY_M_LINE_HEIGHT_DESKTOP"
-    },
-    "PRIMARY_XL_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "PRIMARY_XL_LINE_HEIGHT_DESKTOP"
-    },
-    "PRIMARY_S_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "PRIMARY_S_LINE_HEIGHT_DESKTOP"
-    },
-    "PRIMARY_XXS_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "27px",
-      "originalValue": "27px",
-      "name": "PRIMARY_XXS_LINE_HEIGHT_DESKTOP"
-    },
-    "SECONDARY_S_LINE_HEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "21px",
-      "originalValue": "21px",
-      "name": "SECONDARY_S_LINE_HEIGHT_MOBILE"
-    },
-    "BODY_S_LINE_HEIGHT_DESKTOP": {
-      "category": "line-height",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "BODY_S_LINE_HEIGHT_DESKTOP"
-    },
-    "ACCENT_L_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "50px",
-      "originalValue": "50px",
-      "name": "ACCENT_L_LINE_HEIGHT_DESKTOP"
-    },
-    "PRIMARY_XXXS_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "23px",
-      "originalValue": "23px",
-      "name": "PRIMARY_XXXS_LINE_HEIGHT_DESKTOP"
-    },
-    "PRIMARY_XS_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "29px",
-      "originalValue": "29px",
-      "name": "PRIMARY_XS_LINE_HEIGHT_DESKTOP"
-    },
-    "ACCENT_M_LINE_HEIGHT_DESKTOP": {
-      "category": "line-height",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_M_LINE_HEIGHT_DESKTOP"
-    },
-    "ACCENT_REGULAR_XXS_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "26px",
-      "originalValue": "26px",
-      "name": "ACCENT_REGULAR_XXS_LINE_HEIGHT_DESKTOP"
-    },
     "SECONDARY_M_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
@@ -1493,30 +750,37 @@
       "originalValue": "21px",
       "name": "SECONDARY_M_LINE_HEIGHT_MOBILE"
     },
-    "SECONDARY_L_LINE_HEIGHT_MOBILE": {
+    "FONT_FAMILY_BASIC_FANCY": {
+      "value": "'Para Supreme Regular', serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "{!PARA_SUPREME}",
+      "name": "FONT_FAMILY_BASIC_FANCY"
+    },
+    "SECONDARY_M_FONT_SIZE_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "21px",
-      "originalValue": "21px",
-      "name": "SECONDARY_L_LINE_HEIGHT_MOBILE"
-    },
-    "ACCENT_S_LINE_HEIGHT_DESKTOP": {
-      "category": "line-height",
-      "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
-      "name": "ACCENT_S_LINE_HEIGHT_DESKTOP"
-    },
-    "ACCENT_XXS_LINE_HEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
+      "category": "font-size",
       "type": "number",
       "value": "18px",
       "originalValue": "18px",
-      "name": "ACCENT_XXS_LINE_HEIGHT_DESKTOP"
+      "name": "SECONDARY_M_FONT_SIZE_MOBILE"
+    },
+    "SECONDARY_L_FONT_SIZE_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "18px",
+      "originalValue": "18px",
+      "name": "SECONDARY_L_FONT_SIZE_MOBILE"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "value": "rgb(240, 241, 242)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "{!WHITE_95}",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "SECONDARY_REGULAR_M_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
@@ -1527,30 +791,50 @@
       "originalValue": "21px",
       "name": "SECONDARY_REGULAR_M_LINE_HEIGHT_MOBILE"
     },
-    "SECONDARY_REGULAR_M_LINE_HEIGHT_DESKTOP": {
-      "category": "line-height",
+    "SECONDARY_S_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-weight",
+      "type": "number",
+      "value": "bold",
+      "originalValue": "bold",
+      "name": "SECONDARY_S_FONT_WEIGHT_MOBILE"
+    },
+    "ACCENT_M_LETTER_SPACING_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "letter-spacing",
+      "type": "number",
+      "value": "2.1px",
+      "originalValue": "2.1px",
+      "name": "ACCENT_M_LETTER_SPACING_MOBILE"
+    },
+    "SECONDARY_L_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
       "type": "number",
       "value": "initial",
       "originalValue": "initial",
-      "name": "SECONDARY_REGULAR_M_LINE_HEIGHT_DESKTOP"
+      "name": "SECONDARY_L_FONT_SIZE_DESKTOP"
     },
-    "ACCENT_S_LINE_HEIGHT_MOBILE": {
+    "SECONDARY_REGULAR_M_FONT_SIZE_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
+      "category": "font-size",
       "type": "number",
-      "value": "23px",
-      "originalValue": "23px",
-      "name": "ACCENT_S_LINE_HEIGHT_MOBILE"
+      "value": "16px",
+      "originalValue": "16px",
+      "name": "SECONDARY_REGULAR_M_FONT_SIZE_MOBILE"
     },
-    "ACCENT_XXS_LINE_HEIGHT_MOBILE": {
+    "SECONDARY_M_FONT_SIZE_DESKTOP": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
+      "category": "font-size",
       "type": "number",
-      "value": "0.4px",
-      "originalValue": "0.4px",
-      "name": "ACCENT_XXS_LINE_HEIGHT_MOBILE"
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_M_FONT_SIZE_DESKTOP"
     },
     "SECONDARY_L_LINE_HEIGHT_DESKTOP": {
       "selector": "lrv-a-font",
@@ -1570,32 +854,30 @@
       "originalValue": "initial",
       "name": "SECONDARY_M_LINE_HEIGHT_DESKTOP"
     },
-    "ACCENT_REGULAR_XXS_LINE_HEIGHT_MOBILE": {
+    "PRIMARY_L_FONT_WEIGHT_DESKTOP": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
+      "category": "font-weight",
       "type": "number",
-      "value": "14px",
-      "originalValue": "14px",
-      "name": "ACCENT_REGULAR_XXS_LINE_HEIGHT_MOBILE"
+      "value": "normal",
+      "originalValue": "normal",
+      "name": "PRIMARY_L_FONT_WEIGHT_DESKTOP"
     },
-    "PRIMARY_XS_LINE_HEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "21px",
-      "originalValue": "21px",
-      "name": "PRIMARY_XS_LINE_HEIGHT_MOBILE"
+    "FONT_FAMILY_ACCENT": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "{!HELVETICA}",
+      "name": "FONT_FAMILY_ACCENT"
     },
-    "PRIMARY_XXXS_LINE_HEIGHT_MOBILE": {
+    "PRIMARY_M_FONT_WEIGHT_DESKTOP": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
+      "category": "font-weight",
       "type": "number",
-      "value": "21px",
-      "originalValue": "21px",
-      "name": "PRIMARY_XXXS_LINE_HEIGHT_MOBILE"
+      "value": "normal",
+      "originalValue": "normal",
+      "name": "PRIMARY_M_FONT_WEIGHT_DESKTOP"
     },
     "ACCENT_M_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
@@ -1606,14 +888,48 @@
       "originalValue": "42px",
       "name": "ACCENT_M_LINE_HEIGHT_MOBILE"
     },
-    "ACCENT_L_LINE_HEIGHT_MOBILE": {
+    "PRIMARY_XL_FONT_WEIGHT_DESKTOP": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
+      "category": "font-weight",
       "type": "number",
-      "value": "36px",
-      "originalValue": "36px",
-      "name": "ACCENT_L_LINE_HEIGHT_MOBILE"
+      "value": "normal",
+      "originalValue": "normal",
+      "name": "PRIMARY_XL_FONT_WEIGHT_DESKTOP"
+    },
+    "SECONDARY_L_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-weight",
+      "type": "number",
+      "value": "bold",
+      "originalValue": "bold",
+      "name": "SECONDARY_L_FONT_WEIGHT_MOBILE"
+    },
+    "FONT_FAMILY_BODY_FANCY": {
+      "value": "'IBM Plex Serif', serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "{!IBM_PLEX_SERIF}",
+      "name": "FONT_FAMILY_BODY_FANCY"
+    },
+    "ACCENT_M_FONT_SIZE_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "42px",
+      "originalValue": "42px",
+      "name": "ACCENT_M_FONT_SIZE_MOBILE"
+    },
+    "SECONDARY_S_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "SECONDARY_S_FONT_SIZE_DESKTOP"
     },
     "SECONDARY_S_LINE_HEIGHT_DESKTOP": {
       "selector": "lrv-a-font",
@@ -1624,15 +940,6 @@
       "originalValue": "initial",
       "name": "SECONDARY_S_LINE_HEIGHT_DESKTOP"
     },
-    "PRIMARY_XXS_LINE_HEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "23px",
-      "originalValue": "23px",
-      "name": "PRIMARY_XXS_LINE_HEIGHT_MOBILE"
-    },
     "PRIMARY_S_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
@@ -1642,14 +949,23 @@
       "originalValue": "24px",
       "name": "PRIMARY_S_LINE_HEIGHT_MOBILE"
     },
-    "BODY_S_LINE_HEIGHT_MOBILE": {
+    "PRIMARY_S_FONT_SIZE_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
+      "category": "font-size",
       "type": "number",
-      "value": "22px",
-      "originalValue": "22px",
-      "name": "BODY_S_LINE_HEIGHT_MOBILE"
+      "value": "21px",
+      "originalValue": "21px",
+      "name": "PRIMARY_S_FONT_SIZE_MOBILE"
+    },
+    "PRIMARY_S_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-weight",
+      "type": "number",
+      "value": "normal",
+      "originalValue": "normal",
+      "name": "PRIMARY_S_FONT_WEIGHT_DESKTOP"
     },
     "PRIMARY_XL_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
@@ -1660,6 +976,22 @@
       "originalValue": "32px",
       "name": "PRIMARY_XL_LINE_HEIGHT_MOBILE"
     },
+    "COLOR_BRAND_ACCENT": {
+      "value": "rgb(243, 112, 33)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "rgb(243, 112, 33)",
+      "name": "COLOR_BRAND_ACCENT"
+    },
+    "PRIMARY_L_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_L_FONT_SIZE_DESKTOP"
+    },
     "PRIMARY_M_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
@@ -1669,23 +1001,14 @@
       "originalValue": "27px",
       "name": "PRIMARY_M_LINE_HEIGHT_MOBILE"
     },
-    "BODY_M_LINE_HEIGHT_MOBILE": {
+    "PRIMARY_XL_FONT_SIZE_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
-      "category": "line-height",
+      "category": "font-size",
       "type": "number",
-      "value": "24px",
-      "originalValue": "24px",
-      "name": "BODY_M_LINE_HEIGHT_MOBILE"
-    },
-    "ACCENT_XS_LINE_HEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
-      "category": "line-height",
-      "type": "number",
-      "value": "19px",
-      "originalValue": "19px",
-      "name": "ACCENT_XS_LINE_HEIGHT_MOBILE"
+      "value": "28px",
+      "originalValue": "28px",
+      "name": "PRIMARY_XL_FONT_SIZE_MOBILE"
     },
     "PRIMARY_L_LINE_HEIGHT_DESKTOP": {
       "selector": "lrv-a-font",
@@ -1696,6 +1019,33 @@
       "originalValue": "initial",
       "name": "PRIMARY_L_LINE_HEIGHT_DESKTOP"
     },
+    "PRIMARY_M_FONT_SIZE_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "24px",
+      "originalValue": "24px",
+      "name": "PRIMARY_M_FONT_SIZE_MOBILE"
+    },
+    "BODY_M_FONT_SIZE_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "16px",
+      "originalValue": "16px",
+      "name": "BODY_M_FONT_SIZE_MOBILE"
+    },
+    "PRIMARY_M_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "initial",
+      "originalValue": "initial",
+      "name": "PRIMARY_M_FONT_SIZE_DESKTOP"
+    },
     "PRIMARY_L_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
@@ -1705,61 +1055,12 @@
       "originalValue": "27px",
       "name": "PRIMARY_L_LINE_HEIGHT_MOBILE"
     },
-    "FONT_FAMILY_ACCENT": {
-      "value": "Helvetica, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "{!HELVETICA}",
-      "name": "FONT_FAMILY_ACCENT"
-    },
     "FONT_FAMILY_ACCENT_FANCY": {
       "value": "'IBM Plex Mono', monospace",
       "type": "font-family",
       "category": "font-family",
       "originalValue": "{!IBM_PLEX_MONO}",
       "name": "FONT_FAMILY_ACCENT_FANCY"
-    },
-    "FONT_FAMILY_BASIC_FANCY": {
-      "value": "'Para Supreme Regular', serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "{!PARA_SUPREME}",
-      "name": "FONT_FAMILY_BASIC_FANCY"
-    },
-    "BORDER_COLOR_BRAND_SECONDARY": {
-      "value": "rgb(40, 56, 66)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "{!BLUE_21}",
-      "name": "BORDER_COLOR_BRAND_SECONDARY"
-    },
-    "BACKGROUND_COLOR_BRAND_ACCENT": {
-      "value": "rgb(240, 241, 242)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "{!WHITE_95}",
-      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
-    },
-    "FONT_FAMILY_BODY_FANCY": {
-      "value": "'IBM Plex Serif', serif",
-      "type": "font-family",
-      "category": "font-family",
-      "originalValue": "{!IBM_PLEX_SERIF}",
-      "name": "FONT_FAMILY_BODY_FANCY"
-    },
-    "BORDER_COLOR_BRAND_PRIMARY": {
-      "value": "rgb(215, 20, 64)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "{!RED_46}",
-      "name": "BORDER_COLOR_BRAND_PRIMARY"
-    },
-    "COLOR_BRAND_ACCENT": {
-      "value": "rgb(243, 112, 33)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "rgb(243, 112, 33)",
-      "name": "COLOR_BRAND_ACCENT"
     }
   }
 }

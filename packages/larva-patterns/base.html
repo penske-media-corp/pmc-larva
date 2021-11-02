@@ -11,6 +11,10 @@
 		<link rel="stylesheet" href="/assets/build/css/larva.css">
 		<link rel="stylesheet" href="/assets/build/css/larva-ui.css">
 
+		{% if 'variety' == query.tokens %}
+			<link rel="stylesheet" href="/assets/build/css/{{query.tokens}}.compat.css">
+		{% endif %}
+
 		{% block stylesheets %}
 		{% endblock %}
 
@@ -34,7 +38,7 @@
 		</script>
 
 	</head>
-	<body class="lrv-u-margin-a-00">
+	<body class="lrv-u-margin-a-00 {{ query.tokens ? 'lrv-' ~ query.tokens ~ '-compat' }}">
 
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-LarvaUiToggle-panel">
