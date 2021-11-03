@@ -3,15 +3,25 @@ $corrected-brand-secondary: #EEE809;
 $corrected-brand-secondary-light: #F3F5CB;
 $corrected-brand-primary-dark: #243842;
 
-/* stylint-disable declaration-colon-space-after */
+/* styleint-disable declaration-colon-space-after */
 
 .lrv-variety-compat {
-	--color-brand-primary:              #{$corrected-brand-primary};
-	--border-color-brand-primary:       #{$corrected-brand-primary};
-	--background-color-brand-primary:   #{$corrected-brand-primary};
+	--color-brand-primary:            #{$corrected-brand-primary};
+	--border-color-brand-primary:     #{$corrected-brand-primary};
+	--background-color-brand-primary: #{$corrected-brand-primary};
+
 	--color-brand-secondary:            #{$corrected-brand-secondary};
 	--border-color-brand-secondary:     #{$corrected-brand-secondary};
 	--background-color-brand-secondary: #{$corrected-brand-secondary};
+
+	--color-brand-primary-dark:            #{$corrected-brand-primary-dark};
+	--border-color-brand-primary-dark:     #{$corrected-brand-primary-dark};
+	--background-color-brand-primary-dark: #{$corrected-brand-primary-dark};
+
+	--color-brand-secondary-light:            #{$corrected-brand-secondary-light};
+	--border-color-brand-secondary-light:     #{$corrected-brand-secondary-light};
+	--background-color-brand-secondary-light: #{$corrected-brand-secondary-light};
+
 }
 
-/* stylint-enable declaration-colon-space-after */
+/* styleint-enable declaration-colon-space-after */
