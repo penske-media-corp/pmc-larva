@@ -7,16 +7,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>LRVA: {{brand}} | {{ source }} | {{ name }}</title>
 
+		{% block stylesheets %}
+		{% endblock %}
+
 		<link rel="stylesheet" href="/assets/build/tokens/{{brand}}.custom-properties.css">
+		{% block compat_stylesheet %}
+		{% endblock compat_stylesheet %}
+
 		<link rel="stylesheet" href="/assets/build/css/larva.css">
 		<link rel="stylesheet" href="/assets/build/css/larva-ui.css">
 
-		{% if 'variety' == query.tokens %}
-			<link rel="stylesheet" href="/assets/build/css/{{query.tokens}}.compat.css">
-		{% endif %}
-
-		{% block stylesheets %}
-		{% endblock %}
 
 		<script>
 			// Stub in PMC cookie object so fonts load on Larva server
@@ -38,7 +38,7 @@
 		</script>
 
 	</head>
-	<body class="lrv-u-margin-a-00 {{ query.tokens ? 'lrv-' ~ query.tokens ~ '-compat' }}">
+	<body class="lrv-u-margin-a-00 {{ compat_class }}">
 
 		<main class="lrv-u-flex">
 			<div class="lrv-u-padding-a-1 lrv-a-glue-parent lrv-u-flex js-LarvaUiToggle-panel">

@@ -3,7 +3,8 @@ $corrected-brand-secondary: #EEE809;
 $corrected-brand-secondary-light: #F3F5CB;
 $corrected-brand-primary-dark: #243842;
 
-// stylint-disable declaration-colon-space-after
+/* stylint-disable declaration-colon-space-after */
+
 .lrv-variety-compat {
 	--color-brand-primary:              #{$corrected-brand-primary};
 	--border-color-brand-primary:       #{$corrected-brand-primary};
@@ -13,4 +14,4 @@ $corrected-brand-primary-dark: #243842;
 	--background-color-brand-secondary: #{$corrected-brand-secondary};
 }
 
-// stylint-enable declaration-colon-space-after
+/* stylint-enable declaration-colon-space-after */

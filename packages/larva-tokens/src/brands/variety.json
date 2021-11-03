@@ -1,6 +1,7 @@
 {
 	"imports": [
-		"../base/all.json"
+		"../base/all.json",
+		"../base/typography.json"
 	],
 	"props": {
 		"ACCENT_M_FONT_SIZE_MOBILE": {
@@ -74,8 +75,22 @@
 			"originalValue": "rgb(238, 232, 9)",
 			"name": "BORDER_COLOR_BRAND_PRIMARY"
 		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "#F3F5CB",
+			"type": "color",
+			"category": "hr-color",
+			"originalValue": "rgb(238, 232, 9)",
+			"name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
+		},
 		"BORDER_COLOR_BRAND_SECONDARY": {
 			"value": "rgb(65, 126, 244)",
+			"type": "color",
+			"category": "hr-color",
+			"originalValue": "rgb(65, 126, 244)",
+			"name": "BORDER_COLOR_BRAND_SECONDARY"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_DARK": {
+			"value": "#243842",
 			"type": "color",
 			"category": "hr-color",
 			"originalValue": "rgb(65, 126, 244)",
