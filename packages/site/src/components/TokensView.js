@@ -11,9 +11,8 @@ import {
 export const TokensView = () => {
 	let match = useRouteMatch();
 
-	// TODO: fetch tokens from current branch
 	const TOKENS_FETCH_URL =
-		"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/feature/GUT-191/packages/larva-tokens/build/";
+		"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/";
 
 	const appActions = {
 		create: "create",
