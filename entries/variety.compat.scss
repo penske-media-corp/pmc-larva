@@ -5,6 +5,7 @@ $corrected-brand-primary-dark: #243842;
 
 /* styleint-disable declaration-colon-space-after */
 
+// Map incorrectly named color tokens to correctly named ones, GUT-191
 .lrv-variety-compat {
 	--color-brand-primary:            #{$corrected-brand-primary};
 	--border-color-brand-primary:     #{$corrected-brand-primary};
@@ -21,7 +22,6 @@ $corrected-brand-primary-dark: #243842;
 	--color-brand-secondary-light:            #{$corrected-brand-secondary-light};
 	--border-color-brand-secondary-light:     #{$corrected-brand-secondary-light};
 	--background-color-brand-secondary-light: #{$corrected-brand-secondary-light};
-
 }
 
 /* styleint-enable declaration-colon-space-after */

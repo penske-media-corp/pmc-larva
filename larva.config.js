@@ -2,11 +2,7 @@ const path = require( 'path' );
 const LARVA_PORT = 3001;
 
 module.exports = {
-	brand: 'variety',
-
-	themeAssets: {
-		'vy-assets': path.resolve( '../VVV/www/variety-com/public_html/wp-content/themes/pmc-variety-2020/assets' )
-	},
+	brand: 'default',
 
 	backstop: {
 		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
