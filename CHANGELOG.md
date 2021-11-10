@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-css - Fix 2x1 and 2x3 crop algorithms, introduce 3x2 crop algorithm
 
 ## 0.3.10 - 10-27-2021
 * larva-tokens - Update Deadline tokens
