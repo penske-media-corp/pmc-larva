@@ -3,7 +3,7 @@ $corrected-brand-secondary: #EEE809;
 $corrected-brand-secondary-light: #F3F5CB;
 $corrected-brand-primary-dark: #243842;
 
-/* styleint-disable declaration-colon-space-after */
+/* stylelint-disable declaration-colon-space-after */
 
 // Map incorrectly named color tokens to correctly named ones, GUT-191
 .lrv-variety-compat {
@@ -24,4 +24,4 @@ $corrected-brand-primary-dark: #243842;
 	--background-color-brand-secondary-light: #{$corrected-brand-secondary-light};
 }
 
-/* styleint-enable declaration-colon-space-after */
+/* stylelint-enable declaration-colon-space-after */
