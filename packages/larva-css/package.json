@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-css",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "description": "Larva CSS.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@penskemediacorp/larva-scss": "^0.3.9",
-    "@penskemediacorp/larva-tokens": "^0.3.10",
+    "@penskemediacorp/larva-tokens": "^0.3.11",
     "del": "^6.0.0",
     "fibers": "^5.0.0",
     "fs-extra": "^9.1.0",
