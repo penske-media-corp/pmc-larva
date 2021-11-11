@@ -8,9 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-tokens - Update VY tokens with additional colors and typography
 * larva - Add compatibility CSS for VY
 * larva-patterns - Add blocks for compat stylesheets and class in pattern templates
+* larva-tokens - Update Rolling Stone tokens.
 
 ## 0.3.10 - 10-27-2021
-* larva-tokens - Update Deadline tokens
+* larva-tokens - Update Deadline tokens.
 
 ## 0.3.9 - 10-21-2021
 * larva - Support configuration for copying local assets from the theme to the static sites
