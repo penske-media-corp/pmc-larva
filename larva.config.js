@@ -3,6 +3,7 @@ const LARVA_PORT = 3001;
 
 module.exports = {
 	brand: 'default',
+
 	backstop: {
 		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
 		testScenario: {

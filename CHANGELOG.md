@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-tokens - Update VY tokens with additional colors and typography
+* larva - Add compatibility CSS for VY
+* larva-patterns - Add blocks for compat stylesheets and class in pattern templates
 * larva-tokens - Update Rolling Stone tokens.
 
 ## 0.3.10 - 10-27-2021
