@@ -267,10 +267,10 @@
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "BORDER_COLOR_GREY": {
-      "value": "rgb(130, 137, 161)",
+      "value": "rgb(110, 118, 145)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#8289A1",
+      "originalValue": "#6e7691",
       "name": "BORDER_COLOR_GREY"
     },
     "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
@@ -337,10 +337,10 @@
       "name": "BACKGROUND_COLOR_GREY_DARK"
     },
     "BACKGROUND_COLOR_GREY": {
-      "value": "rgb(130, 137, 161)",
+      "value": "rgb(110, 118, 145)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#8289A1",
+      "originalValue": "#6e7691",
       "name": "BACKGROUND_COLOR_GREY"
     },
     "BACKGROUND_COLOR_BODY": {
@@ -471,10 +471,10 @@
       "name": "COLOR_GREY_DARK"
     },
     "COLOR_GREY": {
-      "value": "rgb(130, 137, 161)",
+      "value": "rgb(110, 118, 145)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#8289A1",
+      "originalValue": "#6e7691",
       "name": "COLOR_GREY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
