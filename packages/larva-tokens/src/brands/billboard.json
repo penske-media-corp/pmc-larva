@@ -124,17 +124,17 @@
 			"category": "background-color"
 		},
 		"COLOR_GREY": {
-			"value": "#8289A1",
+			"value": "#6e7691",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY": {
-			"value": "#8289A1",
+			"value": "#6e7691",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY": {
-			"value": "#8289A1",
+			"value": "#6e7691",
 			"type": "color",
 			"category": "background-color"
 		},
