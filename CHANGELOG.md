@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
-## 0.3.11 - 11-11-2021
+## 0.3.12 - 11-11-2021
 * larva-tokens - Update VY tokens with additional colors and typography
 * larva - Add compatibility CSS for VY
 * larva-patterns - Add blocks for compat stylesheets and class in pattern templates
