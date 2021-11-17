@@ -1,9 +1,10 @@
 const clonedeep = require( 'lodash.clonedeep' );
+const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
 
+const c_span = __experimentalCloneWithFallback( 'components/c-span/c-span.tag' );
+const c_timestamp = __experimentalCloneWithFallback( 'components/c-timestamp/c-timestamp.prototype' );
 const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-image.prototype.js' ) );
-const c_span = clonedeep( require( '../../components/c-span/c-span.prototype.js' ) );
 const c_title = clonedeep( require( '../../components/c-title/c-title.prototype.js' ) );
-const c_timestamp = clonedeep( require( '../../components/c-timestamp/c-timestamp.prototype.js' ) );
 
 module.exports = {
 	o_card_classes: '',

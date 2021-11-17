@@ -10,6 +10,11 @@ const c_timestamp = __experimentalCloneWithFallback( 'components/c-timestamp/c-t
 const c_tagline_author = clonedeep( c_tagline );
 const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-image.prototype' ) );
 
+c_span.c_span_classes += ' lrv-u-color-brand-primary lrv-u-font-size-12 lrv-u-font-size-14@tablet lrv-u-font-weight-bold lrv-u-text-transform-lowercase lrv-u-font-family-primary';
+c_span.c_span_link_classes = 'lrv-u-color-brand-primary-dark:hover';
+c_span.c_span_text = 'News';
+c_span.c_span_url = '#';
+
 c_title.c_title_text = '‘A Momentous Weekend’: LACMA’s High-Stakes Collectors Committee Event Raises $2.4 M.';
 c_title.c_title_classes = 'lrv-u-font-size-14 lrv-u-font-size-26@tablet lrv-u-font-size-32@desktop lrv-u-font-family-primary lrv-u-display-block lrv-u-font-weight-normal lrv-u-font-weight-bold@desktop lrv-u-line-height-small lrv-u-margin-b-050';
 c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-color-brand-primary:hover';
@@ -35,9 +40,9 @@ module.exports = {
 	c_link: false,
 	c_link_bottom: false,
 	c_link_bottom_wrapper_classes: '',
-	c_title,
-	c_dek,
-	c_lazy_image,
-	c_tagline_author,
+	c_title: c_title,
+	c_dek: c_dek,
+	c_lazy_image: c_lazy_image,
+	c_tagline_author: c_tagline_author,
 	c_timestamp,
 };

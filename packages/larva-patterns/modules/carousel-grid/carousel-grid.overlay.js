@@ -1,8 +1,7 @@
 const clonedeep = require( 'lodash.clonedeep' );
+const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
 
-const carousel_grid_prototype = require( './carousel-grid.prototype' );
-
-const carousel_grid_overlay = clonedeep( carousel_grid_prototype );
+const carousel_grid_overlay = __experimentalCloneWithFallback( 'modules/carousel-grid/carousel-grid.prototype' );
 
 carousel_grid_overlay.o_card_large.o_card_classes = 'lrv-a-carousel-grid__overlay--primary';
 carousel_grid_overlay.o_card_large.o_card_content_classes += ' lrv-a-carousel-grid__overlay--primary-content';
