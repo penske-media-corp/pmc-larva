@@ -1,16 +1,14 @@
+const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_span = clonedeep( require( '../../components/c-span/c-span.prototype' ) );
-const c_title = clonedeep( require( '../../components/c-title/c-title.prototype' ) );
-const c_dek = clonedeep( require( '../../components/c-dek/c-dek.prototype' ) );
-const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-image.prototype' ) );
-const c_tagline = clonedeep( require( '../../components/c-tagline/c-tagline.prototype' ) );
-const c_tagline_author = clonedeep( c_tagline );
+const c_span = __experimentalCloneWithFallback( 'components/c-span/c-span.tag' );
+const c_title = __experimentalCloneWithFallback( 'components/c-title/c-title.prototype' );
+const c_dek = __experimentalCloneWithFallback( 'components/c-dek/c-dek.prototype' );
+const c_tagline = __experimentalCloneWithFallback( 'components/c-tagline/c-tagline.prototype' );
+const c_timestamp = __experimentalCloneWithFallback( 'components/c-timestamp/c-timestamp.prototype' );
 
-c_span.c_span_classes += ' lrv-u-color-brand-primary lrv-u-font-size-12 lrv-u-font-size-14@tablet lrv-u-font-weight-bold lrv-u-text-transform-lowercase lrv-u-font-family-primary';
-c_span.c_span_link_classes = 'lrv-u-color-brand-primary-dark:hover';
-c_span.c_span_text = 'News';
-c_span.c_span_url = '#';
+const c_tagline_author = clonedeep( c_tagline );
+const c_lazy_image = clonedeep( require( '../../components/c-lazy-image/c-lazy-image.prototype' ) );
 
 c_title.c_title_text = '‘A Momentous Weekend’: LACMA’s High-Stakes Collectors Committee Event Raises $2.4 M.';
 c_title.c_title_classes = 'lrv-u-font-size-14 lrv-u-font-size-26@tablet lrv-u-font-size-32@desktop lrv-u-font-family-primary lrv-u-display-block lrv-u-font-weight-normal lrv-u-font-weight-bold@desktop lrv-u-line-height-small lrv-u-margin-b-050';
@@ -33,15 +31,13 @@ module.exports = {
 	story_grid_primary_classes: 'lrv-u-margin-r-2@desktop-xl lrv-u-margin-r-00 lrv-u-margin-r-1@desktop',
 	story_grid_secondary_classes: 'lrv-a-span2',
 	story_links_classes: '',
-	c_span: c_span,
+	c_span,
 	c_link: false,
 	c_link_bottom: false,
 	c_link_bottom_wrapper_classes: '',
-	c_title: c_title,
-	c_dek: c_dek,
-	c_lazy_image: c_lazy_image,
-	c_tagline_author: c_tagline_author,
-	c_timestamp: {
-		c_timestamp_text: 'September 3, 2019 7:51pm',
-	},
+	c_title,
+	c_dek,
+	c_lazy_image,
+	c_tagline_author,
+	c_timestamp,
 };

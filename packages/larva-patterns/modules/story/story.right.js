@@ -1,6 +1,6 @@
-const clonedeep = require( 'lodash.clonedeep' );
+const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
 
-const story_right = clonedeep( require( './story.prototype' ) );
+const story_right = __experimentalCloneWithFallback( 'modules/story/story.prototype' );
 
 story_right.story_grid_primary_classes = 'lrv-u-margin-l-2@desktop-xl lrv-u-margin-l-00 lrv-u-margin-l-1@desktop';
 
