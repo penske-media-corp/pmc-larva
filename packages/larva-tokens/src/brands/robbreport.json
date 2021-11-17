@@ -161,13 +161,13 @@
       "originalValue": "Verdana, sans-serif",
       "name": "FONT_FAMILY_ACCENT_FANCY"
     },
-    "FONT_FAMILY_BODY": {
+    "FONT_FAMILY_BODY_FANCY": {
       "category": "font-family",
       "value": "Roboto, san-serif",
       "type": "font",
       "comment": "Webfont for body",
       "originalValue": "Georgia, serif",
-      "name": "FONT_FAMILY_BODY"
+      "name": "FONT_FAMILY_BODY_FANCY"
     },
     "BODY_L_FONT_SIZE_DESKTOP": {
       "selector": "lrv-a-font",
@@ -294,7 +294,7 @@
       "value": "33px",
       "originalValue": "37px",
       "name": "PRIMARY_XL_FONT_SIZE_MOBILE"
-    }, 
+    },
     "PRIMARY_L_FONT_SIZE_DESKTOP": {
       "selector": "lrv-a-font",
       "status": "alpha",
