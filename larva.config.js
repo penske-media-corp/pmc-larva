@@ -10,7 +10,7 @@ module.exports = {
 			delay: 1000,
 			misMatchThreshold: 0.5,
 		},
-		testPaths: [ 'profile', 'profile-index', 'vlanding', 'css' ],
+		testPaths: [ 'profile', 'profile-index', 'vlanding', 'css', 'hub' ],
 		backstopConfig: {
 			engineOptions: {
 				args: [

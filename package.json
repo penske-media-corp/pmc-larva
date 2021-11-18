@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
-    "larva": "packages/larva/bin/larva.js server --watch ./packages -e twig,js,html",
+    "larva": "NODE_PORT=3001 packages/larva/bin/larva.js server --watch ./ -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "npm run prod:scss && npm run prod:js",
     "prod:scss": "npm --prefix=packages/larva-css run build && packages/larva/bin/larva.js prod-scss --generate-important-variants && npm run sync-build",
@@ -84,5 +84,8 @@
     "twing": "^5.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "backstopjs": "^6.0.1"
   }
 }
