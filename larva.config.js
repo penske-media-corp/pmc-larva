@@ -5,7 +5,7 @@ module.exports = {
 	brand: 'default',
 
 	backstop: {
-		testBaseUrl: 'https://pmc-larva-penske-media-corp.vercel.app/larva/__tests__/',
+		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
 		testScenario: {
 			delay: 1000,
 			misMatchThreshold: 0.5,
@@ -13,11 +13,16 @@ module.exports = {
 		testPaths: [ 'profile', 'profile-index', 'vlanding', 'css', 'hub' ],
 		backstopConfig: {
 			engineOptions: {
-				// args: [
-				// 	'--no-sandbox',
-				// 	'--proxy-server=127.0.0.1:' + LARVA_PORT,
-				// 	'--proxy-bypass-list=<-loopback>',
-				// ],
+				headless: true,
+				args: [
+					'--no-sandbox',
+					'--proxy-server=127.0.0.1:' + LARVA_PORT,
+					'--proxy-bypass-list=<-loopback>',
+					'--ignore-certificate-errors',
+					'--disable-setuid-sandbox',
+					'--disable-accelerated-2d-canvas',
+					'--disable-gpu'
+				],
 			},
 		},
 	},

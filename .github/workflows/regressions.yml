@@ -6,7 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    container: lironavon/docker-puppeteer-container:14.16.0
     strategy:
       matrix:
         node-version: [14.x]
