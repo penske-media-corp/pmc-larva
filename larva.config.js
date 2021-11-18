@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const LARVA_PORT = 3001;
+const LARVA_PORT = 3000;
 
 module.exports = {
 	brand: 'default',
