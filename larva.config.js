@@ -13,11 +13,11 @@ module.exports = {
 		testPaths: [ 'profile', 'profile-index', 'vlanding', 'css', 'hub' ],
 		backstopConfig: {
 			engineOptions: {
-				args: [
-					'--no-sandbox',
-					'--proxy-server=127.0.0.1:' + LARVA_PORT,
-					'--proxy-bypass-list=<-loopback>',
-				],
+				// args: [
+				// 	'--no-sandbox',
+				// 	'--proxy-server=127.0.0.1:' + LARVA_PORT,
+				// 	'--proxy-bypass-list=<-loopback>',
+				// ],
 			},
 		},
 	},
