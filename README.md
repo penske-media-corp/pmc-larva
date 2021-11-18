@@ -26,6 +26,22 @@ npm run larva
 
 This will open a development server at localhost:3000. You can contribute to patterns in the packages/larva-patterns, and see the updates reflected here.
 
+## Running Visual Regression Tests
+
+To manually run visual regression tests, use the following command:
+
+```
+npm run backstop -- test
+```
+
+If the tests contain changes that are correct, you can generate new reference screenshots with the following command:
+
+```
+npm run backstop -- reference
+```
+
+Then, commit the updated screenshots.
+
 ## Contributing To and Building Assets
 
 The core Larva repo uses Larva tools to build patterns. Some packages contain their own build steps, such as larva-css and larva-tokens. The flow is as follows:
