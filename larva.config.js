@@ -5,7 +5,7 @@ module.exports = {
 	brand: 'default',
 
 	backstop: {
-		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
+		testBaseUrl: 'https://pmc-larva-penske-media-corp.vercel.app/larva/__tests__/',
 		testScenario: {
 			delay: 1000,
 			misMatchThreshold: 0.5,
