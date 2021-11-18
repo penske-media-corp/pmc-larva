@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * root - Add regression snapshots and backstop dependency
+* larva - Add update-larva command to list of scripts in init log message
+
 ## 0.3.11 - 11-11-2021
 * larva-tokens - Update VY tokens with additional colors and typography
 * larva - Add compatibility CSS for VY
