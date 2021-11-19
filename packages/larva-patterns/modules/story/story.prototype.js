@@ -1,4 +1,4 @@
-const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 const clonedeep = require( 'lodash.clonedeep' );
 
 const c_span = __experimentalCloneWithFallback( 'components/c-span/c-span.tag' );

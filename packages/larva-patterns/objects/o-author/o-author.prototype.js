@@ -1,4 +1,4 @@
-const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
 const c_span = __experimentalCloneWithFallback( 'components/c-span/c-span.prototype' );
 const c_timestamp = __experimentalCloneWithFallback( 'components/c-timestamp/c-timestamp.prototype' );

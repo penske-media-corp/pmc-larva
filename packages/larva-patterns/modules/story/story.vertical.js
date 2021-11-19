@@ -1,4 +1,4 @@
-const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
 const story_vertical = __experimentalCloneWithFallback( 'modules/story/story.prototype' );
 

@@ -1,5 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
-const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
 const o_card_prototype = clonedeep( require( '../../objects/o-card/o-card.prototype' ) );
 const o_author = __experimentalCloneWithFallback( 'objects/o-author/o-author.prototype' );

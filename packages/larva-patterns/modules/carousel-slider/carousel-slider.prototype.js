@@ -1,5 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
-const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
 const c_heading_prototype = require( '../../components/c-heading/c-heading.prototype' );
 const c_heading = clonedeep( c_heading_prototype );

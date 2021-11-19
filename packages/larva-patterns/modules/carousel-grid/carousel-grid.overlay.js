@@ -1,5 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
-const __experimentalCloneWithFallback = require( '@penskemediacorp/larva' ).clone;
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
 const carousel_grid_overlay = __experimentalCloneWithFallback( 'modules/carousel-grid/carousel-grid.prototype' );
 
