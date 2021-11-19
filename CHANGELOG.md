@@ -5,7 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* Add update-larva command to list of scripts in init log message
+* root - Add regression snapshots and backstop dependency
+* larva - Add update-larva command to list of scripts in init log message
 
 ## 0.3.11 - 11-11-2021
 * larva-tokens - Update VY tokens with additional colors and typography
