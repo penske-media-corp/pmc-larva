@@ -2,7 +2,7 @@ const assert = require( 'assert' );
 const getPatternsList = require( '../../../lib/utils/getSubDirectoryNames' );
 const appConfiguration = require( '../../../lib/utils/getAppConfiguration' )('patterns');
 const expectedObjectsList = [ 'o-crap', 'o-nav' ];
-const expectedComponentsList = [ 'c-nav-link' ];
+const expectedComponentsList = [ 'c-nav-link', 'c-tagline' ];
 
 console.log( appConfiguration.projectPatternsDir );
 
