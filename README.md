@@ -42,6 +42,16 @@ npm run backstop -- test
 If the tests contain changes that are intended, approve the new screenshots with the following command:
 ```
 npm run backstop -- approve
+To manually run visual regression tests, use the following command:
+
+```
+npm run backstop -- test
+```
+
+If the tests contain changes that are correct, you can generate new reference screenshots with the following command:
+
+```
+npm run backstop -- reference
 ```
 
 Then, commit the updated screenshots.
