@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * root - Add regression snapshots and backstop dependency
 * larva - Add update-larva command to list of scripts in init log message
+* larva - Experimental method to prioritize to Node prototypes in projects
+* larva-css - Add font style utilties
+* larva-patterns - Use experimental method in story block and carousel patterns
+* larva-patterns - Add variant for `c-span.tag`
+* larva-patterns - Add property for layout classes in `story`
+* larva-patterns - Update `c-link` options in `story` to match the PHP controller support
+* larva-patterns - Remove comments that were not useful and problematic for processing to PHP
+* larva-patterns - Add `o-indicator.photos`
+* larva-tokens - Add font-family-body-fancy to robbreport tokens
+* site - Add robbreport to data file so we can update tokens in the UI
 
 ## 0.3.11 - 11-11-2021
 * larva-tokens - Update VY tokens with additional colors and typography

@@ -9,6 +9,9 @@ const expectedPatterns = {
 			'featured.aia',
 			'featured',
 			'prototype'
+		],
+		'c-tagline': [
+			'prototype'
 		]
 	},
 	'modules': {
@@ -33,9 +36,9 @@ describe( 'getAllPatternsObj', () => {
 
 	it( 'returns an object containing all patterns and variants', () => {
 
-		expect( 
+		expect(
 			getAllPatternsObj( config.projectPatternsDir )
-		).toEqual( 
+		).toEqual(
 			expectedPatterns
 		);
 	});

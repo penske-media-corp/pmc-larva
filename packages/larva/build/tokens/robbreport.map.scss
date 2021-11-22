@@ -47,8 +47,7 @@ $robbreport-map: (
   'font-family-secondary-fancy': (TitlingGothicFBCond-Regular,sans-serif),
   /* Fallback for secondary-fancy */
   'font-family-secondary': (Helvetica, serif),
-  /* Webfont for body */
-  'font-family-body': (Roboto, san-serif),
+  'font-family-body': (Georgia, serif),
   'font-family-basic': (Arial, sans-serif),
   'font-weight-light': (300),
   'font-weight-normal': (400),
@@ -107,6 +106,8 @@ $robbreport-map: (
   'secondary-m-line-height-desktop': (21px),
   'accent-m-line-height-mobile': (19px),
   'accent-l-line-height-mobile': (26px),
+  /* Webfont for body */
+  'font-family-body-fancy': (Roboto, san-serif),
   'accent-m-font-size-mobile': (28px),
   'secondary-s-font-size-desktop': (16px),
   'secondary-s-line-height-desktop': (22px),

@@ -14,6 +14,7 @@ describe( 'getPatternRoutes', () => {
 			'components/c-nav-link/featured.aia',
 			'components/c-nav-link/featured',
 			'components/c-nav-link',
+			'components/c-tagline',
 			'modules/test-module/featured',
 			'modules/test-module',
 			'objects/o-crap',

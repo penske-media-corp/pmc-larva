@@ -1,14 +1,15 @@
 const clonedeep = require( 'lodash.clonedeep' );
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
-const carousel_grid = clonedeep( require( '../../modules/carousel-grid/carousel-grid.prototype' ) );
-const carousel_slider = clonedeep( require( '../../modules/carousel-slider/carousel-slider.prototype' ) );
-const story_grid = clonedeep( require( '../../modules/story-grid/story-grid.prototype' ) );
-const heading_h1 = clonedeep( require( '../../modules/heading/heading.h1' ) );
-const heading_h3 = clonedeep( require( '../../modules/heading/heading.h3' ) );
-const story = clonedeep( require( '../../modules/story/story.prototype' ) );
-const button = clonedeep( require( '../../modules/button/button.prototype' ) );
-const paragraph = clonedeep( require( '../../modules/paragraph/paragraph.prototype' ) );
-const separator = clonedeep( require( '../../modules/separator/separator.prototype' ) );
+const carousel_grid = __experimentalCloneWithFallback( 'modules/carousel-grid/carousel-grid.prototype' );
+const carousel_slider = __experimentalCloneWithFallback( 'modules/carousel-slider/carousel-slider.prototype' );
+const story_grid = __experimentalCloneWithFallback( 'modules/story-grid/story-grid.prototype' );
+const heading_h1 = __experimentalCloneWithFallback( 'modules/heading/heading.h1' );
+const heading_h3 = __experimentalCloneWithFallback( 'modules/heading/heading.h3' );
+const story = __experimentalCloneWithFallback( 'modules/story/story.prototype' );
+const button = __experimentalCloneWithFallback( 'modules/button/button.prototype' );
+const paragraph = __experimentalCloneWithFallback( 'modules/paragraph/paragraph.prototype' );
+const separator = __experimentalCloneWithFallback( 'modules/separator/separator.prototype' );
 
 module.exports = {
 	carousel_grid,

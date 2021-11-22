@@ -513,10 +513,9 @@
     },
     "FONT_FAMILY_BODY": {
       "category": "font-family",
-      "value": "Roboto, san-serif",
+      "value": "Georgia, serif",
       "type": "font",
-      "comment": "Webfont for body",
-      "originalValue": "Roboto, san-serif",
+      "originalValue": "Georgia, serif",
       "name": "FONT_FAMILY_BODY"
     },
     "FONT_FAMILY_BASIC": {
@@ -940,6 +939,14 @@
       "value": "26px",
       "originalValue": "26px",
       "name": "ACCENT_L_LINE_HEIGHT_MOBILE"
+    },
+    "FONT_FAMILY_BODY_FANCY": {
+      "category": "font-family",
+      "value": "Roboto, san-serif",
+      "type": "font",
+      "comment": "Webfont for body",
+      "originalValue": "Roboto, san-serif",
+      "name": "FONT_FAMILY_BODY_FANCY"
     },
     "ACCENT_M_FONT_SIZE_MOBILE": {
       "selector": "lrv-a-font",

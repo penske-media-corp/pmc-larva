@@ -28,6 +28,20 @@ This will open a development server at localhost:3000. You can contribute to pat
 
 ## Running Visual Regression Tests
 
+First, make sure the Larva server is running from the root of this repo. To run the Larva server:
+
+```
+npm run larva
+```
+
+Open a new command window and again, from the root, manually run visual regression tests with the following command:
+```
+npm run backstop -- test
+```
+
+If the tests contain changes that are intended, approve the new screenshots with the following command:
+```
+npm run backstop -- approve
 To manually run visual regression tests, use the following command:
 
 ```
