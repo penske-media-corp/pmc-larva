@@ -4,7 +4,7 @@ This is the mono-repo for PMC's design system, Larva. It contains Larva features
 
 ## Usage
 
-Consult each package's README for a description and directions for use.
+Consult each package's README for a description and directions for use. Consult [the How To Guides in Confluence](https://confluence.pmcdev.io/x/UBOeAw) for details on using Larva in consuming projects.
 
 ## Local Development Setup
 
@@ -25,6 +25,22 @@ npm run larva
 ```
 
 This will open a development server at localhost:3000. You can contribute to patterns in the packages/larva-patterns, and see the updates reflected here.
+
+## Running Visual Regression Tests
+
+To manually run visual regression tests, use the following command:
+
+```
+npm run backstop -- test
+```
+
+If the tests contain changes that are correct, you can generate new reference screenshots with the following command:
+
+```
+npm run backstop -- reference
+```
+
+Then, commit the updated screenshots.
 
 ## Contributing To and Building Assets
 

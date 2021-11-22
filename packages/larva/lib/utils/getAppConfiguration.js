@@ -49,8 +49,10 @@ const defaultConfig = {
 			}
 
 			return path.resolve( './node_modules/@penskemediacorp/larva' );
-		})()
-	}
+		})(),
+	},
+
+	themeAssets: {},
 };
 
 module.exports = function getAppConfiguration( key, usePackageDefault = true ) {

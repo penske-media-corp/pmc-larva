@@ -5,8 +5,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Prefix entries in the changelog with {package} - description of change.
 
 ## Unpublished
-* larva-tokens - Add Robb Report tokens
+* root - Add regression snapshots and backstop dependency
+* larva - Add update-larva command to list of scripts in init log message
 * larva - writeJSON will fail on syntax errors
+
+## 0.3.11 - 11-11-2021
+* larva-tokens - Update VY tokens with additional colors and typography
+* larva - Add compatibility CSS for VY
+* larva-patterns - Add blocks for compat stylesheets and class in pattern templates
+* larva-tokens - Update Rolling Stone tokens.
+
+## 0.3.10 - 10-27-2021
+* larva-tokens - Update Deadline tokens.
+
+## 0.3.9 - 10-21-2021
+* larva - Support configuration for copying local assets from the theme to the static sites
+* larva-patterns - Add template level test with hub modules
+
+## 0.3.8 - 10-19-2021
+* larva-tokens - Add Robb Report tokens
+* larva - Simplify init script
 
 ## 0.3.7 - 09-30-2021
 * larva-tokens - Add additional colors for WWD 2021.

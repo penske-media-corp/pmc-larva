@@ -1,8 +1,21 @@
 const path = require( 'path' );
+const chalk = require( 'chalk' );
+const { copySync } = require( 'fs-extra' );
 
-const spawnScript = require( '../lib/utils/spawnScript' );
 const copyFrom = path.join( __dirname, 'larva' );
 const copyTo = process.cwd();
 
-// Copy the src directory from the larva package that contains example patterns
-spawnScript( 'cp', [ '-r', copyFrom, copyTo ] );
+copySync( copyFrom, copyTo );
+
+console.log(
+	chalk.green( 'Copied folder structure. Now, add the following scripts to package.json:' )
+);
+
+console.log( `
+"backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
+"build-html": "larva build-html",
+"larva": "larva server --watch src -e twig,js,html",
+"parser": "./node_modules/.bin/twig-to-php-parser",
+"update-larva": "npm install @penskemediacorp/larva@latest",
+"write-json": "larva write-json"
+` );
