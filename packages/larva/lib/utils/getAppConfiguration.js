@@ -67,6 +67,8 @@ module.exports = function getAppConfiguration( key, usePackageDefault = true ) {
 
 		let config = require( `${appRoot}/larva.config.js` );
 
+		console.log(config);
+
 		// If config not found in approot, fallback to package default in root
 		if ( undefined === config[key] && usePackageDefault ) {
 			return defaultConfig[ key ];
