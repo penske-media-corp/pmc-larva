@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+
+## 0.4.0 - 11-23-2021
 * root - Add regression snapshots and backstop dependency
 * larva - Add update-larva command to list of scripts in init log message
 * larva - Experimental method to prioritize to Node prototypes in projects
