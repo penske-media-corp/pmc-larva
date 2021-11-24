@@ -72,8 +72,12 @@
   --primary-m-line-height-desktop: 25px;
   --primary-l-font-size-mobile: 34px;
   --primary-xl-line-height-desktop: 38px;
+  --primary-s-font-weight-mobile: 700;
   --primary-s-font-size-desktop: 18px;
   --primary-s-line-height-desktop: 20px;
+  --primary-xl-font-weight-mobile: 700;
+  --primary-m-font-weight-mobile: 700;
+  --primary-l-font-weight-mobile: 700;
   --secondary-m-line-height-mobile: 21px;
   --secondary-m-font-size-mobile: 17px;
   --background-color-brand-accent: rgb(240, 241, 242);

@@ -670,6 +670,15 @@
       "originalValue": "38px",
       "name": "PRIMARY_XL_LINE_HEIGHT_DESKTOP"
     },
+    "PRIMARY_S_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "PRIMARY_S_FONT_WEIGHT_MOBILE"
+    },
     "PRIMARY_S_FONT_SIZE_DESKTOP": {
       "selector": "lrv-a-font",
       "status": "alpha",
@@ -687,6 +696,33 @@
       "value": "20px",
       "originalValue": "20px",
       "name": "PRIMARY_S_LINE_HEIGHT_DESKTOP"
+    },
+    "PRIMARY_XL_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "PRIMARY_XL_FONT_WEIGHT_MOBILE"
+    },
+    "PRIMARY_M_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "PRIMARY_M_FONT_WEIGHT_MOBILE"
+    },
+    "PRIMARY_L_FONT_WEIGHT_MOBILE": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-weight",
+      "type": "number",
+      "value": "700",
+      "originalValue": "700",
+      "name": "PRIMARY_L_FONT_WEIGHT_MOBILE"
     },
     "SECONDARY_M_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
