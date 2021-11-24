@@ -186,7 +186,7 @@
 		"name": "FONT_FAMILY_BODY"
 	  },
 	  "FONT_FAMILY_PRIMARY": {
-		"value": "Courier, serif",
+		"value": "Helvetica, serif",
 		"type": "font-family",
 		"category": "font-family",
 		"comment": "Fallback for primary-fancy.",
