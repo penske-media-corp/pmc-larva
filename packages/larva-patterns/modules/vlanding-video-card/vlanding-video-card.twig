@@ -19,12 +19,9 @@
 
 		<div class="{{ vlanding_video_card_crop_class }}" data-video-showcase-active-text="{{ vlanding_video_card_active_txt_attr }}">
 
-			{# TODO: Can we use image tag here, we need vlanding_video_card_crop_data_attr option with crop_classs #}
 			{% if c_lazy_image %}
 				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 			{% endif %}
-
-			{# TODO: Need c_play_badge #}
 
 			{% if vlanding_video_card_is_player %}
 				<iframe hidden id="youtubePlayerContainer" frameborder="0" data-video-showcase-iframe></iframe>

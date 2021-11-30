@@ -21,9 +21,9 @@
 
 			<ul class="lrv-u-flex lrv-u-order-n1 lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-b-050 u-letter-spacing-012 // {{ story_links_classes }}">
 
-				{% if c_link %}
+				{% if c_link_top %}
 					<li>
-						{% include "@larva/components/c-link/c-link.twig" with c_link %}
+						{% include "@larva/components/c-link/c-link.twig" with c_link_top %}
 					</li>
 				{% endif %}
 
@@ -34,7 +34,7 @@
 				{% endif %}
 			</ul>
 
-			<ul class="lrv-a-unstyle-list lrv-u-flex lrv-u-align-items-center lrv-u-color-black lrv-a-space-children-horizontal lrv-a-space-children--2 lrv-a-hidden@mobile-max lrv-u-margin-t-050 // {{ story_nav_classes }}">
+			<ul class="lrv-a-unstyle-list // {{ story_nav_classes }} {{ story_nav_layout_classes }}">
 				{% if c_button %}
 					<li class="lrv-u-flex">
 						{% include "@larva/components/c-button/c-button.twig" with c_button %}
@@ -54,8 +54,14 @@
 				{% endif %}
 			</ul>
 
+			{% if c_link %}
+				<div>
+					{% include "@larva/components/c-link/c-link.twig" with c_link %}
+				</div>
+			{% endif %}
+
 			{% if c_link_bottom %}
-				<ul class="lrv-u-flex lrv-u-order-100 lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-t-050 u-letter-spacing-012 // {{ c_link_bottom_wrapper_classes }}">
+				<ul class="lrv-u-flex lrv-u-order-100 lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-t-050 // {{ c_link_bottom_wrapper_classes }}">
 					{% if c_link_bottom %}
 						<li>
 							{% include "@larva/components/c-link/c-link.twig" with c_link_bottom %}

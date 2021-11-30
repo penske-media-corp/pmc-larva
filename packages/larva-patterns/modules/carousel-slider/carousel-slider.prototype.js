@@ -1,4 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
 const c_heading_prototype = require( '../../components/c-heading/c-heading.prototype' );
 const c_heading = clonedeep( c_heading_prototype );
@@ -9,16 +10,9 @@ const c_icon = clonedeep( c_icon_prototype );
 const o_card_prototype = require( '../../objects/o-card/o-card.prototype' );
 const o_card = clonedeep( o_card_prototype );
 
-const o_indicator_prototype = require( '../../objects/o-indicator/o-indicator.prototype' );
-const o_indicator = clonedeep( o_indicator_prototype );
+const o_indicator_photos = __experimentalCloneWithFallback( 'objects/o-indicator/o-indicator.photos' );
 
-o_indicator.c_icon = clonedeep( c_icon );
-o_indicator.c_icon.c_icon_name = 'gallery';
-o_indicator.c_span.c_span_text = 'Photos';
-o_indicator.c_span.c_span_classes += ' lrv-u-margin-l-050 lrv-u-text-transform-uppercase lrv-a-font-secondary-s';
-o_indicator.o_indicator_classes += ' lrv-u-flex lrv-u-background-color-black lrv-u-color-white lrv-u-padding-a-050 lrv-u-border-radius-5 lrv-u-margin-a-050';
-
-o_card.o_indicator = o_indicator;
+o_card.o_indicator = o_indicator_photos;
 
 o_card.o_card_link_url = '#';
 o_card.o_card_link_classes = 'lrv-a-unstyle-link lrv-u-display-block';
