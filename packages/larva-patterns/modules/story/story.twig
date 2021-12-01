@@ -3,7 +3,9 @@
 
 		<div class="{{ story_grid_primary_classes }} // lrv-a-glue-parent u-padding-t-1@mobile-max lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-start">
 			<div class="lrv-a-glue-parent">
-				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+				{% if o_indicator %}
+					{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+				{% endif %}
 
 				{% if o_indicator %}
 					{% include "@larva/objects/o-indicator/o-indicator.twig" with o_indicator %}
@@ -12,8 +14,9 @@
 		</div>
 
 		<div class="{{ story_grid_secondary_classes }} // lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-center">
-
-			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
 
 			{% if c_dek %}
 				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
