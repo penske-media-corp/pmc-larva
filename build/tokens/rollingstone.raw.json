@@ -485,11 +485,11 @@
       "name": "FONT_FAMILY_PRIMARY_FANCY"
     },
     "FONT_FAMILY_PRIMARY": {
-      "value": "Courier, serif",
+      "value": "Helvetica, sans-serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "Fallback for primary-fancy.",
-      "originalValue": "Courier, serif",
+      "originalValue": "Helvetica, sans-serif",
       "name": "FONT_FAMILY_PRIMARY"
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
