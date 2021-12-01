@@ -13,7 +13,8 @@ body {
 }
 
 // Apply the webfont when fonts are loaded.
-.wf-active body {
+.wf-active body,
+.fonts-loaded body {
 
 	@each $token, $value in $TOKENS-MAP {
 		$token-str: quote( $token );
