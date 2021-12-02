@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-tokens - Improve fallback fonts for rollingstone tokens.
+* larva-patterns - Standardize c_link references in story module.
 
 ## 0.4.0 - 11-23-2021
 * root - Add regression snapshots and backstop dependency
