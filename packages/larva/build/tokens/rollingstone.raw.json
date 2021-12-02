@@ -500,11 +500,11 @@
       "name": "FONT_FAMILY_SECONDARY_FANCY"
     },
     "FONT_FAMILY_SECONDARY": {
-      "value": "'Papyrus', serif",
+      "value": "'Helvetica', serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "Fallback for secondary-fancy.",
-      "originalValue": "'Papyrus', serif",
+      "originalValue": "'Helvetica', serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {
