@@ -12,7 +12,7 @@ export const TokensView = () => {
 	let match = useRouteMatch();
 
 	const TOKENS_FETCH_URL =
-		"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/";
+		"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/fix/rs-tokens/packages/larva-tokens/build/";
 
 	const appActions = {
 		create: "create",
