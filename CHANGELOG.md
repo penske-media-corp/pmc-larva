@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-tokens - Use bold for primary a-font weights.
+* larva-tokens - Use bold for primary a-font weights in rollingstone tokens.
 * site - Import typography fallbacks for base tokens.
 
 ## 0.4.1 - 12-06-2021
