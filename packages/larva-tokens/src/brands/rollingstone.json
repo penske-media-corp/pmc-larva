@@ -186,7 +186,7 @@
 		"name": "FONT_FAMILY_BODY"
 	  },
 	  "FONT_FAMILY_PRIMARY": {
-		"value": "Courier, serif",
+		"value": "Helvetica, sans-serif",
 		"type": "font-family",
 		"category": "font-family",
 		"comment": "Fallback for primary-fancy.",
@@ -201,7 +201,7 @@
 		"name": "FONT_FAMILY_PRIMARY_FANCY"
 	  },
 	  "FONT_FAMILY_SECONDARY": {
-		"value": "'Papyrus', serif",
+		"value": "'Helvetica', serif",
 		"type": "font-family",
 		"category": "font-family",
 		"comment": "Fallback for secondary-fancy.",
