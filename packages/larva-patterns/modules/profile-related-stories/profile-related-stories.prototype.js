@@ -13,7 +13,7 @@ o_card_list.o_card_list_items.map( ( o_card ) => {
 	o_card.o_card_classes = 'lrv-u-flex lrv-u-flex-direction-column@tablet';
 
 	o_card.c_lazy_image.c_lazy_image_classes = 'lrv-u-flex-shrink-0 lrv-u-margin-r-1 lrv-u-margin-r-00@tablet';
-	o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-3x2';
+	o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
 
 	o_card.c_span.c_span_text = 'News';
 	o_card.c_span.c_span_classes += ' lrv-u-font-size-12@mobile-max lrv-u-font-family-primary lrv-u-font-weight-bold lrv-u-display-block lrv-u-padding-b-050';

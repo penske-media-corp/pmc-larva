@@ -10,7 +10,7 @@ c_title.c_title_url = false;
 c_heading.c_heading_url = false;
 
 c_lazy_image.c_lazy_image_link_url = false;
-c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-3x2';
+c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
 c_lazy_image.c_lazy_image_alt_attr = 'Post tease thumbnail image';
 
 module.exports = {
