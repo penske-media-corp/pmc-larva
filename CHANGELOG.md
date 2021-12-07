@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-css - Fix 2x1 and 2x3 crop algorithms, introduce 3x2 crop algorithm
 
+## 0.4.2 - 12-06-2021
+* larva-tokens - Use bold for primary a-font weights in rollingstone tokens.
+* site - Import typography fallbacks for base tokens.
+
+## 0.4.1 - 12-06-2021
+* larva-tokens - Improve fallback fonts for rollingstone tokens.
+* larva-patterns - Standardize c_link references in story module.
+
 ## 0.4.0 - 11-23-2021
 * root - Add regression snapshots and backstop dependency
 * larva - Add update-larva command to list of scripts in init log message
