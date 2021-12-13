@@ -6,7 +6,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    container: buildkite/puppeteer
     strategy:
       matrix:
         node-version: [14.x]
