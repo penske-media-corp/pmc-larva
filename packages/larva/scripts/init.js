@@ -12,9 +12,10 @@ console.log(
 );
 
 console.log( `
-"larva": "larva server --watch src -e twig,js,html",
-"write-json": "larva write-json",
-"parser": "./node_modules/.bin/twig-to-php-parser",
 "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
-"build-html": "larva build-html"
+"build-html": "larva build-html",
+"larva": "larva server --watch src -e twig,js,html",
+"parser": "./node_modules/.bin/twig-to-php-parser",
+"update-larva": "npm install @penskemediacorp/larva@latest",
+"write-json": "larva write-json"
 ` );

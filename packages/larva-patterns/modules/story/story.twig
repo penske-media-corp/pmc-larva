@@ -3,7 +3,9 @@
 
 		<div class="{{ story_grid_primary_classes }} // lrv-a-glue-parent u-padding-t-1@mobile-max lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-start">
 			<div class="lrv-a-glue-parent">
-				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+				{% if c_lazy_image %}
+					{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+				{% endif %}
 
 				{% if o_indicator %}
 					{% include "@larva/objects/o-indicator/o-indicator.twig" with o_indicator %}
@@ -12,8 +14,9 @@
 		</div>
 
 		<div class="{{ story_grid_secondary_classes }} // lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-center">
-
-			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
 
 			{% if c_dek %}
 				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
@@ -21,9 +24,9 @@
 
 			<ul class="lrv-u-flex lrv-u-order-n1 lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-b-050 u-letter-spacing-012 // {{ story_links_classes }}">
 
-				{% if c_link %}
+				{% if c_link_top %}
 					<li>
-						{% include "@larva/components/c-link/c-link.twig" with c_link %}
+						{% include "@larva/components/c-link/c-link.twig" with c_link_top %}
 					</li>
 				{% endif %}
 
@@ -34,7 +37,7 @@
 				{% endif %}
 			</ul>
 
-			<ul class="lrv-a-unstyle-list lrv-u-flex lrv-u-align-items-center lrv-u-color-black lrv-a-space-children-horizontal lrv-a-space-children--2 lrv-a-hidden@mobile-max lrv-u-margin-t-050 // {{ story_nav_classes }}">
+			<ul class="lrv-a-unstyle-list // {{ story_nav_classes }} {{ story_nav_layout_classes }}">
 				{% if c_button %}
 					<li class="lrv-u-flex">
 						{% include "@larva/components/c-button/c-button.twig" with c_button %}
@@ -55,13 +58,11 @@
 			</ul>
 
 			{% if c_link_bottom %}
-				<ul class="lrv-u-flex lrv-u-order-100 lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-t-050 u-letter-spacing-012 // {{ c_link_bottom_wrapper_classes }}">
+				<div class="lrv-u-flex lrv-u-order-100 lrv-u-margin-t-050 // {{ c_link_bottom_wrapper_classes }}">
 					{% if c_link_bottom %}
-						<li>
-							{% include "@larva/components/c-link/c-link.twig" with c_link_bottom %}
-						</li>
+						{% include "@larva/components/c-link/c-link.twig" with c_link_bottom %}
 					{% endif %}
-				</ul>
+				</div>
 			{% endif %}
 
 		</div>

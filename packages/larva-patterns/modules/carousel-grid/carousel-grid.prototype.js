@@ -1,7 +1,8 @@
 const clonedeep = require( 'lodash.clonedeep' );
+const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
-const o_card_prototype = require( '../../objects/o-card/o-card.prototype' );
-const o_author = clonedeep(require('../../objects/o-author/o-author.prototype'));
+const o_card_prototype = clonedeep( require( '../../objects/o-card/o-card.prototype' ) );
+const o_author = __experimentalCloneWithFallback( 'objects/o-author/o-author.prototype' );
 const o_card = clonedeep( o_card_prototype );
 
 o_card.o_card_classes = 'lrv-u-margin-b-1';

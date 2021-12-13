@@ -1,7 +1,13 @@
-const chalk = require( 'chalk' );
+const path = require( 'path' );
+const clonedeep = require( 'lodash.clonedeep' );
+const getConfig = require( './getAppConfiguration' );
 
-// TODO: this should be removed.
-module.exports = function clonePatternData( path ) {
-	const patternData = require( path );
-	return Object.assign( {}, patternData );
+const { larvaPatternsDir, projectPatternsDir } = getConfig( 'patterns' );
+
+module.exports = function clonePatternData( slug ) {
+	try {
+		return clonedeep( require( path.join( projectPatternsDir, slug ) ) );
+	} catch {
+		return clonedeep( require( path.join( larvaPatternsDir, slug ) ) );
+	}
 }
