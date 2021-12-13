@@ -19,7 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Dependencies
       run: |
-        npm ci
+        PUPPETEER_SKIP_DOWNLOAD=true npm ci
         ./node_modules/.bin/lerna bootstrap
     - name: Start Larva Server
       run: nohup npm run larva > /dev/null 2>&1 &
