@@ -28,7 +28,7 @@ jobs:
       env:
         CI: true
     - name: Archive Backstop results
-        uses: actions/upload-artifact@v2
-        with:
-          name: backstop-results
-          path: backstop_data
+      uses: actions/upload-artifact@v2
+      with:
+        name: backstop-results
+        path: backstop_data
