@@ -9,7 +9,7 @@ o_card.o_card_classes = 'lrv-u-margin-b-1';
 o_card.o_card_content_classes = ' lrv-u-margin-t-050';
 
 o_card.c_lazy_image.c_lazy_image_classes += ' ';
-o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
+o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-3x2';
 
 o_card.c_lazy_image.c_lazy_image_link_url = '#';
 
