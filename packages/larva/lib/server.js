@@ -59,6 +59,7 @@ const kebabify = ( name ) => {
 // TODO: Could be an array/iterator if the namespace can be extracted from the key, the larva.config API could
 // change to `patterns: { larva: /larva/path/here/, project: /project/path/here }`
 loader.addPath( patternConfig.larvaPatternsDir, 'larva' );
+loader.addPath( patternConfig.larvaPatternsDir, 'larva-only' );
 
 if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
 	loader.addPath( patternConfig.projectPatternsDir, 'project' );
