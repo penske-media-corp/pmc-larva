@@ -1,6 +1,7 @@
 {
 	"imports": [
-		"../base/all.json"
+		"../base/all.json",
+		"./wwd-2021.json"
 	],
 	"props": {
 		"BACKGROUND_COLOR_GREY_LIGHTEST": {
