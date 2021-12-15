@@ -5,7 +5,8 @@ const parserMethods = require( '../index.js' ).methods;
 const expectations = {
 	childInclude: '<?php \\PMC::render_template( CHILD_THEME_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
 	larvaInclude: '<?php \\PMC::render_template( PMC_CORE_PATH . \'/template-parts/patterns/objects/o-nav.php\', $o_nav, true ); ?>',
-	pluginEnabled: '<?php \\PMC\\Larva\\Pattern::get_instance()->render_pattern_template( \'objects/o-nav\', $o_nav, true ); ?>'
+	pluginEnabled: '<?php \\PMC\\Larva\\Pattern::get_instance()->render_pattern_template( \'objects/o-nav\', $o_nav, true ); ?>',
+	larvaOnlyInclude: '<?php \\PMC\\Larva\\Pattern::get_instance()->render_pattern_template( \'objects/o-nav\', $o_nav, true, true ); ?>',
 };
 
 describe( 'parse include statements', function() {
@@ -49,6 +50,31 @@ describe( 'parse include statements', function() {
 				done();
 			} );
 	} );
+
+	it( 'adds a true parameter for the larva-only namespace when the plugin is enabled', ( done ) => {
+		parserMethods.parseIncludePath(
+			'{% include "@larva-only/objects/o-nav.twig" with o_nav %}',
+			'o-nav',
+			'o_nav',
+			true )
+		.catch( e => console.log( e ) )
+		.then( ( result ) => {
+			assert.equal( result, expectations.larvaOnlyInclude );
+			done();
+		});
+	});
+
+	it( 'does not add a true parameter for the larva-only namespace by default', ( done ) => {
+		parserMethods.parseIncludePath(
+			'{% include "@larva-only/objects/o-nav.twig" with o_nav %}',
+			'o-nav',
+			'o_nav' )
+		.catch( e => console.log( e ) )
+		.then( ( result ) => {
+			assert.equal( result, expectations.larvaInclude );
+			done();
+		});
+	});
 
 });
 

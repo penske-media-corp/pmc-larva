@@ -241,6 +241,7 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 	$pattern_directory = '/template-parts/patterns/';
 	$start_name = substr( $pattern_name, 0, 2 );
 	$pattern_type = '';
+	$larva_only_param = strpos( $twig_include, '@larva-only' ) ? ', true' : '';
 
 	if ( strpos( $twig_include, '@larva' ) ) {
 		$brand_directory = 'PMC_CORE_PATH';
@@ -255,7 +256,7 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 	}
 
 	if ( $is_using_plugin ) {
-		return "<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( '" . $pattern_type . '/' . $pattern_name . "', $" . $data_name . ", true ); ?>";
+		return "<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( '" . $pattern_type . '/' . $pattern_name . "', $" . $data_name . ", true" . $larva_only_param . " ); ?>";
 	} else {
 		$pattern_partial_path = $pattern_directory . $pattern_type . '/' . $pattern_name;
 
