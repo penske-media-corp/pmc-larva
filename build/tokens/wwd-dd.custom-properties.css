@@ -11,8 +11,8 @@
   /* The webfont, loaded async */
   --font-family-secondary-fancy: 'Frank Ruhl Libre', serif;
   --color-grey-lightest: rgb(240, 240, 240);
-  --font-family-accent: serif;
+  --font-family-accent: 'Times New Roman', serif;
   /* Fallback for primary-fancy */
   --font-family-primary: sans-serif;
-  --font-family-accent-fancy: forma-djr-deck, sans-serif;
+  --font-family-accent-fancy: 'Publico Banner', Times New Roman, sans-serif;
 }

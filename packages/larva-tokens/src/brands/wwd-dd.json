@@ -25,7 +25,7 @@
 		"FONT_FAMILY_ACCENT": {
 			"selector": "lrv-a-font",
 			"status": "alpha",
-			"value": "serif",
+			"value": "'Times New Roman', serif",
 			"type": "font-family",
 			"category": "font-family",
 			"originalValue": "Verdana, serif",
@@ -34,7 +34,7 @@
 		"FONT_FAMILY_ACCENT_FANCY": {
 			"selector": "lrv-a-font",
 			"status": "alpha",
-			"value": "forma-djr-deck, sans-serif",
+			"value": "'Publico Banner', Times New Roman, sans-serif",
 			"type": "font-family",
 			"category": "font-family",
 			"originalValue": "Verdana, sans-serif",

@@ -7,7 +7,7 @@
   "FONT_FAMILY_BODY": "'Frank Ruhl Libre', serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'Frank Ruhl Libre', serif",
   "COLOR_GREY_LIGHTEST": "rgb(240, 240, 240)",
-  "FONT_FAMILY_ACCENT": "serif",
+  "FONT_FAMILY_ACCENT": "'Times New Roman', serif",
   "FONT_FAMILY_PRIMARY": "sans-serif",
-  "FONT_FAMILY_ACCENT_FANCY": "forma-djr-deck, sans-serif"
+  "FONT_FAMILY_ACCENT_FANCY": "'Publico Banner', Times New Roman, sans-serif"
 }
