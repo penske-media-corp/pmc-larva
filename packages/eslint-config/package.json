@@ -25,5 +25,8 @@
   },
   "dependencies": {
     "@wordpress/eslint-plugin": "^8.0.2"
+  },
+  "peerDependencies": {
+	"eslint": "^7.32.0"
   }
 }
