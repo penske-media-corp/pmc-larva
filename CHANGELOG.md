@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
+## 0.4.4 - 01-04-2022
+
+* larva-css - Remove generic a:hover style.
+* larva-patterns - Add property-specific values for button module.
+
+## 0.4.3 - 12-16-2021
+* larva-patterns - Add conditions around includes in vlanding-video-showcase.
+
 ## 0.4.2 - 12-06-2021
 * larva-tokens - Use bold for primary a-font weights in rollingstone tokens.
 * site - Import typography fallbacks for base tokens.
