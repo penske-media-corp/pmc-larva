@@ -46,7 +46,7 @@
   /* Webfont for secondary-fancy */
   --font-family-secondary-fancy: TitlingGothicFBCond-Regular,sans-serif;
   /* Fallback for secondary-fancy */
-  --font-family-secondary: Helvetica, serif;
+  --font-family-secondary: Arial, serif;
   --font-family-body: Georgia, serif;
   --font-family-basic: Arial, sans-serif;
   --font-weight-light: 300;

@@ -4,7 +4,7 @@
 	},
 	"props": {
 		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "Courier, serif",
+			"value": "Arial, sans-serif",
 			"type": "font",
 			"comment": "The webfont, loaded async"
 		},
@@ -14,12 +14,12 @@
 			"comment": "Fallback for primary-fancy"
 		},
 		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "Papyrus, serif",
+			"value": "Arial, sams-serif",
 			"type": "font",
 			"comment": "The webfont, loaded async"
 		},
 		"FONT_FAMILY_SECONDARY": {
-			"value": "Helvetica, serif",
+			"value": "Arial, serif",
 			"type": "font",
 			"comment": "Fallback for secondary-fancy"
 		},
@@ -28,7 +28,7 @@
 			"type": "font"
 		},
 		"FONT_FAMILY_BASIC": {
-			"value": "Helvetica, sans-serif",
+			"value": "Arial, sans-serif",
 			"type": "font-family"
 		}
 	}

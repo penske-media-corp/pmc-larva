@@ -43,9 +43,9 @@
   --font-family-primary: Georgia, serif;
   --font-family-secondary-fancy: 'IBM Plex Sans', sans-serif;
   /* Fallback for secondary-fancy */
-  --font-family-secondary: Helvetica, serif;
+  --font-family-secondary: Arial, serif;
   --font-family-body: Georgia, serif;
-  --font-family-basic: Helvetica, sans-serif;
+  --font-family-basic: Arial, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;

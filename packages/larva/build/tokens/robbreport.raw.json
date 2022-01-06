@@ -505,10 +505,10 @@
     },
     "FONT_FAMILY_SECONDARY": {
       "category": "font-family",
-      "value": "Helvetica, serif",
+      "value": "Arial, serif",
       "type": "font",
       "comment": "Fallback for secondary-fancy",
-      "originalValue": "Helvetica, serif",
+      "originalValue": "Arial, serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {

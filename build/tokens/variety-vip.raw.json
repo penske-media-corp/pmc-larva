@@ -339,9 +339,9 @@
     },
     "FONT_FAMILY_BASIC": {
       "category": "font-family",
-      "value": "Helvetica, sans-serif",
+      "value": "Arial, sans-serif",
       "type": "font-family",
-      "originalValue": "Helvetica, sans-serif",
+      "originalValue": "Arial, sans-serif",
       "name": "FONT_FAMILY_BASIC"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {

@@ -495,18 +495,18 @@
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
       "category": "font-family",
-      "value": "Papyrus, serif",
+      "value": "Arial, sams-serif",
       "type": "font",
       "comment": "The webfont, loaded async",
-      "originalValue": "Papyrus, serif",
+      "originalValue": "Arial, sams-serif",
       "name": "FONT_FAMILY_SECONDARY_FANCY"
     },
     "FONT_FAMILY_SECONDARY": {
       "category": "font-family",
-      "value": "Helvetica, serif",
+      "value": "Arial, serif",
       "type": "font",
       "comment": "Fallback for secondary-fancy",
-      "originalValue": "Helvetica, serif",
+      "originalValue": "Arial, serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {
