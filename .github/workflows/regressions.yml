@@ -34,6 +34,11 @@ jobs:
       with:
         name: backstop-results
         path: backstop_data
+    - name: Repository dispatch
+      uses: peter-evans/repository-dispatch@v1
+      event-type: my-event
+      client-payload: '{"prnumber": "${{ github.event.number }}", "checkrunid": "${{ github.run_id }}"}'
+
     # - name: Add artifact links to pull request and related issues step
     #   uses: tonyhallett/artifacts-url-comments@v1.1.0
     #   env:
