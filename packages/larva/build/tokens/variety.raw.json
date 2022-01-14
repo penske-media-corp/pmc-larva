@@ -487,10 +487,10 @@
     },
     "FONT_FAMILY_PRIMARY": {
       "category": "font-family",
-      "value": "Georgia, serif",
+      "value": "Arial, sans-serif",
       "type": "font",
       "comment": "Fallback for primary-fancy",
-      "originalValue": "Georgia, serif",
+      "originalValue": "Arial, sans-serif",
       "name": "FONT_FAMILY_PRIMARY"
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
@@ -502,17 +502,17 @@
     },
     "FONT_FAMILY_SECONDARY": {
       "category": "font-family",
-      "value": "Arial, serif",
+      "value": "Arial, sans-serif",
       "type": "font",
       "comment": "Fallback for secondary-fancy",
-      "originalValue": "Arial, serif",
+      "originalValue": "Arial, sans-serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {
       "category": "font-family",
-      "value": "Georgia, serif",
+      "value": "Arial, sans-serif",
       "type": "font",
-      "originalValue": "Georgia, serif",
+      "originalValue": "Arial, sans-serif",
       "name": "FONT_FAMILY_BODY"
     },
     "FONT_FAMILY_BASIC": {

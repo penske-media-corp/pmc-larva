@@ -9,7 +9,7 @@
 			"comment": "The webfont, loaded async"
 		},
 		"FONT_FAMILY_PRIMARY": {
-			"value": "Georgia, serif",
+			"value": "Arial, sans-serif",
 			"type": "font",
 			"comment": "Fallback for primary-fancy"
 		},
@@ -19,12 +19,12 @@
 			"comment": "The webfont, loaded async"
 		},
 		"FONT_FAMILY_SECONDARY": {
-			"value": "Arial, serif",
+			"value": "Arial, sans-serif",
 			"type": "font",
 			"comment": "Fallback for secondary-fancy"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "Georgia, serif",
+			"value": "Arial, sans-serif",
 			"type": "font"
 		},
 		"FONT_FAMILY_BASIC": {

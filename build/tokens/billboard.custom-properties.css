@@ -44,7 +44,7 @@
   /* The webfont, loaded async */
   --font-family-secondary-fancy: Arial, sams-serif;
   /* Fallback for secondary-fancy */
-  --font-family-secondary: Arial, serif;
+  --font-family-secondary: Arial, sans-serif;
   --font-family-body: 'open-sans', Helvetica, sans-serif;
   --font-family-basic: Helvetica, sans-serif;
   --font-weight-light: 300;
