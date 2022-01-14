@@ -38,7 +38,7 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.PAT1 }}
-        repository: penske-media-corp/pmc-larva
+        repository: ${{ github.repository }}
         event-type: my-event
         client-payload: '{"prnumber": "${{ github.event.number }}", "checkrunid": "${{ github.run_id }}"}'
 
