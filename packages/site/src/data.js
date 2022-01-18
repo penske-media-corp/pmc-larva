@@ -16,4 +16,6 @@ export const brands = [
 	"vibe",
 	"wwd",
 	"wwd-2021",
+	"wwd-beauty",
+	"wwd-dd",
 ];
