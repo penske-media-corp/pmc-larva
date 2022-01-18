@@ -1,0 +1,18 @@
+
+$wwd-dd-map: (
+  'border-color-grey-lightest': (rgb(240, 240, 240)),
+  /* The webfont, loaded async */
+  'font-family-primary-fancy': (forma-djr-deck, sans-serif),
+  'font-family-basic': ('Frank Ruhl Libre', serif),
+  'background-color-grey-lightest': (rgb(240, 240, 240)),
+  /* Fallback for secondary-fancy */
+  'font-family-secondary': (serif),
+  'font-family-body': ('Frank Ruhl Libre', serif),
+  /* The webfont, loaded async */
+  'font-family-secondary-fancy': ('Frank Ruhl Libre', serif),
+  'color-grey-lightest': (rgb(240, 240, 240)),
+  'font-family-accent': ('Times New Roman', serif),
+  /* Fallback for primary-fancy */
+  'font-family-primary': (sans-serif),
+  'font-family-accent-fancy': ('Publico Banner', Times New Roman, sans-serif),
+);
