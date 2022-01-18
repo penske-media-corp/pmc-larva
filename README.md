@@ -4,7 +4,11 @@ This is the mono-repo for PMC's design system, Larva. It contains Larva features
 
 ## Usage
 
-Consult each package's README for a description and directions for use. Consult [the How To Guides in Confluence](https://confluence.pmcdev.io/x/UBOeAw) for details on using Larva in consuming projects.
+Consult each package's README for a description and directions for use. 
+Consult [the How-To Guides in Confluence](https://confluence.pmcdev.io/x/UBOeAw)
+for details on using Larva in consuming projects. When upgrading a consuming
+project, consult [UPGRADING.md](./UPGRADING.md) for breaking changes and other
+important information.
 
 ## Local Development Setup
 

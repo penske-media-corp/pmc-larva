@@ -21,7 +21,7 @@ c_tagline_author.c_tagline_classes = 'lrv-u-margin-l-050';
 c_tagline_author.c_tagline_markup = "<a href='#'>Staff Writer</a>";
 c_tagline_author.c_tagline_text = false;
 
-c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
+c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-3x2';
 
 module.exports = {
 	story_classes: '',

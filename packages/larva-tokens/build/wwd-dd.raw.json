@@ -1,0 +1,90 @@
+{
+  "aliases": {},
+  "props": {
+    "BORDER_COLOR_GREY_LIGHTEST": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(240, 240, 240)",
+      "originalValue": "rgb(240,240,240)",
+      "name": "BORDER_COLOR_GREY_LIGHTEST"
+    },
+    "FONT_FAMILY_PRIMARY_FANCY": {
+      "category": "font-family",
+      "value": "forma-djr-deck, sans-serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "forma-djr-deck, sans-serif",
+      "name": "FONT_FAMILY_PRIMARY_FANCY"
+    },
+    "FONT_FAMILY_BASIC": {
+      "category": "font-family",
+      "value": "'Frank Ruhl Libre', serif",
+      "type": "font-family",
+      "originalValue": "'Frank Ruhl Libre', serif",
+      "name": "FONT_FAMILY_BASIC"
+    },
+    "BACKGROUND_COLOR_GREY_LIGHTEST": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(240, 240, 240)",
+      "originalValue": "rgb(240,240,240)",
+      "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
+    },
+    "FONT_FAMILY_SECONDARY": {
+      "category": "font-family",
+      "value": "serif",
+      "type": "font",
+      "comment": "Fallback for secondary-fancy",
+      "originalValue": "serif",
+      "name": "FONT_FAMILY_SECONDARY"
+    },
+    "FONT_FAMILY_BODY": {
+      "category": "font-family",
+      "value": "'Frank Ruhl Libre', serif",
+      "type": "font",
+      "originalValue": "'Frank Ruhl Libre', serif",
+      "name": "FONT_FAMILY_BODY"
+    },
+    "FONT_FAMILY_SECONDARY_FANCY": {
+      "category": "font-family",
+      "value": "'Frank Ruhl Libre', serif",
+      "type": "font",
+      "comment": "The webfont, loaded async",
+      "originalValue": "'Frank Ruhl Libre', serif",
+      "name": "FONT_FAMILY_SECONDARY_FANCY"
+    },
+    "COLOR_GREY_LIGHTEST": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(240, 240, 240)",
+      "originalValue": "rgb(240,240,240)",
+      "name": "COLOR_GREY_LIGHTEST"
+    },
+    "FONT_FAMILY_ACCENT": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "value": "'Times New Roman', serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "'Times New Roman', serif",
+      "name": "FONT_FAMILY_ACCENT"
+    },
+    "FONT_FAMILY_PRIMARY": {
+      "category": "font-family",
+      "value": "sans-serif",
+      "type": "font",
+      "comment": "Fallback for primary-fancy",
+      "originalValue": "sans-serif",
+      "name": "FONT_FAMILY_PRIMARY"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "value": "'Publico Banner', Times New Roman, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "originalValue": "'Publico Banner', Times New Roman, sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
+    }
+  }
+}

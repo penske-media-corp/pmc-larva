@@ -7,7 +7,7 @@ carousel_grid_overlay.o_card_large.o_card_classes = 'lrv-a-carousel-grid__overla
 carousel_grid_overlay.o_card_large.o_card_content_classes += ' lrv-a-carousel-grid__overlay--primary-content';
 
 carousel_grid_overlay.o_card_large.c_lazy_image.c_lazy_image_classes = 'lrv-a-carousel-grid__overlay--primary-img';
-carousel_grid_overlay.o_card_large.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-2x3';
+carousel_grid_overlay.o_card_large.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-3x2';
 
 carousel_grid_overlay.carousel_grid_overlay_layout_classes = 'lrv-a-carousel-grid__overlay';
 carousel_grid_overlay.carousel_grid_overlay_secondary_classes = 'lrv-a-carousel-grid__overlay--secondary';
