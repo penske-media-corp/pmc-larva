@@ -39,13 +39,13 @@ $artinamerica-map: (
   /* Available via @font-face. */
   'font-family-primary-fancy': ('Schnyder Cond M', Gerogia, serif),
   /* Fallback for primary-fancy */
-  'font-family-primary': (Georgia, serif),
+  'font-family-primary': (Arial, sans-serif),
   /* Available via Typekit. */
   'font-family-secondary-fancy': ('warnock-pro', 'Times New Roman', serif),
   /* Fallback from secondary-fancy */
   'font-family-secondary': (Georgia, serif),
   'font-family-body': ('Times New Roman', serif),
-  'font-family-basic': (Helvetica, sans-serif),
+  'font-family-basic': (Arial, sans-serif),
   'font-weight-light': (300),
   'font-weight-normal': (400),
   'font-weight-bold': (700),
