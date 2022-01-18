@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-tokens - Add tokens for WWD's Digital Daily feature.
 
+* larva-tokens - Update default font family values to be Arial
+* root - Add workflow for Backstop testing
+
+## 0.4.4 - 01-04-2022
+
+* larva-css - Remove generic a:hover style.
+* larva-patterns - Add property-specific values for button module.
+
 ## 0.4.3 - 12-16-2021
 * larva-patterns - Add conditions around includes in vlanding-video-showcase.
 
