@@ -4,6 +4,112 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished
+* larva-css - Fix 2x1 and 2x3 crop algorithms, introduce 3x2 crop algorithm
+* larva-tokens - Add tokens for WWD's Digital Daily feature.
+* larva-tokens - Update default font family values to be Arial
+* root - Add workflow for Backstop testing
+
+## 0.4.4 - 01-04-2022
+
+* larva-css - Remove generic a:hover style.
+* larva-patterns - Add property-specific values for button module.
+
+## 0.4.3 - 12-16-2021
+* larva-patterns - Add conditions around includes in vlanding-video-showcase.
+
+## 0.4.2 - 12-06-2021
+* larva-tokens - Use bold for primary a-font weights in rollingstone tokens.
+* site - Import typography fallbacks for base tokens.
+
+## 0.4.1 - 12-06-2021
+* larva-tokens - Improve fallback fonts for rollingstone tokens.
+* larva-patterns - Standardize c_link references in story module.
+
+## 0.4.0 - 11-23-2021
+* root - Add regression snapshots and backstop dependency
+* larva - Add update-larva command to list of scripts in init log message
+* larva - Experimental method to prioritize to Node prototypes in projects
+* larva-css - Add font style utilties
+* larva-patterns - Use experimental method in story block and carousel patterns
+* larva-patterns - Add variant for `c-span.tag`
+* larva-patterns - Add property for layout classes in `story`
+* larva-patterns - Update `c-link` options in `story` to match the PHP controller support
+* larva-patterns - Remove comments that were not useful and problematic for processing to PHP
+* larva-patterns - Add `o-indicator.photos`
+* larva-tokens - Add font-family-body-fancy to robbreport tokens
+* site - Add robbreport to data file so we can update tokens in the UI
+
+## 0.3.11 - 11-11-2021
+* larva-tokens - Update VY tokens with additional colors and typography
+* larva - Add compatibility CSS for VY
+* larva-patterns - Add blocks for compat stylesheets and class in pattern templates
+* larva-tokens - Update Rolling Stone tokens.
+
+## 0.3.10 - 10-27-2021
+* larva-tokens - Update Deadline tokens.
+
+## 0.3.9 - 10-21-2021
+* larva - Support configuration for copying local assets from the theme to the static sites
+* larva-patterns - Add template level test with hub modules
+
+## 0.3.8 - 10-19-2021
+* larva-tokens - Add Robb Report tokens
+* larva - Simplify init script
+
+## 0.3.7 - 09-30-2021
+* larva-tokens - Add additional colors for WWD 2021.
+* larva-tokens - Add variations for all heading levels.
+* larva-tokens - Update class that applies typography to heading module.
+* larva-tokens - Capture build files missed in `0.3.6`.
+* larva-css - Add two-column grid algorithm for tablet breakpoint.
+* site - Support updating `wwd-2021` tokens.
+* root - fix `prettier` build dependency.
+
+## 0.3.6 - 09-23-2021
+* larva-tokens - Add BBPro tokens.
+
+## 0.3.5 - 09-23-2021
+* Re-release 0.3.4 as `latest` after it was released as `next`.
+
+## 0.3.4 - 09-23-2021
+* larva-patterns - Fix `story` module's use of `c_dek` component.
+* larva-patterns - Add additional separator styles.
+
+## 0.3.3 - 08-09-2021
+* larva-patterns - Add `carousel-slider` module.
+* larva-patterns - Add separator border color class.
+* larva-css - Add style for 1/3 cell width in Flickity slider.
+* larva-svg - Add gallery icon.
+
+## 0.3.2 - 08-06-2021
+* larva-tokens - Add accent dark color to Beauty Inc tokens.
+
+## 0.3.1 - 07-30-2021
+* larva-patterns - Fix `story-grid` padding and fonts.
+* larva-patterns - Create new module `carousel-grid` and a variant `overlay`.
+* all - Version bumps from Dependabot.
+
+## 0.3.0 - 07-26-2021
+
+* larva-patterns - Add alignment and color classes to heading, paragraph, and container modules, update to use standard lrv-a-font.
+* larva-patterns - Adding a new module (`container`) for containing markup.
+* larva-patterns - Add `story` module variations.
+* larva-patterns - Add `story-grid` module.
+* all - Version bumps from Dependabot.
+
+## 0.2.9 - 06-25-2021
+* larva-tokens - Fix incorrect brand colors for wwd beauty Inc
+
+## 0.2.8 - 06-24-2021
+* larva-tokens - Add WWD Beauty Inc tokens
+
+## 0.2.7 - 06-21-2021
+* larva-tokens - Update Billboard Accent font and color
+
+## 0.2.6 - 06-11-2021
+* larva-tokens - Add Billboard tokens
+
 ## 0.2.5 - 06-02-2021
 * larva-tokens - Update Sourcing Journal Grey color
 * larva-tokens - Add Rivet tokens

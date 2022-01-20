@@ -23,6 +23,7 @@ const app = express();
 const patternConfig = getAppConfiguration( 'patterns' );
 const brandConfig = getAppConfiguration( 'brand' );
 const assetsConfig = getAppConfiguration( 'assets' );
+const themeAssetsConfig = getAppConfiguration( 'themeAssets' );
 const twigPaths = getPatternPathsToLoad( patternConfig );
 
 let loader = new TwingLoaderFilesystem( twigPaths );
@@ -83,7 +84,14 @@ if ( fs.existsSync( assetsConfig.path ) ) {
 	app.use( '/assets' , express.static( assetsConfig.path ) );
 }
 
-app.get( '/:source?/css', function (req, res) {
+// Expose any theme directories with assets in the express server
+const themeAssetKeys = Object.keys( themeAssetsConfig );
+
+themeAssetKeys.forEach( key => {
+	app.use( '/assets/theme/' + key , express.static( themeAssetsConfig[key] ) );
+});
+
+app.use( '/:source?/css', function (req, res) {
 
 	/**
 	 * Generate Larva CSS Docs

@@ -1,6 +1,0 @@
-// Import tools and legacy token values from Larva
-@import '@penskemediacorp/larva-scss/dist/generators';
-@import '@penskemediacorp/larva-scss/dist/tokens';
-
-// Merge project/local tokens and tokens map
-@import '00-tools/tokens.scss';

@@ -6,6 +6,7 @@ export const brands = [
 	"dirt",
 	"indiewire",
 	"rollingstone",
+	"robbreport",
 	"sheknows",
 	"sportico",
 	"spy",
@@ -14,4 +15,7 @@ export const brands = [
 	"variety",
 	"vibe",
 	"wwd",
+	"wwd-2021",
+	"wwd-beauty",
+	"wwd-dd",
 ];

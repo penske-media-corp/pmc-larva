@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-svg",
-  "version": "0.2.3",
+  "version": "0.4.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva-svg#readme",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "build": "node ./index.js"
+    "build": "print 'larva-svg is built with `npm run build-icons` from packages/larva.'"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"

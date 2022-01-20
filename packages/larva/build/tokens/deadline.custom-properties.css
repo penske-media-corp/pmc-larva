@@ -1,43 +1,43 @@
 
 :root {
-  --border-color-grey-lightest: rgb(247, 247, 247);
-  --border-color-brand-secondary-light: rgb(0, 0, 0);
+  --border-color-grey-lightest: rgb(221, 222, 228);
+  --border-color-brand-secondary-light: rgb(241, 248, 252);
   --border-color-grey-light: rgb(204, 204, 204);
-  --border-color-grey-dark: rgb(106, 106, 106);
-  --border-color-brand-secondary-dark: rgb(0, 0, 0);
-  --border-color-brand-secondary: rgb(0, 0, 0);
-  --border-color-grey: rgb(140, 140, 140);
-  --border-color-brand-primary-light: rgb(236, 28, 36);
+  --border-color-grey-dark: rgb(97, 97, 97);
+  --border-color-brand-secondary-dark: rgb(224, 237, 245);
+  --border-color-brand-secondary: rgb(70, 112, 210);
+  --border-color-grey: rgb(155, 155, 155);
+  --border-color-brand-primary-light: rgb(207, 53, 53);
   --border-color-white: rgb(255, 255, 255);
-  --border-color-brand-primary-dark: rgb(236, 28, 36);
+  --border-color-brand-primary-dark: rgb(85, 1, 0);
   --border-color-brand-primary: rgb(236, 28, 36);
   --background-color-grey-light: rgb(204, 204, 204);
-  --background-color-grey-lightest: rgb(247, 247, 247);
-  --background-color-brand-secondary-dark: rgb(0, 0, 0);
-  --background-color-brand-secondary-light: rgb(0, 0, 0);
-  --background-color-grey-dark: rgb(106, 106, 106);
-  --background-color-grey: rgb(140, 140, 140);
+  --background-color-grey-lightest: rgb(221, 222, 228);
+  --background-color-brand-secondary-dark: rgb(224, 237, 245);
+  --background-color-brand-secondary-light: rgb(241, 248, 252);
+  --background-color-grey-dark: rgb(97, 97, 97);
+  --background-color-grey: rgb(155, 155, 155);
   /* The background color of the main body of the site. */
   --background-color-body: rgb(255, 255, 255);
   /* The secondary brand color. This should be lighter in hue, and sufficient contrast with black text. */
-  --background-color-brand-secondary: rgb(0, 0, 0);
+  --background-color-brand-secondary: rgb(70, 112, 210);
   --background-color-black: rgb(0, 0, 0);
-  --background-color-brand-primary-light: rgb(236, 28, 36);
-  --background-color-brand-primary-dark: rgb(236, 28, 36);
+  --background-color-brand-primary-light: rgb(207, 53, 53);
+  --background-color-brand-primary-dark: rgb(85, 1, 0);
   --background-color-white: rgb(255, 255, 255);
   --background-color-brand-primary: rgb(146, 2, 0);
-  --background-color-grey-darkest: rgb(50, 50, 50);
-  --color-brand-secondary: rgb(0, 0, 0);
+  --background-color-grey-darkest: rgb(25, 25, 25);
+  --color-brand-secondary: rgb(70, 112, 210);
   --color-black: rgb(0, 0, 0);
-  --color-brand-primary-light: rgb(236, 28, 36);
-  --color-brand-primary-dark: rgb(236, 28, 36);
+  --color-brand-primary-light: rgb(207, 53, 53);
+  --color-brand-primary-dark: rgb(85, 1, 0);
   --color-white: rgb(255, 255, 255);
   --color-brand-primary: rgb(146, 2, 0);
   --color-grey-light: rgb(230, 230, 230);
-  --color-brand-secondary-dark: rgb(0, 0, 0);
-  --color-brand-secondary-light: rgb(0, 0, 0);
-  --color-grey-dark: rgb(106, 106, 106);
-  --color-grey: rgb(140, 140, 140);
+  --color-brand-secondary-dark: rgb(224, 237, 245);
+  --color-brand-secondary-light: rgb(241, 248, 252);
+  --color-grey-dark: rgb(97, 97, 97);
+  --color-grey: rgb(155, 155, 155);
   /* Available via Typekit. */
   --font-family-primary-fancy: 'Balto', Helvetica, sans-serif;
   /* Fallback for primary-fancy. */
@@ -46,8 +46,9 @@
   --font-family-secondary-fancy: 'Eksell', Georgia, serif;
   /* Fallback for secondary-fancy */
   --font-family-secondary: Georgia, serif;
+  /* Webfont for body */
   --font-family-body: Georgia, serif;
-  --font-family-basic: Helvetica, sans-serif;
+  --font-family-basic: Arial, sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
@@ -71,4 +72,24 @@
   --spacing-150: 1.5rem;
   /* Used for margins and padding only. */
   --spacing-2: 2rem;
+  --primary-xl-font-size-desktop: 32px;
+  --primary-m-line-height-desktop: 28px;
+  --primary-l-font-size-mobile: 32px;
+  --primary-xl-line-height-desktop: 34px;
+  --primary-s-font-size-desktop: 23px;
+  --primary-s-line-height-desktop: 28px;
+  --secondary-m-line-height-mobile: 22px;
+  --secondary-m-font-size-mobile: 18px;
+  --secondary-m-font-size-desktop: 18px;
+  --secondary-m-line-height-desktop: 22px;
+  --primary-s-line-height-mobile: 34px;
+  --primary-s-font-size-mobile: 32px;
+  --primary-xl-line-height-mobile: 34px;
+  --primary-l-font-size-desktop: 24px;
+  --primary-m-line-height-mobile: 34px;
+  --primary-xl-font-size-mobile: 32px;
+  --primary-l-line-height-desktop: 28px;
+  --primary-m-font-size-mobile: 32px;
+  --primary-m-font-size-desktop: 23px;
+  --primary-l-line-height-mobile: 34px;
 }

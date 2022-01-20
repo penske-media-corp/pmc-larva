@@ -1,0 +1,96 @@
+
+$billboard-map: (
+  'border-color-grey-lightest': (rgb(237, 235, 235)),
+  'border-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'border-color-grey-light': (rgb(204, 204, 204)),
+  'border-color-grey-dark': (rgb(76, 81, 103)),
+  'border-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'border-color-brand-secondary': (rgb(203, 0, 27)),
+  'border-color-grey': (rgb(130, 137, 161)),
+  'border-color-brand-primary-light': (rgb(236, 28, 36)),
+  'border-color-white': (rgb(255, 255, 255)),
+  'border-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'border-color-brand-primary': (rgb(26, 72, 196)),
+  'background-color-grey-light': (rgb(204, 204, 204)),
+  'background-color-grey-lightest': (rgb(237, 235, 235)),
+  'background-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'background-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'background-color-grey-dark': (rgb(76, 81, 103)),
+  'background-color-grey': (rgb(130, 137, 161)),
+  /* The background color of the main body of the site. */
+  'background-color-body': (rgb(255, 255, 255)),
+  'background-color-brand-secondary': (rgb(203, 0, 27)),
+  'background-color-black': (rgb(16, 17, 25)),
+  'background-color-brand-primary-light': (rgb(236, 28, 36)),
+  'background-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'background-color-white': (rgb(255, 255, 255)),
+  'background-color-brand-primary': (rgb(26, 72, 196)),
+  'background-color-grey-darkest': (rgb(43, 46, 60)),
+  'color-brand-secondary': (rgb(203, 0, 27)),
+  'color-black': (rgb(16, 17, 25)),
+  'color-brand-primary-light': (rgb(236, 28, 36)),
+  'color-brand-primary-dark': (rgb(236, 28, 36)),
+  'color-white': (rgb(255, 255, 255)),
+  'color-brand-primary': (rgb(26, 72, 196)),
+  'color-grey-light': (rgb(230, 230, 230)),
+  'color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'color-brand-secondary-light': (rgb(0, 0, 0)),
+  'color-grey-dark': (rgb(76, 81, 103)),
+  'color-grey': (rgb(130, 137, 161)),
+  /* The webfont for font-family-primary. */
+  'font-family-primary-fancy': ('neue-haas-grotesk-display', Times New Roman, sans-serif),
+  /* The fallback font for font-family-primary. */
+  'font-family-primary': ('Times New Roman', serif),
+  /* The webfont, loaded async */
+  'font-family-secondary-fancy': (Arial, sams-serif),
+  /* Fallback for secondary-fancy */
+  'font-family-secondary': (Arial, sans-serif),
+  'font-family-body': ('open-sans', Helvetica, sans-serif),
+  'font-family-basic': (Helvetica, sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
+  'line-height-small': (1.1),
+  'line-height-normal': (1.35),
+  'line-height-copy': (1.5),
+  'line-height-large': (1.85),
+  /* Used for margins and padding only. */
+  'spacing-00': (0),
+  /* Used for margins and padding only. */
+  'spacing-025': (0.25rem),
+  /* Used for margins and padding only. */
+  'spacing-050': (0.5rem),
+  /* Used for margins and padding only. */
+  'spacing-075': (0.75rem),
+  /* Used for margins and padding only. */
+  'spacing-1': (1rem),
+  /* Used for margins and padding only. */
+  'spacing-125': (1.25rem),
+  /* Used for margins and padding only. */
+  'spacing-150': (1.5rem),
+  /* Used for margins and padding only. */
+  'spacing-2': (2rem),
+  'background-color-brand-accent-red': (rgb(251, 103, 107)),
+  'color-grey-ligh': (rgb(213, 213, 213)),
+  'color-brand-accent-green': (rgb(0, 221, 161)),
+  'border-color-brand-accent-red': (rgb(251, 103, 107)),
+  'border-color-brand-accent-blue': (rgb(118, 186, 223)),
+  'background-color-brand-accent-blue': (rgb(118, 186, 223)),
+  'color-grey-darkest': (rgb(43, 46, 60)),
+  'border-color-grey-ligh': (rgb(213, 213, 213)),
+  'background-color-brand-accent': (rgb(207, 213, 230)),
+  'border-color-black': (rgb(16, 17, 25)),
+  'color-brand-accent-red': (rgb(251, 103, 107)),
+  'background-color-grey-ligh': (rgb(213, 213, 213)),
+  'border-color-brand-accent': (rgb(207, 213, 230)),
+  'background-color-brand-accent-green': (rgb(0, 221, 161)),
+  'color-grey-lightest': (rgb(237, 235, 235)),
+  'border-color-brand-accent-green': (rgb(0, 221, 161)),
+  /* The fallback for the accent font */
+  'font-family-accent': (Arial, serif),
+  'color-brand-accent-blue': (rgb(118, 186, 223)),
+  'color-brand-accent': (rgb(207, 213, 230)),
+  'border-color-grey-darkest': (rgb(43, 46, 60)),
+  /* The accent webfont, loaded async */
+  'font-family-accent-fancy': ('acumin-pro-condensed', Arial, sans-serif),
+);

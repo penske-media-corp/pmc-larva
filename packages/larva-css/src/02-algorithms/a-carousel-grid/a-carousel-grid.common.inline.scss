@@ -1,0 +1,66 @@
+@import 'setup';
+
+.lrv-a-carousel-grid {
+    --grid-overlay: initial;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include pmc-breakpoint( tablet ) {
+        grid-gap: var(--spacing-050);
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.lrv-a-carousel-grid__overlay {
+    --grid-overlay: grid;
+
+    @include pmc-breakpoint( tablet ) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.lrv-a-carousel-grid__overlay--primary {
+
+    @include pmc-breakpoint( desktop ) {
+        display: var(--grid-overlay);
+        grid-template-columns: 1fr 1.5rem 2fr;
+        align-items: center;
+        grid-auto-flow: column;
+        height: 100%;
+    }
+}
+
+.lrv-a-carousel-grid__overlay--primary-img {
+
+    @include pmc-breakpoint( desktop ) {
+        grid-column: 2/4;
+        grid-row: 1;
+    }
+}
+
+.lrv-a-carousel-grid__overlay--primary-content {
+
+    @include pmc-breakpoint( desktop ) {
+        grid-column: 1/3;
+        grid-row: 1;
+        padding: 1.875rem;
+        z-index: 1;
+        background-color: #fff;
+    }
+}
+
+.lrv-a-carousel-grid__overlay--secondary {
+
+    @include pmc-breakpoint( desktop ) {
+        display: var(--grid-overlay);
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: var(--spacing-125);
+    }
+}
+
+.lrv-a-carousel-grid__overlay--secondary-card {
+    display: var(--grid-overlay);
+    grid-template-columns: 6.25rem 1fr;
+    grid-gap: var(--spacing-1);
+}

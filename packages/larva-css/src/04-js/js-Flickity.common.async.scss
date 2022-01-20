@@ -1,15 +1,6 @@
 @import 'setup';
 @import 'partials/flickity';
 
-// TODO: break these up into smaller utilities
-.js-Flickity--fifths .js-Flickity-cell {
-	width: 35%;
-
-	@include pmc-breakpoint( desktop ) {
-		width: 20%;
-	}
-}
-
 .js-Flickity--100p .js-Flickity-cell {
 	width: 100%;
 }
@@ -27,8 +18,28 @@
 	}
 }
 
+// Flickity sizing in descending order.
+// Flickity-thirds is actually 2/3.
 .js-Flickity--thirds .js-Flickity-cell {
 	width: 66%;
+	overflow: visible;
+}
+
+.js-Flickity--fifths .js-Flickity-cell {
+	width: 35%;
+
+	@include pmc-breakpoint( desktop ) {
+		width: 20%;
+	}
+}
+
+.js-Flickity--one-thirds .js-Flickity-cell {
+	width: 33%;
+	overflow: visible;
+}
+
+.js-Flickity--fourths .js-Flickity-cell {
+	width: 25%;
 	overflow: visible;
 }
 
@@ -44,16 +55,21 @@
 	transform-origin: center center;
 }
 
-.js-Flickity--nav-top-right .flickity-prev-next-button {
+
+.js-Flickity--nav-top-right {
 	--button-size: 0; // Hide arrows for mobile screen.
 
-	top: calc( var( --button-size ) * -1 );
-	height: var( --button-size );
-	width: var( --button-size );
+	margin-top: var( --button-size );
 
 	@include pmc-breakpoint( tablet ) {
 		--button-size: #{pmc-rem(44)};
 	}
+}
+
+.js-Flickity--nav-top-right .flickity-prev-next-button {
+	top: calc( var( --button-size ) * -1 );
+	height: var( --button-size );
+	width: var( --button-size );
 }
 
 .js-Flickity--nav-top-right .flickity-prev-next-button.previous { // stylelint-disable-line selector-max-class

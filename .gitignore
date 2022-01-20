@@ -21,11 +21,11 @@ nbproject/
 
 /test-errors.log
 node_modules
+npm-debug.log
 
 # For the package preview tool
 pnpm-lock.yaml
 
 # Test
-backstop_data/bitmaps_reference
 backstop_data/bitmaps_test
 backstop_data/html_report

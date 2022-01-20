@@ -1,0 +1,11 @@
+<section class="carousel-slider //">
+	<div class="lrv-a-wrapper lrv-u-padding-tb-1">
+		<div class="js-Flickity js-Flickity--one-thirds js-Flickity--nav-top-right js-Flickity--hide-nav@mobile-max">
+			{% for item in galleries %}
+				<div class="js-Flickity-cell lrv-u-margin-r-150">
+					{% include "@larva/objects/o-card/o-card.twig" with item %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
