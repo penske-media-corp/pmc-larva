@@ -23,7 +23,7 @@ jobs:
           'pmc-sourcingjournal-2021',
           'pmc-spark',
           'pmc-sportico-2020',
-          'pmc-variety-2020',
+          # 'pmc-variety-2020', # Needs a different assets path
           'pmc-vibe-2021',
           'pmc-wwd-2021',
         ]
@@ -52,9 +52,19 @@ jobs:
           git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git "${THEME_DIR}"
           ls -la "${THEME_DIR}"
 
-      - name: Install Larva
+      - name: Install Dependencies
         run: |
           npm ci --prefix="${ASSETS_DIR}"
+
+      - name: Use this commit's version of Larva
+        run: |
+          cd packages/larva
+          npm link
+          cd ${ASSETS_DIR}
+          npm view @penskemediacorp/larva version
+          npm link @penskemediacorp/larva
+          npm view @penskemediacorp/larva version
+          cd ../../
 
       - name: Build
         run: |
