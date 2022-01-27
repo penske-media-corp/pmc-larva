@@ -58,6 +58,8 @@ jobs:
 
       - name: Use this commit's version of Larva
         run: |
+          pwd
+          ls
           cd packages/larva
           npm link
           cd ${ASSETS_DIR}
