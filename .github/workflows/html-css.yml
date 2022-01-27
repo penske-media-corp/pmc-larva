@@ -60,10 +60,12 @@ jobs:
 
       - name: Use this commit version of Larva
         run: |
-          npm ls --prefix=${ASSETS_DIR} | grep  @penskemediacorp/larva@
+          echo "Project version of Larva:"
+          npm ls --prefix=${ASSETS_DIR} --loglevel=silent | grep @penskemediacorp/larva@
           npm link --prefix=packages/larva
           npm link @penskemediacorp/larva --prefix=${ASSETS_DIR}
-          npm ls --prefix=${ASSETS_DIR} | grep  @penskemediacorp/larva@
+          echo "Confirm using linked package:"
+          ls -la ${ASSETS_DIR}/node_modules/@penskemediacorp/larva
 
       - name: Build
         run: |
