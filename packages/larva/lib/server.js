@@ -39,6 +39,14 @@ const markdownFilter = new TwingFilter( 'markdown', ( string ) => {
 	}
 });
 
+// Support `{{ item|markup }}` syntax for outputting escaped content within loops.
+const markupFilter = new TwingFilter(
+	'markup',
+	( string ) => Promise.resolve( string ),
+	{},
+	{ is_safe: ['html'] }
+);
+
 const kebabify = ( name ) => {
 	let kebabCase = [];
 
@@ -67,6 +75,7 @@ if( fs.existsSync( patternConfig.projectPatternsDir ) ) {
 let twing = new TwingEnvironment( loader, { debug: true } );
 
 twing.addFilter( markdownFilter );
+twing.addFilter( markupFilter );
 
 // Add custom function support for doing wp action: {{ wp_action( ... ) }}
 twing.addFunction(new TwingFunction('wp_action',() => {

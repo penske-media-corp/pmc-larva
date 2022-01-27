@@ -141,6 +141,10 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			if ( $has_filter ) {
 				$string_parts  = explode( '|', $variable_name );
 				$variable_name = $string_parts[0];
+
+				if ( 'markup' === $string_parts[1] ) {
+					$is_markup = true;
+				}
 			}
 
 			if ( ! empty( $is_url ) ) {
