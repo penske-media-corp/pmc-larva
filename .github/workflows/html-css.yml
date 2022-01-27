@@ -35,6 +35,8 @@ jobs:
       THEME_DIR: theme
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Prepare node
         uses: actions/setup-node@v2
         with:
@@ -56,7 +58,7 @@ jobs:
         run: |
           npm ci --prefix="${ASSETS_DIR}"
 
-      - name: Use this commit's version of Larva
+      - name: Use this commit version of Larva
         run: |
           pwd
           ls
