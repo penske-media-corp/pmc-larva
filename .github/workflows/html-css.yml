@@ -60,15 +60,10 @@ jobs:
 
       - name: Use this commit version of Larva
         run: |
-          pwd
-          ls
-          cd packages/larva
-          npm link
-          cd ${ASSETS_DIR}
-          npm view @penskemediacorp/larva version
-          npm link @penskemediacorp/larva
-          npm view @penskemediacorp/larva version
-          cd ../../
+          npm link --prefix=packages/larva
+          npm view @penskemediacorp/larva version --prefix=${ASSETS_DIR}
+          npm link @penskemediacorp/larva --prefix=${ASSETS_DIR}
+          npm view @penskemediacorp/larva version --prefix=${ASSETS_DIR}
 
       - name: Build
         run: |
