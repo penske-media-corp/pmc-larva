@@ -1,0 +1,95 @@
+{
+  "imports": [
+    "../base/all.json",
+    "../base/typography.json"
+  ],
+  "props": {
+    "BACKGROUND_COLOR_BRAND_PRIMARY": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(107, 123, 132)",
+      "comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
+    },
+    "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(36, 56, 66)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(238, 232, 9)",
+      "comment": "The secondary brand color. This should be lighter in hue, and sufficient contrast with black text.",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "background-color",
+      "type": "color",
+      "value": "rgb(243, 245, 203)",
+      "originalValue": "{!BLACK}",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(107, 123, 132)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY"
+    },
+    "BORDER_COLOR_BRAND_PRIMARY_DARK": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(36, 56, 66)",
+      "originalValue": "{!PMC_RED}",
+      "name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(238, 232, 9)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_SECONDARY"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "hr-color",
+      "type": "color",
+      "value": "rgb(243, 245, 203)",
+      "originalValue": "{!BLACK}",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "COLOR_BRAND_PRIMARY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(107, 123, 132)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY"
+    },
+    "COLOR_BRAND_PRIMARY_DARK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(36, 56, 66)",
+      "originalValue": "{!PMC_RED}",
+      "name": "COLOR_BRAND_PRIMARY_DARK"
+    },
+    "COLOR_BRAND_SECONDARY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(238, 232, 9)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_SECONDARY"
+    },
+
+    "COLOR_BRAND_SECONDARY_LIGHT": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(243, 245, 203)",
+      "originalValue": "{!BLACK}",
+      "name": "COLOR_BRAND_SECONDARY_LIGHT"
+    }
+  }
+}
