@@ -226,4 +226,6 @@
   --primary-l-line-height-mobile: 31px;
   --font-family-accent: Verdana, serif;
   --font-family-accent-fancy: Verdana, sans-serif;
+  --background-color-brand-accent: rgb(26, 40, 47);
+  --color-brand-accent: rgb(243, 112, 33);
 }

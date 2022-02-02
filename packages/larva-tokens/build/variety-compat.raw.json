@@ -1917,6 +1917,20 @@
       "category": "font-family",
       "originalValue": "Verdana, sans-serif",
       "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "value": "rgb(26, 40, 47)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "rgb(26, 40, 47)",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
+    },
+    "COLOR_BRAND_ACCENT": {
+      "value": "rgb(243, 112, 33)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "rgb(243, 112, 33)",
+      "name": "COLOR_BRAND_ACCENT"
     }
   }
 }

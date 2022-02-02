@@ -209,5 +209,7 @@
   "PRIMARY_L_LINE_HEIGHT_DESKTOP": "42px",
   "PRIMARY_L_LINE_HEIGHT_MOBILE": "31px",
   "FONT_FAMILY_ACCENT": "Verdana, serif",
-  "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif"
+  "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif",
+  "BACKGROUND_COLOR_BRAND_ACCENT": "rgb(26, 40, 47)",
+  "COLOR_BRAND_ACCENT": "rgb(243, 112, 33)"
 }

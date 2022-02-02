@@ -4,6 +4,13 @@
     "../base/typography.json"
   ],
   "props": {
+    "BACKGROUND_COLOR_BRAND_ACCENT": {
+      "value": "rgb(26, 40, 47)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "rgb(26, 40, 47)",
+      "name": "BACKGROUND_COLOR_BRAND_ACCENT"
+    },
     "BACKGROUND_COLOR_BRAND_PRIMARY": {
       "category": "background-color",
       "type": "color",
@@ -62,6 +69,13 @@
       "originalValue": "{!BLACK}",
       "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
     },
+    "COLOR_BRAND_ACCENT": {
+      "value": "rgb(243, 112, 33)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "rgb(243, 112, 33)",
+      "name": "COLOR_BRAND_ACCENT"
+    },
     "COLOR_BRAND_PRIMARY": {
       "category": "text-color",
       "type": "color",
@@ -83,7 +97,6 @@
       "originalValue": "{!BLACK}",
       "name": "COLOR_BRAND_SECONDARY"
     },
-
     "COLOR_BRAND_SECONDARY_LIGHT": {
       "category": "text-color",
       "type": "color",
