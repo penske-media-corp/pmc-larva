@@ -18,7 +18,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Dependencies
       run: |
-        npm install -g backstopjs@6.0.1 --unsafe-perm=true --allow-root
+        npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
         ./node_modules/.bin/lerna bootstrap
     - name: Run Tests
