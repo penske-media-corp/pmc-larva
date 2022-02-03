@@ -31,7 +31,7 @@
   "COLOR_WHITE": "rgb(255, 255, 255)",
   "COLOR_BRAND_PRIMARY": "rgb(111, 8, 53)",
   "COLOR_GREY_LIGHT": "rgb(220, 220, 220)",
-  "COLOR_BRAND_SECONDARY_DARK": "rgb(0, 0, 0)",
+  "COLOR_BRAND_SECONDARY_DARK": "rgb(0, 0, 255)",
   "COLOR_BRAND_SECONDARY_LIGHT": "rgb(0, 0, 0)",
   "COLOR_GREY_DARK": "rgb(72, 61, 50)",
   "COLOR_GREY": "rgb(140, 140, 140)",

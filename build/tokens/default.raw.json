@@ -454,8 +454,8 @@
     "COLOR_BRAND_SECONDARY_DARK": {
       "category": "text-color",
       "type": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "{!BLACK}",
+      "value": "rgb(0, 0, 255)",
+      "originalValue": "blue",
       "name": "COLOR_BRAND_SECONDARY_DARK"
     },
     "COLOR_BRAND_SECONDARY_LIGHT": {

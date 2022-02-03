@@ -38,7 +38,7 @@
 			"value": "{!BLACK}"
 		},
 		"COLOR_BRAND_SECONDARY_DARK": {
-			"value": "{!BLACK}"
+			"value": "blue"
 		},
 	}
 }
