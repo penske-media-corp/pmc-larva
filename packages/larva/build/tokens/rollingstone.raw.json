@@ -352,10 +352,10 @@
       "name": "BACKGROUND_COLOR_BODY"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY": {
-      "value": "rgb(244, 243, 241)",
+      "value": "rgb(122, 89, 45)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "rgb(244, 243, 241)",
+      "originalValue": "rgb(122, 89, 45)",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BLACK": {
