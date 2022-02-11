@@ -1,0 +1,74 @@
+
+$rollingstone-2022-map: (
+  'border-color-grey-lightest': (rgb(239, 239, 239)),
+  'border-color-brand-secondary-light': (rgb(165, 133, 83)),
+  'border-color-grey-light': (rgb(204, 204, 204)),
+  'border-color-grey-dark': (rgb(102, 102, 102)),
+  'border-color-brand-secondary-dark': (rgb(122, 89, 45)),
+  'border-color-brand-secondary': (rgb(0, 0, 0)),
+  'border-color-grey': (rgb(118, 118, 118)),
+  'border-color-brand-primary-light': (rgb(215, 25, 32)),
+  'border-color-white': (rgb(255, 255, 255)),
+  'border-color-brand-primary-dark': (rgb(215, 25, 32)),
+  'border-color-brand-primary': (rgb(215, 25, 32)),
+  'background-color-grey-light': (rgb(204, 204, 204)),
+  'background-color-grey-lightest': (rgb(239, 239, 239)),
+  'background-color-brand-secondary-dark': (rgb(122, 89, 45)),
+  'background-color-brand-secondary-light': (rgb(165, 133, 83)),
+  'background-color-grey-dark': (rgb(102, 102, 102)),
+  'background-color-grey': (rgb(118, 118, 118)),
+  /* The background color of the main body of the site. */
+  'background-color-body': (rgb(255, 255, 255)),
+  'background-color-brand-secondary': (rgb(122, 89, 45)),
+  'background-color-black': (rgb(0, 0, 0)),
+  'background-color-brand-primary-light': (rgb(215, 25, 32)),
+  'background-color-brand-primary-dark': (rgb(215, 25, 32)),
+  'background-color-white': (rgb(255, 255, 255)),
+  /* The primary brand color. This should be dark in hue, and have sufficient contrast with white text. */
+  'background-color-brand-primary': (rgb(215, 25, 32)),
+  'background-color-grey-darkest': (rgb(64, 64, 64)),
+  'color-brand-secondary': (rgb(122, 89, 45)),
+  'color-black': (rgb(0, 0, 0)),
+  'color-brand-primary-light': (rgb(215, 25, 32)),
+  'color-brand-primary-dark': (rgb(215, 25, 32)),
+  'color-white': (rgb(255, 255, 255)),
+  'color-brand-primary': (rgb(215, 25, 32)),
+  'color-grey-light': (rgb(204, 204, 204)),
+  'color-brand-secondary-dark': (rgb(122, 89, 45)),
+  'color-brand-secondary-light': (rgb(165, 133, 83)),
+  'color-grey-dark': (rgb(102, 102, 102)),
+  'color-grey': (rgb(118, 118, 118)),
+  /* The webfont, loaded async */
+  'font-family-primary-fancy': ('Publico Banner', serif),
+  /* Fallback for primary-fancy */
+  'font-family-primary': ('Publico Headline', serif),
+  /* The webfont, loaded async */
+  'font-family-secondary-fancy': (Arial, sams-serif),
+  /* Fallback for secondary-fancy */
+  'font-family-secondary': ('Publico Headline', serif),
+  'font-family-body': ('Georgia', Helvetica, sans-serif),
+  'font-family-basic': ('Graphik', sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
+  'line-height-small': (1.1),
+  'line-height-normal': (1.35),
+  'line-height-copy': (1.5),
+  'line-height-large': (1.85),
+  /* Used for margins and padding only. */
+  'spacing-00': (0),
+  /* Used for margins and padding only. */
+  'spacing-025': (0.25rem),
+  /* Used for margins and padding only. */
+  'spacing-050': (0.5rem),
+  /* Used for margins and padding only. */
+  'spacing-075': (0.75rem),
+  /* Used for margins and padding only. */
+  'spacing-1': (1rem),
+  /* Used for margins and padding only. */
+  'spacing-125': (1.25rem),
+  /* Used for margins and padding only. */
+  'spacing-150': (1.5rem),
+  /* Used for margins and padding only. */
+  'spacing-2': (2rem),
+);

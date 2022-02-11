@@ -1,0 +1,235 @@
+{
+	"imports": [
+	  "../base/all.json"
+	],
+	"props": {
+	  "BACKGROUND_COLOR_BRAND_PRIMARY": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"comment": "The primary brand color. This should be dark in hue, and have sufficient contrast with white text.",
+		"originalValue": "{!PMC_RED}",
+		"name": "BACKGROUND_COLOR_BRAND_PRIMARY"
+	  },
+	  "BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "BACKGROUND_COLOR_BRAND_PRIMARY_DARK"
+	  },
+	  "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT"
+	  },
+	  "BACKGROUND_COLOR_BRAND_SECONDARY": {
+		"value": "rgb(122, 89, 45)",
+		"type": "color",
+		"category": "background-color",
+		"originalValue": "rgb(122, 89, 45)",
+		"name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+	  },
+	  "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(122, 89, 45)",
+		"originalValue": "rgb(122, 89, 45)",
+		"name": "BACKGROUND_COLOR_BRAND_SECONDARY_DARK"
+	  },
+	  "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(165, 133, 83)",
+		"originalValue": "rgb(165, 133, 83)",
+		"name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
+	  },
+	  "BACKGROUND_COLOR_GREY": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(118, 118, 118)",
+		"originalValue": "{!GREY_50}",
+		"name": "BACKGROUND_COLOR_GREY"
+	  },
+	  "BACKGROUND_COLOR_GREY_DARK": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(102, 102, 102)",
+		"originalValue": "{!GREY_35}",
+		"name": "BACKGROUND_COLOR_GREY_DARK"
+	  },
+	  "BACKGROUND_COLOR_GREY_DARKEST": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(64, 64, 64)",
+		"originalValue": "{!GREY_20}",
+		"name": "BACKGROUND_COLOR_GREY_DARKEST"
+	  },
+	  "BACKGROUND_COLOR_GREY_LIGHTEST": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(239, 239, 239)",
+		"originalValue": "{!GREY_96}",
+		"name": "BACKGROUND_COLOR_GREY_LIGHTEST"
+	  },   
+	  "BORDER_COLOR_BRAND_PRIMARY": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "BORDER_COLOR_BRAND_PRIMARY"
+	  },
+	  "BORDER_COLOR_BRAND_PRIMARY_DARK": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
+	  },
+	  "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "BORDER_COLOR_BRAND_PRIMARY_LIGHT"
+	  },
+	  "BORDER_COLOR_BRAND_SECONDARY_DARK": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(122, 89, 45)",
+		"originalValue": "rgb(122, 89, 45)",
+		"name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
+	  },
+	  "BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(165, 133, 83)",
+		"originalValue": "rgb(165, 133, 83)",
+		"name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
+	  },
+	  "BORDER_COLOR_GREY": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(118, 118, 118)",
+		"originalValue": "{!GREY_50}",
+		"name": "BORDER_COLOR_GREY"
+	  },
+	  "BORDER_COLOR_GREY_DARK": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(102, 102, 102)",
+		"originalValue": "{!GREY_35}",
+		"name": "BORDER_COLOR_GREY_DARK"
+	  },
+	  "BORDER_COLOR_GREY_LIGHTEST": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(239, 239, 239)",
+		"originalValue": "{!GREY_96}",
+		"name": "BORDER_COLOR_GREY_LIGHTEST"
+	  },
+	  "COLOR_BRAND_PRIMARY": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "COLOR_BRAND_PRIMARY"
+	  },
+	  "COLOR_BRAND_PRIMARY_DARK": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "COLOR_BRAND_PRIMARY_DARK"
+	  },
+	  "COLOR_BRAND_PRIMARY_LIGHT": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(215, 25, 32)",
+		"originalValue": "{!PMC_RED}",
+		"name": "COLOR_BRAND_PRIMARY_LIGHT"
+	  },
+	  "COLOR_BRAND_SECONDARY": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(122, 89, 45)",
+		"originalValue": "rgb(122, 89, 45)",
+		"name": "COLOR_BRAND_SECONDARY"
+	  },
+	  "COLOR_BRAND_SECONDARY_DARK": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(122, 89, 45)",
+		"originalValue": "rgb(122, 89, 45)",
+		"name": "COLOR_BRAND_SECONDARY_DARK"
+	  },
+	  "COLOR_BRAND_SECONDARY_LIGHT": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(165, 133, 83)",
+		"originalValue": "rgb(165, 133, 83)",
+		"name": "COLOR_BRAND_SECONDARY_LIGHT"
+	  },
+	  "COLOR_GREY": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(118, 118, 118)",
+		"originalValue": "{!GREY_50}",
+		"name": "COLOR_GREY"
+	  },
+	  "COLOR_GREY_DARK": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(102, 102, 102)",
+		"originalValue": "{!GREY_35}",
+		"name": "COLOR_GREY_DARK"
+	  },
+	  "COLOR_GREY_LIGHT": {
+		"category": "text-color",
+		"type": "color",
+		"value": "rgb(204, 204, 204)",
+		"originalValue": "{!GREY_90}",
+		"name": "COLOR_GREY_LIGHT"
+	  },
+	  "FONT_FAMILY_BASIC": {
+		"category": "font-family",
+		"value": "'Graphik', sans-serif",
+		"type": "font-family",
+		"originalValue": "'Graphik', sans-serif",
+		"name": "FONT_FAMILY_BASIC"
+	  },
+	  "FONT_FAMILY_BODY": {
+		"category": "font-family",
+		"value": "'Georgia', Helvetica, sans-serif",
+		"type": "font",
+		"originalValue": "'Georgia', Helvetica, sans-serif",
+		"name": "FONT_FAMILY_BODY"
+	  },
+	  "FONT_FAMILY_PRIMARY": {
+		"category": "font-family",
+		"value": "'Publico Headline', serif",
+		"type": "font",
+		"comment": "Fallback for primary-fancy",
+		"originalValue": "'Publico Headline', serif",
+		"name": "FONT_FAMILY_PRIMARY"
+	  },
+	  "FONT_FAMILY_PRIMARY_FANCY": {
+		"category": "font-family",
+		"value": "'Publico Banner', serif",
+		"type": "font",
+		"comment": "The webfont, loaded async",
+		"originalValue": "'Publico Banner', serif",
+		"name": "FONT_FAMILY_PRIMARY_FANCY"
+	  },
+	  "FONT_FAMILY_SECONDARY": {
+		"category": "font-family",
+		"value": "'Publico Headline', serif",
+		"type": "font",
+		"comment": "Fallback for secondary-fancy",
+		"originalValue": "'Publico Headline', serif",
+		"name": "FONT_FAMILY_SECONDARY"
+	  }
+	}
+  }
