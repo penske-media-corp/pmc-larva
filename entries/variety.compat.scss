@@ -1,7 +1,10 @@
-$corrected-brand-primary: #6B7B84;
-$corrected-brand-secondary: #EEE809;
-$corrected-brand-secondary-light: #F3F5CB;
-$corrected-brand-primary-dark: #243842;
+@import 'packages/larva-tokens/build/variety-compat.map.scss';
+
+$corrected-brand-primary: map-get( $variety-compat-map, 'color-brand-primary' );
+$corrected-brand-secondary: map-get( $variety-compat-map, 'color-brand-secondary');
+$corrected-brand-secondary-light: map-get( $variety-compat-map, 'color-brand-secondary-light');
+$corrected-brand-primary-dark: map-get( $variety-compat-map, 'color-brand-primary-dark');
+
 
 /* stylelint-disable declaration-colon-space-after */
 

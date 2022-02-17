@@ -5,9 +5,9 @@ consuming project's Larva version.
 
 ---
 
-### `lrv-a-crop-2x3` (version 1.0.0)
+### `lrv-a-crop-2x3` (version 0.5.0)
 
-Prior to version 1.0.0, the `lrv-a-crop-2x3` algorithm was inverted,
+Prior to version 0.5.0, the `lrv-a-crop-2x3` algorithm was inverted,
 producing a 3x2 crop rather than a 2x3 crop. To fix this, the existing crop was
 corrected and a new `lrv-a-crop-3x2` algorithm introduced. No patterns were
 updated as themes would not have the new algorithm. When upgrading a consuming
@@ -18,9 +18,9 @@ appropriate.
 
 ---
 
-### `lrv-a-crop-2x1` (version 1.0.0)
+### `lrv-a-crop-2x1` (version 0.5.0)
 
-Prior to version 1.0.0, the `lrv-a-crop-2x1` algorithm was incorrectly
+Prior to version 0.5.0, the `lrv-a-crop-2x1` algorithm was incorrectly
 implemented, producing a 1x1 crop rather than a 2x1 crop. When upgrading a
 consuming project, its patterns and/or controllers may need to be updated to use
 the 1x1 algorithm in places where a 1x1 crop was desired. To do so, replace
