@@ -37,7 +37,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: php-actions/composer@v6
 
       - name: Prepare node
         uses: actions/setup-node@v2
