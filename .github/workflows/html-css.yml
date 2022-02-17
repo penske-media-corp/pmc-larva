@@ -74,10 +74,12 @@ jobs:
 
       - name: Install Composer dependencies
         run: |
+          cd "${GITHUB_WORKSPACE}/${THEME_DIR}"
           composer install --dev --prefer-dist --no-progress --no-suggest
 
       - name: PHPCBF
         run: |
+          cd "${GITHUB_WORKSPACE}/${THEME_DIR}"
           ./vendor/bin/phpcbf -p --standard=PmcWpVip --extensions=php template-parts/patterns
 
       - name: Report status
