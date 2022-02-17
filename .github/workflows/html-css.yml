@@ -38,10 +38,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install Composer dependencies
-        run: |
-          composer install --dev --prefer-dist --no-progress --no-suggest
-
       - name: Prepare node
         uses: actions/setup-node@v2
         with:
@@ -75,6 +71,10 @@ jobs:
       - name: Build
         run: |
           npm run prod --prefix="${ASSETS_DIR}"
+
+      - name: Install Composer dependencies
+        run: |
+          composer install --dev --prefer-dist --no-progress --no-suggest
 
       - name: PHPCBF
         run: |
