@@ -77,7 +77,6 @@ jobs:
           npm run prod --prefix="${ASSETS_DIR}"
 
       - name: PHPCBF
-        uses: ge-tracker/phpcbf-action@v1
         run: |
           ./vendor/bin/phpcbf -p --standard=PmcWpVip --extensions=php template-parts/patterns
 
