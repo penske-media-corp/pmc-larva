@@ -5,4 +5,5 @@ module.exports = {
 	button_background_color_class: 'lrv-u-background-color-brand-primary',
 	button_color_class: 'lrv-u-color-white',
 	button_typography_class: '',
+	button_width_class: '',
 };
