@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns: Add width class to button module
+* Fixes formatting of code block.
 
 ## 0.5.2 - 02-15-2022
 * larva-tokens - Added Rollingstone 2022 tokens
