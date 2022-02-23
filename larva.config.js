@@ -21,7 +21,7 @@ module.exports = {
 					'--ignore-certificate-errors',
 					'--disable-setuid-sandbox',
 					'--disable-accelerated-2d-canvas',
-					'--disable-gpu'
+					'--disable-gpu',
 				],
 			},
 		},
