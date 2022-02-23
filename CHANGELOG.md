@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns: Add width class to button module
+* larva-tokens: Update fallback fonts in rollingstone-2022 
 
 ## 0.5.2 - 02-15-2022
 * larva-tokens - Added Rollingstone 2022 tokens
