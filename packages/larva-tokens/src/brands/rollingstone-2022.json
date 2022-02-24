@@ -210,32 +210,32 @@
       },
       "FONT_FAMILY_BODY": {
         "category": "font-family",
-        "value": "Helvetica, sans-serif",
+        "value": "Georgia, Helvetica, sans-serif",
         "type": "font",
-        "originalValue": "Helvetica, sans-serif",
+        "originalValue": "Georgia, Helvetica, sans-serif",
         "name": "FONT_FAMILY_BODY"
       },
 	  "FONT_FAMILY_BODY_FANCY": {
         "category": "font-family",
-        "value": "'Georgia', Helvetica, sans-serif",
+        "value": "Georgia, Helvetica, sans-serif",
         "type": "font",
-        "originalValue": "'Georgia', Helvetica, sans-serif",
+        "originalValue": "Georgia, Helvetica, sans-serif",
         "name": "FONT_FAMILY_BODY"
       },
       "FONT_FAMILY_PRIMARY": {
         "category": "font-family",
-        "value": "'Publico Headline Bold', serif",
+        "value": "serif",
         "type": "font",
 		"comment": "The webfont, loaded async",
-        "originalValue": "'Publico Headline Bold', serif",
+        "originalValue": "serif",
         "name": "FONT_FAMILY_PRIMARY"
       },
       "FONT_FAMILY_PRIMARY_FANCY": {
         "category": "font-family",
-        "value": "'Publico Banner Ultra', serif",
+        "value": "'Publico Headline Bold', serif",
         "type": "font",
         "comment": "The webfont, loaded async",
-        "originalValue": "'Publico Banner Ultra', serif",
+        "originalValue": "'Publico Headline Bold', serif",
         "name": "FONT_FAMILY_PRIMARY_FANCY"
       },
       "FONT_FAMILY_SECONDARY": {

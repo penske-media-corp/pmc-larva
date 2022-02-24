@@ -35,11 +35,11 @@
   "COLOR_BRAND_SECONDARY_LIGHT": "rgb(165, 133, 83)",
   "COLOR_GREY_DARK": "rgb(102, 102, 102)",
   "COLOR_GREY": "rgb(118, 118, 118)",
-  "FONT_FAMILY_PRIMARY_FANCY": "'Publico Banner Ultra', serif",
-  "FONT_FAMILY_PRIMARY": "'Publico Headline Bold', serif",
+  "FONT_FAMILY_PRIMARY_FANCY": "'Publico Headline Bold', serif",
+  "FONT_FAMILY_PRIMARY": "serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'Publico Headline Roman', serif",
   "FONT_FAMILY_SECONDARY": "serif",
-  "FONT_FAMILY_BODY": "Helvetica, sans-serif",
+  "FONT_FAMILY_BODY": "Georgia, Helvetica, sans-serif",
   "FONT_FAMILY_BASIC": "sans-serif",
   "FONT_WEIGHT_LIGHT": "300",
   "FONT_WEIGHT_NORMAL": "400",
@@ -211,5 +211,5 @@
   "FONT_FAMILY_ACCENT": "Verdana, serif",
   "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif",
   "FONT_FAMILY_BASIC_FANCY": "'Graphik Semibold', sans-serif",
-  "FONT_FAMILY_BODY_FANCY": "'Georgia', Helvetica, sans-serif"
+  "FONT_FAMILY_BODY_FANCY": "Georgia, Helvetica, sans-serif"
 }
