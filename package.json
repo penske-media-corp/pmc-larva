@@ -20,6 +20,7 @@
     "write-json": "packages/larva/bin/larva.js write-json larva && packages/larva/bin/larva.js write-json",
     "build-vercel": "sh scripts/build-vercel.sh",
     "build-icons": "packages/larva/bin/larva.js build-icons",
+    "build-svg": "svgo -f src/svg -o build/svg",
     "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
     "build-tokens": "sh scripts/tokens.sh",
     "sync-tokens": "mkdir -p build/tokens && cp -r packages/larva-tokens/build/ build/tokens/",
