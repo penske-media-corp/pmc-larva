@@ -22,7 +22,6 @@ o_card.c_tagline.c_tagline_text = false;
 o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-3x2';
 
 o_card.o_card_classes = 'lrv-u-align-items-center';
-o_card.o_card_image_wrap_classes = 'lrv-a-glue-parent u-padding-t-1@mobile-max lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-start lrv-u-margin-r-2@desktop-xl lrv-u-margin-r-00 lrv-u-margin-r-1@desktop';
 
 o_author.c_span.c_span_url = '#';
 
