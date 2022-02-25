@@ -1,6 +1,6 @@
 const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
-const story_card = __experimentalCloneWithFallback( 'modules/story/story.vertical' );
+const story_card = __experimentalCloneWithFallback( 'objects/o-card/o-card.story-vertical' );
 
 story_card.c_dek.c_dek_classes = 'lrv-a-font-body-s lrv-a-hidden@mobile-max lrv-u-margin-a-00';
 story_card.c_title.c_title_classes = 'lrv-a-font-primary-xxs lrv-u-display-block lrv-u-margin-b-050';

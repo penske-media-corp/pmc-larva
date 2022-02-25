@@ -2,7 +2,7 @@
 	<ul class="{{ story_grid_grid_classes }} // lrv-a-unstyle-list lrv-a-space-children-horizontal lrv-a-space-children--050 lrv-u-margin-b-050">
 		{% for item in story_grid_story_cards %}
 			<li>
-				{% include "@larva/modules/story/story.twig" with item %}
+				{% include "@larva/objects/o-card/o-card.twig" with item %}
 			</li>
 		{% endfor %}
 	</ul>

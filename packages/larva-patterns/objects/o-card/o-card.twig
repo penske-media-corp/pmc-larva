@@ -1,7 +1,7 @@
 {% if o_card_tag_text %}
 <{{ o_card_tag_text }} class="o-card {{ modifier_class }} {{ o_card_classes }}">
 {% else %}
-<article class="o-card {{ modifier_class }} {{ o_card_classes }}">
+<article class="o-card {{ modifier_class }} {{ story_grid_classes }} {{ o_card_classes }}">
 {% endif %}
 
 	{% if o_card_link_url %}
@@ -9,7 +9,7 @@
 	{% endif %}
 
 	{% if o_card_image_wrap_classes %}
-	<div class="o-card__image-wrap {{ o_card_image_wrap_classes }}">
+	<div class="o-card__image-wrap {{ o_card_image_wrap_classes }} {{ story_grid_primary_classes }}">
 		{% endif %}
 
 		{% if c_lazy_image %}
@@ -24,7 +24,7 @@
 	</div>
 	{% endif %}
 
-	<div class="o-card__content {{ o_card_content_classes }}">
+	<div class="o-card__content {{ o_card_content_classes }} {{ story_grid_secondary_classes }}">
 		{% if o_span_group %}
 			{% include "@larva/objects/o-span-group/o-span-group.twig" with o_span_group %}
 		{% endif %}
@@ -52,6 +52,15 @@
 		{% if o_author %}
 			{% include "@larva/objects/o-author/o-author.twig" with o_author %}
 		{% endif %}
+
+		{% if c_link_bottom %}
+			<div class="lrv-u-flex lrv-u-order-100 lrv-u-margin-t-050 // {{ c_link_bottom_wrapper_classes }}">
+				{% if c_link_bottom %}
+					{% include "@larva/components/c-link/c-link.twig" with c_link_bottom %}
+				{% endif %}
+			</div>
+		{% endif %}
+
 	</div>
 
 	{% if o_card_link_url %}

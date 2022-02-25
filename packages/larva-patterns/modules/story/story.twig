@@ -1,6 +1,5 @@
 <div class="story lrv-u-padding-tb-1 lrv-u-padding-tb-2@desktop // {{ story_classes }}">
-	<div class="{{ story_grid_classes }}">
-
+{#
 		<div class="{{ story_grid_primary_classes }} // lrv-a-glue-parent u-padding-t-1@mobile-max lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-start">
 			<div class="lrv-a-glue-parent">
 				{% if c_lazy_image %}
@@ -67,7 +66,8 @@
 
 		</div>
 
-	</div>
+	</div> #}
+	{% include "@larva/objects/o-card/o-card.twig" with o_card %}
 
 	{% if story_arc_stories %}
 		<div class="lrv-u-margin-t-1 lrv-u-margin-t-2@desktop">
