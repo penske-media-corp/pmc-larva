@@ -1,9 +1,10 @@
-<div class="o-author // {{ o_author_classes }}">
-
-	<span class="{{ o_author_by_classes }}">{{ o_author_text }}</span>
+<div class="o-author // {{ o_author_classes }} {{ story_nav_classes }} {{ story_nav_layout_classes }}">
 
 	{% if c_span %}
-		{% include "@larva/components/c-span/c-span.twig" with c_span %}
+		<div>
+			<span class="{{ o_author_by_classes }}">{{ o_author_text }}</span>
+			{% include "@larva/components/c-span/c-span.twig" with c_span %}
+		</div>
 	{% endif %}
 
 	{% if c_timestamp %}
