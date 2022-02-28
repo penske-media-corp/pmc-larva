@@ -5,8 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-patterns: Add width class to button module
-* Fixes formatting of code block.
+* root - Fixes formatting of code block.
+
+## 0.5.3 - 02-24-2022
+* larva-patterns - Add `pullquote` module.
+* larva-patterns - Add width class to button module
+* larva-tokens- Update fallback fonts in rollingstone-2022
 
 ## 0.5.2 - 02-15-2022
 * larva-tokens - Added Rollingstone 2022 tokens
