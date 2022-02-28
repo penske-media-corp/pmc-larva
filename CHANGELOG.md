@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add `injected-related-content` module.
+* root - Fixes formatting of code block.
 
 ## 0.5.3 - 02-24-2022
 * larva-patterns - Add `pullquote` module.
