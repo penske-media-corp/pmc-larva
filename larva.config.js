@@ -8,7 +8,7 @@ module.exports = {
 		testBaseUrl: 'http://localhost:' + LARVA_PORT + '/larva/__tests__/',
 		testScenario: {
 			delay: 1000,
-			misMatchThreshold: 5,
+			misMatchThreshold: 7,
 		},
 		testPaths: [ 'profile', 'profile-index', 'vlanding', 'css', 'hub' ],
 		backstopConfig: {
