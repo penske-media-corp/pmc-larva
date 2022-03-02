@@ -50,3 +50,15 @@
 		border-right-width: 1px;
 	}
 }
+
+.lrv-u-border-t-1\@desktop-xl-max {
+    @include pmc-breakpoint( desktop-xl-max ) {
+        border-top-width: pmc-rem(1);
+    }
+ }
+
+ .lrv-u-border-t-050\@desktop-xl-max {
+    @include pmc-breakpoint( desktop-xl-max ) {
+        border-top-width: pmc-rem(1);
+    }
+ }
