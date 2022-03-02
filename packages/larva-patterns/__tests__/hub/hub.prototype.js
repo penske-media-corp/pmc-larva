@@ -4,6 +4,7 @@ const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 const carousel_grid = __experimentalCloneWithFallback( 'modules/carousel-grid/carousel-grid.prototype' );
 const carousel_slider = __experimentalCloneWithFallback( 'modules/carousel-slider/carousel-slider.prototype' );
 const story_grid = __experimentalCloneWithFallback( 'modules/story-grid/story-grid.prototype' );
+const story_grid_river = __experimentalCloneWithFallback( 'modules/story-grid/story-grid.river' );
 const heading_h1 = __experimentalCloneWithFallback( 'modules/heading/heading.h1' );
 const heading_h3 = __experimentalCloneWithFallback( 'modules/heading/heading.h3' );
 const story = __experimentalCloneWithFallback( 'modules/story/story.prototype' );
@@ -22,5 +23,6 @@ module.exports = {
 	story,
 	button,
 	separator,
-	injected_related_content
+	injected_related_content,
+	story_grid_river
 };
