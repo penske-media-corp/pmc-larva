@@ -1,0 +1,21 @@
+<div class="newsletter // {{ newsletter_classes }} {{ newsletter_typography_class }} {{ newsletter_text_align_class }} {{ newsletter_color_class }} {{ newsletter_background_color_class }}">
+	{% if c_title %}
+		{% include "@larva/components/c-title/c-title.twig" with c_title %}
+	{% endif %}
+
+	{% if c_logo %}
+		{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
+	{% endif %}
+
+	{% if c_tagline %}
+		{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+	{% endif %}
+
+	{% if o_email_capture_form %}
+		{% include "@larva/objects/o-email-capture-form/o-email-capture-form.twig" with o_email_capture_form %}
+	{% endif %}
+
+	{% if c_tagline_terms %}
+		{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_terms %}
+	{% endif %}
+</div>
