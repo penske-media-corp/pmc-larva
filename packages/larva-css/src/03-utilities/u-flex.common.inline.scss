@@ -66,3 +66,9 @@
 		flex-direction: column;
 	}
 }
+
+.lrv-u-flex-direction-column\@desktop-xl-max {
+	@include pmc-breakpoint(desktop-xl-max) {
+		flex-direction: column;
+	}
+}

@@ -11,6 +11,7 @@ const story = __experimentalCloneWithFallback( 'modules/story/story.prototype' )
 const button = __experimentalCloneWithFallback( 'modules/button/button.prototype' );
 const paragraph = __experimentalCloneWithFallback( 'modules/paragraph/paragraph.prototype' );
 const separator = __experimentalCloneWithFallback( 'modules/separator/separator.prototype' );
+const injected_related_content = __experimentalCloneWithFallback( 'modules/injected-related-content/injected-related-content.prototype' );
 
 module.exports = {
 	carousel_grid,
@@ -22,5 +23,6 @@ module.exports = {
 	story,
 	button,
 	separator,
+	injected_related_content,
 	story_grid_river
 };

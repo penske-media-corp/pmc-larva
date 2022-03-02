@@ -1,0 +1,23 @@
+<div class="injected-related-content // {{injected_related_content_classes}}" >
+	<div class="injected-related-content-inner // {{injected_related_content_inner_classes}}">
+		<div class="injected-related-content-primary // {{injected_related_content_primary_classes}}">
+			<div class="injected-related-content-heading // {{injected_related_content_heading_classes}}">
+				{% include "@larva/components/c-title/c-title.twig" with c_heading %}
+			</div>
+			{% if c_lazy_image %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+			{% endif %}
+
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
+
+		</div>
+		<div class="injected-related-content-secondary // {{injected_related_content_secondary_classes}}">
+			{% for item in o_card_items %}
+				{% include "@larva/objects/o-card/o-card.twig" with item %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+

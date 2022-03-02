@@ -24,3 +24,9 @@
 		float: left;
 	}
 }
+
+.lrv-a-floated-right\@tablet {
+	@include pmc-breakpoint(tablet) {
+		float: right;
+	}
+}
