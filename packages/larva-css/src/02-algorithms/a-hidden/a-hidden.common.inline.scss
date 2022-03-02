@@ -23,3 +23,9 @@
 		@include _a-hidden;
 	}
 }
+
+.lrv-a-hidden\@desktop-xl-max {
+	@include pmc-breakpoint( desktop-xl-max ) {
+		@include _a-hidden;
+	}
+}

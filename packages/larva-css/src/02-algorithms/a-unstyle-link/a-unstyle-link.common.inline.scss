@@ -1,5 +1,7 @@
 .lrv-a-unstyle-link,
-.lrv-a-unstyle-link:hover {
+.lrv-a-unstyle-link:hover,
+.lrv-a-unstyle-inner-links > a {
 	color: currentColor;
-	text-decoration: none; 
+	text-decoration: none;
 }
+
