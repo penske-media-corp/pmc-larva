@@ -1,6 +1,6 @@
 name: Update visual regression tests
 
-on: [workflow_dispatch]
+on: [push]
 
 jobs:
   build:
