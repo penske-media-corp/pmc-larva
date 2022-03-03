@@ -11,9 +11,6 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - uses: tj-actions/branch-names@v5.1
-    - name: debug
-      run: echo  ${{ steps.branch-name.outputs.current_branch }}
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
@@ -36,5 +33,5 @@ jobs:
       with:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
-        new_branch: " ${{ steps.branch-name.outputs.current_branch }}/update-screenshots"
+        new_branch: "update-screenshots"
 
