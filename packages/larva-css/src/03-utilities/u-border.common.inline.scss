@@ -11,8 +11,16 @@
 	border-top-width: 1px;
 }
 
+.lrv-u-border-l-1 {
+	border-left-width: pmc-rem(1);
+}
+
 .lrv-u-border-t-3 {
 	border-top-width: 3px;
+}
+
+.lrv-u-border-t-5 {
+	border-top-width: pmc-rem(5);
 }
 
 .lrv-u-border-a-1 {
@@ -25,6 +33,10 @@
 
 .lrv-u-border-a-0 {
 	border-width: 0;
+}
+
+.lrv-u-border-a-5 {
+	border-width: pmc-rem(5);
 }
 
 .lrv-u-border-a-1\@mobile-max {
