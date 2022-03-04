@@ -27,6 +27,11 @@
 	border-width: 0;
 }
 
+.lrv-u-border-l-1 {
+	border-left-width: 1;
+}
+
+
 .lrv-u-border-a-1\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		border-width: 1px;
@@ -62,3 +67,21 @@
         border-top-width: pmc-rem(1);
     }
  }
+
+ .lrv-u-border-l-1\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		border-left-width: 1px;
+	}
+}
+
+.lrv-u-border-l-1\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		border-left-width: 1px;
+	}
+}
+
+.lrv-u-border-t-1\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		border-top-width: 1px;
+	}
+}

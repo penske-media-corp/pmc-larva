@@ -1,0 +1,12 @@
+<div class="content-showcase larva // {{ content_showcase_item_classes }}">
+	<a href="{{ c_link['c_link_url'] }}" class="lrv-u-flex">
+		<div class="content-showcase-thumbnail lrv-a-flex-basis-40pc@desktop lrv-a-flex-basis-40pc@desktop-xl lrv-a-flex-basis-25pc@mobile-max">
+			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		</div>
+		<div class="content-showcase-text lrv-u-margin-l-1 lrv-u-color-black lrv-u-color-brand-primary:hover lrv-a-flex-basis-60pc@desktop lrv-a-flex-basis-60pc@desktop-xl lrv-a-flex-basis-55pc@mobile-max">
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% include "@larva/modules/separator/separator.twig" with separator %}
+			<p class="{{ c_link['c_link_classes'] }}">{{ c_link['c_link_text'] }}</p>
+		</div>				
+	</a>
+</div>

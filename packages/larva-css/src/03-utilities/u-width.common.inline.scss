@@ -46,3 +46,21 @@ $widths_map: (
 		width: 75%;
 	}
 }
+
+.lrv-u-width-100\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		width: pmc-rem(100);
+	}
+}
+
+.lrv-u-width-150\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		width: pmc-rem(150);
+	}
+}
+
+.lrv-u-width-100\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		width: pmc-rem(100);
+	}
+}
