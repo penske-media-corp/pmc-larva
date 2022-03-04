@@ -51,7 +51,7 @@ const ruleset = ( selector ) => {
 	css += '\n';
 
 	properties.forEach( ( property ) => {
-		css += `\t\t${ property }: var( --${ tokenBase }-${ property }-desktopxl );\n`;
+		css += `\t\t${ property }: var( --${ tokenBase }-${ property }-desktop-xl );\n`;
 	} );
 	css += '\n\t}';
 
