@@ -728,6 +728,15 @@
       "originalValue": "22px",
       "name": "SECONDARY_M_LINE_HEIGHT_DESKTOP"
     },
+    "PRIMARY_XL_FONT_SIZE_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
+      "category": "font-size",
+      "type": "number",
+      "value": "64px",
+      "originalValue": "64px",
+      "name": "PRIMARY_XL_FONT_SIZE_DESKTOP_XL"
+    },
     "PRIMARY_S_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
       "status": "alpha",
