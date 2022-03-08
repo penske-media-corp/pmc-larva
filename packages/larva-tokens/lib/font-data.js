@@ -19,12 +19,8 @@ const families = Object.keys( styles );
 
 /**
  * Breakpoints that will be supported in tokens.
- *
- * Note: Desktop-xl is not required for the hubs
- *       style guide, and can be added here,
- *       in GUT Phase 3, if required.
  */
-const breakpoints = [ 'mobile', 'desktop' ];
+const breakpoints = [ 'mobile', 'desktop', 'desktop-xl' ];
 
 /**
  * Properties for tokens and their defaults.
