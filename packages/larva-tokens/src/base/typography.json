@@ -370,6 +370,34 @@
 			"originalValue": "inherit",
 			"name": "BODY_M_LINE_HEIGHT_MOBILE"
 		},
+		"BODY_M_FONT_SIZE_DESKTOP": {
+			"category": "font-size",
+			"type": "number",
+			"value": "18px",
+			"originalValue": "initial",
+			"name": "BODY_M_FONT_SIZE_MOBILE"
+		},
+		"BODY_M_LINE_HEIGHT_DESKTOP": {
+			"category": "line-height",
+			"type": "number",
+			"value": "24px",
+			"originalValue": "inherit",
+			"name": "BODY_M_LINE_HEIGHT_MOBILE"
+		},
+		"BODY_M_FONT_SIZE_DESKTOP_XL": {
+			"category": "font-size",
+			"type": "number",
+			"value": "18px",
+			"originalValue": "initial",
+			"name": "BODY_M_FONT_SIZE_MOBILE"
+		},
+		"BODY_M_LINE_HEIGHT_DESKTOP_XL": {
+			"category": "line-height",
+			"type": "number",
+			"value": "24px",
+			"originalValue": "inherit",
+			"name": "BODY_M_LINE_HEIGHT_MOBILE"
+		},
 		"BODY_S_FONT_SIZE_MOBILE": {
 			"category": "font-size",
 			"type": "number",
