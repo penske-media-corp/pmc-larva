@@ -697,10 +697,12 @@
       "name": "PRIMARY_XXS_FONT_SIZE_DESKTOP"
     },
     "SECONDARY_REGULAR_M_FONT_SIZE_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "15px",
+      "originalValue": "15px",
       "name": "SECONDARY_REGULAR_M_FONT_SIZE_DESKTOP_XL"
     },
     "ACCENT_S_FONT_SIZE_DESKTOP_XL": {
@@ -865,10 +867,12 @@
       "name": "BODY_S_FONT_SIZE_DESKTOP_XL"
     },
     "SECONDARY_REGULAR_M_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "15px",
+      "originalValue": "15px",
       "name": "SECONDARY_REGULAR_M_FONT_SIZE_DESKTOP"
     },
     "SECONDARY_L_FONT_SIZE_MOBILE": {
@@ -1665,10 +1669,12 @@
       "name": "PRIMARY_XL_FONT_WEIGHT_MOBILE"
     },
     "SECONDARY_L_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "600",
+      "originalValue": "600",
       "name": "SECONDARY_L_FONT_WEIGHT_DESKTOP"
     },
     "BODY_M_FONT_WEIGHT_MOBILE": {
@@ -1720,10 +1726,12 @@
       "name": "SECONDARY_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_L_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "600",
+      "originalValue": "600",
       "name": "SECONDARY_L_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_S_FONT_WEIGHT_DESKTOP": {
@@ -2050,8 +2058,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "17px",
-      "originalValue": "17px",
+      "value": "15px",
+      "originalValue": "15px",
       "name": "SECONDARY_M_LINE_HEIGHT_DESKTOP_XL"
     },
     "PRIMARY_XL_LINE_HEIGHT_DESKTOP": {

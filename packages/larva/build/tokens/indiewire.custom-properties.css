@@ -77,7 +77,7 @@
   --body-s-font-size-desktop: initial;
   --primary-s-font-size-desktop: 36px;
   --primary-xxs-font-size-desktop: 24px;
-  --secondary-regular-m-font-size-desktop-xl: initial;
+  --secondary-regular-m-font-size-desktop-xl: 15px;
   --accent-s-font-size-desktop-xl: initial;
   --accent-xxs-font-size-desktop-xl: 18px;
   --accent-l-font-size-desktop: 58px;
@@ -97,7 +97,7 @@
   --primary-xxs-font-size-desktop-xl: 24px;
   --primary-s-font-size-desktop-xl: 36px;
   --body-s-font-size-desktop-xl: initial;
-  --secondary-regular-m-font-size-desktop: initial;
+  --secondary-regular-m-font-size-desktop: 15px;
   --secondary-l-font-size-mobile: 17px;
   --secondary-l-font-size-desktop: 30px;
   --secondary-regular-m-font-size-mobile: 15px;
@@ -197,14 +197,14 @@
   --secondary-s-font-weight-desktop-xl: initial;
   --secondary-regular-m-font-weight-desktop: initial;
   --primary-xl-font-weight-mobile: 700;
-  --secondary-l-font-weight-desktop: initial;
+  --secondary-l-font-weight-desktop: 600;
   --body-m-font-weight-mobile: initial;
   --accent-xs-font-weight-mobile: 300;
   --secondary-m-font-weight-desktop: initial;
   --primary-m-font-weight-mobile: 700;
   --primary-l-font-weight-mobile: 700;
   --secondary-m-font-weight-desktop-xl: initial;
-  --secondary-l-font-weight-desktop-xl: initial;
+  --secondary-l-font-weight-desktop-xl: 600;
   --secondary-s-font-weight-desktop: initial;
   --secondary-regular-m-font-weight-desktop-xl: initial;
   --accent-s-font-weight-desktop-xl: initial;
@@ -244,7 +244,7 @@
   --accent-xs-line-height-desktop: 24px;
   --body-m-line-height-desktop: 24px;
   --primary-m-line-height-desktop: 40px;
-  --secondary-m-line-height-desktop-xl: 17px;
+  --secondary-m-line-height-desktop-xl: 15px;
   --primary-xl-line-height-desktop: 57px;
   --secondary-l-line-height-desktop-xl: 35px;
   --secondary-regular-m-line-height-desktop-xl: initial;
@@ -276,7 +276,7 @@
   --accent-s-line-height-mobile: 23px;
   --accent-xxs-line-height-mobile: 0.4px;
   --secondary-l-line-height-desktop: 35px;
-  --secondary-m-line-height-desktop: 17px;
+  --secondary-m-line-height-desktop: 15px;
   --primary-xl-line-height-desktop-xl: 57px;
   --primary-m-line-height-desktop-xl: 40px;
   --body-m-line-height-desktop-xl: 24px;
