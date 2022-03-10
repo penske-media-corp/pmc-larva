@@ -20,6 +20,7 @@ const {
 const generateFontTokens = () => {
 	tokenProperties.forEach( ( property ) => {
 		const fileName = kebabify( property );
+		console.log(fileName + '========================'); // eslint-disable-line no-console
 
 		fs.writeFileSync(
 			path.join( __dirname, `../src/base/generated/${ fileName }.json` ),

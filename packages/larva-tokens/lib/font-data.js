@@ -19,8 +19,9 @@ const families = Object.keys( styles );
 
 /**
  * Breakpoints that will be supported in tokens.
+
  */
-const breakpoints = [ 'mobile', 'desktop', 'desktop-xl' ];
+const breakpoints = [ 'mobile', 'desktop', 'desktop_xl' ];
 
 /**
  * Properties for tokens and their defaults.
