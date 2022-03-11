@@ -1,6 +1,6 @@
 const path = require( 'path' );
 const express = require('express');
-const marked = require( 'marked' );
+const { marked } = require( 'marked' );
 const fs = require( 'fs' );
 const globby = require( 'globby' );
 

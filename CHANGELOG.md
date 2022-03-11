@@ -13,11 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Add lrv-u-border-l-1 & lrv-u-border-t-1 classes for desktop, desktop-xl & mobile.
 
 ## Unpublished
+* larva-patterns - Add `author` and `author-details` module.
+
+## 0.5.5 - 03-03-2022
+* larva-css - Add border top utility.
+
+## 0.5.4 - 03-03-2022
 * larva-patterns - Add `injected-related-content` module.
 * root - Fixes formatting of code block.
 * larva-patterns - Add story-grid.river variant
 * larva-css - Add text decoration utility and desktop-xl-max for lrv-a-hidden
 * larva-patterns - Add `newsletter` module.
+* all - Dependendabot updates
 
 ## 0.5.3 - 02-24-2022
 * larva-patterns - Add `pullquote` module.
