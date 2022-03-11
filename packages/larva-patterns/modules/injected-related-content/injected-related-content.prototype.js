@@ -17,7 +17,7 @@ c_title.c_title_url = '#';
 const c_lazy_image_prototype = require('../../components/c-lazy-image/c-lazy-image.prototype.js');
 const c_lazy_image = clonedeep(c_lazy_image_prototype);
 
-c_lazy_image.c_lazy_image_classes = 'lrv-a-floated-right@tablet lrv-u-width-150 lrv-u-width-100p@mobile-max lrv-u-margin-l-125 lrv-u-margin-t-150@mobile-max lrv-u-margin-l-00@mobile-max';
+c_lazy_image.c_lazy_image_classes = 'lrv-a-floated-right@tablet lrv-u-width-154@desktop-xl lrv-u-width-177@tablet-and-desktop-only lrv-u-margin-l-125 lrv-u-margin-t-150@mobile-max lrv-u-margin-l-00@mobile-max';
 c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1@tablet';
 
 const o_card_prototype = require('../../objects/o-card/o-card.prototype');
@@ -46,9 +46,9 @@ o_card_last.c_timestamp = false;
 module.exports = {
     injected_related_content_classes: 'lrv-u-border-t-1 lrv-u-padding-t-025',
     injected_related_content_inner_classes: 'lrv-u-flex lrv-u-flex-direction-column@desktop-xl-max lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-padding-b-150@desktop-xl lrv-u-padding-t-150',
-	injected_related_content_primary_classes: 'lrv-u-padding-b-1@mobile-max lrv-u-padding-b-150 lrv-u-padding-b-00@desktop-xl',
-	injected_related_content_heading_classes: 'lrv-u-padding-b-00@desktop-xl lrv-u-display-inline-block',
-	injected_related_content_secondary_classes: 'lrv-u-padding-l-125@desktop-xl',
+    injected_related_content_primary_classes: 'lrv-u-padding-b-1@mobile-max lrv-u-padding-b-150 lrv-u-padding-b-00@desktop-xl lrv-u-width-64p@desktop-xl',
+    injected_related_content_heading_classes: 'lrv-u-padding-b-00@desktop-xl lrv-u-display-inline-block',
+    injected_related_content_secondary_classes: 'lrv-u-padding-l-125@desktop-xl lrv-u-width-36p@desktop-xl lrv-u-flex lrv-u-flex-direction-column lrv-u-justify-content-center',
     c_heading,
     c_title,
     c_lazy_image,
