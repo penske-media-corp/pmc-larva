@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add `author` and `author-details` module.
+* larva-tokens - Update grey color for rollingstone-2022.
 
 ## 0.5.5 - 03-03-2022
 * larva-css - Add border top utility.

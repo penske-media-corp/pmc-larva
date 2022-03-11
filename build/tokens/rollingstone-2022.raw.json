@@ -241,8 +241,8 @@
     "BORDER_COLOR_GREY_LIGHT": {
       "category": "hr-color",
       "type": "color",
-      "value": "rgb(204, 204, 204)",
-      "originalValue": "{!GREY_80}",
+      "value": "rgb(153, 153, 153)",
+      "originalValue": "rgb(153, 153, 153)",
       "name": "BORDER_COLOR_GREY_LIGHT"
     },
     "BORDER_COLOR_GREY_DARK": {
@@ -304,8 +304,8 @@
     "BACKGROUND_COLOR_GREY_LIGHT": {
       "category": "background-color",
       "type": "color",
-      "value": "rgb(204, 204, 204)",
-      "originalValue": "{!GREY_80}",
+      "value": "rgb(153, 153, 153)",
+      "originalValue": "rgb(153, 153, 153)",
       "name": "BACKGROUND_COLOR_GREY_LIGHT"
     },
     "BACKGROUND_COLOR_GREY_LIGHTEST": {

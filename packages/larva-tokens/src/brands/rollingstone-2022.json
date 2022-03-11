@@ -68,6 +68,13 @@
 		"originalValue": "{!GREY_20}",
 		"name": "BACKGROUND_COLOR_GREY_DARKEST"
 	  },
+	  "BACKGROUND_COLOR_GREY_LIGHT": {
+		"category": "background-color",
+		"type": "color",
+		"value": "rgb(153, 153, 153)",
+		"originalValue": "{!GREY_80}",
+		"name": "BACKGROUND_COLOR_GREY_LIGHT"
+	  },
 	  "BACKGROUND_COLOR_GREY_LIGHTEST": {
 		"category": "background-color",
 		"type": "color",
@@ -123,6 +130,13 @@
 		"value": "rgb(102, 102, 102)",
 		"originalValue": "{!GREY_35}",
 		"name": "BORDER_COLOR_GREY_DARK"
+	  },
+	  "BORDER_COLOR_GREY_LIGHT": {
+		"category": "hr-color",
+		"type": "color",
+		"value": "rgb(153, 153, 153)",
+		"originalValue": "{!GREY_80}",
+		"name": "BORDER_COLOR_GREY_LIGHT"
 	  },
 	  "BORDER_COLOR_GREY_LIGHTEST": {
 		"category": "hr-color",
