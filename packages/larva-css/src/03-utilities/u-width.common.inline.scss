@@ -48,3 +48,9 @@ $widths_map: (
 		width: 75%;
 	}
 }
+
+.lrv-u-width-35\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		width: pmc-rem(35);
+	}
+}
