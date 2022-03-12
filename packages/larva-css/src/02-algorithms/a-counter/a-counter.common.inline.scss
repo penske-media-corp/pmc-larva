@@ -1,0 +1,26 @@
+.lrv-a-counter {
+	counter-reset: a-counter;
+}
+
+.lrv-a-counter-increment {
+	counter-increment: a-counter;
+}
+
+.lrv-a-counter-before::before {
+	content: counter( a-counter );
+	display: var( --a-counter__display, inline-block);
+	padding: var( --a-counter__padding, initial );
+	background-color: var( --a-counter__background-color, initial );
+	color: var( --a-counter__color, inherit );
+	border-top-right-radius: var( --a-counter__border-top-right-radius, inherit );
+	font-family: var( --a-counter__font-family, inherit );
+	font-size: var( --a-counter__font-size, inherit ); // stylelint-disable-line property-blacklist
+	line-height: var( --a-counter__line-height, 0.7 );
+	font-weight: var( --a-counter__font-weight, inherit ); // stylelint-disable-line property-blacklist
+	z-index: 1;
+	position: var( --a-counter__position, initial );
+	left: var( --a-counter__left, auto );
+	top: var( --a-counter__top, auto );
+	right: var( --a-counter__right, auto );
+	bottom: var( --a-counter__bottom, auto );
+}

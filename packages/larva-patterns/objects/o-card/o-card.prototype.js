@@ -14,6 +14,7 @@ module.exports = {
 	o_card_image_wrap_classes: '',
 	o_card_content_classes: '',
 	c_lazy_image: c_lazy_image,
+	c_svg: false,
 	c_span: c_span,
 	c_tagline: false,
 	c_title: c_title,

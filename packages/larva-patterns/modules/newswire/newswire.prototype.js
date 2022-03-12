@@ -34,6 +34,9 @@ o_card.c_title = c_title;
 o_card.c_timestamp = c_timestamp;
 
 module.exports = {
+	newswire_classes: 'lrv-a-wrapper lrv-u-padding-b-2 lrv-u-margin-t-2',
+	newswire_list_classes: 'lrv-a-unstyle-list lrv-a-grid lrv-a-cols2 lrv-a-cols5@desktop lrv-a-grid-first-child-span-all@mobile-max',
+	newswire_list_item_classes: 'lrv-a-grid-item lrv-u-height-100p',
 	c_heading: c_heading,
 	newswire_aria_labelledby_attr: c_heading.c_heading_id_attr,
 	newswire_items: [ o_card, o_card, o_card, o_card, o_card ]
