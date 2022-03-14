@@ -204,7 +204,7 @@
 	  "COLOR_GREY_LIGHT": {
 		"category": "text-color",
 		"type": "color",
-		"value": "rgb(204, 204, 204)",
+		"value": "rgb(153, 153, 153)",
 		"originalValue": "{!GREY_90}",
 		"name": "COLOR_GREY_LIGHT"
 	  },
