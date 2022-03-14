@@ -11,14 +11,14 @@ module.exports = {
 	font-weight: var( --primary-xxl-font-weight-mobile );
 	font-style: var( --primary-xxl-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-xxl-font-size-desktop );
 		line-height: var( --primary-xxl-line-height-desktop );
 		letter-spacing: var( --primary-xxl-letter-spacing-desktop );
 		font-weight: var( --primary-xxl-font-weight-desktop );
 		font-style: var( --primary-xxl-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-xxl-font-size-desktop-xl );
 		line-height: var( --primary-xxl-line-height-desktop-xl );
 		letter-spacing: var( --primary-xxl-letter-spacing-desktop-xl );

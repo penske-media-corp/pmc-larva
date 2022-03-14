@@ -40,14 +40,14 @@ const ruleset = ( selector ) => {
 	} );
 
 	css += '\n';
-	css += '\t@media (min-width: 800px) {';
+	css += '\t@media (min-width: $screen-desktop) {';
 	css += '\n';
 
 	properties.forEach( ( property ) => {
 		css += `\t\t${ property }: var( --${ tokenBase }-${ property }-desktop );\n`;
 	} );
 	css += '\t}\n';
-	css += '\t@media (min-width: 1200px) {';
+	css += '\t@media (min-width: $screen-desktop-xl) {';
 	css += '\n';
 
 	properties.forEach( ( property ) => {

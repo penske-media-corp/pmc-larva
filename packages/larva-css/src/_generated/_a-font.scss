@@ -11,14 +11,14 @@
 	font-weight: var( --primary-xl-font-weight-mobile );
 	font-style: var( --primary-xl-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-xl-font-size-desktop );
 		line-height: var( --primary-xl-line-height-desktop );
 		letter-spacing: var( --primary-xl-letter-spacing-desktop );
 		font-weight: var( --primary-xl-font-weight-desktop );
 		font-style: var( --primary-xl-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-xl-font-size-desktop-xl );
 		line-height: var( --primary-xl-line-height-desktop-xl );
 		letter-spacing: var( --primary-xl-letter-spacing-desktop-xl );
@@ -38,14 +38,14 @@
 	font-weight: var( --primary-l-font-weight-mobile );
 	font-style: var( --primary-l-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-l-font-size-desktop );
 		line-height: var( --primary-l-line-height-desktop );
 		letter-spacing: var( --primary-l-letter-spacing-desktop );
 		font-weight: var( --primary-l-font-weight-desktop );
 		font-style: var( --primary-l-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-l-font-size-desktop-xl );
 		line-height: var( --primary-l-line-height-desktop-xl );
 		letter-spacing: var( --primary-l-letter-spacing-desktop-xl );
@@ -65,14 +65,14 @@
 	font-weight: var( --primary-m-font-weight-mobile );
 	font-style: var( --primary-m-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-m-font-size-desktop );
 		line-height: var( --primary-m-line-height-desktop );
 		letter-spacing: var( --primary-m-letter-spacing-desktop );
 		font-weight: var( --primary-m-font-weight-desktop );
 		font-style: var( --primary-m-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-m-font-size-desktop-xl );
 		line-height: var( --primary-m-line-height-desktop-xl );
 		letter-spacing: var( --primary-m-letter-spacing-desktop-xl );
@@ -92,14 +92,14 @@
 	font-weight: var( --primary-s-font-weight-mobile );
 	font-style: var( --primary-s-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-s-font-size-desktop );
 		line-height: var( --primary-s-line-height-desktop );
 		letter-spacing: var( --primary-s-letter-spacing-desktop );
 		font-weight: var( --primary-s-font-weight-desktop );
 		font-style: var( --primary-s-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-s-font-size-desktop-xl );
 		line-height: var( --primary-s-line-height-desktop-xl );
 		letter-spacing: var( --primary-s-letter-spacing-desktop-xl );
@@ -119,14 +119,14 @@
 	font-weight: var( --primary-xs-font-weight-mobile );
 	font-style: var( --primary-xs-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-xs-font-size-desktop );
 		line-height: var( --primary-xs-line-height-desktop );
 		letter-spacing: var( --primary-xs-letter-spacing-desktop );
 		font-weight: var( --primary-xs-font-weight-desktop );
 		font-style: var( --primary-xs-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-xs-font-size-desktop-xl );
 		line-height: var( --primary-xs-line-height-desktop-xl );
 		letter-spacing: var( --primary-xs-letter-spacing-desktop-xl );
@@ -146,14 +146,14 @@
 	font-weight: var( --primary-xxs-font-weight-mobile );
 	font-style: var( --primary-xxs-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-xxs-font-size-desktop );
 		line-height: var( --primary-xxs-line-height-desktop );
 		letter-spacing: var( --primary-xxs-letter-spacing-desktop );
 		font-weight: var( --primary-xxs-font-weight-desktop );
 		font-style: var( --primary-xxs-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-xxs-font-size-desktop-xl );
 		line-height: var( --primary-xxs-line-height-desktop-xl );
 		letter-spacing: var( --primary-xxs-letter-spacing-desktop-xl );
@@ -173,14 +173,14 @@
 	font-weight: var( --primary-xxxs-font-weight-mobile );
 	font-style: var( --primary-xxxs-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --primary-xxxs-font-size-desktop );
 		line-height: var( --primary-xxxs-line-height-desktop );
 		letter-spacing: var( --primary-xxxs-letter-spacing-desktop );
 		font-weight: var( --primary-xxxs-font-weight-desktop );
 		font-style: var( --primary-xxxs-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --primary-xxxs-font-size-desktop-xl );
 		line-height: var( --primary-xxxs-line-height-desktop-xl );
 		letter-spacing: var( --primary-xxxs-letter-spacing-desktop-xl );
@@ -200,14 +200,14 @@
 	font-weight: var( --secondary-l-font-weight-mobile );
 	font-style: var( --secondary-l-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --secondary-l-font-size-desktop );
 		line-height: var( --secondary-l-line-height-desktop );
 		letter-spacing: var( --secondary-l-letter-spacing-desktop );
 		font-weight: var( --secondary-l-font-weight-desktop );
 		font-style: var( --secondary-l-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --secondary-l-font-size-desktop-xl );
 		line-height: var( --secondary-l-line-height-desktop-xl );
 		letter-spacing: var( --secondary-l-letter-spacing-desktop-xl );
@@ -227,14 +227,14 @@
 	font-weight: var( --secondary-m-font-weight-mobile );
 	font-style: var( --secondary-m-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --secondary-m-font-size-desktop );
 		line-height: var( --secondary-m-line-height-desktop );
 		letter-spacing: var( --secondary-m-letter-spacing-desktop );
 		font-weight: var( --secondary-m-font-weight-desktop );
 		font-style: var( --secondary-m-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --secondary-m-font-size-desktop-xl );
 		line-height: var( --secondary-m-line-height-desktop-xl );
 		letter-spacing: var( --secondary-m-letter-spacing-desktop-xl );
@@ -254,14 +254,14 @@
 	font-weight: var( --secondary-s-font-weight-mobile );
 	font-style: var( --secondary-s-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --secondary-s-font-size-desktop );
 		line-height: var( --secondary-s-line-height-desktop );
 		letter-spacing: var( --secondary-s-letter-spacing-desktop );
 		font-weight: var( --secondary-s-font-weight-desktop );
 		font-style: var( --secondary-s-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --secondary-s-font-size-desktop-xl );
 		line-height: var( --secondary-s-line-height-desktop-xl );
 		letter-spacing: var( --secondary-s-letter-spacing-desktop-xl );
@@ -281,14 +281,14 @@
 	font-weight: var( --secondary-regular-m-font-weight-mobile );
 	font-style: var( --secondary-regular-m-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --secondary-regular-m-font-size-desktop );
 		line-height: var( --secondary-regular-m-line-height-desktop );
 		letter-spacing: var( --secondary-regular-m-letter-spacing-desktop );
 		font-weight: var( --secondary-regular-m-font-weight-desktop );
 		font-style: var( --secondary-regular-m-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --secondary-regular-m-font-size-desktop-xl );
 		line-height: var( --secondary-regular-m-line-height-desktop-xl );
 		letter-spacing: var( --secondary-regular-m-letter-spacing-desktop-xl );
@@ -308,14 +308,14 @@
 	font-weight: var( --accent-l-font-weight-mobile );
 	font-style: var( --accent-l-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --accent-l-font-size-desktop );
 		line-height: var( --accent-l-line-height-desktop );
 		letter-spacing: var( --accent-l-letter-spacing-desktop );
 		font-weight: var( --accent-l-font-weight-desktop );
 		font-style: var( --accent-l-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --accent-l-font-size-desktop-xl );
 		line-height: var( --accent-l-line-height-desktop-xl );
 		letter-spacing: var( --accent-l-letter-spacing-desktop-xl );
@@ -335,14 +335,14 @@
 	font-weight: var( --accent-m-font-weight-mobile );
 	font-style: var( --accent-m-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --accent-m-font-size-desktop );
 		line-height: var( --accent-m-line-height-desktop );
 		letter-spacing: var( --accent-m-letter-spacing-desktop );
 		font-weight: var( --accent-m-font-weight-desktop );
 		font-style: var( --accent-m-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --accent-m-font-size-desktop-xl );
 		line-height: var( --accent-m-line-height-desktop-xl );
 		letter-spacing: var( --accent-m-letter-spacing-desktop-xl );
@@ -362,14 +362,14 @@
 	font-weight: var( --accent-s-font-weight-mobile );
 	font-style: var( --accent-s-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --accent-s-font-size-desktop );
 		line-height: var( --accent-s-line-height-desktop );
 		letter-spacing: var( --accent-s-letter-spacing-desktop );
 		font-weight: var( --accent-s-font-weight-desktop );
 		font-style: var( --accent-s-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --accent-s-font-size-desktop-xl );
 		line-height: var( --accent-s-line-height-desktop-xl );
 		letter-spacing: var( --accent-s-letter-spacing-desktop-xl );
@@ -389,14 +389,14 @@
 	font-weight: var( --accent-xs-font-weight-mobile );
 	font-style: var( --accent-xs-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --accent-xs-font-size-desktop );
 		line-height: var( --accent-xs-line-height-desktop );
 		letter-spacing: var( --accent-xs-letter-spacing-desktop );
 		font-weight: var( --accent-xs-font-weight-desktop );
 		font-style: var( --accent-xs-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --accent-xs-font-size-desktop-xl );
 		line-height: var( --accent-xs-line-height-desktop-xl );
 		letter-spacing: var( --accent-xs-letter-spacing-desktop-xl );
@@ -416,14 +416,14 @@
 	font-weight: var( --accent-xxs-font-weight-mobile );
 	font-style: var( --accent-xxs-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --accent-xxs-font-size-desktop );
 		line-height: var( --accent-xxs-line-height-desktop );
 		letter-spacing: var( --accent-xxs-letter-spacing-desktop );
 		font-weight: var( --accent-xxs-font-weight-desktop );
 		font-style: var( --accent-xxs-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --accent-xxs-font-size-desktop-xl );
 		line-height: var( --accent-xxs-line-height-desktop-xl );
 		letter-spacing: var( --accent-xxs-letter-spacing-desktop-xl );
@@ -443,14 +443,14 @@
 	font-weight: var( --accent-regular-xxs-font-weight-mobile );
 	font-style: var( --accent-regular-xxs-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --accent-regular-xxs-font-size-desktop );
 		line-height: var( --accent-regular-xxs-line-height-desktop );
 		letter-spacing: var( --accent-regular-xxs-letter-spacing-desktop );
 		font-weight: var( --accent-regular-xxs-font-weight-desktop );
 		font-style: var( --accent-regular-xxs-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --accent-regular-xxs-font-size-desktop-xl );
 		line-height: var( --accent-regular-xxs-line-height-desktop-xl );
 		letter-spacing: var( --accent-regular-xxs-letter-spacing-desktop-xl );
@@ -470,14 +470,14 @@
 	font-weight: var( --body-m-font-weight-mobile );
 	font-style: var( --body-m-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --body-m-font-size-desktop );
 		line-height: var( --body-m-line-height-desktop );
 		letter-spacing: var( --body-m-letter-spacing-desktop );
 		font-weight: var( --body-m-font-weight-desktop );
 		font-style: var( --body-m-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --body-m-font-size-desktop-xl );
 		line-height: var( --body-m-line-height-desktop-xl );
 		letter-spacing: var( --body-m-letter-spacing-desktop-xl );
@@ -497,14 +497,14 @@
 	font-weight: var( --body-s-font-weight-mobile );
 	font-style: var( --body-s-font-style-mobile );
 
-	@media (min-width: 800px) {
+	@media (min-width: $screen-desktop) {
 		font-size: var( --body-s-font-size-desktop );
 		line-height: var( --body-s-line-height-desktop );
 		letter-spacing: var( --body-s-letter-spacing-desktop );
 		font-weight: var( --body-s-font-weight-desktop );
 		font-style: var( --body-s-font-style-desktop );
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: $screen-desktop-xl) {
 		font-size: var( --body-s-font-size-desktop-xl );
 		line-height: var( --body-s-line-height-desktop-xl );
 		letter-spacing: var( --body-s-letter-spacing-desktop-xl );

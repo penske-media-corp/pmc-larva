@@ -707,10 +707,12 @@
       "name": "SECONDARY_REGULAR_M_FONT_SIZE_DESKTOP_XL"
     },
     "ACCENT_S_FONT_SIZE_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "23px",
+      "originalValue": "23px",
       "name": "ACCENT_S_FONT_SIZE_DESKTOP_XL"
     },
     "ACCENT_XXS_FONT_SIZE_DESKTOP_XL": {
@@ -732,10 +734,12 @@
       "name": "ACCENT_L_FONT_SIZE_DESKTOP"
     },
     "ACCENT_M_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "26px",
+      "originalValue": "26px",
       "name": "ACCENT_M_FONT_SIZE_DESKTOP"
     },
     "PRIMARY_XXXS_FONT_SIZE_DESKTOP": {
@@ -802,10 +806,12 @@
       "name": "PRIMARY_XXXS_FONT_SIZE_DESKTOP_XL"
     },
     "ACCENT_M_FONT_SIZE_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "26px",
+      "originalValue": "26px",
       "name": "ACCENT_M_FONT_SIZE_DESKTOP_XL"
     },
     "SECONDARY_M_FONT_SIZE_MOBILE": {
@@ -836,10 +842,12 @@
       "name": "ACCENT_L_FONT_SIZE_DESKTOP_XL"
     },
     "ACCENT_S_FONT_SIZE_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "23px",
+      "originalValue": "23px",
       "name": "ACCENT_S_FONT_SIZE_DESKTOP"
     },
     "PRIMARY_XXS_FONT_SIZE_DESKTOP_XL": {
@@ -1594,10 +1602,12 @@
       "name": "ACCENT_M_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "400",
+      "originalValue": "400",
       "name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP"
     },
     "ACCENT_L_FONT_WEIGHT_MOBILE": {
@@ -1635,24 +1645,30 @@
       "name": "BODY_S_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_XXS_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_XXS_FONT_WEIGHT_DESKTOP"
     },
     "ACCENT_S_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_S_FONT_WEIGHT_DESKTOP"
     },
     "SECONDARY_S_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "600",
+      "originalValue": "600",
       "name": "SECONDARY_S_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP": {
@@ -1742,10 +1758,12 @@
       "name": "SECONDARY_L_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_S_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "600",
+      "originalValue": "600",
       "name": "SECONDARY_S_FONT_WEIGHT_DESKTOP"
     },
     "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP_XL": {
@@ -1756,17 +1774,21 @@
       "name": "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_S_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_S_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_XXS_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_XXS_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_S_FONT_WEIGHT_MOBILE": {
@@ -1779,10 +1801,12 @@
       "name": "SECONDARY_S_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "400",
+      "originalValue": "400",
       "name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_DESKTOP_XL"
     },
     "PRIMARY_L_FONT_WEIGHT_DESKTOP": {
@@ -1804,10 +1828,12 @@
       "name": "PRIMARY_XXXS_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_M_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "PRIMARY_XS_FONT_WEIGHT_DESKTOP_XL": {
@@ -1827,10 +1853,12 @@
       "name": "BODY_M_FONT_WEIGHT_DESKTOP"
     },
     "ACCENT_L_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_L_FONT_WEIGHT_DESKTOP_XL"
     },
     "PRIMARY_M_FONT_WEIGHT_DESKTOP": {
@@ -1843,10 +1871,12 @@
       "name": "PRIMARY_M_FONT_WEIGHT_DESKTOP"
     },
     "ACCENT_XS_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_XS_FONT_WEIGHT_DESKTOP"
     },
     "SECONDARY_M_FONT_WEIGHT_MOBILE": {
@@ -1961,10 +1991,12 @@
       "name": "PRIMARY_XL_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_XS_FONT_WEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_XS_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_REGULAR_XXS_FONT_WEIGHT_MOBILE": {
@@ -1977,10 +2009,12 @@
       "name": "ACCENT_REGULAR_XXS_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_L_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_L_FONT_WEIGHT_DESKTOP"
     },
     "PRIMARY_M_FONT_WEIGHT_DESKTOP_XL": {
@@ -2000,10 +2034,12 @@
       "name": "BODY_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_M_FONT_WEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "300",
+      "originalValue": "300",
       "name": "ACCENT_M_FONT_WEIGHT_DESKTOP"
     },
     "PRIMARY_XXXS_FONT_WEIGHT_DESKTOP": {
@@ -2106,10 +2142,12 @@
       "name": "ACCENT_XXS_LINE_HEIGHT_DESKTOP_XL"
     },
     "ACCENT_S_LINE_HEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "23px",
+      "originalValue": "23px",
       "name": "ACCENT_S_LINE_HEIGHT_DESKTOP_XL"
     },
     "PRIMARY_S_LINE_HEIGHT_DESKTOP": {
@@ -2185,10 +2223,12 @@
       "name": "ACCENT_REGULAR_XXS_LINE_HEIGHT_DESKTOP_XL"
     },
     "ACCENT_M_LINE_HEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "26px",
+      "originalValue": "26px",
       "name": "ACCENT_M_LINE_HEIGHT_DESKTOP"
     },
     "ACCENT_REGULAR_XXS_LINE_HEIGHT_DESKTOP": {
@@ -2219,10 +2259,12 @@
       "name": "PRIMARY_XXXS_LINE_HEIGHT_DESKTOP_XL"
     },
     "ACCENT_M_LINE_HEIGHT_DESKTOP_XL": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "26px",
+      "originalValue": "26px",
       "name": "ACCENT_M_LINE_HEIGHT_DESKTOP_XL"
     },
     "SECONDARY_M_LINE_HEIGHT_MOBILE": {
@@ -2280,10 +2322,12 @@
       "name": "SECONDARY_L_LINE_HEIGHT_MOBILE"
     },
     "ACCENT_S_LINE_HEIGHT_DESKTOP": {
+      "selector": "lrv-a-font",
+      "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "23px",
+      "originalValue": "23px",
       "name": "ACCENT_S_LINE_HEIGHT_DESKTOP"
     },
     "ACCENT_XXS_LINE_HEIGHT_DESKTOP": {
