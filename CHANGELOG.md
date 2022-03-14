@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Update css generator script to include desktop_xl breakpoint using media queries
 * larva-css - Update test for generated css
 * larva-patterns - Add `author` and `author-details` module.
+* larva-tokens - Update grey color for rollingstone-2022.
 
 ## 0.5.5 - 03-03-2022
 * larva-css - Add border top utility.
