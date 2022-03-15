@@ -1,0 +1,38 @@
+<div class="author // {{ author_classes }}">
+	{% if is_multiple_author %}
+		<div class="author-multiple-inner // {{ author_multiple_inner_classes }} ">
+			<div class="author-tagline // {{ author_tagline_classes }} ">
+				By {% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_multiple_authors %}
+			</div>
+			{% if c_timestamp %}
+				{% include "@larva/components/c-timestamp/c-timestamp.twig" with c_timestamp %}
+			{% endif %} 
+		</div>
+	{% else %}
+		<div class="author-single-inner // {{ author_single_inner_classes }} ">
+			<div class="author-content // {{ author_content_classes }} ">
+				<div class="author-content-inner // {{ author_content_inner_classes }} ">
+					<button class="author-button // {{ author_button_classes }} ">
+						<p class="author-name // {{ author_name_classes }} ">
+							By {% include "@larva/components/c-link/c-link.twig" with c_link %}
+						</p>
+
+						{% if c_icon %}
+							{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
+						{% endif %}
+
+						<div class="author-detail-outer // {{ author_detail_outer_classes }} ">
+							{% include "@larva/modules/author-details/author-details.twig" with author_details %}
+						</div>
+					</button>
+				</div>
+
+				{% if c_timestamp %}
+					<div class="author-timestamp-outer // {{ author_timestamp_outer_classes }}">
+						{% include "@larva/components/c-timestamp/c-timestamp.twig" with c_timestamp %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	{% endif %}
+</div>

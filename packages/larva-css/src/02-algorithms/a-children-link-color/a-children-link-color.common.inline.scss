@@ -1,0 +1,15 @@
+@import 'setup';
+
+.lrv-a-children-link-color-black {
+	& > a {
+		color: map-get( $TOKENS-MAP, color-black );
+		color: var( --color-black );
+	}
+}
+
+.lrv-a-children-link-color-brand-primary\:hover {
+	& > a:hover {
+		color: map-get( $TOKENS-MAP, color-brand-primary );
+		color: var( --color-brand-primary );
+	}
+}
