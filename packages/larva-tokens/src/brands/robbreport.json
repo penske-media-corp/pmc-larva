@@ -1,6 +1,7 @@
 {
   "imports": [
-    "../base/all.json"
+    "../base/all.json",
+    "../base/typography.json"
   ],
   "props": {
     "BACKGROUND_COLOR_BRAND_PRIMARY": {
