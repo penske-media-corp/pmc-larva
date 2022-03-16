@@ -235,7 +235,7 @@
       "value": "rgb(219, 239, 255)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#DBEFFF",
+      "originalValue": "rgb(219, 239, 255)",
       "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
     },
     "BORDER_COLOR_GREY_LIGHT": {
@@ -263,7 +263,7 @@
       "value": "rgb(178, 221, 255)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#B2DDFF",
+      "originalValue": "rgb(178, 221, 255)",
       "name": "BORDER_COLOR_BRAND_SECONDARY"
     },
     "BORDER_COLOR_GREY": {
@@ -298,7 +298,7 @@
       "value": "rgb(0, 93, 164)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#005DA4",
+      "originalValue": "rgb(0, 93, 164)",
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
@@ -326,7 +326,7 @@
       "value": "rgb(219, 239, 255)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#DBEFFF",
+      "originalValue": "rgb(219, 239, 255)",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
     },
     "BACKGROUND_COLOR_GREY_DARK": {
@@ -355,7 +355,7 @@
       "value": "rgb(178, 221, 255)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#B2DDFF",
+      "originalValue": "rgb(178, 221, 255)",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BLACK": {
@@ -390,7 +390,7 @@
       "value": "rgb(0, 93, 164)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#005DA4",
+      "originalValue": "rgb(0, 93, 164)",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_DARKEST": {
@@ -404,7 +404,7 @@
       "value": "rgb(178, 221, 255)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#B2DDFF",
+      "originalValue": "rgb(178, 221, 255)",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
@@ -439,7 +439,7 @@
       "value": "rgb(0, 93, 164)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#005DA4",
+      "originalValue": "rgb(0, 93, 164)",
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_GREY_LIGHT": {
@@ -460,7 +460,7 @@
       "value": "rgb(219, 239, 255)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#DBEFFF",
+      "originalValue": "rgb(219, 239, 255)",
       "name": "COLOR_BRAND_SECONDARY_LIGHT"
     },
     "COLOR_GREY_DARK": {
@@ -490,7 +490,7 @@
       "type": "font-family",
       "category": "font-family",
       "comment": "The fallback for the primary font",
-      "originalValue": "{!GEORGIA}",
+      "originalValue": "Georgia, serif",
       "name": "FONT_FAMILY_PRIMARY"
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
@@ -506,14 +506,14 @@
       "type": "font-family",
       "category": "font-family",
       "comment": "The fallback for the secondary font",
-      "originalValue": "{!HELVETICA_NEUE}",
+      "originalValue": "'Helvetica Neue', Helvetica, Arial, sans-serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {
       "value": "Georgia, serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "{!GEORGIA}",
+      "originalValue": "Georgia, serif",
       "name": "FONT_FAMILY_BODY"
     },
     "FONT_FAMILY_BASIC": {
@@ -1401,8 +1401,8 @@
       "status": "alpha",
       "category": "letter-spacing",
       "type": "number",
-      "value": ".74px",
-      "originalValue": ".74px",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "ACCENT_M_LETTER_SPACING_MOBILE"
     },
     "PRIMARY_XXXS_LETTER_SPACING_MOBILE": {
@@ -2589,7 +2589,7 @@
       "type": "font-family",
       "category": "font-family",
       "comment": "The fallback for the accent font",
-      "originalValue": "{!HELVETICA_NEUE}",
+      "originalValue": "'Helvetica Neue', Helvetica, Arial, sans-serif",
       "name": "FONT_FAMILY_ACCENT"
     },
     "FONT_FAMILY_ACCENT_FANCY": {
@@ -2604,21 +2604,21 @@
       "value": "rgb(251, 75, 34)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#FB4B22",
+      "originalValue": "rgb(251, 75, 34)",
       "name": "BACKGROUND_COLOR_BRAND_ACCENT"
     },
     "BORDER_COLOR_BRAND_ACCENT": {
       "value": "rgb(251, 75, 34)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#FB4B22",
+      "originalValue": "rgb(251, 75, 34)",
       "name": "BORDER_COLOR_BRAND_ACCENT"
     },
     "COLOR_BRAND_ACCENT": {
       "value": "rgb(251, 75, 34)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#FB4B22",
+      "originalValue": "rgb(251, 75, 34)",
       "name": "COLOR_BRAND_ACCENT"
     }
   }
