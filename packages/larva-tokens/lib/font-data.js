@@ -31,7 +31,7 @@ const tokenDefaults = {
 	font_size: 'initial',
 	line_height: 'initial',
 	letter_spacing: 'normal',
-	font_weight: 'initial',
+	font_weight: 'normal',
 	font_style: 'normal',
 };
 

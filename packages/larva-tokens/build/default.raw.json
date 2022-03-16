@@ -1644,8 +1644,8 @@
     "BODY_S_FONT_WEIGHT_MOBILE": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "BODY_S_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_XXS_FONT_WEIGHT_DESKTOP": {
@@ -1678,8 +1678,8 @@
     "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP"
     },
     "PRIMARY_XL_FONT_WEIGHT_MOBILE": {
@@ -1703,8 +1703,8 @@
     "BODY_M_FONT_WEIGHT_MOBILE": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "BODY_M_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_XS_FONT_WEIGHT_MOBILE": {
@@ -1773,8 +1773,8 @@
     "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP_XL": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "SECONDARY_REGULAR_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_S_FONT_WEIGHT_DESKTOP_XL": {
@@ -1852,8 +1852,8 @@
     "BODY_M_FONT_WEIGHT_DESKTOP": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "BODY_M_FONT_WEIGHT_DESKTOP"
     },
     "ACCENT_L_FONT_WEIGHT_DESKTOP_XL": {
@@ -1931,15 +1931,15 @@
     "BODY_S_FONT_WEIGHT_DESKTOP_XL": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "BODY_S_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_REGULAR_M_FONT_WEIGHT_MOBILE": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "SECONDARY_REGULAR_M_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_S_FONT_WEIGHT_MOBILE": {
@@ -1963,8 +1963,8 @@
     "BODY_S_FONT_WEIGHT_DESKTOP": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "BODY_S_FONT_WEIGHT_DESKTOP"
     },
     "PRIMARY_S_FONT_WEIGHT_DESKTOP": {
@@ -2033,8 +2033,8 @@
     "BODY_M_FONT_WEIGHT_DESKTOP_XL": {
       "category": "font-weight",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "BODY_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_M_FONT_WEIGHT_DESKTOP": {
