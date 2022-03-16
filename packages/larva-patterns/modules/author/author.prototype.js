@@ -19,7 +19,7 @@ c_link_author.c_link_url = '#';
 
 
 const c_tagline_multiple_authors = clonedeep(c_tagline_prototype);
-c_tagline_multiple_authors.c_tagline_classes = 'lrv-u-display-inline lrv-a-children-link-color-black lrv-a-children-link-color-brand-primary:hover lrv-a-children-link-decoration-underline:hover lrv-u-margin-r-050 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015';
+c_tagline_multiple_authors.c_tagline_classes = 'lrv-u-display-inline lrv-a-children-link-color-black lrv-a-children-link-color-brand-primary:hover lrv-a-children-link-decoration-underline:hover lrv-u-margin-r-050 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015 lrv-u-letter-spacing-012@mobile-max';
 c_tagline_multiple_authors.c_tagline_markup = "<a href='#'>Link 1</a>, <a href='#'>Link 2</a>";
 c_tagline_multiple_authors.c_tagline_text = false;
 
