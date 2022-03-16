@@ -19,7 +19,7 @@ c_link_author.c_link_url = '#';
 
 
 const c_tagline_multiple_authors = clonedeep(c_tagline_prototype);
-c_tagline_multiple_authors.c_tagline_classes = 'lrv-u-display-inline lrv-a-children-link-color-black lrv-a-children-link-color-brand-primary:hover lrv-a-children-link-decoration-underline:hover lrv-u-margin-r-050 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015';
+c_tagline_multiple_authors.c_tagline_classes = 'lrv-u-display-inline lrv-a-children-link-color-black lrv-a-children-link-color-brand-primary:hover lrv-a-children-link-decoration-underline:hover lrv-u-margin-r-050 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015 lrv-u-letter-spacing-012@mobile-max';
 c_tagline_multiple_authors.c_tagline_markup = "<a href='#'>Link 1</a>, <a href='#'>Link 2</a>";
 c_tagline_multiple_authors.c_tagline_text = false;
 
@@ -27,13 +27,13 @@ module.exports = {
 	author_classes: 'lrv-u-font-size-16 lrv-u-font-family-body lrv-u-font-size-13@mobile-max',
 	author_multiple_inner_classes: 'lrv-u-flex@desktop',
 	author_single_inner_classes: ' lrv-u-flex lrv-u-align-items-center',
-	author_name_classes: 'lrv-u-margin-tb-00 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015',
+	author_name_classes: 'lrv-u-margin-tb-00 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015 lrv-u-letter-spacing-012@mobile-max',
 	author_content_classes: 'lrv-u-flex@tablet lrv-u-width-100p lrv-u-justify-content-space-between',
 	author_content_inner_classes: 'lrv-u-flex lrv-u-align-items-center lrv-a-glue-parent',
 	author_timestamp_outer_classes: 'lrv-u-margin-l-1@tablet',
-	author_tagline_classes: 'lrv-u-margin-tb-00 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015',
-	author_button_classes: 'lrv-a-show-on-hover-parent lrv-a-unstyle-button lrv-u-display-contents lrv-u-flex lrv-u-align-items-center',
-	author_detail_outer_classes: 'lrv-a-show-on-hover lrv-a-hidden@desktop-max lrv-a-glue lrv-a-glue--l-0 lrv-a-glue--t-100p',
+	author_tagline_classes: 'lrv-u-margin-tb-00 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015 lrv-u-letter-spacing-012@mobile-max',
+	author_button_classes: 'lrv-a-unstyle-button lrv-u-display-contents lrv-u-flex lrv-u-align-items-center js-PopOver',
+	author_detail_outer_classes: 'lrv-a-hidden@desktop-max lrv-a-glue lrv-a-glue--l-0 lrv-a-glue--t-100p js-PopOver-target',
 	is_multiple_author: false,
 	c_tagline_multiple_authors: c_tagline_multiple_authors,
 	c_timestamp: c_timestamp,
