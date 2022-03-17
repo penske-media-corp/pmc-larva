@@ -16,9 +16,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: debug
-      run: |
-        echo ${GITHUB_REF##*/}
     - name: Install Dependencies
       run: |
         npm install -g backstopjs --unsafe-perm=true --allow-root
@@ -36,5 +33,5 @@ jobs:
       with:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
-        new_branch: "update-screenshots"
+        new_branch: "update-screenshots/${GITHUB_REF##*/}"
 
