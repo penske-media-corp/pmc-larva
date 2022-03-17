@@ -11,9 +11,9 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - name: Debug
-      run: echo ${{ steps.branch-name.outputs.current_branch }}
     - uses: actions/checkout@v2
+    - name: Debug
+      run: echo ${GITHUB_REF##*/}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
