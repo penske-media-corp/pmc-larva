@@ -2,6 +2,9 @@ name: Update visual regression tests
 
 on: [push]
 
+env:
+  BRANCH_NAME: ${GITHUB_REF##*/}
+
 jobs:
   build:
 
@@ -19,7 +22,7 @@ jobs:
     - name: Install Dependencies
       run: |
         touch backstop_data/new.txt
-    - name:
+    - name: Debug
       run: |
         echo ${{ steps.branch-name.outputs.current_branch }}
     - name: Commit results
@@ -27,4 +30,4 @@ jobs:
       with:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
-        new_branch: update-${{ steps.branch-name.outputs.current_branch }}
+        new_branch: update-$BRANCH_NAME
