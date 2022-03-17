@@ -18,16 +18,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Dependencies
       run: |
-        npm install -g backstopjs --unsafe-perm=true --allow-root
-        npm ci
-        ./node_modules/.bin/lerna bootstrap
-    - name: Generate new reference screenshots
-      run: |
-        nohup npm run larva > /dev/null 2>&1 &
-        sleep 5
-        npm run backstop -- reference
-      env:
-        CI: true
+        touch new.txt
     - name: Commit results
       uses: EndBug/add-and-commit@v8
       with:
