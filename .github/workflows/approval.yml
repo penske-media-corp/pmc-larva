@@ -12,12 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Debug
-      run: echo ${GITHUB_REF##*/}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Debug
+      run: echo ${GITHUB_REF##*/}
     - name: Install Dependencies
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
