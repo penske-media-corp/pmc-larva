@@ -17,7 +17,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Debug
-      run: echo ${GITHUB_REF##*/}
+      run: echo 'asdasda'
     - name: Install Dependencies
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
