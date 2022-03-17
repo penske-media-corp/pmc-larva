@@ -24,4 +24,4 @@ jobs:
       with:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
-        new_branch: 'update-screenshots/${GITHUB_REF##*/}'
+        new_branch: update-screenshots/${GITHUB_REF##*/}
