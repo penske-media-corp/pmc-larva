@@ -16,8 +16,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Debug
-        echo 'asdasda'
     - name: Install Dependencies
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
