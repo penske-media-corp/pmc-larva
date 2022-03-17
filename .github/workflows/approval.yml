@@ -11,14 +11,15 @@ jobs:
         node-version: [14.x]
 
     steps:
+    - name: Debug
+      run: |
+        echo ${GITHUB_REF##*/}
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install Dependencies
-      run: |
-        echo ${GITHUB_REF##*/}
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
         ./node_modules/.bin/lerna bootstrap
