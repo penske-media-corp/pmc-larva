@@ -976,8 +976,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "18px",
-      "originalValue": "18px",
+      "value": "17px",
+      "originalValue": "17px",
       "name": "BODY_M_FONT_SIZE_DESKTOP_XL"
     },
     "ACCENT_XS_FONT_SIZE_DESKTOP_XL": {
