@@ -16,10 +16,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-      run: |
-        echo ${GITHUB_REF##*/}
     - name: Install Dependencies
       run: |
+        echo ${GITHUB_REF##*/}
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
         ./node_modules/.bin/lerna bootstrap
