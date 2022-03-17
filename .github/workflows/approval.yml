@@ -3,7 +3,7 @@ name: Update visual regression tests
 on: [push]
 
 env:
-  BRANCH_NAME: GITHUB_REF##*/
+  BRANCH_NAME: $GITHUB_REF##*/
 
 jobs:
   build:
