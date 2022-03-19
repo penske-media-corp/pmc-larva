@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add `author` and `author-details` module.
+* larva-js - Add popover js
 * larva-tokens - Update grey color for rollingstone-2022.
+* larva-patterns - Add `article-title` module.
+* larva-patterns - Add `article-kicker` module.
+* larva-patterns - Add `article-excerpt` module.
 * larva-patterns - Add `brands-most-popular` module.
 * larva-patterns - Update `newswire` module.
 * larva-css - Add a-counter algorithm.
