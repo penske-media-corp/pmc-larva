@@ -64,6 +64,7 @@ $widths_map: (
 .lrv-u-width-100\@desktop-xl {
 	@include pmc-breakpoint( desktop-xl ) {
 		width: pmc-rem(100);
+	}	
 }
 
 .lrv-u-width-154\@desktop-xl {
