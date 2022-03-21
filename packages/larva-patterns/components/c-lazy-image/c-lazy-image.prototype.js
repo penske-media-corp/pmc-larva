@@ -4,6 +4,7 @@ module.exports = {
 	c_lazy_image_link_classes: 'lrv-a-unstyle-link',
 	c_lazy_image_crop_class: 'lrv-a-crop-16x9',
 	c_lazy_image_crop_style_attr: false,
+	c_lazy_image_link_tab_index_attr: false,
 	c_lazy_image_alt_attr: 'Lazy loaded image',
 	c_lazy_image_src_url: 'https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg',
 	c_lazy_image_placeholder_url: 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==',

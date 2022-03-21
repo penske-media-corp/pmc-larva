@@ -11,7 +11,7 @@ const c_title = clonedeep(c_title_prototype);
 
 c_title.c_title_text = 'Chronixx Says Some Dancehall Lyrics Are ‘Embarrassing’, Artists Should Stop Calling Him For Features';
 c_title.c_title_classes = 'lrv-a-font-primary-xs lrv-u-color-black lrv-u-padding-t-125';
-c_title.c_title_link_classes = 'lrv-a-font-primary-xs lrv-u-color-black lrv-a-truncate-ellipsis-5line@desktop-xl-max lrv-a-truncate-ellipsis-3line@desktop-xl';
+c_title.c_title_link_classes = 'lrv-a-font-primary-xs lrv-u-color-black lrv-a-truncate-ellipsis-4line@mobile-max lrv-a-truncate-ellipsis-5line@tablet-desktop-only lrv-a-truncate-ellipsis-3line@desktop-xl';
 c_title.c_title_url = '#';
 
 const c_lazy_image_prototype = require('../../components/c-lazy-image/c-lazy-image.prototype.js');
