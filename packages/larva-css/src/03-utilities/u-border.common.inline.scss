@@ -78,3 +78,9 @@
         border-top-width: pmc-rem(1);
     }
  }
+
+ .lrv-u-border-r-1\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		border-right-width: 1px;
+	}
+}

@@ -10,6 +10,7 @@ $widths_map: (
 	'width-300': pmc-rem(300),
 	'width-30p': 30%,
 	'width-50p': 50%,
+	'width-70p': 70%,
 	'width-75p': 75%,
 	'width-100p': 100%,
 );
@@ -24,6 +25,7 @@ $widths_map: (
 	width-300,
 	width-30p,
 	width-50p,
+	width-70p,
 	width-75p,
 	width-100p,
 ), $widths_map, $NAMESPACE: 'lrv-' );
@@ -71,4 +73,28 @@ $widths_map: (
     @include pmc-breakpoint(desktop-xl) {
         width: 64%;
     }
+}
+
+.lrv-u-width-27p\@tablet {
+	@include pmc-breakpoint(tablet) {
+		width: 27%;
+	}
+}
+
+.lrv-u-width-23p\@tablet {
+	@include pmc-breakpoint(tablet) {
+		width: 23%;
+	}
+}
+
+.lrv-u-width-52p\@tablet {
+	@include pmc-breakpoint(tablet) {
+		width: 52%;
+	}
+}
+
+.lrv-u-width-50p\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		width: 50%;
+	}
 }

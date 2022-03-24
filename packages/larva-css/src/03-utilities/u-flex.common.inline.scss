@@ -72,3 +72,9 @@
 		flex-direction: column;
 	}
 }
+
+.lrv-u-flex-wrap-wrap\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		flex-wrap: wrap;
+	}
+}
