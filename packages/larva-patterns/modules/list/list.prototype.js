@@ -4,10 +4,12 @@ module.exports = {
 	list_type_name: 'u',
 	list_items: [ 
 		{
-			list_markup: 'item_one', 
+			list_markup: 'item_one',
 		},
 		{
-			list_markup: 'item_two', 
+			list_markup: 'item_two_with_link',
+			list_url: '#',
+			list_url_classes: '',  
 		},
 		{
 			list_classes: 'a-font-body-m',
