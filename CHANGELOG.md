@@ -5,17 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-<<<<<<< HEAD
-* larva-patterns - Add `contentt-showcase` module.
-* larva-patterns - Add `content-showcase-grid` module.
-* larva-css - Add a-flex algorithm.
-* larva-css - Add lrv-a-hover-effect-text-decoration--underline class.
-* larva-css - Add lrv-a-wrapper-100vw class for mobile.
-* larva-css - Add lrv-u-border-l-1 & lrv-u-border-t-1 classes for desktop, desktop-xl & mobile.
-=======
+* larva-patterns - Add `trending` module.
+* larva-patterns - Add support for list item url for `list` module.
+* larva-css - Add border, display, list, font & width related css.
+## Unpublished
 * larva-css - Add `lrv-u-width-50` & `lrv-u-width-35\@mobile-max`.
->>>>>>> 0ec839f9dabd68f4a4d08436f52000d5218d9ec1
-
 ## Unpublished
 * larva-patterns - Add `author` and `author-details` module.
 * larva-js - Add popover js
