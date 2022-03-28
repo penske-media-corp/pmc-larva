@@ -33,7 +33,7 @@ c_title.c_title_url = '#';
 c_title.c_title_text = 'PATRICIA MESCHINO';
 c_title.c_title_link_classes = 'lrv-u-color-black';
 
-o_nav.o_nav_classes = 'lrv-u-border-t-1 lrv-u-margin-t-075 lrv-u-padding-t-025';
+o_nav.o_nav_classes = 'lrv-u-border-t-1 lrv-u-width-100p lrv-u-margin-t-075 lrv-u-padding-t-025 ';
 o_nav.o_nav_title_text = '';
 o_nav.o_nav_title_classes = 'lrv-u-padding-t-050 lrv-u-padding-b-025 lrv-u-font-family-primary lrv-u-font-size-20';
 o_nav.o_nav_list_classes = ' lrv-u-font-size-13 lrv-u-border-t-1 lrv-u-border-b-1 lrv-u-padding-l-1 lrv-u-padding-t-075  lrv-u-list-style-type-disclosure-closed';

@@ -55,4 +55,27 @@ $widths_map: (
 	@include pmc-breakpoint( mobile-max ) {
 		width: pmc-rem(35);
 	}
+}	
+.lrv-u-width-154\@desktop-xl {
+    @include pmc-breakpoint(desktop-xl) {
+        width: pmc-rem(154);
+    }  
+}
+
+.lrv-u-width-177\@tablet-and-desktop-only {
+    @media only screen and (max-width: $screen-desktop-xl) and (min-width: $screen-tablet) {
+        width: pmc-rem(177); 
+    }
+}
+
+.lrv-u-width-36p\@desktop-xl {
+    @include pmc-breakpoint(desktop-xl) {
+        width: 36%;
+    }
+}
+
+.lrv-u-width-64p\@desktop-xl {
+    @include pmc-breakpoint(desktop-xl) {
+        width: 64%;
+    }
 }
