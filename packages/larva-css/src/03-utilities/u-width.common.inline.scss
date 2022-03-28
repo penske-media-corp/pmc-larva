@@ -4,6 +4,7 @@ $widths_map: (
 	'width-16': pmc-rem(16),
 	'width-30': pmc-rem(30),
 	'width-40': pmc-rem(40),
+	'width-50': pmc-rem(50),
 	'width-100': pmc-rem(100),
 	'width-150': pmc-rem(150),
 	'width-200': pmc-rem(200),
@@ -19,6 +20,7 @@ $widths_map: (
 	width-16,
 	width-30,
 	width-40,
+	width-50,
 	width-100,
 	width-150,
 	width-200,
@@ -51,24 +53,12 @@ $widths_map: (
 	}
 }
 
-.lrv-u-width-100\@mobile-max {
+.lrv-u-width-35\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
-		width: pmc-rem(100);
+		width: pmc-rem(35);
 	}
 }
-
-.lrv-u-width-150\@desktop {
-	@include pmc-breakpoint( desktop ) {
-		width: pmc-rem(150);
-	}
-}
-
-.lrv-u-width-100\@desktop-xl {
-	@include pmc-breakpoint( desktop-xl ) {
-		width: pmc-rem(100);
-	}
-}
-
+	
 .lrv-u-width-154\@desktop-xl {
     @include pmc-breakpoint(desktop-xl) {
         width: pmc-rem(154);
