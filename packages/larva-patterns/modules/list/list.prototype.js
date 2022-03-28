@@ -2,6 +2,7 @@ module.exports = {
 	list_classes: 'a-font-body-m',
 	list_markup: 'Paragraph Text.',
 	list_type_name: 'u',
+	list_url_classes: '',
 	list_items: [ 
 		{
 			list_markup: 'item_one',
@@ -9,7 +10,6 @@ module.exports = {
 		{
 			list_markup: 'item_two_with_link',
 			list_url: '#',
-			list_url_classes: '',  
 		},
 		{
 			list_classes: 'a-font-body-m',

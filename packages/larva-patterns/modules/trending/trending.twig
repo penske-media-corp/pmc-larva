@@ -1,8 +1,11 @@
 <div class="trending larva // {{ trending_classes }}">
 	<div class="{{ trending_wrapper_classes }}">
-		<div class="{{ trending_list_classes }}">
-			{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
-			{% include "@larva/modules/list/list.twig" with list_ordered %}	
+		<div class="{{ trending_container_classes }}">
+			<div class="{{ trending_items_classes }}">
+				{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+				{% include "@larva/modules/separator/separator.twig" with separator %}
+				{% include "@larva/modules/list/list.twig" with list_ordered %}
+			</div>	
 		</div>			
 	</div>
 </div>

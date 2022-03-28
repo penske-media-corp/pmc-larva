@@ -2,7 +2,7 @@
 	{% for item in list_items %}
 		<li class="list__item larva // {{ list_item_classes }}">
 			{% if item['list_url'] %}
-				<a href={{ item['list_url'] }} class={{ item['list_url_classes'] }}>
+				<a href={{ item['list_url'] }} class="{{ list_url_classes }}">
 			{% endif %}	
 				{{ item['list_markup'] }}
 			{% if item['list_url'] %}
