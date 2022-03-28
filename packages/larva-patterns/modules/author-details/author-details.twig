@@ -1,0 +1,25 @@
+<section class="author-details // {{ author_details_classes }} ">
+
+	{% include "@larva/components/c-title/c-title.twig" with c_title %}
+
+	<div class="author-details-icons // {{ author_details_icons_classes }} ">
+		{% if c_icon_twitter %}
+			{% include "@larva/components/c-icon/c-icon.twig" with c_icon_twitter %} 
+		{% endif %}
+		{% if c_icon_mail %}
+			{% include "@larva/components/c-icon/c-icon.twig" with c_icon_mail %} 
+		{% endif %}
+	</div>
+
+	{% if o_nav %}
+
+		{% include "@larva/objects/o-nav/o-nav.twig" with o_nav %}
+
+		{% if c_link_view_all %}
+			<div class="author-details-view-link // {{ author_details_view_link_classes }} ">
+				{% include "@larva/components/c-link/c-link.twig" with c_link_view_all %}
+			</div>
+		{% endif %}
+
+	{% endif %}
+</section>

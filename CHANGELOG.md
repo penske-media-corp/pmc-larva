@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add `article-callout` module.
+* larva-css - Add `lrv-u-width-50` & `lrv-u-width-35\@mobile-max`.
+* larva-patterns - Add `author` and `author-details` module.
+* larva-js - Add popover js
+* larva-tokens - Update grey color for rollingstone-2022.
+* larva-patterns - Add `article-title` module.
+* larva-patterns - Add `article-kicker` module.
+* larva-patterns - Add `article-excerpt` module.
+>>>>>>> 0ec839f9dabd68f4a4d08436f52000d5218d9ec1
 
 ## 0.5.5 - 03-03-2022
 * larva-css - Add border top utility.
