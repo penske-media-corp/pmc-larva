@@ -5,10 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+<<<<<<< HEAD
 * larva-tokens - Add desktop_xl token values in typography.json
 * larva-tokens - Add desktop_xl breakpoint in font-data.js
 * larva-css - Update css generator script to include desktop_xl breakpoint using media queries
 * larva-css - Update test for generated css
+=======
+* larva-css - Add `lrv-u-width-50` & `lrv-u-width-35\@mobile-max`.
+
+## Unpublished
+>>>>>>> master
 * larva-patterns - Add `author` and `author-details` module.
 * larva-js - Add popover js
 * larva-tokens - Update grey color for rollingstone-2022.
