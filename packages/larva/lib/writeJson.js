@@ -41,7 +41,11 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 
 			if ( hasChanged ) {
 				writeJsonToFile( jsonDestPath, moduleData );
-				console.log( chalk.green.bold( `Wrote JSON for ${moduleName}.${variant}` ) );
+				if ( moduleData.error ) {
+					console.log( chalk.red.bold( `Wrote JSON for ${moduleName}.${variant} with Errors. Please fix the errors before proceeding.` ) );
+				} else {
+					console.log( chalk.green.bold( `Wrote JSON for ${moduleName}.${variant}` ) );
+				}
 			} else {
 				console.log( chalk.grey( `No updates in ${moduleName}.${variant}` ) );
 			}
