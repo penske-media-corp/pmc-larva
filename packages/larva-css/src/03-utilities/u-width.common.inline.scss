@@ -1,6 +1,7 @@
 @import 'setup';
 
 $widths_map: (
+	'width-auto': auto,
 	'width-16': pmc-rem(16),
 	'width-30': pmc-rem(30),
 	'width-50': pmc-rem(50),
@@ -16,6 +17,7 @@ $widths_map: (
 );
 
 @include basic-utility-generator( 'width', (
+	width-auto,
 	width-16,
 	width-30,
 	width-50,
