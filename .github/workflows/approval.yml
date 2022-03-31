@@ -32,7 +32,9 @@ jobs:
       run: |
         touch backstop_data/new.txt
     - name: Commit results
-      run: echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME--update-backstop-reference" ORIGINAL_BRANCH::"$GITHUB_REF_NAME"
+      run: |
+        echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME--update-backstop-reference"
+        echo ::set-output name=ORIGINAL_BRANCH::"$GITHUB_REF_NAME"
       id: set-output-new-branch
     - uses: EndBug/add-and-commit@v8
       with:
