@@ -21,7 +21,7 @@ jobs:
         touch backstop_data/new.txt
     - name: Debug
       run: |
-        echo ${{ env.GITHUB_REF_NAME }}
+        echo "$GITHUB_REF_NAME"
     # - name: Commit results
     #   uses: EndBug/add-and-commit@v8
     #   with:
