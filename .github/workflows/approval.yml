@@ -19,11 +19,8 @@ jobs:
     - name: Install Dependencies
       run: |
         touch backstop_data/new.txt
-    - name: Debug
-      run: |
-        echo "$GITHUB_REF_NAME"
     - name: Commit results
-      run: echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME-update-backstop-reference"
+      run: echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME/update-backstop-reference"
       id: set-output-new-branch
     - uses: EndBug/add-and-commit@v8
       with:
