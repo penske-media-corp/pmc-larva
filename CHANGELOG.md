@@ -4,8 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.5.7 - 03-31-2022
+## Unpublished
+* larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
 * all - Add github action on workflow-dispatch to update the visual regression tests in the same environment in which they are run
+
+
 ## 0.5.6 - 03-29-2022
 * larva-tokens - Add desktop_xl token values in typography.json
 * larva-tokens - Add desktop_xl breakpoint in font-data.js
