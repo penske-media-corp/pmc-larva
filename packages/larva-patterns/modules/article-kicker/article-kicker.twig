@@ -1,0 +1,9 @@
+<div class="article-kicker larva // {{ article_kicker_classes }}">
+	{% if article_kicker_url %}
+		<a href="{{ article_kicker_url }}" class="article-kicker-link {{ article_kicker_link_classes }}">
+	{% endif %}
+		{{ article_kicker_text }}
+	{% if article_kicker_url %}
+		</a>
+	{% endif %}
+</div>
