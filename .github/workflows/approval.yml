@@ -22,10 +22,10 @@ jobs:
     - name: Debug
       run: |
         echo "$GITHUB_REF_NAME"
-    - run: echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME-update-backstop-reference"
-      id: set-output-new-branch
     - name: Commit results
-      uses: EndBug/add-and-commit@v8
+      run: echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME-update-backstop-reference"
+      id: set-output-new-branch
+    - uses: EndBug/add-and-commit@v8
       with:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
