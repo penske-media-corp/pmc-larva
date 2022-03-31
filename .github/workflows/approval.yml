@@ -27,4 +27,4 @@ jobs:
       with:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
-        new_branch: $GITHUB_REF_NAME-update-backstop-reference
+        new_branch: ${{env.GITHUB_REF_NAME}}-update-backstop-reference
