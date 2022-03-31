@@ -21,10 +21,10 @@ jobs:
         touch backstop_data/new.txt
     - name: Debug
       run: |
-        echo ${{ env.GITHUB_HEAD_REF }}
-    - name: Commit results
-      uses: EndBug/add-and-commit@v8
-      with:
-        add: 'backstop_data'
-        message: 'chore: updated backstop reference screenshots'
-        new_branch: update-${{ env.GITHUB_HEAD_REF }}
+        echo ${{ env.GITHUB_REF_NAME }}
+    # - name: Commit results
+    #   uses: EndBug/add-and-commit@v8
+    #   with:
+    #     add: 'backstop_data'
+    #     message: 'chore: updated backstop reference screenshots'
+    #     new_branch: update-${{ env.GITHUB_HEAD_REF }}
