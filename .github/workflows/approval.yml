@@ -36,3 +36,11 @@ jobs:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
         new_branch: ${{ steps.set-output-new-branch.outputs.NEW_BRANCH }}
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4.0.1
+      with:
+        branch: ${{ steps.set-output-new-branch.outputs.NEW_BRANCH }}
+        title: 'Update visual regression tests'
+        body: 'This PR updates the reference screenshots for visual regression tests.'
+        draft: true
+
