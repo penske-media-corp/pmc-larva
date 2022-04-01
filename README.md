@@ -4,7 +4,7 @@ This is the mono-repo for PMC's design system, Larva. It contains Larva features
 
 ## Usage
 
-Consult each package's README for a description and directions for use. 
+Consult each package's README for a description and directions for use.
 Consult [the How-To Guides in Confluence](https://confluence.pmcdev.io/x/UBOeAw)
 for details on using Larva in consuming projects. When upgrading a consuming
 project, consult [UPGRADING.md](./UPGRADING.md) for breaking changes and other
@@ -54,13 +54,7 @@ To manually run visual regression tests, use the following command:
 npm run backstop -- test
 ```
 
-If the tests contain changes that are correct, you can generate new reference screenshots with the following command:
-
-```
-npm run backstop -- reference
-```
-
-Then, commit the updated screenshots.
+If the tests contain changes that are correct, you can generate new reference screenshots. To do this, you should [visit the Github repo](https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml) and [run the workflow action](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/) to update the visual regression tests. This will create a new branch with the suffix `--update-backstop-reference` appended to your current branch name. You should then make a pull request into your current branch from that branch after reviewing the updated screenshots.
 
 ## Contributing To and Building Assets
 
