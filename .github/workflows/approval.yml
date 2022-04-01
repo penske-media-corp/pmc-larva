@@ -1,6 +1,6 @@
 name: Update visual regression tests
 
-on: [workflow_dispatch]
+on: [push]
 
 jobs:
   build:
@@ -28,11 +28,12 @@ jobs:
         npm run backstop -- reference
       env:
         CI: true
-    - name: Commit results
+    - name: Set new branch name
       run: |
         echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME--update-backstop-reference"
       id: set-output-new-branch
-    - uses: EndBug/add-and-commit@v8
+    - name: Commit results
+      uses: EndBug/add-and-commit@v8
       with:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
