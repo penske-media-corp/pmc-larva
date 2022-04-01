@@ -7,21 +7,21 @@ $type: '%';
 	
 	$size_per : #{$size}#{'%'};
 	
-	.lrv-a-flex-basis-#{$size}pc\@desktop {
+	.lrv-a-flex-basis-#{$size}p\@desktop {
 		
 		@include pmc-breakpoint( desktop ) {
 			flex-basis: $size_per;
 		}
 	}
 
-	.lrv-a-flex-basis-#{$size}pc\@desktop-xl {
+	.lrv-a-flex-basis-#{$size}p\@desktop-xl {
 		
 		@include pmc-breakpoint( desktop-xl ) {
 			flex-basis: $size_per;
 		}
 	}
 
-	.lrv-a-flex-basis-#{$size}pc\@mobile-max {
+	.lrv-a-flex-basis-#{$size}p\@mobile-max {
 		
 		@include pmc-breakpoint( mobile-max ) {
 			flex-basis: $size_per;

@@ -5,15 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-patterns - Add `contentt-showcase` module.
-* larva-patterns - Add `content-showcase-grid` module.
-* larva-css - Add a-flex algorithm.
-* larva-css - Add lrv-a-hover-effect-text-decoration--underline class.
-* larva-css - Add lrv-a-wrapper-100vw class for mobile.
-* larva-css - Add lrv-u-border-l-1 & lrv-u-border-t-1 classes for desktop, desktop-xl & mobile.
+* larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
 
-## Unpublished
+## 0.5.6 - 03-29-2022
+* larva-tokens - Add desktop_xl token values in typography.json
+* larva-tokens - Add desktop_xl breakpoint in font-data.js
+* larva-css - Update css generator script to include desktop_xl breakpoint using media queries
+* larva-css - Update test for generated css
+* larva-css - Add `lrv-u-width-50` & `lrv-u-width-35\@mobile-max`.
 * larva-patterns - Add `author` and `author-details` module.
+* larva-js - Add popover js
+* larva-tokens - Update grey color for rollingstone-2022.
+* larva-patterns - Add `article-title` module.
+* larva-patterns - Add `article-kicker` module.
+* larva-patterns - Add `article-excerpt` module.
 
 ## 0.5.5 - 03-03-2022
 * larva-css - Add border top utility.
