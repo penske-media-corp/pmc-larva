@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-patterns - Add `article-callout` module.
 * larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
 
 ## 0.5.6 - 03-29-2022
