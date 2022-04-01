@@ -54,7 +54,7 @@ To manually run visual regression tests, use the following command:
 npm run backstop -- test
 ```
 
-If the tests contain changes that are correct, you can generate new reference screenshots. To do this, you should [visit the Github repo](https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml) and [run the workflow action](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/) to update the visual regression tests. This will create a new branch with the suffix `--update-backstop-reference` appended to your current branch name. You should then make a pull request into your current branch from that branch after reviewing the updated screenshots.
+If the tests contain changes that are correct, you can generate new reference screenshots. To do this, you should [visit the Github repo](https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml) and [run the workflow action](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/) to update the visual regression tests. This will create a new branch with the suffix `--update-backstop-reference` appended to your current branch name. You should then make a pull request into your current branch from that branch after reviewing the updated screenshots and then merge it into your branch with feature changes so it passes the automated regression tests.
 
 ## Contributing To and Building Assets
 
