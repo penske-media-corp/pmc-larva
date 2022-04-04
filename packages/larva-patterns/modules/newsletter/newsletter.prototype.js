@@ -21,7 +21,7 @@ c_logo.c_logo_classes = 'lrv-a-unstyle-link lrv-u-display-contents lrv-u-width-1
 
 o_email_capture_form.c_email_field.c_email_field_input_placeholder_attr = 'Email';
 o_email_capture_form.c_email_field.c_email_field_input_classes += ' lrv-u-border-a-0 lrv-u-font-size-14 lrv-u-width-100p lrv-u-margin-b-1 lrv-u-padding-lr-1 lrv-u-padding-tb-050 lrv-u-border-radius-5';
-o_email_capture_form.c_email_field.c_email_field_label_for_attr = 'EmailAddress';
+o_email_capture_form.c_email_field.c_email_field_input_id_attr = 'EmailAddress';
 o_email_capture_form.c_email_field.c_email_field_input_name_attr = 'EmailAddress';
 o_email_capture_form.c_button.c_button_text = 'Subscribe Today';
 o_email_capture_form.c_button.c_button_classes += ' lrv-u-background-color-black lrv-u-color-white lrv-u-border-radius-5 lrv-u-width-100p lrv-u-text-align-center lrv-u-padding-a-050 lrv-u-font-weight-bold';
