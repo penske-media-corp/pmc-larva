@@ -1,0 +1,41 @@
+name: Update visual regression tests
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install Dependencies
+      run: |
+        npm install -g backstopjs --unsafe-perm=true --allow-root
+        npm ci
+        ./node_modules/.bin/lerna bootstrap
+    - name: Generate new reference screenshots
+      run: |
+        nohup npm run larva > /dev/null 2>&1 &
+        sleep 5
+        npm run backstop -- reference
+      env:
+        CI: true
+    - name: Set new branch name
+      run: |
+        echo ::set-output name=NEW_BRANCH::"$GITHUB_REF_NAME--update-backstop-reference"
+      id: set-output-new-branch
+    - name: Commit results
+      uses: EndBug/add-and-commit@v8
+      with:
+        add: 'backstop_data'
+        message: 'chore: updated backstop reference screenshots'
+        new_branch: ${{ steps.set-output-new-branch.outputs.NEW_BRANCH }}
+
