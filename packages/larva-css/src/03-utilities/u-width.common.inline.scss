@@ -51,7 +51,6 @@ $widths_map: (
 	}
 }
 
-<<<<<<< HEAD
 .lrv-u-width-100\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		width: pmc-rem(100);
@@ -68,12 +67,14 @@ $widths_map: (
 	@include pmc-breakpoint( desktop-xl ) {
 		width: pmc-rem(100);
 	}
-=======
+}
+
 .lrv-u-width-35\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		width: pmc-rem(35);
 	}
-}	
+}
+	
 .lrv-u-width-154\@desktop-xl {
     @include pmc-breakpoint(desktop-xl) {
         width: pmc-rem(154);
@@ -96,5 +97,4 @@ $widths_map: (
     @include pmc-breakpoint(desktop-xl) {
         width: 64%;
     }
->>>>>>> 59ab1dd28d1e5624be8cfac649a84fe2d991b2a5
 }

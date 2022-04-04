@@ -5,26 +5,26 @@ $type: '%';
 
 @each $size in $sizes {
 	
-	$size_per : #{$size}#{'%'};
+	$per : #{$size}#{'%'};
 	
 	.lrv-a-flex-basis-#{$size}p\@desktop {
 		
 		@include pmc-breakpoint( desktop ) {
-			flex-basis: $size_per;
+			flex-basis: $per;
 		}
 	}
 
 	.lrv-a-flex-basis-#{$size}p\@desktop-xl {
 		
 		@include pmc-breakpoint( desktop-xl ) {
-			flex-basis: $size_per;
+			flex-basis: $per;
 		}
 	}
 
 	.lrv-a-flex-basis-#{$size}p\@mobile-max {
 		
 		@include pmc-breakpoint( mobile-max ) {
-			flex-basis: $size_per;
+			flex-basis: $per;
 		}
 	}
 }
