@@ -4,106 +4,153 @@
 		"../base/typography.json"
 	],
 	"props": {
-		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "#005DA4",
-			"type": "color",
-			"category": "background-color"
-		},
-		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "#005DA4",
-			"type": "color",
-			"category": "hr-color"
-		},
-		"COLOR_BRAND_PRIMARY": {
-			"value": "#005DA4",
-			"type": "color",
-			"category": "text-color"
-		},
-		"BACKGROUND_COLOR_BRAND_SECONDARY": {
-			"value": "#B2DDFF",
-			"type": "color",
-			"category": "background-color"
-		},
-		"BORDER_COLOR_BRAND_SECONDARY": {
-			"value": "#B2DDFF",
-			"type": "color",
-			"category": "hr-color"
-		},
-		"COLOR_BRAND_SECONDARY": {
-			"value": "#B2DDFF",
-			"type": "color",
-			"category": "text-color"
-		},
-		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#DBEFFF",
-			"type": "color",
-			"category": "background-color"
-		},
-		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#DBEFFF",
-			"type": "color",
-			"category": "hr-color"
-		},
-		"COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#DBEFFF",
-			"type": "color",
-			"category": "text-color"
+		"ACCENT_M_LETTER_SPACING_MOBILE": {
+			"selector": "lrv-a-font",
+			"status": "alpha",
+			"category": "letter-spacing",
+			"type": "number",
+			"value": "normal",
+			"originalValue": ".74px",
+			"name": "ACCENT_M_LETTER_SPACING_MOBILE"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT": {
-			"value": "#FB4B22",
+			"value": "rgb(251, 75, 34)",
 			"type": "color",
-			"category": "background-color"
+			"category": "background-color",
+			"originalValue": "#FB4B22",
+			"name": "BACKGROUND_COLOR_BRAND_ACCENT"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "rgb(0, 93, 164)",
+			"type": "color",
+			"category": "background-color",
+			"originalValue": "#005DA4",
+			"name": "BACKGROUND_COLOR_BRAND_PRIMARY"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "rgb(178, 221, 255)",
+			"type": "color",
+			"category": "background-color",
+			"originalValue": "#B2DDFF",
+			"name": "BACKGROUND_COLOR_BRAND_SECONDARY"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "rgb(219, 239, 255)",
+			"type": "color",
+			"category": "background-color",
+			"originalValue": "#DBEFFF",
+			"name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
 		},
 		"BORDER_COLOR_BRAND_ACCENT": {
-			"value": "#FB4B22",
+			"value": "rgb(251, 75, 34)",
 			"type": "color",
-			"category": "hr-color"
+			"category": "hr-color",
+			"originalValue": "#FB4B22",
+			"name": "BORDER_COLOR_BRAND_ACCENT"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "rgb(0, 93, 164)",
+			"type": "color",
+			"category": "hr-color",
+			"originalValue": "#005DA4",
+			"name": "BORDER_COLOR_BRAND_PRIMARY"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "rgb(178, 221, 255)",
+			"type": "color",
+			"category": "hr-color",
+			"originalValue": "#B2DDFF",
+			"name": "BORDER_COLOR_BRAND_SECONDARY"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "rgb(219, 239, 255)",
+			"type": "color",
+			"category": "hr-color",
+			"originalValue": "#DBEFFF",
+			"name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
 		},
 		"COLOR_BRAND_ACCENT": {
-			"value": "#FB4B22",
+			"value": "rgb(251, 75, 34)",
 			"type": "color",
-			"category": "text-color"
+			"category": "text-color",
+			"originalValue": "#FB4B22",
+			"name": "COLOR_BRAND_ACCENT"
 		},
-		"FONT_FAMILY_PRIMARY_FANCY": {
-			"value": "'Argent CF', serif",
+		"COLOR_BRAND_PRIMARY": {
+			"value": "rgb(0, 93, 164)",
+			"type": "color",
+			"category": "text-color",
+			"originalValue": "#005DA4",
+			"name": "COLOR_BRAND_PRIMARY"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "rgb(178, 221, 255)",
+			"type": "color",
+			"category": "text-color",
+			"originalValue": "#B2DDFF",
+			"name": "COLOR_BRAND_SECONDARY"
+		},
+		"COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "rgb(219, 239, 255)",
+			"type": "color",
+			"category": "text-color",
+			"originalValue": "#DBEFFF",
+			"name": "COLOR_BRAND_SECONDARY_LIGHT"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
 			"type": "font-family",
 			"category": "font-family",
-			"comment": "The primary webfont, loaded async"
-		},
-		"FONT_FAMILY_PRIMARY": {
-			"value": "{!GEORGIA}",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "The fallback for the primary font"
-		},
-		"FONT_FAMILY_SECONDARY_FANCY": {
-			"value": "'PT Sans', sans-serif",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "The secondary webfont, loaded async"
-		},
-		"FONT_FAMILY_SECONDARY": {
-			"value": "{!HELVETICA_NEUE}",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "The fallback for the secondary font"
+			"comment": "The fallback for the accent font",
+			"originalValue": "{!HELVETICA_NEUE}",
+			"name": "FONT_FAMILY_ACCENT"
 		},
 		"FONT_FAMILY_ACCENT_FANCY": {
 			"value": "'Teko', 'Open Sans', sans-serif",
 			"type": "font-family",
 			"category": "font-family",
-			"comment": "The accent webfont, loaded async"
-		},
-		"FONT_FAMILY_ACCENT": {
-			"value": "{!HELVETICA_NEUE}",
-			"type": "font-family",
-			"category": "font-family",
-			"comment": "The fallback for the accent font"
+			"comment": "The accent webfont, loaded async",
+			"originalValue": "'Teko', 'Open Sans', sans-serif",
+			"name": "FONT_FAMILY_ACCENT_FANCY"
 		},
 		"FONT_FAMILY_BODY": {
-			"value": "{!GEORGIA}",
+			"value": "Georgia, serif",
 			"type": "font-family",
-			"category": "font-family"
+			"category": "font-family",
+			"originalValue": "{!GEORGIA}",
+			"name": "FONT_FAMILY_BODY"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "Georgia, serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the primary font",
+			"originalValue": "{!GEORGIA}",
+			"name": "FONT_FAMILY_PRIMARY"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'Argent CF', serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The primary webfont, loaded async",
+			"originalValue": "'Argent CF', serif",
+			"name": "FONT_FAMILY_PRIMARY_FANCY"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the secondary font",
+			"originalValue": "{!HELVETICA_NEUE}",
+			"name": "FONT_FAMILY_SECONDARY"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'PT Sans', sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The secondary webfont, loaded async",
+			"originalValue": "'PT Sans', sans-serif",
+			"name": "FONT_FAMILY_SECONDARY_FANCY"
 		}
 	}
 }

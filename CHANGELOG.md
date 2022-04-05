@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Add new font size.
 
 ## Unpublished
-* larva-patterns - Add `contentt-showcase` module.
+* larva-patterns - Add `content-showcase` module.
 * larva-patterns - Add `content-showcase-grid` module.
 * larva-css - Add a-flex algorithm.
 * larva-css - Add lrv-a-hover-effect-text-decoration--underline class.
@@ -18,6 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Add lrv-u-border-l-1 & lrv-u-border-t-1 classes for desktop, desktop-xl & mobile.
 
 ## Unpublished
+* larva-patterns - Add `article-callout` module.
+* larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
+* all - Add github action on workflow-dispatch to update the visual regression tests in the same environment in which they are run
+
+## 0.5.6 - 03-29-2022
+* larva-tokens - Add desktop_xl token values in typography.json
+* larva-tokens - Add desktop_xl breakpoint in font-data.js
+* larva-css - Update css generator script to include desktop_xl breakpoint using media queries
+* larva-css - Update test for generated css
+* larva-css - Add `lrv-u-width-50` & `lrv-u-width-35\@mobile-max`.
 * larva-patterns - Add `author` and `author-details` module.
 * larva-js - Add popover js
 * larva-tokens - Update grey color for rollingstone-2022.
