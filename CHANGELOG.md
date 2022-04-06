@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-tokens - Added artinamerica tokens for hub support
+* larva-patterns - Fix `article-callout` twig template whitespace.
 
 ## 0.5.7 - 04-05-2022
 * larva-patterns - Add `article-callout` module.
