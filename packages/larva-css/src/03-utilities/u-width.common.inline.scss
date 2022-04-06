@@ -114,3 +114,15 @@ $widths_map: (
 		width: 33.33%;
 	}
 }
+
+.lrv-u-width-55p\@tablet {
+	@include pmc-breakpoint(tablet) {
+		width: 55%;
+	}
+}
+
+.lrv-u-width-35p\@tablet {
+	@include pmc-breakpoint(tablet) {
+		width: 35%;
+	}
+}
