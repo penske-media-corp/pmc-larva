@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-patterns - Fix `article-callout` twig template whitespace.
 
 ## 0.5.7 - 04-05-2022
 * larva-patterns - Add `article-callout` module.
