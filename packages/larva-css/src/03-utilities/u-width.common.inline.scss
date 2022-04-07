@@ -57,7 +57,8 @@ $widths_map: (
 	@include pmc-breakpoint( mobile-max ) {
 		width: pmc-rem(35);
 	}
-}	
+}
+
 .lrv-u-width-154\@desktop-xl {
     @include pmc-breakpoint(desktop-xl) {
         width: pmc-rem(154);
