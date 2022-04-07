@@ -9,10 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - New `lrv-u-border-t-3\@desktop` & `a-grid` classes.
 
 ## Unpublished
+* larva-patterns - Fix `article-callout` twig template whitespace.
+
+## 0.5.7 - 04-05-2022
 * larva-patterns - Add `article-callout` module.
 * larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
 * all - Add github action on workflow-dispatch to update the visual regression tests in the same environment in which they are run
-
+* larva - Lock the twing package to version 5.1.0 to temporarily work around bug in library.
 
 ## 0.5.6 - 03-29-2022
 * larva-tokens - Add desktop_xl token values in typography.json
