@@ -1,0 +1,90 @@
+name: Test themes
+
+on: [ push ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [ 14.x ]
+        bitbucket-repo-slug: [
+          'pmc-artnews-2019',
+          'pmc-billboard-2021',
+          'pmc-blogher-2020',
+          # 'pmc-core-v2', # Larva is in a different directory
+          'pmc-deadline-2019',
+          'pmc-dirt-2020',
+          'pmc-hollywoodreporter-2021',
+          'pmc-indiewire-2016',
+          'pmc-rollingstone-2022',
+          'pmc-sheknows-2020',
+          'pmc-sourcingjournal-2021',
+          'pmc-spark',
+          'pmc-sportico-2020',
+          # 'pmc-variety-2020', # Needs a different assets path
+          'pmc-vibe-2021',
+          'pmc-wwd-2021',
+        ]
+
+    env:
+      BITBUCKET_REPO_SLUG: ${{ matrix.bitbucket-repo-slug }}
+      BITBUCKET_READ_ONLY_SSH_KEY: ${{ secrets.BITBUCKET_READ_ONLY_SSH_KEY }}
+      ASSETS_DIR: theme/assets
+      THEME_DIR: theme
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Prepare SSH
+        run: |
+          mkdir ~/.ssh/
+          echo "${BITBUCKET_READ_ONLY_SSH_KEY}" > ~/.ssh/id_rsa
+          chmod 400 ~/.ssh/id_rsa
+          ssh-keyscan bitbucket.org > ~/.ssh/known_hosts
+
+      - name: Check out theme
+        run: |
+          git clone git@bitbucket.org:penskemediacorp/${BITBUCKET_REPO_SLUG}.git "${THEME_DIR}"
+          ls -la "${THEME_DIR}"
+
+      - name: Install Dependencies
+        run: |
+          npm ci --prefix="${ASSETS_DIR}"
+
+      - name: Use this commit version of Larva
+        run: |
+          echo "Project version of Larva:"
+          npm ls --prefix=${ASSETS_DIR} --loglevel=silent | grep @penskemediacorp/larva@
+          npm link --prefix=packages/larva
+          npm link @penskemediacorp/larva --prefix=${ASSETS_DIR}
+          echo "Confirm using linked package:"
+          ls -la ${ASSETS_DIR}/node_modules/@penskemediacorp/larva
+
+      - name: Build
+        run: |
+          npm run prod --prefix="${ASSETS_DIR}"
+
+      - name: Install Composer dependencies
+        run: |
+          cd "${GITHUB_WORKSPACE}/${THEME_DIR}"
+          composer install --dev --prefer-dist --no-progress --no-suggest
+
+      - name: PHPCBF
+        run: |
+          cd "${GITHUB_WORKSPACE}/${THEME_DIR}"
+          ./vendor/bin/phpcbf -p --standard=PmcWpVip --extensions=php template-parts/patterns
+
+      - name: Report status
+        run: |
+          cd "${GITHUB_WORKSPACE}/${THEME_DIR}"
+          pwd
+          git status
+          git diff --exit-code --quiet
