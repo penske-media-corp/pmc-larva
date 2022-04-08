@@ -1,11 +1,7 @@
-<div class="content-showcase larva // {{ content_showcase_item_classes }}">
-	<a href="{{ c_link['c_link_url'] }}" class="lrv-u-flex">
-		<div class="content-showcase-thumbnail lrv-a-flex-basis-40p@desktop lrv-a-flex-basis-40p@desktop-xl lrv-a-flex-basis-25p@mobile-max">
-			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
-		</div>
-		<div class="content-showcase-text lrv-u-margin-l-1 lrv-u-color-black lrv-u-color-brand-primary:hover lrv-a-flex-basis-60p@desktop lrv-a-flex-basis-60p@desktop-xl lrv-a-flex-basis-55p@mobile-max">
-			{% include "@larva/components/c-title/c-title.twig" with c_title %}
-			{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
-		</div>				
-	</a>
+<div class="content-showcase larva // {{ content_showcase_classes }}">
+	<div class="content-showcase-items // {{ content_showcase_items_classes }}">
+		{% for item in content_showcase_items %}
+			{% include "@larva/objects/o-card/o-card.twig" with item %}
+		{% endfor %}
+	</div>
 </div>

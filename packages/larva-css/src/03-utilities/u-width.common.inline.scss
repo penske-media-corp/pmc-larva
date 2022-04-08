@@ -32,6 +32,12 @@ $widths_map: (
 	width-100p,
 ), $widths_map, $NAMESPACE: 'lrv-' );
 
+.lrv-u-width-100\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		width: pmc-rem(100);
+	}
+}
+
 .lrv-u-width-100p\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
@@ -50,12 +56,6 @@ $widths_map: (
 
 	@include pmc-breakpoint( desktop ) {
 		width: 75%;
-	}
-}
-
-.lrv-u-width-100\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
-		width: pmc-rem(100);
 	}
 }
 
