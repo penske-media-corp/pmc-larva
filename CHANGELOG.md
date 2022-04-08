@@ -8,8 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Update `newswire` module and add support for slider.
 * larva-css - New `lrv-u-border-t-3\@desktop` & `a-grid` classes.
 
-## Unpublished
+## 0.5.8 - 04-07-2022
 * larva-patterns - Fix `article-callout` twig template whitespace.
+* larva-css - Adds an algorithm and utility to Larva which can be used to apply text-decoration styles on all states.
 
 ## 0.5.7 - 04-05-2022
 * larva-patterns - Add `article-callout` module.
