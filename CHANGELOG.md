@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 
-## 0.5.8 - 04-07-2022
+## 0.5.8 - 04-08-2022
 * larva-patterns - Fix `article-callout` twig template whitespace.
 * larva-css - Adds an algorithm and utility to Larva which can be used to apply text-decoration styles on all states.
 
