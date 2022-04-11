@@ -6,8 +6,8 @@ const c_dek =  clonedeep( require( '@penskemediacorp/larva-patterns/components/c
 o_card.o_card_classes = 'lrv-u-display-inline-flex lrv-u-flex-basis-100p@desktop-xl lrv-u-flex-basis-100p@desktop lrv-u-padding-tb-075@mobile-max';
 o_card.o_card_link_classes = 'lrv-u-flex';
 o_card.o_card_link_url = '#';
-o_card.o_card_image_wrap_classes = 'lrv-a-flex-basis-40p@desktop lrv-a-flex-basis-40p@desktop-xl lrv-a-flex-basis-25p@mobile-max';
-o_card.o_card_content_classes = 'lrv-u-margin-l-1 lrv-u-color-brand-primary:hover lrv-a-flex-basis-60p@desktop lrv-a-flex-basis-60p@desktop-xl lrv-a-flex-basis-55p@mobile-max';
+o_card.o_card_image_wrap_classes = 'lrv-u-flex-basis-40p@desktop lrv-u-flex-basis-40p@desktop-xl lrv-u-flex-basis-25p@mobile-max';
+o_card.o_card_content_classes = 'lrv-u-margin-l-1 lrv-u-color-brand-primary:hover lrv-u-flex-basis-60p@desktop lrv-u-flex-basis-60p@desktop-xl lrv-u-flex-basis-55p@mobile-max';
 
 o_card.c_lazy_image.c_lazy_image_link_url = '';
 o_card.c_lazy_image.c_lazy_image_classes = 'lrv-u-margin-l-auto';

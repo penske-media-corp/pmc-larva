@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 larva-patterns - Add `content-showcase` module.
-larva-css - Add `a-flex` algorithm.
+larva-css - Add `u-flex` algorithm.
 larva-css - Add `lrv-a-wrapper-100vw` class for mobile.
 larva-css - Add `lrv-u-border-l-1` & `lrv-u-border-t-1` classes for desktop, desktop-xl & mobile.
 
