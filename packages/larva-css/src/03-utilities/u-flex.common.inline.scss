@@ -1,6 +1,12 @@
 @import 'setup';
 
 $flex_basis: ( 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 );
+$breakpoints: (
+	'',
+	'mobile-max',
+	'desktop',
+	'desktop-xl'
+);
 
 .lrv-u-flex {
 	display: flex;
@@ -75,27 +81,24 @@ $flex_basis: ( 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85
 	}
 }
 
-@each $size in $flex_basis {
-	$per : #{$size}#{'%'};
+@each $breakpoint in $breakpoints {
 
-	.lrv-u-flex-basis-#{$size}p\@mobile-max {
+	@each $size in $flex_basis {
+		$per : #{$size}#{'%'};
 		
-		@include pmc-breakpoint( mobile-max ) {
-			flex-basis: $per;
+		@if '' == $breakpoint {
+			// No breakpoint
+			.lrv-u-flex-basis-#{$size}p {
+				flex-basis: $per;
+			}
+		} @else {
+			@include pmc-breakpoint( #{$breakpoint} ) {
+				.lrv-u-flex-basis-#{$size}p\@#{$breakpoint} {
+					flex-basis: $per;
+				}
+			}
 		}
-	}
+
+	} // end flex loop
 	
-	.lrv-u-flex-basis-#{$size}p\@desktop {
-		
-		@include pmc-breakpoint( desktop ) {
-			flex-basis: $per;
-		}
-	}
-
-	.lrv-u-flex-basis-#{$size}p\@desktop-xl {
-		
-		@include pmc-breakpoint( desktop-xl ) {
-			flex-basis: $per;
-		}
-	}
-}
+} // end breakpoints loop
