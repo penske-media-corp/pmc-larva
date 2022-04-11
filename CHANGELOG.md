@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+larva-patterns - Add `content-showcase` module.
+larva-css - Add `u-flex` algorithm.
+larva-css - Add `lrv-a-wrapper-100vw` class for mobile.
+larva-css - Add `lrv-u-border-l-1` & `lrv-u-border-t-1` classes for desktop, desktop-xl & mobile.
 
 ## 0.5.8 - 04-08-2022
 * larva-patterns - Fix `article-callout` twig template whitespace.

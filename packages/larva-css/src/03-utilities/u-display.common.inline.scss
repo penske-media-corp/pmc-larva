@@ -55,6 +55,17 @@
 	}
 }
 
+@include pmc-breakpoint( desktop-xl ) {
+	
+	.lrv-u-display-none\@desktop-xl {
+		display: none;
+	}
+	
+	.lrv-u-display-block\@desktop-xl {
+		display: block;
+	}
+}
+
 // Legacy
 .lrv-u-display-none\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
