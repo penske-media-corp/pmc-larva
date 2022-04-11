@@ -32,24 +32,9 @@ $widths_map: (
 	width-100p,
 ), $widths_map, $NAMESPACE: 'lrv-' );
 
-.lrv-u-width-100p\@mobile-max {
-
+.lrv-u-width-35\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
-		width: 100%;
-	}
-}
-
-.lrv-u-width-50p\@desktop {
-
-	@include pmc-breakpoint( desktop ) {
-		width: 50%;
-	}
-}
-
-.lrv-u-width-75p\@desktop {
-
-	@include pmc-breakpoint( desktop ) {
-		width: 75%;
+		width: pmc-rem(35);
 	}
 }
 
@@ -59,9 +44,27 @@ $widths_map: (
 	}
 }
 
+.lrv-u-width-100p\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		width: 100%;
+	}
+}
+
 .lrv-u-width-150\@desktop {
 	@include pmc-breakpoint( desktop ) {
 		width: pmc-rem(150);
+	}
+}
+
+.lrv-u-width-50p\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		width: 50%;
+	}
+}
+
+.lrv-u-width-75p\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		width: 75%;
 	}
 }
 
@@ -69,12 +72,6 @@ $widths_map: (
 	@include pmc-breakpoint( desktop-xl ) {
 		width: pmc-rem(100);
 	}	
-}
-
-.lrv-u-width-35\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
-		width: pmc-rem(35);
-	}
 }
 
 .lrv-u-width-154\@desktop-xl {

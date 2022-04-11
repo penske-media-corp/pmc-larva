@@ -1,7 +1,7 @@
 <div class="story-grid lrv-u-padding-tb-1 lrv-u-padding-tb-2@desktop // {{ story_grid_classes }}">
 	<ul class="{{ story_grid_grid_classes }} // lrv-a-unstyle-list lrv-u-margin-b-050">
 		{% for item in story_grid_story_cards %}
-			<li class="{{ story_grid_list_item_classes }}">
+			<li class="{{ story_grid_grid_item_classes }}">
 				{% include "@larva/modules/story/story.twig" with item %}
 			</li>
 		{% endfor %}

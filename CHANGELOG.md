@@ -6,21 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - `story-grid` module changes. 
-* larva-css - Add a-list algorithm.
-* larva-css - Add new font size.
+* larva-css - Add `lrv-u-flex-basis` algorithm.
+* larva-css - Add new font sizes.
 
-## Unpublished
-* larva-patterns - Add `content-showcase` module.
-* larva-patterns - Add `content-showcase-grid` module.
-* larva-css - Add a-flex algorithm.
-* larva-css - Add lrv-a-hover-effect-text-decoration--underline class.
-* larva-css - Add lrv-a-wrapper-100vw class for mobile.
-* larva-css - Add lrv-u-border-l-1 & lrv-u-border-t-1 classes for desktop, desktop-xl & mobile.
+## 0.5.8 - 04-08-2022
+* larva-patterns - Fix `article-callout` twig template whitespace.
+* larva-css - Adds an algorithm and utility to Larva which can be used to apply text-decoration styles on all states.
 
-## Unpublished
+## 0.5.7 - 04-05-2022
 * larva-patterns - Add `article-callout` module.
 * larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
 * all - Add github action on workflow-dispatch to update the visual regression tests in the same environment in which they are run
+* larva - Lock the twing package to version 5.1.0 to temporarily work around bug in library.
 
 ## 0.5.6 - 03-29-2022
 * larva-tokens - Add desktop_xl token values in typography.json
