@@ -55,15 +55,13 @@
 	}
 }
 
-.lrv-u-border-t-3\@desktop {
-	@include pmc-breakpoint( desktop ) {
-		border-top-width: 3px;
-	}
-}
-
 @include pmc-breakpoint( desktop ) {
 	.lrv-u-border-a-0\@desktop {
 		border-width: 0;
+	}
+	
+	.lrv-u-border-t-3\@desktop {
+		border-top-width: 3px;
 	}
 }
 
