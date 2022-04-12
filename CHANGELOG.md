@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-tokens - Updated RS token as per desktop_xl changes.
 * all - Added Support for ” Basic ( xxxl, xxl, xl, l, m, s, xs, xxs, xxxs ), Body ( xxl, xl, l, m, s, xs, xxs ), Primary (xxl), secondary (xxl, xl, xs, xxs ) ” font variations into larva-tokens.
+* larva-patterns - Add `content-showcase` module.
+* larva-css - Add `u-flex` algorithm.
+* larva-css - Add `lrv-a-wrapper-100vw` class for mobile.
+* larva-css - Add `lrv-u-border-l-1` & `lrv-u-border-t-1` classes for desktop, desktop-xl & mobile.
 
+## 0.5.8 - 04-08-2022
+* larva-patterns - Fix `article-callout` twig template whitespace.
+* larva-css - Adds an algorithm and utility to Larva which can be used to apply text-decoration styles on all states.
 ## 0.5.7 - 04-05-2022
 * larva-patterns - Add `article-callout` module.
 * larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
