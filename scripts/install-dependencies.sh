@@ -10,7 +10,7 @@ if [[ $actual_node_version == *$expected_node_version* ]] ;then
 	else
 		echo "**********";
 		echo "Unable to install dependencies!\n";
-		echo "You are running Node version $actual_node_version, \nwhich is not the required in .nvmrc. \nPlease run nvm use to use the required Node version \nRefer to https://github.com/nvm-sh/nvm to set up nvm.";
+		echo "You are running Node version $actual_node_version, and \nthe required version is $expected_node_version. \n\nPlease use nvm to use the required Node version \nRefer to https://github.com/nvm-sh/nvm to set up nvm.";
 		echo "**********";
 		exit;
 fi
