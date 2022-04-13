@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-patterns - Add `brand-most-popular` module.
 * larva-patterns - Update `newswire` module and add support for slider.
-* larva-css - New `lrv-u-border-t-3\@desktop` & `a-grid` classes.
+* larva-css - Add `a-grid` classes.
+* larva-css - Add `lrv-u-font-size-16@mobile-max` class
+* larva-css - Add `.lrv-u-border-l-00\@mobile-max`, `.lrv-u-border-r-00\@mobile-max`, `.lrv-u-border-t-1\@mobile-max` & `.lrv-u-border-b-00\@mobile-max` classes.
 
 ## Unpublished
 * larva-tokens - Added artinamerica tokens for hub support
