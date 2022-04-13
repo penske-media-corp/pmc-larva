@@ -20,6 +20,11 @@ sh scripts/install-dependencies.sh
 
 These will setup the mono-repo and install dependencies for each of the packages. This will take a few moments.
 
+If you are updating dependencies or debugging version conflicts, there is an addition script to use that will wipe the node_modules and package-lock.jsons for a fresh installation:
+
+```
+sh scripts/refresh-dependencies.sh
+```
 ## Viewing Larva Patterns
 
 To view and develop Larva patterns, run the following command after the above installation setup:
