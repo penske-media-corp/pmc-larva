@@ -1,5 +1,32 @@
 // Generated css from larva-tokens/lib/generators.js
 
+.lrv-a-font-primary-xxl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-primary );
+
+	font-family: var( --font-family );
+	font-size: var( --primary-xxl-font-size-mobile );
+	line-height: var( --primary-xxl-line-height-mobile );
+	letter-spacing: var( --primary-xxl-letter-spacing-mobile );
+	font-weight: var( --primary-xxl-font-weight-mobile );
+	font-style: var( --primary-xxl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --primary-xxl-font-size-desktop );
+		line-height: var( --primary-xxl-line-height-desktop );
+		letter-spacing: var( --primary-xxl-letter-spacing-desktop );
+		font-weight: var( --primary-xxl-font-weight-desktop );
+		font-style: var( --primary-xxl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --primary-xxl-font-size-desktop-xl );
+		line-height: var( --primary-xxl-line-height-desktop-xl );
+		letter-spacing: var( --primary-xxl-letter-spacing-desktop-xl );
+		font-weight: var( --primary-xxl-font-weight-desktop-xl );
+		font-style: var( --primary-xxl-font-style-desktop-xl );
+	}
+}
+
 .lrv-a-font-primary-xl {
 	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--font-family: var( --font-family-primary );
@@ -189,6 +216,60 @@
 	}
 }
 
+.lrv-a-font-secondary-xxl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-secondary );
+
+	font-family: var( --font-family );
+	font-size: var( --secondary-xxl-font-size-mobile );
+	line-height: var( --secondary-xxl-line-height-mobile );
+	letter-spacing: var( --secondary-xxl-letter-spacing-mobile );
+	font-weight: var( --secondary-xxl-font-weight-mobile );
+	font-style: var( --secondary-xxl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --secondary-xxl-font-size-desktop );
+		line-height: var( --secondary-xxl-line-height-desktop );
+		letter-spacing: var( --secondary-xxl-letter-spacing-desktop );
+		font-weight: var( --secondary-xxl-font-weight-desktop );
+		font-style: var( --secondary-xxl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --secondary-xxl-font-size-desktop-xl );
+		line-height: var( --secondary-xxl-line-height-desktop-xl );
+		letter-spacing: var( --secondary-xxl-letter-spacing-desktop-xl );
+		font-weight: var( --secondary-xxl-font-weight-desktop-xl );
+		font-style: var( --secondary-xxl-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-secondary-xl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-secondary );
+
+	font-family: var( --font-family );
+	font-size: var( --secondary-xl-font-size-mobile );
+	line-height: var( --secondary-xl-line-height-mobile );
+	letter-spacing: var( --secondary-xl-letter-spacing-mobile );
+	font-weight: var( --secondary-xl-font-weight-mobile );
+	font-style: var( --secondary-xl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --secondary-xl-font-size-desktop );
+		line-height: var( --secondary-xl-line-height-desktop );
+		letter-spacing: var( --secondary-xl-letter-spacing-desktop );
+		font-weight: var( --secondary-xl-font-weight-desktop );
+		font-style: var( --secondary-xl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --secondary-xl-font-size-desktop-xl );
+		line-height: var( --secondary-xl-line-height-desktop-xl );
+		letter-spacing: var( --secondary-xl-letter-spacing-desktop-xl );
+		font-weight: var( --secondary-xl-font-weight-desktop-xl );
+		font-style: var( --secondary-xl-font-style-desktop-xl );
+	}
+}
+
 .lrv-a-font-secondary-l {
 	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--font-family: var( --font-family-secondary );
@@ -267,6 +348,60 @@
 		letter-spacing: var( --secondary-s-letter-spacing-desktop-xl );
 		font-weight: var( --secondary-s-font-weight-desktop-xl );
 		font-style: var( --secondary-s-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-secondary-xs {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-secondary );
+
+	font-family: var( --font-family );
+	font-size: var( --secondary-xs-font-size-mobile );
+	line-height: var( --secondary-xs-line-height-mobile );
+	letter-spacing: var( --secondary-xs-letter-spacing-mobile );
+	font-weight: var( --secondary-xs-font-weight-mobile );
+	font-style: var( --secondary-xs-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --secondary-xs-font-size-desktop );
+		line-height: var( --secondary-xs-line-height-desktop );
+		letter-spacing: var( --secondary-xs-letter-spacing-desktop );
+		font-weight: var( --secondary-xs-font-weight-desktop );
+		font-style: var( --secondary-xs-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --secondary-xs-font-size-desktop-xl );
+		line-height: var( --secondary-xs-line-height-desktop-xl );
+		letter-spacing: var( --secondary-xs-letter-spacing-desktop-xl );
+		font-weight: var( --secondary-xs-font-weight-desktop-xl );
+		font-style: var( --secondary-xs-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-secondary-xxs {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-secondary );
+
+	font-family: var( --font-family );
+	font-size: var( --secondary-xxs-font-size-mobile );
+	line-height: var( --secondary-xxs-line-height-mobile );
+	letter-spacing: var( --secondary-xxs-letter-spacing-mobile );
+	font-weight: var( --secondary-xxs-font-weight-mobile );
+	font-style: var( --secondary-xxs-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --secondary-xxs-font-size-desktop );
+		line-height: var( --secondary-xxs-line-height-desktop );
+		letter-spacing: var( --secondary-xxs-letter-spacing-desktop );
+		font-weight: var( --secondary-xxs-font-weight-desktop );
+		font-style: var( --secondary-xxs-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --secondary-xxs-font-size-desktop-xl );
+		line-height: var( --secondary-xxs-line-height-desktop-xl );
+		letter-spacing: var( --secondary-xxs-letter-spacing-desktop-xl );
+		font-weight: var( --secondary-xxs-font-weight-desktop-xl );
+		font-style: var( --secondary-xxs-font-style-desktop-xl );
 	}
 }
 
@@ -459,6 +594,114 @@
 	}
 }
 
+.lrv-a-font-body-xxxl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-body );
+
+	font-family: var( --font-family );
+	font-size: var( --body-xxxl-font-size-mobile );
+	line-height: var( --body-xxxl-line-height-mobile );
+	letter-spacing: var( --body-xxxl-letter-spacing-mobile );
+	font-weight: var( --body-xxxl-font-weight-mobile );
+	font-style: var( --body-xxxl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --body-xxxl-font-size-desktop );
+		line-height: var( --body-xxxl-line-height-desktop );
+		letter-spacing: var( --body-xxxl-letter-spacing-desktop );
+		font-weight: var( --body-xxxl-font-weight-desktop );
+		font-style: var( --body-xxxl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --body-xxxl-font-size-desktop-xl );
+		line-height: var( --body-xxxl-line-height-desktop-xl );
+		letter-spacing: var( --body-xxxl-letter-spacing-desktop-xl );
+		font-weight: var( --body-xxxl-font-weight-desktop-xl );
+		font-style: var( --body-xxxl-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-body-xxl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-body );
+
+	font-family: var( --font-family );
+	font-size: var( --body-xxl-font-size-mobile );
+	line-height: var( --body-xxl-line-height-mobile );
+	letter-spacing: var( --body-xxl-letter-spacing-mobile );
+	font-weight: var( --body-xxl-font-weight-mobile );
+	font-style: var( --body-xxl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --body-xxl-font-size-desktop );
+		line-height: var( --body-xxl-line-height-desktop );
+		letter-spacing: var( --body-xxl-letter-spacing-desktop );
+		font-weight: var( --body-xxl-font-weight-desktop );
+		font-style: var( --body-xxl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --body-xxl-font-size-desktop-xl );
+		line-height: var( --body-xxl-line-height-desktop-xl );
+		letter-spacing: var( --body-xxl-letter-spacing-desktop-xl );
+		font-weight: var( --body-xxl-font-weight-desktop-xl );
+		font-style: var( --body-xxl-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-body-xl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-body );
+
+	font-family: var( --font-family );
+	font-size: var( --body-xl-font-size-mobile );
+	line-height: var( --body-xl-line-height-mobile );
+	letter-spacing: var( --body-xl-letter-spacing-mobile );
+	font-weight: var( --body-xl-font-weight-mobile );
+	font-style: var( --body-xl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --body-xl-font-size-desktop );
+		line-height: var( --body-xl-line-height-desktop );
+		letter-spacing: var( --body-xl-letter-spacing-desktop );
+		font-weight: var( --body-xl-font-weight-desktop );
+		font-style: var( --body-xl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --body-xl-font-size-desktop-xl );
+		line-height: var( --body-xl-line-height-desktop-xl );
+		letter-spacing: var( --body-xl-letter-spacing-desktop-xl );
+		font-weight: var( --body-xl-font-weight-desktop-xl );
+		font-style: var( --body-xl-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-body-l {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-body );
+
+	font-family: var( --font-family );
+	font-size: var( --body-l-font-size-mobile );
+	line-height: var( --body-l-line-height-mobile );
+	letter-spacing: var( --body-l-letter-spacing-mobile );
+	font-weight: var( --body-l-font-weight-mobile );
+	font-style: var( --body-l-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --body-l-font-size-desktop );
+		line-height: var( --body-l-line-height-desktop );
+		letter-spacing: var( --body-l-letter-spacing-desktop );
+		font-weight: var( --body-l-font-weight-desktop );
+		font-style: var( --body-l-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --body-l-font-size-desktop-xl );
+		line-height: var( --body-l-line-height-desktop-xl );
+		letter-spacing: var( --body-l-letter-spacing-desktop-xl );
+		font-weight: var( --body-l-font-weight-desktop-xl );
+		font-style: var( --body-l-font-style-desktop-xl );
+	}
+}
+
 .lrv-a-font-body-m {
 	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--font-family: var( --font-family-body );
@@ -510,5 +753,275 @@
 		letter-spacing: var( --body-s-letter-spacing-desktop-xl );
 		font-weight: var( --body-s-font-weight-desktop-xl );
 		font-style: var( --body-s-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-body-xs {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-body );
+
+	font-family: var( --font-family );
+	font-size: var( --body-xs-font-size-mobile );
+	line-height: var( --body-xs-line-height-mobile );
+	letter-spacing: var( --body-xs-letter-spacing-mobile );
+	font-weight: var( --body-xs-font-weight-mobile );
+	font-style: var( --body-xs-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --body-xs-font-size-desktop );
+		line-height: var( --body-xs-line-height-desktop );
+		letter-spacing: var( --body-xs-letter-spacing-desktop );
+		font-weight: var( --body-xs-font-weight-desktop );
+		font-style: var( --body-xs-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --body-xs-font-size-desktop-xl );
+		line-height: var( --body-xs-line-height-desktop-xl );
+		letter-spacing: var( --body-xs-letter-spacing-desktop-xl );
+		font-weight: var( --body-xs-font-weight-desktop-xl );
+		font-style: var( --body-xs-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-body-xxs {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-body );
+
+	font-family: var( --font-family );
+	font-size: var( --body-xxs-font-size-mobile );
+	line-height: var( --body-xxs-line-height-mobile );
+	letter-spacing: var( --body-xxs-letter-spacing-mobile );
+	font-weight: var( --body-xxs-font-weight-mobile );
+	font-style: var( --body-xxs-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --body-xxs-font-size-desktop );
+		line-height: var( --body-xxs-line-height-desktop );
+		letter-spacing: var( --body-xxs-letter-spacing-desktop );
+		font-weight: var( --body-xxs-font-weight-desktop );
+		font-style: var( --body-xxs-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --body-xxs-font-size-desktop-xl );
+		line-height: var( --body-xxs-line-height-desktop-xl );
+		letter-spacing: var( --body-xxs-letter-spacing-desktop-xl );
+		font-weight: var( --body-xxs-font-weight-desktop-xl );
+		font-style: var( --body-xxs-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-body-xxxs {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-body );
+
+	font-family: var( --font-family );
+	font-size: var( --body-xxxs-font-size-mobile );
+	line-height: var( --body-xxxs-line-height-mobile );
+	letter-spacing: var( --body-xxxs-letter-spacing-mobile );
+	font-weight: var( --body-xxxs-font-weight-mobile );
+	font-style: var( --body-xxxs-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --body-xxxs-font-size-desktop );
+		line-height: var( --body-xxxs-line-height-desktop );
+		letter-spacing: var( --body-xxxs-letter-spacing-desktop );
+		font-weight: var( --body-xxxs-font-weight-desktop );
+		font-style: var( --body-xxxs-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --body-xxxs-font-size-desktop-xl );
+		line-height: var( --body-xxxs-line-height-desktop-xl );
+		letter-spacing: var( --body-xxxs-letter-spacing-desktop-xl );
+		font-weight: var( --body-xxxs-font-weight-desktop-xl );
+		font-style: var( --body-xxxs-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-basic-xxl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-basic );
+
+	font-family: var( --font-family );
+	font-size: var( --basic-xxl-font-size-mobile );
+	line-height: var( --basic-xxl-line-height-mobile );
+	letter-spacing: var( --basic-xxl-letter-spacing-mobile );
+	font-weight: var( --basic-xxl-font-weight-mobile );
+	font-style: var( --basic-xxl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --basic-xxl-font-size-desktop );
+		line-height: var( --basic-xxl-line-height-desktop );
+		letter-spacing: var( --basic-xxl-letter-spacing-desktop );
+		font-weight: var( --basic-xxl-font-weight-desktop );
+		font-style: var( --basic-xxl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --basic-xxl-font-size-desktop-xl );
+		line-height: var( --basic-xxl-line-height-desktop-xl );
+		letter-spacing: var( --basic-xxl-letter-spacing-desktop-xl );
+		font-weight: var( --basic-xxl-font-weight-desktop-xl );
+		font-style: var( --basic-xxl-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-basic-xl {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-basic );
+
+	font-family: var( --font-family );
+	font-size: var( --basic-xl-font-size-mobile );
+	line-height: var( --basic-xl-line-height-mobile );
+	letter-spacing: var( --basic-xl-letter-spacing-mobile );
+	font-weight: var( --basic-xl-font-weight-mobile );
+	font-style: var( --basic-xl-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --basic-xl-font-size-desktop );
+		line-height: var( --basic-xl-line-height-desktop );
+		letter-spacing: var( --basic-xl-letter-spacing-desktop );
+		font-weight: var( --basic-xl-font-weight-desktop );
+		font-style: var( --basic-xl-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --basic-xl-font-size-desktop-xl );
+		line-height: var( --basic-xl-line-height-desktop-xl );
+		letter-spacing: var( --basic-xl-letter-spacing-desktop-xl );
+		font-weight: var( --basic-xl-font-weight-desktop-xl );
+		font-style: var( --basic-xl-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-basic-l {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-basic );
+
+	font-family: var( --font-family );
+	font-size: var( --basic-l-font-size-mobile );
+	line-height: var( --basic-l-line-height-mobile );
+	letter-spacing: var( --basic-l-letter-spacing-mobile );
+	font-weight: var( --basic-l-font-weight-mobile );
+	font-style: var( --basic-l-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --basic-l-font-size-desktop );
+		line-height: var( --basic-l-line-height-desktop );
+		letter-spacing: var( --basic-l-letter-spacing-desktop );
+		font-weight: var( --basic-l-font-weight-desktop );
+		font-style: var( --basic-l-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --basic-l-font-size-desktop-xl );
+		line-height: var( --basic-l-line-height-desktop-xl );
+		letter-spacing: var( --basic-l-letter-spacing-desktop-xl );
+		font-weight: var( --basic-l-font-weight-desktop-xl );
+		font-style: var( --basic-l-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-basic-m {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-basic );
+
+	font-family: var( --font-family );
+	font-size: var( --basic-m-font-size-mobile );
+	line-height: var( --basic-m-line-height-mobile );
+	letter-spacing: var( --basic-m-letter-spacing-mobile );
+	font-weight: var( --basic-m-font-weight-mobile );
+	font-style: var( --basic-m-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --basic-m-font-size-desktop );
+		line-height: var( --basic-m-line-height-desktop );
+		letter-spacing: var( --basic-m-letter-spacing-desktop );
+		font-weight: var( --basic-m-font-weight-desktop );
+		font-style: var( --basic-m-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --basic-m-font-size-desktop-xl );
+		line-height: var( --basic-m-line-height-desktop-xl );
+		letter-spacing: var( --basic-m-letter-spacing-desktop-xl );
+		font-weight: var( --basic-m-font-weight-desktop-xl );
+		font-style: var( --basic-m-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-basic-s {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-basic );
+
+	font-family: var( --font-family );
+	font-size: var( --basic-s-font-size-mobile );
+	line-height: var( --basic-s-line-height-mobile );
+	letter-spacing: var( --basic-s-letter-spacing-mobile );
+	font-weight: var( --basic-s-font-weight-mobile );
+	font-style: var( --basic-s-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --basic-s-font-size-desktop );
+		line-height: var( --basic-s-line-height-desktop );
+		letter-spacing: var( --basic-s-letter-spacing-desktop );
+		font-weight: var( --basic-s-font-weight-desktop );
+		font-style: var( --basic-s-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --basic-s-font-size-desktop-xl );
+		line-height: var( --basic-s-line-height-desktop-xl );
+		letter-spacing: var( --basic-s-letter-spacing-desktop-xl );
+		font-weight: var( --basic-s-font-weight-desktop-xl );
+		font-style: var( --basic-s-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-basic-xs {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-basic );
+
+	font-family: var( --font-family );
+	font-size: var( --basic-xs-font-size-mobile );
+	line-height: var( --basic-xs-line-height-mobile );
+	letter-spacing: var( --basic-xs-letter-spacing-mobile );
+	font-weight: var( --basic-xs-font-weight-mobile );
+	font-style: var( --basic-xs-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --basic-xs-font-size-desktop );
+		line-height: var( --basic-xs-line-height-desktop );
+		letter-spacing: var( --basic-xs-letter-spacing-desktop );
+		font-weight: var( --basic-xs-font-weight-desktop );
+		font-style: var( --basic-xs-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --basic-xs-font-size-desktop-xl );
+		line-height: var( --basic-xs-line-height-desktop-xl );
+		letter-spacing: var( --basic-xs-letter-spacing-desktop-xl );
+		font-weight: var( --basic-xs-font-weight-desktop-xl );
+		font-style: var( --basic-xs-font-style-desktop-xl );
+	}
+}
+
+.lrv-a-font-basic-xxs {
+	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	--font-family: var( --font-family-basic );
+
+	font-family: var( --font-family );
+	font-size: var( --basic-xxs-font-size-mobile );
+	line-height: var( --basic-xxs-line-height-mobile );
+	letter-spacing: var( --basic-xxs-letter-spacing-mobile );
+	font-weight: var( --basic-xxs-font-weight-mobile );
+	font-style: var( --basic-xxs-font-style-mobile );
+
+	@media (min-width: $screen-desktop) {
+		font-size: var( --basic-xxs-font-size-desktop );
+		line-height: var( --basic-xxs-line-height-desktop );
+		letter-spacing: var( --basic-xxs-letter-spacing-desktop );
+		font-weight: var( --basic-xxs-font-weight-desktop );
+		font-style: var( --basic-xxs-font-style-desktop );
+	}
+	@media (min-width: $screen-desktop-xl) {
+		font-size: var( --basic-xxs-font-size-desktop-xl );
+		line-height: var( --basic-xxs-line-height-desktop-xl );
+		letter-spacing: var( --basic-xxs-letter-spacing-desktop-xl );
+		font-weight: var( --basic-xxs-font-weight-desktop-xl );
+		font-style: var( --basic-xxs-font-style-desktop-xl );
 	}
 }
