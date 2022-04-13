@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-tokens - Added artinamerica tokens for hub support
 * larva-tokens - Updated RS token as per desktop_xl changes.
 * all - Added Support for ” Basic ( xxxl, xxl, xl, l, m, s, xs, xxs, xxxs ), Body ( xxl, xl, l, m, s, xs, xxs ), Primary (xxl), secondary (xxl, xl, xs, xxs ) ” font variations into larva-tokens.
 * larva-patterns - Add `content-showcase` module.
