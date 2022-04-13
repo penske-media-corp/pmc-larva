@@ -11,7 +11,7 @@ const {
 	TwingFunction
 } = require('twing');
 
-const { fontData } = require( '@penskemediacorp/larva-tokens' );
+const fontData = require( '../../larva-tokens/lib/font-data' );
 
 const getAppConfiguration = require('./utils/getAppConfiguration' );
 const getPatternPathsToLoad = require( './utils/getPatternPathsToLoad' );

@@ -3,7 +3,8 @@
  */
 const fs = require( 'fs-extra' );
 const path = require( 'path' );
-const { kebabify, fontData } = require( '@penskemediacorp/larva-tokens' );
+const { kebabify } = require( '../../larva-tokens/lib/utils' );
+const fontData = require( '../../larva-tokens/lib/font-data' );
 
 const { allSelectors, tokenProperties } = fontData;
 
