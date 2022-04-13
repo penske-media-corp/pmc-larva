@@ -1,0 +1,77 @@
+{% if is_home %}
+	<header class="header // js-Header {{ header_classes }}">
+		<div class="header-content // js-Header-contents {{ header_contents_classes }}">
+			<div class="header-outer // js-hide-when-sticky {{ header_outer_classes }}">
+				<div class="header-inner //  {{ header_inner_classes }} ">
+					<div class="header-content-primary // lrv-a-wrapper {{ header_content_primary_classes }}">
+						<div class="header-mobile-button lrv-a-hidden@tablet lrv-u-width-22p@mobile-max">
+							{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
+						</div>
+						<div class="header-links-primary // {{ header_links_primary_classes }}  ">
+							<div class="lrv-u-display-inline-flex lrv-u-flex-direction-column">
+								{% include "@larva/components/c-link/c-link.twig" with c_link_left_primary %}
+								{% include "@larva/components/c-link/c-link.twig" with c_link_left_secondary %}
+							</div>
+						</div>
+						<div class="header-logo // {{ header_logo_classes }} ">
+							{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
+						</div>
+						<div class="header-links-secondary // {{ header_links_secondary_classes }} ">
+							<div class="lrv-u-display-inline-flex lrv-u-flex-direction-column ">
+								{% if is_user_logged_in %}
+									{% include "@larva/objects/o-account-menu/o-account-menu.twig" with o_account_menu %}
+								{% else %}
+									{% include "@larva/components/c-link/c-link.twig" with c_link_right_primary %}
+									{% include "@larva/components/c-link/c-link.twig" with c_link_right_secondary %}
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<div class="lrv-u-border-t-6">
+						<div class="lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-margin-t-050 lrv-u-padding-t-050 lrv-u-padding-b-050">
+							<div class="header-content-secondary // lrv-a-wrapper {{ header_content_secondary_classes }} ">
+								{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
+								{% include "@larva/modules/main-menu/main-menu.twig" with main_menu %}
+								{% include "@larva/modules/expandable-search/expandable-search.twig" with expandable_search %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% if header_sticky %}
+				<div class="header-sticky-outer // js-show-when-sticky js-sticky-header-slidedown {{ header_sticky_outer_classes }}">
+					{% include "@larva/modules/header-sticky/header-sticky.twig" with header_sticky %}
+				</div>
+			{% endif %}
+		</div>
+	</header>
+{% else %}
+	<header class="header // js-Header {{ header_classes }}">
+		<div class="header-content // js-Header-contents {{ header_contents_classes }}">
+			<div class="header-outer //  js-hide-when-sticky  {{ header_outer_classes }}">
+				<div class="header-inner // {{ header_inner_classes }} ">
+					<div class="header-content-primary // {{ header_content_primary_classes }}">
+						<div class="header-logo // {{ header_logo_classes }} ">
+							{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
+						</div>
+						<div class="header-links-primary // lrv-u-align-items-center lrv-u-padding-r-1 lrv-u-border-r-1 {{ header_links_primary_classes }}  ">
+							{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
+							{% include "@larva/modules/expandable-search/expandable-search.twig" with expandable_search %}
+						</div>
+						<div class="header-links-primary // lrv-u-margin-l-125 {{ header_links_primary_classes }}  ">
+							{% include "@larva/modules/main-menu/main-menu.twig" with main_menu %}
+						</div>
+						<div class="header-links-secondary // {{ header_links_secondary_classes }} ">
+							{% include "@larva/objects/o-header-buttons/o-header-buttons.twig" with o_header_buttons_column %}
+						</div>
+					</div>
+				</div>
+			</div>
+			{% if header_sticky %}
+				<div class="header-sticky-outer // js-show-when-sticky js-sticky-header-slidedown {{ header_sticky_outer_classes }}">
+					{% include "@larva/modules/header-sticky/header-sticky.twig" with header_sticky %}
+				</div>
+			{% endif %}
+		</div>
+	</header>
+{% endif %}

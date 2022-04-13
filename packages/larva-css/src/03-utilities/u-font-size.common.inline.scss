@@ -95,3 +95,9 @@
 		font-size: pmc-rem(13);
 	}
 }
+
+.lrv-u-font-size-8\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		font-size: pmc-rem(8);
+	}
+}

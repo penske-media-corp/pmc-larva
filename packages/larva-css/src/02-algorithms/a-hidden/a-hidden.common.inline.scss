@@ -29,3 +29,9 @@
 		@include _a-hidden;
 	}
 }
+
+.lrv-a-hidden\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		@include _a-hidden;
+	}
+}
