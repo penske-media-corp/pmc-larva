@@ -4,22 +4,22 @@
 	--a-children-border-color: #{ map-get( $TOKENS-MAP, color-black ) };
 }
 
-.a-children-border--grey {
+.lrv-a-children-border--grey {
 	--a-children-border-color: #{ map-get( $TOKENS-MAP, border-color-grey ) };
 }
 
-.a-children-border--grey-light {
+.lrv-a-children-border--grey-light {
 	--a-children-border-color: #{ map-get( $TOKENS-MAP, border-color-grey-light ) };
 }
 
 // stylelint-disable selector-max-compound-selectors
-.a-children-border-vertical {
+.lrv-a-children-border-vertical {
 	& > * + * {
 		border-top: var(--a-children-border-width, 1px) solid var(--a-children-border-color, '');
 	}
 }
 
-.a-children-border-horizontal {
+.lrv-a-children-border-horizontal {
 	& > * + * {
 		border-left: var(--a-children-border-width, 1px) solid var(--a-children-border-color, '');
 	}

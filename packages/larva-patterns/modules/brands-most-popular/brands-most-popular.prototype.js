@@ -36,10 +36,5 @@ module.exports = {
 	brands_most_popular_classes: 'lrv-a-wrapper lrv-u-margin-b-150',
 	brands_most_popular_items_wrapper_classes: '',
 	c_heading: c_heading,
-	popular_items: {
-		default: o_card,
-		default2: o_card,
-		default3: o_card,
-		default4: o_card,
-	},
+	popular_items: [ o_card,  o_card,  o_card,  o_card ],
 };
