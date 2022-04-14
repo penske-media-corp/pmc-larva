@@ -16,24 +16,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install Dependencies
-      run: |
-        npm install -g backstopjs --unsafe-perm=true --allow-root
-        npm ci
-        ./node_modules/.bin/lerna bootstrap
-    - name: Run Tests
-      run: |
-        nohup npm run larva > /dev/null 2>&1 &
-        sleep 5
-        npm run backstop -- test
-      env:
-        CI: true
-    - name: Archive Backstop results
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: backstop-results
-        path: backstop_data
     - name: Comment Regression test results on PR
       uses: actions/github-script@0.9.0
       if: github.event_name == 'pull_request'
