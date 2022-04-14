@@ -16,6 +16,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Debug
+      run: |
+        echo ${{github.event_name}}
     - name: Comment Regression test results on PR
       uses: actions/github-script@0.9.0
       if: github.event_name == 'pull_request'
