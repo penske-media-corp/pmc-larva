@@ -34,3 +34,32 @@ jobs:
       with:
         name: backstop-results
         path: backstop_data
+    - name: Comment Regression test results on PR
+      uses: actions/github-script@0.9.0
+      if: github.event_name == "pull_request"
+      with:
+        script: |
+          const output = `
+            #### Backstop Results
+            <details>
+              <summary>View the results</summary>
+              <p>
+                <a href="#{{ github.workflow.job.id }}">
+                  View the results
+                </a>
+              </p>
+            ### When the results contain changes you want to retain
+            <details>
+              <summary>Update the reference screenshots</summary>
+              <p>
+                <a href="#">Run the Update visual regression tests</a> on this feature branch.
+                This will create a new branch with reference screenshots.
+                Then you will need to open a pull request to this branch to update it.
+              </p>
+          `;
+            github.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: output,
+            });
