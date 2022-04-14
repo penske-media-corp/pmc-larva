@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 const clonedeep = require('lodash.clonedeep');
 
 const header_sticky_prototype = require('./header-sticky.prototype');

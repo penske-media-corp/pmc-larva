@@ -1,36 +1,27 @@
-/* eslint-disable camelcase */
 const clonedeep = require( 'lodash.clonedeep' );
 
 const header_sticky_prototype = require( '../header-sticky/header-sticky.prototype' );
-const main_menu_prototype = require( '../main-menu/main-menu.prototype.js' );
+const header_menu_prototype = require( '../header-menu/header-menu.prototype' );
 const expandable_search_prototype = require( '../expandable-search/expandable-search.prototype' );
 const c_link_prototype = require( '../../components/c-link/c-link.prototype' );
-const o_icon_button_prototype = require( '../../objects/o-icon-button/o-icon-button.prototype.js' );
+const o_icon_button_prototype = require( '../../objects/o-icon-button/o-icon-button.prototype' );
 const o_icon_button_search_prototype = require( '../../objects/o-icon-button/o-icon-button.search' );
-const o_header_buttons_prototype = require( '../../objects/o-header-buttons/o-header-buttons.prototype.js' );
-const o_header_buttons_column_prototype = require( '../../objects/o-header-buttons/o-header-buttons.column.js' );
+const o_header_buttons_prototype = require( '../../objects/o-header-buttons/o-header-buttons.prototype' );
+const o_header_buttons_column_prototype = require( '../../objects/o-header-buttons/o-header-buttons.column' );
 
 const header_sticky = clonedeep( header_sticky_prototype );
 
 const expandable_search = clonedeep( expandable_search_prototype );
 
-const main_menu = clonedeep( main_menu_prototype );
-main_menu.o_nav.o_nav_list_classes = 'lrv-a-font-body-s lrv-a-space-children--2 lrv-a-space-children-horizontal lrv-a-unstyle-list lrv-u-flex lrv-u-font-family-body lrv-u-justify-content-center lrv-u-text-transform-uppercase';
-const main_menu_items = main_menu.o_nav.o_nav_list_items;
-
-const o_account_menu = clonedeep( require( '../../objects/o-account-menu/o-account-menu.prototype') );
-// o_account_menu.o_account_wrapper_classes = 'lrv-a-glue-parent lrv-a-icon-after-arrow-top-left lrv-u-background-color-white lrv-u-border-a-2 lrv-u-margin-t-1 lrv-u-width-150';
-
-// o_account_menu.c_welcome_span.c_span_text = 'Profile ▶';
-// o_account_menu.c_log_out.c_link_text = 'Log Out ▶';
-
-const is_user_logged_in = true;
-
-for (let i = 0; i < main_menu_items.length; i++) {
-	main_menu.o_nav.o_nav_list_items[i].c_link_classes = 'lrv-u-padding-b-075 lrv-u-display-block lrv-a-unstyle-link lrv-u-color-brand-primary:hover lrv-a-hover-effect lrv-u-whitespace-nowrap lrv-u-border-b-6 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover';
+const header_menu = clonedeep( header_menu_prototype );
+header_menu.o_nav.o_nav_list_classes = 'lrv-a-font-body-s lrv-a-space-children--2 lrv-a-space-children-horizontal lrv-a-unstyle-list lrv-u-flex lrv-u-font-family-body lrv-u-justify-content-center lrv-u-text-transform-uppercase';
+const header_menu_items = header_menu.o_nav.o_nav_list_items;
+for (let i = 0; i < header_menu_items.length; i++) {
+	header_menu.o_nav.o_nav_list_items[i].c_link_classes = ' lrv-u-padding-b-050 lrv-a-unstyle-link lrv-u-color-brand-primary:hover lrv-a-hover-effect lrv-u-whitespace-nowrap lrv-u-border-b-6 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover';
 }
 
-const c_link = clonedeep( c_link_prototype );
+const o_account_menu = clonedeep( require( '../../objects/o-account-menu/o-account-menu.prototype') );
+o_account_menu.o_account_wrapper_classes = 'lrv-a-glue-parent lrv-a-icon-after-arrow-top-left lrv-u-background-color-white lrv-u-border-a-2 lrv-u-margin-t-1 lrv-u-width-150';
 
 const c_shop_link = clonedeep( c_link_prototype );
 c_shop_link.c_link_text = 'RS shop';
@@ -50,28 +41,16 @@ c_got_a_tip.c_link_classes = 'lrv-u-margin-b-050 lrv-a-unstyle-link lrv-u-displa
 
 const c_logo_prototype = require( '../../components/c-logo/c-logo.prototype' );
 const c_logo =  clonedeep( c_logo_prototype );
-//c_logo.c_logo_svg = 'rs-logo';
-
 c_logo.c_logo_classes += 'lrv-u-color-brand-primary lrv-u-color-brand-primary:hover lrv-u-display-inline-flex lrv-u-justify-content-center lrv-u-width-100p';
 c_logo.c_logo_is_h1 = true;
-
 
 const o_icon_button_search = clonedeep( o_icon_button_search_prototype );
 const o_icon_button_menu = clonedeep( o_icon_button_prototype );
 
-// o_icon_button_menu.c_icon.c_icon_name = 'circle-menu';
 o_icon_button_menu.o_icon_button_classes += ' js-MegaMenu-Trigger lrv-u-margin-r-auto lrv-u-color-brand-primary:hover lrv-a-glue-parent';
 o_icon_button_menu.c_icon.c_icon_classes = 'lrv-u-display-block lrv-u-width-30 lrv-u-height-30';
 o_icon_button_menu.c_span.c_span_text = '';
-// o_icon_button_menu.c_span.c_span_classes = 'a-icon-hamburger';
 o_icon_button_menu.o_icon_button_screen_reader_text = 'Click to expand the Mega Menu';
-
-// expandable_search.expandable_search_outer_classes = 'js-ExpandableSearch lrv-u-flex lrv-u-margin-l-auto lrv-a-glue-parent',
-// expandable_search.expandable_search_classes = '',
-expandable_search.expandable_search_inner_classes = 'lrv-u-height-auto lrv-a-glue lrv-a-glue--r-0 lrv-a-glue--t-50p lrv-u-flex lrv-u-transform-translateY-n50p';
-// expandable_search.o_icon_button_search.c_icon.c_icon_name = 'search-rs'
-// expandable_search.o_icon_button_search.c_icon.c_icon_classes = 'lrv-u-display-block lrv-u-width-24 lrv-u-height-24 lrv-u-color-brand-primary:hover';
-// expandable_search.search_form.search_form_input_placeholder_attr = 'Search...';
 
 const o_header_buttons = clonedeep( o_header_buttons_prototype );
 
@@ -95,7 +74,7 @@ module.exports = {
 	c_link_right_secondary: c_login_link,
 	o_icon_button_menu,
 	o_icon_button_search,
-	main_menu,
+	header_menu,
 	header_sticky,
 	expandable_search,
 	is_home: true,

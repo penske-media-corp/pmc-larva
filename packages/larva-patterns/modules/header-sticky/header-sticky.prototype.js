@@ -1,7 +1,7 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
 const expandable_search_prototype = require( '../expandable-search/expandable-search.prototype' );
-const o_header_buttons_prototype = require( '../../objects/o-header-buttons/o-header-buttons.prototype.js' );
+const o_header_buttons_prototype = require( '../../objects/o-header-buttons/o-header-buttons.prototype' );
 const c_logo_prototype = require( '../../components/c-logo/c-logo.prototype' );
 const o_icon_button_prototype = require( '../../objects/o-icon-button/o-icon-button.prototype' );
 
