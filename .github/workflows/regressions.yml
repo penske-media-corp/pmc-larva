@@ -18,10 +18,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Debug
       run: |
-        echo ${{github.event_name}}
+        echo ${{toJSON(context)}}
     - name: Comment Regression test results on PR
       uses: actions/github-script@0.9.0
-      if: github.event_name == 'pull_request'
+      if: github.event_name == 'push'
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
