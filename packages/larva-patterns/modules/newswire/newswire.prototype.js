@@ -38,7 +38,7 @@ o_card.c_svg = c_svg;
 
 module.exports = {
 	newswire_classes: 'lrv-a-wrapper lrv-u-padding-b-2',
-	newswire_list_classes: 'lrv-a-unstyle-list js-Flickity js-Flickity--isContained js-Flickity--nav-top-right js-Flickity--bordered-buttons js-Flickity--isFreeScrol js-Flickity--newswire lrv-u-padding-l-00',
+	newswire_list_classes: 'lrv-a-unstyle-list js-Flickity js-Flickity--fourths js-Flickity--isContained js-Flickity--nav-top-right js-Flickity--bordered-buttons js-Flickity--isFreeScrol js-Flickity--newswire lrv-u-padding-l-00',
 	newswire_list_item_classes: 'js-Flickity-cell lrv-u-margin-r-150',
 	c_heading: c_heading,
 	newswire_aria_labelledby_attr: c_heading.c_heading_id_attr,
