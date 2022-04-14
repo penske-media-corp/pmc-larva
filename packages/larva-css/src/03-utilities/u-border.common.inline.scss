@@ -63,10 +63,6 @@
 	border-right-width: pmc-rem(6);
 }
 
-.lrv-u-border-t-2 {
-	border-top-width: pmc-rem(2);
-}
-
 .lrv-u-border-l-00\@mobile-max {
 	@include pmc-breakpoint(mobile-max) {
 		border-left-width: 0;
