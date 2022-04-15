@@ -56,3 +56,15 @@
 .lrv-a-glue--t-100p {
 	--a-glue-top: 100%;
 }
+
+.lrv-a-glue-parent\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		position: relative;
+	}
+}
+
+.lrv-a-glue-parent\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		position: relative;
+	}
+}

@@ -48,7 +48,7 @@ export default class ExpandableSearch {
 		this.updateState();
 
 		// Switch focus to input if it is opened
-		if (this.isOpen && this.targetInput ) {
+		if (this.isOpen) {
 			this.targetInput.focus();
 		}
 	}

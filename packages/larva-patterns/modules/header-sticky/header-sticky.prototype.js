@@ -5,7 +5,7 @@ const o_header_buttons_prototype = require( '../../objects/o-header-buttons/o-he
 const c_logo_prototype = require( '../../components/c-logo/c-logo.prototype' );
 const o_icon_button_prototype = require( '../../objects/o-icon-button/o-icon-button.prototype' );
 
-const expandable_search_sticky = clonedeep( expandable_search_prototype );
+const expandable_search = clonedeep( expandable_search_prototype );
 
 const c_logo = clonedeep( c_logo_prototype );
 
@@ -24,7 +24,7 @@ module.exports = {
 	o_icon_button_menu,
 	c_logo,
 	read_next: false,
-	expandable_search_sticky,
+	expandable_search,
 	o_social_list: false,
 	o_header_buttons,
 	icon_logo_wrap: false,
