@@ -1,0 +1,7 @@
+<div class="content-showcase larva // {{ content_showcase_classes }}">
+	<div class="content-showcase-items // {{ content_showcase_items_classes }}">
+		{% for item in content_showcase_items %}
+			{% include "@larva/objects/o-card/o-card.twig" with item %}
+		{% endfor %}
+	</div>
+</div>

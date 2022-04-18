@@ -7,12 +7,13 @@ const { kebabify } = require( './utils' );
  * All style names and corresponding sizes.
  */
 const styles = {
-	primary: [ 'xl', 'l', 'm', 's', 'xs', 'xxs', 'xxxs' ],
-	secondary: [ 'l', 'm', 's' ],
+	primary: [ 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs', 'xxxs' ],
+	secondary: [ 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs' ],
 	secondary_regular: [ 'm' ],
 	accent: [ 'l', 'm', 's', 'xs', 'xxs' ],
 	accent_regular: [ 'xxs' ],
-	body: [ 'm', 's' ],
+	body: [ 'xxxl', 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs', 'xxxs' ],
+	basic: [ 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs' ],
 };
 
 const families = Object.keys( styles );

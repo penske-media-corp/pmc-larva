@@ -15,6 +15,10 @@
 	border-left-width: pmc-rem(1);
 }
 
+.lrv-u-border-t-2 {
+	border-top-width: 2px;
+}
+
 .lrv-u-border-t-3 {
 	border-top-width: 3px;
 }
@@ -91,7 +95,7 @@
     }
 }
 
- .lrv-u-border-t-050\@desktop-xl-max {
+.lrv-u-border-t-050\@desktop-xl-max {
     @include pmc-breakpoint( desktop-xl-max ) {
         border-top-width: pmc-rem(1);
     }
