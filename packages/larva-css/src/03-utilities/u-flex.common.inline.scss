@@ -28,32 +28,6 @@ $breakpoints: (
 	flex-direction: column;
 }
 
-@each $size in $flex_basis {
-	
-	$per : #{$size}#{'%'};
-	
-	.lrv-u-flex-basis-#{$size}p\@desktop {
-		
-		@include pmc-breakpoint( desktop ) {
-			flex-basis: $per;
-		}
-	}
-
-	.lrv-u-flex-basis-#{$size}p\@desktop-xl {
-		
-		@include pmc-breakpoint( desktop-xl ) {
-			flex-basis: $per;
-		}
-	}
-
-	.lrv-u-flex-basis-#{$size}p\@mobile-max {
-		
-		@include pmc-breakpoint( mobile-max ) {
-			flex-basis: $per;
-		}
-	}
-}
-
 @include pmc-breakpoint( desktop ) {
 
 	.lrv-u-flex\@desktop {
