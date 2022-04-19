@@ -6,7 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - `story-grid` module changes.
-* larva-css - Add new font sizes `lrv-u-font-size-22@desktop` & `lrv-u-font-size-36@desktop-xl`.
 
 ## 0.6.0 - 04-13-2022
 * larva-tokens - Added artinamerica tokens for hub support
