@@ -1,9 +1,9 @@
 <?php
 /**
-* Generated file.
-*
-* Refer to the relevant Twig file for adjusting this markup.
-*/
+ * Generated file.
+ *
+ * Refer to the relevant Twig file for adjusting this markup.
+ */
 
 ?>
 <section class="u-max-width-300">

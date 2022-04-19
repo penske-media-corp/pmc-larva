@@ -1,9 +1,9 @@
 <?php
 /**
-* Generated file.
-*
-* Refer to the relevant Twig file for adjusting this markup.
-*/
+ * Generated file.
+ *
+ * Refer to the relevant Twig file for adjusting this markup.
+ */
 
 ?>
 <?php foreach ( $list_items ?? [] as $item ) { ?>
