@@ -1,9 +1,9 @@
 <?php
 /**
-* Generated file.
-*
-* Refer to the relevant Twig file for adjusting this markup.
-*/
+ * Generated file.
+ *
+ * Refer to the relevant Twig file for adjusting this markup.
+ */
 
 ?>
 <<?php echo esc_attr( $list_type_name ?? '' ); ?>l class="list larva // <?php echo esc_attr( $list_classes ?? '' ); ?>">

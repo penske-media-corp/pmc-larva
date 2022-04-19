@@ -1,9 +1,9 @@
 <?php
 /**
-* Generated file.
-*
-* Refer to the relevant Twig file for adjusting this markup.
-*/
+ * Generated file.
+ *
+ * Refer to the relevant Twig file for adjusting this markup.
+ */
 
 ?>
 <ul class="o-story-list <?php echo esc_attr( $modifier_class ?? '' ); ?> <?php echo esc_attr( $o_story_list_classes ?? '' ); ?>">
