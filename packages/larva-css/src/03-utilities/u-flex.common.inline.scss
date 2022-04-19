@@ -1,5 +1,13 @@
 @import 'setup';
 
+$flex_basis: ( 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 );
+$breakpoints: (
+	'',
+	'mobile-max',
+	'desktop',
+	'desktop-xl'
+);
+
 .lrv-u-flex {
 	display: flex;
 }
@@ -78,3 +86,32 @@
 		flex-wrap: wrap;
 	}
 }
+
+.lrv-u-flex-direction-column-reverse\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		flex-direction: column-reverse;
+	}
+
+}
+
+@each $breakpoint in $breakpoints {
+
+	@each $size in $flex_basis {
+		$per : #{$size}#{'%'};
+		
+		@if '' == $breakpoint {
+			// No breakpoint
+			.lrv-u-flex-basis-#{$size}p {
+				flex-basis: $per;
+			}
+		} @else {
+			@include pmc-breakpoint( #{$breakpoint} ) {
+				.lrv-u-flex-basis-#{$size}p\@#{$breakpoint} {
+					flex-basis: $per;
+				}
+			}
+		}
+
+	} // end flex loop
+	
+} // end breakpoints loop

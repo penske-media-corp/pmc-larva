@@ -1,6 +1,10 @@
 {
   "name": "@penskemediacorp/pmc-larva",
   "version": "1.0.0",
+  "engines" : {
+    "npm" : ">=6.0.0",
+    "node" : ">=14.0.0"
+  },
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
     "larva": "packages/larva/bin/larva.js server --watch ./ -e twig,js,html",
