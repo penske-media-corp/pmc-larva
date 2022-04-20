@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-patterns - `story-grid` module changes.
 
 ## 0.6.1 - 04-19-2022
 * twig-to-php-parser - Modify generated comment in php as a proper fileDoc to adhere to standards.
