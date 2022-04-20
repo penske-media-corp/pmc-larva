@@ -1,6 +1,10 @@
 <div class="c-lazy-image {{ modifier_class }} {{ c_lazy_image_classes }}">
 	{% if c_lazy_image_link_url %}
-		<a href="{{ c_lazy_image_link_url }}" class="c-lazy-image__link {{ c_lazy_image_link_classes }}">
+		<a href="{{ c_lazy_image_link_url }}" class="c-lazy-image__link {{ c_lazy_image_link_classes }}"
+			{% if c_lazy_image_link_tab_index_attr %}
+				tabindex="{{ c_lazy_image_link_tab_index_attr }}"
+			{% endif %}
+		>
 	{% endif %}
 
 	{% if c_lazy_image_crop_class %}
