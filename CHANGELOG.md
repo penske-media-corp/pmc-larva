@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Update `injected-related-content` module.
+* larva-patterns - `story-grid` module changes.
 
 ## 0.6.1 - 04-19-2022
 * twig-to-php-parser - Modify generated comment in php as a proper fileDoc to adhere to standards.
