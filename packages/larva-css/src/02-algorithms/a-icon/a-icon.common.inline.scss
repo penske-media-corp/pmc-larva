@@ -61,7 +61,8 @@
 // Specific Icons
 
 .lrv-a-icon-forward-slash,
-.lrv-a-icon-bullet {
+.lrv-a-icon-bullet,
+.lrv-a-icon-vertical-pipe {
 	@include _a-icon-reset( before ) {
 		padding-right: $spacer-050;
 	};
@@ -77,6 +78,11 @@
 
 .lrv-a-icon-bullet {
 	--a-icon-content: '\02022';
+}
+
+.lrv-a-icon-vertical-pipe {
+	--a-icon-content: '\007C';
+	padding-right: $spacer-025;
 }
 
 .lrv-a-icon-after-arrow-top-left {
@@ -95,3 +101,4 @@
 		background-color: $color-white;
 	}
 }
+

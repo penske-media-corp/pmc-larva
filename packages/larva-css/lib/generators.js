@@ -3,7 +3,8 @@
  */
 const fs = require( 'fs-extra' );
 const path = require( 'path' );
-const { kebabify, fontData } = require( '@penskemediacorp/larva-tokens' );
+const { kebabify } = require( '../../larva-tokens/lib/utils' );
+const fontData = require( '../../larva-tokens/lib/font-data' );
 
 const { allSelectors, tokenProperties } = fontData;
 
@@ -28,14 +29,7 @@ const ruleset = ( selector ) => {
 	const family = nameSlugs[ 3 ];
 	const tokenBase = [ ...nameSlugs ].slice( 3, nameSlugs.length ).join( '-' );
 
-	properties.forEach( ( property ) => {
-		css += `
-	--${ property }-desktop: var( --${ tokenBase }-${ property }-desktop, var( --${ tokenBase }-${ property }-mobile ) );
-	--${ property }-mobile: var(--is-desktop) var( --${ tokenBase }-${ property }-mobile);`;
-	} );
-
-	css += `\n
-	// Define this token locally; it can be defined via larva-tokens, if needed in the future.
+	css += `\n\t// Define this token locally; it can be defined via larva-tokens, if needed in the future.
 	--font-family: var( --font-family-${ family } );
 
 	font-family: var( --font-family );`;
@@ -43,12 +37,24 @@ const ruleset = ( selector ) => {
 	css += '\n';
 
 	properties.forEach( ( property ) => {
-		css += `
-	${ property }: var(
-		--${ property }-mobile,
-		var(--${ property }-desktop)
-	);`;
+		css += `\t${ property }: var( --${ tokenBase }-${ property }-mobile );\n`;
 	} );
+
+	css += '\n';
+	css += '\t@media (min-width: $screen-desktop) {';
+	css += '\n';
+
+	properties.forEach( ( property ) => {
+		css += `\t\t${ property }: var( --${ tokenBase }-${ property }-desktop );\n`;
+	} );
+	css += '\t}\n';
+	css += '\t@media (min-width: $screen-desktop-xl) {';
+	css += '\n';
+
+	properties.forEach( ( property ) => {
+		css += `\t\t${ property }: var( --${ tokenBase }-${ property }-desktop-xl );\n`;
+	} );
+	css += '\t}';
 
 	return css;
 };

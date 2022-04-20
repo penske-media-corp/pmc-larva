@@ -5,9 +5,41 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-patterns - Add `author` and `author-details` module.
 * larva-patterns - Update `injected-related-content` module.
+
+## 0.6.1 - 04-19-2022
+* twig-to-php-parser - Modify generated comment in php as a proper fileDoc to adhere to standards.
+
+## 0.6.0 - 04-13-2022
+* larva-tokens - Added artinamerica tokens for hub support
+* larva-tokens - Updated RS token as per desktop_xl changes.
+* all - Added Support for Basic ( xxxl, xxl, xl, l, m, s, xs, xxs, xxxs ), Body ( xxl, xl, l, m, s, xs, xxs ), Primary (xxl), secondary (xxl, xl, xs, xxs ) font variations into larva-tokens.
+* larva-patterns - Add `content-showcase` module.
+* larva-css - Add `u-flex` algorithm.
+* larva-css - Add `lrv-a-wrapper-100vw` class for mobile.
+* larva-css - Add `lrv-u-border-l-1` & `lrv-u-border-t-1` classes for desktop, desktop-xl & mobile, and `lrv-u-border-t-2`.
+* all - Add node version check to install script, and add refresh dependencies helper script.
+## 0.5.8 - 04-08-2022
+* larva-patterns - Fix `article-callout` twig template whitespace.
+* larva-css - Adds an algorithm and utility to Larva which can be used to apply text-decoration styles on all states.
+## 0.5.7 - 04-05-2022
+* larva-patterns - Add `article-callout` module.
+* larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
+* all - Add github action on workflow-dispatch to update the visual regression tests in the same environment in which they are run
+* larva - Lock the twing package to version 5.1.0 to temporarily work around bug in library.
+
+## 0.5.6 - 03-29-2022
+* larva-tokens - Add desktop_xl token values in typography.json
+* larva-tokens - Add desktop_xl breakpoint in font-data.js
+* larva-css - Update css generator script to include desktop_xl breakpoint using media queries
+* larva-css - Update test for generated css
+* larva-css - Add `lrv-u-width-50` & `lrv-u-width-35\@mobile-max`.
+* larva-patterns - Add `author` and `author-details` module.
+* larva-js - Add popover js
 * larva-tokens - Update grey color for rollingstone-2022.
+* larva-patterns - Add `article-title` module.
+* larva-patterns - Add `article-kicker` module.
+* larva-patterns - Add `article-excerpt` module.
 
 ## 0.5.5 - 03-03-2022
 * larva-css - Add border top utility.

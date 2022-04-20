@@ -1,8 +1,10 @@
 @import 'setup';
 
 $widths_map: (
+	'width-auto': auto,
 	'width-16': pmc-rem(16),
 	'width-30': pmc-rem(30),
+	'width-50': pmc-rem(50),
 	'width-100': pmc-rem(100),
 	'width-150': pmc-rem(150),
 	'width-200': pmc-rem(200),
@@ -15,8 +17,10 @@ $widths_map: (
 );
 
 @include basic-utility-generator( 'width', (
+	width-auto,
 	width-16,
 	width-30,
+	width-50,
 	width-100,
 	width-150,
 	width-200,
@@ -27,6 +31,12 @@ $widths_map: (
 	width-75p,
 	width-100p,
 ), $widths_map, $NAMESPACE: 'lrv-' );
+
+.lrv-u-width-100\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		width: pmc-rem(100);
+	}
+}
 
 .lrv-u-width-100p\@mobile-max {
 
@@ -49,26 +59,49 @@ $widths_map: (
 	}
 }
 
+.lrv-u-width-150\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		width: pmc-rem(150);
+	}
+}
+
+.lrv-u-width-100\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		width: pmc-rem(100);
+	}
+}
+
+.lrv-u-width-35\@mobile-max {
+
+	@include pmc-breakpoint( mobile-max ) {
+		width: pmc-rem(35);
+	}
+}
+
 .lrv-u-width-154\@desktop-xl {
-    @include pmc-breakpoint(desktop-xl) {
-        width: pmc-rem(154);
-    }  
+
+	@include pmc-breakpoint(desktop-xl) {
+		width: pmc-rem(154);
+	}
 }
 
 .lrv-u-width-177\@tablet-and-desktop-only {
-    @media only screen and (max-width: $screen-desktop-xl) and (min-width: $screen-tablet) {
-        width: pmc-rem(177); 
-    }
+
+	@media only screen and (max-width: $screen-desktop-xl) and (min-width: $screen-tablet) {
+		width: pmc-rem(177);
+	}
 }
 
 .lrv-u-width-36p\@desktop-xl {
-    @include pmc-breakpoint(desktop-xl) {
-        width: 36%;
-    }
+
+	@include pmc-breakpoint(desktop-xl) {
+		width: 36%;
+	}
 }
 
 .lrv-u-width-64p\@desktop-xl {
-    @include pmc-breakpoint(desktop-xl) {
-        width: 64%;
-    }
+
+	@include pmc-breakpoint(desktop-xl) {
+		width: 64%;
+	}
 }
