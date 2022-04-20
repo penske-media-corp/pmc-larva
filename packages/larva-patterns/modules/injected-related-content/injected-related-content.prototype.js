@@ -11,7 +11,7 @@ const c_title = clonedeep(c_title_prototype);
 
 c_title.c_title_text = 'Chronixx Says Some Dancehall Lyrics Are ‘Embarrassing’, Artists Should Stop Calling Him For Features';
 c_title.c_title_classes = 'lrv-a-font-primary-xs lrv-u-color-black lrv-u-padding-t-125';
-c_title.c_title_link_classes = 'lrv-a-font-primary-xs lrv-u-color-black lrv-a-truncate-ellipsis-5line@desktop-xl-max lrv-a-truncate-ellipsis-3line@desktop-xl';
+c_title.c_title_link_classes = 'lrv-a-font-primary-xs lrv-u-color-black lrv-a-truncate-ellipsis-4line@mobile-max lrv-a-truncate-ellipsis-5line@tablet-desktop-only lrv-a-truncate-ellipsis-3line@desktop-xl';
 c_title.c_title_url = '#';
 
 const c_lazy_image_prototype = require('../../components/c-lazy-image/c-lazy-image.prototype.js');
@@ -31,6 +31,7 @@ o_card_first.c_title.c_title_url = '#';
 o_card_first.c_lazy_image = false;
 o_card_first.c_span = false;
 o_card_first.c_timestamp = false;
+o_card_first.o_card_tag_text = 'div';
 
 const o_card_last = clonedeep(o_card_prototype);
 
@@ -42,6 +43,7 @@ o_card_last.c_title.c_title_url = '#';
 o_card_last.c_lazy_image = false;
 o_card_last.c_span = false;
 o_card_last.c_timestamp = false;
+o_card_last.o_card_tag_text = 'div';
 
 module.exports = {
     injected_related_content_classes: 'lrv-u-border-t-1 lrv-u-padding-t-025',
