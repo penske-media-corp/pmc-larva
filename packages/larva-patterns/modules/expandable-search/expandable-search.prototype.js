@@ -8,7 +8,7 @@ search_form.search_form_input_placeholder_attr = 'Search...';
 
 const o_icon_button_search = clonedeep( o_icon_button_search_prototype );
 o_icon_button_search.o_icon_button_classes += ' js-ExpandableSearch-trigger';
-o_icon_button_search.c_icon.c_icon_classes += ' lrv-u-display-block lrv-u-width-24 lrv-u-height-24 lrv-u-color-brand-primary:hover';
+o_icon_button_search.c_icon.c_icon_classes = ' lrv-u-display-block lrv-u-width-24 lrv-u-height-24 lrv-u-color-brand-primary:hover';
 
 module.exports = {
 	expandable_search_outer_classes:  'js-ExpandableSearch lrv-u-flex lrv-u-margin-l-auto lrv-a-glue-parent',

@@ -3,6 +3,10 @@ const clonedeep = require( 'lodash.clonedeep' );
 const header_prototype = require( './header.prototype' );
 const header = clonedeep( header_prototype );
 
+const header_sticky_prototype = require( '../header-sticky/header-sticky.article' );
+const header_sticky = clonedeep( header_sticky_prototype );
+header.header_sticky = header_sticky;
+
 header.is_home = false;
 header.header_classes = 'lrv-a-glue-parent';
 header.header_inner_classes = 'lrv-u-background-color-white lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-width-100p';
