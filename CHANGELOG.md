@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
 
 ## Unpublished
+* larva-patterns - Add `brand-most-popular` module.
+* larva-patterns - Update `newswire` module and add support for slider.
+* larva-css - Add `a-grid` classes.
+* larva-css - Add `lrv-u-font-size-16@mobile-max` class
+* larva-css - Add `.lrv-u-border-l-00\@mobile-max`, `.lrv-u-border-r-00\@mobile-max`, `.lrv-u-border-t-1\@mobile-max` & `.lrv-u-border-b-00\@mobile-max` classes.
 
 ## 0.6.2 - 04-20-2022
 * larva-patterns - Update `injected-related-content` module.
@@ -46,6 +51,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `article-title` module.
 * larva-patterns - Add `article-kicker` module.
 * larva-patterns - Add `article-excerpt` module.
+* larva-patterns - Add `brands-most-popular` module.
+* larva-patterns - Update `newswire` module.
+* larva-css - Add a-counter algorithm.
 
 ## 0.5.5 - 03-03-2022
 * larva-css - Add border top utility.

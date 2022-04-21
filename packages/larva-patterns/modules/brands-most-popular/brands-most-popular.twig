@@ -1,0 +1,11 @@
+<section class="brands-most-popular // {{brands_most_popular_classes}}">
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	<div class="{{ brands_most_popular_items_wrapper_classes }}">
+		{% for item in popular_items %}
+			{% include "@larva/objects/o-card/o-card.twig" with item %}
+		{% endfor %}
+	</div>
+</section>
