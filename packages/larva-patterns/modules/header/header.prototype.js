@@ -21,7 +21,7 @@ for (let i = 0; i < header_menu_items.length; i++) {
 }
 
 const o_account_menu = clonedeep( require( '../../objects/o-account-menu/o-account-menu.prototype') );
-o_account_menu.o_account_wrapper_classes = 'lrv-a-glue-parent lrv-a-icon-after-arrow-top-left lrv-u-background-color-white lrv-u-border-a-2 lrv-u-margin-t-1 lrv-u-width-150';
+o_account_menu.o_account_menu_classes += ' lrv-a-hidden';
 
 const c_shop_link = clonedeep( c_link_prototype );
 c_shop_link.c_link_text = 'RS shop';
@@ -80,6 +80,5 @@ module.exports = {
 	is_home: true,
 	o_header_buttons,
 	o_header_buttons_column,
-	is_user_logged_in:false,
 	o_account_menu,
 };

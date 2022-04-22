@@ -31,7 +31,6 @@ const header_sticky = clonedeep(header_sticky_prototype);
 header_sticky.o_social_list = o_social_list;
 header_sticky.o_social_list.o_social_list_classes = ' lrv-u-flex lrv-a-space-children--1 lrv-a-space-children-horizontal lrv-u-align-items-center lrv-a-unstyle-list  lrv-u-margin-l-auto lrv-u-margin-r-150';
 
-header_sticky.expandable_search.expandable_search_inner_classes = header_sticky.expandable_search.expandable_search_inner_classes.replace('lrv-a-glue--r-0','lrv-a-glue--l-0');
 header_sticky.expandable_search.expandable_search_classes += ' sticky-expandable';
 
 header_sticky.read_next = read_next;

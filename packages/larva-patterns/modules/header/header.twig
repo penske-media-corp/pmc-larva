@@ -18,12 +18,9 @@
 						</div>
 						<div class="header-links-secondary // {{ header_links_secondary_classes }} ">
 							<div class="lrv-u-display-inline-flex lrv-u-flex-direction-column ">
-								{% if is_user_logged_in %}
 									{% include "@larva/objects/o-account-menu/o-account-menu.twig" with o_account_menu %}
-								{% else %}
 									{% include "@larva/components/c-link/c-link.twig" with c_link_right_primary %}
 									{% include "@larva/components/c-link/c-link.twig" with c_link_right_secondary %}
-								{% endif %}
 							</div>
 						</div>
 					</div>

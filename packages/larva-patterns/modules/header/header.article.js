@@ -32,7 +32,7 @@ for (let i = 0; i < header_menu_items.length; i++) {
 	header.header_menu.o_nav.o_nav_list_items[i].c_link_classes = 'lrv-u-padding-tb-075 lrv-a-unstyle-link lrv-u-color-brand-primary:hover lrv-a-hover-effect lrv-u-whitespace-nowrap lrv-u-border-b-6 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover lrv-u-line-height-large lrv-u-display-inline-block';
 }
 
-header.expandable_search.expandable_search_inner_classes = header.expandable_search.expandable_search_inner_classes.replace('lrv-a-glue--r-0','lrv-a-glue--l-0');
+header.expandable_search.expandable_search_inner_classes = 'lrv-u-height-auto lrv-a-glue lrv-a-glue--r-0 lrv-a-glue--t-50p lrv-u-flex lrv-u-transform-translateY-n50p';
 header.expandable_search.expandable_search_classes += ' sticky-expandable';
 
 module.exports = header;
