@@ -74,4 +74,9 @@
 			{% include "@larva/modules/story-arc-stories/story-arc-stories.twig" with story_arc_stories %}
 		</div>
 	{% endif %}
+
 </div>
+
+{% if is_river_story %}
+	{{ story_after_wp_action }}
+{% endif %}
