@@ -188,3 +188,9 @@ $widths_map: (
 		width: pmc-rem(135);
 	}
 }
+
+.lrv-u-width-100p\@tablet {
+	@include pmc-breakpoint(tablet) {
+		width: 100%;
+	}
+}

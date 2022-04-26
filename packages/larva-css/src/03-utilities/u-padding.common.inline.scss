@@ -90,3 +90,7 @@ $paddings_with_breakpoints: (
 );
 
 @include u-padding( $paddings_with_breakpoints, $NAMESPACE: 'lrv-' );
+
+.lrv-u-padding-l-3 {
+	padding-left: $spacer-3;
+}

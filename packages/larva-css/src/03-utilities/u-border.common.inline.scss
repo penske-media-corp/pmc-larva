@@ -63,6 +63,18 @@
 	border-right-width: pmc-rem(6);
 }
 
+.lrv-u-border-r-2 {
+	border-right-width: pmc-rem(2);
+}
+
+.lrv-u-border-b-2 {
+	border-bottom-width: pmc-rem(2);
+}
+
+.lrv-u-border-l-2 {
+	border-left-width: pmc-rem(2);
+}
+
 .lrv-u-border-l-00\@mobile-max {
 	@include pmc-breakpoint(mobile-max) {
 		border-left-width: 0;
@@ -158,17 +170,5 @@
 .lrv-u-border-b-2\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		border-bottom-width: pmc-rem(2);
-	}
- }
-
- .lrv-u-border-r-00\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
-		border-right-width: 0;
-	}
- }
-
- .lrv-u-border-b-00\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
-		border-bottom-width: 0;
 	}
  }
