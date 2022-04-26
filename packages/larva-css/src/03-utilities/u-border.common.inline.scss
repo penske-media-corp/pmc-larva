@@ -125,6 +125,12 @@
 	}
 }
 
+.lrv-u-border-r-1\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		border-right-width: 1px;
+	}
+}
+
 .lrv-u-border-r-1\@desktop {
 	@include pmc-breakpoint( desktop ) {
 		border-right-width: 1px;
@@ -144,9 +150,9 @@
 }
 
 .lrv-u-border-t-050\@desktop-xl-max {
-    @include pmc-breakpoint( desktop-xl-max ) {
-        border-top-width: pmc-rem(1);
-    }
+	@include pmc-breakpoint( desktop-xl-max ) {
+		border-top-width: pmc-rem(1);
+	}
 }
 
 .lrv-u-border-b-2\@mobile-max {

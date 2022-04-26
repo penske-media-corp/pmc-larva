@@ -1,0 +1,13 @@
+<div class="footer-button-list {{ footer_button_list_classes }}">
+	{% if footer_button_list_title_text %}
+		<h4 class="footer-button-list__title {{ footer_button_list_title_classes }}">
+			{{ footer_button_list_title_text }}
+		</h4>
+	{% endif %}
+
+	<section class="footer-button-list__content lrv-u-flex lrv-u-flex-direction-column {{ footer_button_list_content_classes }}">
+		{% for item in footer_button_list_buttons %}
+			{% include "@larva/components/c-button/c-button.twig" with item %}
+		{% endfor %}
+	</section>
+</div>
