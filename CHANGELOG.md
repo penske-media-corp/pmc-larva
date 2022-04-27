@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## Unpublished
-
+* larva-css - Add utility classes for `width`, `overflow` and `flex-shrink`.
+* larva-patterns - Add `the-moth` variant for `content-showcase` module.
 ## 0.6.3 - 04-21-2022
 * larva-patterns - Add `brand-most-popular` module.
 * larva-patterns - Update `newswire` module and add support for slider.
@@ -13,8 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Add `.lrv-u-border-l-00\@mobile-max`, `.lrv-u-border-r-00\@mobile-max`, `.lrv-u-border-t-1\@mobile-max` & `.lrv-u-border-b-00\@mobile-max` classes.
 * larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
 * larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
-* larva-css - Add utility classes for `width`, `overflow` and `flex-shrink`.
-* larva-patterns - Add `the-moth` variant for `content-showcase` module.
 
 ## 0.6.2 - 04-20-2022
 * larva-patterns - Update `injected-related-content` module.
