@@ -5,10 +5,10 @@ const c_link__parent = clonedeep( c_link );
 const c_link__child = clonedeep( c_link );
 
 c_link__parent.c_link_text = 'Parent item';
-c_link__parent.c_link_classes = 'lrv-a-unstyle-link lrv-u-color-brand-primary-dark:hover lrv-u-font-weight-bold lrv-a-font-body-xxs lrv-u-text-transform-uppercase';
+c_link__parent.c_link_classes = 'lrv-a-unstyle-link lrv-u-color-brand-primary-dark:hover lrv-u-font-weight-bold lrv-a-font-body-xs lrv-u-text-transform-uppercase';
 
 c_link__child.c_link_text = 'Child item';
-c_link__child.c_link_classes = 'lrv-a-unstyle-link lrv-u-color-brand-primary-dark:hover lrv-u-padding-tb-025 lrv-u-display-block lrv-a-font-body-xxs';
+c_link__child.c_link_classes = 'lrv-a-unstyle-link lrv-u-color-brand-primary-dark:hover lrv-u-padding-tb-025 lrv-u-display-block lrv-a-font-body-xs';
 
 module.exports = {
 	c_link: c_link__parent,

@@ -8,8 +8,8 @@ const o_social_list_prototype = require('../../objects/o-social-list/o-social-li
 const read_next = clonedeep(read_next_prototype);
 read_next.read_next_classes += ' lrv-u-margin-l-125 lrv-u-overflow-hidden lrv-u-margin-r-1';
 read_next.c_span.c_span_text = 'Music';
-read_next.c_span.c_span_classes = 'lrv-u-whitespace-nowrap lrv-u-text-transform-uppercase a-font-body-m lrv-u-font-weight-700';
-read_next.c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-whitespace-nowrap a-font-body-m lrv-u-letter-spacing-n004';
+read_next.c_span.c_span_classes = 'lrv-u-whitespace-nowrap lrv-u-text-transform-uppercase lrv-a-font-body-m lrv-u-font-weight-700';
+read_next.c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-whitespace-nowrap lrv-a-font-body-m lrv-u-letter-spacing-n004';
 
 const o_social_list = clonedeep(o_social_list_prototype);
 const social_icons = ['facebook-rs', 'twitter', 'email'];
