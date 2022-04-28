@@ -35,8 +35,6 @@ Using [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link), we can point 
 1. From within your project, run `npx @penskemediacorp/larva link-all`.
 1. From within your project, run a full build (usually `npm run prod`).
 
-Once
-
 ## Viewing Larva Patterns
 
 To view and develop Larva patterns, run the following command after the above installation setup:
