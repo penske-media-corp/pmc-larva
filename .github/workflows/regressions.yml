@@ -16,6 +16,11 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - id: find-pull-request
+      uses: jwalton/gh-find-current-pr@v1
+      with:
+        # Can be "open", "closed", or "all".  Defaults to "open".
+        state: open
     - name: Debug
       run: echo ${{ steps.find-pull-request.outputs.number }}
     - name: Comment Regression test results on PR
