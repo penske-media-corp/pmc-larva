@@ -9,26 +9,35 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - id: find-pull-request
+    - name: Install Dependencies
+      run: |
+        npm install -g backstopjs --unsafe-perm=true --allow-root
+        npm ci
+        ./node_modules/.bin/lerna bootstrap
+    - name: Run Tests
+      run: |
+        nohup npm run larva > /dev/null 2>&1 &
+        sleep 5
+        npm run backstop -- test
+      env:
+        CI: true
+    - name: Archive Backstop results
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: backstop-results
+        path: backstop_data
+     - id: find-pull-request
       uses: jwalton/gh-find-current-pr@v1
       with:
-        # Can be "open", "closed", or "all".  Defaults to "open".
         state: open
-    - name: Debug
-      run: echo ${{ github.run_id }}
-    - name: Find Comment
-      uses: peter-evans/find-comment@v2
-      id: fc
-      with:
-        issue-number: ${{ steps.find-pull-request.outputs.number }}
-        comment-author: 'github-actions[bot]'
-        body-includes: Backstop Visual Regression Tests Failed
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
       if: steps.fc.outputs.comment-id == ''
@@ -39,39 +48,22 @@ jobs:
         comment-author: 'github-actions[bot]'
         body: |
             ### Backstop Visual Regression Tests Failed
-            <p>
-                <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">
-                View the results
-                </a>. Look under the section titled "Artifacts". Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory. Open it in a browser to view the screenshot comparison.
-            </p>
 
-            ### When the results contain changes you want to retain
-            <p>
+            <p><a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the results</a>.</p>
+            <details>
+              <summary>How to view and update regression tests</summary>
+              <p>
+                  Look under the section titled "Artifacts". Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory. Open it in a browser to view the screenshot comparison.
+              </p>
+
+              #### When the results contain changes you want to retain
+              <p>
                 <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
                 This will create a new branch with reference screenshots.
                 Then you will need to open a pull request to this branch to update it.
-            </p>
-    - name: Update Comment
-      uses: peter-evans/create-or-update-comment@v2
-      if: steps.fc.outputs.comment-id != ''
-      with:
-        token: ${{secrets.GITHUB_TOKEN}}
-        repository: ${{ github.repository }}
-        comment-id: ${{ steps.fc.outputs.comment-id }}
-        comment-author: 'github-actions[bot]'
-        edit-mode: 'replace'
-        body: |
-            ### Backstop Visual Regression Tests Failed AGAIN!!
-            <p>
-                <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">
-                View the results
-                </a>. Look under the section titled "Artifacts". Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory. Open it in a browser to view the screenshot comparison.
-            </p>
+              </p>
+            </details>
 
-            ### When the results contain changes you want to retain
-            <p>
-                <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
-                This will create a new branch with reference screenshots.
-                Then you will need to open a pull request to this branch to update it.
-            </p>
+
+
 
