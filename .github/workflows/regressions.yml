@@ -34,13 +34,13 @@ jobs:
       with:
         name: backstop-results
         path: backstop_data
-     - id: find-pull-request
+    - id: find-pull-request
       uses: jwalton/gh-find-current-pr@v1
       with:
         state: open
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
-      if: steps.fc.outputs.comment-id == ''
+      if: ${{ failure() }}
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
@@ -48,7 +48,6 @@ jobs:
         comment-author: 'github-actions[bot]'
         body: |
             ### 🚨 Backstop Visual Regression Tests Failed
-
             <p><a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the results</a>.</p>
             <details>
               <summary>How to view and update regression tests</summary>
