@@ -16,6 +16,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Debug
+      run: echo ${{ github.event.pull_request.number }}
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
       if: github.event_name == 'push'
