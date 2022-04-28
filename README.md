@@ -25,6 +25,18 @@ If you are updating dependencies or debugging version conflicts, there is an add
 ```
 sh scripts/refresh-dependencies.sh
 ```
+
+## Linking Larva for Local Development
+When working with Larva locally, you'll likely want to test your changes on a Larva project.
+
+Using [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link), we can point your local project's Larva packages to your local Larva monorepo.
+
+1. From within this repo, run `npm run link-all` to link the Larva, Patterns, CSS, and JS packages.
+1. From within your project, run `npx @penskemediacorp/larva link-all`.
+1. From within your project, run a full build (usually `npm run prod`).
+
+Once
+
 ## Viewing Larva Patterns
 
 To view and develop Larva patterns, run the following command after the above installation setup:
