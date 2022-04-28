@@ -1,6 +1,8 @@
 /**
  * This command can be used from within any Larva project to link the Larva
  * packages (from the monorepo) for local development.
+ *
+ * @see https://github.com/penske-media-corp/pmc-larva/blob/master/README.md#linking-larva-for-local-development
  */
 
 var shell = require( 'shelljs' );
