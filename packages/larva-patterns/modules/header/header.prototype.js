@@ -29,7 +29,7 @@ c_shop_link.c_link_classes = 'lrv-u-margin-b-050 lrv-a-unstyle-link lrv-u-displa
 
 const c_login_link = clonedeep( c_link_prototype );
 c_login_link.c_link_text = 'Log In';
-c_login_link.c_link_classes = 'subscriber-login-link lrv-u-margin-b-050 lrv-a-unstyle-link lrv-u-display-inline lrv-u-color-brand-primary:hover lrv-u-border-b-1 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover lrv-u-font-family-body lrv-u-text-transform-uppercase lrv-a-font-body-xxs';
+c_login_link.c_link_classes = 'subscriber-login-link lrv-u-margin-b-050 lrv-a-unstyle-link lrv-u-display-inline lrv-u-color-brand-primary:hover lrv-u-border-b-1 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover lrv-u-font-family-body lrv-u-text-transform-uppercase lrv-a-font-body-xxs  lrv-a-hidden@mobile-max ';
 
 const c_subscribe_link = clonedeep( c_link_prototype );
 c_subscribe_link.c_link_text = 'Subscribe';
@@ -64,14 +64,14 @@ module.exports = {
 	header_contents_classes: '',
 	header_logo_classes: 'lrv-u-text-align-center lrv-u-width-40p@tablet',
 	header_content_primary_classes: 'lrv-u-flex lrv-u-justify-content-space-between lrv-u-align-items-center lrv-u-margin-b-050 lrv-u-padding-b-1',
-	header_content_secondary_classes: 'lrv-u-align-items-center lrv-u-flex lrv-u-justify-content-center',
-	header_links_primary_classes: 'lrv-u-width-30p lrv-a-space-children--050 lrv-a-space-children-vertical',
+	header_content_secondary_classes: 'lrv-a-hidden@mobile-max  lrv-u-align-items-center lrv-u-flex lrv-u-justify-content-center',
+	header_links_primary_classes: 'lrv-a-hidden@mobile-max lrv-u-width-30p lrv-a-space-children--050 lrv-a-space-children-vertical',
 	header_links_secondary_classes:'lrv-u-width-30p lrv-u-text-align-right lrv-a-space-children--050 lrv-a-space-children-vertical',
 	header_mobile_button_classes:'lrv-a-hidden@tablet lrv-u-width-22p@mobile-max',
 	header_links_primary_inner_classes:'lrv-u-display-inline-flex lrv-u-flex-direction-column',
 	header_links_secondary_inner_classes:'lrv-u-display-inline-flex lrv-u-flex-direction-column ',
 	header_content_secondary_outer_classes:'lrv-u-border-t-6',
-	header_content_secondary_inner_classes:'lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-margin-t-050 lrv-u-padding-t-050 lrv-u-padding-b-050',
+	header_content_secondary_inner_classes:'lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-margin-t-050 lrv-u-padding-t-050 lrv-u-padding-b-050 lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-margin-t-050 lrv-u-margin-t-025@mobile-max lrv-u-border-b-00@mobile-max',
 	header_content_menu_classes:'lrv-u-margin-l-125 lrv-a-space-children--050 lrv-a-space-children-vertical',
 	c_logo,
 	c_link_left_primary: c_shop_link,
