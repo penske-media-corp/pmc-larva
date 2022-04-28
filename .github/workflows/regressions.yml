@@ -42,7 +42,7 @@ jobs:
 
             #### Update the reference screenshots
             <p>
-                <a href="#">Run the Update visual regression tests</a> on this feature branch.
+                <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
                 This will create a new branch with reference screenshots.
                 Then you will need to open a pull request to this branch to update it.
             </p>
