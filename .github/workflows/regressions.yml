@@ -17,14 +17,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Debug
-      run: echo ${{ github.event.number }}
+      run: echo ${{ steps.find-pull-request.outputs.number }}
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
       if: github.event_name == 'push'
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
-        issue-number: ${{ github.event.number }}
+        issue-number: ${{ steps.find-pull-request.outputs.number }}
         comment-author: 'github-actions[bot]'
         body: |
             #### Backstop Results
