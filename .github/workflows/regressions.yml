@@ -22,7 +22,7 @@ jobs:
         # Can be "open", "closed", or "all".  Defaults to "open".
         state: open
     - name: Debug
-      run: echo ${{ github.workflow.job.id }}
+      run: echo ${{ github.run_id }}
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
       if: github.event_name == 'push'
