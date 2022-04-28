@@ -22,7 +22,7 @@ jobs:
         # Can be "open", "closed", or "all".  Defaults to "open".
         state: open
     - name: Debug
-      run: echo ${{ steps.find-pull-request.outputs.number }}
+      run: echo ${{ github.workflow.job.id }}
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
       if: github.event_name == 'push'
@@ -32,7 +32,7 @@ jobs:
         issue-number: ${{ steps.find-pull-request.outputs.number }}
         comment-author: 'github-actions[bot]'
         body: |
-            #### Backstop Results
+            ### Backstop Results
             <details>
             <summary>View the results</summary>
             <p>
