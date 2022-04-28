@@ -22,13 +22,43 @@ jobs:
         state: open
     - name: Debug
       run: echo ${{ github.run_id }}
+    - name: Find Comment
+      uses: peter-evans/find-comment@v2
+      id: fc
+      with:
+        issue-number: ${{ steps.find-pull-request.outputs.number }}
+        comment-author: 'github-actions[bot]'
+        body-includes: Backstop Visual Regression Tests Failed
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
-      if: github.event_name == 'push'
+      if: steps.fc.outputs.comment-id == ''
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
         issue-number: ${{ steps.find-pull-request.outputs.number }}
+        comment-author: 'github-actions[bot]'
+        body: |
+            ### Backstop Visual Regression Tests Failed
+            <p>
+                <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">
+                View the results
+                </a>. Look under the section titled "Artifacts". Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory. Open it in a browser to view the screenshot comparison.
+            </p>
+
+            ### When the results contain changes you want to retain
+
+            <p>
+                <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
+                This will create a new branch with reference screenshots.
+                Then you will need to open a pull request to this branch to update it.
+            </p>
+    - name: Update Comment
+      uses: peter-evans/create-or-update-comment@v2
+      if: steps.fc.outputs.comment-id != ''
+      with:
+        token: ${{secrets.GITHUB_TOKEN}}
+        repository: ${{ github.repository }}
+        comment-id: ${{ steps.fc.outputs.comment-id }}
         comment-author: 'github-actions[bot]'
         body: |
             ### Backstop Visual Regression Tests Failed
