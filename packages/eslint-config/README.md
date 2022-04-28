@@ -15,7 +15,6 @@ In a consuming projects .eslint.json, start with:
 {
   "extends": "@penskemediacorp/eslint-config"
 }
-
 ```
 
 ## Add Custom Rules
