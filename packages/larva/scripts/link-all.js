@@ -5,7 +5,7 @@
  * @see https://github.com/penske-media-corp/pmc-larva/blob/master/README.md#linking-larva-for-local-development
  */
 
-var shell = require( 'shelljs' );
+const shell = require( 'shelljs' );
 
 shell.exec( 'npm link @penskemediacorp/larva' );
 shell.exec( 'npm link @penskemediacorp/larva-patterns' );

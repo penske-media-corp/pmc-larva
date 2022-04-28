@@ -1,13 +1,16 @@
 /**
- * This script installs the latest version of Larva
- *
- * @see https://github.com/penske-media-corp/pmc-larva/blob/master/UPGRADING.md#how-to-upgrade-a-larva-project
+ * This script installs the latest version of Larva and runs a full build.
  */
 
-var shell = require( 'shelljs' );
+const path = require( 'path' );
+const shell = require( 'shelljs' );
+const binPath = path.resolve(__dirname, '../bin/larva.js');
 
 console.log( 'Upgrading Larva to the latest stable version' );
-shell.exec( 'npm install @penskemediacorp/larva@latest', { silent: false } );
+shell.exec( 'npm install @penskemediacorp/larva@latest' );
 
-console.log( 'Building your project' );
-shell.exec( 'npm run prod' );
+console.log( 'Building CSS assets' );
+shell.exec( `${binPath} prod-scss` );
+
+console.log( 'Building JavaScript assets' );
+shell.exec( `${binPath} prod-js` );
