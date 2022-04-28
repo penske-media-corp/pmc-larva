@@ -9,19 +9,3 @@
 		letter-spacing: pmc-rem(1.95);
 	}
 }
-
-.lrv-u-letter-spacing-n004 {
-	letter-spacing: -#{pmc-rem(0.07)};
-}
-
-.lrv-u-letter-spacing-005\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
-		letter-spacing: pmc-rem(0.8);
-	}
-}
-
-.lrv-u-letter-spacing-008\@tablet {
-	@include pmc-breakpoint( tablet ) {
-		letter-spacing: pmc-rem(1.3);
-	}
-}

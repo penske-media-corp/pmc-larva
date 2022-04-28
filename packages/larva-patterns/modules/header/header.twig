@@ -4,11 +4,11 @@
 			<div class="header-outer // js-hide-when-sticky {{ header_outer_classes }}">
 				<div class="header-inner //  {{ header_inner_classes }} ">
 					<div class="header-content-primary // lrv-a-wrapper {{ header_content_primary_classes }}">
-						<div class="header-mobile-button lrv-a-hidden@tablet lrv-u-width-22p@mobile-max">
+						<div class="header-mobile-button // {{ header_mobile_button_classes }} ">
 							{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
 						</div>
 						<div class="header-links-primary // {{ header_links_primary_classes }}  ">
-							<div class="lrv-u-display-inline-flex lrv-u-flex-direction-column">
+							<div class="header-links-primary-inner // {{ header_links_primary_inner_classes }} ">
 								{% include "@larva/components/c-link/c-link.twig" with c_link_left_primary %}
 								{% include "@larva/components/c-link/c-link.twig" with c_link_left_secondary %}
 							</div>
@@ -17,15 +17,15 @@
 							{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
 						</div>
 						<div class="header-links-secondary // {{ header_links_secondary_classes }} ">
-							<div class="lrv-u-display-inline-flex lrv-u-flex-direction-column ">
-									{% include "@larva/objects/o-account-menu/o-account-menu.twig" with o_account_menu %}
+							<div class="header-links-secondary-inner // {{ header_links_secondary_inner_classes }} "> 
 									{% include "@larva/components/c-link/c-link.twig" with c_link_right_primary %}
 									{% include "@larva/components/c-link/c-link.twig" with c_link_right_secondary %}
+									{% include "@larva/objects/o-account-menu/o-account-menu.twig" with o_account_menu %}
 							</div>
 						</div>
 					</div>
-					<div class="lrv-u-border-t-6">
-						<div class="lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-margin-t-050 lrv-u-padding-t-050 lrv-u-padding-b-050">
+					<div class="header-content-secondary-outer // {{ header_content_secondary_outer_classes }} ">
+						<div class="header-content-secondary-inner // {{ header_content_secondary_inner_classes }} ">
 							<div class="header-content-secondary // lrv-a-wrapper {{ header_content_secondary_classes }} ">
 								{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
 								{% include "@larva/modules/header-menu/header-menu.twig" with header_menu %}
@@ -51,11 +51,11 @@
 						<div class="header-logo // {{ header_logo_classes }} ">
 							{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
 						</div>
-						<div class="header-links-primary // lrv-u-align-items-center lrv-u-padding-r-1 lrv-u-border-r-1 {{ header_links_primary_classes }}  ">
+						<div class="header-links-primary //  {{ header_links_primary_classes }}  ">
 							{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
 							{% include "@larva/modules/expandable-search/expandable-search.twig" with expandable_search %}
 						</div>
-						<div class="header-links-primary // lrv-u-margin-l-125 {{ header_links_primary_classes }}  ">
+						<div class="header-content-menu // {{ header_content_menu_classes }}  ">
 							{% include "@larva/modules/header-menu/header-menu.twig" with header_menu %}
 						</div>
 						<div class="header-links-secondary // {{ header_links_secondary_classes }} ">

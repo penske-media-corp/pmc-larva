@@ -79,6 +79,8 @@ $breakpoints: (
 
 // Legacy - should not have tablet and mobile-max
 $paddings_with_breakpoints: (
+	('l', $spacer-3 ),
+
 	('tb', $spacer-025, mobile-max ),
 	('tb', $spacer-1, mobile-max),
 
@@ -90,7 +92,3 @@ $paddings_with_breakpoints: (
 );
 
 @include u-padding( $paddings_with_breakpoints, $NAMESPACE: 'lrv-' );
-
-.lrv-u-padding-l-3 {
-	padding-left: $spacer-3;
-}

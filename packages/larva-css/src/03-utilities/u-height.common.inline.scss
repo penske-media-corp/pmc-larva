@@ -41,15 +41,3 @@ $heights_map: (
 .lrv-u-max-height-50 {
 	max-height: pmc-rem(50);
 }
-
-.lrv-u-min-height-35\@tablet {
-	@include pmc-breakpoint(tablet) {
-		min-height: pmc-rem(35);
-	}
-}
-
-.lrv-u-height-28\@mobile-max {
-	@include pmc-breakpoint(mobile-max) {
-		height: pmc-rem(28);
-	}
-}

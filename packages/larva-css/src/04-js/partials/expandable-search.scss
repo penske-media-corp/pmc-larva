@@ -1,11 +1,8 @@
 @import 'setup';
 
-/* stylelint-disable */
-// Temporarily disabled until reactor is merged.
-
 // Note:
 // Swiftype markup is generated dynamically, so plain CSS is used instead of
-// Larva CSS classes. Sad.
+// Larva CSS classes.
 
 // The Swiftype module appears in 3 modules, or contexts:
 // 1. header (desktop, not sticky)
@@ -17,7 +14,6 @@
 // Style specific for each context, applied by adding specificity with .context-module .swiftype.
 // BEM modifier classes are intentionally not used because the specificity is helpful here,
 // and we can use the exiting module classes instead of creating new names for modifiers.
-
 
 //
 // Base module styles
@@ -204,4 +200,3 @@
 	}
 
 }
-/* stylelint-enable */

@@ -16,9 +16,10 @@ header.header_outer_classes='lrv-u-border-t-5 lrv-u-padding-t-025 lrv-u-width-10
 header.header_logo_classes='lrv-u-flex lrv-u-text-align-center';
 header.header_content_primary_classes = 'lrv-a-wrapper lrv-a-space-children-horizontal lrv-u-align-items-center lrv-u-flex';
 header.header_content_secondary_classes = 'lrv-u-align-items-center lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-flex lrv-u-justify-content-center lrv-u-margin-t-025 lrv-u-padding-tb-075';
-header.header_links_primary_classes = 'lrv-a-space-children--050 lrv-a-space-children-horizontal lrv-u-flex';
+header.header_links_primary_classes = 'lrv-u-align-items-center lrv-u-padding-r-1 lrv-u-border-r-1 lrv-a-space-children--050 lrv-a-space-children-horizontal lrv-u-flex';
 header.header_links_secondary_classes = 'lrv-a-space-children--1 lrv-a-space-children-horizontal lrv-u-flex lrv-u-margin-l-auto';
 header.c_logo.c_logo_classes += 'lrv-u-color-brand-primary lrv-u-color-brand-primary:hover lrv-u-display-inline-flex lrv-u-justify-content-center lrv-u-width-100p lrv-u-width-150';
+header.header_content_menu_classes='lrv-u-margin-l-125 lrv-a-space-children--050 lrv-a-space-children-horizontal lrv-u-flex';
 
 header.o_icon_button_menu.c_icon.c_icon_classes = 'lrv-u-display-block lrv-u-width-30 lrv-u-height-30';
 header.o_icon_button_menu.o_icon_button_classes = 'js-MegaMenu-Trigger lrv-u-align-items-center lrv-u-border-a-0 lrv-u-flex lrv-u-padding-lr-1 lrv-u-background-color-transparent lrv-u-color-brand-primary:hover';

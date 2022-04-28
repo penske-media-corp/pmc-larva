@@ -16,11 +16,11 @@ newsletter_heading.heading_markup = 'Alerts & Newsletters';
 const o_email_capture_form_prototype = require( '../../objects/o-email-capture-form/o-email-capture-form.prototype' );
 const o_email_capture_form = clonedeep( o_email_capture_form_prototype );
 
-o_email_capture_form.c_email_field.c_email_field_label_text = '';
+o_email_capture_form.c_email_field.c_email_field_label_text = 'Email Address';
 o_email_capture_form.c_email_field.c_email_field_input_placeholder_attr = 'ENTER E-MAIL';
 o_email_capture_form.c_email_field.c_email_field_input_classes = 'lrv-u-width-100p';
 o_email_capture_form.c_email_field.c_email_field_classes = 'lrv-u-border-b-1 lrv-u-border-r-1 lrv-a-font-body-xxs lrv-u-margin-b-125 lrv-u-margin-b-00@mobile-max lrv-u-text-align-left lrv-u-width-75p@mobile-max';
-o_email_capture_form.c_email_field.c_email_field_label_classes = 'lrv-a-font-body-xxs lrv-u-text-transform-uppercase';
+o_email_capture_form.c_email_field.c_email_field_label_classes = 'lrv-a-hidden';
 o_email_capture_form.o_email_capture_form_inner_classes = 'lrv-u-text-align-right lrv-u-align-items-center';
 o_email_capture_form.c_button.c_button_classes = 'lrv-a-font-body-xs lrv-a-icon-after lrv-u-text-transform-uppercase lrv-a-unstyle-button lrv-u-cursor-pointer lrv-u-flex lrv-u-justify-content-end lrv-u-width-100p@tablet lrv-a-glue-parent@tablet lrv-u-width-75p@mobile-max';
 o_email_capture_form.c_button.c_button_inner_classes = 'lrv-u-background-color-white lrv-u-padding-l-050';

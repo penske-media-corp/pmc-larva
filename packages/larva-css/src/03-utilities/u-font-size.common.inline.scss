@@ -27,6 +27,7 @@
 		($font-size-40,)
 		($font-size-50,)
 		($font-size-86,)
+		($font-size-8,  mobile-max) 
 		($font-size-12, mobile-max)
 		($font-size-14, mobile-max)
 		($font-size-16, mobile-max)
@@ -94,11 +95,5 @@
 .lrv-u-font-size-13\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		font-size: pmc-rem(13);
-	}
-}
-
-.lrv-u-font-size-8\@mobile-max {
-	@include pmc-breakpoint(mobile-max) {
-		font-size: pmc-rem(8);
 	}
 }
