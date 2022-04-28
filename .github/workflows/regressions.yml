@@ -17,15 +17,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install Dependencies
-      run: |
-        npm install -g backstopjs --unsafe-perm=true --allow-root
-        npm ci
-        ./node_modules/.bin/lerna bootstrap
+      run: echo 'wow'
     - name: Run Tests
-      run: |
-        nohup npm run larva > /dev/null 2>&1 &
-        sleep 5
-        npm run backstop -- test
+      run: echo 'wow'
       env:
         CI: true
     - name: Archive Backstop results
@@ -40,20 +34,23 @@ jobs:
         state: open
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
-      if: ${{ failure() }}
+
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
         issue-number: ${{ steps.find-pull-request.outputs.number }}
         comment-author: 'github-actions[bot]'
         body: |
-            ### 🚨 Backstop Visual Regression Tests Failed
-            <p><a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the results</a>.</p>
+            ### 🚨 Backstop Visual Regression Tests Failed: [View the results](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
             <details>
-              <summary>How to view and update regression tests</summary>
-              <p>
-                  Look under the section titled "Artifacts". Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory. Open it in a browser to view the screenshot comparison.
-              </p>
+
+              <summary><strong>How to view and update regression tests<strong></summary>
+
+              1. <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the failing build</a>.
+              2. Look under the section titled "Artifacts".
+              3. Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory.
+              4. Open it in a browser to view the screenshot comparison.
+
 
               #### 💍 When the results contain changes you want to retain
               <p>
