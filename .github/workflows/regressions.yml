@@ -9,7 +9,6 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -36,9 +35,9 @@ jobs:
             <details>
             <summary>View the results</summary>
             <p>
-                <a href="${{ github.workflow.job.id }}">
+                <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">
                 View the results
-                </a>. Select "Summary" and scroll to the bottom to download the artifact. On your local machine, find backstop_results/index.html in the downloaded directory and open it in a browser to view the screenshot comparison.
+                </a>. Look under the section titled "Artifacts". Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory. Open it in a browser to view the screenshot comparison.
             </p>
             </details>
 
