@@ -36,6 +36,18 @@
 	}
 }
 
+.lrv-a-truncate-ellipsis-4line\@mobile-max {
+	@include pmc-breakpoint(desktop-xl-max) {
+		@include _a-truncate-ellipsis(4);
+	}
+}
+
+.lrv-a-truncate-ellipsis-5line\@tablet-desktop-only {
+	@media only screen and (max-width: $screen-desktop-xl) and (min-width: $screen-tablet) {
+		@include _a-truncate-ellipsis(5);
+	}
+}
+
 .lrv-a-truncate-ellipsis-5line\@desktop-xl-max {
 	@include pmc-breakpoint(desktop-xl-max) {
 		@include _a-truncate-ellipsis(5);

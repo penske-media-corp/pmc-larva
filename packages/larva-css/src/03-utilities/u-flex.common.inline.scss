@@ -81,6 +81,19 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex-wrap-wrap\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		flex-wrap: wrap;
+	}
+}
+
+.lrv-u-flex-direction-column-reverse\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		flex-direction: column-reverse;
+	}
+
+}
+
 @each $breakpoint in $breakpoints {
 
 	@each $size in $flex_basis {

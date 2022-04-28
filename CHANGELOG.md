@@ -3,6 +3,27 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## Unpublished
+
+## 0.6.4 - 04-28-2022
+* larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
+* larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
+
+## 0.6.3 - 04-21-2022
+* larva-patterns - Add `brand-most-popular` module.
+* larva-patterns - Update `newswire` module and add support for slider.
+* larva-css - Add `a-grid` classes.
+* larva-css - Add `lrv-u-font-size-16@mobile-max` class
+* larva-css - Add `.lrv-u-border-l-00\@mobile-max`, `.lrv-u-border-r-00\@mobile-max`, `.lrv-u-border-t-1\@mobile-max` & `.lrv-u-border-b-00\@mobile-max` classes.
+* larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
+* larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
+
+## 0.6.2 - 04-20-2022
+* larva-patterns - Update `injected-related-content` module.
+* larva-patterns - `story-grid` module changes.
+
+## 0.6.1 - 04-19-2022
+* twig-to-php-parser - Modify generated comment in php as a proper fileDoc to adhere to standards.
 
 ## 0.6.0 - 04-13-2022
 * larva-tokens - Added artinamerica tokens for hub support
@@ -34,6 +55,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `article-title` module.
 * larva-patterns - Add `article-kicker` module.
 * larva-patterns - Add `article-excerpt` module.
+* larva-patterns - Add `brands-most-popular` module.
+* larva-patterns - Update `newswire` module.
+* larva-css - Add a-counter algorithm.
 
 ## 0.5.5 - 03-03-2022
 * larva-css - Add border top utility.

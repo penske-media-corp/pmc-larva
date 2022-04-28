@@ -1,5 +1,10 @@
 <?php
-// This is a generated file. Refer to the relevant Twig file for adjusting this markup.
+/**
+ * Generated file.
+ *
+ * Refer to the relevant Twig file for adjusting this markup.
+ */
+
 ?>
 <?php foreach ( $list_items ?? [] as $item ) { ?>
 	<li class="list__item larva // <?php echo esc_attr( $list_item_classes ?? '' ); ?>">
