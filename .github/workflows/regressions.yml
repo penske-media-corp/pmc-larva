@@ -50,7 +50,7 @@ jobs:
             ### 🚨 Backstop Visual Regression Tests Failed: [View the results](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
             <details>
 
-              <summary><strong>How to view and update regression tests<strong></summary>
+              <summary><strong>How to view and update regression tests</strong></summary>
 
               1. <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the failing build</a>.
               2. Look under the section titled "Artifacts".
