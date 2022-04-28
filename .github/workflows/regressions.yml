@@ -38,8 +38,9 @@ jobs:
             <p>
                 <a href="#{{ github.workflow.job.id }}">
                 View the results
-                </a>
+                </a>. Select "Summary" and scroll to the bottom to download the artifact. On your local machine, find backstop_results/index.html in the downloaded directory and open it in a browser to view the screenshot comparison.
             </p>
+
             ### When the results contain changes you want to retain
             <details>
             <summary>Update the reference screenshots</summary>
