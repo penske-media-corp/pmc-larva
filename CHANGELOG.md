@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## Unpublished
 
+## 0.6.4 - 04-28-2022
+* larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
+* larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
+
 ## 0.6.3 - 04-21-2022
 * larva-patterns - Add `brand-most-popular` module.
 * larva-patterns - Update `newswire` module and add support for slider.
