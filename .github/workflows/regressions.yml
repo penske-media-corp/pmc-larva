@@ -47,7 +47,7 @@ jobs:
         issue-number: ${{ steps.find-pull-request.outputs.number }}
         comment-author: 'github-actions[bot]'
         body: |
-            ### Backstop Visual Regression Tests Failed
+            ### 🚨 Backstop Visual Regression Tests Failed
 
             <p><a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the results</a>.</p>
             <details>
@@ -56,7 +56,7 @@ jobs:
                   Look under the section titled "Artifacts". Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory. Open it in a browser to view the screenshot comparison.
               </p>
 
-              #### When the results contain changes you want to retain
+              #### 💍 When the results contain changes you want to retain
               <p>
                 <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
                 This will create a new branch with reference screenshots.
