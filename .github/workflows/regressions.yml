@@ -46,7 +46,6 @@ jobs:
             </p>
 
             ### When the results contain changes you want to retain
-
             <p>
                 <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
                 This will create a new branch with reference screenshots.
@@ -60,6 +59,7 @@ jobs:
         repository: ${{ github.repository }}
         comment-id: ${{ steps.fc.outputs.comment-id }}
         comment-author: 'github-actions[bot]'
+        edit-mode: 'replace'
         body: |
             ### Backstop Visual Regression Tests Failed AGAIN!!
             <p>
@@ -69,7 +69,6 @@ jobs:
             </p>
 
             ### When the results contain changes you want to retain
-
             <p>
                 <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
                 This will create a new branch with reference screenshots.
