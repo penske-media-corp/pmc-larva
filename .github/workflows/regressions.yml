@@ -40,7 +40,7 @@ jobs:
         state: open
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
-      if: ${{ failure() }}
+
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
@@ -54,9 +54,8 @@ jobs:
 
               1. <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the failing build</a>.
               2. Look under the section titled "Artifacts".
-              3. Download the artifact, then on your local machine, find backstop_results/index.html in the downloaded directory.
-              4. Open it in a browser to view the screenshot comparison.
-
+              3. Download the `backstop-results` artifact.
+              4. On your local machine, open backstop-results/html-report/index.html in a browser to view the screenshot comparison.
 
               #### 💍 When the results contain changes you want to retain
               <p>
