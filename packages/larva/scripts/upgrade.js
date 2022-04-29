@@ -2,15 +2,18 @@
  * This script installs the latest version of Larva and runs a full build.
  */
 
+// Dependencies.
 const path = require( 'path' );
 const shell = require( 'shelljs' );
+
+
 const binPath = path.resolve(__dirname, '../bin/larva.js');
 
-console.log( 'Upgrading Larva to the latest stable version' );
+console.log( '\n\nUpgrading Larva to the latest stable version' );
 shell.exec( 'npm install @penskemediacorp/larva@latest' );
 
-console.log( 'Building CSS assets' );
+console.log( '\n\n\nBuilding CSS assets' );
 shell.exec( `${binPath} prod-scss` );
 
-console.log( 'Building JavaScript assets' );
+console.log( '\n\n\nBuilding JavaScript assets' );
 shell.exec( `${binPath} prod-js` );
