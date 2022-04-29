@@ -33,7 +33,7 @@ Using [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link), we can point 
 
 1. From within this repo, run `npm run link-all` to link the Larva, Patterns, CSS, and JS packages.
 1. From within your project, run `npx @penskemediacorp/larva link-all`.
-1. From within your project, run a full build (usually `npm run prod`).
+1. From within your project, run a full build with `npx @penskemediacorp/larva prod`.
 
 ## Viewing Larva Patterns
 
