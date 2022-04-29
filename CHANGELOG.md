@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add support for article kicker to story module.
 * larva-patterns - Add `story_after_wp_action` action to story module.
 * larva-css - Add `lrv-a-cols2@desktop-xl` utility classes.
+## 0.6.4 - 04-28-2022
+* larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
+* larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
+
 ## 0.6.3 - 04-21-2022
 * larva-patterns - Add `brand-most-popular` module.
 * larva-patterns - Update `newswire` module and add support for slider.
