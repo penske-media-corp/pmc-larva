@@ -6,7 +6,7 @@
  *
  * ## EXAMPLES
  *
- *     # Run dev for CSS and JavaScript.
+ *     # NPM link local packages to Larva monorepo.
  *     $ npx @penskemediacorp/larva link-all
  */
 
