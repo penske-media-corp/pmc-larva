@@ -106,5 +106,5 @@ if (
     shell.exec( `${binPath} build-icons` );
     shell.exec( "npx svgo -f src/svg -o build/svg" );
 } else {
-    console.log( 'Skipping building JavaScript\n' );
+    console.log( 'Skipping building the SVGs\n' );
 }
