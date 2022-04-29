@@ -24,6 +24,9 @@
  * [--js]
  * : Build JavaScript assets.
  *
+ * [--svg]
+ * : Build SVG assets.
+ *
  * ## EXAMPLES
  *
  *     # Run a full build
@@ -43,7 +46,7 @@ const shell = require( 'shelljs' );
 // Construct some paths to point our scripts at.
 const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scripts.
 
-// CLI arguments
+// CLI arguments.
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
@@ -90,6 +93,18 @@ if (
 ) {
     console.log( 'Building JavaScript assets\n\n' );
     shell.exec( `${binPath} prod-js` );
+} else {
+    console.log( 'Skipping building JavaScript\n' );
+}
+
+// Build SVG.
+if (
+    0 === cliArgs.length
+    || cliArgs.includes( '--svg' )
+) {
+    console.log( 'Building SVG assets\n\n' );
+    shell.exec( `${binPath} build-icons` );
+    shell.exec( "npx svgo -f src/svg -o build/svg" );
 } else {
     console.log( 'Skipping building JavaScript\n' );
 }

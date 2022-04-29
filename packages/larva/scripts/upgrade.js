@@ -1,19 +1,69 @@
 /**
- * This script installs the latest version of Larva and runs a full build.
+ * Lint JavaScript and CSS files in a Larva project.
+ *
+ * ## OPTIONS
+ *
+ * [--version]
+ * : Optional. Version of Larva to install. Defaults to 'latest'.
+ *
+ * [--skip-css]
+ * : Skip building CSS assets.
+ *
+ * [--skip-js]
+ * : Skip building JavaScript assets.
+ *
+ * [--skip-build]
+ * : Skip building any assets.
+ *
+ * ## EXAMPLES
+ *
+ *     # Upgrade to latest and kickoff a build.
+ *     $ npx @penskemediacorp/larva upgrade
+ *
+ *     # Skip building CSS assets.
+ *     $ npx @penskemediacorp/larva upgrade --skip-css
+ *
+ *     # Skip both CSS and JavaScript assets.
+ *     $ npx @penskemediacorp/larva upgrade --skip-css --skip-js
+ *
+ *     # Skip the entire build.
+ *     $ npx @penskemediacorp/larva upgrade --skip-build
+ *
+ *     # Upgrade to a specific version
+ *     $ npx @penskemediacorp/larva upgrade --version=0.6.0
  */
-
 // Dependencies.
 const path = require( 'path' );
 const shell = require( 'shelljs' );
 
+// Construct some paths to point our scripts at.
+const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scripts.
 
-const binPath = path.resolve(__dirname, '../bin/larva.js');
+// CLI arguments.
+const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
+const cliArgs = getArgsFromCli();
 
-console.log( '\n\nUpgrading Larva to the latest stable version' );
-shell.exec( 'npm install @penskemediacorp/larva@latest' );
+// Larva version to install.
+const version = cliArgs.includes( '--version' ) ? cliArgs.includes( '--version' ) : 'latest';
 
-console.log( '\n\n\nBuilding CSS assets' );
-shell.exec( `${binPath} prod-scss` );
+// Update Larva version installed.
+console.log( `Installing Larva@${version}\n\n` );
+shell.exec( `npm install @penskemediacorp/larva@${version}` );
 
-console.log( '\n\n\nBuilding JavaScript assets' );
-shell.exec( `${binPath} prod-js` );
+// Build CSS.
+if (
+    ! cliArgs.includes( '--skip-css' )
+    || cliArgs.includes( '--skip-build' )
+) {
+    console.log( 'Building CSS assets\n\n' );
+    shell.exec( `${binPath} prod-scss` );
+}
+
+// Build JavaScript.
+if (
+    ! cliArgs.includes( '--skip-js' )
+    || cliArgs.includes( '--skip-build' )
+) {
+    console.log( 'Building JavaScript assets\n\n' );
+    shell.exec( `${binPath} prod-js` );
+}
