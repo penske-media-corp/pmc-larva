@@ -1,21 +1,95 @@
 /**
- * This script runs a production build for a Larva project.
+ * Run a production ready build in a Larva project.
+ *
+ * ## OPTIONS
+ *
+ * [--parse]
+ * : Run the Twig-to-PHP parser.
+ *
+ * [--parser]
+ * : Alias for --parse.
+ *
+ * [--json]
+ * : Run the write-json script.
+ *
+ * [--write-json]
+ * : Run the write-json script.
+ *
+ * [--css]
+ * : Build CSS assets.
+ *
+ * [--scss]
+ * : Alias for --css.
+ *
+ * [--js]
+ * : Build JavaScript assets.
+ *
+ * ## EXAMPLES
+ *
+ *     # Run a full build
+ *     $ npx @penskemediacorp/larva prod
+ *
+ *     # Only run the write-json script.
+ *     $ npx @penskemediacorp/larva lint --write-json
+ *
+ *     # Run builds for CSS & JavaScript.
+ *     $ npx @penskemediacorp/larva lint --css --js
  */
 
 // Dependencies.
 const path = require( 'path' );
 const shell = require( 'shelljs' );
 
-const binPath = path.resolve(__dirname, '../bin/larva.js');
+// Construct some paths to point our scripts at.
+const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scripts.
 
-console.log( '\n\nParsing Twig templates' );
-shell.exec( `npx @penskemediacorp/twig-to-php-parser` );
+// CLI arguments
+const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
+const cliArgs = getArgsFromCli();
 
-console.log( '\n\n\nBuilding JSON assets' );
-shell.exec( `${binPath} write-json` );
+// Run the Twig-to-PHP parser.
+if (
+    0 === cliArgs.length
+    || cliArgs.includes( '--parser' )
+    || cliArgs.includes( '--parse' )
+) {
+    console.log( 'Parsing Twig templates\n\n' );
+    shell.exec( `npx @penskemediacorp/twig-to-php-parser` );
+} else {
+    console.log( 'Skipping Twig templates\n\n' );
+}
 
-console.log( '\n\n\nBuilding CSS assets' );
-shell.exec( `${binPath} prod-scss` );
+// Run the write-json script.
+if (
+    0 === cliArgs.length
+    || cliArgs.includes( '--json' )
+    || cliArgs.includes( '--write-json' )
+) {
+    console.log( 'Building JSON assets\n\n' );
+    shell.exec( `${binPath} write-json` );
+} else {
+    console.log( 'Skipping write-json\n' );
+}
 
-console.log( '\n\n\nBuilding JavaScript assets' );
-shell.exec( `${binPath} prod-js` );
+// Build CSS/SCSS.
+if (
+    0 === cliArgs.length
+    || cliArgs.includes( '--css' )
+    || cliArgs.includes( '--scss' )
+) {
+    console.log( 'Building CSS assets\n\n' );
+    shell.exec( `${binPath} prod-scss` );
+} else {
+    console.log( 'Skipping building CSS\n' );
+}
+
+// Build JS.
+if (
+    0 === cliArgs.length
+    || cliArgs.includes( '--js' )
+) {
+    console.log( 'Building JavaScript assets\n\n' );
+    shell.exec( `${binPath} prod-js` );
+} else {
+    console.log( 'Skipping building JavaScript\n' );
+}

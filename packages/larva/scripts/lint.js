@@ -35,7 +35,7 @@ const path = require( 'path' );
 const shell = require( 'shelljs' );
 
 // Construct some paths to point our scripts at.
-const binPath = path.resolve(__dirname, '../bin/larva.js'); // For sibling scripts.
+const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scripts.
 const workingDirectory = process.cwd(); // For paths relative to the directory this script was called from.
 
 // CLI arguments
