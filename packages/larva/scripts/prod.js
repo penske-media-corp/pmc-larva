@@ -13,7 +13,7 @@
  * : Run the write-json script.
  *
  * [--write-json]
- * : Run the write-json script.
+ * : Alias for --json.
  *
  * [--css]
  * : Build CSS assets.
@@ -33,10 +33,10 @@
  *     $ npx @penskemediacorp/larva prod
  *
  *     # Only run the write-json script.
- *     $ npx @penskemediacorp/larva lint --write-json
+ *     $ npx @penskemediacorp/larva prod --write-json
  *
  *     # Run builds for CSS & JavaScript.
- *     $ npx @penskemediacorp/larva lint --css --js
+ *     $ npx @penskemediacorp/larva prod --css --js
  */
 
 // Dependencies.
@@ -50,61 +50,67 @@ const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scr
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
+// Handle help commands.
+if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+	shell.exec( `npx @penskemediacorp/larva help prod` );
+	return;
+}
+
 // Run the Twig-to-PHP parser.
 if (
-    0 === cliArgs.length
-    || cliArgs.includes( '--parser' )
-    || cliArgs.includes( '--parse' )
+	1 === cliArgs.length
+	|| cliArgs.includes( '--parser' )
+	|| cliArgs.includes( '--parse' )
 ) {
-    console.log( 'Parsing Twig templates\n\n' );
-    shell.exec( `npx @penskemediacorp/twig-to-php-parser` );
+	console.log( 'Parsing Twig templates\n\n' );
+	shell.exec( `npx @penskemediacorp/twig-to-php-parser` );
 } else {
-    console.log( 'Skipping Twig templates\n\n' );
+	console.log( 'Skipping Twig templates\n' );
 }
 
 // Run the write-json script.
 if (
-    0 === cliArgs.length
-    || cliArgs.includes( '--json' )
-    || cliArgs.includes( '--write-json' )
+	1 === cliArgs.length
+	|| cliArgs.includes( '--json' )
+	|| cliArgs.includes( '--write-json' )
 ) {
-    console.log( 'Building JSON assets\n\n' );
-    shell.exec( `${binPath} write-json` );
+	console.log( 'Building JSON assets\n\n' );
+	shell.exec( `${binPath} write-json` );
 } else {
-    console.log( 'Skipping write-json\n' );
+	console.log( 'Skipping write-json\n' );
 }
 
 // Build CSS/SCSS.
 if (
-    0 === cliArgs.length
-    || cliArgs.includes( '--css' )
-    || cliArgs.includes( '--scss' )
+	1 === cliArgs.length
+	|| cliArgs.includes( '--css' )
+	|| cliArgs.includes( '--scss' )
 ) {
-    console.log( 'Building CSS assets\n\n' );
-    shell.exec( `${binPath} prod-scss` );
+	console.log( 'Building CSS assets\n\n' );
+	shell.exec( `${binPath} prod-scss` );
 } else {
-    console.log( 'Skipping building CSS\n' );
+	console.log( 'Skipping building CSS\n' );
 }
 
 // Build JS.
 if (
-    0 === cliArgs.length
-    || cliArgs.includes( '--js' )
+	1 === cliArgs.length
+	|| cliArgs.includes( '--js' )
 ) {
-    console.log( 'Building JavaScript assets\n\n' );
-    shell.exec( `${binPath} prod-js` );
+	console.log( 'Building JavaScript assets\n\n' );
+	shell.exec( `${binPath} prod-js` );
 } else {
-    console.log( 'Skipping building JavaScript\n' );
+	console.log( 'Skipping building JavaScript\n' );
 }
 
 // Build SVG.
 if (
-    0 === cliArgs.length
-    || cliArgs.includes( '--svg' )
+	1 === cliArgs.length
+	|| cliArgs.includes( '--svg' )
 ) {
-    console.log( 'Building SVG assets\n\n' );
-    shell.exec( `${binPath} build-icons` );
-    shell.exec( "npx svgo -f src/svg -o build/svg" );
+	console.log( 'Building SVG assets\n\n' );
+	shell.exec( `${binPath} build-icons` );
+	shell.exec( "npx svgo -f src/svg -o build/svg" );
 } else {
-    console.log( 'Skipping building the SVGs\n' );
+	console.log( 'Skipping building the SVGs\n' );
 }

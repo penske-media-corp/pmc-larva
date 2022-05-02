@@ -42,6 +42,12 @@ const workingDirectory = process.cwd(); // For paths relative to the directory t
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
+// Handle help commands.
+if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+    shell.exec( `npx @penskemediacorp/larva help lint` );
+    return;
+}
+
 // Trigger linting when a specific flag is present, or when neither flag is
 // present.
 const lintCSS = cliArgs.includes( '--css' ) || ! cliArgs.includes( '--js' );

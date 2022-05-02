@@ -12,7 +12,21 @@
 
 const shell = require( 'shelljs' );
 
+// CLI arguments.
+const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
+const cliArgs = getArgsFromCli();
+
+// Handle help commands.
+if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+    shell.exec( `npx @penskemediacorp/larva help link-all` );
+    return;
+}
+
 shell.exec( 'npm link @penskemediacorp/larva' );
-shell.exec( 'npm link @penskemediacorp/larva-patterns' );
 shell.exec( 'npm link @penskemediacorp/larva-css' );
 shell.exec( 'npm link @penskemediacorp/larva-js' );
+shell.exec( 'npm link @penskemediacorp/larva-patterns' );
+shell.exec( 'npm link @penskemediacorp/larva-scss' );
+shell.exec( 'npm link @penskemediacorp/larva-svg' );
+shell.exec( 'npm link @penskemediacorp/larva-tokens' );
+shell.exec( 'npm link @penskemediacorp/twig-to-php-parser' );

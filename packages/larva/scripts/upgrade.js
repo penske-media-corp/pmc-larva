@@ -43,6 +43,12 @@ const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scr
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
+// Handle help commands.
+if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+    shell.exec( `npx @penskemediacorp/larva help upgrade` );
+    return;
+}
+
 // Larva version to install.
 const version = cliArgs.includes( '--version' ) ? cliArgs.includes( '--version' ) : 'latest';
 
@@ -52,18 +58,18 @@ shell.exec( `npm install @penskemediacorp/larva@${version}` );
 
 // Build CSS.
 if (
-    ! cliArgs.includes( '--skip-css' )
-    || cliArgs.includes( '--skip-build' )
+	! cliArgs.includes( '--skip-css' )
+	|| cliArgs.includes( '--skip-build' )
 ) {
-    console.log( 'Building CSS assets\n\n' );
-    shell.exec( `${binPath} prod-scss` );
+	console.log( 'Building CSS assets\n\n' );
+	shell.exec( `${binPath} prod-scss` );
 }
 
 // Build JavaScript.
 if (
-    ! cliArgs.includes( '--skip-js' )
-    || cliArgs.includes( '--skip-build' )
+	! cliArgs.includes( '--skip-js' )
+	|| cliArgs.includes( '--skip-build' )
 ) {
-    console.log( 'Building JavaScript assets\n\n' );
-    shell.exec( `${binPath} prod-js` );
+	console.log( 'Building JavaScript assets\n\n' );
+	shell.exec( `${binPath} prod-js` );
 }
