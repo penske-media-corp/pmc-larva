@@ -57,6 +57,8 @@ if ( cliArgs.includes( '--help' ) ) {
 
 // Parse the --version flag. Defaults to 'latest'.
 const getVersionArg = () => {
+
+    // Loop through our args, looking for `--version=`.
 	const versionFlag = cliArgs.find( ( cliArg ) => {
 		if ( ! cliArg.includes( '--version=' ) ) {
 			return false;
@@ -64,10 +66,12 @@ const getVersionArg = () => {
 		return true;
 	} );
 
+    // Did not find it.
 	if ( ! versionFlag ) {
 		return 'latest';
 	}
 
+    // Trip the value down to just the version.
 	const version = versionFlag.replace( '--version=', '' );
 	return version ? version : 'latest';
 };
