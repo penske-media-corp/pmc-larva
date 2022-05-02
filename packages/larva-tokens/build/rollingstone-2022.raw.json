@@ -2506,12 +2506,10 @@
       "name": "SECONDARY_XXL_FONT_WEIGHT_DESKTOP"
     },
     "SECONDARY_L_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "400",
+      "originalValue": "400",
       "name": "SECONDARY_L_FONT_WEIGHT_DESKTOP"
     },
     "BODY_M_FONT_WEIGHT_MOBILE": {
@@ -2545,12 +2543,10 @@
       "originalValue": "600"
     },
     "SECONDARY_M_FONT_WEIGHT_DESKTOP": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "400",
+      "originalValue": "400",
       "name": "SECONDARY_M_FONT_WEIGHT_DESKTOP"
     },
     "BASIC_S_FONT_WEIGHT_DESKTOP": {
@@ -2617,21 +2613,17 @@
       "originalValue": "600"
     },
     "SECONDARY_M_FONT_WEIGHT_DESKTOP_XL": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "400",
+      "originalValue": "400",
       "name": "SECONDARY_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_L_FONT_WEIGHT_DESKTOP_XL": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "400",
+      "originalValue": "400",
       "name": "SECONDARY_L_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_XXL_FONT_WEIGHT_DESKTOP_XL": {
@@ -2880,12 +2872,10 @@
       "name": "BASIC_S_FONT_WEIGHT_MOBILE"
     },
     "SECONDARY_M_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "400",
+      "originalValue": "400",
       "name": "SECONDARY_M_FONT_WEIGHT_MOBILE"
     },
     "PRIMARY_XL_FONT_WEIGHT_DESKTOP": {
@@ -2910,12 +2900,10 @@
       "name": "BODY_XL_FONT_WEIGHT_DESKTOP"
     },
     "SECONDARY_L_FONT_WEIGHT_MOBILE": {
-      "selector": "lrv-a-font",
-      "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "400",
+      "originalValue": "400",
       "name": "SECONDARY_L_FONT_WEIGHT_MOBILE"
     },
     "SECONDARY_XXL_FONT_WEIGHT_MOBILE": {
@@ -3436,8 +3424,8 @@
     "PRIMARY_XS_LINE_HEIGHT_DESKTOP_XL": {
       "category": "line-height",
       "type": "number",
-      "value": "20px",
-      "originalValue": "20px",
+      "value": "22px",
+      "originalValue": "22px",
       "name": "PRIMARY_XS_LINE_HEIGHT_DESKTOP_XL"
     },
     "BODY_XXXS_LINE_HEIGHT_DESKTOP_XL": {
