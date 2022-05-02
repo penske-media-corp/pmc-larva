@@ -3,6 +3,9 @@
  *
  * ## OPTIONS
  *
+ * [--help]
+ * : Display usage and examples for this command.
+ *
  * [--version]
  * : Optional. Version of Larva to install. Defaults to 'latest'.
  *
@@ -31,6 +34,9 @@
  *
  *     # Upgrade to a specific version
  *     $ npx @penskemediacorp/larva upgrade --version=0.6.0
+ *
+ *     # Help command.
+ *     $ npx @penskemediacorp/larva upgrade --help
  */
 // Dependencies.
 const path = require( 'path' );
@@ -43,8 +49,8 @@ const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scr
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
-// Handle help commands.
-if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+// Handle help command.
+if ( cliArgs.includes( '--help' ) ) {
     shell.exec( `npx @penskemediacorp/larva help upgrade` );
     return;
 }

@@ -1,10 +1,18 @@
 /**
  * Help command for Larva.
  *
+ * ## OPTIONS
+ *
+ * [<command>]
+ * : Slug of a command to display the CLI usage information.
+ *
  * ## EXAMPLES
  *
  *     # Display a list of available commands.
  *     $ npx @penskemediacorp/larva help
+ *
+ *     # Display the prod command docblock.
+ *     $ npx @penskemediacorp/larva help prod
  */
 
 // Dependencies.

@@ -3,6 +3,9 @@
  *
  * ## OPTIONS
  *
+ * [--help]
+ * : Display usage and examples for this command.
+ *
  * [--css]
  * : Lint CSS assets.
  *
@@ -28,6 +31,9 @@
  *
  *     # Mix and match, fix JavaScript assets.
  *     $ npx @penskemediacorp/larva lint --js --fix
+ *
+ *     # Help command.
+ *     $ npx @penskemediacorp/larva lint --help
  */
 
 // Dependencies.
@@ -42,8 +48,8 @@ const workingDirectory = process.cwd(); // For paths relative to the directory t
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
-// Handle help commands.
-if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+// Handle help command.
+if ( cliArgs.includes( '--help' ) ) {
     shell.exec( `npx @penskemediacorp/larva help lint` );
     return;
 }

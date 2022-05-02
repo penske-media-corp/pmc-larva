@@ -3,6 +3,9 @@
  *
  * ## OPTIONS
  *
+ * [--help]
+ * : Display usage and examples for this command.
+ *
  * [--parse]
  * : Run the Twig-to-PHP parser.
  *
@@ -37,6 +40,9 @@
  *
  *     # Run builds for CSS & JavaScript.
  *     $ npx @penskemediacorp/larva prod --css --js
+ *
+ *     # Help command.
+ *     $ npx @penskemediacorp/larva prod --help
  */
 
 // Dependencies.
@@ -50,8 +56,8 @@ const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scr
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
-// Handle help commands.
-if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+// Handle help command.
+if ( cliArgs.includes( '--help' ) ) {
 	shell.exec( `npx @penskemediacorp/larva help prod` );
 	return;
 }

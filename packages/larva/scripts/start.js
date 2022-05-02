@@ -1,10 +1,18 @@
 /**
  * Start the Larva server.
  *
+ * ## OPTIONS
+ *
+ * [--help]
+ * : Display usage and examples for this command.
+ *
  * ## EXAMPLES
  *
  *     # Start server.
  *     $ npx @penskemediacorp/larva start
+ *
+ *     # Help command.
+ *     $ npx @penskemediacorp/larva start --help
  */
 
 // Dependencies.
@@ -15,8 +23,8 @@ const shell = require( 'shelljs' );
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
-// Handle help commands.
-if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+// Handle help command.
+if ( cliArgs.includes( '--help' ) ) {
     shell.exec( `npx @penskemediacorp/larva help start` );
     return;
 }

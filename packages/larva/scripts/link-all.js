@@ -4,10 +4,18 @@
  *
  * @see https://github.com/penske-media-corp/pmc-larva/blob/master/README.md#linking-larva-for-local-development
  *
+ * ## OPTIONS
+ *
+ * [--help]
+ * : Display usage and examples for this command.
+ *
  * ## EXAMPLES
  *
  *     # NPM link local packages to Larva monorepo.
  *     $ npx @penskemediacorp/larva link-all
+ *
+ *     # Help command.
+ *     $ npx @penskemediacorp/larva link-all help
  */
 
 const shell = require( 'shelljs' );
@@ -16,8 +24,8 @@ const shell = require( 'shelljs' );
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
 
-// Handle help commands.
-if ( cliArgs.includes( 'help' ) || cliArgs.includes( '--help' ) ) {
+// Handle help command.
+if ( cliArgs.includes( '--help' ) ) {
     shell.exec( `npx @penskemediacorp/larva help link-all` );
     return;
 }
