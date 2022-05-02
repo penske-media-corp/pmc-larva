@@ -1,0 +1,33 @@
+<div class="age-gate // {{ age_gate_classes }}">
+	<div class="age-gate-inner // {{ age_gate_inner_classes }}">
+		<div class="age-gate-header // {{ age_gate_header_classes }}">
+			{% include "@larva/components/c-svg/c-svg.twig" with c_svg %}
+			{% if c_heading %}
+				{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+			{% endif %}
+		</div>
+		<div class="age-gate-form // {{ age_gate_form_classes }}">
+			<form>
+				{% if o_text_input_group %}
+					{% include "@larva/objects/o-text-input-group/o-text-input-group.twig" with o_text_input_group %}
+				{% endif %}
+				<div class="age-gate-error // {{ age_gate_error_classes }}"></div>
+				<div class="button-wrapper">
+					{% include "@larva/components/c-button/c-button.twig" with c_button %}
+				</div>
+			</form>
+		</div>
+		<div class="age-gate-footer // {{ age_gate_footer_classes }}">
+			{# {% include "@project/modules/country-select/country-select.twig" with country_select %} #}
+			{% if c_tagline %}
+				{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+			{% endif %}
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
+			{% if o_dropdown %}
+				{# {% include "@project/objects/o-dropdown/o-dropdown.twig" with o_dropdown %} #}
+			{% endif %}
+		</div>
+	</div>
+</div>
