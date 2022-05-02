@@ -35,6 +35,12 @@
 						{% include "@larva/components/c-span/c-span.twig" with c_span %}
 					</li>
 				{% endif %}
+
+				{% if article_kicker %}
+					<li>
+						{% include "@larva/modules/article-kicker/article-kicker.twig" with article_kicker %}
+					</li>
+				{% endif %}
 			</ul>
 
 			<ul class="lrv-a-unstyle-list // {{ story_nav_classes }} {{ story_nav_layout_classes }}">
@@ -74,4 +80,9 @@
 			{% include "@larva/modules/story-arc-stories/story-arc-stories.twig" with story_arc_stories %}
 		</div>
 	{% endif %}
+
 </div>
+
+{% if is_river_story %}
+	{{ story_after_wp_action }}
+{% endif %}
