@@ -51,16 +51,30 @@ const cliArgs = getArgsFromCli();
 
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
-    shell.exec( `npx @penskemediacorp/larva help upgrade` );
-    return;
+	shell.exec( `npx @penskemediacorp/larva help upgrade` );
+	return;
 }
 
-// Larva version to install.
-const version = cliArgs.includes( '--version' ) ? cliArgs.includes( '--version' ) : 'latest';
+// Parse the --version flag. Defaults to 'latest'.
+const getVersionArg = () => {
+	const versionFlag = cliArgs.find( ( cliArg ) => {
+		if ( ! cliArg.includes( '--version=' ) ) {
+			return false;
+		}
+		return true;
+	} );
+
+	if ( ! versionFlag ) {
+		return 'latest';
+	}
+
+	const version = versionFlag.replace( '--version=', '' );
+	return version ? version : 'latest';
+};
 
 // Update Larva version installed.
-console.log( `Installing Larva@${version}\n\n` );
-shell.exec( `npm install @penskemediacorp/larva@${version}` );
+console.log( `Installing Larva@${getVersionArg()}\n\n` );
+shell.exec( `npm install @penskemediacorp/larva@${getVersionArg()}` );
 
 // Build CSS.
 if (

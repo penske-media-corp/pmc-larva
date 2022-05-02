@@ -45,6 +45,14 @@ npm run larva
 
 This will open a development server at localhost:3000. You can contribute to patterns in the packages/larva-patterns, and see the updates reflected here.
 
+### Changing the Default Port
+
+To modify the port Larva runs on, you can use `NODE_PORT` before your `npm run larva` command,
+
+```bash
+ NODE_PORT=8080 npm run larva
+ ```
+
 ## Running Visual Regression Tests
 
 First, make sure the Larva server is running from the root of this repo. To run the Larva server:
