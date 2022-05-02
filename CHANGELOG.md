@@ -3,8 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-## Unpublished
 
+## Unpublished
+* larva-patterns - Add support for article kicker to story module.
+* larva-patterns - Add `story_after_wp_action` action to story module.
+* larva-css - Add `lrv-a-cols2@desktop-xl` utility classes.
 ## 0.6.4 - 04-28-2022
 * larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
 * larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
