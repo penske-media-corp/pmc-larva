@@ -18,15 +18,8 @@
 			</form>
 		</div>
 		<div class="age-gate-footer // {{ age_gate_footer_classes }}">
-			{# {% include "@project/modules/country-select/country-select.twig" with country_select %} #}
-			{% if c_tagline %}
-				{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
-			{% endif %}
 			{% if c_dek %}
 				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
-			{% endif %}
-			{% if o_dropdown %}
-				{# {% include "@project/objects/o-dropdown/o-dropdown.twig" with o_dropdown %} #}
 			{% endif %}
 		</div>
 	</div>
