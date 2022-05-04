@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-css - Add `lrv-a-glue\@mobile-max` class.
+
+## 0.6.5 - 05-02-2022
 * larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.
 * larva-patterns - Add support for article kicker to story module.
 * larva-patterns - Add `story_after_wp_action` action to story module.
