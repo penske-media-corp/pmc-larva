@@ -1,4 +1,3 @@
-const cSvgPrototype = require('@penskemediacorp/larva-patterns/components/c-svg/c-svg.prototype');
 const clonedeep = require('lodash.clonedeep');
 
 const c_svg = clonedeep(require('@penskemediacorp/larva-patterns/components/c-svg/c-svg.prototype'));
