@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-css - Add `lrv-a-glue\@mobile-max` class.
+* larva-css - Add `lrv-u-justify-content-center\@tablet` class.
+* larva-patterns - Add `top-stories` module.
 
 ## 0.6.5 - 05-02-2022
 * larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.
