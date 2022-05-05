@@ -13,7 +13,7 @@ c_heading.c_heading_classes = 'lrv-u-font-family-secondary lrv-u-font-size-56@de
 c_heading.c_heading_is_primary_heading = true;
 
 o_nav.o_nav_list_items = [];
-const menuLinks = [ 'Tag Title', 'Tag Title', 'Tag Title', 'Tag Title', 'Tag Title' ];
+const menuLinks = [ 'View All', 'Tag Title', 'Tag Title', 'Tag Title', 'Tag Title', 'Tag Title' ];
 
 for (let i = 0; i < menuLinks.length; i++) {
 	let c_link = clonedeep( o_nav_items_c_links__prototype );
@@ -26,9 +26,9 @@ for (let i = 0; i < menuLinks.length; i++) {
 
 const mobileDropdownUtilities = ' lrv-u-border-a-1@mobile-max lrv-u-justify-content-center lrv-u-margin-b-050@mobile-max lrv-u-border-color-grey-light';
 
-o_nav.o_nav_classes = 'lrv-u-text-align-center@mobile-max lrv-js-MobileHeightToggle';
+o_nav.o_nav_classes = 'lrv-u-flex@desktop lrv-u-align-items-center lrv-u-text-align-center lrv-js-MobileHeightToggle';
 o_nav.o_nav_title_text = 'View Categories';
-o_nav.o_nav_title_classes = 'a-hidden@tablet lrv-js-MobileHeightToggle-trigger lrv-a-icon-after lrv-a-icon-arrow-down lrv-u-font-size-16 lrv-u-font-family-primary lrv-u-font-weight-normal lrv-u-padding-tb-050 lrv-u-width-100p@mobile-max ' + mobileDropdownUtilities;
+o_nav.o_nav_title_classes = 'lrv-a-hidden@desktop lrv-js-MobileHeightToggle-trigger lrv-a-icon-after lrv-a-icon-arrow-down lrv-u-font-size-16 lrv-u-font-family-primary lrv-u-font-weight-normal lrv-u-padding-tb-050 lrv-u-width-100p@mobile-max ' + mobileDropdownUtilities;
 o_nav.o_nav_list_classes += ' lrv-js-MobileHeightToggle-target lrv-u-flex lrv-u-flex-direction-column@mobile-max  lrv-u-line-height-large lrv-u-flex-wrap-wrap lrv-a-space-children--1 lrv-a-space-children-horizontal@tablet';
 o_nav.o_nav_list_item_classes = mobileDropdownUtilities;
 
