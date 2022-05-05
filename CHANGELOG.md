@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-css - Add `lrv-a-glue\@mobile-max` class.
+* larva-patterns - Add `c-text-input` component.
+* larva-patterns - Add `o-text-input-group` object.
+* larva-patterns - Add `age-gate` module.
+* larva-svg - Add white pmc logo.
 
 ## 0.6.5 - 05-02-2022
 * larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.
