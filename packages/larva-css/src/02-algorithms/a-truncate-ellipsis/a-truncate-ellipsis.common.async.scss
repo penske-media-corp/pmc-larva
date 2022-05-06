@@ -27,7 +27,11 @@
 }
 
 .lrv-a-truncate-ellipsis-5line {
-	@include _a-truncate-ellipsis(3);
+	@include _a-truncate-ellipsis(5);
+}
+	
+.lrv-a-truncate-ellipsis-6line {
+	@include _a-truncate-ellipsis(6);
 }
  
 .lrv-a-truncate-ellipsis-3line\@desktop-xl {
