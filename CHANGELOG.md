@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-css - Add `lrv-a-truncate-ellipsis-6line` class.
+* larva-css - Add `lrv-a-crop-1x1@mobile-max` class.
 
 ## Unpublished
 * larva-css - Add `lrv-a-glue\@mobile-max` class.
