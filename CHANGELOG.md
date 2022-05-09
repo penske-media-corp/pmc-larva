@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-patterns - Add `story-featured-quote` module.
 * larva-css - Add `lrv-a-glue\@mobile-max` class.
 * larva-patterns - Add `c-text-input` component.
 * larva-patterns - Add `o-text-input-group` object.
