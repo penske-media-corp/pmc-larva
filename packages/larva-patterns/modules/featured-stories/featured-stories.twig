@@ -1,0 +1,18 @@
+<div class="featured-stories // {{ featured_stories_classes }}">
+
+	{% if featured_story %}
+		<div class="featured-stories__primary // {{ featured_stories_primary_classes }}" >
+			{% include "@larva/modules/story/story.twig" with featured_story %}
+		</div>
+	{% endif %}
+
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	<div class="featured-stories__secondary {{ featured_stories_secondary_classes }}">
+		{% for item in story_items %}
+			{% include "@larva/modules/story/story.twig" with item %}
+		{% endfor %}
+	</div>
+</div>
