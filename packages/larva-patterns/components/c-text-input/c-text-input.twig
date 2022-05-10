@@ -1,13 +1,14 @@
-<label class="c-text-input" for="{{ c_text_input_id }}">
-	<span class="{{ c_text_input_label_classes }}">{{ c_text_input_label_text }}</span>
+{# Properties intentionally not prefixed with module name to avoid twig-to-php parser issues. #}
+<label class="c-text-input" for="{{ id_attr }}">
+	<span class="{{ label_class }}">{{ label_text }}</span>
 	<input
 		type="text"
-		class="{{ c_text_input_classes }}"
-		name="{{ c_text_input_name }}"
-		placeholder="{{ c_text_input_placeholder }}"
-		aria-invalid="{{ c_text_input_aria_invalid }}"
-		data-error="{{ c_text_input_error }}"
-		size="{{ c_text_input_size }}"
-		maxlength="{{ c_text_input_maxlength }}"
+		class="{{ input_class }}"
+		name="{{ input_name }}"
+		placeholder="{{ input_placeholder_attr }}"
+		aria-invalid="{{ input_aria_invalid_attr }}"
+		data-error="{{ input_error_attr }}"
+		size="{{ input_size_attr }}"
+		maxlength="{{ input_maxlength_attr }}"
 	/>
 </label>

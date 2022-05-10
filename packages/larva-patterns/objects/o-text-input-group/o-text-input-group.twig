@@ -1,5 +1,6 @@
-<div class="o-input-text-group {{ o_text_input_group_classes }}">
-	{% for item in o_text_input_group_items %}
+{# Properties intentionally not prefixed with module name to avoid twig-to-php parser issues. #}
+<div class="o-input-text-group {{ input_group_class }}">
+	{% for item in input_group_items %}
 		{% include "@larva/components/c-text-input/c-text-input.twig" with item %}
 	{% endfor %}
 </div>
