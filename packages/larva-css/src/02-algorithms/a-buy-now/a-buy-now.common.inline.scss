@@ -8,6 +8,7 @@
 .lrv-a-buy-now {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	position: relative;
 
 	@include pmc-breakpoint( tablet ) {
