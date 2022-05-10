@@ -13,7 +13,7 @@ c_heading.c_heading_classes += ' lrv-u-margin-b-2';
 c_heading.c_heading_text = 'You must be 21 to enter.';
 
 o_text_input_group.input_group_class = 'lrv-u-margin-b-2';
-o_text_input_item = clonedeep( o_text_input_group.o_text_input_group_items[0] );
+o_text_input_item = clonedeep( o_text_input_group.input_group_items[0] );
 o_text_input_item.input_class = 'lrv-u-font-size-32 lrv-u-color-white lrv-u-background-color-grey-darkest lrv-u-padding-lr-050 lrv-u-padding-tb-150 lrv-u-width-100 lrv-u-text-align-center';
 o_text_input_item.input_size_attr = 2;
 o_text_input_item.input_maxlength_attr = 4;
