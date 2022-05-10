@@ -5,9 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-patterns - Suffix relevant `c-text-input` component variables with `_attr`
-* larva-patterns - Deconflict `c-text-input` component variable names so that it's properly parsed by twig-to-php parser
-* larva-patterns - Deconflict `o-text-input-group` object variable names so that it's properly parsed by twig-to-php parser
+* larva-patterns - Suffix relevant `c-input` component variables with `_attr`
+* larva-patterns - Change component name from `c-text-input` to `c-input` to prevent twig-to-php parser issues
+* larva-patterns - Change object name from `o-text-input-group` to `o-input-group` to prevent twig-to-php parser issues
 
 ## 0.7.0 - 05-10-2022
 * larva-css - Add `lrv-a-glue\@mobile-max`,`lrv-a-span3@desktop`, `lrv-u-border-b-1@desktop`, `lrv-u-border-b-1\@mobile-max`, `lrv-a-children-border-vertical\@mobile-max` utility class.
