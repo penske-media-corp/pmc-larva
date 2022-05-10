@@ -1,32 +1,26 @@
 @import 'setup';
 
-.a-buy-button {
-	background: #fff;
-	color: #000;
-	border: pmc-rem(0.3) solid #000;
-	border-top-width: pmc-rem(3);
-	border-bottom-width: pmc-rem(3);
+.lrv-a-buy-button {
 	font-family: var( --font-family-basic );
-	text-transform: uppercase;
 	letter-spacing: pmc-rem(0.5);
-	padding: pmc-rem(3) pmc-rem(13);
 }
 
-.a-buy-now-button {
-	text-align: center;
-}
-
-.a-buy-now {
-	// border-top: pmc-rem(0.5) solid #000;
-	// border-bottom: pmc-rem(0.5) solid #000;
-	// padding: 0 pmc-rem(100);
+.lrv-a-buy-now {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 
-	&__image {
+	@include pmc-breakpoint( tablet ) {
+		display: block;
+	}
+
+	&-image {
 		position: relative;
 		z-index: 1;
-		background: #fff;
 		width: 100%;
+		background-color: $color-white;
+		max-width: pmc-rem(300);
 
 		@include pmc-breakpoint( tablet ) {
 			width: pmc-rem(190); // 160 + 30
@@ -41,27 +35,23 @@
 		}
 	}
 
-	.a-buy-button {
-		position: absolute;
-		top: 0;
-		transform: none;
-		left: 0;
+	&-button {
+		margin-top: pmc-rem(16);
 
 		@include pmc-breakpoint( tablet ) {
+			margin-top: 0;
+			position: absolute;
 			top: 50%;
-			left: 50%;
-			left: calc( 50% + 95px );
-			transform: translateY(-50%) translateX(-50%);
+			left: pmc-rem(190);
+			transform: translateY(-50%);
 		}
 
 		@include pmc-breakpoint( desktop ) {
-			top: 50%;
 			left: pmc-rem(339);
-			transform: translateY(-50%);
 		}
 	}
 
-	&__hr {
+	&-hr {
 		display: none;
 		margin: 0;
 		padding: 0;
@@ -72,7 +62,7 @@
 			display: block;
 		}
 
-		&--top {
+		&-top {
 			top: 0;
 
 			@include pmc-breakpoint( tablet ) {
@@ -84,7 +74,7 @@
 			}
 		}
 
-		&--bottom {
+		&-bottom {
 			bottom: 0;
 
 			@include pmc-breakpoint( tablet ) {
