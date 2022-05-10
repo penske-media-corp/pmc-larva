@@ -1,18 +1,29 @@
 @import 'setup';
 
-.lrv-a-buy-button {
-	font-family: var( --font-family-basic );
-	letter-spacing: pmc-rem(0.5);
-}
+// .lrv-a-buy-button {
+// 	font-family: var( --font-family-basic );
+// 	letter-spacing: pmc-rem(0.5);
+// }
 
 .lrv-a-buy-now {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	position: relative;
 
 	@include pmc-breakpoint( tablet ) {
 		display: block;
+	}
+
+	&-p {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: pmc-rem(16) 0;
+
+		.lrv-a-buy-now-button {
+			position: inherit;
+			transform: none;
+		}
 	}
 
 	&-image {
