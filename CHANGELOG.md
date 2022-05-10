@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `age-gate` module.
 * larva-svg - Add white pmc logo.
 * larva-patterns - Add README and `js-` classes to `age-gate` module.
+* larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images aren't lazy.
 
 ## 0.6.5 - 05-02-2022
 * larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.
