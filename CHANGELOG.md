@@ -10,10 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add o-sub-header object and sub-header module
 * larva-patterns - Wrap heading module inside a if conditon.
 * larva-patterns - Add outer tag wrapper to o-nav title element.
+* larva-patterns - Add `story-featured-quote` module.
 * larva-patterns - Add `c-text-input` component.
 * larva-patterns - Add `o-text-input-group` object.
 * larva-patterns - Add `age-gate` module.
 * larva-svg - Add white pmc logo.
+* larva-patterns - Add README and `js-` classes to `age-gate` module.
 
 ## 0.6.5 - 05-02-2022
 * larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.
