@@ -1,1 +1,3 @@
-<h{{ heading_level_text }} class="heading larva // {{ heading_classes }} {{ heading_typography_class }} {{ heading_color_class }} {{ heading_background_color_class }} {{ heading_text_align_class }}">{{ heading_markup }}</h{{ heading_level_text }}>
+{% if heading_markup %}
+	<h{{ heading_level_text }} class="heading larva // {{ heading_classes }} {{ heading_typography_class }} {{ heading_color_class }} {{ heading_background_color_class }} {{ heading_text_align_class }}">{{ heading_markup }}</h{{ heading_level_text }}>
+{% endif %}
