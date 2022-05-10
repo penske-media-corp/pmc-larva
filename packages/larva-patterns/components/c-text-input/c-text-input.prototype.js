@@ -1,8 +1,11 @@
+ /**
+ * Properties intentionally not prefixed with module name to avoid twig-to-php parser issues.
+ */
 module.exports = {
-	c_text_input_id_attr: 'inputExample',
-	c_text_input_label_classes: 'lrv-a-screen-reader-only',
-	c_text_input_label_text: 'Input Example',
-	c_text_input_classes: '',
-	c_text_input_name: 'input_example',
-	c_text_input_placeholder_attr: 'Enter text.',
+	id_attr: 'inputExample',
+	label_class: 'lrv-a-screen-reader-only',
+	label_text: 'Input Example',
+	input_class: '',
+	input_name: 'input_example',
+	placeholder_attr: 'Enter text.',
 };
