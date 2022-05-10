@@ -1,0 +1,95 @@
+@import 'setup';
+
+.a-buy-button {
+	background: #fff;
+	color: #000;
+	border: pmc-rem(0.3) solid #000;
+	border-top-width: pmc-rem(3);
+	border-bottom-width: pmc-rem(3);
+	font-family: var( --font-family-basic );
+	text-transform: uppercase;
+	letter-spacing: pmc-rem(0.5);
+	padding: pmc-rem(3) pmc-rem(13);
+}
+
+.a-buy-now {
+	// border-top: pmc-rem(0.5) solid #000;
+	// border-bottom: pmc-rem(0.5) solid #000;
+	// padding: 0 pmc-rem(100);
+	position: relative;
+
+	&__image {
+		position: relative;
+		z-index: 1;
+		background: #fff;
+		width: 100%;
+
+		@include pmc-breakpoint( tablet ) {
+			width: pmc-rem(190); // 160 + 30
+			left: 0;
+			padding: 0 pmc-rem(30) 0 0;
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			width: pmc-rem(245); // 185 + 30 + 30
+			left: pmc-rem(94);
+			padding: 0 pmc-rem(30);
+		}
+	}
+
+	.a-buy-button {
+		position: absolute;
+		top: 0;
+		transform: none;
+		left: 0;
+
+		@include pmc-breakpoint( tablet ) {
+			top: 50%;
+			left: 50%;
+			left: calc( 50% + 95px );
+			transform: translateY(-50%) translateX(-50%);
+		}
+
+		@include pmc-breakpoint( desktop ) {
+			top: 50%;
+			left: pmc-rem(339);
+			transform: translateY(-50%);
+		}
+	}
+
+	&__hr {
+		display: none;
+		margin: 0;
+		padding: 0;
+		border-top: pmc-rem(0.5) solid #000;
+		position: relative;
+
+		@include pmc-breakpoint( tablet ) {
+			display: block;
+		}
+
+		&--top {
+			top: 0;
+
+			@include pmc-breakpoint( tablet ) {
+				top: pmc-rem(37);
+			}
+
+			@include pmc-breakpoint( desktop ) {
+				top: pmc-rem(50);
+			}
+		}
+
+		&--bottom {
+			bottom: 0;
+
+			@include pmc-breakpoint( tablet ) {
+				bottom: pmc-rem(37);
+			}
+
+			@include pmc-breakpoint( desktop ) {
+				bottom: pmc-rem(50);
+			}
+		}
+	}
+}

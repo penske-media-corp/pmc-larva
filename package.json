@@ -1,9 +1,9 @@
 {
   "name": "@penskemediacorp/pmc-larva",
   "version": "1.0.0",
-  "engines" : {
-    "npm" : ">=6.0.0",
-    "node" : ">=14.0.0"
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=14.0.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",

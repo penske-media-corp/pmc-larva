@@ -15,12 +15,20 @@
 	border-left-width: pmc-rem(1);
 }
 
+.lrv-u-border-r-1 {
+	border-right-width: pmc-rem(1);
+}
+
 .lrv-u-border-t-2 {
 	border-top-width: 2px;
 }
 
 .lrv-u-border-t-3 {
 	border-top-width: 3px;
+}
+
+.lrv-u-border-b-3 {
+	border-bottom-width: 3px;
 }
 
 .lrv-u-border-t-5 {
@@ -89,11 +97,21 @@
 	.lrv-u-border-t-3\@desktop {
 		border-top-width: 3px;
 	}
+
+	.lrv-u-border-b-3\@desktop {
+		border-bottom-width: 3px;
+	}
 }
 
 .lrv-u-border-l-1\@desktop {
 	@include pmc-breakpoint( desktop ) {
 		border-left-width: 1px;
+	}
+}
+
+.lrv-u-border-r-1\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		border-right-width: 1px;
 	}
 }
 
@@ -112,6 +130,12 @@
 .lrv-u-border-l-1\@desktop-xl {
 	@include pmc-breakpoint( desktop-xl ) {
 		border-left-width: 1px;
+	}
+}
+
+.lrv-u-border-r-1\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		border-right-width: 1px;
 	}
 }
 

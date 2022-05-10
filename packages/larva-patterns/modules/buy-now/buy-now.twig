@@ -1,0 +1,14 @@
+<div class="a-buy-now">
+	<hr class="a-buy-now__hr a-buy-now__hr--top">
+	{# <img src="<?php echo esc_html( $image ); ?>" alt="temp" width="400" height="400" style="background: #ddd;" class="a-buy-now__image" /> #}
+
+	<div class="lrv-u-width-245 lrv-u-background-color-white a-buy-now__image" style="padding-left:30px">
+		{% if c_lazy_image %}
+			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		{% endif %}
+	</div>
+
+	{% include "@larva/components/c-button/c-button.twig" with button %}
+
+	<hr class="a-buy-now__hr a-buy-now__hr--bottom">
+</div>
