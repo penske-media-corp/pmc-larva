@@ -150,20 +150,3 @@ $widths_map: (
 		width: 35%;
 	}
 }
-
-.lrv-u-width-98 {
-	width: pmc-rem(98);	
-}
-
-.lrv-u-width-83\@mobile-max {
-
-	@include pmc-breakpoint(mobile-max) {
-		width: pmc-rem(83);
-	}
-}
-
-.lrv-u-width-210\@mobile-max {
-	@include pmc-breakpoint(mobile-max) {
-		width: pmc-rem(210);
-	}
-}

@@ -10,11 +10,11 @@ o_card.c_timestamp = false;
 o_card.c_tagline = false;
 o_card.o_author = false;
 
-o_card.o_card_classes = 'lrv-u-display-inline-flex lrv-u-flex-basis-100p@desktop-xl lrv-u-flex-basis-100p@desktop lrv-u-width-210@mobile-max lrv-u-padding-tb-00@mobile-max lrv-u-flex-shrink-0@mobile-max';
+o_card.o_card_classes = 'lrv-u-display-inline-flex lrv-u-flex-basis-100p@desktop-xl lrv-u-flex-basis-100p@desktop lrv-u-padding-tb-00@mobile-max lrv-u-flex-shrink-0@mobile-max';
 o_card.o_card_link_classes = 'lrv-u-flex';
 o_card.o_card_link_url = '#';
 o_card.o_card_image_wrap_classes = 'lrv-u-flex-basis-40p@desktop lrv-u-flex-basis-40p@desktop-xl lrv-u-flex-basis-25p@mobile-max';
-o_card.c_lazy_image.c_lazy_image_classes = 'lrv-u-width-98 lrv-u-width-83@mobile-max';
+o_card.c_lazy_image.c_lazy_image_classes = 'lrv-u-width-100';
 o_card.o_card_content_classes = 'lrv-u-margin-l-1 lrv-u-color-brand-primary:hover lrv-u-flex-basis-60p@desktop lrv-u-flex-basis-60p@desktop-xl lrv-u-flex-basis-55p@mobile-max lrv-u-color-black';
 o_card.c_title.c_title_text = 'Don’t Let This Flop';
 o_card.c_title.c_title_classes = 'lrv-u-color-black lrv-u-color-brand-secondary-dark:hover lrv-u-text-transform-uppercase lrv-a-font-basic-s lrv-u-position-relative lrv-u-padding-b-050';
