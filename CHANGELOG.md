@@ -5,13 +5,32 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-css - Add `lrv-a-glue\@mobile-max`,`lrv-a-span3@desktop`, `lrv-u-border-b-1@desktop`, `lrv-u-border-b-1\@mobile-max`, `lrv-a-children-border-vertical\@mobile-max` utility class.
+* larva-patterns - Add Featured stories module
+* larva-patterns - Add o-sub-header object and sub-header module
+* larva-patterns - Wrap heading module inside a if conditon.
+* larva-patterns - Add outer tag wrapper to o-nav title element.
+* larva-patterns - Add `story-featured-quote` module.
+* larva-patterns - Add `c-text-input` component.
+* larva-patterns - Add `o-text-input-group` object.
+* larva-patterns - Add `age-gate` module.
+* larva-svg - Add white pmc logo.
+* larva-patterns - Add README and `js-` classes to `age-gate` module.
+
+## 0.6.5 - 05-02-2022
+* larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.
 * larva-patterns - Add support for article kicker to story module.
 * larva-patterns - Add `story_after_wp_action` action to story module.
 * larva-css - Add `lrv-a-cols2@desktop-xl` utility classes.
+
 ## 0.6.4 - 04-28-2022
 * larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
 * larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
 
+## Unpublished
+* larva-patterns - Add support for article kicker to story module.
+* larva-patterns - Add `story_after_wp_action` action to story module.
+* larva-css - Add `lrv-a-cols2@desktop-xl` utility classes.
 ## 0.6.3 - 04-21-2022
 * larva-patterns - Add `brand-most-popular` module.
 * larva-patterns - Update `newswire` module and add support for slider.
