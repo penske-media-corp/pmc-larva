@@ -1,30 +1,17 @@
 @import 'setup';
 
-// .lrv-a-buy-button {
-// 	font-family: var( --font-family-basic );
-// 	letter-spacing: pmc-rem(0.5);
-// }
-
 .lrv-a-buy-now {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	font-family: var( --font-family-basic );
+	font-size: pmc-rem(14);
+	letter-spacing: pmc-rem(0.5);
+	font-weight: bold;
 
 	@include pmc-breakpoint( tablet ) {
 		display: block;
-	}
-
-	&-p {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: pmc-rem(16) 0;
-
-		.lrv-a-buy-now-button {
-			position: inherit;
-			transform: none;
-		}
 	}
 
 	&-image {
@@ -96,6 +83,21 @@
 			@include pmc-breakpoint( desktop ) {
 				bottom: pmc-rem(50);
 			}
+		}
+	}
+
+	&-p { // Used when image is not present.
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: var( --font-family-basic );
+		font-size: pmc-rem(14);
+		letter-spacing: pmc-rem(0.5);
+		font-weight: bold;
+
+		.lrv-a-buy-now-button {
+			position: inherit;
+			transform: none;
 		}
 	}
 }

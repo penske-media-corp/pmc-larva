@@ -15,6 +15,8 @@ const button = clonedeep( require( '@penskemediacorp/larva-patterns/components/c
 button.c_button_classes += ' lrv-a-buy-now-button';
 button.c_button_screen_reader_text = 'Buy Now';
 button.c_button_text = 'Buy Now';
+button.c_button_target_attr = '_blank';
+button.c_button_rel_attr = 'nofollow';
 
 // Export
 module.exports = {
