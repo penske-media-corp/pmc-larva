@@ -22,13 +22,21 @@ o_input_day_item = clonedeep( o_input_group_item );
 o_input_month_item = clonedeep( o_input_group_item );
 o_input_year_item = clonedeep( o_input_group_item );
 
-o_input_day_item.c_input_placeholder_attr = 'DD';
 o_input_month_item.c_input_placeholder_attr = 'MM';
+o_input_month_item.c_input_id_attr = 'pmc-age-gate-month';
+o_input_month_item.c_input_error_attr = 'Please enter a valid month';
+
+o_input_day_item.c_input_placeholder_attr = 'DD';
+o_input_day_item.c_input_id_attr = 'pmc-age-gate-day';
+o_input_day_item.c_input_error_attr = 'Please enter a valid day';
+
 o_input_year_item.c_input_placeholder_attr = 'YYYY';
+o_input_year_item.c_input_id_attr = 'pmc-age-gate-year';
+o_input_year_item.c_input_error_attr = 'Please enter a valid year';
 
 o_input_group.o_input_group_items = [
-	o_input_day_item,
 	o_input_month_item,
+	o_input_day_item,
 	o_input_year_item
 ];
 
