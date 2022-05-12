@@ -3,15 +3,22 @@
 $widths_map: (
 	'width-auto': auto,
 	'width-16': pmc-rem(16),
+	'width-24': pmc-rem(24),
 	'width-30': pmc-rem(30),
 	'width-50': pmc-rem(50),
 	'width-100': pmc-rem(100),
 	'width-150': pmc-rem(150),
+<<<<<<< HEAD
 	'width-185': pmc-rem(185),
+=======
+	'width-165': pmc-rem(165),
+>>>>>>> origin/master
 	'width-200': pmc-rem(200),
 	'width-215': pmc-rem(215),
 	'width-245': pmc-rem(245),
 	'width-300': pmc-rem(300),
+	'width-20p': 20%,
+	'width-22p': 22%,
 	'width-30p': 30%,
 	'width-50p': 50%,
 	'width-70p': 70%,
@@ -22,15 +29,22 @@ $widths_map: (
 @include basic-utility-generator( 'width', (
 	width-auto,
 	width-16,
+	width-24,
 	width-30,
 	width-50,
 	width-100,
 	width-150,
+<<<<<<< HEAD
 	width-185,
+=======
+	width-165,
+>>>>>>> origin/master
 	width-200,
 	width-215,
 	width-245,
 	width-300,
+	width-20p,
+	width-22p,
 	width-30p,
 	width-50p,
 	width-70p,
@@ -152,5 +166,41 @@ $widths_map: (
 
 	@include pmc-breakpoint(tablet) {
 		width: 35%;
+	}
+}
+
+.lrv-u-max-width-30p\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		max-width: 30%;
+	}
+}
+
+.lrv-u-width-28\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		width: pmc-rem(28);
+	}
+}
+
+.lrv-u-width-22p\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		width: 22%;
+	}
+}
+
+.lrv-u-width-56p\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		width: 56%;
+	}
+}
+
+.lrv-u-width-135\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		width: pmc-rem(135);
+	}
+}
+
+.lrv-u-width-100p\@tablet {
+	@include pmc-breakpoint(tablet) {
+		width: 100%;
 	}
 }
