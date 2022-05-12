@@ -1,0 +1,42 @@
+<div class="lrv-u-flex {{o_header_button_classes}}">
+	<div class="item-wrap // {{ got_tip_wrapper_classes }}">
+		{% include "@larva/components/c-link/c-link.twig" with c_got_a_tip %}
+	</div>
+
+		{% if show_flyout %}
+
+			<div class="item-wrap // {{ account_menu_classes }} ">
+				{% include "@larva/objects/o-account-menu/o-account-menu.twig" with o_account_menu %}
+			</div>
+
+		{% else %}
+
+			<div class="item-wrap // {{ account_menu_classes }} {{ hide_flyout_classes}}">
+				{% include "@larva/components/c-link/c-link.twig" with c_account_link %}
+			</div>
+
+		{% endif %}
+
+		{% if button_wrap %}
+
+			<div class="items-wrap // {{ button_wrap_classes }}">
+				{% if c_subscribe_link %}
+					{% include "@larva/components/c-link/c-link.twig" with c_subscribe_link %}
+				{% endif %}
+
+				{% include "@larva/components/c-link/c-link.twig" with c_login_link %}
+			</div>
+
+		{% else %}
+
+			<div class="item-wrap // {{ subscribe_wrapper_classes }}">
+				{% if c_subscribe_link %}
+					{% include "@larva/components/c-link/c-link.twig" with c_subscribe_link %}
+				{% endif %}
+			</div>
+			<div class="item-wrap // {{ login_wrapper_classes }} ">
+				{% include "@larva/components/c-link/c-link.twig" with c_login_link %}
+			</div>
+
+		{% endif %}
+</div>
