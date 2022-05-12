@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-tokens - Adjusted artinamerica tokens for hub support
 * larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
 * larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.
 * larva-patterns - Add `o-account-menu`, `o-header-buttons` objects.
