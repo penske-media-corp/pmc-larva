@@ -1,7 +1,12 @@
 <div class="age-gate // js-AgeGate {{ age_gate_class }}">
 	<div class="age-gate-inner // {{ age_gate_inner_class }}">
 		<div class="age-gate-header // {{ age_gate_header_class }}">
-			{% include "@larva/components/c-svg/c-svg.twig" with c_svg_header %}
+			{% if c_svg_header %}
+				{% include "@larva/components/c-svg/c-svg.twig" with c_svg_header %}
+			{% endif %}
+			{% if c_lazy_image_header %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image_header %}
+			{% endif %}
 			{% if c_heading %}
 				{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
 			{% endif %}
@@ -23,6 +28,9 @@
 			{% endif %}
 			{% if c_svg_footer %}
 				{% include "@larva/components/c-svg/c-svg.twig" with c_svg_footer %}
+			{% endif %}
+			{% if c_lazy_image_footer %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image_footer %}
 			{% endif %}
 		</div>
 	</div>
