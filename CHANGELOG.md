@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Set default input attributes in `age-gate` module for improved accessibility
+* larva-patterns - Add `a-font` classes and additional options in `age-gate` module
+
 ## 0.7.2 - 05-10-2022
 * larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
 ## 0.7.1 - 05-10-2022
