@@ -32,4 +32,11 @@
 		border-left: var(--a-children-border-width, 1px) solid var(--a-children-border-color, '');
 	}
 }
-// stylelint-enable selector-max-compound-selectors
+
+@include pmc-breakpoint(desktop) {
+	.lrv-a-children-border-horizontal\@desktop {
+		& > * + * {
+			border-left: var(--a-children-border-width, 1px) solid var(--a-children-border-color, '');
+		}
+	}
+} // stylelint-enable selector-max-compound-selectors
