@@ -1,0 +1,17 @@
+.js-Tooltip {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	transition: opacity 0.3 cubic-bezier(0.19,1,0.22,1);
+}
+
+.is-Tooltip-open .js-Tooltip {
+	opacity: 1;
+	visibility: visible;
+}
+
+.is-Tooltip-open .lrv-a-icon-arrow-down {
+	--a-icon-transform: rotate(-180deg);
+}
+

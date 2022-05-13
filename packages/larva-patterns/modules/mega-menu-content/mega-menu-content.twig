@@ -1,0 +1,5 @@
+<ul class="mega-menu-content // mega-menu__parent-list {{ mega_menu_content_classes }} ">
+	{% for item in mega_menu_content_items %}
+		{% include "@larva/modules/mega-menu-item/mega-menu-item.twig" with item %}
+	{% endfor %}
+</ul>
