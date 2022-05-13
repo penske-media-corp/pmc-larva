@@ -231,7 +231,7 @@
 			"type": "number",
 			"value": "24px",
 			"originalValue": "14px",
-			"name": "SECONDARY_M_FONT_SIZE_DESKTOP-XL"
+			"name": "SECONDARY_S_FONT_SIZE_DESKTOP-XL"
 		},
 		"SECONDARY_S_FONT_SIZE_DESKTOP": {
 			"selector": "lrv-a-font",
@@ -240,7 +240,7 @@
 			"type": "number",
 			"value": "24px",
 			"originalValue": "14px",
-			"name": "SECONDARY_M_FONT_SIZE_DESKTOP"
+			"name": "SECONDARY_S_FONT_SIZE_DESKTOP"
 		},
 		"SECONDARY_S_FONT_SIZE_MOBILE": {
 			"selector": "lrv-a-font",
@@ -249,7 +249,7 @@
 			"type": "number",
 			"value": "21px",
 			"originalValue": "11px",
-			"name": "SECONDARY_M_FONT_SIZE_MOBILE"
+			"name": "SECONDARY_S_FONT_SIZE_MOBILE"
 		},
 		"PRIMARY_L_LINE_HEIGHT_DESKTOP-XL": {
 			"selector": "lrv-a-font",
