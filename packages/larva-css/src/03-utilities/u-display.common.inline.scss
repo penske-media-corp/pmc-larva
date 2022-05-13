@@ -72,3 +72,23 @@
 		display: none;
 	}
 }
+
+.lrv-u-display-none\:first-child\@desktop-max {
+	@include pmc-breakpoint( desktop-max ) {
+		&> *:first-child {
+			display: none;
+		}
+	}
+}
+
+.lrv-u-display-inline-block\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		display: inline-block;
+	}
+}
+
+.lrv-u-display-block\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		display: block;
+	}
+}
