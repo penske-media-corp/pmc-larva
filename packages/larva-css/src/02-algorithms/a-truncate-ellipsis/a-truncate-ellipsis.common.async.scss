@@ -33,7 +33,7 @@
 .lrv-a-truncate-ellipsis-6line {
 	@include _a-truncate-ellipsis(6);
 }
- 
+
 .lrv-a-truncate-ellipsis-3line\@desktop-xl {
 	@include pmc-breakpoint( desktop-xl ) {
 		@include _a-truncate-ellipsis(3);

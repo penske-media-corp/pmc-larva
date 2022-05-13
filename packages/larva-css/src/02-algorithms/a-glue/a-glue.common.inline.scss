@@ -57,6 +57,22 @@
 	--a-glue-bottom: 0;
 }
 
+.lrv-a-glue--t-50p {
+	--a-glue-top: 50%;
+}
+
 .lrv-a-glue--t-100p {
 	--a-glue-top: 100%;
+}
+
+.lrv-a-glue-parent\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		position: relative;
+	}
+}
+
+.lrv-a-glue-parent\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		position: relative;
+	}
 }
