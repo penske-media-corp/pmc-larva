@@ -5,7 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images aren't lazy.
+* larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
+* larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
 
 ## 0.7.4 - 05-12-2022
 * larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
