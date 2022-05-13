@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-tokens - Adjusted artinamerica tokens for hub support
 * larva-css - Add `lrv-a-crop-1x1@mobile-max` class.
 * larva-js - Update jwplayer script to use pmc_jwplayer script
  
