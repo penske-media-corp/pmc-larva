@@ -1,0 +1,10 @@
+<nav class="mega-menu // js-MegaMenu {{ mega_menu_classes }} ">
+	<div class="mega-menu-outer // {{ mega_menu_outer_classes }} ">
+		<div class="mega-menu-inner // {{ mega_menu_inner_classes }} ">
+			<div class="mega-menu-content-outer // {{ mega_menu_content_outer_classes }} ">
+				{% include "@larva/modules/mega-menu-content/mega-menu-content.twig" with mega_menu_content %}
+			</div>
+			{% include "@larva/modules/mega-menu-footer/mega-menu-footer.twig" with mega_menu_footer %}
+		</div>
+	</div>
+</nav>

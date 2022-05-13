@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images aren't lazy.
 
+## 0.7.4 - 05-12-2022
+* larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
+* larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.
+* larva-patterns - Add `o-account-menu`, `o-header-buttons` objects.
+* larva-css - Add utility classes for `border`, `box`, `display`, `font-size`, `height`, `letter-spacing`, `width`, `padding`, `transform` and `vertical-align`.
+* larva-js - Add expandable search and header JS.
+
+## 0.7.3 - 05-12-2022
+* larva-patterns - Set default input attributes in `age-gate` module for improved accessibility
+* larva-patterns - Add `a-font` classes and additional options in `age-gate` module
+
 ## 0.7.2 - 05-10-2022
 * larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
 ## 0.7.1 - 05-10-2022

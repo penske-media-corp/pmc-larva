@@ -1,0 +1,74 @@
+{% if is_home %}
+	<header class="header // js-Header {{ header_classes }}">
+		<div class="header-content // js-Header-contents {{ header_contents_classes }}">
+			<div class="header-outer // js-hide-when-sticky {{ header_outer_classes }}">
+				<div class="header-inner //  {{ header_inner_classes }} ">
+					<div class="header-content-primary // lrv-a-wrapper {{ header_content_primary_classes }}">
+						<div class="header-mobile-button // {{ header_mobile_button_classes }} ">
+							{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
+						</div>
+						<div class="header-links-primary // {{ header_links_primary_classes }}  ">
+							<div class="header-links-primary-inner // {{ header_links_primary_inner_classes }} ">
+								{% include "@larva/components/c-link/c-link.twig" with c_link_left_primary %}
+								{% include "@larva/components/c-link/c-link.twig" with c_link_left_secondary %}
+							</div>
+						</div>
+						<div class="header-logo // {{ header_logo_classes }} ">
+							{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
+						</div>
+						<div class="header-links-secondary // {{ header_links_secondary_classes }} ">
+							<div class="header-links-secondary-inner // {{ header_links_secondary_inner_classes }} "> 
+									{% include "@larva/components/c-link/c-link.twig" with c_link_right_primary %}
+									{% include "@larva/components/c-link/c-link.twig" with c_link_right_secondary %}
+									{% include "@larva/objects/o-account-menu/o-account-menu.twig" with o_account_menu %}
+							</div>
+						</div>
+					</div>
+					<div class="header-content-secondary-outer // {{ header_content_secondary_outer_classes }} ">
+						<div class="header-content-secondary-inner // {{ header_content_secondary_inner_classes }} ">
+							<div class="header-content-secondary // lrv-a-wrapper {{ header_content_secondary_classes }} ">
+								{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
+								{% include "@larva/modules/header-menu/header-menu.twig" with header_menu %}
+								{% include "@larva/modules/expandable-search/expandable-search.twig" with expandable_search %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% if header_sticky %}
+				<div class="header-sticky-outer // js-show-when-sticky js-sticky-header-slidedown {{ header_sticky_outer_classes }}">
+					{% include "@larva/modules/header-sticky/header-sticky.twig" with header_sticky %}
+				</div>
+			{% endif %}
+		</div>
+	</header>
+{% else %}
+	<header class="header // js-Header {{ header_classes }}">
+		<div class="header-content // js-Header-contents {{ header_contents_classes }}">
+			<div class="header-outer //  js-hide-when-sticky  {{ header_outer_classes }}">
+				<div class="header-inner // {{ header_inner_classes }} ">
+					<div class="header-content-primary // {{ header_content_primary_classes }}">
+						<div class="header-logo // {{ header_logo_classes }} ">
+							{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
+						</div>
+						<div class="header-links-primary //  {{ header_links_primary_classes }}  ">
+							{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
+							{% include "@larva/modules/expandable-search/expandable-search.twig" with expandable_search %}
+						</div>
+						<div class="header-content-menu // {{ header_content_menu_classes }}  ">
+							{% include "@larva/modules/header-menu/header-menu.twig" with header_menu %}
+						</div>
+						<div class="header-links-secondary // {{ header_links_secondary_classes }} ">
+							{% include "@larva/objects/o-header-buttons/o-header-buttons.twig" with o_header_buttons_column %}
+						</div>
+					</div>
+				</div>
+			</div>
+			{% if header_sticky %}
+				<div class="header-sticky-outer // js-show-when-sticky js-sticky-header-slidedown {{ header_sticky_outer_classes }}">
+					{% include "@larva/modules/header-sticky/header-sticky.twig" with header_sticky %}
+				</div>
+			{% endif %}
+		</div>
+	</header>
+{% endif %}

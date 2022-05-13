@@ -1,0 +1,33 @@
+@import 'setup';
+@import 'partials/expandable-search';
+
+.is-ExpandableSearch-open {
+	background-color: var( --color-brand-primary );
+	color: var( --color-white );
+	position: relative;
+
+	svg {
+		opacity: 0;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: calc( 50% - #{pmc-rem(1)} );
+		left: calc( 50% - #{pmc-rem(10)} );
+		width: pmc-rem(20);
+		height: pmc-rem(2);
+		background-color: white;
+		transition: transform 600ms ease;
+		transform: rotateZ( 45deg );
+	}
+
+	&::after {
+		transform: rotateZ( -45deg );
+	}
+
+	&:hover {
+		color: var( --color-white );
+	}
+}
