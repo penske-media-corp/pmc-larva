@@ -32,6 +32,10 @@
 	align-items: flex-start;
 }
 
+.lrv-u-align-items-stretch {
+	align-items: stretch;
+}
+
 @include pmc-breakpoint( desktop ) {
 	.lrv-u-align-items-center\@desktop {
 		align-items: center;

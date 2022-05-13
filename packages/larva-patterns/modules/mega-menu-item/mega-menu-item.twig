@@ -1,0 +1,13 @@
+<li class="mega-menu-item // mega-menu__parent-list-item {{ mega_menu_item_classes }} ">
+	<div class="mega-menu__item-link // {{ mega_menu_item_link_classes }} ">
+		{% include "@larva/components/c-link/c-link.twig" with c_link %}
+	</div>
+
+	<ul class="mega-menu__child-list // {{ mega_menu_child_list_classes }} ">
+		{% for item in mega_menu_item_children %}
+			<li class="mega-menu__child-list-item ">
+				{% include "@larva/components/c-link/c-link.twig" with item %}
+			</li>
+		{% endfor %}
+	</ul>
+</li>

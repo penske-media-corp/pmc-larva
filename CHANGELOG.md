@@ -5,9 +5,41 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-css - Add `lrv-a-glue\@mobile-max` class.
 * larva-css - Add `lrv-u-justify-content-center\@tablet` class.
 * larva-patterns - Add `top-stories` module.
+## 0.7.4 - 05-12-2022
+* larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
+* larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.
+* larva-patterns - Add `o-account-menu`, `o-header-buttons` objects.
+* larva-css - Add utility classes for `border`, `box`, `display`, `font-size`, `height`, `letter-spacing`, `width`, `padding`, `transform` and `vertical-align`.
+* larva-js - Add expandable search and header JS.
+
+## 0.7.3 - 05-12-2022
+* larva-patterns - Set default input attributes in `age-gate` module for improved accessibility
+* larva-patterns - Add `a-font` classes and additional options in `age-gate` module
+
+## 0.7.2 - 05-10-2022
+* larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
+## 0.7.1 - 05-10-2022
+* larva-patterns - Suffix relevant `c-input` component variables with `_attr`
+* larva-patterns - Change component name from `c-text-input` to `c-input` to prevent twig-to-php parser issues
+* larva-patterns - Change object name from `o-text-input-group` to `o-input-group` to prevent twig-to-php parser issues
+
+## 0.7.0 - 05-10-2022
+* larva-css - Add `lrv-a-glue\@mobile-max`,`lrv-a-span3@desktop`, `lrv-u-border-b-1@desktop`, `lrv-u-border-b-1\@mobile-max`, `lrv-a-children-border-vertical\@mobile-max` utility class.
+* larva-css - Add `lrv-a-cols2@desktop-xl` utility classes.
+* larva-patterns - Add Featured stories module
+* larva-patterns - Add o-sub-header object and sub-header module
+* larva-patterns - Wrap heading module inside a if conditon.
+* larva-patterns - Add outer tag wrapper to o-nav title element.
+* larva-patterns - Add `story-featured-quote` module.
+* larva-patterns - Add `c-text-input` component.
+* larva-patterns - Add `o-text-input-group` object.
+* larva-patterns - Add `age-gate` module.
+* larva-patterns - Add README and `js-` classes to `age-gate` module.
+* larva-patterns - Add support for article kicker to story module.
+* larva-patterns - Add `story_after_wp_action` action to story module.
+* larva-svg - Add white pmc logo.
 
 ## 0.6.5 - 05-02-2022
 * larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.

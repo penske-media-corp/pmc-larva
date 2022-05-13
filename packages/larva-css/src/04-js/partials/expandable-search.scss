@@ -1,0 +1,202 @@
+@import 'setup';
+
+// Note:
+// Swiftype markup is generated dynamically, so plain CSS is used instead of
+// Larva CSS classes.
+
+// The Swiftype module appears in 3 modules, or contexts:
+// 1. header (desktop, not sticky)
+// 2. header-sticky (desktop, sticky)
+// 3. mega-menu (all sizes)
+
+// The CSS is structured like so:
+// Base styles that apply to everything added to .swiftype.
+// Style specific for each context, applied by adding specificity with .context-module .swiftype.
+// BEM modifier classes are intentionally not used because the specificity is helpful here,
+// and we can use the exiting module classes instead of creating new names for modifiers.
+
+//
+// Base module styles
+//
+.expandable-search {
+	color: var( --color-black );
+
+	$border-size: pmc-rem(2);
+	$input-width: pmc-rem(44);
+
+	.search-form {
+		display: flex;
+		position: relative;
+	}
+
+	// Search icon over input
+	.search-form::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: $spacer-1;
+
+		// Basically a-icon
+		content: '';
+		// search.svg from larva-svg.
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Ctitle%3ESearch Icon%3C/title%3E%3Cpath d='M17.7 16.3l-1.5 1.5-5-5V12l-.2-.2c-1.1 1-2.6 1.6-4.2 1.6-3.6 0-6.5-2.9-6.5-6.5S3.2.4 6.8.4s6.5 2.9 6.5 6.5c0 1.6-.6 3.1-1.6 4.2l.3.3h.8l4.9 4.9zm-6.5-9.5c0-2.5-2-4.5-4.5-4.5s-4.5 2-4.5 4.5 2 4.5 4.5 4.5 4.5-2 4.5-4.5z' fill-rule='evenodd'/%3E%3C/svg%3E");
+		height: pmc-rem(24);
+		width: pmc-rem(24);
+		background-repeat: no-repeat;
+		background-size: contain;
+		transform: translateY( -50% );
+		pointer-events: none;
+		z-index: 2;
+		transition: $transition-transform transform;
+	}
+
+	.search-form > label:first-of-type {
+		position: relative;
+	}
+
+	.search-form > label:first-of-type::after {
+		content: '';
+		position: absolute;
+		bottom: pmc-rem(17);
+		left: pmc-rem(20);
+		height: pmc-rem(1);
+		background-color: map-get( $TOKENS-MAP, background-color-black );
+		width: calc(100% - 5rem);
+		display: inline-block;
+		z-index: 9;
+	}
+
+	// White swatch to cover submit text
+	.search-form::before {
+		background-color: map-get( $TOKENS-MAP, background-color-white );
+		content: '';
+		position: absolute;
+		right: $border-size;
+		top: $border-size;
+		height: calc( 100% - #{$border-size} * 2 );
+		width: $input-width;
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	// Style input text to be invisible, hidden beneath search icon.
+	.search-form input[type='text'],
+	.search-form input[type='search'] {
+		border: 2px solid var( --color-black );
+		padding: $spacer-050 $spacer-125 ;
+		min-width: pmc-rem(300);
+		font-family: var( --font-family-body );
+		box-shadow: $shadow-light;
+		font-size: pmc-rem(10);
+		height: pmc-rem(62);
+		position: relative;
+		&::-webkit-input-placeholder { /* Edge */
+			color: var( --color-black );
+			text-transform: uppercase;
+		  }
+
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color: var( --color-black );
+			text-transform: uppercase;
+		  }
+
+		 &::placeholder {
+			color: var( --color-black );
+			text-transform: uppercase;
+		  }
+	}
+
+	.search-form input[type='submit'] {
+		position: absolute;
+		right: $border-size;
+		height: 100%;
+		width: $input-width;
+		overflow: hidden;
+
+		// lrv-a-unstyle-button
+		border: 0;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	.swiftype-widget {
+		background-color: var( --background-color-body );
+		box-shadow: $shadow-medium;
+	}
+
+	.ac-section-title {
+		font-family: var( --font-family-basic );
+		padding-bottom: $spacer-025;
+		font-size: $font-size-14;
+		font-weight: var( --font-weight-bold );
+		text-transform: uppercase;
+		padding-left: $spacer-050;
+		padding-right: $spacer-050;
+	}
+
+	.autocomplete-section {
+		padding-top: $spacer-1;
+	}
+
+	.ac-result {
+		padding: $spacer-050;
+	}
+
+	.ac-result:hover,
+	.ac-result:focus {
+		color: var( --color-brand-primary );
+		background-color: var( --background-color-grey-lightest );
+		cursor: pointer;
+	}
+
+	.ac-result em {
+		font-weight: var( --font-weight-bold );
+		font-style: normal;
+	}
+
+	.ac-result {
+		border-top: 1px solid var( --color-grey-light );
+	}
+
+	.ac_title {
+		font-family: var( --font-family-primary );
+		line-height: var( --line-height-normal );
+	}
+
+	.ac_title,
+	.ac_tag {
+		font-family: var( --font-family-body );
+		font-size: $font-size-16;
+	}
+
+	.ac_sub {
+		font-family: var( --font-family-body );
+		font-size: $font-size-14;
+		font-style: italic;
+		color: var( --color-grey-dark );
+	}
+
+	.sticky-expandable {
+		.search-form {
+			&> label:first-of-type::after {
+				left: 3.2rem;
+			}
+			&::before {
+				left: 0.125rem;
+				right: unset;
+			}
+			&::after {
+				left: 1rem;
+				right: unset;
+			}
+			input[type=search] {
+				padding: .5rem 1.25rem .5rem 3.2rem;
+			}
+			input[type=submit] {
+				left: 0.125rem;
+				right: unset;
+			}
+		}
+	}
+
+}

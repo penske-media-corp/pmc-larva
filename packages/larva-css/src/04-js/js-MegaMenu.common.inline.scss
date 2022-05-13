@@ -1,0 +1,50 @@
+@import 'setup';
+
+.js-MegaMenu {
+	--mega-menu-top-offset: var( --login-bar-height );
+
+	// Hidden state.
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY( calc( -100% - var( --mega-menu-top-offset ) ) );
+	// End hidden.
+
+	// Animation.
+	transition: opacity $transition-fade,
+	transform $transition-transform,
+	visibility $transition-transform;
+
+	// Adjust offset according to breakpoint and presence of menus.
+	@include pmc-breakpoint( desktop-max ) {
+		--mega-menu-top-offset: calc( var( --login-bar-height ) + var( --sticky-nav-height ) );
+	}
+
+}
+
+.is-mega-open body {
+	overflow: hidden;
+}
+
+// Default styling for mega menu hidden state needs to be part of critical CSS
+// and is added in patterns/generic/js-interface.scss
+
+.is-mega-open .js-MegaMenu {
+	// Toggle properties from hidden state.
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	pointer-events: initial;
+}
+
+// Move these
+.mega-menu__parent-list-item {
+	background-color: map-get( $TOKENS-MAP, black );
+	transition: background-color ease $transition-duration-300;
+}
+
+.is-expanded.mega-menu__parent-list-item {
+	@include pmc-breakpoint( desktop-max ) {
+		background-color: map-get( $TOKENS-MAP, brand-red );
+	}
+}

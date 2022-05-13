@@ -1,0 +1,11 @@
+{% if search_form_is_swiftype %}
+	<div data-st-search-form="small_search_form"></div>
+{% else %}
+	<form class="search-form {{ search_form_classes }}" action="{{ search_form_action_url }}" role="search" method="get">
+		<label>
+			<span class="lrv-a-screen-reader-only">Search for:</span>
+			<input class="{{ search_form_input_classes }}" type="search" placeholder="{{ search_form_input_placeholder_attr }}" value="" name="s">
+		</label>
+		<input class="{{ search_form_submit_classes }}" type="submit" value="Search">
+	</form>
+{% endif %}

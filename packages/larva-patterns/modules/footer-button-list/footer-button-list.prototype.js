@@ -36,7 +36,7 @@ customer_service.c_button_url = '#customer-service';
 
 module.exports = {
 	footer_button_list_content_classes: 'o-footer-button-list__content a-font-body-s lrv-u-flex lrv-u-flex-direction-column a-double-underline a-double-underline-color-grey a-double-underline-bottom@mobile-max lrv-u-padding-b-2@mobile-max',
-	footer_button_list_title_classes: 'a-font-accent-medium-l lrv-u-font-weight-bold lrv-u-display-none@mobile-max lrv-u-padding-b-050',
+	footer_button_list_title_classes: 'lrv-a-font-accent-medium-l lrv-u-font-weight-bold lrv-u-display-none@mobile-max lrv-u-padding-b-050',
 	footer_button_list_classes: 'lrv-u-text-transform-uppercase u-letter-spacing-0063',
 	footer_button_list_title_text: '',
 	footer_button_list_buttons: [ get_digital_access, get_magazine, get_gift, customer_service],
