@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `o-header` object support in `story-grid` module
 * larva-patterns - Add `c-span` object support in `o-header` object.
 * larva-css - Add `lrv-a-children-border-horizontal@desktop`, `lrv-a-glue--b-n1`, `lrv-a-glue--r-50p`, `lrv-a-glue--l-50p` utility classes.
+* larva-tokens - Adjusted artinamerica tokens for hub support
+* larva-css - Add `lrv-a-crop-1x1@mobile-max` class.
+* larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
+* larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
 
 ## 0.7.4 - 05-12-2022
 * larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
