@@ -2,17 +2,17 @@
     <div class="{{ special_coverage_wrapper_classes }}">
         <div class="{{ special_coverage_banner_classes }}">
             {% if special_coverage_heading_classes %}
-				<div class="{{ special_coverage_heading_classes }}">
+				<div class="special-coverage-heading {{ special_coverage_heading_classes }}">
 					{% if heading_1 %} 
-						{% include "@larva/modules/heading/heading.twig" with heading_1 %}
+						{% include "@larva/components/c-heading/c-heading.twig" with heading_1 %}
 					{% endif %}	
 					{% if heading_2 %}
-						{% include "@larva/modules/heading/heading.twig" with heading_2 %}
+						{% include "@larva/components/c-heading/c-heading.twig" with heading_2 %}
 					{% endif %}	
 				</div>
 			{% endif %}	
 			{% if c_lazy_image %}
-				<div class="{{ special_coverage_logo_classes }}">
+				<div class="special-coverage-logo {{ special_coverage_logo_classes }}">
 					{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 				</div>  
 			{% endif %}			     
