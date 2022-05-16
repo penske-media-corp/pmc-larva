@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+
+## 0.7.5 - 05-16-2022
 * larva-patterns - Add `banner` module.
 * larva-patterns - Add `o-header` object support in `story-grid` module
 * larva-patterns - Add `c-span` object support in `o-header` object.
