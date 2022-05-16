@@ -18,6 +18,21 @@ $aspect-ratios: (
 	object-fit: contain;
 }
 
+.lrv-a-crop-1x1\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+	 
+		position: relative;
+		padding-bottom: 100%;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		 
+	}
+}
 
 .lrv-a-crop-1x1\@tablet {
 	@include pmc-breakpoint( tablet ) {

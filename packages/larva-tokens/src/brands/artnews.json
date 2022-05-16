@@ -131,7 +131,7 @@
 		"status": "alpha",
 		"category": "font-size",
 		"type": "number",
-		"value": "30px",
+		"value": "16px",
 		"originalValue": "36px",
 		"name": "PRIMARY_M_FONT_SIZE_DESKTOP"
 	  },
@@ -185,7 +185,7 @@
 		"status": "alpha",
 		"category": "font-size",
 		"type": "number",
-		"value": "36px",
+		"value": "26px",
 		"originalValue": "36px",
 		"name": "PRIMARY_XS_FONT_SIZE_DESKTOP"
 	  },
@@ -212,7 +212,7 @@
 		"status": "alpha",
 		"category": "font-size",
 		"type": "number",
-		"value": "36px",
+		"value": "18px",
 		"originalValue": "36px",
 		"name": "PRIMARY_XXS_FONT_SIZE_DESKTOP"
 	  },
@@ -221,7 +221,7 @@
 		"status": "alpha",
 		"category": "font-size",
 		"type": "number",
-		"value": "26px",
+		"value": "19px",
 		"originalValue": "23px",
 		"name": "PRIMARY_XXS_FONT_SIZE_MOBILE"
 	  },
@@ -266,7 +266,7 @@
 		"status": "alpha",
 		"category": "font-size",
 		"type": "number",
-		"value": "20px",
+		"value": "16px",
 		"originalValue": "14px",
 		"name": "SECONDARY_M_FONT_SIZE_DESKTOP"
 	  },
@@ -521,6 +521,13 @@
 			"value": "24px",
 			"originalValue": "57px",
 			"name": "PRIMARY_S_LINE_HEIGHT_MOBILE"
+	  },
+	  "PRIMARY_XXS_LETTER_SPACING_DESKTOP": {
+		"category": "letter-spacing",
+		"type": "number",
+		"value": ".52px",
+		"originalValue": "normal",
+		"name": "PRIMARY_XXS_LETTER_SPACING_DESKTOP"
 	  }
 	}
 }

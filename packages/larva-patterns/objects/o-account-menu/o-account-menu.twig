@@ -1,0 +1,25 @@
+<div class="o-account-menu //  {{ o_account_menu_classes }}">
+	{% include "@larva/components/c-link/c-link.twig" with c_account_link %}
+	<div class="o-account-content // {{ o_account_content_classes }}">
+		<div class="o-account-content-inner // {{ o_account_content_inner_classes }}">
+
+			{% if c_welcome_span %}
+				<div class="o-account-welcome-span-link // {{ o_account_welcome_span_classes }} ">
+					{% include "@larva/components/c-span/c-span.twig" with c_welcome_span %}
+				</div>
+			{% endif %}
+
+			{% if c_manage_account %}
+				<div class="o-account-manage-account-link // {{ o_account_manage_account_classes }} ">
+					{% include "@larva/components/c-link/c-link.twig" with c_manage_account %}
+				</div>
+			{% endif %}
+
+			{% if c_log_out %}
+				<div class="o-account-logout-link // {{ o_account_logout_classes }} ">
+					{% include "@larva/components/c-link/c-link.twig" with c_log_out %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>
