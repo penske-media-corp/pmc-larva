@@ -1,0 +1,9 @@
+<header class="o-sub-header // {{ o_sub_header_classes }}">
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	{% if o_nav %}
+		{% include "@larva/objects/o-nav/o-nav.twig" with o_nav %}
+	{% endif %}
+</header>
