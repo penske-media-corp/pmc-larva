@@ -65,6 +65,18 @@
 	--a-glue-top: 100%;
 }
 
+.lrv-a-glue--l-50p {
+	--a-glue-left: 50%;
+}
+
+.lrv-a-glue--r-50p {
+	--a-glue-right: 50%;
+}
+
+.lrv-a-glue--b-n1 {
+	--a-glue-bottom: -1rem;
+}
+
 .lrv-a-glue-parent\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		position: relative;
