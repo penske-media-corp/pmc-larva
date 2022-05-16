@@ -1,9 +1,19 @@
-# Upgrading consuming projects
+# Upgrading Consuming Projects
+This document contains documentation on how to upgrade a Larva project, and
+highlights breaking changes to be aware of when upgrading.
+
+## How to Upgrade a Larva Project
+From within your Larva project, run `npx @penskemediacorp/larva upgrade`.
+
+This will upgrade your Larva package to the latest stable release, and run a
+build.
+
+---
+
+# Breaking Updates Changelog
 
 This document notes breaking changes that should be considered when updating a
 consuming project's Larva version.
-
----
 
 ### `lrv-a-crop-2x3` (version 0.5.0)
 
