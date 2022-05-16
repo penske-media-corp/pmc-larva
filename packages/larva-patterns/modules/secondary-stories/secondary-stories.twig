@@ -1,0 +1,22 @@
+<section class="secondary-stories {{ secondary_stories_classes }}">
+	<div class="stories-content-primary // {{ stories_content_primary_classes }} ">
+		<div class="stories-content-primary-inner // {{ stories_content_primary_inner_classes }} ">
+			<div class="stories-card-primary // {{ stories_card_primary_classes }}">
+				{% include "@larva/objects/o-card/o-card.twig" with stories[0] %} 
+			</div> 
+			<div class="stories-card-secondary // {{ stories_card_secondary_classes }} ">
+				<div class=" stories-card-secondary-inner // {{ stories_card_secondary_inner_classes }}">
+					{% include "@larva/objects/o-card/o-card.twig" with stories[1] %} 
+					{% include "@larva/objects/o-card/o-card.twig" with stories[2] %} 
+				</div> 
+				{% include "@larva/objects/o-card/o-card.twig" with stories[3] %} 
+			</div> 
+		</div> 
+	</div>
+	<div class="stories-content-secondary // {{ stories_content_secondary_classes }} "> 
+		<div class="stories-content-secondary-inner // {{ stories_content_secondary_inner_classes }} ">
+			{% include "@larva/objects/o-card/o-card.twig" with stories[4] %} 
+			{% include "@larva/objects/o-card/o-card.twig" with stories[5] %} 
+		</div>   
+	</div> 
+</section>

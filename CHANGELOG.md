@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-css - Add `lrv-a-crop-1x1@mobile-max` class.
 * larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
 * larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
+* larva-patterns - Add `secondary-stories` module.
+* larva-css - Add utility classes for `crop`, `space-children`, `border`, `margin`, `padding` and `flex`.
 
 ## 0.7.4 - 05-12-2022
 * larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
