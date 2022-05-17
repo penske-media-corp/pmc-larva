@@ -1,0 +1,9 @@
+<div class="expandable-search-outer // {{ expandable_search_outer_classes }}">
+
+	{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_search %}
+	<div class="expandable-search // {{ expandable_search_classes }}" hidden>
+		<div class="expandable_search-inner {{ expandable_search_inner_classes }}" data-header-search-trigger="">
+			{% include "@larva/modules/search-form/search-form.twig" with search_form %}
+		</div>
+	</div>
+</div>

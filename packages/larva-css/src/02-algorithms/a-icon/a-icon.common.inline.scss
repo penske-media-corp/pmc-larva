@@ -102,3 +102,20 @@
 	}
 }
 
+.lrv-a-icon-after-arrow-top-right {
+	&::before {
+		position: absolute;
+		content: '';
+		display: block;
+		width: pmc-rem(24);
+		height: pmc-rem(24);
+		right: 13%;
+		border: 2px solid map-get( $TOKENS-MAP, color-black );
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		transform: rotate( 45deg );
+		top: pmc-rem(-12);
+		background-color: $color-white;
+	}
+}
+

@@ -25,6 +25,16 @@ If you are updating dependencies or debugging version conflicts, there is an add
 ```
 sh scripts/refresh-dependencies.sh
 ```
+
+## Linking Larva for Local Development
+When working with Larva locally, you'll likely want to test your changes on a Larva project.
+
+Using [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link), we can point your local project's Larva packages to your local Larva monorepo.
+
+1. From within this repo, run `npm run link-all` to link the Larva, Patterns, CSS, and JS packages.
+1. From within your project, run `npx @penskemediacorp/larva link-all`.
+1. From within your project, run a full build with `npx @penskemediacorp/larva prod`.
+
 ## Viewing Larva Patterns
 
 To view and develop Larva patterns, run the following command after the above installation setup:
@@ -34,6 +44,14 @@ npm run larva
 ```
 
 This will open a development server at localhost:3000. You can contribute to patterns in the packages/larva-patterns, and see the updates reflected here.
+
+### Changing the Default Port
+
+To modify the port Larva runs on, you can use `NODE_PORT` before your `npm run larva` command,
+
+```bash
+ NODE_PORT=8080 npm run larva
+ ```
 
 ## Running Visual Regression Tests
 
