@@ -7,11 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-css - Add utility classes for `overflow` and `flex-shrink`.
 * larva-patterns - Add `the-moth` variant for `content-showcase` module.
+* larva-css - Add `lrv-u-justify-content-center\@tablet` class.
+* larva-patterns - Add `top-stories` module.
+
+## 1.0.0 - 05-16-2022
+* larva - Introduce additional Larva CLI commands.
+
+## 0.7.5 - 05-16-2022
+* larva-patterns - Add `banner` module.
+* larva-patterns - Add `o-header` object support in `story-grid` module
+* larva-patterns - Add `c-span` object support in `o-header` object.
+* larva-css - Add `lrv-a-children-border-horizontal@desktop`, `lrv-a-glue--b-n1`, `lrv-a-glue--r-50p`, `lrv-a-glue--l-50p` utility classes.
 * larva-tokens - Adjusted artinamerica tokens for hub support
 * larva-css - Add `lrv-a-crop-1x1@mobile-max` class.
 * larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
 * larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
-
+* larva-js - Update jwplayer script to use pmc_jwplayer script
+ 
 ## 0.7.4 - 05-12-2022
 * larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
 * larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.

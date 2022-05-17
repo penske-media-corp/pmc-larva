@@ -1,0 +1,10 @@
+<div class="banner // {{ banner_classes }}">
+	<div class="banner__img">
+	{% if c_lazy_image %}
+		{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+	{% endif %}
+	</div>
+	{% if screen_reader_text %}
+		<h1 class="lrv-a-screen-reader-only">{{ screen_reader_text }}</h1>
+	{% endif %}
+</div>

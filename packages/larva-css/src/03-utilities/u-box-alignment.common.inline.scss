@@ -69,3 +69,9 @@
 		align-items: flex-start;
 	}
 }
+
+.lrv-u-justify-content-center\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		justify-content: center;
+	}
+}
