@@ -38,4 +38,3 @@ jobs:
         add: 'backstop_data'
         message: 'chore: updated backstop reference screenshots'
         new_branch: ${{ steps.set-output-new-branch.outputs.NEW_BRANCH }}
-

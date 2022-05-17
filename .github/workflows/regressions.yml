@@ -34,3 +34,37 @@ jobs:
       with:
         name: backstop-results
         path: backstop_data
+    - id: find-pull-request
+      uses: jwalton/gh-find-current-pr@v1
+      with:
+        state: open
+    - name: Comment Regression test results on PR
+      uses: peter-evans/create-or-update-comment@v2
+      if: ${{ failure() }}
+      with:
+        token: ${{secrets.GITHUB_TOKEN}}
+        repository: ${{ github.repository }}
+        issue-number: ${{ steps.find-pull-request.outputs.number }}
+        comment-author: 'github-actions[bot]'
+        body: |
+            ### 🚨 Backstop Visual Regression Tests Failed: [View the results](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
+            <details>
+
+              <summary><strong>How to view and update regression tests</strong></summary>
+
+              1. <a href="https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}">View the failing build</a>.
+              2. Look under the section titled "Artifacts".
+              3. Download the `backstop-results` artifact.
+              4. On your local machine, open backstop-results/html-report/index.html in a browser to view the screenshot comparison.
+
+              #### 💍 When the results contain changes you want to retain
+              <p>
+                <a href="https://github.com/penske-media-corp/pmc-larva/actions/workflows/approval.yml">Run the Update Visual Regression Tests</a> workflow on this feature branch.
+                This will create a new branch with reference screenshots.
+                Then you will need to open a pull request to this branch to update it.
+              </p>
+            </details>
+
+
+
+
