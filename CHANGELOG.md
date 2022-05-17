@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-css - Add `lrv-u-justify-content-center\@tablet` class.
+* larva-patterns - Add `top-stories` module.
 
 ## 1.0.0 - 05-16-2022
 * larva - Introduce additional Larva CLI commands.
