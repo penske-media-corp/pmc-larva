@@ -117,6 +117,12 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex-shrink-0\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		flex-shrink: 0;
+	}
+}
+
 @each $breakpoint in $breakpoints {
 
 	@each $size in $flex_basis {
