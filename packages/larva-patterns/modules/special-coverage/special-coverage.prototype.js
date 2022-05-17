@@ -1,4 +1,3 @@
-const { head } = require('lodash');
 const clonedeep = require( 'lodash.clonedeep' );
 
 const story_card = clonedeep( require( '@penskemediacorp/larva-patterns/modules/story/story.vertical' ) );
@@ -46,4 +45,3 @@ module.exports = {
     c_lazy_image,
     special_coverage_items,
 }
-
