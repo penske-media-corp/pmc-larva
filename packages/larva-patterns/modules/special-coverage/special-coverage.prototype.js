@@ -2,7 +2,7 @@ const { head } = require('lodash');
 const clonedeep = require( 'lodash.clonedeep' );
 
 const story_card = clonedeep( require( '@penskemediacorp/larva-patterns/modules/story/story.vertical' ) );
-const c_heading    = clonedeep( require('@penskemediacorp/larva-patterns/component/c-heading.prototype') );
+const c_heading    = clonedeep( require('@penskemediacorp/larva-patterns/components/c-heading/c-heading.prototype') );
 const c_lazy_image   = clonedeep( require( '@penskemediacorp/larva-patterns/components/c-lazy-image/c-lazy-image.prototype.js' ) );
 
 c_heading.c_heading_classes += ' a-font-theme-primary-s lrv-u-font-size-32@desktop lrv-u-font-size-28 lrv-u-line-height-small lrv-u-text-transform-uppercase lrv-u-line-height-small';

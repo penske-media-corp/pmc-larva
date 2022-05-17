@@ -33,10 +33,11 @@
 	}
 }
 
-@include pmc-breakpoint(desktop) {
-	.lrv-a-children-border-horizontal\@desktop {
+.lrv-a-children-border-horizontal\@desktop {
+	@include pmc-breakpoint(desktop) {
 		& > * + * {
 			border-left: var(--a-children-border-width, 1px) solid var(--a-children-border-color, '');
 		}
 	}
-} // stylelint-enable selector-max-compound-selectors
+}
+// stylelint-enable selector-max-compound-selectors

@@ -1,7 +1,7 @@
 <div class="special-coverage {{ special_coverage_classes }}">
-    <div class="{{ special_coverage_wrapper_classes }}">
-        <div class="{{ special_coverage_banner_classes }}">
-            {% if special_coverage_heading_classes %}
+	<div class="{{ special_coverage_wrapper_classes }}">
+		<div class="{{ special_coverage_banner_classes }}">
+			{% if special_coverage_heading_classes %}
 				<div class="special-coverage-heading {{ special_coverage_heading_classes }}">
 					{% if heading_1 %} 
 						{% include "@larva/components/c-heading/c-heading.twig" with heading_1 %}
@@ -16,7 +16,7 @@
 					{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 				</div>  
 			{% endif %}			     
-        </div>
+		</div>
 		<div class="{{ special_coverage_items_classes }}">
 			{% for item in special_coverage_items %}
 				{% include "@larva/modules/story/story.twig" with item %}

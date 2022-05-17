@@ -1,0 +1,19 @@
+<footer class="mega-menu__footer // {{ mega_menu_footer_classes }} ">
+	<div class="mega-menu__footer-inner // {{ mega_menu_footer_inner_classes }} ">
+		<section class="mega-menu__footer-subscribe // {{ mega_menu_footer_subscribe_classes }} ">
+			{% include "@larva/modules/mega-menu-footer-subscribe/mega-menu-footer-subscribe.twig" with mega_menu_subscribe %}
+		</section>
+		<section class="mega-menu__footer-social // {{ mega_menu_footer_social_classes }} ">
+			{% include "@larva/modules/heading/heading.twig" with social_heading %}
+			<div class="mega-menu__social-list // {{ mega_menu_social_list_classes }}">
+				{% include "@larva/objects/o-social-list/o-social-list.twig" with o_social_list %}
+			</div>
+		</section>
+		<section class="mega-menu__footer-form // {{ mega_menu_footer_form_classes }} ">
+			{% include "@larva/modules/heading/heading.twig" with newsletter_heading %}
+			<div class="lrv-u-flex-grow-1 lrv-u-width-100p">
+				{% include "@larva/objects/o-email-capture-form/o-email-capture-form.twig" with o_email_capture_form %}
+			</div>
+		</section>
+	</div>
+</footer>

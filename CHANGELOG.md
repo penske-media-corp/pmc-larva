@@ -5,7 +5,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-css - Add utility classes for `overflow` and `flex-shrink`.
+* larva-patterns - Add `the-moth` variant for `content-showcase` module.
+* larva-css - Add `lrv-u-justify-content-center\@tablet` class.
+* larva-patterns - Add `top-stories` module.
+
+## 1.0.0 - 05-16-2022
+* larva - Introduce additional Larva CLI commands.
+
+## 0.7.5 - 05-16-2022
+* larva-patterns - Add `banner` module.
+* larva-patterns - Add `o-header` object support in `story-grid` module
+* larva-patterns - Add `c-span` object support in `o-header` object.
+* larva-css - Add `lrv-a-children-border-horizontal@desktop`, `lrv-a-glue--b-n1`, `lrv-a-glue--r-50p`, `lrv-a-glue--l-50p` utility classes.
+* larva-tokens - Adjusted artinamerica tokens for hub support
+* larva-css - Add `lrv-a-crop-1x1@mobile-max` class.
+* larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
+* larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
+* larva-js - Update jwplayer script to use pmc_jwplayer script
+ 
+## 0.7.4 - 05-12-2022
+* larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
+* larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.
+* larva-patterns - Add `o-account-menu`, `o-header-buttons` objects.
+* larva-css - Add utility classes for `border`, `box`, `display`, `font-size`, `height`, `letter-spacing`, `width`, `padding`, `transform` and `vertical-align`.
+* larva-js - Add expandable search and header JS.
+
+## 0.7.3 - 05-12-2022
 * larva-patterns - Set default input attributes in `age-gate` module for improved accessibility
+* larva-patterns - Add `a-font` classes and additional options in `age-gate` module
+
 ## 0.7.2 - 05-10-2022
 * larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
 ## 0.7.1 - 05-10-2022

@@ -1,7 +1,15 @@
+@import 'setup';
+
 .lrv-u-overflow-auto {
 	overflow: auto;
 }
 
 .lrv-u-overflow-hidden {
 	overflow: hidden;
+}
+
+.lrv-u-overflow-auto\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		overflow: auto;
+	}
 }

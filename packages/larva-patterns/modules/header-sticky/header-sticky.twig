@@ -1,0 +1,30 @@
+<div class="header-sticky // {{ header_sticky_classes }}">
+	<div class="header-sticky-content //  {{ header_sticky_content_classes }} ">
+		<div class="lrv-a-wrapper">
+			<div class="header-sticky-content-inner //  {{ header_sticky_content_inner_classes }}">
+				{% if icon_logo_wrap %}
+					<div class="header-sticky-icon-logo-wrap // {{ header_sticky_icon_logo_wrap_classes }} ">
+				{% endif %}
+				<div class="header-sticky-icons // {{ header_sticky_icons_classes }} ">
+					{% include "@larva/objects/o-icon-button/o-icon-button.twig" with o_icon_button_menu %}
+					{% include "@larva/modules/expandable-search/expandable-search.twig" with expandable_search %}
+				</div>
+				<div class="header-sticky-logo // {{ header_sticky_logo_classes }} ">
+					{% include "@larva/components/c-logo/c-logo.twig" with c_logo %}
+				</div>
+				{% if icon_logo_wrap %}
+					</div>
+				{% endif %}
+				{% if read_next %}
+					{% include "@larva/modules/read-next/read-next.twig" with read_next %}
+				{% endif %}
+				{% if o_social_list %}
+					{% include "@larva/objects/o-social-list/o-social-list.twig" with o_social_list %}
+				{% endif %}
+				<div class="header-sticky-links // {{ header_sticky_links_classes }} ">
+					{% include "@larva/objects/o-header-buttons/o-header-buttons.twig" with o_header_buttons %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

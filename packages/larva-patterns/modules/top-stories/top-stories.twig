@@ -1,0 +1,12 @@
+<div class="top-stories // {{ top_stories_classes }}">
+	<div class="featured-story-item {{ featured_story_classes }}">
+		{% include "@larva/modules/story/story.twig" with o_story_featured %}
+	</div>
+	<div class="story-items {{ story_items_classes }}">
+		{% for item in stories %}
+			<div class="story-item {{ story_item_classes }}">
+				{% include "@larva/modules/story/story.twig" with item %}
+			</div>
+		{% endfor %}
+	</div>
+</div>
