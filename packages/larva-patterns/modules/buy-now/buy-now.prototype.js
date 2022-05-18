@@ -2,11 +2,11 @@ const clonedeep = require( 'lodash.clonedeep' );
 
 // Buy now options
 const buy_now = {
-	buy_now_div_container_classes: 'lrv-a-buy-now',
-	buy_now_hr_top_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-top',
-	buy_now_img_container_classes: 'lrv-a-buy-now-image',
-	buy_now_hr_bottom_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-bottom',
-	buy_now_p_container_classes: 'lrv-a-buy-now-p',
+	div_container_classes: 'lrv-a-buy-now',
+	hr_top_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-top',
+	img_container_classes: 'lrv-a-buy-now-image',
+	hr_bottom_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-bottom',
+	p_container_classes: 'lrv-a-buy-now-p',
 }
 
 // Image
