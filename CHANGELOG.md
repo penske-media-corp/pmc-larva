@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished
+* larva-patterns - Add `bordered` varient for `c-button` component.
+* larva-patterns - Add `buy-now` module.
+
 ## 1.1.1 - 05-17-2022
 * all - Add comment with helpful info for regression test failures.
 * larva-patterns - Add `special-coverage` module.
