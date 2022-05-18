@@ -5,10 +5,6 @@
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	font-family: var( --font-family-basic );
-	font-size: pmc-rem(14);
-	letter-spacing: pmc-rem(0.5);
-	font-weight: bold;
 
 	@include pmc-breakpoint( tablet ) {
 		display: block;
@@ -87,17 +83,14 @@
 	}
 }
 
-.lrv-a-buy-now__p { // Used when image is not present.
+// Used when image is not present.
+.lrv-a-buy-now__p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: var( --font-family-basic );
-	font-size: pmc-rem(14);
-	letter-spacing: pmc-rem(0.5);
-	font-weight: bold;
+}
 
-	.lrv-a-buy-now-button {
-		position: inherit;
-		transform: none;
-	}
+.lrv-a-buy-now__p .lrv-a-buy-now__button {
+	position: inherit;
+	transform: none;
 }
