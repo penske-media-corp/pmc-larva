@@ -94,6 +94,12 @@
  	}
 }
 
+.lrv-a-space-children--1\@desktop-xl-max {
+	@include pmc-breakpoint( desktop-xl-max ) {
+		--a-space-children-spacer: 2;
+ 	}
+}
+
 .lrv-a-space-children--3\@desktop-xl {
 	@include pmc-breakpoint( desktop-xl ) {
 		--a-space-children-spacer: 3;

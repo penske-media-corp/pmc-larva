@@ -29,7 +29,7 @@ const o_card_1 = clonedeep(o_card_prototype);
 o_card_1.c_dek = false;
 o_card_1.article_kicker.article_kicker_text = 'Exclusive';
 o_card_1.c_title.c_title_text = ' It Started With Thirst Traps on TikTok. Now, She’s Accused of Running a BDSM Cult';
-o_card_1.article_kicker_outer_classes = 'lrv-a-font-basic-l lrv-a-glue-parent lrv-u-background-color-white lrv-u-flex lrv-u-padding-b-1 lrv-u-padding-l-125@mobile-max lrv-u-padding-r-1 lrv-u-padding-t-1@desktop-xl lrv-u-padding-t-1@mobile-max lrv-u-text-transform-uppercase u-margin-t-n187@desktop-xl u-margin-t-n187@mobile-max u-z-index-middle-bottom';
+o_card_1.article_kicker_outer_classes = 'lrv-a-font-basic-l lrv-a-glue-parent lrv-u-background-color-white lrv-u-flex lrv-u-padding-b-1 lrv-u-padding-l-1@mobile-max lrv-u-padding-r-1 lrv-u-padding-t-1@desktop-xl lrv-u-padding-t-1@mobile-max lrv-u-text-transform-uppercase u-margin-t-n187@desktop-xl u-margin-t-n187@mobile-max u-z-index-middle-bottom';
 o_card_1.article_kicker.article_kicker_classes += ' lrv-a-font-basic-l';
 o_card_1.c_title.c_title_classes = 'lrv-a-font-primary-xl lrv-u-padding-t-150@mobile-max lrv-u-padding-b-1@mobile-max lrv-u-padding-t-050@tablet lrv-u-padding-b-075@tablet';
 o_card_1.o_author.o_author_classes = 'lrv-a-font-body-s lrv-u-text-transform-uppercase lrv-u-color-black';
@@ -65,7 +65,7 @@ o_card_3.c_title.c_title_classes = 'lrv-u-padding-b-075@mobile-max lrv-a-font-pr
 o_card_3.o_author.o_author_classes = 'lrv-a-font-body-xs lrv-u-text-transform-uppercase lrv-u-color-black';
 o_card_3.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1@desktop-xl-max lrv-a-crop-3x2@desktop-xl lrv-a-crop-3x2@mobile-max';
 o_card_3.c_lazy_image.c_lazy_image_classes = 'lrv-u-width-100p';
-o_card_3.o_card_classes = 'lrv-a-space-children--1 lrv-a-space-children--2@desktop-xl lrv-a-space-children-horizontal  lrv-u-flex-basis-100p lrv-u-border-t-0@desktop-xl lrv-u-border-t-1@tablet lrv-u-flex-direction-column@desktop-xl lrv-u-flex@tablet lrv-u-margin-t-00@desktop-xl lrv-u-margin-t-150@tablet lrv-u-padding-t-00@desktop-xl lrv-u-padding-t-150@tablet';
+o_card_3.o_card_classes = 'lrv-a-space-children--1@desktop-xl-max lrv-a-space-children--2@desktop-xl lrv-a-space-children-horizontal  lrv-u-flex-basis-100p lrv-u-border-t-0@desktop-xl lrv-u-border-t-1@tablet lrv-u-flex-direction-column@desktop-xl lrv-u-flex@tablet lrv-u-margin-t-00@desktop-xl lrv-u-margin-t-150@tablet lrv-u-padding-t-00@desktop-xl lrv-u-padding-t-150@tablet';
 o_card_3.o_card_content_classes = 'lrv-u-margin-l-00@mobile-max lrv-u-margin-l-00@desktop-xl lrv-u-align-items-start lrv-u-flex lrv-u-flex-direction-column lrv-u-padding-b-150@mobile-max lrv-u-padding-t-1@mobile-max';
  
 const o_card_4 = clonedeep(o_card_prototype);
