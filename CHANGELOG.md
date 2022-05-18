@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished
+* larva-patterns - Add `narrow` variant for `paragraph` module.
+
 ## 1.1.1 - 05-17-2022
 * all - Add comment with helpful info for regression test failures.
 * larva-patterns - Add `special-coverage` module.
@@ -27,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
 * larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
 * larva-js - Update jwplayer script to use pmc_jwplayer script
- 
+
 ## 0.7.4 - 05-12-2022
 * larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
 * larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.
@@ -41,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.7.2 - 05-10-2022
 * larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
-* 
+*
 ## 0.7.1 - 05-10-2022
 * larva-patterns - Suffix relevant `c-input` component variables with `_attr`
 * larva-patterns - Change component name from `c-text-input` to `c-input` to prevent twig-to-php parser issues
