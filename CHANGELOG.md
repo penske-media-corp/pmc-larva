@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.1.1 - 05-17-2022
 * all - Add comment with helpful info for regression test failures.
 * larva-patterns - Add `special-coverage` module.
+* larva-patterns - Add `hero-image-story` module.
+* larva-css - Add `lrv-a-glue--b-unset\@mobile-max` class.
 
 ## 1.1.0 - 05-17-2022
 * larva-css - Add utility classes for `overflow` and `flex-shrink`.

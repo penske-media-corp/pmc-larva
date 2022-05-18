@@ -1,0 +1,8 @@
+<div class="hero-image-story-module // {{ wrapper_classes }}">
+	{% include "@larva/objects/o-figure/o-figure.twig" with o_figure %}
+	<div class="stories-outer {{ stories_outer_classes }}">
+		{% for item in stories %}
+			{% include "@larva/modules/story/story.twig" with item %}
+		{% endfor %}
+	</div>
+</div>

@@ -88,3 +88,9 @@
 		position: relative;
 	}
 }
+
+.lrv-a-glue--b-unset\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		bottom: unset;
+	}
+}
