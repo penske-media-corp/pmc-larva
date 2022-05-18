@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-patterns - Add `secondary-stories` module.
+* larva-css - Add utility classes for `crop`, `space-children`, `border`, `margin`, `padding` and `flex`.
+## 1.1.1 - 05-17-2022
+* all - Add comment with helpful info for regression test failures.
+* larva-patterns - Add `special-coverage` module.
+
+## 1.1.0 - 05-17-2022
 * larva-css - Add utility classes for `overflow` and `flex-shrink`.
 * larva-patterns - Add `the-moth` variant for `content-showcase` module.
 * larva-css - Add `lrv-u-justify-content-center\@tablet` class.
@@ -39,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.7.2 - 05-10-2022
 * larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
+* 
 ## 0.7.1 - 05-10-2022
 * larva-patterns - Suffix relevant `c-input` component variables with `_attr`
 * larva-patterns - Change component name from `c-text-input` to `c-input` to prevent twig-to-php parser issues

@@ -1,6 +1,6 @@
 # Base eslint Config
 
-This is Larva's core configuration for eslint, though it can be used in any codebase and is not dependent on other Larva packages. 
+This is Larva's core configuration for eslint, though it can be used in any codebase and is not dependent on other Larva packages.
 
 Key features include:
 * WordPress standards are used and extended
