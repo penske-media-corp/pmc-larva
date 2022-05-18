@@ -16,8 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `the-moth` variant for `content-showcase` module.
 * larva-css - Add `lrv-u-justify-content-center\@tablet` class.
 * larva-patterns - Add `top-stories` module.
-* larva-patterns - Add `secondary-stories` module.
-* larva-css - Add utility classes for `crop`, `space-children`, `border`, `margin`, `padding` and `flex`.
 
 ## 1.0.0 - 05-16-2022
 * larva - Introduce additional Larva CLI commands.
