@@ -13,91 +13,91 @@
 	@include pmc-breakpoint( tablet ) {
 		display: block;
 	}
+}
 
-	&-image {
-		position: relative;
-		z-index: 1;
-		width: 100%;
-		background-color: $color-white;
-		max-width: pmc-rem(300);
+.lrv-a-buy-now__image {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	background-color: $color-white;
+	max-width: pmc-rem(300);
 
-		@include pmc-breakpoint( tablet ) {
-			width: pmc-rem(190); // 160 + 30
-			left: 0;
-			padding: 0 pmc-rem(30) 0 0;
-		}
-
-		@include pmc-breakpoint( desktop ) {
-			width: pmc-rem(245); // 185 + 30 + 30
-			left: pmc-rem(94);
-			padding: 0 pmc-rem(30);
-		}
+	@include pmc-breakpoint( tablet ) {
+		width: pmc-rem(190); // 160 + 30
+		left: 0;
+		padding: 0 pmc-rem(30) 0 0;
 	}
 
-	&-button {
-		margin-top: pmc-rem(16);
+	@include pmc-breakpoint( desktop ) {
+		width: pmc-rem(245); // 185 + 30 + 30
+		left: pmc-rem(94);
+		padding: 0 pmc-rem(30);
+	}
+}
 
-		@include pmc-breakpoint( tablet ) {
-			margin-top: 0;
-			position: absolute;
-			top: 50%;
-			left: pmc-rem(190);
-			transform: translateY(-50%);
-		}
+.lrv-a-buy-now__button {
+	margin-top: pmc-rem(16);
 
-		@include pmc-breakpoint( desktop ) {
-			left: pmc-rem(339);
-		}
+	@include pmc-breakpoint( tablet ) {
+		margin-top: 0;
+		position: absolute;
+		top: 50%;
+		left: pmc-rem(190);
+		transform: translateY(-50%);
 	}
 
-	&-hr {
-		display: none;
-		margin: 0;
-		padding: 0;
-		border-top: pmc-rem(0.5) solid #000;
-		position: relative;
+	@include pmc-breakpoint( desktop ) {
+		left: pmc-rem(339);
+	}
+}
 
-		@include pmc-breakpoint( tablet ) {
-			display: block;
-		}
+.lrv-a-buy-now__hr {
+	display: none;
+	margin: 0;
+	padding: 0;
+	border-top: pmc-rem(0.5) solid #000;
+	position: relative;
 
-		&-top {
-			top: 0;
+	@include pmc-breakpoint( tablet ) {
+		display: block;
+	}
+}
 
-			@include pmc-breakpoint( tablet ) {
-				top: pmc-rem(37);
-			}
+.lrv-a-buy-now__hr--top {
+	top: 0;
 
-			@include pmc-breakpoint( desktop ) {
-				top: pmc-rem(50);
-			}
-		}
-
-		&-bottom {
-			bottom: 0;
-
-			@include pmc-breakpoint( tablet ) {
-				bottom: pmc-rem(37);
-			}
-
-			@include pmc-breakpoint( desktop ) {
-				bottom: pmc-rem(50);
-			}
-		}
+	@include pmc-breakpoint( tablet ) {
+		top: pmc-rem(37);
 	}
 
-	&-p { // Used when image is not present.
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-family: var( --font-family-basic );
-		font-size: pmc-rem(14);
-		letter-spacing: pmc-rem(0.5);
-		font-weight: bold;
+	@include pmc-breakpoint( desktop ) {
+		top: pmc-rem(50);
+	}
+}
 
-		.lrv-a-buy-now-button {
-			position: inherit;
-			transform: none;
-		}
+.lrv-a-buy-now__hr--bottom {
+	bottom: 0;
+
+	@include pmc-breakpoint( tablet ) {
+		bottom: pmc-rem(37);
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		bottom: pmc-rem(50);
+	}
+}
+
+.lrv-a-buy-now__p { // Used when image is not present.
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: var( --font-family-basic );
+	font-size: pmc-rem(14);
+	letter-spacing: pmc-rem(0.5);
+	font-weight: bold;
+
+	.lrv-a-buy-now-button {
+		position: inherit;
+		transform: none;
 	}
 }

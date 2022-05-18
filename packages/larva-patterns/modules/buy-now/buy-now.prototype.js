@@ -3,10 +3,10 @@ const clonedeep = require( 'lodash.clonedeep' );
 // Buy now options
 const buy_now = {
 	div_container_classes: 'lrv-a-buy-now',
-	hr_top_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-top',
-	img_container_classes: 'lrv-a-buy-now-image',
-	hr_bottom_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-bottom',
-	p_container_classes: 'lrv-a-buy-now-p',
+	hr_top_classes: 'lrv-a-buy-now__hr lrv-a-buy-now__hr--top',
+	img_container_classes: 'lrv-a-buy-now__image',
+	hr_bottom_classes: 'lrv-a-buy-now__hr lrv-a-buy-now__hr--bottom',
+	p_container_classes: 'lrv-a-buy-now__p',
 }
 
 // Image
@@ -21,7 +21,7 @@ c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1';
 // Button
 const button = clonedeep( require( '@penskemediacorp/larva-patterns/components/c-button/c-button.bordered' ) );
 
-button.c_button_classes += ' lrv-a-buy-now-button';
+button.c_button_classes += ' lrv-a-buy-now__button';
 button.c_button_screen_reader_text = 'Buy Now';
 button.c_button_text = 'Buy Now';
 button.c_button_target_attr = '_blank';
