@@ -1,17 +1,17 @@
 {% if c_lazy_image %}
-	<div class="lrv-a-buy-now">
-		<hr class="lrv-a-buy-now-hr lrv-a-buy-now-hr-top">
+	<div class="{{ buy_now.buy_now_div_container_classes }}">
+		<hr class="{{ buy_now.buy_now_hr_top_classes }}">
 
-		<div class="lrv-a-buy-now-image">
+		<div class="{{ buy_now.buy_now_img_container_classes }}">
 			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 		</div>
 
 		{% include "@larva/components/c-button/c-button.twig" with button %}
 
-		<hr class="lrv-a-buy-now-hr lrv-a-buy-now-hr-bottom">
+		<hr class="{{ buy_now.buy_now_hr_bottom_classes }}">
 	</div>
 {% else %}
-	<p class="lrv-a-buy-now-p">
+	<p class="{{ buy_now.buy_now_p_container_classes }}">
 		{% include "@larva/components/c-button/c-button.twig" with button %}
 	</p>
 {% endif %}

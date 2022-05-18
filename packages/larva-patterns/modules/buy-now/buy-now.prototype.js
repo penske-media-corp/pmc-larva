@@ -1,5 +1,14 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
+// Buy now options
+const buy_now = {
+	buy_now_div_container_classes: 'lrv-a-buy-now',
+	buy_now_hr_top_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-top',
+	buy_now_img_container_classes: 'lrv-a-buy-now-image',
+	buy_now_hr_bottom_classes: 'lrv-a-buy-now-hr lrv-a-buy-now-hr-bottom',
+	buy_now_p_container_classes: 'lrv-a-buy-now-p',
+}
+
 // Image
 const c_lazy_image_prototype = require( '@penskemediacorp/larva-patterns/components/c-lazy-image/c-lazy-image.prototype' );
 
@@ -20,6 +29,7 @@ button.c_button_rel_attr = 'nofollow';
 
 // Export
 module.exports = {
+	buy_now,
 	c_lazy_image,
 	button,
 };
