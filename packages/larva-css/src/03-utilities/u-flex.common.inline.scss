@@ -61,6 +61,18 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex\@desktop-xl-max {
+	@include pmc-breakpoint( desktop-xl-max ) {
+		display: flex;
+	}
+}
+
+.lrv-u-flex-direction-row-reverse\@desktop-xl-max {
+	@include pmc-breakpoint( desktop-xl-max ) {
+		flex-direction: row-reverse;
+	}
+}
+
 .lrv-u-flex-direction-column\@tablet {
 
 	@include pmc-breakpoint( tablet ) {
@@ -71,6 +83,12 @@ $breakpoints: (
 .lrv-u-flex-direction-column\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
+		flex-direction: column;
+	}
+}
+
+.lrv-u-flex-direction-column\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
 		flex-direction: column;
 	}
 }
@@ -91,7 +109,12 @@ $breakpoints: (
 	@include pmc-breakpoint(mobile-max) {
 		flex-direction: column-reverse;
 	}
+}
 
+.lrv-u-flex-basis-100p\@desktop-xl-max {
+	@include pmc-breakpoint( desktop-xl-max ) {
+		flex-basis: 100%;
+	}
 }
 
 .lrv-u-flex-shrink-0\@mobile-max {
