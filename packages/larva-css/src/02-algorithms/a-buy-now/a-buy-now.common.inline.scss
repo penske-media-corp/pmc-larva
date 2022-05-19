@@ -83,6 +83,22 @@
 	}
 }
 
+// Optional span.
+.lrv-a-buy-now__span {
+	display: none;
+	position: absolute;
+	right: 0;
+
+	@include pmc-breakpoint( tablet ) {
+		display: block;
+		bottom: pmc-rem(16);
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		bottom: pmc-rem(29);
+	}
+}
+
 // Used when image is not present.
 .lrv-a-buy-now__p {
 	display: flex;
