@@ -220,27 +220,15 @@ export default class VideoShowcase {
 	 *
 	 * @param {string} jwplayerUrl - A Youtube embed URL from returnUrl.
 	 */
-	playJW( jwplayerUrl ) {
-		/* eslint-disable */
-		let custom_jwplayer = '';
+	playJW( playlistUrl ) {
 
 		this.playerUI.jwplayerContainer.removeAttribute( 'hidden' );
 
-		if ( window.jwplayer ) {
-			custom_jwplayer = window.jwplayer( this.playerUI.jwplayerContainer ).setup({
-				'playlist': jwplayerUrl,
+		if ( window.pmc_jwplayer ) {
+			window.pmc_jwplayer( this.playerUI.jwplayerContainer ).setup({
+				'playlist': playlistUrl,
 				'aspectratio': '16:9'
-			});
-
-			if ( 'object' === typeof pmc_video_ads && 'function' === typeof pmc_video_ads.setup_jwplayer ) {
-				pmc_video_ads.setup_jwplayer( this.playerUI.jwplayerContainer.id );
-			}
-
-			if ( 'undefined' !== typeof( window.pmc_ga_jwplayer ) && 'function' === typeof( window.pmc_ga_jwplayer.setup_tracking_by_object ) ) {
-				window.pmc_ga_jwplayer.setup_tracking_by_object( this.playerUI.jwplayerContainer );
-			}
-
-			custom_jwplayer.play();
+			}).play();
 
 		}
 
@@ -325,8 +313,8 @@ export default class VideoShowcase {
 	 */
 	resetPlayer( pastType ) {
 
-		if ( 'jwplayer' === pastType && window.jwplayer ) {
-			window.jwplayer( 'jwplayerContainer' ).remove();
+		if ( 'jwplayer' === pastType && window.pmc_jwplayer ) {
+			window.pmc_jwplayer( 'jwplayerContainer' ).remove();
 			this.playerUI.jwplayerContainer.setAttribute( 'hidden', '' );
 		}
 

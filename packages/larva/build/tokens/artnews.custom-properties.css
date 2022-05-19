@@ -86,7 +86,7 @@
   --body-s-font-size-desktop: 16px;
   --body-xxs-font-size-desktop: initial;
   --primary-s-font-size-desktop: 24px;
-  --primary-xxs-font-size-desktop: 36px;
+  --primary-xxs-font-size-desktop: 18px;
   --secondary-regular-m-font-size-desktop-xl: 15px;
   --secondary-xl-font-size-desktop-xl: initial;
   --accent-s-font-size-desktop-xl: 23px;
@@ -94,7 +94,7 @@
   --accent-l-font-size-desktop: 58px;
   --accent-m-font-size-desktop: 26px;
   --primary-xxxs-font-size-desktop: 20px;
-  --primary-xs-font-size-desktop: 36px;
+  --primary-xs-font-size-desktop: 26px;
   --body-xxxs-font-size-desktop: initial;
   --body-xs-font-size-desktop: initial;
   --secondary-s-font-size-mobile: 11px;
@@ -133,7 +133,7 @@
   --secondary-l-font-size-desktop: 42px;
   --secondary-regular-m-font-size-mobile: 15px;
   --accent-xxs-font-size-mobile: 14px;
-  --secondary-m-font-size-desktop: 20px;
+  --secondary-m-font-size-desktop: 16px;
   --basic-s-font-size-desktop: initial;
   --basic-xxs-font-size-desktop: initial;
   --accent-s-font-size-mobile: 23px;
@@ -162,7 +162,7 @@
   --secondary-s-font-size-desktop: 12px;
   --basic-xs-font-size-desktop-xl: initial;
   --accent-l-font-size-mobile: 40px;
-  --primary-xxs-font-size-mobile: 26px;
+  --primary-xxs-font-size-mobile: 19px;
   --primary-s-font-size-mobile: 21px;
   --body-xxs-font-size-mobile: initial;
   --body-s-font-size-mobile: 16px;
@@ -182,7 +182,7 @@
   --primary-m-font-size-mobile: 28px;
   --body-m-font-size-desktop: 18px;
   --body-m-font-size-mobile: 18px;
-  --primary-m-font-size-desktop: 30px;
+  --primary-m-font-size-desktop: 16px;
   --accent-xs-font-size-desktop: 23px;
   --secondary-xs-letter-spacing-desktop: normal;
   --secondary-xxs-letter-spacing-mobile: normal;
@@ -248,7 +248,7 @@
   --basic-s-letter-spacing-desktop-xl: normal;
   --accent-m-letter-spacing-mobile: .74px;
   --primary-xxxs-letter-spacing-mobile: normal;
-  --primary-xxs-letter-spacing-desktop: normal;
+  --primary-xxs-letter-spacing-desktop: .52px;
   --primary-xs-letter-spacing-mobile: normal;
   --body-xxs-letter-spacing-desktop: normal;
   --body-xxxs-letter-spacing-mobile: normal;
