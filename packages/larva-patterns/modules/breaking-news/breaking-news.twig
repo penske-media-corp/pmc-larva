@@ -1,0 +1,18 @@
+<section class="breaking-news // pmc-breaking-news {{ breaking_news_classes }} ">
+
+	<div class="{{breaking_news_inner_classes}}">
+
+		{% if c_heading %}
+			{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+		{% endif %}
+
+		{% if c_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		{% endif %}
+
+		{% if c_icon %}
+			{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
+		{% endif %}
+	</div>
+
+</section>

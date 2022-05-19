@@ -5,8 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-* larva-patterns - Add `bordered` varient for `c-button` component.
 * larva-patterns - Add `buy-now` module.
+* larva-patterns - Add `buy-now` varient for `c-icon-button` object.
+* larva-patterns - Add `secondary-stories` module.
+* larva-css - Add utility classes for `crop`, `space-children`, `border`, `margin`, `padding` and `flex`.
+* larva-patterns - Add `breaking-news` module.
 
 ## 1.1.1 - 05-17-2022
 * all - Add comment with helpful info for regression test failures.

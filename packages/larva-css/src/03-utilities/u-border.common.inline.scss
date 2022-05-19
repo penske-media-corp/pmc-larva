@@ -196,3 +196,21 @@
 		border-bottom-width: pmc-rem(2);
 	}
  }
+
+.lrv-u-border-t-1\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		border-top-width: pmc-rem(1);
+	}
+}
+
+.lrv-u-border-t-0\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		border-top-width: pmc-rem(0);
+	}
+}
+
+.lrv-u-border-t-1\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		border-top-width: pmc-rem(1);
+	}
+}
