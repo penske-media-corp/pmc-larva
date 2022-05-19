@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add SVG support for Article Kicker module.
+* larva-patterns - Add `breaking-news` module.
 
 ## 1.1.1 - 05-17-2022
 * all - Add comment with helpful info for regression test failures.
