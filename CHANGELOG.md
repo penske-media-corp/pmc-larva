@@ -5,7 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+<<<<<<< HEAD
 * larva-patterns - Add SVG support for Article Kicker module.
+=======
+* larva-patterns - Add `secondary-stories` module.
+* larva-css - Add utility classes for `crop`, `space-children`, `border`, `margin`, `padding` and `flex`.
+>>>>>>> 2d630adfd93004cfca23eab311fa22ac2fdd72f5
 * larva-patterns - Add `breaking-news` module.
 
 ## 1.1.1 - 05-17-2022
