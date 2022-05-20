@@ -54,7 +54,7 @@ c_dek.c_dek_classes = 'lrv-a-font-primary-xs';
 c_dek.c_dek_text = 'Legal text.'
 
 module.exports = {
-	age_gate_class: 'lrv-u-height-100p lrv-u-padding-t-2 lrv-u-background-color-black lrv-u-text-align-center lrv-u-color-white',
+	age_gate_class: 'lrv-u-height-100p lrv-u-padding-t-2 lrv-u-background-color-black lrv-u-text-align-center lrv-u-color-white lrv-a-glue lrv-a-glue--l-0 lrv-a-glue--r-0 lrv-a-glue--t-0 lrv-a-glue--b-0',
 	age_gate_inner_class: 'lrv-u-max-width-1000 lrv-u-margin-lr-auto',
 	age_gate_form_class: 'lrv-u-border-b-1',
 	age_gate_error_class: '',
