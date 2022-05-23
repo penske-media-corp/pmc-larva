@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add classes and update README.md for `age-gate` module.
+* larva-patterns - Add `buy-now` module.
 
 ## 1.1.2 - 05-19-2022
 * larva-patterns - Add SVG support for Article Kicker module.
