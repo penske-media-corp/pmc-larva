@@ -1,0 +1,112 @@
+@import 'setup';
+
+.lrv-a-buy-now {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	@include pmc-breakpoint( tablet ) {
+		display: block;
+	}
+}
+
+.lrv-a-buy-now__image {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	background-color: $color-white;
+	max-width: pmc-rem(300);
+
+	@include pmc-breakpoint( tablet ) {
+		width: pmc-rem(190); // 160 + 30
+		left: 0;
+		padding: 0 pmc-rem(30) 0 0;
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		width: pmc-rem(245); // 185 + 30 + 30
+		left: pmc-rem(94);
+		padding: 0 pmc-rem(30);
+	}
+}
+
+.lrv-a-buy-now__button {
+	margin-top: pmc-rem(16);
+
+	@include pmc-breakpoint( tablet ) {
+		margin-top: 0;
+		position: absolute;
+		top: 50%;
+		left: pmc-rem(190);
+		transform: translateY(-50%);
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		left: pmc-rem(339);
+	}
+}
+
+.lrv-a-buy-now__hr {
+	display: none;
+	margin: 0;
+	padding: 0;
+	border-top: pmc-rem(0.5) solid #000;
+	position: relative;
+
+	@include pmc-breakpoint( tablet ) {
+		display: block;
+	}
+}
+
+.lrv-a-buy-now__hr--top {
+	top: 0;
+
+	@include pmc-breakpoint( tablet ) {
+		top: pmc-rem(37);
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		top: pmc-rem(50);
+	}
+}
+
+.lrv-a-buy-now__hr--bottom {
+	bottom: 0;
+
+	@include pmc-breakpoint( tablet ) {
+		bottom: pmc-rem(37);
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		bottom: pmc-rem(50);
+	}
+}
+
+// Optional span.
+.lrv-a-buy-now__span {
+	display: none;
+	position: absolute;
+	right: 0;
+
+	@include pmc-breakpoint( tablet ) {
+		display: block;
+		bottom: pmc-rem(16);
+	}
+
+	@include pmc-breakpoint( desktop ) {
+		bottom: pmc-rem(29);
+	}
+}
+
+// Used when image is not present.
+.lrv-a-buy-now__p {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.lrv-a-buy-now__p .lrv-a-buy-now__button {
+	position: inherit;
+	transform: none;
+}
