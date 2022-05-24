@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
+* larva-patterns - Add `hero-image-story` module.
+* larva-css - Add `lrv-a-glue--b-unset\@mobile-max` class.
 
 ## 1.2.0 - 05-24-2022
 * larva-patterns - Add classes and update README.md for `age-gate` module.
@@ -20,8 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.1.1 - 05-17-2022
 * all - Add comment with helpful info for regression test failures.
 * larva-patterns - Add `special-coverage` module.
-* larva-patterns - Add `hero-image-story` module.
-* larva-css - Add `lrv-a-glue--b-unset\@mobile-max` class.
 
 ## 1.1.0 - 05-17-2022
 * larva-css - Add utility classes for `overflow` and `flex-shrink`.
