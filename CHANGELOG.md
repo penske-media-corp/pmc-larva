@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-css - Add `lrv-u-filter-grayscale-100` class.
 
+## 1.2.0 - 05-24-2022
+* larva-patterns - Add classes and update README.md for `age-gate` module.
 ## 1.1.3 - 05-23-2022
 * larva-patterns - Add `buy-now` module.
 
