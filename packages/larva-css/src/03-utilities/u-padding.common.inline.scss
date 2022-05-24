@@ -122,6 +122,13 @@ $paddings_with_breakpoints: (
 	}
 }
 
+.lrv-u-padding-tb-175\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		padding-top: $spacer-175;
+		padding-bottom: $spacer-175;
+	}
+}
+
 .lrv-u-padding-t-175\@desktop-xl-max {
 	@include pmc-breakpoint( desktop-xl-max ) {
 		padding-top: $spacer-175;
