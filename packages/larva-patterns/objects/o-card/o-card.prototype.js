@@ -19,5 +19,7 @@ module.exports = {
 	c_tagline: false,
 	c_title: c_title,
 	c_timestamp: c_timestamp,
-	o_author: false
+	o_author: false,
+	article_kicker:false,
+	article_kicker_outer_classes:'',
 };
