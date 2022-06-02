@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add `narrow` variant for `paragraph` module.
+* larva-patterns - Updates to  `story-featured-quote` module.
+
+## 1.3.0 - 5-25-2022
+* larva-css - Add `lrv-u-filter-grayscale-100` class.
+* larva-patterns - Add `hero-image-story` module.
+* larva-css - Add `lrv-a-glue--b-unset\@mobile-max` class.
+* larva-css -Add utility classes for `padding` and `a-screen-reader-only`
+* larva-patterns - Use `article_kicker` in featured stories module.
+
+## 1.2.0 - 05-24-2022
+* larva-patterns - Add classes and update README.md for `age-gate` module.
+## 1.1.3 - 05-23-2022
+* larva-patterns - Add `buy-now` module.
+
+## 1.1.2 - 05-19-2022
+* larva-patterns - Add SVG support for Article Kicker module.
+* larva-patterns - Add `secondary-stories` module.
+* larva-css - Add utility classes for `crop`, `space-children`, `border`, `margin`, `padding` and `flex`.
+* larva-patterns - Add `breaking-news` module.
 
 ## 1.1.1 - 05-17-2022
 * all - Add comment with helpful info for regression test failures.

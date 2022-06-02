@@ -48,7 +48,7 @@ o_input_group.o_input_group_items = [
 ];
 
 c_button.c_button_text = 'View';
-c_button.c_button_classes = ' lrv-u-color-white lrv-u-background-color-brand-primary lrv-u-padding-lr-2 lrv-u-padding-tb-075 lrv-u-margin-b-2 lrv-u-text-align-center lrv-u-text-transform-uppercase lrv-a-font-primary-m';
+c_button.c_button_classes = ' lrv-u-margin-t-2 lrv-u-color-white lrv-u-background-color-brand-primary lrv-u-padding-lr-2 lrv-u-padding-tb-075 lrv-u-margin-b-2 lrv-u-text-align-center lrv-u-text-transform-uppercase lrv-a-font-primary-m';
 
 c_dek.c_dek_classes = 'lrv-a-font-primary-xs';
 c_dek.c_dek_text = 'Legal text.'
@@ -57,7 +57,7 @@ module.exports = {
 	age_gate_class: 'lrv-u-height-100p lrv-u-padding-t-2 lrv-u-background-color-black lrv-u-text-align-center lrv-u-color-white',
 	age_gate_inner_class: 'lrv-u-max-width-1000 lrv-u-margin-lr-auto',
 	age_gate_form_class: 'lrv-u-border-b-1',
-	age_gate_error_class: '',
+	age_gate_error_class: 'lrv-a-font-primary-s',
 	form_wrapper_class: '',
 	age_gate_footer_class: 'lrv-u-border-t-1 lrv-u-margin-t-025',
 	c_heading,

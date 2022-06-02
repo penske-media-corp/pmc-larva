@@ -1,0 +1,23 @@
+{% if c_lazy_image %}
+	<div class="{{ buy_now_div_classes }}">
+		<hr class="{{ buy_now_hr_top_classes }}">
+
+		<div class="{{ buy_now_img_classes }}">
+			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		</div>
+
+		{% include "@larva/objects/o-icon-button/o-icon-button.twig" with c_icon_button %}
+
+		<hr class="{{ buy_now_hr_bottom_classes }}">
+
+		{% if buy_now_store_credit_text %}
+			<span class="{{ buy_now_span_classes }}">
+				{{ buy_now_store_credit_text }}
+			</span>
+		{% endif %}
+	</div>
+{% else %}
+	<p class="{{ buy_now_p_classes }}">
+		{% include "@larva/objects/o-icon-button/o-icon-button.twig" with c_icon_button %}
+	</p>
+{% endif %}

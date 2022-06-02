@@ -3,8 +3,10 @@
 		{% if c_dek_url %}
 		<a href="{{ c_dek_url }}" class="c-dek__link ">
 			{% endif %}
-			{% if c_dek %}
-				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% if story_quote_markup %}
+				<p class="story-quote-markup {{ story_quote_markup_classes }}">
+					{{ story_quote_markup|raw }}
+				</p>
 			{% endif %}
 			{% if c_dek_url %}
 		</a>

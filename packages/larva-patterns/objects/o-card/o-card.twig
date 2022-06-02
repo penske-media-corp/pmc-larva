@@ -33,6 +33,12 @@
 			{% include "@larva/components/c-svg/c-svg.twig" with c_svg %}
 		{% endif %}
 
+		{% if article_kicker %}
+			<div class="article_kicker_outer // {{ article_kicker_outer_classes }}">
+				{% include "@larva/modules/article-kicker/article-kicker.twig" with article_kicker %}
+			</div>
+		{% endif %}
+
 		{% if c_span %}
 			{% include "@larva/components/c-span/c-span.twig" with c_span %}
 		{% endif %}
