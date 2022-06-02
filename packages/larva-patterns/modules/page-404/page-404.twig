@@ -1,0 +1,32 @@
+<section class="u-background-color-brand-secondary lrv-u-text-align-center lrv-u-padding-t-1 lrv-u-padding-b-2 lrv-u-margin-b-2">
+	<div class="u-max-width-500 lrv-u-margin-lr-auto lrv-u-padding-lr-1 u-padding-tb-4">
+		{% if c_heading %}
+			{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+		{% endif %}
+		
+		{% if c_svg %}
+			{% include "@larva/components/c-svg/c-svg.twig" with c_svg %}
+		{% endif %}
+
+		{% if c_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		{% endif %}
+
+		{% if c_tagline %}
+			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+		{% endif %}
+
+		<div class="buttons-outer {{ button_outer_classes }}">
+
+			{% if c_button_home %}
+				{% include "@larva/components/c-button/c-button.twig" with c_button_home %}
+			{% endif %}
+
+			{% if c_button_search %}
+				{% include "@larva/components/c-button/c-button.twig" with c_button_search %}
+			{% endif %}
+
+		</div>
+
+	</div>
+</section>
