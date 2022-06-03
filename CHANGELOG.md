@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-patterns - Add `xl` variant for `top-stories` module.
 * larva-patterns - Updates to  `story-featured-quote` module.
+* larva-patterns - Add `article-timestamp` module.
 
 ## 1.3.0 - 5-25-2022
 * larva-css - Add `lrv-u-filter-grayscale-100` class.
