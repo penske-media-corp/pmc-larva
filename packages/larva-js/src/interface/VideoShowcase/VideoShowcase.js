@@ -143,8 +143,6 @@ export default class VideoShowcase {
 	 */
 
 	updatePlayerCardData( el, data ) {
-		console.log( data );
-
 		if ( this.playerUI.title && data.title ) {
 			this.playerUI.title.innerText = data.title;
 		}
