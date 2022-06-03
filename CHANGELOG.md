@@ -5,17 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished
-
+* larva-js - Fix JS issue with VideoShowcase.
 ## 1.4.0 - 6-03-2022
 * larva-patterns - Add `narrow` variant for `paragraph` module.
 * larva-patterns - Add `xl` variant for `top-stories` module.
-<<<<<<< HEAD
-* larva-patterns - Updates to  `story-featured-quote` module.
-* larva-js - Fix JS issue with VideoShowcase.
-=======
 * larva-patterns - Add `article-timestamp` module.
 * larva-patterns - Updates to  `story-featured-quote` module.1
->>>>>>> 112fe16c862df9ccd4d562d60a12a421f7780d34
 
 ## 1.3.0 - 5-25-2022
 * larva-css - Add `lrv-u-filter-grayscale-100` class.
