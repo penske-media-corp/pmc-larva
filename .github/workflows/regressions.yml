@@ -21,6 +21,8 @@ jobs:
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
         ./node_modules/.bin/lerna bootstrap
+    - name: Debug
+      run: echo ${{steps.find-pull-request.outputs.number}}
     - name: Run Tests
       run: |
         nohup npm run larva > /dev/null 2>&1 &
@@ -44,7 +46,7 @@ jobs:
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
-        issue-number: ${{ steps.find-pull-request.outputs.number }}
+        issue-number: ${{ steps.find-pull-request.outputs.pr }}
         comment-author: 'github-actions[bot]'
         body: |
             ### 🚨 Backstop Visual Regression Tests Failed: [View the results](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
