@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-js - Fix JS issue with VideoShowcase.
+
 ## 1.4.0 - 6-03-2022
 * larva-patterns - Add `narrow` variant for `paragraph` module.
 * larva-patterns - Add `xl` variant for `top-stories` module.
