@@ -38,7 +38,7 @@ module.exports = {
 	c_button_home,
 	c_button_search,
 	c_svg,
-	wrapper_classes: 'lrv-u-text-align-center lrv-u-padding-t-1 lrv-u-padding-b-2 lrv-u-margin-b-2',
+	wrapper_classes: 'lrv-u-text-align-center lrv-u-padding-t-1 lrv-u-padding-b-2 lrv-u-margin-b-2 lrv-u-max-width-830 lrv-u-margin-lr-auto',
 	page_404_inner_classes: 'lrv-u-margin-lr-auto lrv-u-padding-lr-1',
 	button_outer_classes: 'lrv-u-flex lrv-u-justify-content-center lrv-u-align-items-center lrv-u-flex-direction-column@mobile-max',
 };
