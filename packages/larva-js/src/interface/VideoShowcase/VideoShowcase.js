@@ -143,13 +143,11 @@ export default class VideoShowcase {
 	 */
 
 	updatePlayerCardData( el, data ) {
-		console.log( data );
-
-		if ( data.title ) {
+		if ( this.playerUI.title && data.title ) {
 			this.playerUI.title.innerText = data.title;
 		}
-
-		if ( data.permalink ) {
+		
+		if ( this.playerUI.title && data.permalink ) {
 			this.playerUI.title.setAttribute( 'href', data.permalink );
 		}
 

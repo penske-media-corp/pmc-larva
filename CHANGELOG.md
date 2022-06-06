@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-patterns - Add `page-404` module.
 * larva-css -Add utility classes for `padding`.
+* larva-js - Fix JS issue with VideoShowcase.
+
+## 1.4.0 - 6-03-2022
+* larva-patterns - Add `narrow` variant for `paragraph` module.
+* larva-patterns - Add `xl` variant for `top-stories` module.
+* larva-patterns - Add `article-timestamp` module.
+* larva-patterns - Updates to  `story-featured-quote` module.1
 
 ## 1.3.0 - 5-25-2022
 * larva-css - Add `lrv-u-filter-grayscale-100` class.
@@ -49,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
 * larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
 * larva-js - Update jwplayer script to use pmc_jwplayer script
- 
+
 ## 0.7.4 - 05-12-2022
 * larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
 * larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.
@@ -63,7 +70,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.7.2 - 05-10-2022
 * larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
-* 
+*
 ## 0.7.1 - 05-10-2022
 * larva-patterns - Suffix relevant `c-input` component variables with `_attr`
 * larva-patterns - Change component name from `c-text-input` to `c-input` to prevent twig-to-php parser issues
