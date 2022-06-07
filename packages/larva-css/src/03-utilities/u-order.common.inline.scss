@@ -19,9 +19,9 @@
 	}
 }
 
-@include pmc-breakpoint( mobile-max ) {
+.lrv-u-order-n1\@mobile-max {
 
-	.lrv-u-order-n1\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
 		order: -1;
 	}
 }

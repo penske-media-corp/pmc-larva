@@ -29,12 +29,10 @@
 }
 
 @include pmc-breakpoint( desktop ) {
+
 	.lrv-u-display-table\@desktop {
 		display: table;
 	}
-}
-
-@include pmc-breakpoint( desktop ) {
 
 	.lrv-u-display-block\@desktop {
 		display: block;
