@@ -1,9 +1,9 @@
 <section class="author-blurb // {{ author_blurb_classes }} ">
+	{% if c_lazy_image %}
 	<div class="author-blurb-grid__image // {{ author_blurb_image_classes }} ">
-		{% if c_lazy_image %}
-			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
-		{% endif %}
+		{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 	</div>
+	{% endif %}
 
 	<div class="author-blurb-grid__details // {{ author_blurb_details_classes }} ">
 		{% if c_heading %}
@@ -19,9 +19,9 @@
 		{% endif %}
 	</div>
 
+	{% if c_tagline %}
 	<div class="author-blurb-grid__text  // {{ author_blurb_text_classes }} ">
-		{% if c_tagline %}
-			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
-		{% endif %}
+		{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
 	</div>
+	{% endif %}
 </section>
