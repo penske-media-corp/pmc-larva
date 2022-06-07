@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - Add `page-404` module.
-* larva-css -Add utility classes for `padding`.
+* larva-css - Add utility classes for `padding`.
+
+## 1.5.0 - 6-06-2022
 * larva-js - Fix JS issue with VideoShowcase.
 
 ## 1.4.0 - 6-03-2022
