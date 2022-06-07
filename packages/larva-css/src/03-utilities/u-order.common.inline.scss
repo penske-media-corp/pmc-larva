@@ -19,6 +19,12 @@
 	}
 }
 
+@include pmc-breakpoint( mobile-max ) {
+
+	.lrv-u-order-n1\@mobile-max {
+		order: -1;
+	}
+}
 
 // Legacy - should not use mobile-max
 .lrv-u-order-100\@mobile-max {
