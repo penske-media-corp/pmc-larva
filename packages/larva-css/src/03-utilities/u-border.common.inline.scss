@@ -133,7 +133,7 @@
 	.lrv-u-border-a-0\@desktop {
 		border-width: 0;
 	}
-	
+
 	.lrv-u-border-t-3\@desktop {
 		border-top-width: 3px;
 	}
@@ -212,5 +212,11 @@
 .lrv-u-border-t-1\@desktop-xl {
 	@include pmc-breakpoint( desktop-xl ) {
 		border-top-width: pmc-rem(1);
+	}
+}
+
+.lrv-u-border-b-1\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		border-bottom-width: pmc-rem(1);
 	}
 }

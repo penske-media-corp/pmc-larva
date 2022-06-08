@@ -1,0 +1,27 @@
+<section class="author-blurb // {{ author_blurb_classes }} ">
+	{% if c_lazy_image %}
+	<div class="author-blurb-grid__image // {{ author_blurb_image_classes }} ">
+		{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+	</div>
+	{% endif %}
+
+	<div class="author-blurb-grid__details // {{ author_blurb_details_classes }} ">
+		{% if c_heading %}
+			{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+		{% endif %}
+
+		{% if c_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		{% endif %}
+
+		{% if o_social_list %}
+			{% include "@larva/objects/o-social-list/o-social-list.twig" with o_social_list %}
+		{% endif %}
+	</div>
+
+	{% if c_tagline %}
+	<div class="author-blurb-grid__text  // {{ author_blurb_text_classes }} ">
+		{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+	</div>
+	{% endif %}
+</section>
