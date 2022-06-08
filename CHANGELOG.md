@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `author-blurb` module.
 * larva-css - Add `lrv-u-border-b-1@tablet`, `lrv-u-display-table\@desktop`, `lrv-u-flex\@desktop-max`, `lrv-u-flex-direction-column\@desktop-max`, `lrv-u-order-n1\@mobile-max` utility classes.
 
+## 1.6.0 - 6-07-2022
+* larva-patterns - Add `production credits` module.
+* larva-patterns - Add `page-404` module.
+* larva-css - Add utility classes for `padding`.
+
 ## 1.5.0 - 6-06-2022
 * larva-js - Fix JS issue with VideoShowcase.
 
