@@ -61,6 +61,13 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex\@desktop-max {
+
+	@include pmc-breakpoint( desktop-max ) {
+		display: flex;
+	}
+}
+
 .lrv-u-flex\@desktop-xl-max {
 	@include pmc-breakpoint( desktop-xl-max ) {
 		display: flex;
@@ -93,6 +100,12 @@ $breakpoints: (
 .lrv-u-flex-direction-column\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
+		flex-direction: column;
+	}
+}
+
+.lrv-u-flex-direction-column\@desktop-max {
+	@include pmc-breakpoint(desktop-max) {
 		flex-direction: column;
 	}
 }
@@ -137,7 +150,7 @@ $breakpoints: (
 
 	@each $size in $flex_basis {
 		$per : #{$size}#{'%'};
-		
+
 		@if '' == $breakpoint {
 			// No breakpoint
 			.lrv-u-flex-basis-#{$size}p {
@@ -152,5 +165,5 @@ $breakpoints: (
 		}
 
 	} // end flex loop
-	
+
 } // end breakpoints loop

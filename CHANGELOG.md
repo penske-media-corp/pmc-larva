@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished
 * larva-patterns - Updated `secondary-stories` prototype.
 * larva-css - Add `lrv-u-flex-direction-row-reverse`, `lrv-u-flex-direction-row\@desktop-xl` utility classes.
+* larva-patterns - Add `author-blurb` module.
+* larva-css - Add `lrv-u-border-b-1@tablet`, `lrv-u-display-table\@desktop`, `lrv-u-flex\@desktop-max`, `lrv-u-flex-direction-column\@desktop-max`, `lrv-u-order-n1\@mobile-max` utility classes.
 * larva-patterns - update `content-showcase` module and its `the-moth` variant.
 
 ## 1.6.1 - 06-08-2022
