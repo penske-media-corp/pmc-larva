@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished
 * larva-patterns - update `content-showcase` module and its `the-moth` variant.
+* larva-patterns - Fix `production credits` module for pipeline.
 
 ## 1.6.0 - 6-07-2022
 * larva-patterns - Add `production credits` module.
