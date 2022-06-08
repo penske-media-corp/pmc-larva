@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Updated `secondary-stories` prototype.
 * larva-css - Add `lrv-u-flex-direction-row-reverse`, `lrv-u-flex-direction-row\@desktop-xl` utility classes.
 
+## 1.6.1 - 06-08-2022
+* larva-patterns - Fix `production credits` module for pipeline.
+
 ## 1.6.0 - 6-07-2022
 * larva-patterns - Add `production credits` module.
 * larva-patterns - Add `page-404` module.
