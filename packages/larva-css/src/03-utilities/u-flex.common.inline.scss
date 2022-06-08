@@ -73,6 +73,16 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex-direction-row-reverse {
+	flex-direction: row-reverse;
+}
+
+.lrv-u-flex-direction-row\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		flex-direction: row;
+	}
+}
+
 .lrv-u-flex-direction-column\@tablet {
 
 	@include pmc-breakpoint( tablet ) {
