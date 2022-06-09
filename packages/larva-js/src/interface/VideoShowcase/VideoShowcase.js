@@ -82,8 +82,11 @@ export default class VideoShowcase {
 		};
 
 		this.init();
-
-		delegateEvent( this.el, 'click', '[data-video-showcase-trigger]', this.handleTriggerClick.bind( this ) );
+		if (this.player.dataset.videoShowcaseAutoplay) {
+			this.handleTriggerClick(null, this.triggers[0]);
+		} else {
+			delegateEvent( this.el, 'click', '[data-video-showcase-trigger]', this.handleTriggerClick.bind( this ) );
+		}	
 	}
 
 	/**
