@@ -77,7 +77,7 @@ export default class VideoShowcase {
 			sponsoredBadge: el.querySelector( '.js-video-showcase-sponsored-badge' ),
 			dek: el.querySelector( '.js-VideoShowcase-dek' ),
 			iframe: el.querySelector( '[data-video-showcase-iframe]' ),
-			jwplayerContainer: el.querySelector( '#jwplayerContainer' ),
+			jwplayerContainer: el.querySelector( '[data-video-showcase-jwplayer], #jwplayerContainer' ),
 			social: el.querySelector( '[data-video-showcase-player-social-share]' )
 		};
 
@@ -226,7 +226,7 @@ export default class VideoShowcase {
 		this.playerUI.jwplayerContainer.removeAttribute( 'hidden' );
 
 		if ( window.pmc_jwplayer ) {
-			window.pmc_jwplayer( this.playerUI.jwplayerContainer ).setup({
+			window.pmc_jwplayer( this.playerUI.jwplayerContainer.id ).setup({
 				'playlist': playlistUrl,
 				'aspectratio': '16:9'
 			}).play();
@@ -244,7 +244,9 @@ export default class VideoShowcase {
 	 * @param {element} el - Clicked trigger element.
 	 */
 	handleTriggerClick( e, el ) {
-		e.preventDefault();
+		if (e) {
+			e.preventDefault();
+		}
 
 		let previousVideoType = this.state.videoType;
 
