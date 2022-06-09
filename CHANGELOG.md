@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unpublished
+## Unpublished Changes
+
+## 1.7.1 - 06-09-2022
 * larva-js - Videoshowcase JWplayer add support for autoplay.
 
 ## 1.7.0 - 06-08-2022
