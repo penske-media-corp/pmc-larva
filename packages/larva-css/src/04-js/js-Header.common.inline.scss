@@ -61,13 +61,20 @@ $mobile-header-height:  #{var( --sticky-nav-height )};
 	.is-sticky & {
 		display: none;
 	}
+
+	// Hidden on mobile
+	@include pmc-breakpoint( desktop-max ) {
+		display: none;
+	}
 }
 
 .js-show-when-sticky {
-
-	display: none;
-
 	.is-sticky & {
 		display: block;
+	}
+
+	// Hidden above desktop
+	@include pmc-breakpoint( desktop ) {
+		display: none;
 	}
 }
