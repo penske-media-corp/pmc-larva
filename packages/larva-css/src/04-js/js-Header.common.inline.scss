@@ -46,6 +46,10 @@ $mobile-header-height:  #{var( --sticky-nav-height )};
 	transition: transform $transition-transform;
 	will-change: transform;
 
+	// On mobile devices, always make the header sticky.
+	@include pmc-breakpoint( desktop-max ) {
+		@include _sticky-header-positioning;
+	}
 }
 
 .has-side-skins .js-Header-contents {
@@ -62,7 +66,7 @@ $mobile-header-height:  #{var( --sticky-nav-height )};
 		display: none;
 	}
 
-	// Hidden on mobile
+	// Never show the desktop version on mobile devices.
 	@include pmc-breakpoint( desktop-max ) {
 		display: none;
 	}
@@ -73,7 +77,7 @@ $mobile-header-height:  #{var( --sticky-nav-height )};
 		display: block;
 	}
 
-	// Hidden above desktop
+	// On mobile devices, always show the sticky header.
 	@include pmc-breakpoint( desktop ) {
 		display: none;
 	}
