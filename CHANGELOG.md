@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* lava-patterns - Add span option to `o-icon-button` object.
 * larva-patterns - Add `linked-gallery` module.
 * larva-css - Add css `lrv-u-left-50p@desktop`, `lrv-u-position-absolute@desktop`, `lrv-u-top-n33@desktop`, `lrv-u-transform-translateX-n50p@desktop` & `lrv-u-width-38p` utility classes.
 
