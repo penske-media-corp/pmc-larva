@@ -1,3 +1,11 @@
+@import 'setup';
+
 .lrv-u-position-relative {
 	position: relative;
+}
+
+@include pmc-breakpoint( desktop ) {
+	.lrv-u-position-absolute\@desktop {
+		position: absolute;
+	}	
 }

@@ -4,7 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unpublished
+## Unpublished Changes
+
+## 1.7.1 - 06-09-2022
+* larva-js - Videoshowcase JWplayer add support for autoplay.
+
+## 1.7.0 - 06-08-2022
+* larva-patterns - Updated `secondary-stories` prototype.
+* larva-css - Add `lrv-u-flex-direction-row-reverse`, `lrv-u-flex-direction-row\@desktop-xl` utility classes.
+* larva-patterns - Add `author-blurb` module.
+* larva-css - Add `lrv-u-border-b-1@tablet`, `lrv-u-display-table\@desktop`, `lrv-u-flex\@desktop-max`, `lrv-u-flex-direction-column\@desktop-max`, `lrv-u-order-n1\@mobile-max` utility classes.
+* larva-patterns - update `content-showcase` module and its `the-moth` variant.
+
+## 1.6.1 - 06-08-2022
+* larva-patterns - Fix `production credits` module for pipeline.
+
+## 1.6.0 - 6-07-2022
+* larva-patterns - Add `production credits` module.
+* larva-patterns - Add `page-404` module.
+* larva-css - Add utility classes for `padding`.
+
+## 1.5.0 - 6-06-2022
 * larva-js - Fix JS issue with VideoShowcase.
 
 ## 1.4.0 - 6-03-2022

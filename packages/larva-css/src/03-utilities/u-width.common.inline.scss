@@ -70,6 +70,12 @@ $widths_map: (
 	}
 }
 
+.lrv-u-width-38p\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		width: 38%;
+	}
+}
+
 .lrv-u-width-50p\@desktop {
 	@include pmc-breakpoint( desktop ) {
 		width: 50%;
@@ -197,4 +203,8 @@ $widths_map: (
 	@include pmc-breakpoint(tablet) {
 		width: 100%;
 	}
+}
+
+.lrv-u-max-width-830 {
+	max-width: pmc-rem(830);	
 }
