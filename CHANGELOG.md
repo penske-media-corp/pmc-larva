@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished
+* larva-patterns - Add `featured-video` module.
+* larva-objects - Add `o-video-card` and `o-category-link` object.
+
 ## 1.7.2 - 06-13-2022
 * lava-patterns - Add span option to `o-icon-button` object.
 * larva-patterns - Add `linked-gallery` module.
