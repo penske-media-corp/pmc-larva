@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `featured-video` module.
 * larva-objects - Add `o-video-card` and `o-category-link` object.
 * larva-patterns - Update `linked-gallery` module to add support for thumbnails url.
+* larva-tokens - Add a new `font-family-accent` token to VIBE.
 
 ## 1.8.0 - 06-20-2022
 * larva-tokens - Adjust font size, font weight and line height in variety tokens.
