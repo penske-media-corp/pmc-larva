@@ -38,11 +38,12 @@ jobs:
         path: backstop_data
     - id: find-pull-request
       uses: jwalton/gh-find-current-pr@v1
+      if: always()
       with:
         state: open
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
-      if: ${{ failure() }}
+      if: failure()
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
