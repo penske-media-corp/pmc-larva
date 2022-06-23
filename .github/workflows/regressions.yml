@@ -49,7 +49,7 @@ jobs:
         issue-number: ${{ steps.find-pull-request.outputs.pr }}
         comment-author: 'github-actions[bot]'
         body: |
-            ### 🚨 Backstop Visual Regression Tests Failed: [View the results for ${{ env.GITHUB_SHA }}](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
+            ### 🚨 Backstop Visual Regression Tests Failed: [View the results for ${{ github.sha }}](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
             <details>
 
               <summary><strong>How to view and update regression tests</strong></summary>
