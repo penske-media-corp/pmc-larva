@@ -1,0 +1,8 @@
+<div class="featured-video // {{ featured_video_classes }}" data-video-showcase>
+	{% if o_video_card %}
+		{% include "@larva/objects/o-video-card/o-video-card.twig" with o_video_card %}
+	{% endif %}
+	{% if c_figcaption %}
+		{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
+	{% endif %}	
+</div>

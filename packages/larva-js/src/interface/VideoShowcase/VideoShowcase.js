@@ -77,13 +77,16 @@ export default class VideoShowcase {
 			sponsoredBadge: el.querySelector( '.js-video-showcase-sponsored-badge' ),
 			dek: el.querySelector( '.js-VideoShowcase-dek' ),
 			iframe: el.querySelector( '[data-video-showcase-iframe]' ),
-			jwplayerContainer: el.querySelector( '#jwplayerContainer' ),
+			jwplayerContainer: el.querySelector( '[data-video-showcase-jwplayer], #jwplayerContainer' ),
 			social: el.querySelector( '[data-video-showcase-player-social-share]' )
 		};
 
 		this.init();
-
-		delegateEvent( this.el, 'click', '[data-video-showcase-trigger]', this.handleTriggerClick.bind( this ) );
+		if (this.player.dataset.videoShowcaseAutoplay) {
+			this.handleTriggerClick(null, this.triggers[0]);
+		} else {
+			delegateEvent( this.el, 'click', '[data-video-showcase-trigger]', this.handleTriggerClick.bind( this ) );
+		}	
 	}
 
 	/**
@@ -143,13 +146,11 @@ export default class VideoShowcase {
 	 */
 
 	updatePlayerCardData( el, data ) {
-		console.log( data );
-
-		if ( data.title ) {
+		if ( this.playerUI.title && data.title ) {
 			this.playerUI.title.innerText = data.title;
 		}
-
-		if ( data.permalink ) {
+		
+		if ( this.playerUI.title && data.permalink ) {
 			this.playerUI.title.setAttribute( 'href', data.permalink );
 		}
 
@@ -225,7 +226,7 @@ export default class VideoShowcase {
 		this.playerUI.jwplayerContainer.removeAttribute( 'hidden' );
 
 		if ( window.pmc_jwplayer ) {
-			window.pmc_jwplayer( this.playerUI.jwplayerContainer ).setup({
+			window.pmc_jwplayer( this.playerUI.jwplayerContainer.id ).setup({
 				'playlist': playlistUrl,
 				'aspectratio': '16:9'
 			}).play();
@@ -243,7 +244,9 @@ export default class VideoShowcase {
 	 * @param {element} el - Clicked trigger element.
 	 */
 	handleTriggerClick( e, el ) {
-		e.preventDefault();
+		if (e) {
+			e.preventDefault();
+		}
 
 		let previousVideoType = this.state.videoType;
 
