@@ -1,0 +1,8 @@
+<div class="section-heading // {{ section_heading_class }}">
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+	{% if c_dek %}
+		{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+	{% endif %}	
+</div>
