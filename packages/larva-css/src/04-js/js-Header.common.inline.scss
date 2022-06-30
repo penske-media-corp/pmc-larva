@@ -1,0 +1,6 @@
+@import 'setup';
+
+// minimal css for hiding sticky header, the sticky header functionality should be handled from theme.
+.js-show-when-sticky {
+	display: none;
+}
