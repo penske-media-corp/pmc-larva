@@ -3,3 +3,10 @@
 .lrv-u-transform-translateY-n50p {
 	transform: translateY(-50%);
 }
+
+@include pmc-breakpoint( desktop ) {
+	.lrv-u-transform-translateX-n50p\@desktop {
+		transform: translateX(-50%);
+	
+	}
+}

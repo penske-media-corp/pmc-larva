@@ -657,12 +657,28 @@
       "originalValue": "{!GREY_94}",
       "name": "COLOR_GREY_LIGHTEST"
     },
+    "FONT_FAMILY_ACCENT": {
+      "value": "Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The fallback for the accent font",
+      "originalValue": "Helvetica, sans-serif",
+      "name": "FONT_FAMILY_ACCENT"
+    },
     "COLOR_BRAND_ACCENT": {
       "value": "rgb(16, 16, 16)",
       "type": "color",
       "category": "text-color",
       "originalValue": "{!BLACK_6}",
       "name": "COLOR_BRAND_ACCENT"
+    },
+    "FONT_FAMILY_ACCENT_FANCY": {
+      "value": "'Brunel Deck', Helvetica, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "The accent webfont, loaded async",
+      "originalValue": "'Brunel Deck', Helvetica, sans-serif",
+      "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }
 }
