@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-patterns - Add `section-heading` module.
+* larva-patterns - Add support for `c-tagline` to `o-author` object.
 
 ## 1.9.0 -06-21-2022
 * larva-patterns - Add `featured-video` module.
