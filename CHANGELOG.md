@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
-## 2.0.0 - 07-05-2022
+## 1.10.0 - 07-05-2022
 * larva-patterns - Add `section-heading` module.
 * larva-js - Remove `Header` js.
 * larva-css - Remove `js-Header` css.
