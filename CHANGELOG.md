@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished Changes
 * larva-js - Remove `Header` js.
 * larva-css - Remove `js-Header` css.
+* larva-patterns - Add support for `c-tagline` to `o-author` object.
 
 ## 1.9.0 -06-21-2022
 * larva-patterns - Add `featured-video` module.

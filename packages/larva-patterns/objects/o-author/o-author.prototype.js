@@ -9,5 +9,6 @@ module.exports = {
 	o_author_classes: 'lrv-a-font-secondary-regular-m',
 	o_author_text: 'By ',
 	c_span: c_span,
-	c_timestamp: c_timestamp
+	c_timestamp: c_timestamp,
+	c_tagline_author: false,
 };
