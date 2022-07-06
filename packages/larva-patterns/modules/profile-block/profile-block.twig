@@ -1,0 +1,37 @@
+<div class="profile-blurb // {{ profile_blurb_classes }} ">
+
+	<div class="{{ profile_blurb_image_classes }}">
+		{% if c_lazy_image %}
+			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		{% endif %}
+	</div>
+
+	<div class="{{ profile_blurb_detail_classes }}">
+		{% if c_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		{% endif %}
+
+		{% if c_tagline %}
+			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+		{% endif %}
+
+		{% if c_tagline_second %}
+			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_second %}
+		{% endif %}
+
+		{% if c_dek %}
+			{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+		{% endif %}
+
+		{% if o_social_list %}
+			{% include "@larva/objects/o-social-list/o-social-list.twig" with o_social_list %}
+		{% endif %}
+
+		{% if c_button %}
+			<div class="{{ profile_blurb_c_button_classes }}">
+				{% include "@larva/components/c-button/c-button.twig" with c_button %}
+			</div>
+		{% endif %}
+	</div>
+
+</div>
