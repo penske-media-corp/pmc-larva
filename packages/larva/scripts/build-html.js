@@ -9,14 +9,17 @@ const getAllPatternsObj = require( '../lib/utils/getAllPatternsObj' );
 
 const config = getAppConfiguration( 'patterns' );
 const cliArgs = getArgsFromCli();
-const source = 'larva' === cliArgs[1] ? 'larva' : 'project';
-const port = process.env.NODE_PORT || '3000' ;
+const source = 'larva' === cliArgs[ 1 ] ? 'larva' : 'project';
+const port = process.env.NODE_PORT || '3000';
 
 const urlBase = 'http://localhost:' + port + '/' + source;
 const buildPath = path.join( process.cwd(), './build/html/' + source );
 
 const patternsObj = ( () => {
-	const patternDir = 'larva' === source ? config.larvaPatternsDir : config.projectPatternsDir;
+	const patternDir =
+		'larva' === source
+			? config.larvaPatternsDir
+			: config.projectPatternsDir;
 	return getAllPatternsObj( patternDir );
 } )();
 
@@ -32,7 +35,7 @@ const staticPaths = [
 	'',
 ];
 
-staticPaths.forEach( p => {
+staticPaths.forEach( ( p ) => {
 	// Only build these paths for the larva source.
 	if ( p === 'style-guide' || p === 'css' ) {
 		if ( 'larva' !== source ) {
@@ -40,13 +43,17 @@ staticPaths.forEach( p => {
 		}
 	}
 
-	routesArr.push( p )
-});
+	routesArr.push( p );
+} );
 
-generateStatic( routesArr, buildPath, ( message ) => {
-
-	// TODO: copy assets into build path
-	// copy assets from larva package to static
-	// copy assets from project to assets
-	console.log( message );
-}, urlBase );
+generateStatic(
+	routesArr,
+	buildPath,
+	( message ) => {
+		// TODO: copy assets into build path
+		// copy assets from larva package to static
+		// copy assets from project to assets
+		console.log( message );
+	},
+	urlBase
+);

@@ -1,3 +1,3 @@
 module.exports = {
-	c_play_badge_classes: ''
-}
+	c_play_badge_classes: '',
+};

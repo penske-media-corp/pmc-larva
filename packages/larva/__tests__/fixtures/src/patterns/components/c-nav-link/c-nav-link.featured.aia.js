@@ -1,3 +1,3 @@
 module.exports = {
-	modifier_class: 'featured aia'
+	modifier_class: 'featured aia',
 };
