@@ -1,0 +1,13 @@
+{
+	"extends": "@penskemediacorp/eslint-config",
+	"overrides": [{
+		"files": [
+			"**/*.js"
+		],
+		"rules": {
+			"jsdoc/require-returns-description": "off",
+			"@wordpress/no-global-event-listener": "off"
+		},
+		"globals": {}
+	}]
+}
