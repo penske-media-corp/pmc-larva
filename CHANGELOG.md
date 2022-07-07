@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-tokens - Adjust font size, font weight and line height in variety tokens.
 
 ## 1.10.0 - 07-05-2022
 * larva-patterns - Add `section-heading` module.
