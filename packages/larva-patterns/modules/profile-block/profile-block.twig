@@ -1,12 +1,12 @@
-<div class="profile-blurb // {{ profile_block_classes }} ">
+<div class="profile-block // {{ profile_block_classes }} ">
 
-	<div class="{{ profile_block_image_classes }}">
+	<div class="profile-block-image // {{ profile_block_image_classes }}">
 		{% if c_lazy_image %}
 			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 		{% endif %}
 	</div>
 
-	<div class="{{ profile_block_detail_classes }}">
+	<div class="profile-block-details // {{ profile_block_detail_classes }}">
 		{% if c_title %}
 			{% include "@larva/components/c-title/c-title.twig" with c_title %}
 		{% endif %}
@@ -33,5 +33,4 @@
 			</div>
 		{% endif %}
 	</div>
-
 </div>
