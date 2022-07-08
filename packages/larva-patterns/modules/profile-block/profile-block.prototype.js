@@ -11,7 +11,7 @@ c_lazy_image.c_lazy_image_img_classes += ' lrv-u-border-radius-50p';
 c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1';
 
 
-c_title.c_title_classes = 'lrv-a-font-primary-l lrv-u-margin-b-1';
+c_title.c_title_classes = 'lrv-a-font-primary-l lrv-u-margin-b-1 lrv-u-margin-t-150';
 c_title.c_title_text = 'Debra and Leon Black';
 c_title.c_title_url = false;
 
@@ -28,7 +28,7 @@ c_button.c_button_inner_classes = 'lrv-u-padding-lr-1@tablet';
 
 module.exports = {
 	profile_block_classes: 'lrv-u-max-width-80p lrv-u-margin-lr-auto',
-	profile_block_image_classes: 'lrv-u-margin-b-150',
+	profile_block_image_classes: '',
 	profile_block_detail_classes: 'lrv-u-text-align-center',
 	profile_block_c_button_classes: '',
 	c_button,

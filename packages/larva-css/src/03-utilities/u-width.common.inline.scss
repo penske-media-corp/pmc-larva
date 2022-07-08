@@ -178,6 +178,13 @@ $widths_map: (
 	}
 }
 
+.lrv-u-width-75p\@tablet {
+
+	@include pmc-breakpoint(tablet) {
+		width: 75%;
+	}
+}
+
 .lrv-u-max-width-30p\@mobile-max {
 	@include pmc-breakpoint(mobile-max) {
 		max-width: 30%;
