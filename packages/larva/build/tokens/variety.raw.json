@@ -700,8 +700,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "14px",
-      "originalValue": "14px",
+      "value": "18px",
+      "originalValue": "18px",
       "name": "SECONDARY_M_FONT_SIZE_DESKTOP_XL"
     },
     "BASIC_XXS_FONT_SIZE_DESKTOP_XL": {
@@ -1145,8 +1145,8 @@
       "status": "alpha",
       "category": "font-size",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "18px",
+      "originalValue": "18px",
       "name": "SECONDARY_M_FONT_SIZE_DESKTOP"
     },
     "BASIC_S_FONT_SIZE_DESKTOP": {
@@ -2621,8 +2621,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "bold",
+      "originalValue": "bold",
       "name": "SECONDARY_M_FONT_WEIGHT_DESKTOP"
     },
     "BASIC_S_FONT_WEIGHT_DESKTOP": {
@@ -2697,8 +2697,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "bold",
+      "originalValue": "bold",
       "name": "SECONDARY_M_FONT_WEIGHT_DESKTOP_XL"
     },
     "SECONDARY_L_FONT_WEIGHT_DESKTOP_XL": {
@@ -2970,8 +2970,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "600",
-      "originalValue": "600",
+      "value": "bold",
+      "originalValue": "bold",
       "name": "SECONDARY_M_FONT_WEIGHT_MOBILE"
     },
     "PRIMARY_XL_FONT_WEIGHT_DESKTOP": {
@@ -3135,8 +3135,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XL_FONT_WEIGHT_DESKTOP_XL"
     },
     "ACCENT_XS_FONT_WEIGHT_DESKTOP_XL": {
@@ -3306,8 +3306,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "17px",
-      "originalValue": "17px",
+      "value": "21px",
+      "originalValue": "21px",
       "name": "SECONDARY_M_LINE_HEIGHT_DESKTOP_XL"
     },
     "BODY_XXXL_LINE_HEIGHT_DESKTOP": {
@@ -3783,8 +3783,8 @@
       "status": "alpha",
       "category": "line-height",
       "type": "number",
-      "value": "initial",
-      "originalValue": "initial",
+      "value": "21px",
+      "originalValue": "21px",
       "name": "SECONDARY_M_LINE_HEIGHT_DESKTOP"
     },
     "BASIC_S_LINE_HEIGHT_DESKTOP": {
