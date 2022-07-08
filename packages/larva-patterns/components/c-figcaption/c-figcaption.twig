@@ -6,8 +6,13 @@
 		{% if c_figcaption_caption_markup %}
 			<span class="{{ c_figcaption_caption_classes }}">{{ c_figcaption_caption_markup|raw }}</span>
 		{% endif %}
-		{% if c_figcaption_credit_text %}
-			<cite class="{{ c_figcaption_credit_classes }}">{{ c_figcaption_credit_text }}</cite>
+
+		{% if c_figcaption_credit_text_markup %}
+			<cite class="{{ c_figcaption_credit_classes }}">{{ c_figcaption_credit_text_markup }}</cite>
+		{% else %}
+			{% if c_figcaption_credit_text %}
+				<cite class="{{ c_figcaption_credit_classes }}">{{ c_figcaption_credit_text }}</cite>
+			{% endif %}
 		{% endif %}
 
 	{% if c_figcaption_inner %}
