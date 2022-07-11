@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 1.11.0 - 07-08-2022
 * larva-tokens - Adjust font size, font weight and line height in variety tokens.
+* larva-patterns - Update `c-figcaption` module to add support for image credit text with html markup.
 
 ## 1.10.0 - 07-05-2022
 * larva-patterns - Add `section-heading` module.
