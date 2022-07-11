@@ -16,7 +16,7 @@ c_title.c_title_text = 'Debra and Leon Black';
 c_title.c_title_url = false;
 
 c_tagline.c_tagline_text = 'Title Here';
-c_tagline.c_tagline_classes = 'lrv-a-font-secondary-s lrv-u-margin-b-150';
+c_tagline.c_tagline_classes = 'lrv-a-font-secondary-s lrv-u-margin-b-150 lrv-u-text-transform-uppercase';
 
 c_dek.c_dek_classes = 'lrv-u-margin-t-00 lrv-u-margin-b-150';
 c_dek.c_dek_text = 'Massa tincidunt dui ut ornare lectus sit. Dolor purus non enim praesent elementum facilisis leo. Aliquet eget sit amet tellus cras adipiscing enim eu. ';
