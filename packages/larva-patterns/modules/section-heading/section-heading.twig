@@ -1,0 +1,8 @@
+<div class="section-heading // {{ section_heading_class }}">
+	{% if section_heading_markup %}
+		<h{{ section_heading_level_text }} class="{{ section_heading_classes }} {{ section_heading_typography_class }} {{ section_heading_color_class }} {{ section_heading_background_color_class }} {{ section_heading_text_align_class }}">{{ section_heading_markup }}</h{{ section_heading_level_text }}>
+	{% endif %}
+	{% if c_dek %}
+		{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+	{% endif %}	
+</div>
