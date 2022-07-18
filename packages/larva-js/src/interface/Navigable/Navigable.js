@@ -30,7 +30,7 @@ export default class Navigable {
 		this.oNavList.style.opacity    = '1';
 	}
 
-	onFocusOut(event) {
+	onFocusOut( event ) {
 		if ( this.el.contains( event.relatedTarget ) ) {
 			return;
 		}
@@ -42,7 +42,7 @@ export default class Navigable {
 		event.currentTarget.classList.add( 'lrv-u-background-color-brand-primary' );
 	}
 
-	onFocusOutListItem(event) {
+	onFocusOutListItem( event ) {
 		event.currentTarget.classList.remove( 'lrv-u-background-color-brand-primary' );
 	}
 }
