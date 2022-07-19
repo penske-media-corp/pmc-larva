@@ -70,8 +70,8 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$if_condition_regex = '/({% if\s*)(\w*\[\'\w+\'\]|\w+)(\s*%})/';
 
 		// Get matches for `{% for item in VARIABLE`.
-		// https://regex101.com/r/ijLuIA/1.
-		$loop_regex = '/({% for (?:\w*\[\'\w+\'\]|\w+) in\s*)(\w*)/';
+		// https://regex101.com/r/ijLuIA/2.
+		$loop_regex = '/({% for (?:\w*\[\'\w+\'\]|\w+) in\s*)(\w*\[\'\w+\'\]|\w+)/';
 
 		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
 		// https://regex101.com/r/ACN0rE/5.
@@ -222,7 +222,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$twig_markup_replace_main     = parse_wp_action( $twig_markup_replace_main );
 		$twig_markup_replace_complete = str_replace( array_keys( (array) $general_replacers ), array_values( $general_replacers ), $twig_markup_replace_main );
 
-		$php_markup  = "<?php\n/**\n * Generated file.\n *\n * Refer to the relevant Twig file for adjusting this markup.\n */\n\n?>\n";
+		$php_markup  = "<?php\n/**\n * Generated file.\n *\n * Refer to the relevant Twig file for adjusting this markup.\n */\n\n?>\n\n";
 		$php_markup .= $twig_markup_replace_complete;
 
 		if ( ! file_exists( $template_dir ) ) {
