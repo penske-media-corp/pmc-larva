@@ -71,7 +71,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 
 		// Get matches for `{% for item in VARIABLE`.
 		// https://regex101.com/r/ijLuIA/3.
-		$loop_regex = '/({% for (?:\w*\[\'\w+\'\]|\w+) in\s*)(\w*\[\'\w+\'\]|\w+)/';
+		$loop_regex = '/({% for (\w*\[\'\w+\'\]|\w+) in\s*)(\w*\[\'\w+\'\]|\w+)/';
 
 		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
 		// https://regex101.com/r/ACN0rE/5.
@@ -127,7 +127,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 			$key_name      = $loop_matches[2][ $count ];
 			$variable_name = $loop_matches[3][ $count ];
 
-			$loop_replacements[ $count ] = '<?php foreach ( $' . $variable_name . ' ?? [] as ' . $key_name . ')';
+			$loop_replacements[ $count ] = '<?php foreach ( $' . $variable_name . ' ?? [] as $' . $key_name;
 
 			$count ++;
 		}
