@@ -18,6 +18,7 @@ o_card_prototype.c_title.c_title_text = ' For Sahbabii, Recording His Debut Albu
 o_card_prototype.c_timestamp = false;
 o_card_prototype.o_card_content_classes ='lrv-u-align-items-start lrv-u-flex lrv-u-flex-direction-column';
 o_card_prototype.c_title.c_title_link_classes = 'lrv-a-unstyle-link lrv-u-color-brand-primary:hover';
+o_card_prototype.o_card_tag_text = 'div';
 
 const article_kicker = clonedeep(require('@penskemediacorp/larva-patterns/modules/article-kicker/article-kicker.prototype.js'));
 article_kicker.article_kicker_classes = 'lrv-u-padding-b-050 lrv-u-border-b-1 lrv-u-text-transform-uppercase';

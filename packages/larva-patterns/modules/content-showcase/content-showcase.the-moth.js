@@ -23,6 +23,7 @@ o_card.c_lazy_image.c_lazy_image_crop_class = 'lrv-a-crop-1x1';
 o_card.article_kicker = article_kicker;
 o_card.article_kicker.article_kicker_classes = 'lrv-u-color-black lrv-u-color-brand-secondary-dark:hover lrv-u-text-transform-uppercase lrv-a-font-basic-s lrv-u-position-relative lrv-u-padding-b-050';
 o_card.article_kicker.article_kicker_link_classes = 'lrv-u-color-black';
+o_card.o_card_tag_text = 'div';
 
 
 content_showcase.content_showcase_classes = 'the-moth lrv-u-border-t-1 lrv-u-font-family-body lrv-a-glue-parent';

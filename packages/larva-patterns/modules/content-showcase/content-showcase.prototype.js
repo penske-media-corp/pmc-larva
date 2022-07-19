@@ -23,6 +23,7 @@ o_card.c_title.c_title_classes = 'lrv-u-font-weight-normal lrv-u-margin-tb-1';
 o_card.c_timestamp = false;
 o_card.c_tagline = false;
 o_card.o_author = false;
+o_card.o_card_tag_text = 'div';
 
 module.exports = {
     content_showcase_items_classes: 'lrv-u-flex lrv-u-flex-direction-column@mobile-max lrv-u-padding-tb-1@desktop lrv-u-width-100p lrv-u-padding-lr-125@mobile-max',

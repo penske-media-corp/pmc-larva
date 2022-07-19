@@ -35,6 +35,7 @@ o_card.c_span = c_span;
 o_card.c_title = c_title;
 o_card.c_timestamp = c_timestamp;
 o_card.c_svg = c_svg;
+o_card.o_card_tag_text = 'div';
 
 module.exports = {
 	newswire_classes: 'lrv-a-wrapper lrv-u-padding-b-2',
