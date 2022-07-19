@@ -360,5 +360,5 @@ function debug_log( string $msg ): void {
 	}
 }
 
-// Set default to debug mode
+// Set default to debug mode.
 set_debug( true );
