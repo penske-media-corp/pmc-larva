@@ -266,12 +266,12 @@ function parse_include_path( $twig_include, $pattern_name, $data_name, $is_using
 	}
 
 	if ( $is_using_plugin ) {
-		return '<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( \'' . $pattern_type . '/' . $pattern_name . '\', $' . $data_name . ', true ); ?>';
+		return "<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( '" . $pattern_type . '/' . $pattern_name . "', $" . $data_name . ", true ); ?>";
 	} else {
 		$pattern_partial_path = $pattern_directory . $pattern_type . '/' . $pattern_name;
-		return '<?php \PMC::render_template( \'' . $brand_directory . ' . ' . $pattern_partial_path  . '.php, $\' . $data_name . \', true ); ?>';
-	}
 
+		return '<?php \PMC::render_template( ' . $brand_directory . " . '" . $pattern_partial_path  . ".php', $" . $data_name . ', true ); ?>';
+	}
 }
 
 /**
@@ -298,7 +298,7 @@ function parse_svg_path( $twig_include, $svg_name, $is_using_plugin ) {
 		}
 	}
 
-	return '<?php \PMC::render_template( ' . $brand_directory . ' . \'' . $svg_directory . '\' . ( $' . $svg_name . ' ?? \'\' ) . \'.svg\', [], true ); ?>';
+	return "<?php \PMC::render_template( " . $brand_directory . " . '" . $svg_directory . "' . ( $" . $svg_name . " ?? '' ) . '.svg', [], true ); ?>";
 }
 
 /**
