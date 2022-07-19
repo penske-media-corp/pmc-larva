@@ -124,9 +124,10 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$count = 0;
 		foreach ( $loop_matches[0] as $key => $match ) {
 
-			$variable_name = $loop_matches[2][ $count ];
+			$key_name      = $loop_matches[2][ $count ];
+			$variable_name = $loop_matches[3][ $count ];
 
-			$loop_replacements[ $count ] = '<?php foreach ( $' . $variable_name . ' ?? [] as $item';
+			$loop_replacements[ $count ] = '<?php foreach ( $' . $variable_name . ' ?? [] as ' . $key_name . ')';
 
 			$count ++;
 		}
