@@ -1,7 +1,8 @@
 module.exports = {
-	table_classes: '',
-	table_text_align_class: '',
-	table_color_class: '',
 	table_background_color_class: '',
+	table_classes: '',
+	table_color_class: '',
+	table_layout_class: '',
 	table_markup: 'Table content.',
+	table_text_align_class: '',
 };
