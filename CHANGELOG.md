@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-patterns - Add `profile-block` module.
+* twig-to-php-parser - Updates parse support for nested if and foreach loops.
+* twig-to-php-parser - Addresses phpcs concerns, general cleanup.
 
 ## 1.12.0 - 07-08-2022
 * larva-patterns - Update `c-figcaption` module to add support for image credit text with html markup.
