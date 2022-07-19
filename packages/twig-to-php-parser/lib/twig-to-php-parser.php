@@ -70,7 +70,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$if_condition_regex = '/({% if\s*)(\w*\[\'\w+\'\]|\w+)(\s*%})/';
 
 		// Get matches for `{% for item in VARIABLE`.
-		// https://regex101.com/r/ijLuIA/2.
+		// https://regex101.com/r/ijLuIA/3.
 		$loop_regex = '/({% for (?:\w*\[\'\w+\'\]|\w+) in\s*)(\w*\[\'\w+\'\]|\w+)/';
 
 		// Get matches for {{ name }}, {{ name|filter }}, {{ name['item'] }}
