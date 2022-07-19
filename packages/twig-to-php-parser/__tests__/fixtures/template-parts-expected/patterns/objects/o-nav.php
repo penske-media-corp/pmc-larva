@@ -16,7 +16,7 @@
 		<?php foreach ( $o_nav_list_items ?? [] as $item ) { ?>
 			<li class="o-nav__list-item <?php echo esc_attr( $o_nav_list_item_classes ?? '' ); ?>" data-dropdown-list-item="<?php echo esc_attr( $o_nav_list_item_data_attributes ?? '' ); ?>">
 				<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( 'components/c-nav-link', $item, true ); ?>
-
+				
 				<?php if ( ! empty( $item['newsletter_dropdown'] ) ) { ?>
 					<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( 'modules/newsletter-dropdown', $item['newsletter_dropdown'], true ); ?>
 				<?php } ?>
