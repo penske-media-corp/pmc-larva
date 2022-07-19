@@ -6,6 +6,7 @@
  */
 
 ?>
+
 <ul class="o-story-list <?php echo esc_attr( $modifier_class ?? '' ); ?> <?php echo esc_attr( $o_story_list_classes ?? '' ); ?>">
 	<?php foreach ( $o_story_list_teases ?? [] as $item ) { ?>
 		<li class="o-story-list__item <?php echo esc_attr( $o_story_list_item_classes ?? '' ); ?>">

@@ -6,6 +6,7 @@
  */
 
 ?>
+
 <?php foreach ( $list_items ?? [] as $item ) { ?>
 	<li class="list__item larva // <?php echo esc_attr( $list_item_classes ?? '' ); ?>">
 		<?php if ( ! empty( $item['list_items'] ) ) { ?>

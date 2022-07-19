@@ -6,6 +6,7 @@
  */
 
 ?>
+
 <nav class="o-nav <?php echo esc_attr( $modifier_class ?? '' ); ?> <?php echo esc_attr( $o_nav_classes ?? '' ); ?>" data-dropdown="<?php echo esc_attr( $o_nav_data_attributes ?? '' ); ?>">
 
 	<?php if ( ! empty( $o_nav_title_text ) ) { ?>
