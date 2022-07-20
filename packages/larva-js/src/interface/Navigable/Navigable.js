@@ -49,7 +49,7 @@ export default class Navigable {
 
 	onKeyup( event ) {
 		// Hide nav if Escape key is pressed.
-		if( event.key === "Escape") {
+		if ( "Escape" === event.key ) {
 			this.oNavList.style.visibility = 'hidden';
 			this.oNavList.style.opacity    = '0';
 		}	
