@@ -89,7 +89,7 @@ o_card_5.o_card_classes = 'lrv-u-padding-r-2@tablet lrv-u-padding-b-150@mobile-m
 o_card_5.article_kicker_outer_classes = ' lrv-a-glue-parent lrv-u-background-color-white lrv-u-padding-b-1 lrv-u-padding-r-1 lrv-u-padding-t-1';
 o_card_5.article_kicker.article_kicker_classes += ' lrv-a-font-basic-xs ';
 o_card_5.o_card_content_classes = ' lrv-u-align-items-start lrv-u-flex lrv-u-flex-basis-100p@desktop-xl-max lrv-u-flex-direction-column lrv-u-padding-l-150@mobile-max lrv-u-padding-r-150@mobile-max';
-o_card_5.c_title.c_title_classes = 'lrv-u-padding-t-00@desktop-xl lrv-u-padding-b-075 lrv-u-padding-t-00@mobile-max lrv-a-font-primary-xl lrv-u-padding-t-025';
+o_card_5.c_title.c_title_classes = 'lrv-u-padding-t-00@desktop-xl lrv-u-padding-b-075 lrv-u-padding-t-1@mobile-max lrv-a-font-primary-xl lrv-u-padding-t-025';
 o_card_5.o_card_image_wrap_classes = 'lrv-u-flex-basis-100p@desktop-xl-max  ';
 
 const o_card_6 = clonedeep(o_card_prototype);
