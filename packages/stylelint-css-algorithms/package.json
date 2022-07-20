@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/stylelint-css-algorithms",
-  "version": "1.13.1",
+  "version": "1.13.2",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -21,5 +21,6 @@
   },
   "dependencies": {
     "stylelint": "^10.1.0"
-  }
+  },
+  "gitHead": "ea2a84419c56bb79c3b320d3d4208bcfc3c6ed5b"
 }

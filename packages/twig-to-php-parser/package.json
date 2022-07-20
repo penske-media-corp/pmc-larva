@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/twig-to-php-parser",
-  "version": "1.13.1",
+  "version": "1.13.2",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -25,5 +25,6 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "exec-php": "0.0.5"
-  }
+  },
+  "gitHead": "ea2a84419c56bb79c3b320d3d4208bcfc3c6ed5b"
 }
