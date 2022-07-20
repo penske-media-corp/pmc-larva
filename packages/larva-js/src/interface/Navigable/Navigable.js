@@ -16,6 +16,7 @@ export default class Navigable {
 
 		this.el.addEventListener( 'focus', this.onFocus.bind( this ) );
 		this.el.addEventListener( 'focusout', this.onFocusOut.bind( this ) );
+		this.el.addEventListener( 'keyup', this.onKeyup.bind( this ) );
 		
 		if ( this.oNavListItems.length ) {
 			this.oNavListItems.forEach( ( oNavListItem ) => {
@@ -44,5 +45,13 @@ export default class Navigable {
 
 	onFocusOutListItem( event ) {
 		event.currentTarget.classList.remove( 'lrv-u-background-color-brand-primary' );
+	}
+
+	onKeyup( event ) {
+		// Hide nav if Escape key is pressed.
+		if( event.key === "Escape") {
+			this.oNavList.style.visibility = 'hidden';
+			this.oNavList.style.opacity    = '0';
+		}	
 	}
 }
