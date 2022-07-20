@@ -97,7 +97,6 @@
   },
   "devDependencies": {
     "backstopjs": "^6.0.1",
-    "node-pre-gyp": "0.17.0",
-    "fsevents": "2.2.1"
+    "node-pre-gyp": "0.17.0"
   }
 }
