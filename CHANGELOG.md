@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-patterns - Add `profile-block` module.
+* larva-patterns - Add tabindex support to `o-nav` object.
+* larva-patterns - Add `lrv-js-Navigable` class to `pmc-footer` module to make it accessible.
+* larva-js - Add `Navigable` js to support keyboard tab navigation for `o-nav` object.
 * larva-tokens - Update Rollingstone-2022 tokens as per new styleguide.
 
 ## 1.12.0 - 07-08-2022

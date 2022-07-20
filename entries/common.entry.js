@@ -5,6 +5,7 @@ import initCollapsible from '@larva-js/interface/Collapsible';
 import initPopOver from '@larva-js/interface/PopOver';
 import initTooltip from '@larva-js/interface/Tooltip';
 import initExpandableSearch from '@larva-js/interface/ExpandableSearch';
+import initNavigable from '@larva-js/interface/Navigable';
 
 const spritePath = ( () => {
 	if ( undefined !== window.pmc_common_urls ) {
@@ -25,6 +26,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initFlickity();
 	initVideoShowcase();
 	initPopOver();
+	initNavigable();
 } );
 
 window.addEventListener( 'load', () => {
