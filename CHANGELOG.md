@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.14.0 - 07-20-2022
+* larva-patterns - Add `profile-block` module.
+* larva-patterns - Updating `secondary-stories` kicker classes.
+* larva-patterns - Add tabindex support to `o-nav` object.
+* larva-patterns - Add `lrv-js-Navigable` class to `pmc-footer` module to make it accessible.
+* larva-js - Add `Navigable` js to support keyboard tab navigation for `o-nav` object.
+* larva-tokens - Update Rollingstone-2022 tokens as per new styleguide.
+* twig-to-php-parser - Addresses phpcs concerns, general cleanup.
+* twig-to-php-parser - Updates parse support for nested if and foreach loops.
+
+## 1.12.0 - 07-08-2022
+* larva-patterns - Update `c-figcaption` module to add support for image credit text with html markup.
+
+## 1.11.0 - 07-08-2022
+* larva-tokens - Adjust font size, font weight and line height in variety tokens.
+
 ## 1.10.0 - 07-05-2022
 * larva-patterns - Add `section-heading` module.
 * larva-js - Remove `Header` js.

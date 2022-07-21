@@ -25,6 +25,12 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-margin-l-2\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		margin-left: $spacer-2;
+	}
+}
+
 @mixin _u-margin( $token-name, $token-selector, $value, $breakpoint-suffix: '' ) {
 	.lrv-u-margin-r-#{$token-selector}#{$breakpoint-suffix} {
 		margin-right: $value;
