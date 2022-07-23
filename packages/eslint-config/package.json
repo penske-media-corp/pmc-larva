@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/eslint-config",
-  "version": "1.1.1",
+  "version": "1.14.0",
   "description": "Eslint base config and customizations.",
   "keywords": [
     "eslint",
@@ -25,5 +25,6 @@
   },
   "dependencies": {
     "@wordpress/eslint-plugin": "^8.0.2"
-  }
+  },
+  "gitHead": "c154a75edb02ee0aee489f7587b73b425020238f"
 }
