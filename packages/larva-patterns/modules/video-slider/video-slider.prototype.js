@@ -8,9 +8,6 @@ const o_video_card = clonedeep(
 
 c_title.c_title_classes = 'lrv-a-unstyle-inner-links lrv-a-font-primary-xxl';
 
-o_video_card.o_video_card_link_showcase_trigger_data_attr = 'WhWc3b3KhnY';
-o_video_card.o_video_card_link_showcase_type_data_attr = 'youtube';
-
 o_video_card.c_dek = false;
 
 module.exports = {
