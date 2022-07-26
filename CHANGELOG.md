@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
 * larva-patterns - Add `profile-block` module.
 * larva-css - Fix typo for `lrv-u-align-items-flex-end` utility
 * larva-js - Add support for pagedots to Flickity js.
