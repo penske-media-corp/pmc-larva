@@ -1280,20 +1280,20 @@
 		"PRIMARY_XXL_FONT_SIZE_DESKTOP_XL": {
 			"category": "font-size",
 			"type": "number",
-			"value": "42px",
+			"value": "36px",
 			"name": "PRIMARY_XXL_FONT_SIZE_DESKTOP_XL"
 		},
 		"PRIMARY_XXL_FONT_SIZE_DESKTOP": {
 			"category": "font-size",
 			"type": "number",
-			"value": "42px",
+			"value": "32px",
 			"originalValue": "58px",
 			"name": "PRIMARY_XXL_FONT_SIZE_DESKTOP"
 		},
 		"PRIMARY_XXL_FONT_SIZE_MOBILE": {
 			"category": "font-size",
 			"type": "number",
-			"value": "30px",
+			"value": "28px",
 			"originalValue": "37px",
 			"name": "PRIMARY_XXL_FONT_SIZE_MOBILE"
 		},

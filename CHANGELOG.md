@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
+* larva-tokens - Update font tokens for rollingstone-2022.
+* larva-patterns - Add `profile-block` module.
+* larva-css - Fix typo for `lrv-u-align-items-flex-end` utility
+* larva-js - Add support for pagedots to Flickity js.
 
 ## 1.14.0 - 07-20-2022
 * larva-patterns - Add `profile-block` module.
