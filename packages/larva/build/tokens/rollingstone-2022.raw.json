@@ -668,8 +668,8 @@
     "PRIMARY_XXL_FONT_SIZE_MOBILE": {
       "category": "font-size",
       "type": "number",
-      "value": "30px",
-      "originalValue": "30px",
+      "value": "28px",
+      "originalValue": "28px",
       "name": "PRIMARY_XXL_FONT_SIZE_MOBILE"
     },
     "PRIMARY_L_FONT_SIZE_MOBILE": {
@@ -1231,9 +1231,9 @@
     "PRIMARY_XXL_FONT_SIZE_DESKTOP_XL": {
       "category": "font-size",
       "type": "number",
-      "value": "42px",
+      "value": "36px",
       "name": "PRIMARY_XXL_FONT_SIZE_DESKTOP_XL",
-      "originalValue": "42px"
+      "originalValue": "36px"
     },
     "PRIMARY_L_FONT_SIZE_DESKTOP_XL": {
       "category": "font-size",
@@ -1400,8 +1400,8 @@
     "PRIMARY_XXL_FONT_SIZE_DESKTOP": {
       "category": "font-size",
       "type": "number",
-      "value": "42px",
-      "originalValue": "42px",
+      "value": "32px",
+      "originalValue": "32px",
       "name": "PRIMARY_XXL_FONT_SIZE_DESKTOP"
     },
     "SECONDARY_XS_FONT_SIZE_DESKTOP_XL": {
