@@ -11,7 +11,6 @@ c_title.c_title_classes = 'lrv-a-unstyle-inner-links lrv-a-font-primary-xxl';
 o_video_card.o_video_card_link_showcase_trigger_data_attr = 'WhWc3b3KhnY';
 o_video_card.o_video_card_link_showcase_type_data_attr = 'youtube';
 
-o_video_card.c_play_icon.c_play_badge_classes = 'lrv-a-glue lrv-a-glue--l-50p lrv-a-glue--t-50p u-transform-translate-a-n50p u-height-60@desktop u-height-80@desktop-xl lrv-u-width-35@mobile-max u-width-60@desktop u-width-auto is-to-be-hidden u-overflow-visible ';
 o_video_card.c_dek = false;
 
 module.exports = {
