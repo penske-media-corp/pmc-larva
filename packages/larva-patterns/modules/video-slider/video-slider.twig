@@ -2,14 +2,7 @@
 	{% for item in o_video_card_items %}
 		<div class="js-Flickity-cell" data-video-showcase>
 			<div class="video-sider__slide-inner {{video_slider_slide_inner_classes}}">
-				<div class="video-slider__slide-primary {{video_slider_slide_primary_classes}}">
-					{% include "@larva/objects/o-video-card/o-video-card.twig" with item %}
-				</div>
-
-				<div class="video-slider__slide-secondary {{video_slider_slide_secondary_classes}}">
-					{% include "@larva/components/c-title/c-title.twig" with c_title %}
-					{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
-				</div>
+				{% include "@larva/objects/o-video-card/o-video-card.twig" with item %}
 			</div>
 		</div>
 	{% endfor %}
