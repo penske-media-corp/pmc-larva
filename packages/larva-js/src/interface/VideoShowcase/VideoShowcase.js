@@ -282,6 +282,9 @@ export default class VideoShowcase {
 	// Remove any trigger-related data attributes and hide any elements that are not relevant for the player.
 	onFirstTimePlay() {
 		if ( false === this.state.isPlayerSetup ) {
+
+			document.dispatchEvent( new CustomEvent('firstVideoPlay') );
+
 			this.elementsToHide.forEach( e => e.setAttribute( 'hidden', '' ) );
 			this.attributesToRemoveFromPlayer.forEach( attr => this.player.parentNode.removeAttribute( attr ) );
 			this.state.isPlayerSetup = true;
