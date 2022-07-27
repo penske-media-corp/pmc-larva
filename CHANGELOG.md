@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
+* larva-patterns - Add `fill` and `outline` variant for `button` module.
 
 ## 1.14.0 - 07-20-2022
 * larva-patterns - Add `profile-block` module.
