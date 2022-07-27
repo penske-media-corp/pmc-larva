@@ -7,10 +7,11 @@ export default function initFlickity() {
 		let isContained = el.classList.contains( 'js-Flickity--isContained' );
 		let isFreeScroll = el.classList.contains( 'js-Flickity--isFreeScroll' );
 		let isWrapAround = el.classList.contains( 'js-Flickity--isWrapAround' );
+		let hasPageDots = el.classList.contains('js-Flickity--pageDots');
 
 		let slider = new Flickity( el, {
 			cellSelector: '.js-Flickity-cell',
-			pageDots: false,
+			pageDots: hasPageDots,
 			imagesLoaded: true,
 			groupCells: true,
 			contain: isContained,

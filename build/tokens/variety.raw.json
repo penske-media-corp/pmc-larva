@@ -2392,8 +2392,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XS_FONT_WEIGHT_MOBILE"
     },
     "PRIMARY_XXXS_FONT_WEIGHT_MOBILE": {
@@ -2401,8 +2401,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XXXS_FONT_WEIGHT_MOBILE"
     },
     "ACCENT_M_FONT_WEIGHT_MOBILE": {
@@ -2458,8 +2458,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XXS_FONT_WEIGHT_MOBILE"
     },
     "PRIMARY_S_FONT_WEIGHT_MOBILE": {
@@ -2867,8 +2867,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XXXS_FONT_WEIGHT_DESKTOP_XL"
     },
     "PRIMARY_XXL_FONT_WEIGHT_DESKTOP": {
@@ -2913,8 +2913,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XS_FONT_WEIGHT_DESKTOP_XL"
     },
     "BODY_M_FONT_WEIGHT_DESKTOP": {
@@ -3018,8 +3018,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XXS_FONT_WEIGHT_DESKTOP_XL"
     },
     "PRIMARY_S_FONT_WEIGHT_DESKTOP_XL": {
@@ -3027,8 +3027,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_S_FONT_WEIGHT_DESKTOP_XL"
     },
     "BODY_XXS_FONT_WEIGHT_DESKTOP_XL": {
@@ -3112,8 +3112,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XXS_FONT_WEIGHT_DESKTOP"
     },
     "BODY_XL_FONT_WEIGHT_DESKTOP_XL": {
@@ -3210,8 +3210,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XXXS_FONT_WEIGHT_DESKTOP"
     },
     "BODY_XXXS_FONT_WEIGHT_DESKTOP": {
@@ -3226,8 +3226,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_XS_FONT_WEIGHT_DESKTOP"
     },
     "BODY_XS_FONT_WEIGHT_DESKTOP": {
@@ -3249,8 +3249,8 @@
       "status": "alpha",
       "category": "font-weight",
       "type": "number",
-      "value": "700",
-      "originalValue": "700",
+      "value": "normal",
+      "originalValue": "normal",
       "name": "PRIMARY_L_FONT_WEIGHT_DESKTOP_XL"
     },
     "BODY_XXL_FONT_WEIGHT_DESKTOP_XL": {
