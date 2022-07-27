@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `table` module.
 * larva-css - Add `table-layout`, `word-break`, `lrv-u-border-collapse`, `lrv-u-overflow-x-auto`, `lrv-u-overflow-y-auto` utility classes.
 
+## 1.15.0 - 07-26-2022
+* larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
+* larva-tokens - Update font tokens for rollingstone-2022.
+* larva-patterns - Add `profile-block` module.
+* larva-css - Fix typo for `lrv-u-align-items-flex-end` utility
+* larva-js - Add support for pagedots to Flickity js.
+
 ## 1.14.0 - 07-20-2022
 * larva-patterns - Add `profile-block` module.
 * larva-patterns - Updating `secondary-stories` kicker classes.
