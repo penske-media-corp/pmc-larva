@@ -42,4 +42,5 @@ module.exports = {
     o_video_card_link_classes: 'lrv-u-width-100p',
     o_video_card_permalink_classes: 'u-margin-r-050@mobile-max',
     c_play_icon,
+    c_title: false,
 };

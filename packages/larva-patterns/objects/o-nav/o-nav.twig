@@ -10,6 +10,9 @@
 	{% if o_nav_aria_labelledby_attr %}
 		aria-labelledby="{{ o_nav_aria_labelledby_attr }}"
 	{% endif %}
+	{% if o_nav_tab_index_attr %}
+		tabindex="{{ o_nav_tab_index_attr_val }}"
+	{% endif %}
 >
 
 	{% if o_nav_title_text %}
