@@ -161,13 +161,13 @@
   --accent-m-font-size-mobile: 26px;
   --secondary-xxs-font-size-desktop: 18px;
   --secondary-s-font-size-desktop: 22px;
-  --basic-xs-font-size-desktop-xl: 13px;
+  --basic-xs-font-size-desktop-xl: 11px;
   --accent-l-font-size-mobile: 40px;
   --primary-xxs-font-size-mobile: 18px;
   --primary-s-font-size-mobile: 20px;
   --body-xxs-font-size-mobile: 12px;
   --body-s-font-size-mobile: 16px;
-  --basic-xs-font-size-desktop: 13px;
+  --basic-xs-font-size-desktop: 11px;
   --secondary-s-font-size-desktop-xl: 22px;
   --secondary-xxs-font-size-desktop-xl: 18px;
   --body-l-font-size-desktop: 16px;
@@ -278,12 +278,12 @@
   --body-xxl-letter-spacing-desktop: normal;
   --secondary-xl-letter-spacing-mobile: 2.6px;
   --body-l-letter-spacing-desktop: normal;
-  --basic-xs-letter-spacing-desktop-xl: 0.26px;
+  --basic-xs-letter-spacing-desktop-xl: 0.20px;
   --secondary-xxl-letter-spacing-mobile: normal;
   --secondary-l-letter-spacing-mobile: -0.1px;
   --secondary-m-letter-spacing-mobile: 2.4px;
   --basic-s-letter-spacing-mobile: normal;
-  --basic-xs-letter-spacing-desktop: 0.26px;
+  --basic-xs-letter-spacing-desktop: 0.20px;
   --basic-xxs-letter-spacing-mobile: 0.5px;
   --body-l-letter-spacing-desktop-xl: normal;
   --body-xxl-letter-spacing-desktop-xl: normal;
@@ -501,7 +501,7 @@
   --primary-xxxs-line-height-mobile: 21px;
   --accent-m-line-height-mobile: 26px;
   --accent-l-line-height-mobile: 36px;
-  --basic-xs-line-height-desktop-xl: 15px;
+  --basic-xs-line-height-desktop-xl: 13px;
   --secondary-xxs-line-height-desktop: 22px;
   --secondary-s-line-height-desktop: 27px;
   --primary-xxs-line-height-mobile: 22px;
@@ -510,7 +510,7 @@
   --body-s-line-height-mobile: 22px;
   --secondary-s-line-height-desktop-xl: 27px;
   --secondary-xxs-line-height-desktop-xl: 22px;
-  --basic-xs-line-height-desktop: 15px;
+  --basic-xs-line-height-desktop: 13px;
   --body-xl-line-height-mobile: 24px;
   --body-xxxl-line-height-mobile: initial;
   --primary-xl-line-height-mobile: 32px;
