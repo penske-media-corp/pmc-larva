@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-tokens - Update Basic XS font tokens for rollingstone-2022.
 * larva-patterns - Add `c-figcaption` component support to `o-card` object.
 * larva-patterns - Add `fill` and `outline` variant for `button` module.
+* larva-js - Add support for Twitch in Featured Media.
 
 ## 1.16.0 - 07-28-2022
 * larva-patterns - Add `double-line` and `thick-double-line` variants for `separator` module.
