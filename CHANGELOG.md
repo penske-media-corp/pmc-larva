@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-tokens - Update Basic XS font tokens for rollingstone-2022.
+* larva-patterns - Add `fill` and `outline` variant for `button` module.
 
 ## 1.16.0 - 07-28-2022
 * larva-patterns - Add `double-line` and `thick-double-line` variants for `separator` module.
