@@ -5,7 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-tokens - Update Basic XS font tokens for rollingstone-2022.
 * larva-patterns - Add `gallery` module.
+
+## 1.16.0 - 07-28-2022
+* larva-patterns - Add `double-line` and `thick-double-line` variants for `separator` module.
+* larva-css - Add `lrv-u-border-t-20` and `height` utility classes.
 
 ## 1.15.0 - 07-26-2022
 * larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
