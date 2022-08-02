@@ -16,6 +16,10 @@
 			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 		{% endif %}
 
+		{% if c_figcaption %}
+			{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
+		{% endif %}
+
 		{% if o_indicator %}
 			{% include "@larva/objects/o-indicator/o-indicator.twig" with o_indicator %}
 		{% endif %}
