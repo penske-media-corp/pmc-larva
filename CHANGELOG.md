@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-tokens - Update font tokens for rollingstone-2022.
 * larva-css - Add `table-layout`, `word-break`, `lrv-u-border-collapse`, `lrv-u-overflow-x-auto`, `lrv-u-overflow-y-auto` utility classes.
 * larva-patterns - Add `cover` module.
 * larva-patterns - Add `table` module.
