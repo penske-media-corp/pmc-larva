@@ -41,7 +41,3 @@ $heights_map: (
 	height-75p,
 	height-100p,
 ), $heights_map, $NAMESPACE: 'lrv-' );
-
-.lrv-u-max-height-50 {
-	max-height: pmc-rem(50);
-}

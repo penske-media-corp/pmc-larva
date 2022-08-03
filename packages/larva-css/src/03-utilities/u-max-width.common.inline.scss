@@ -27,3 +27,9 @@
 .lrv-u-max-width-1000 {
 	max-width: pmc-rem(1000);
 }
+
+.lrv-u-max-width-66p\@desktop {
+	@include pmc-breakpoint(desktop) {
+		max-width: 66%;
+	}
+}

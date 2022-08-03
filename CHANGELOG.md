@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-tokens - Update Basic XS font tokens for rollingstone-2022.
+* larva-css - Add `table-layout`, `word-break`, `lrv-u-border-collapse`, `lrv-u-overflow-x-auto`, `lrv-u-overflow-y-auto` utility classes.
+* larva-patterns - Add `cover` module.
+* larva-patterns - Add `table` module.
+* larva-patterns - Add `gallery` module.
+* larva-tokens - Minify tokens CSS files.
 
 ## 1.17.0
 * larva-tokens - Update Basic XS font tokens for rollingstone-2022.
