@@ -15,9 +15,9 @@
 		{{ c_lazy_image_markup }}
 	{% else %}
 		{% if c_lazy_image_in_initial_viewport %}
-			<img class="c-lazy-image__img {{ c_lazy_image_img_classes }}" src="{{ c_lazy_image_src_url }}" alt="{{ c_lazy_image_alt_attr }}" srcset="{{ c_lazy_image_srcset_attr }}" sizes="{{ c_lazy_image_sizes_attr }}" height="{{ c_lazy_image_height_attr }}" width="{{ c_lazy_image_width_attr }}">
+			<img class="c-lazy-image__img {{ c_lazy_image_img_classes }}" src="{{ c_lazy_image_src_url }}" alt="{{ c_lazy_image_alt_attr }}" srcset="{{ c_lazy_image_srcset_attr }}" sizes="{{ c_lazy_image_sizes_attr }}" height="{{ c_lazy_image_height_attr }}" width="{{ c_lazy_image_width_attr }}" decoding="{{ c_lazy_image_decoding_attr }}">
 		{% else %}
-			<img class="c-lazy-image__img {{ c_lazy_image_img_classes }}" src="{{ c_lazy_image_placeholder_url }}" data-lazy-src="{{ c_lazy_image_src_url }}" alt="{{ c_lazy_image_alt_attr }}" data-lazy-srcset="{{ c_lazy_image_srcset_attr }}" data-lazy-sizes="{{ c_lazy_image_sizes_attr }}" height="{{ c_lazy_image_height_attr }}" width="{{ c_lazy_image_width_attr }}">
+			<img class="c-lazy-image__img {{ c_lazy_image_img_classes }}" src="{{ c_lazy_image_placeholder_url }}" data-lazy-src="{{ c_lazy_image_src_url }}" alt="{{ c_lazy_image_alt_attr }}" data-lazy-srcset="{{ c_lazy_image_srcset_attr }}" data-lazy-sizes="{{ c_lazy_image_sizes_attr }}" height="{{ c_lazy_image_height_attr }}" width="{{ c_lazy_image_width_attr }}" decoding="{{ c_lazy_image_decoding_attr }}">
 		{% endif %}
 	{% endif %}
 
