@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.16.0 - 08-04-2022
+* larva-tokens - Billboard Español `bbesp.json`
+
 ## 1.15.0 - 07-26-2022
 * larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
 * larva-tokens - Update font tokens for rollingstone-2022.
