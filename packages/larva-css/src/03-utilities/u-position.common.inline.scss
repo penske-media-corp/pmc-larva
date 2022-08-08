@@ -4,8 +4,18 @@
 	position: relative;
 }
 
+.lrv-u-position-absolute {
+	position: absolute;
+}
+
 @include pmc-breakpoint( desktop ) {
 	.lrv-u-position-absolute\@desktop {
 		position: absolute;
 	}	
+}
+
+@include pmc-breakpoint(tablet) {
+	.lrv-u-position-absolute\@tablet {
+		position: absolute;
+	}
 }
