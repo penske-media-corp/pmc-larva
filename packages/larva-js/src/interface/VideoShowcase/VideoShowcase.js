@@ -283,7 +283,7 @@ export default class VideoShowcase {
 	onFirstTimePlay() {
 		if ( false === this.state.isPlayerSetup ) {
 
-			document.dispatchEvent( new CustomEvent('firstVideoPlay') );
+			this.el.dispatchEvent( new CustomEvent('firstVideoPlay') );
 
 			this.elementsToHide.forEach( e => e.setAttribute( 'hidden', '' ) );
 			this.attributesToRemoveFromPlayer.forEach( attr => this.player.parentNode.removeAttribute( attr ) );
