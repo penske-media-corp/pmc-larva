@@ -2,10 +2,12 @@
 
 $heights_map: (
 	'height-auto': auto,
+	'height-8': pmc-rem(8),
 	'height-16': pmc-rem(16),
 	'height-20': pmc-rem(20),
 	'height-24': pmc-rem(24),
 	'height-30': pmc-rem(30),
+	'height-37': pmc-rem(37),
 	'height-40': pmc-rem(40),
 	'height-50': pmc-rem(50),
 	'height-100': pmc-rem(100),
@@ -21,10 +23,12 @@ $heights_map: (
 
 @include basic-utility-generator( 'height', (
 	height-auto,
+	height-8,
 	height-16,
 	height-20,
 	height-24,
 	height-30,
+	height-37,
 	height-40,
 	height-50,
 	height-100,
@@ -37,7 +41,3 @@ $heights_map: (
 	height-75p,
 	height-100p,
 ), $heights_map, $NAMESPACE: 'lrv-' );
-
-.lrv-u-max-height-50 {
-	max-height: pmc-rem(50);
-}
