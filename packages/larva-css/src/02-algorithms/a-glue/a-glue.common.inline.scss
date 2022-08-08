@@ -31,6 +31,15 @@
 	}
 }
 
+@include pmc-breakpoint( desktop ) {
+	.lrv-a-glue\@desktop {
+		top: 0;
+		left: 0;
+
+		@include _a-glue-base;
+	}
+}
+
 .lrv-a-glue\@tablet {
 	@include pmc-breakpoint( tablet ) {
 		// TODO: incorporate these fallback values into mixin
