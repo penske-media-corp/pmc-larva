@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
-* larva-patters - Add `decoding` attribute to `c-lazy-image`.
+* larva-patterns - Add `decoding` attribute to `c-lazy-image`.
 
 ## 1.20.0 08-08-2022
 * larva-js - Add `firstVideoPlay` custom event for video showcase js.
