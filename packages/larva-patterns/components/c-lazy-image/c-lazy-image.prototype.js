@@ -13,5 +13,6 @@ module.exports = {
 	c_lazy_image_img_classes: 'lrv-u-background-color-grey-lightest lrv-u-width-100p lrv-u-display-block lrv-u-height-auto',
 	c_lazy_image_height_attr: '',
 	c_lazy_image_width_attr: '',
-	c_lazy_image_in_initial_viewport: false
+	c_lazy_image_in_initial_viewport: false,
+	c_lazy_image_decoding_attr: 'async'
 }

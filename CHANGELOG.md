@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-patterns - Add `decoding` attribute to `c-lazy-image`.
+
+## 1.20.0 08-08-2022
+* larva-js - Add `firstVideoPlay` custom event for video showcase js.
+* larva-css - Add lrv-a-glue@desktop Utility.
+
+## 1.19.0 08-08-2022
+* larva-tokens - Billboard Español `bbesp.json`
 
 ## 1.18.0 08-04-2022
 * larva-tokens - Update font tokens for rollingstone-2022.
@@ -27,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.15.0 - 07-26-2022
 * larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
 * larva-tokens - Update font tokens for rollingstone-2022.
-* larva-patterns - Add `profile-block` module.
+* larva-patterns - Add `video-slider` module.
 * larva-css - Fix typo for `lrv-u-align-items-flex-end` utility
 * larva-js - Add support for pagedots to Flickity js.
 
