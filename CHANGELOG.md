@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `table` module.
 * larva-patterns - Add `gallery` module.
 * larva-tokens - Minify tokens CSS files.
+* larva-patters - Add image `decoding` attribute.
 
 ## 1.17.0 08-04-2022
 * larva-tokens - Update Basic XS font tokens for rollingstone-2022.
