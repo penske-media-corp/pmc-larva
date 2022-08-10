@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-patterns - Add `featured` variant for `pullquote` module.
+
 ## 1.21.0 08-09-2022
 * larva-patterns - Add `decoding` attribute to `c-lazy-image`.
 
