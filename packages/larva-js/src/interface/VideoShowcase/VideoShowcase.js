@@ -214,6 +214,10 @@ export default class VideoShowcase {
 		if ( 'jwplayer' === type ) {
 			return `https://content.jwplatform.com/feeds/${ id }.json`;
 		}
+
+		if ( 'twitch' === type ) {
+			return `https://player.twitch.tv/?video=${id}`;
+		}
 	}
 
 	/**
@@ -227,6 +231,16 @@ export default class VideoShowcase {
 			'src',
 			`${ youtubeUrl }?rel=0&autoplay=1&showinfo=0&controls=2&rel=0&modestbranding=0`
 		);
+	}
+
+	/**
+	 * Remove hidden attribute from the iframe and set the src.
+	 *
+	 * @param {string} twitchUrl - A Twitch embed URL from returnUrl.
+	 */
+	 playTwitch( twitchUrl ) {
+		this.playerUI.iframe.removeAttribute( 'hidden' );
+		this.playerUI.iframe.setAttribute( 'src', `${twitchUrl}&autoplay=true&parent=${window.location.hostname}` );
 	}
 
 	/**
@@ -285,7 +299,7 @@ export default class VideoShowcase {
 	 * A wrapper function to conditonally play videos according to their type.
 	 *
 	 * @param {string} id - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
-	 * @param {string} type - "youtube" or "jwplayer"
+	 * @param {string} type - "youtube" or "jwplayer" or "twitch"
 	 */
 	playVideo( id, type ) {
 		const url = this.returnUrl( id, type );
@@ -297,17 +311,19 @@ export default class VideoShowcase {
 		if ( 'jwplayer' === type ) {
 			this.playJW( url );
 		}
+
+		if ( 'twitch' === type ) {
+			this.playTwitch( url );
+		}
 	}
 
 	// Remove any trigger-related data attributes and hide any elements that are not relevant for the player.
 	onFirstTimePlay() {
 		if ( false === this.state.isPlayerSetup ) {
-			this.elementsToHide.forEach( ( e ) =>
-				e.setAttribute( 'hidden', '' )
-			);
-			this.attributesToRemoveFromPlayer.forEach( ( attr ) =>
-				this.player.parentNode.removeAttribute( attr )
-			);
+			this.el.dispatchEvent( new CustomEvent('firstVideoPlay') );
+
+			this.elementsToHide.forEach( e => e.setAttribute( 'hidden', '' ) );
+			this.attributesToRemoveFromPlayer.forEach( attr => this.player.parentNode.removeAttribute( attr ) );
 			this.state.isPlayerSetup = true;
 		}
 	}

@@ -18,4 +18,5 @@ module.exports = {
 	c_lazy_image_height_attr: '',
 	c_lazy_image_width_attr: '',
 	c_lazy_image_in_initial_viewport: false,
+	c_lazy_image_decoding_attr: 'async',
 };
