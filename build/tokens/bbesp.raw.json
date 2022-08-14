@@ -295,10 +295,10 @@
       "name": "BORDER_COLOR_BRAND_PRIMARY_DARK"
     },
     "BORDER_COLOR_BRAND_PRIMARY": {
-      "value": "rgb(0, 157, 219)",
+      "value": "rgb(0, 158, 218)",
+      "originalValue": "#009EDA",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#009DDB",
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
@@ -387,10 +387,10 @@
       "name": "BACKGROUND_COLOR_WHITE"
     },
     "BACKGROUND_COLOR_BRAND_PRIMARY": {
-      "value": "rgb(0, 157, 219)",
+      "value": "rgb(0, 158, 218)",
+      "originalValue": "#009EDA",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#009DDB",
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_DARKEST": {
@@ -436,10 +436,10 @@
       "name": "COLOR_WHITE"
     },
     "COLOR_BRAND_PRIMARY": {
-      "value": "rgb(0, 157, 219)",
+      "value": "rgb(0, 158, 218)",
+      "originalValue": "#009EDA",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#009DDB",
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_GREY_LIGHT": {
