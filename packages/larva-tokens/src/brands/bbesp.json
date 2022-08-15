@@ -4,17 +4,20 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "#009DDB",
+			"value": "#009EDA",
+			"originalValue": "#009DDB",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "#009DDB",
+			"value": "#009EDA",
+			"originalValue": "#009DDB",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "#009DDB",
+			"value": "#009EDA",
+			"originalValue": "#009DDB",
 			"type": "color",
 			"category": "text-color"
 		},
