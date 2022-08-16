@@ -36,33 +36,33 @@
 			"type": "color",
 			"category": "text-color"
 		},
-		"BACKGROUND_COLOR_BRAND_ACCENT": {
+		"BACKGROUND_COLOR_BRAND_ACCENT_ORANGE": {
 			"value": "#EF841A",
 			"type": "color",
 			"category": "background-color"
 		},
-		"BORDER_COLOR_BRAND_ACCENT": {
+		"BORDER_COLOR_BRAND_ACCENT_ORANGE": {
 			"value": "#EF841A",
 			"type": "color",
 			"category": "hr-color"
 		},
-		"COLOR_BRAND_ACCENT": {
+		"COLOR_BRAND_ACCENT_ORANGE": {
 			"value": "#EF841A",
 			"type": "color",
 			"category": "text-color"
 		},
-		"BACKGROUND_COLOR_BRAND_ACCENT_RED": {
-			"value": "#EF841A",
+		"BACKGROUND_COLOR_BRAND_ACCENT_LIGHT_ORANGE": {
+			"value": "#F8C99A",
 			"type": "color",
 			"category": "background-color"
 		},
-		"BORDER_COLOR_BRAND_ACCENT_RED": {
-			"value": "#EF841A",
+		"BORDER_COLOR_BRAND_ACCENT_LIGHT_ORANGE": {
+			"value": "#F8C99A",
 			"type": "color",
 			"category": "hr-color"
 		},
-		"COLOR_BRAND_ACCENT_RED": {
-			"value": "#EF841A",
+		"COLOR_BRAND_ACCENT_LIGHT_ORANGE": {
+			"value": "#F8C99A",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -78,21 +78,6 @@
 		},
 		"COLOR_BRAND_ACCENT_GREEN": {
 			"value": "#00DDA1",
-			"type": "color",
-			"category": "text-color"
-		},
-		"BACKGROUND_COLOR_BRAND_ACCENT_BLUE": {
-			"value": "#F8C99A",
-			"type": "color",
-			"category": "background-color"
-		},
-		"BORDER_COLOR_BRAND_ACCENT_BLUE": {
-			"value": "#F8C99A",
-			"type": "color",
-			"category": "hr-color"
-		},
-		"COLOR_BRAND_ACCENT_BLUE": {
-			"value": "#F8C99A",
 			"type": "color",
 			"category": "text-color"
 		},
