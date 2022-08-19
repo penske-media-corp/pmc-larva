@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-css - Update CSS generator to use desktop font size on side skins.
+* larva-patterns - Add class class for sub-header inner
 
 ## 1.23.0 08-17-2022
 * larva-patterns - Add `extended` variant for `pullquote` module.
