@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "@penskemediacorp/larva-css": "^1.24.0",
-    "@penskemediacorp/larva-js": "^1.20.0",
-    "@penskemediacorp/larva-svg": "^1.14.0",
+    "@penskemediacorp/larva-js": "^1.24.0",
+    "@penskemediacorp/larva-svg": "^1.24.0",
     "lodash.clonedeep": "^4.5.0"
   },
   "gitHead": "c154a75edb02ee0aee489f7587b73b425020238f"
