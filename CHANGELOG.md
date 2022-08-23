@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-css - Add editor-styles-wrapper class to override backend link color.
 ## 1.24.1 08-22-2022
 * publish failed, creating temp version
 
