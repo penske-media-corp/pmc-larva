@@ -1,3 +1,4 @@
+.editor-styles-wrapper a{color:var(--wp-admin-theme-color-darker-10)}
 html{--ON: initial;--OFF: /*! whitespace toggle */;--is-desktop: var( --OFF );--is-desktopxl: var( --OFF )}@media(min-width: 62.5rem){html{--is-desktop: var( --ON )}}@media(min-width: 78.75rem){html{--is-desktopxl: var( --ON )}}*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid}img{max-width:100%;height:auto}figure{margin:0}[hidden]{display:none;width:0;height:0}#icon-sprite{display:none}svg{fill:currentColor}cite{font-style:normal}
 ::placeholder{color:rgb(230, 230, 230)}button{padding-left:0;padding-right:0}
 .has-side-skins{max-width:62.5rem;margin-left:auto;margin-right:auto}

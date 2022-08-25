@@ -18,12 +18,15 @@ module.exports = {
 		font-weight: var( --primary-xxl-font-weight-desktop );
 		font-style: var( --primary-xxl-font-style-desktop );
 	}
+
 	@media (min-width: $screen-desktop-xl) {
-		font-size: var( --primary-xxl-font-size-desktop-xl );
-		line-height: var( --primary-xxl-line-height-desktop-xl );
-		letter-spacing: var( --primary-xxl-letter-spacing-desktop-xl );
-		font-weight: var( --primary-xxl-font-weight-desktop-xl );
-		font-style: var( --primary-xxl-font-style-desktop-xl );
+		html:not(.has-side-skins) & {
+			font-size: var( --primary-xxl-font-size-desktop-xl );
+			line-height: var( --primary-xxl-line-height-desktop-xl );
+			letter-spacing: var( --primary-xxl-letter-spacing-desktop-xl );
+			font-weight: var( --primary-xxl-font-weight-desktop-xl );
+			font-style: var( --primary-xxl-font-style-desktop-xl );
+		}
 	}
 }\n`,
 };
