@@ -1,6 +1,6 @@
 # Larva
 
-This is the mono-repo for PMC's design system, Larva. It contains Larva features that should be available across platforms.
+This is the mono-repo for PMC's design system, Larva. It contains Larva features available across platforms.
 
 ## Usage
 
