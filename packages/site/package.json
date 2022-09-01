@@ -19,15 +19,6 @@
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"src/*/*.+(js|jsx|json|css)\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "devDependencies": {
-    "prettier": "^2.1.2"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
