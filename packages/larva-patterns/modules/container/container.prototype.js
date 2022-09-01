@@ -4,4 +4,4 @@ module.exports = {
 	container_background_color_class: '',
 	container_color_class: '',
 	container_text_align_class: '',
-}
+};

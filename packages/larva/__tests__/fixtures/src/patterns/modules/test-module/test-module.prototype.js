@@ -1,3 +1,3 @@
 module.exports = {
-	test_module_classes: 'lrv-u-flex'
-}
+	test_module_classes: 'lrv-u-flex',
+};

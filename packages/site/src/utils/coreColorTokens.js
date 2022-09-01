@@ -13,9 +13,9 @@
  *
  * @return An object of core color tokens who's keys are only the color name.
  */
-export const getCoreColorsFromTokens = (tokens) => {
-	const colorKeys = Object.keys(tokens).filter((key) =>
-		key.includes("COLOR_")
+export const getCoreColorsFromTokens = ( tokens ) => {
+	const colorKeys = Object.keys( tokens ).filter( ( key ) =>
+		key.includes( 'COLOR_' )
 	);
 
 	/**
@@ -25,19 +25,19 @@ export const getCoreColorsFromTokens = (tokens) => {
 	 * @return Object containing keys for the color names and a list of values
 	 *         used for each color.
 	 */
-	const colorTokenValuesStore = colorKeys.reduce((valuesAcc, key) => {
-		const name = key.split("COLOR_")[1];
-		const { value } = tokens[key];
+	const colorTokenValuesStore = colorKeys.reduce( ( valuesAcc, key ) => {
+		const name = key.split( 'COLOR_' )[ 1 ];
+		const { value } = tokens[ key ];
 
-		if (valuesAcc.hasOwnProperty(name)) {
-			valuesAcc[name].push(value);
+		if ( valuesAcc.hasOwnProperty( name ) ) {
+			valuesAcc[ name ].push( value );
 			return valuesAcc;
 		}
 
-		valuesAcc[name] = [value];
+		valuesAcc[ name ] = [ value ];
 
 		return valuesAcc;
-	}, {});
+	}, {} );
 
 	/**
 	 * Build an object containing tokens for each of the colors that
@@ -45,21 +45,21 @@ export const getCoreColorsFromTokens = (tokens) => {
 	 *
 	 * @return Object containing the "core color" tokens
 	 */
-	const coreColorTokens = Object.keys(colorTokenValuesStore).reduce(
-		(colorsAcc, colorKey) => {
-			const colorValuesList = colorTokenValuesStore[colorKey];
+	const coreColorTokens = Object.keys( colorTokenValuesStore ).reduce(
+		( colorsAcc, colorKey ) => {
+			const colorValuesList = colorTokenValuesStore[ colorKey ];
 			const colorHasConsistentValues =
 				colorValuesList.filter(
-					(currValue, index) =>
-						currValue !== colorValuesList[index + 1]
+					( currValue, index ) =>
+						currValue !== colorValuesList[ index + 1 ]
 				).length === 1;
 
-			if (colorHasConsistentValues) {
-				colorsAcc[colorKey] = {
+			if ( colorHasConsistentValues ) {
+				colorsAcc[ colorKey ] = {
 					name: colorKey,
-					type: "color",
-					value: colorValuesList[0],
-					category: "core-color",
+					type: 'color',
+					value: colorValuesList[ 0 ],
+					category: 'core-color',
 				};
 			}
 
@@ -80,26 +80,29 @@ export const getCoreColorsFromTokens = (tokens) => {
  *
  * @return The full tokens object.
  */
-export const getUpdatedTokensWithCoreColors = (tokensToUpdate, coreColors) => {
-	const tokenKeys = Object.keys(tokensToUpdate);
+export const getUpdatedTokensWithCoreColors = (
+	tokensToUpdate,
+	coreColors
+) => {
+	const tokenKeys = Object.keys( tokensToUpdate );
 
-	const colorTokenReducer = (newTokens, key) => {
-		const fullToken = { ...tokensToUpdate[key] };
+	const colorTokenReducer = ( newTokens, key ) => {
+		const fullToken = { ...tokensToUpdate[ key ] };
 
-		if (key.includes("COLOR_")) {
-			const coreColorName = key.split("COLOR_")[1];
+		if ( key.includes( 'COLOR_' ) ) {
+			const coreColorName = key.split( 'COLOR_' )[ 1 ];
 
-			if (coreColors.hasOwnProperty(coreColorName)) {
-				fullToken.value = coreColors[coreColorName].value;
+			if ( coreColors.hasOwnProperty( coreColorName ) ) {
+				fullToken.value = coreColors[ coreColorName ].value;
 			}
 		}
 
-		newTokens[key] = {
+		newTokens[ key ] = {
 			...fullToken,
 		};
 
 		return newTokens;
 	};
 
-	return tokenKeys.reduce(colorTokenReducer, {});
+	return tokenKeys.reduce( colorTokenReducer, {} );
 };

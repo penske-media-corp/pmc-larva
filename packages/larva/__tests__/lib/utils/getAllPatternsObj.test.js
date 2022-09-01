@@ -3,43 +3,28 @@ const getAppConfiguration = require( '../../../lib/utils/getAppConfiguration' );
 const getAllPatternsObj = require( '../../../lib/utils/getAllPatternsObj' );
 
 const expectedPatterns = {
-	'__tests__' : {},
-	'components': {
-		'c-nav-link': [
-			'featured.aia',
-			'featured',
-			'prototype'
-		],
-		'c-tagline': [
-			'prototype'
-		]
+	__tests__: {},
+	components: {
+		'c-nav-link': [ 'featured.aia', 'featured', 'prototype' ],
+		'c-tagline': [ 'prototype' ],
 	},
-	'modules': {
-		'test-module': [
-			'featured',
-			'prototype'
-		]
+	modules: {
+		'test-module': [ 'featured', 'prototype' ],
 	},
-	'objects': {
+	objects: {
 		'o-crap': [],
-		'o-nav': []
+		'o-nav': [],
 	},
 	'one-offs': {
-		'newswire': [
-			'prototype'
-		]
-	}
-}
+		newswire: [ 'prototype' ],
+	},
+};
 const config = getAppConfiguration( 'patterns' );
 
 describe( 'getAllPatternsObj', () => {
-
 	it( 'returns an object containing all patterns and variants', () => {
-
-		expect(
-			getAllPatternsObj( config.projectPatternsDir )
-		).toEqual(
+		expect( getAllPatternsObj( config.projectPatternsDir ) ).toEqual(
 			expectedPatterns
 		);
-	});
-});
+	} );
+} );
