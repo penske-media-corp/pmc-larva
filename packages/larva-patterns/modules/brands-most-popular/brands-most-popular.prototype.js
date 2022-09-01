@@ -17,13 +17,11 @@ c_heading.c_heading_text = 'Most Popular';
 c_svg.c_svg_classes = 'lrv-u-height-16 lrv-u-color-black';
 c_svg.c_svg_name = 'brand-logo';
 
-c_title.c_title_text =
-	'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi expedita pariatur.';
+c_title.c_title_text = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi expedita pariatur.';
 c_title.c_title_classes += ' lrv-u-margin-b-075';
 c_title.c_title_url = false;
 
-o_card.o_card_classes =
-	'lrv-u-flex lrv-u-height-100p lrv-u-color-brand-primary:hover';
+o_card.o_card_classes = 'lrv-u-flex lrv-u-height-100p lrv-u-color-brand-primary:hover';
 o_card.o_card_link_url = '#';
 o_card.o_card_link_classes = 'lrv-a-unstyle-link';
 o_card.o_card_content_classes = 'lrv-u-flex lrv-u-flex-direction-column';
@@ -37,6 +35,6 @@ o_card.c_timestamp = false;
 module.exports = {
 	brands_most_popular_classes: 'lrv-a-wrapper lrv-u-margin-b-150',
 	brands_most_popular_items_wrapper_classes: '',
-	c_heading,
+	c_heading: c_heading,
 	popular_items: [ o_card, o_card, o_card, o_card ],
 };

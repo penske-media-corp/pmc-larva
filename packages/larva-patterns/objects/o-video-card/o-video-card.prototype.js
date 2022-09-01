@@ -15,10 +15,8 @@ const c_span = clonedeep( c_span_prototype );
 const c_dek_prototype = require( '../../components/c-dek/c-dek.prototype.js' );
 const c_dek = clonedeep( c_dek_prototype );
 
-c_play_icon.c_play_badge_classes =
-	'lrv-a-glue lrv-a-glue--b-0 u-transform-translate-a-n50p u-width-55 u-height-55 is-to-be-hidden';
-c_play_icon.c_play_badge_background_fill_classes =
-	'lrv-u-background-color-transparent';
+c_play_icon.c_play_badge_classes = 'lrv-a-glue lrv-a-glue--b-0 u-transform-translate-a-n50p u-width-55 u-height-55 is-to-be-hidden';
+c_play_icon.c_play_badge_background_fill_classes = 'lrv-u-background-color-transparent';
 
 o_indicator.o_indicator_classes = 'lrv-u-margin-b-025 u-margin-t-050@tablet';
 

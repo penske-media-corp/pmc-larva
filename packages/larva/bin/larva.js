@@ -8,17 +8,17 @@ const chalk = require( 'chalk' );
 
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();
-const scriptName = cliArgs[ 0 ];
+const scriptName = cliArgs[0];
 
-const hasScriptFile = fs.existsSync(
-	path.join( __dirname, '../scripts/' + scriptName + '.js' )
-);
+const hasScriptFile = fs.existsSync( path.join( __dirname, '../scripts/' + scriptName + '.js' ) );
 
 if ( hasScriptFile ) {
 	spawn.sync(
 		'node',
-		[ path.join( __dirname, `../scripts/${ scriptName }.js` ), ...cliArgs ],
-		{ stdio: 'inherit' }
+		[
+			path.join( __dirname, `../scripts/${ scriptName }.js` ),
+			... cliArgs
+		], { stdio: 'inherit' }
 	);
 } else {
 	console.error( chalk.red( `No file found for "${ scriptName }".` ) );
