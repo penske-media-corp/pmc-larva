@@ -1,6 +1,6 @@
 module.exports = {
 	extends: [ 'plugin:@wordpress/eslint-plugin/recommended' ],
-	parser: "@babel/eslint-parser",
+	parser: '@babel/eslint-parser',
 	overrides: [
 		{
 			files: [ '**/*.js' ],

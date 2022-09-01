@@ -1,6 +1,6 @@
 const gulp = require( 'gulp' );
 const gulpIf = require( 'gulp-if' );
-const sass = require( 'gulp-sass' )(require('sass'));
+const sass = require( 'gulp-sass' )( require( 'sass' ) );
 const theo = require( 'gulp-theo' );
 const del = require( 'del' );
 
@@ -39,11 +39,14 @@ const basicTokenBuild = ( format, done, dest = 'build' ) => {
 			} )
 		)
 		.pipe(
-            gulpIf(
-                format === 'custom-properties.css',
-                sass( {outputStyle: 'compressed'} ).on( 'error', sass.logError )
-            )
-        )
+			gulpIf(
+				format === 'custom-properties.css',
+				sass( { outputStyle: 'compressed' } ).on(
+					'error',
+					sass.logError
+				)
+			)
+		)
 		.pipe( gulp.dest( dest ) );
 
 	done();

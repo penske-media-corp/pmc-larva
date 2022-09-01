@@ -14,20 +14,19 @@ const chalk = require( 'chalk' );
  */
 
 module.exports = function copySyncHelper( src, dest ) {
-
 	const name = path.basename( src );
 
 	try {
 		fs.copySync( src, dest );
 
-		console.log( `Copied '${name}'.` );
+		console.log( `Copied '${ name }'.` );
 	} catch ( e ) {
-
 		if ( 'ENOENT' === e.code ) {
-			console.log( chalk.grey( `Can't find '${name}' to copy, skipping.` ) );
+			console.log(
+				chalk.grey( `Can't find '${ name }' to copy, skipping.` )
+			);
 		} else {
 			console.error( e );
 		}
-
 	}
-}
+};
