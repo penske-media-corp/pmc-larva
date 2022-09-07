@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-patterns - Add `narrow` variant for `container` module.
+* larva-patterns - Add `c_tagline_terms` support to footer-newsletter module.
+* larva-patterns - Wrap `footer-social` and `footer-newsletter` components in an if block.
+* larva-css - Add border style variable to `a-children-border-*` algorithm
+* larva-css - Revert changes which we had done for CSS generator to use desktop font size on side skins.
 
 ## 1.26.0 09-01-2022
 * larva - Add repo-wide JS linting and apply auto-linting fixes.
