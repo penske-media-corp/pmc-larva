@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add `c_tagline_terms` support to footer-newsletter module.
 * larva-patterns - Wrap `footer-social` and `footer-newsletter` components in an if block.
 * larva-css - Add border style variable to `a-children-border-*` algorithm
+* larva-tokens - Add larva tokens for spy-2022.
 
 ## 1.26.0 09-01-2022
 * larva - Add repo-wide JS linting and apply auto-linting fixes.
