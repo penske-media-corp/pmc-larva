@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.27.0 09-08-2022
 * larva-patterns - Add `narrow` variant for `container` module.
 * larva-patterns - Add `c_tagline_terms` support to footer-newsletter module.
 * larva-patterns - Wrap `footer-social` and `footer-newsletter` components in an if block.
