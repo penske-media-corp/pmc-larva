@@ -48,14 +48,12 @@ const ruleset = ( selector ) => {
 		css += `\t\t${ property }: var( --${ tokenBase }-${ property }-desktop );\n`;
 	} );
 	css += '\t}\n';
-	css += '\n\t@media (min-width: $screen-desktop-xl) {\n';
-	css += '\t\thtml:not(.has-side-skins) & {';
+	css += '\t@media (min-width: $screen-desktop-xl) {';
 	css += '\n';
 
 	properties.forEach( ( property ) => {
-		css += `\t\t\t${ property }: var( --${ tokenBase }-${ property }-desktop-xl );\n`;
+		css += `\t\t${ property }: var( --${ tokenBase }-${ property }-desktop-xl );\n`;
 	} );
-	css += '\t\t}\n';
 	css += '\t}';
 
 	return css;
