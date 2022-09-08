@@ -8,22 +8,20 @@ const exec = require( 'child_process' ).exec;
 const expectedData = '{"o_crap_classes":"hello class here"}';
 
 describe( 'writeJsonToFile', () => {
-	
-	let data = getPatternData( fixture, { type: 'objects', name: 'o-crap' } );
+	const data = getPatternData( fixture, { type: 'objects', name: 'o-crap' } );
 	writeJson( fixture + '/data.json', data );
-	
+
 	it( 'writes o-crap json to a file', () => {
-		let data = fs.readFileSync( fixture + '/data.json' ).toString();
+		const data = fs.readFileSync( fixture + '/data.json' ).toString();
 
 		assert.equal( data, expectedData );
-	});
+	} );
 
 	afterAll( () => {
-		exec( 'rm ' + fixture + '/data.json', ( err  ) => {
+		exec( 'rm ' + fixture + '/data.json', ( err ) => {
 			if ( err ) {
 				console.error( err );
 			}
-		});
-	});
-
-});
+		} );
+	} );
+} );

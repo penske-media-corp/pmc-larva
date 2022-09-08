@@ -1,6 +1,6 @@
 {
   "name": "designer-tools",
-  "version": "1.24.1",
+  "version": "1.26.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
@@ -18,15 +18,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"src/*/*.+(js|jsx|json|css)\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "devDependencies": {
-    "prettier": "^2.1.2"
   },
   "browserslist": {
     "production": [

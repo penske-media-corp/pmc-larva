@@ -65,7 +65,6 @@ const buildScss = (
 	minify = false,
 	generateImportantVariants = false
 ) => {
-
 	if ( minify ) {
 		sassOpts.outputStyle = 'compressed';
 	}

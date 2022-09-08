@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/eslint-config",
-  "version": "1.24.1",
+  "version": "1.26.0",
   "description": "Eslint base config and customizations.",
   "keywords": [
     "eslint",
@@ -23,8 +23,12 @@
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
+  "gitHead": "c154a75edb02ee0aee489f7587b73b425020238f",
   "dependencies": {
-    "@wordpress/eslint-plugin": "^8.0.2"
+    "@wordpress/eslint-plugin": "^12.9.0"
   },
-  "gitHead": "c154a75edb02ee0aee489f7587b73b425020238f"
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "prettier": "npm:wp-prettier@^2.6.2"
+  }
 }

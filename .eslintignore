@@ -1,20 +1,7 @@
-node_modules
-build
+**/node_modules
+**/build
 public
 vendor
-site
-larva-patterns
-larva-scss
-packages/larva-js/src/interface/*
-packages/larva-js/src/utils/*
-packages/larva-js/src/__tests__/*
-larva-svg
-twig-to-php-parser
-backstopjs-config
-eslint-config
-stylelint-config
-stylelint-css-algorithms
-larva
 backstop_data
 jest-setup.js
 
