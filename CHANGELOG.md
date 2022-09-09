@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-css - Revert changes which we had done for CSS generator to use desktop font size on side skins.
+* larva-tokens - Update style guide tokens for spy-2022.
 
 ## 1.27.0 09-08-2022
 * larva-patterns - Add `narrow` variant for `container` module.
