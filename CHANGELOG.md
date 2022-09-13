@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unpublished Changes
+* larva-patterns - Modify `banner` module to accomodate `c_tagline` component.
+
 ## 1.28.0 09-12-2022
 * larva-css - Revert changes which we had done for CSS generator to use desktop font size on side skins.
 * larva-tokens - Update style guide tokens for spy-2022.
