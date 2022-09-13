@@ -31,7 +31,7 @@
 .lrv-u-right-0{right:0}
 .lrv-u-table-layout-fixed{table-layout:fixed}.lrv-u-table-layout-auto{table-layout:auto}.lrv-u-table-layout-unset{table-layout:unset}
 .lrv-u-text-align-right{text-align:right}.lrv-u-text-align-left{text-align:left}.lrv-u-text-align-center{text-align:center}@media(min-width: 62.5rem){.lrv-u-text-align-right\@desktop{text-align:right}.lrv-u-text-align-left\@desktop{text-align:left}.lrv-u-text-align-center\@desktop{text-align:center}}@media(max-width: 47.999rem){.lrv-u-text-align-center\@mobile-max{text-align:center}}@media(min-width: 48rem){.lrv-u-text-align-center\@tablet{text-align:center}}
-.lrv-u-text-decoration-underline{text-decoration:underline;text-decoration-color:currentColor}.lrv-u-text-decoration-underline\:hover:hover{text-decoration:underline;text-decoration-color:currentColor}
+.lrv-u-text-decoration-underline{text-decoration:underline;text-decoration-color:currentColor}.lrv-u-text-decoration-underline\:hover:hover{text-decoration:underline;text-decoration-color:currentColor}.lrv-u-text-decoration-line-through{text-decoration:line-through;text-decoration-color:currentColor}
 .lrv-u-text-transform-uppercase{text-transform:uppercase}.lrv-u-text-transform-initial{text-transform:initial}.lrv-u-text-transform-lowercase{text-transform:lowercase}.lrv-u-text-transform-capitalize{text-transform:capitalize}
 .lrv-u-top-0{top:0}@media(min-width: 62.5rem){.lrv-u-top-n33\@desktop{top:-2.0625rem}}
 .lrv-u-transform-translateY-n50p{transform:translateY(-50%)}@media(min-width: 62.5rem){.lrv-u-transform-translateX-n50p\@desktop{transform:translateX(-50%)}}

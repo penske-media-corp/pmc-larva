@@ -25,6 +25,10 @@
 			{% if c_tagline %}
 				{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
 			{% endif %}
+
+			{% if paragraph %}
+				{% include "@larva/modules/paragraph/paragraph.twig" with paragraph %}
+			{% endif %}
 			
 			{% if c_span %}
 				{% include "@larva/components/c-span/c-span.twig" with c_span %}

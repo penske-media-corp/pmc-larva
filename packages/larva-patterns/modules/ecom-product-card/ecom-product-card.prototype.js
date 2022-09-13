@@ -19,7 +19,7 @@ c_tagline.c_tagline_text = 'Powerful, iFit ready, and priced right!';
 c_tagline.c_tagline_classes = 'lrv-a-font-body-xxl lrv-u-margin-t-125 lrv-u-margin-b-00';
 
 c_button.c_button_classes = 'lrv-u-margin-t-125 lrv-a-font-basic-m lrv-a-unstyle-link lrv-u-display-block';
-c_button.c_button_inner_classes = 'lrv-u-border-b-2 lrv-u-border-t-2 lrv-u-border-l-1 lrv-u-border-r-1 lrv-u-padding-tb-025 lrv-u-text-transform-uppercase lrv-a-icon lrv-a-icon-before lrv-a-icon-arrow-right-filled lrv-u-align-items-start lrv-u-padding-lr-050 lrv-u-background-color-brand-primary:hover';
+c_button.c_button_inner_classes = 'lrv-u-border-b-2 lrv-u-border-t-2 lrv-u-border-l-1 lrv-u-border-r-1 lrv-u-padding-tb-025 lrv-u-text-transform-uppercase lrv-a-icon lrv-a-icon-before lrv-u-align-items-start lrv-u-padding-lr-050 lrv-u-background-color-brand-primary:hover';
 c_button.c_button_text = 'Subscribe $65.99';
 c_button.c_button_url = '#';
 

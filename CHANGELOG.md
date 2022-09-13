@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished Changes
 * larva-css - Revert changes which we had done for CSS generator to use desktop font size on side skins.
 * larva-tokens - Update style guide tokens for spy-2022.
-* larva-patterns - New `Ecom product card` module.
-* larva-css - Add `lrv-a-icon-arrow-right-filled` algorithm class.
+* larva-patterns - New `ecom-product-card` module.
+* larva-css - Add `lrv-a-icon-arrow-right-filled` algorithm class and `lrv-u-text-decoration-line-through` utility class.
 
 ## 1.27.0 09-08-2022
 * larva-patterns - Add `narrow` variant for `container` module.
