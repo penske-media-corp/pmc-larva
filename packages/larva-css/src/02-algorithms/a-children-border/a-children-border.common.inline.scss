@@ -1,0 +1,44 @@
+@import 'setup';
+// @import '@penskemediacorp/larva-scss/dist/tools';
+
+:root {
+	--a-children-border-color: #{ map-get( $TOKENS-MAP, color-black ) };
+}
+
+.lrv-a-children-border--grey {
+	--a-children-border-color: #{ map-get( $TOKENS-MAP, border-color-grey ) };
+}
+
+.lrv-a-children-border--grey-light {
+	--a-children-border-color: #{ map-get( $TOKENS-MAP, border-color-grey-light ) };
+}
+
+// stylelint-disable selector-max-compound-selectors
+.lrv-a-children-border-vertical {
+	& > * + * {
+		border-top: var(--a-children-border-width, 1px) var(--a-children-border-style, solid) var(--a-children-border-color, '');
+	}
+}
+
+.lrv-a-children-border-vertical\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		& > * + * {
+			border-top: var(--a-children-border-width, 1px) var(--a-children-border-style, solid) var(--a-children-border-color, '');
+		}
+	}
+}
+
+.lrv-a-children-border-horizontal {
+	& > * + * {
+		border-left: var(--a-children-border-width, 1px) var(--a-children-border-style, solid) var(--a-children-border-color, '');
+	}
+}
+
+.lrv-a-children-border-horizontal\@desktop {
+	@include pmc-breakpoint(desktop) {
+		& > * + * {
+			border-left: var(--a-children-border-width, 1px) var(--a-children-border-style, solid) var(--a-children-border-color, '');
+		}
+	}
+}
+// stylelint-enable selector-max-compound-selectors

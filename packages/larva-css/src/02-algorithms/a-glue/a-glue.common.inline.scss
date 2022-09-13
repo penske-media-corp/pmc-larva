@@ -22,6 +22,23 @@
 	@include _a-glue-base;
 }
 
+@include pmc-breakpoint( mobile-max ) {
+	.lrv-a-glue\@mobile-max {
+		top: 0;
+		left: 0;
+
+		@include _a-glue-base;
+	}
+}
+
+@include pmc-breakpoint( desktop ) {
+	.lrv-a-glue\@desktop {
+		top: 0;
+		left: 0;
+
+		@include _a-glue-base;
+	}
+}
 
 .lrv-a-glue\@tablet {
 	@include pmc-breakpoint( tablet ) {
@@ -47,4 +64,42 @@
 
 .lrv-a-glue--b-0 {
 	--a-glue-bottom: 0;
+}
+
+.lrv-a-glue--t-50p {
+	--a-glue-top: 50%;
+}
+
+.lrv-a-glue--t-100p {
+	--a-glue-top: 100%;
+}
+
+.lrv-a-glue--l-50p {
+	--a-glue-left: 50%;
+}
+
+.lrv-a-glue--r-50p {
+	--a-glue-right: 50%;
+}
+
+.lrv-a-glue--b-n1 {
+	--a-glue-bottom: -1rem;
+}
+
+.lrv-a-glue-parent\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		position: relative;
+	}
+}
+
+.lrv-a-glue-parent\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		position: relative;
+	}
+}
+
+.lrv-a-glue--b-unset\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		bottom: unset;
+	}
 }

@@ -9,7 +9,7 @@ const args = [
 	'--gulpfile',
 	gulpfilePath,
 	'--cwd',
-	process.cwd()
+	process.cwd(),
 ];
 
 spawnScript( './node_modules/.bin/gulp', args );

@@ -1,0 +1,11 @@
+@import 'setup';
+
+.lrv-u-letter-spacing-015 {
+	letter-spacing: pmc-rem(2.4);
+}
+
+.lrv-u-letter-spacing-012\@mobile-max {
+	@include pmc-breakpoint( mobile-max ) {
+		letter-spacing: pmc-rem(1.95);
+	}
+}

@@ -7,24 +7,21 @@ const { kebabify } = require( './utils' );
  * All style names and corresponding sizes.
  */
 const styles = {
-	primary: [ 'xl', 'l', 'm', 's', 'xs', 'xxs', 'xxxs' ],
-	secondary: [ 'l', 'm', 's' ],
+	primary: [ 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs', 'xxxs' ],
+	secondary: [ 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs' ],
 	secondary_regular: [ 'm' ],
 	accent: [ 'l', 'm', 's', 'xs', 'xxs' ],
 	accent_regular: [ 'xxs' ],
-	body: [ 'm', 's' ],
+	body: [ 'xxxl', 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs', 'xxxs' ],
+	basic: [ 'xxl', 'xl', 'l', 'm', 's', 'xs', 'xxs' ],
 };
 
 const families = Object.keys( styles );
 
 /**
  * Breakpoints that will be supported in tokens.
- *
- * Note: Desktop-xl is not required for the hubs
- *       style guide, and can be added here,
- *       in GUT Phase 3, if required.
  */
-const breakpoints = [ 'mobile', 'desktop' ];
+const breakpoints = [ 'mobile', 'desktop', 'desktop_xl' ];
 
 /**
  * Properties for tokens and their defaults.
@@ -35,7 +32,7 @@ const tokenDefaults = {
 	font_size: 'initial',
 	line_height: 'initial',
 	letter_spacing: 'normal',
-	font_weight: 'initial',
+	font_weight: 'normal',
 	font_style: 'normal',
 };
 

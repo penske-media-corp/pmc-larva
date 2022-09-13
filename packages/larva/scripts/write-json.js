@@ -7,8 +7,10 @@ const writeJson = require( '../lib/writeJson' );
 const config = getAppConfiguration( 'patterns' );
 const cliArgs = getArgsFromCli();
 
-let fromLarva = 'larva' === cliArgs[1] ? true : false;
+const fromLarva = 'larva' === cliArgs[ 1 ] ? true : false;
 
-console.log( chalk.bold( `\n---- ${cliArgs[1] || 'Project'} JSON ----\n` ) );
+console.log(
+	chalk.bold( `\n---- ${ cliArgs[ 1 ] || 'Project' } JSON ----\n` )
+);
 
 writeJson( config, fromLarva );

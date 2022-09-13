@@ -1,0 +1,13 @@
+<div class="article-kicker larva // {{ article_kicker_classes }}">
+	{% if article_kicker_url %}
+		<a href="{{ article_kicker_url }}" class="article-kicker-link {{ article_kicker_link_classes }}">
+	{% endif %}
+		{% if c_svg %}
+			{% include "@larva/components/c-svg/c-svg.twig" with c_svg %}
+		{% else %}
+			{{ article_kicker_text }}
+		{% endif %} 
+	{% if article_kicker_url %}
+		</a>
+	{% endif %}
+</div>

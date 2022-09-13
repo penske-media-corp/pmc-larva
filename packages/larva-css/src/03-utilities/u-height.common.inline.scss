@@ -1,17 +1,43 @@
 @import '@penskemediacorp/larva-scss/dist/tools';
 
-.lrv-u-height-100p {
-	height: 100%;
-}
+$heights_map: (
+	'height-auto': auto,
+	'height-8': pmc-rem(8),
+	'height-16': pmc-rem(16),
+	'height-20': pmc-rem(20),
+	'height-24': pmc-rem(24),
+	'height-30': pmc-rem(30),
+	'height-37': pmc-rem(37),
+	'height-40': pmc-rem(40),
+	'height-50': pmc-rem(50),
+	'height-100': pmc-rem(100),
+	'height-150': pmc-rem(150),
+	'height-200': pmc-rem(200),
+	'height-300': pmc-rem(300),
+	'height-20p': 20%,
+	'height-30p': 30%,
+	'height-50p': 50%,
+	'height-75p': 75%,
+	'height-100p': 100%,
+);
 
-.lrv-u-height-auto {
-	height: auto;
-}
-
-.lrv-u-max-height-50 {
-	max-height: pmc-rem(50);
-}
-
-.lrv-u-height-16 {
-	height: pmc-rem(16);
-}
+@include basic-utility-generator( 'height', (
+	height-auto,
+	height-8,
+	height-16,
+	height-20,
+	height-24,
+	height-30,
+	height-37,
+	height-40,
+	height-50,
+	height-100,
+	height-150,
+	height-200,
+	height-300,
+	height-20p,
+	height-30p,
+	height-50p,
+	height-75p,
+	height-100p,
+), $heights_map, $NAMESPACE: 'lrv-' );

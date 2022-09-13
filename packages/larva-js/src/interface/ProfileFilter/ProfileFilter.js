@@ -24,11 +24,17 @@ export default class ProfileFilter {
 		this.el.pmcProfileFilter = this;
 
 		// UI
-		this.resultContainer = this.el.querySelector( '.js-ProfileFilter-results' );
+		this.resultContainer = this.el.querySelector(
+			'.js-ProfileFilter-results'
+		);
 		this.form = this.el.querySelector( '.js-ProfileFilter-form' );
-		this.loadMoreButton = this.el.querySelector( '.js-ProfileFilter-loadMore' );
+		this.loadMoreButton = this.el.querySelector(
+			'.js-ProfileFilter-loadMore'
+		);
 
-		this.submitButton = this.form.querySelector( '.js-ProfileFilter-submit' );
+		this.submitButton = this.form.querySelector(
+			'.js-ProfileFilter-submit'
+		);
 
 		// Event handlers
 		this.onSubmit = this.onSubmit.bind( this );
@@ -41,7 +47,9 @@ export default class ProfileFilter {
 		this.actionUrl = this.form.getAttribute( 'action' );
 
 		// The endpoint where we will fetch the posts
-		this.restUrlBase = window.location.origin + '/wp-json/pmc_core/v1/pmc_core_modules/pmc-profiles';
+		this.restUrlBase =
+			window.location.origin +
+			'/wp-json/pmc_core/v1/pmc_core_modules/pmc-profiles';
 
 		// Object to hold the data from which we will create the request URL.
 		// This should be created fresh each time it is used with this.setQueryObject
@@ -53,15 +61,15 @@ export default class ProfileFilter {
 		if ( undefined !== window.wp ) {
 			this.template = wp.template( 'profile-card' );
 		}
-
 	}
 
 	getCheckedBoxes() {
-		return [ ... this.form.querySelectorAll( 'input[type="checkbox"]:checked' ) ];
+		return [
+			...this.form.querySelectorAll( 'input[type="checkbox"]:checked' ),
+		];
 	}
 
 	setQueryObject( url = false ) {
-
 		const els = this.getCheckedBoxes();
 
 		// Get query from checkboxes, if they are checked,
@@ -76,12 +84,11 @@ export default class ProfileFilter {
 	}
 
 	setQueryObjectFromCheckboxes( els ) {
-		let obj = {};
+		const obj = {};
 
 		els.map( ( el ) => {
-
 			// If the key doesn't exist, create it
-			let key = el.getAttribute( 'name' );
+			const key = el.getAttribute( 'name' );
 
 			if ( ! ( key in obj ) ) {
 				obj[ key ] = [];
@@ -96,19 +103,19 @@ export default class ProfileFilter {
 
 	// filterQueryString should be window.location.search, e.g. ?filter_top200location=scottdale&filter_sourceofwealth=money
 	setQueryObjectFromUrl( filterQueryString ) {
-		let queryObject = {};
+		const queryObject = {};
 
-		let params = new URLSearchParams( filterQueryString );
+		const params = new URLSearchParams( filterQueryString );
 
 		params.forEach( ( value, key ) => {
-			let values = value.split( ',' );
+			const values = value.split( ',' );
 
 			if ( ! ( key in queryObject ) ) {
 				queryObject[ key ] = [];
 			}
 
 			queryObject[ key ] = [];
-			queryObject[ key ].push( ... values );
+			queryObject[ key ].push( ...values );
 		} );
 
 		this.queryObject = Object.assign( {}, queryObject );
@@ -119,9 +126,12 @@ export default class ProfileFilter {
 	}
 
 	getRestEndpointUrl() {
-
 		// REST params do not have filter_ prefix, so replace with empty string
-		return this.restUrlBase + '?' + this.createQueryStringFromObject().replace( /filter_/g, '' );
+		return (
+			this.restUrlBase +
+			'?' +
+			this.createQueryStringFromObject().replace( /filter_/g, '' )
+		);
 	}
 
 	updateActionAttr() {
@@ -140,7 +150,6 @@ export default class ProfileFilter {
 		// If fetch is supported, fetch posts from REST API endpoint, otherwise
 		// we use default form behavior and window will reload to the action URL
 		if ( window.fetch ) {
-
 			e.preventDefault();
 
 			// TODO: add better error handling - output result of e in updateResults
@@ -161,11 +170,13 @@ export default class ProfileFilter {
 	}
 
 	fetchData() {
-		let url = this.getRestEndpointUrl();
+		const url = this.getRestEndpointUrl();
 
-		const response = fetch( url ).then( ( result ) => {
-			return result.json();
-		} ).catch( e => e );
+		const response = fetch( url )
+			.then( ( result ) => {
+				return result.json();
+			} )
+			.catch( ( e ) => e );
 
 		return response;
 	}
@@ -176,7 +187,7 @@ export default class ProfileFilter {
 
 	updateWindowUrl() {
 		const url = '?' + this.createQueryStringFromObject();
-		let obj = this.queryObject;
+		const obj = this.queryObject;
 
 		if ( window.history.pushState ) {
 			window.history.pushState( obj, '', url );
@@ -184,7 +195,6 @@ export default class ProfileFilter {
 	}
 
 	updateResults( posts, shouldClearResults = true ) {
-
 		this.maybeHideLoadMore( this.maxPages );
 
 		// TODO: better as maybeClearResults func
@@ -194,16 +204,15 @@ export default class ProfileFilter {
 
 		this.updateWindowUrl();
 
-		if ( undefined === posts[0].name ) {
-
+		if ( undefined === posts[ 0 ].name ) {
 			// Update with "No posts found" text and exit
-			this.resultContainer.innerHTML = posts[0];
+			this.resultContainer.innerHTML = posts[ 0 ];
 			return;
 		}
 
-		posts.forEach( post => {
-			let tmpl = this.template( post );
-			let li = document.createElement( 'li' );
+		posts.forEach( ( post ) => {
+			const tmpl = this.template( post );
+			const li = document.createElement( 'li' );
 			li.innerHTML = tmpl;
 
 			// TODO: this should be removed upon finding solution for escaping {{data.url}} as an attribute
@@ -217,19 +226,15 @@ export default class ProfileFilter {
 	}
 
 	maybeHideLoadMore() {
-
 		const isHidden = this.loadMoreButton.classList.contains( 'a-hidden' );
 
 		if ( this.maxPages > this.page ) {
 			if ( isHidden ) {
 				this.loadMoreButton.classList.remove( 'a-hidden' );
 			}
-		} else {
-			if ( ! isHidden ) {
-				this.loadMoreButton.classList.add( 'a-hidden' );
-			}
+		} else if ( ! isHidden ) {
+			this.loadMoreButton.classList.add( 'a-hidden' );
 		}
-
 	}
 
 	increasePage() {

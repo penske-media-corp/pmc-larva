@@ -1,0 +1,7222 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <title>Design Tokens</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+          <style>
+            html {
+              box-sizing: border-box;
+              font-size: 1em;
+              font-family: Helvetica, Arial, sans-serif;
+              line-height: 1.5;
+              background: #fff;
+              color: #444;
+            }
+            *,
+            *:before,
+            *:after {
+              box-sizing: inherit;
+            }
+            body { font-size: .75rem; }
+            ::-moz-selection {
+              background: #b3d4fc;
+              text-shadow: none;
+            }
+            ::selection {
+              background: #b3d4fc;
+              text-shadow: none;
+            }
+            .banner,
+            .contentinfo { background: #f5f5f5; }
+            .banner { padding: 1em 0; }
+            .container {
+              margin: 0 auto;
+              padding: 0 2rem;
+              max-width: 80rem;
+            }
+            main {
+              margin-right: -2rem;
+              margin-left:  -2rem;
+              padding-bottom: 2rem;
+            }
+            h1 {
+              margin: 0;
+              font-weight: normal;
+              line-height: 1.25;
+            }
+            table {
+              table-layout: fixed;
+              border-collapse: separate;
+              border-spacing: 1rem;
+              width: 100%;
+            }
+            th,
+            td {
+              padding: 0 1rem;
+              vertical-align: baseline;
+              word-break: break-word;
+              hyphens: auto;
+            }
+            th {
+              font-weight: normal;
+              text-align: left;
+            }
+            thead th {
+              border-bottom: 1px solid #eee;
+              padding-top: 1rem;
+              padding-bottom: .5rem;
+              color: #999;
+            }
+            thead th:first-child {
+              font-size: 1.25rem;
+              color: inherit;
+            }
+            code { font-family: monaco, Consolas, monospace, monospace; }
+            hr {
+              display: block;
+              margin: 2rem 0;
+              border: 0;
+              border-top: 1px solid #eee;
+              padding: 0;
+              height: 1px;
+            }
+            .metric-box,
+            .radius-box {
+              display: inline-block;
+              vertical-align: middle;
+              background: #eee;
+            }
+            .radius-box {
+              width: 100%;
+              height: 3rem;
+            }
+            .radius-box.borderRadiusCircle {
+              width: 3rem;
+            }
+            .line-height-example {
+              border-bottom: 1px solid #eee;
+              background-image: -webkit-linear-gradient(#eee 1px, transparent 1px);
+              background-image: linear-gradient(#eee 1px, transparent 1px);
+              background-size: 100% 1rem;
+            }
+          </style>
+        </head>
+        <body>
+          <header role="banner" class="banner">
+            <div class="container">
+              <h1>Design Tokens</h1>
+            </div>
+          </header>
+          <div class="container">
+            <main role="main">
+              
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=spacing>
+          <th scope="col">Spacing</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>spacing-00</code>
+        </th>
+        <td>
+          <code>0</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 0; height: 0;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>spacing-025</code>
+        </th>
+        <td>
+          <code>0.25rem</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 0.25rem; height: 0.25rem;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>spacing-050</code>
+        </th>
+        <td>
+          <code>0.5rem</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 0.5rem; height: 0.5rem;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>spacing-075</code>
+        </th>
+        <td>
+          <code>0.75rem</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 0.75rem; height: 0.75rem;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>spacing-1</code>
+        </th>
+        <td>
+          <code>1rem</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 1rem; height: 1rem;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>spacing-125</code>
+        </th>
+        <td>
+          <code>1.25rem</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 1.25rem; height: 1.25rem;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>spacing-150</code>
+        </th>
+        <td>
+          <code>1.5rem</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 1.5rem; height: 1.5rem;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>spacing-2</code>
+        </th>
+        <td>
+          <code>2rem</code>
+        </td>
+        
+        <td>
+          <div class="metric-box" style="width: 2rem; height: 2rem;"></div>
+        </td>
+      
+        <td>Used for margins and padding only.</td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+              
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=font-weight>
+          <th scope="col">Font Weights</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>font-weight-light</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-weight-normal</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-weight-bold</code>
+        </th>
+        <td>
+          <code>700</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 700;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>700</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 700;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>700</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 700;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>400</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 400;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-font-weight-mobile</code>
+        </th>
+        <td>
+          <code>600</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 600;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>300</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 300;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>700</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: 700;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-font-weight-desktop</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>bold</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: bold;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-font-weight-desktop-xl</code>
+        </th>
+        <td>
+          <code>normal</code>
+        </td>
+        
+        <td>
+          <div style="font-weight: normal;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=font-size>
+          <th scope="col">Font Sizes</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>body-l-font-size-mobile</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 14px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 24px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 22px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 17px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>28px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 28px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-font-size-mobile</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>12px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>11px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 11px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 24px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>60px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 60px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-font-size-desktop</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 14px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-font-size-desktop</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>33px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 33px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-font-size-desktop</code>
+        </th>
+        <td>
+          <code>58px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 58px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-font-size-desktop</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 26px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 14px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>10px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 10px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-font-size-mobile</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 24px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-font-size-desktop</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-font-size-desktop</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>11px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 11px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 26px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-font-size-mobile</code>
+        </th>
+        <td>
+          <code>12px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-font-size-mobile</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>58px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 58px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>10px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 10px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-font-size-desktop</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 14px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>30px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 30px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-font-size-desktop</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-font-size-mobile</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>32px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 32px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 26px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>46px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 46px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-font-size-desktop</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 24px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-font-size-mobile</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 14px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-font-size-desktop</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-font-size-desktop</code>
+        </th>
+        <td>
+          <code>12px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>10px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 10px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-font-size-mobile</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-font-size-mobile</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 19px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 22px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>28px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 28px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 14px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-font-size-mobile</code>
+        </th>
+        <td>
+          <code>12px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>36px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 36px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 26px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>12px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 13px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 19px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-font-size-mobile</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 26px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-font-size-desktop</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 22px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>11px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 11px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-font-size-mobile</code>
+        </th>
+        <td>
+          <code>40px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 40px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-font-size-mobile</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>12px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 12px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-font-size-mobile</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>11px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 11px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 22px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-font-size-desktop</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 16px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-font-size-desktop</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-font-size-desktop</code>
+        </th>
+        <td>
+          <code>32px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 32px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 20px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>initial</code>
+        </td>
+        
+        <td>
+          <div style="font-size: initial;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-font-size-mobile</code>
+        </th>
+        <td>
+          <code>30px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 30px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-font-size-desktop-xl</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 17px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-font-size-mobile</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-font-size-mobile</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-font-size-desktop</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-font-size-mobile</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 15px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-font-size-desktop</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 18px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-font-size-desktop</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div style="font-size: 23px;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=line-height>
+          <th scope="col">Line Heights</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>line-height-small</code>
+        </th>
+        <td>
+          <code>1.1</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 1.1; background-size: 100% 1.1em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>line-height-normal</code>
+        </th>
+        <td>
+          <code>1.35</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 1.35; background-size: 100% 1.35em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>line-height-copy</code>
+        </th>
+        <td>
+          <code>1.5</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 1.5; background-size: 100% 1.5em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>line-height-large</code>
+        </th>
+        <td>
+          <code>1.85</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 1.85; background-size: 100% 1.85em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 24px; background-size: 100% 24px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-line-height-desktop</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 19px; background-size: 100% 19px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-line-height-desktop</code>
+        </th>
+        <td>
+          <code>21px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 21px; background-size: 100% 21px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 17px; background-size: 100% 17px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>33px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 33px; background-size: 100% 33px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>27px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 27px; background-size: 100% 27px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 22px; background-size: 100% 22px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 13px; background-size: 100% 13px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>29px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 29px; background-size: 100% 29px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>70px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 70px; background-size: 100% 70px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>37px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 37px; background-size: 100% 37px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 18px; background-size: 100% 18px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 23px; background-size: 100% 23px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-line-height-desktop</code>
+        </th>
+        <td>
+          <code>32px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 32px; background-size: 100% 32px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 16px; background-size: 100% 16px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 19px; background-size: 100% 19px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-line-height-mobile</code>
+        </th>
+        <td>
+          <code>25px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 25px; background-size: 100% 25px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-line-height-desktop</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 16px; background-size: 100% 16px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-line-height-desktop</code>
+        </th>
+        <td>
+          <code>50px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 50px; background-size: 100% 50px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 23px; background-size: 100% 23px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 17px; background-size: 100% 17px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 17px; background-size: 100% 17px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 14px; background-size: 100% 14px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>21px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 21px; background-size: 100% 21px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 18px; background-size: 100% 18px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>27px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 27px; background-size: 100% 27px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-line-height-desktop</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 17px; background-size: 100% 17px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 17px; background-size: 100% 17px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 23px; background-size: 100% 23px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-line-height-desktop</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 16px; background-size: 100% 16px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-line-height-desktop</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-line-height-mobile</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-line-height-mobile</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 13px; background-size: 100% 13px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>50px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 50px; background-size: 100% 50px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 19px; background-size: 100% 19px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>32px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 32px; background-size: 100% 32px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 16px; background-size: 100% 16px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 16px; background-size: 100% 16px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-line-height-mobile</code>
+        </th>
+        <td>
+          <code>25px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 25px; background-size: 100% 25px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>40px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 40px; background-size: 100% 40px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-line-height-desktop</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 23px; background-size: 100% 23px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 18px; background-size: 100% 18px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>32px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 32px; background-size: 100% 32px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>34px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 34px; background-size: 100% 34px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-line-height-mobile</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-regular-m-line-height-desktop</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-s-line-height-mobile</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 23px; background-size: 100% 23px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>0.4px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 0.4px; background-size: 100% 0.4px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>56px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 56px; background-size: 100% 56px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-l-line-height-desktop</code>
+        </th>
+        <td>
+          <code>29px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 29px; background-size: 100% 29px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-m-line-height-desktop</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 17px; background-size: 100% 17px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-s-line-height-desktop</code>
+        </th>
+        <td>
+          <code>15px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 15px; background-size: 100% 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 24px; background-size: 100% 24px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>34px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 34px; background-size: 100% 34px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>33px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 33px; background-size: 100% 33px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 13px; background-size: 100% 13px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-m-line-height-mobile</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 18px; background-size: 100% 18px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-l-line-height-mobile</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 13px; background-size: 100% 13px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 24px; background-size: 100% 24px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 19px; background-size: 100% 19px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-regular-xxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>14px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 14px; background-size: 100% 14px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xxl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>23px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 23px; background-size: 100% 23px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>24px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 24px; background-size: 100% 24px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>40px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 40px; background-size: 100% 40px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>30px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 30px; background-size: 100% 30px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 22px; background-size: 100% 22px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 16px; background-size: 100% 16px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>17px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 17px; background-size: 100% 17px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 22px; background-size: 100% 22px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>21px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 21px; background-size: 100% 21px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-m-line-height-mobile</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-l-line-height-mobile</code>
+        </th>
+        <td>
+          <code>36px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 36px; background-size: 100% 36px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 13px; background-size: 100% 13px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-line-height-desktop</code>
+        </th>
+        <td>
+          <code>27px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 27px; background-size: 100% 27px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 19px; background-size: 100% 19px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-s-line-height-mobile</code>
+        </th>
+        <td>
+          <code>32px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 32px; background-size: 100% 32px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>16px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 16px; background-size: 100% 16px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-s-line-height-mobile</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 22px; background-size: 100% 22px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-s-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>27px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 27px; background-size: 100% 27px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xxs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xs-line-height-desktop</code>
+        </th>
+        <td>
+          <code>13px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 13px; background-size: 100% 13px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 22px; background-size: 100% 22px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxxl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>initial</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: initial; background-size: 100% initial;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>32px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 32px; background-size: 100% 32px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>secondary-xs-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-m-line-height-mobile</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-m-line-height-mobile</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 19px; background-size: 100% 19px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>basic-xl-line-height-desktop-xl</code>
+        </th>
+        <td>
+          <code>22px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 22px; background-size: 100% 22px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>accent-xs-line-height-mobile</code>
+        </th>
+        <td>
+          <code>19px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 19px; background-size: 100% 19px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-line-height-desktop</code>
+        </th>
+        <td>
+          <code>20px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 20px; background-size: 100% 20px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-line-height-desktop</code>
+        </th>
+        <td>
+          <code>28px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 28px; background-size: 100% 28px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-line-height-desktop</code>
+        </th>
+        <td>
+          <code>36px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 36px; background-size: 100% 36px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-xxl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>33px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 33px; background-size: 100% 33px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-xxl-line-height-mobile</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>primary-l-line-height-mobile</code>
+        </th>
+        <td>
+          <code>26px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 26px; background-size: 100% 26px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>body-l-line-height-mobile</code>
+        </th>
+        <td>
+          <code>18px</code>
+        </td>
+        
+        <td>
+          <div class="line-height-example" style="line-height: 18px; background-size: 100% 18px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            elementum odio et lacus rutrum molestie. Nunc arcu enim, elementum
+            id feugiat at, venenatis quis erat.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=font-family>
+          <th scope="col">Font Families</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>font-family-primary-fancy</code>
+        </th>
+        <td>
+          <code>'Publico Headline Bold', serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: 'Publico Headline Bold', serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td>The webfont, loaded async</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-primary</code>
+        </th>
+        <td>
+          <code>serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td>The webfont, loaded async</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-secondary-fancy</code>
+        </th>
+        <td>
+          <code>'Publico Headline Roman', serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: 'Publico Headline Roman', serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td>The webfont, loaded async</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-secondary</code>
+        </th>
+        <td>
+          <code>serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td>Fallback for secondary-fancy</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-body</code>
+        </th>
+        <td>
+          <code>Georgia, Helvetica, sans-serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: Georgia, Helvetica, sans-serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-basic</code>
+        </th>
+        <td>
+          <code>sans-serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: sans-serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-accent</code>
+        </th>
+        <td>
+          <code>Verdana, serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: Verdana, serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-accent-fancy</code>
+        </th>
+        <td>
+          <code>Verdana, sans-serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: Verdana, sans-serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-basic-fancy</code>
+        </th>
+        <td>
+          <code>'Graphik Semibold', sans-serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: 'Graphik Semibold', sans-serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>font-family-body-fancy</code>
+        </th>
+        <td>
+          <code>Georgia, Helvetica, sans-serif</code>
+        </td>
+        
+        <td>
+          <div style="font-family: Georgia, Helvetica, sans-serif;">
+            The quick brown fox jumps over the lazy dog.
+          </div>
+        </td>
+      
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+              
+              
+              
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=hr-color>
+          <th scope="col">Horizontal Rule Colors</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>border-color-grey-lightest</code>
+        </th>
+        <td>
+          <code>rgb(239, 239, 239)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(239, 239, 239);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-brand-secondary-light</code>
+        </th>
+        <td>
+          <code>rgb(165, 133, 83)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(165, 133, 83);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-grey-light</code>
+        </th>
+        <td>
+          <code>rgb(153, 153, 153)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(153, 153, 153);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-grey-dark</code>
+        </th>
+        <td>
+          <code>rgb(102, 102, 102)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(102, 102, 102);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-brand-secondary-dark</code>
+        </th>
+        <td>
+          <code>rgb(122, 89, 45)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(122, 89, 45);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-brand-secondary</code>
+        </th>
+        <td>
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(0, 0, 0);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-grey</code>
+        </th>
+        <td>
+          <code>rgb(118, 118, 118)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(118, 118, 118);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-brand-primary-light</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(215, 25, 32);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-white</code>
+        </th>
+        <td>
+          <code>rgb(255, 255, 255)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(255, 255, 255);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-brand-primary-dark</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(215, 25, 32);" />
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>border-color-brand-primary</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        
+        <td>
+          <hr style="border-top-color: rgb(215, 25, 32);" />
+        </td>
+      
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=background-color>
+          <th scope="col">Background Colors</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>background-color-grey-light</code>
+        </th>
+        <td>
+          <code>rgb(153, 153, 153)</code>
+        </td>
+        <td style="background-color: rgb(153, 153, 153); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-grey-lightest</code>
+        </th>
+        <td>
+          <code>rgb(239, 239, 239)</code>
+        </td>
+        <td style="background-color: rgb(239, 239, 239); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-brand-secondary-dark</code>
+        </th>
+        <td>
+          <code>rgb(122, 89, 45)</code>
+        </td>
+        <td style="background-color: rgb(122, 89, 45); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-brand-secondary-light</code>
+        </th>
+        <td>
+          <code>rgb(165, 133, 83)</code>
+        </td>
+        <td style="background-color: rgb(165, 133, 83); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-grey-dark</code>
+        </th>
+        <td>
+          <code>rgb(102, 102, 102)</code>
+        </td>
+        <td style="background-color: rgb(102, 102, 102); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-grey</code>
+        </th>
+        <td>
+          <code>rgb(118, 118, 118)</code>
+        </td>
+        <td style="background-color: rgb(118, 118, 118); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-body</code>
+        </th>
+        <td>
+          <code>rgb(255, 255, 255)</code>
+        </td>
+        <td style="background-color: rgb(255, 255, 255); border: 1px solid #f6f6f6;"></td>
+        <td>The background color of the main body of the site.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-brand-secondary</code>
+        </th>
+        <td>
+          <code>rgb(122, 89, 45)</code>
+        </td>
+        <td style="background-color: rgb(122, 89, 45); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-black</code>
+        </th>
+        <td>
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        <td style="background-color: rgb(0, 0, 0); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-brand-primary-light</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        <td style="background-color: rgb(215, 25, 32); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-brand-primary-dark</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        <td style="background-color: rgb(215, 25, 32); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-white</code>
+        </th>
+        <td>
+          <code>rgb(255, 255, 255)</code>
+        </td>
+        <td style="background-color: rgb(255, 255, 255); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-brand-primary</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        <td style="background-color: rgb(215, 25, 32); border: 1px solid #f6f6f6;"></td>
+        <td>The primary brand color. This should be dark in hue, and have sufficient contrast with white text.</td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>background-color-grey-darkest</code>
+        </th>
+        <td>
+          <code>rgb(64, 64, 64)</code>
+        </td>
+        <td style="background-color: rgb(64, 64, 64); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+              
+              
+              
+              
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=text-color>
+          <th scope="col">Text Colors</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>color-brand-secondary</code>
+        </th>
+        <td>
+          <code>rgb(122, 89, 45)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(122, 89, 45);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-black</code>
+        </th>
+        <td>
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(0, 0, 0);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-brand-primary-light</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(215, 25, 32);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-brand-primary-dark</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(215, 25, 32);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-white</code>
+        </th>
+        <td>
+          <code>rgb(255, 255, 255)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(255, 255, 255);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-brand-primary</code>
+        </th>
+        <td>
+          <code>rgb(215, 25, 32)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(215, 25, 32);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-grey-light</code>
+        </th>
+        <td>
+          <code>rgb(153, 153, 153)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(153, 153, 153);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-brand-secondary-dark</code>
+        </th>
+        <td>
+          <code>rgb(122, 89, 45)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(122, 89, 45);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-brand-secondary-light</code>
+        </th>
+        <td>
+          <code>rgb(165, 133, 83)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(165, 133, 83);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-grey-dark</code>
+        </th>
+        <td>
+          <code>rgb(102, 102, 102)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(102, 102, 102);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>color-grey</code>
+        </th>
+        <td>
+          <code>rgb(118, 118, 118)</code>
+        </td>
+        
+        <td style="background-color: #f6f6f6; color: rgb(118, 118, 118);">
+          The quick brown fox jumps over the lazy dog.
+        </td>
+      
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+              
+              
+            </main>
+          </div>
+        </body>
+      </html>
+    

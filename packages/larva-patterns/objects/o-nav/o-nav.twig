@@ -10,13 +10,22 @@
 	{% if o_nav_aria_labelledby_attr %}
 		aria-labelledby="{{ o_nav_aria_labelledby_attr }}"
 	{% endif %}
+	{% if o_nav_tab_index_attr %}
+		tabindex="{{ o_nav_tab_index_attr_val }}"
+	{% endif %}
 >
 
 	{% if o_nav_title_text %}
-		{% if o_nav_tag_text %}
-			<{{ o_nav_tag_text }} id="{{ o_nav_title_id_attr }}" class="o-nav__title {{ o_nav_title_classes }}">{{ o_nav_title_text }}</{{ o_nav_tag_text }}>
-		{% else %}
-			<h4 id="{{ o_nav_title_id_attr }}" class="o-nav__title {{ o_nav_title_classes }}">{{ o_nav_title_text }}</h4>
+		{% if o_nav_title_outer %}
+			<div class="o-nav__title-outer {{ o_nav_title_outer_classes }}">
+		{% endif %}
+				{% if o_nav_tag_text %}
+					<{{ o_nav_tag_text }} id="{{ o_nav_title_id_attr }}" class="o-nav__title {{ o_nav_title_classes }}">{{ o_nav_title_text }}</{{ o_nav_tag_text }}>
+				{% else %}
+					<h4 id="{{ o_nav_title_id_attr }}" class="o-nav__title {{ o_nav_title_classes }}">{{ o_nav_title_text }}</h4>
+				{% endif %}
+		{% if o_nav_title_outer %}
+			</div>
 		{% endif %}
 	{% endif %}
 

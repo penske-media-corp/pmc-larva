@@ -1,6 +1,12 @@
 <?php
-// This is a generated file. Refer to the relevant Twig file for adjusting this markup.
+/**
+ * Generated file.
+ *
+ * Refer to the relevant Twig file for adjusting this markup.
+ */
+
 ?>
+
 <nav class="o-nav <?php echo esc_attr( $modifier_class ?? '' ); ?> <?php echo esc_attr( $o_nav_classes ?? '' ); ?>" data-dropdown="<?php echo esc_attr( $o_nav_data_attributes ?? '' ); ?>">
 
 	<?php if ( ! empty( $o_nav_title_text ) ) { ?>
@@ -12,7 +18,7 @@
 			<li class="o-nav__list-item <?php echo esc_attr( $o_nav_list_item_classes ?? '' ); ?>" data-dropdown-list-item="<?php echo esc_attr( $o_nav_list_item_data_attributes ?? '' ); ?>">
 				<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( 'components/c-nav-link', $item, true ); ?>
 				
-				<?php if ( $item['newsletter_dropdown'] ) { ?>
+				<?php if ( ! empty( $item['newsletter_dropdown'] ) ) { ?>
 					<?php \PMC\Larva\Pattern::get_instance()->render_pattern_template( 'modules/newsletter-dropdown', $item['newsletter_dropdown'], true ); ?>
 				<?php } ?>
 			</li>

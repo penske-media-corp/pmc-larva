@@ -1,0 +1,71 @@
+@import 'setup';
+
+.lrv-a-truncate-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin _a-truncate-ellipsis($line: 1) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical; // stylelint-disable-line property-no-vendor-prefix
+}
+
+.lrv-a-truncate-ellipsis-1line {
+	@include _a-truncate-ellipsis(1);
+}
+
+.lrv-a-truncate-ellipsis-2line {
+	@include _a-truncate-ellipsis(2);
+}
+
+.lrv-a-truncate-ellipsis-3line {
+  	@include _a-truncate-ellipsis(3);
+}
+
+.lrv-a-truncate-ellipsis-5line {
+	@include _a-truncate-ellipsis(5);
+}
+
+.lrv-a-truncate-ellipsis-6line {
+	@include _a-truncate-ellipsis(6);
+}
+
+.lrv-a-truncate-ellipsis-3line\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		@include _a-truncate-ellipsis(3);
+	}
+}
+
+.lrv-a-truncate-ellipsis-4line\@mobile-max {
+	@include pmc-breakpoint(desktop-xl-max) {
+		@include _a-truncate-ellipsis(4);
+	}
+}
+
+.lrv-a-truncate-ellipsis-5line\@tablet-desktop-only {
+	@media only screen and (max-width: $screen-desktop-xl) and (min-width: $screen-tablet) {
+		@include _a-truncate-ellipsis(5);
+	}
+}
+
+.lrv-a-truncate-ellipsis-5line\@desktop-xl-max {
+	@include pmc-breakpoint(desktop-xl-max) {
+		@include _a-truncate-ellipsis(5);
+	}
+}
+ 
+.lrv-a-truncate-ellipsis-1line\@tablet-desktop-only {
+	@media only screen and (max-width: $screen-desktop-xl) and (min-width: $screen-tablet) {
+		@include _a-truncate-ellipsis(1);
+	}
+}
+
+.lrv-a-truncate-ellipsis-2line\@mobile-max {
+	@include pmc-breakpoint(mobile-max) {
+		@include _a-truncate-ellipsis(2);
+	}
+}

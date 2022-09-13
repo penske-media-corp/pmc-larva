@@ -1,0 +1,27 @@
+<div class="story lrv-u-padding-tb-1 lrv-u-padding-tb-2@desktop // {{ story_featured_quote_classes }}">
+	<div class="{{ story_featured_quote_primary_classes }} // lrv-u-flex lrv-u-flex-direction-column lrv-u-height-100p lrv-u-justify-content-center">
+		{% if c_dek_url %}
+		<a href="{{ c_dek_url }}" class="c-dek__link ">
+			{% endif %}
+			{% if story_quote_markup %}
+				<p class="story-quote-markup {{ story_quote_markup_classes }}">
+					{{ story_quote_markup|raw }}
+				</p>
+			{% endif %}
+			{% if c_dek_url %}
+		</a>
+		{% endif %}
+
+		<ul class="lrv-a-unstyle-list // {{ story_nav_classes }} {{ story_nav_layout_classes }}">
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
+
+			{% if c_tagline_author %}
+				<li class="lrv-u-flex // {{ c_tagline_author_wrapper_classes }}">
+					By {% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_author %}
+				</li>
+			{% endif %}
+		</ul>
+	</div>
+</div>

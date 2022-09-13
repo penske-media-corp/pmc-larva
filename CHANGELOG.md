@@ -4,7 +4,314 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unpublished
+## Unpublished Changes
+* larva-patterns - Modify `banner` module to accomodate `c_tagline` component.
+
+## 1.28.0 09-12-2022
+* larva-css - Revert changes which we had done for CSS generator to use desktop font size on side skins.
+* larva-tokens - Update style guide tokens for spy-2022.
+
+## 1.27.0 09-08-2022
+* larva-patterns - Add `narrow` variant for `container` module.
+* larva-patterns - Add `c_tagline_terms` support to footer-newsletter module.
+* larva-patterns - Wrap `footer-social` and `footer-newsletter` components in an if block.
+* larva-css - Add border style variable to `a-children-border-*` algorithm
+* larva-tokens - Add larva tokens for spy-2022.
+
+## 1.26.0 09-01-2022
+* larva - Add repo-wide JS linting and apply auto-linting fixes.
+
+## 1.25.0 08-23-2022
+* larva-css - Add editor-styles-wrapper class to override backend link color.
+
+## 1.24.1 08-22-2022
+* publish failed, creating temp version
+
+## 1.24.0 08-19-2022
+* larva-css - Update CSS generator to use desktop font size on side skins.
+* larva-patterns - Add class class for sub-header inner
+
+## 1.23.0 08-17-2022
+* larva-patterns - Add `extended` variant for `pullquote` module.
+* larva-tokens - Update color accent tokens for Billboard Espanol.
+
+## 1.22.1 
+* larva-patterns - Updating `gallery` wrapper classes.
+* larva-tokens - Update rollingstone-2022 font tokens.
+* larva-tokens - Update primary color token for Billboard Espanol.
+
+## 1.22.0 08-09-2022
+* larva-patterns - Add `featured` variant for `pullquote` module.
+
+## 1.21.0 08-09-2022
+* larva-patterns - Add `decoding` attribute to `c-lazy-image`.
+
+## 1.20.0 08-08-2022
+* larva-js - Add `firstVideoPlay` custom event for video showcase js.
+* larva-css - Add lrv-a-glue@desktop Utility.
+
+## 1.19.0 08-08-2022
+* larva-tokens - Billboard Español `bbesp.json`
+
+## 1.18.0 08-04-2022
+* larva-tokens - Update font tokens for rollingstone-2022.
+* larva-css - Add `table-layout`, `word-break`, `lrv-u-border-collapse`, `lrv-u-overflow-x-auto`, `lrv-u-overflow-y-auto` utility classes.
+* larva-patterns - Add `cover` module.
+* larva-patterns - Add `table` module.
+* larva-patterns - Add `gallery` module.
+* larva-tokens - Minify tokens CSS files.
+
+## 1.17.0 08-04-2022
+* larva-tokens - Update Basic XS font tokens for rollingstone-2022.
+* larva-patterns - Add `c-figcaption` component support to `o-card` object.
+* larva-patterns - Add `fill` and `outline` variant for `button` module.
+* larva-js - Add support for Twitch in Featured Media.
+
+## 1.16.0 - 07-28-2022
+* larva-patterns - Add `double-line` and `thick-double-line` variants for `separator` module.
+* larva-css - Add `lrv-u-border-t-20` and `height` utility classes.
+
+## 1.15.0 - 07-26-2022
+* larva-tokens - Adjust font weight from "700" to "400" (normal) in Variety tokens.
+* larva-tokens - Update font tokens for rollingstone-2022.
+* larva-patterns - Add `video-slider` module.
+* larva-css - Fix typo for `lrv-u-align-items-flex-end` utility
+* larva-js - Add support for pagedots to Flickity js.
+
+## 1.14.0 - 07-20-2022
+* larva-patterns - Add `profile-block` module.
+* larva-patterns - Updating `secondary-stories` kicker classes.
+* larva-patterns - Add tabindex support to `o-nav` object.
+* larva-patterns - Add `lrv-js-Navigable` class to `pmc-footer` module to make it accessible.
+* larva-js - Add `Navigable` js to support keyboard tab navigation for `o-nav` object.
+* larva-tokens - Update Rollingstone-2022 tokens as per new styleguide.
+* twig-to-php-parser - Addresses phpcs concerns, general cleanup.
+* twig-to-php-parser - Updates parse support for nested if and foreach loops.
+
+## 1.12.0 - 07-08-2022
+* larva-patterns - Update `c-figcaption` module to add support for image credit text with html markup.
+
+## 1.11.0 - 07-08-2022
+* larva-tokens - Adjust font size, font weight and line height in variety tokens.
+
+## 1.10.0 - 07-05-2022
+* larva-patterns - Add `section-heading` module.
+* larva-js - Remove `Header` js.
+* larva-css - Remove `js-Header` css.
+* larva-patterns - Add support for `c-tagline` to `o-author` object.
+
+## 1.9.0 -06-21-2022
+* larva-patterns - Add `featured-video` module.
+* larva-objects - Add `o-video-card` and `o-category-link` object.
+* larva-patterns - Update `linked-gallery` module to add support for thumbnails url.
+* larva-tokens - Add a new `font-family-accent` token to VIBE.
+
+## 1.8.0 - 06-20-2022
+* larva-tokens - Adjust font size, font weight and line height in variety tokens.
+
+## 1.7.2 - 06-13-2022
+* lava-patterns - Add span option to `o-icon-button` object.
+* larva-patterns - Add `linked-gallery` module.
+* larva-css - Add css `lrv-u-left-50p@desktop`, `lrv-u-position-absolute@desktop`, `lrv-u-top-n33@desktop`, `lrv-u-transform-translateX-n50p@desktop` & `lrv-u-width-38p` utility classes.
+
+## 1.7.1 - 06-09-2022
+* larva-js - Videoshowcase JWplayer add support for autoplay.
+
+## 1.7.0 - 06-08-2022
+* larva-patterns - Updated `secondary-stories` prototype.
+* larva-css - Add `lrv-u-flex-direction-row-reverse`, `lrv-u-flex-direction-row\@desktop-xl` utility classes.
+* larva-patterns - Add `author-blurb` module.
+* larva-css - Add `lrv-u-border-b-1@tablet`, `lrv-u-display-table\@desktop`, `lrv-u-flex\@desktop-max`, `lrv-u-flex-direction-column\@desktop-max`, `lrv-u-order-n1\@mobile-max` utility classes.
+* larva-patterns - update `content-showcase` module and its `the-moth` variant.
+
+## 1.6.1 - 06-08-2022
+* larva-patterns - Fix `production credits` module for pipeline.
+
+## 1.6.0 - 6-07-2022
+* larva-patterns - Add `production credits` module.
+* larva-patterns - Add `page-404` module.
+* larva-css - Add utility classes for `padding`.
+
+## 1.5.0 - 6-06-2022
+* larva-js - Fix JS issue with VideoShowcase.
+
+## 1.4.0 - 6-03-2022
+* larva-patterns - Add `narrow` variant for `paragraph` module.
+* larva-patterns - Add `xl` variant for `top-stories` module.
+* larva-patterns - Add `article-timestamp` module.
+* larva-patterns - Updates to  `story-featured-quote` module.1
+
+## 1.3.0 - 5-25-2022
+* larva-css - Add `lrv-u-filter-grayscale-100` class.
+* larva-patterns - Add `hero-image-story` module.
+* larva-css - Add `lrv-a-glue--b-unset\@mobile-max` class.
+* larva-css -Add utility classes for `padding` and `a-screen-reader-only`
+* larva-patterns - Use `article_kicker` in featured stories module.
+
+## 1.2.0 - 05-24-2022
+* larva-patterns - Add classes and update README.md for `age-gate` module.
+
+## 1.1.3 - 05-23-2022
+* larva-patterns - Add `buy-now` module.
+
+## 1.1.2 - 05-19-2022
+* larva-patterns - Add SVG support for Article Kicker module.
+* larva-patterns - Add `secondary-stories` module.
+* larva-css - Add utility classes for `crop`, `space-children`, `border`, `margin`, `padding` and `flex`.
+* larva-patterns - Add `breaking-news` module.
+
+## 1.1.1 - 05-17-2022
+* all - Add comment with helpful info for regression test failures.
+* larva-patterns - Add `special-coverage` module.
+
+## 1.1.0 - 05-17-2022
+* larva-css - Add utility classes for `overflow` and `flex-shrink`.
+* larva-patterns - Add `the-moth` variant for `content-showcase` module.
+* larva-css - Add `lrv-u-justify-content-center\@tablet` class.
+* larva-patterns - Add `top-stories` module.
+
+## 1.0.0 - 05-16-2022
+* larva - Introduce additional Larva CLI commands.
+
+## 0.7.5 - 05-16-2022
+* larva-patterns - Add `banner` module.
+* larva-patterns - Add `o-header` object support in `story-grid` module
+* larva-patterns - Add `c-span` object support in `o-header` object.
+* larva-css - Add `lrv-a-children-border-horizontal@desktop`, `lrv-a-glue--b-n1`, `lrv-a-glue--r-50p`, `lrv-a-glue--l-50p` utility classes.
+* larva-tokens - Adjusted artinamerica tokens for hub support
+* larva-css - Add `lrv-a-crop-1x1@mobile-max` class.
+* larva-patterns - Render srcset and sizes attributes instead data-srcset and data-sizes for images that aren't lazy.
+* larva-patterns - Add flag to skip lazy loading an image that appears in the initial viewport.
+* larva-js - Update jwplayer script to use pmc_jwplayer script
+
+## 0.7.4 - 05-12-2022
+* larva-patterns - Add `expandable-search`, `header-menu`, `header-sticky`, `header`, `search-form`, `read-next` modules.
+* larva-patterns - Add `mega-menu-content`, `mega-menu-footer-subscribe`, `mega-menu-footer`, `mega-menu-item`, `mega-menu` modules.
+* larva-patterns - Add `o-account-menu`, `o-header-buttons` objects.
+* larva-css - Add utility classes for `border`, `box`, `display`, `font-size`, `height`, `letter-spacing`, `width`, `padding`, `transform` and `vertical-align`.
+* larva-js - Add expandable search and header JS.
+
+## 0.7.3 - 05-12-2022
+* larva-patterns - Set default input attributes in `age-gate` module for improved accessibility
+* larva-patterns - Add `a-font` classes and additional options in `age-gate` module
+
+## 0.7.2 - 05-10-2022
+* larva-patterns - Remove code comment in `o-input-group` pattern that's causing phpcs issues
+*
+## 0.7.1 - 05-10-2022
+* larva-patterns - Suffix relevant `c-input` component variables with `_attr`
+* larva-patterns - Change component name from `c-text-input` to `c-input` to prevent twig-to-php parser issues
+* larva-patterns - Change object name from `o-text-input-group` to `o-input-group` to prevent twig-to-php parser issues
+
+## 0.7.0 - 05-10-2022
+* larva-css - Add `lrv-a-glue\@mobile-max`,`lrv-a-span3@desktop`, `lrv-u-border-b-1@desktop`, `lrv-u-border-b-1\@mobile-max`, `lrv-a-children-border-vertical\@mobile-max` utility class.
+* larva-css - Add `lrv-a-cols2@desktop-xl` utility classes.
+* larva-patterns - Add Featured stories module
+* larva-patterns - Add o-sub-header object and sub-header module
+* larva-patterns - Wrap heading module inside a if conditon.
+* larva-patterns - Add outer tag wrapper to o-nav title element.
+* larva-patterns - Add `story-featured-quote` module.
+* larva-patterns - Add `c-text-input` component.
+* larva-patterns - Add `o-text-input-group` object.
+* larva-patterns - Add `age-gate` module.
+* larva-patterns - Add README and `js-` classes to `age-gate` module.
+* larva-patterns - Add support for article kicker to story module.
+* larva-patterns - Add `story_after_wp_action` action to story module.
+* larva-svg - Add white pmc logo.
+
+## 0.6.5 - 05-02-2022
+* larva-tokens - Updated font size for primary xs and font weight for secondary L & M token in rollingstone-2022.
+* larva-patterns - Add support for article kicker to story module.
+* larva-patterns - Add `story_after_wp_action` action to story module.
+* larva-css - Add `lrv-a-cols2@desktop-xl` utility classes.
+
+## 0.6.4 - 04-28-2022
+* larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
+* larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
+
+## 0.6.3 - 04-21-2022
+* larva-patterns - Add `brand-most-popular` module.
+* larva-patterns - Update `newswire` module and add support for slider.
+* larva-css - Add `a-grid` classes.
+* larva-css - Add `lrv-u-font-size-16@mobile-max` class
+* larva-css - Add `.lrv-u-border-l-00\@mobile-max`, `.lrv-u-border-r-00\@mobile-max`, `.lrv-u-border-t-1\@mobile-max` & `.lrv-u-border-b-00\@mobile-max` classes.
+* larva-css - Add utility classes for `width`, `border` and `flex-wrap`.
+* larva-patterns - Add `footer-magazine-image` & `footer-button-list` module.
+
+## 0.6.2 - 04-20-2022
+* larva-patterns - Update `injected-related-content` module.
+* larva-patterns - `story-grid` module changes.
+
+## 0.6.1 - 04-19-2022
+* twig-to-php-parser - Modify generated comment in php as a proper fileDoc to adhere to standards.
+
+## 0.6.0 - 04-13-2022
+* larva-tokens - Added artinamerica tokens for hub support
+* larva-tokens - Updated RS token as per desktop_xl changes.
+* all - Added Support for Basic ( xxxl, xxl, xl, l, m, s, xs, xxs, xxxs ), Body ( xxl, xl, l, m, s, xs, xxs ), Primary (xxl), secondary (xxl, xl, xs, xxs ) font variations into larva-tokens.
+* larva-patterns - Add `content-showcase` module.
+* larva-css - Add `u-flex` algorithm.
+* larva-css - Add `lrv-a-wrapper-100vw` class for mobile.
+* larva-css - Add `lrv-u-border-l-1` & `lrv-u-border-t-1` classes for desktop, desktop-xl & mobile, and `lrv-u-border-t-2`.
+* all - Add node version check to install script, and add refresh dependencies helper script.
+## 0.5.8 - 04-08-2022
+* larva-patterns - Fix `article-callout` twig template whitespace.
+* larva-css - Adds an algorithm and utility to Larva which can be used to apply text-decoration styles on all states.
+## 0.5.7 - 04-05-2022
+* larva-patterns - Add `article-callout` module.
+* larva-patterns - Update `c-email-field` component and 'newsletter' module to improve label and input accessibility.
+* all - Add github action on workflow-dispatch to update the visual regression tests in the same environment in which they are run
+* larva - Lock the twing package to version 5.1.0 to temporarily work around bug in library.
+
+## 0.5.6 - 03-29-2022
+* larva-tokens - Add desktop_xl token values in typography.json
+* larva-tokens - Add desktop_xl breakpoint in font-data.js
+* larva-css - Update css generator script to include desktop_xl breakpoint using media queries
+* larva-css - Update test for generated css
+* larva-css - Add `lrv-u-width-50` & `lrv-u-width-35\@mobile-max`.
+* larva-patterns - Add `author` and `author-details` module.
+* larva-js - Add popover js
+* larva-tokens - Update grey color for rollingstone-2022.
+* larva-patterns - Add `article-title` module.
+* larva-patterns - Add `article-kicker` module.
+* larva-patterns - Add `article-excerpt` module.
+* larva-patterns - Add `brands-most-popular` module.
+* larva-patterns - Update `newswire` module.
+* larva-css - Add a-counter algorithm.
+
+## 0.5.5 - 03-03-2022
+* larva-css - Add border top utility.
+
+## 0.5.4 - 03-03-2022
+* larva-patterns - Add `injected-related-content` module.
+* root - Fixes formatting of code block.
+* larva-patterns - Add story-grid.river variant
+* larva-css - Add text decoration utility and desktop-xl-max for lrv-a-hidden
+* larva-patterns - Add `newsletter` module.
+* all - Dependendabot updates
+
+## 0.5.3 - 02-24-2022
+* larva-patterns - Add `pullquote` module.
+* larva-patterns - Add width class to button module
+* larva-tokens- Update fallback fonts in rollingstone-2022
+
+## 0.5.2 - 02-15-2022
+* larva-tokens - Added Rollingstone 2022 tokens
+
+## 0.5.1 - 02-09-2022
+* larva-tokens - Add compat tokens for variety. Change entries/variety.compat.scss to use tokens.
+* larva-tokens - Updated background-color-brand-secondary token for rollingstone-2018.
+
+## 0.5.0 - 01-27-2022
+* larva-css - Fix 2x1 and 2x3 crop algorithms, introduce 3x2 crop algorithm
+* larva-patterns - add support for `markup` filter to output escaped content in loops
+* larva-tokens - Add tokens for WWD's Digital Daily feature
+* larva-tokens - Update default font family values to be Arial
+* root - Add workflow for Backstop testing
+
+## 0.4.4 - 01-04-2022
+* larva-css - Remove generic a:hover style.
+* larva-patterns - Add property-specific values for button module.
 
 ## 0.4.3 - 12-16-2021
 * larva-patterns - Add conditions around includes in vlanding-video-showcase.

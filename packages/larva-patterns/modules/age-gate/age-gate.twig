@@ -1,0 +1,37 @@
+<div class="age-gate // js-AgeGate {{ age_gate_class }}">
+	<div class="age-gate-inner // {{ age_gate_inner_class }}">
+		<div class="age-gate-header // {{ age_gate_header_class }}">
+			{% if c_svg_header %}
+				{% include "@larva/components/c-svg/c-svg.twig" with c_svg_header %}
+			{% endif %}
+			{% if c_lazy_image_header %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image_header %}
+			{% endif %}
+			{% if c_heading %}
+				{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+			{% endif %}
+		</div>
+		<div class="age-gate-form // {{ age_gate_form_class }}">
+			<form class="js-AgeGateForm">
+				{% if o_input_group %}
+					{% include "@larva/objects/o-input-group/o-input-group.twig" with o_input_group %}
+				{% endif %}
+				<div class="age-gate-error // js-AgeGateError {{ age_gate_error_class }}"></div>
+				<div class="age-gate-button-wrapper">
+					{% include "@larva/components/c-button/c-button.twig" with c_button %}
+				</div>
+			</form>
+		</div>
+		<div class="age-gate-footer // {{ age_gate_footer_class }}">
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
+			{% if c_svg_footer %}
+				{% include "@larva/components/c-svg/c-svg.twig" with c_svg_footer %}
+			{% endif %}
+			{% if c_lazy_image_footer %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image_footer %}
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+@import 'setup';
+
+.lrv-a-children-link-decoration-underline {
+	& > a {
+		text-decoration: underline;
+	}
+}
+
+.lrv-a-children-link-decoration-underline\:hover {
+	& > a:hover {
+		text-decoration: underline;
+	}
+}

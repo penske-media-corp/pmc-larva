@@ -1,0 +1,7 @@
+{% if o_sub_header %}
+	<div class="sub-header // {{ sub_header_classes }} lrv-u-padding-t-1 lrv-u-padding-t-2@desktop-xl lrv-u-padding-b-1@mobile-max">
+		<div class="{{ sub_header_inner_classes }}">
+			{% include "@larva/objects/o-sub-header/o-sub-header.twig" with o_sub_header %}
+		</div>
+	</div>
+{% endif %}

@@ -1,0 +1,90 @@
+
+$bbesp-map: (
+  'border-color-grey-lightest': (rgb(237, 235, 235)),
+  'border-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'border-color-grey-light': (rgb(213, 213, 213)),
+  'border-color-grey-dark': (rgb(76, 81, 103)),
+  'border-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'border-color-brand-secondary': (rgb(18, 118, 181)),
+  'border-color-grey': (rgb(130, 137, 161)),
+  'border-color-brand-primary-light': (rgb(236, 28, 36)),
+  'border-color-white': (rgb(255, 255, 255)),
+  'border-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'border-color-brand-primary': (rgb(0, 158, 218)),
+  'background-color-grey-light': (rgb(213, 213, 213)),
+  'background-color-grey-lightest': (rgb(237, 235, 235)),
+  'background-color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'background-color-brand-secondary-light': (rgb(0, 0, 0)),
+  'background-color-grey-dark': (rgb(76, 81, 103)),
+  'background-color-grey': (rgb(130, 137, 161)),
+  /* The background color of the main body of the site. */
+  'background-color-body': (rgb(255, 255, 255)),
+  'background-color-brand-secondary': (rgb(18, 118, 181)),
+  'background-color-black': (rgb(16, 17, 25)),
+  'background-color-brand-primary-light': (rgb(236, 28, 36)),
+  'background-color-brand-primary-dark': (rgb(236, 28, 36)),
+  'background-color-white': (rgb(255, 255, 255)),
+  'background-color-brand-primary': (rgb(0, 158, 218)),
+  'background-color-grey-darkest': (rgb(43, 46, 60)),
+  'color-brand-secondary': (rgb(18, 118, 181)),
+  'color-black': (rgb(16, 17, 25)),
+  'color-brand-primary-light': (rgb(236, 28, 36)),
+  'color-brand-primary-dark': (rgb(236, 28, 36)),
+  'color-white': (rgb(255, 255, 255)),
+  'color-brand-primary': (rgb(0, 158, 218)),
+  'color-grey-light': (rgb(213, 213, 213)),
+  'color-brand-secondary-dark': (rgb(0, 0, 0)),
+  'color-brand-secondary-light': (rgb(0, 0, 0)),
+  'color-grey-dark': (rgb(76, 81, 103)),
+  'color-grey': (rgb(130, 137, 161)),
+  /* The webfont for font-family-primary. */
+  'font-family-primary-fancy': ('neue-haas-grotesk-display', 'Arial Narrow', Arial, sans-serif),
+  /* The fallback font for font-family-primary. */
+  'font-family-primary': ('Arial Narrow', Arial, sans-serif),
+  /* The webfont for font-family-secondary. */
+  'font-family-secondary-fancy': ('neue-haas-grotesk-display'),
+  /* Fallback from font-family-secondary */
+  'font-family-secondary': (Arial, serif),
+  'font-family-body': (Helvetica, Arial, sans-serif),
+  'font-family-basic': (Helvetica, Arial, sans-serif),
+  'font-weight-light': (300),
+  'font-weight-normal': (400),
+  'font-weight-bold': (700),
+  'line-height-small': (1.1),
+  'line-height-normal': (1.35),
+  'line-height-copy': (1.5),
+  'line-height-large': (1.85),
+  /* Used for margins and padding only. */
+  'spacing-00': (0),
+  /* Used for margins and padding only. */
+  'spacing-025': (0.25rem),
+  /* Used for margins and padding only. */
+  'spacing-050': (0.5rem),
+  /* Used for margins and padding only. */
+  'spacing-075': (0.75rem),
+  /* Used for margins and padding only. */
+  'spacing-1': (1rem),
+  /* Used for margins and padding only. */
+  'spacing-125': (1.25rem),
+  /* Used for margins and padding only. */
+  'spacing-150': (1.5rem),
+  /* Used for margins and padding only. */
+  'spacing-2': (2rem),
+  'color-brand-accent-green': (rgb(0, 221, 161)),
+  'border-color-brand-accent-light-orange': (rgb(248, 201, 154)),
+  'background-color-brand-accent-light-orange': (rgb(248, 201, 154)),
+  'color-grey-darkest': (rgb(43, 46, 60)),
+  'color-brand-accent-orange': (rgb(239, 132, 26)),
+  'border-color-black': (rgb(16, 17, 25)),
+  'background-color-brand-accent-green': (rgb(0, 221, 161)),
+  'color-grey-lightest': (rgb(237, 235, 235)),
+  'border-color-brand-accent-green': (rgb(0, 221, 161)),
+  /* The fallback for the accent font */
+  'font-family-accent': ('Arial Narrow', Arial, sans-serif),
+  'color-brand-accent-light-orange': (rgb(248, 201, 154)),
+  'border-color-brand-accent-orange': (rgb(239, 132, 26)),
+  'background-color-brand-accent-orange': (rgb(239, 132, 26)),
+  'border-color-grey-darkest': (rgb(43, 46, 60)),
+  /* The accent webfont, loaded async */
+  'font-family-accent-fancy': ('acumin-pro-condensed'),
+);

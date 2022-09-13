@@ -1,9 +1,13 @@
 {
   "name": "@penskemediacorp/pmc-larva",
-  "version": "1.0.0",
+  "version": "1.13.0",
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": "^14.0.0"
+  },
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
-    "larva": "NODE_PORT=3001 packages/larva/bin/larva.js server --watch ./packages -e twig,js,html",
+    "larva": "packages/larva/bin/larva.js server --watch ./ -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "npm run prod:scss && npm run prod:js && npm run build-icons && npm run build-tokens && npm run sync-build",
     "prod:scss": "npm --prefix=packages/larva-css run build && packages/larva/bin/larva.js prod-scss --generate-important-variants && npm run sync-build",
@@ -20,12 +24,18 @@
     "write-json": "packages/larva/bin/larva.js write-json larva && packages/larva/bin/larva.js write-json",
     "build-vercel": "sh scripts/build-vercel.sh",
     "build-icons": "packages/larva/bin/larva.js build-icons",
+    "build-svg": "svgo -f src/svg -o build/svg",
     "build-html": "packages/larva/bin/larva.js build-html larva && packages/larva/bin/larva.js build-html project",
     "build-tokens": "sh scripts/tokens.sh",
-    "sync-tokens": "mkdir -p build/tokens && cp -r packages/larva-tokens/build/ build/tokens/",
-    "sync-public": "mkdir -p packages/larva/public && cp -r public packages/larva",
-    "sync-built-js": "mkdir -p build/js/standalone && rm -r build/js/standalone && cp -r packages/larva-js/build build/js/standalone",
-    "sync-build": "npm run sync-public && npm run sync-tokens && npm run sync-built-js && mkdir -p packages/larva/build && rm -r packages/larva/build && cp -r build/ packages/larva/build"
+    "sync-tokens": "rm -rf build/tokens/* && mkdir -p build/tokens && cp -r packages/larva-tokens/build/* build/tokens/",
+    "sync-public": "rm -rf packages/larva/public/* && mkdir -p packages/larva/public && cp -r public/* packages/larva/public/",
+    "sync-built-js": "rm -rf build/js/standalone/* && mkdir -p build/js/standalone && cp -r packages/larva-js/build/* build/js/standalone/",
+    "sync-build": "npm run sync-public && npm run sync-tokens && npm run sync-built-js && rm -rf packages/larva/build/* && mkdir -p packages/larva/build && cp -r build/* packages/larva/build/",
+    "link-all": "npm run prod && npm run link-larva && npm run link-patterns && npm run link-css && npm run link-js",
+    "link-larva": "cd packages/larva && npm link",
+    "link-patterns": "cd packages/larva-patterns && npm link",
+    "link-css": "cd packages/larva-css && npm link",
+    "link-js": "cd packages/larva-js && npm link"
   },
   "bin": {
     "larva": "packages/larva/bin/larva.js"
@@ -36,9 +46,6 @@
     "public",
     "larva.config.js"
   ],
-  "devDependencies": {
-    "backstopjs": "^6.0.1"
-  },
   "dependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -58,7 +65,8 @@
     "clean-webpack-plugin": "^3.0.0",
     "concurrently": "^5.2.0",
     "cross-spawn": "^7.0.3",
-    "eslint": "^7.4.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-jest": "^26.7.0",
     "exec-php": "0.0.5",
     "express": "^4.17.1",
     "flickity": "^2.2.1",
@@ -74,18 +82,22 @@
     "jest": "^24.8.0",
     "lerna": "^3.22.1",
     "lodash.clonedeep": "^4.5.0",
-    "marked": "^2.0.0",
+    "marked": "^4.0.10",
     "node-sass": "^6.0.0",
     "node-sass-glob-importer": "^5.3.2",
     "nodemon": "^2.0.4",
-    "prettier": "npm:wp-prettier@^2.2.1-beta-1",
+    "prettier": "npm:wp-prettier@^2.6.2",
     "sass-true": "^5.0.0",
     "stylelint": "^13.6.1",
     "svg-sprite": "^1.5.0",
     "svgo": "^1.3.2",
     "through2": "^4.0.2",
-    "twing": "^5.0.2",
+    "twing": "5.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "backstopjs": "^6.0.1",
+    "eslint-config-prettier": "^8.5.0"
   }
 }

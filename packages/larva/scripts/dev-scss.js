@@ -10,11 +10,6 @@ const gulpfilePath = path.join( __dirname, './config/gulpfile.js' );
 
 spawn.sync(
 	'./node_modules/.bin/gulp',
-	[
-		'--gulpfile',
-		gulpfilePath,
-		'--cwd',
-		process.cwd(),
-		... cliArgs
-	], { stdio: 'inherit' }
+	[ '--gulpfile', gulpfilePath, '--cwd', process.cwd(), ...cliArgs ],
+	{ stdio: 'inherit' }
 );

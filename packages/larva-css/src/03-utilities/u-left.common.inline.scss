@@ -1,0 +1,11 @@
+@import 'setup';
+
+.lrv-u-left-0 {
+	left: 0;
+}
+
+@include pmc-breakpoint(desktop) {
+	.lrv-u-left-50p\@desktop {
+		left: 50%;
+	}
+}

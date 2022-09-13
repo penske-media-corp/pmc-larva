@@ -16,6 +16,10 @@
 			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
 		{% endif %}
 
+		{% if c_figcaption %}
+			{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
+		{% endif %}
+
 		{% if o_indicator %}
 			{% include "@larva/objects/o-indicator/o-indicator.twig" with o_indicator %}
 		{% endif %}
@@ -27,6 +31,16 @@
 	<div class="o-card__content {{ o_card_content_classes }}">
 		{% if o_span_group %}
 			{% include "@larva/objects/o-span-group/o-span-group.twig" with o_span_group %}
+		{% endif %}
+
+		{% if c_svg %}
+			{% include "@larva/components/c-svg/c-svg.twig" with c_svg %}
+		{% endif %}
+
+		{% if article_kicker %}
+			<div class="article_kicker_outer // {{ article_kicker_outer_classes }}">
+				{% include "@larva/modules/article-kicker/article-kicker.twig" with article_kicker %}
+			</div>
 		{% endif %}
 
 		{% if c_span %}
