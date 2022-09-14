@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-patterns - Modify `banner` module to accomodate `c_tagline` component.
+* larva-patterns - Update `section-heading` module padding and width.
 
 ## 1.28.0 09-12-2022
 * larva-css - Revert changes which we had done for CSS generator to use desktop font size on side skins.
