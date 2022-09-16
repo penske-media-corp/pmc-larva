@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+* larva-patterns - Add `newsletter_cta_inner_classes` variable to newsletter CTA inner wrapper.
+
 ## 1.30.0 09-15-2022
 * larva-patterns - Update `paragraph` module to include animation class.
 

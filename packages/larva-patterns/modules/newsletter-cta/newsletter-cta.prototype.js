@@ -23,6 +23,7 @@ c_button.c_button_classes +=
 module.exports = {
 	newsletter_cta_classes:
 		'lrv-u-margin-tb-125 lrv-u-margin-tb-150@desktop-xl lrv-u-padding-tb-2 lrv-u-flex lrv-u-justify-content-space-between lrv-u-border-t-1 lrv-u-border-b-1 lrv-u-align-items-center lrv-u-flex-direction-column@mobile-max lrv-u-padding-a-2@mobile-max',
+	newsletter_cta_inner_classes: 'lrv-u-text-align-center@mobile-max',
 	c_heading,
 	c_tagline,
 	c_button,
