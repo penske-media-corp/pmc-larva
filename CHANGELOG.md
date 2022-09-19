@@ -5,8 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.31.0 09-19-2022
 * larva-patterns - Add `newsletter_cta_inner_classes` variable to newsletter CTA inner wrapper.
-* larva-patterns - Add `c_timestamp_markup` varaiable to timestamp component.
+* larva-patterns - Add `c_timestamp_markup` variable to timestamp component.
 * larva-patterns - Update `heading` & `post-content-image` module to include animation class.
 
 ## 1.30.0 09-15-2022
