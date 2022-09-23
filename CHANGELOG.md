@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - New `ecom-product-card` module.
 * larva-css - Add new `lrv-u-text-decoration-line-through` utility class.
 
+## 1.31.0 09-19-2022
+* larva-patterns - Add `newsletter_cta_inner_classes` variable to newsletter CTA inner wrapper.
+* larva-patterns - Add `c_timestamp_markup` variable to timestamp component.
+* larva-patterns - Update `heading` & `post-content-image` module to include animation class.
+
 ## 1.30.0 09-15-2022
 * larva-patterns - Update `paragraph` module to include animation class.
 
