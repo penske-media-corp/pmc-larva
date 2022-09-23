@@ -1,8 +1,11 @@
 <footer class="mega-menu__footer // {{ mega_menu_footer_classes }} ">
 	<div class="mega-menu__footer-inner // {{ mega_menu_footer_inner_classes }} ">
-		<section class="mega-menu__footer-subscribe // {{ mega_menu_footer_subscribe_classes }} ">
-			{% include "@larva/modules/mega-menu-footer-subscribe/mega-menu-footer-subscribe.twig" with mega_menu_subscribe %}
-		</section>
+
+		{% if mega_menu_subscribe %}
+			<section class="mega-menu__footer-subscribe // {{ mega_menu_footer_subscribe_classes }} ">
+				{% include "@larva/modules/mega-menu-footer-subscribe/mega-menu-footer-subscribe.twig" with mega_menu_subscribe %}
+			</section>
+		{% endif %}
 		<section class="mega-menu__footer-social // {{ mega_menu_footer_social_classes }} ">
 			{% include "@larva/modules/heading/heading.twig" with social_heading %}
 			<div class="mega-menu__social-list // {{ mega_menu_social_list_classes }}">
@@ -11,9 +14,28 @@
 		</section>
 		<section class="mega-menu__footer-form // {{ mega_menu_footer_form_classes }} ">
 			{% include "@larva/modules/heading/heading.twig" with newsletter_heading %}
-			<div class="lrv-u-flex-grow-1 lrv-u-width-100p">
+			<div class="lrv-u-flex-grow-1 lrv-u-width-100p {{ mega_menu_email_capture_form_classes }}">
 				{% include "@larva/objects/o-email-capture-form/o-email-capture-form.twig" with o_email_capture_form %}
+
+				{% if c_tagline_terms %}
+					{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_terms %}
+				{% endif %}
 			</div>
 		</section>
+	</div>
+
+	<div class="mega-menu__footer-secondary // {{ mega_menu_footer_secondary_classes }}" >
+		{% if o_nav %}
+			<div class="mega-menu__footer-nav // {{ mega_menu_footer_nav_outer_classes }} ">
+				{% include "@larva/objects/o-nav/o-nav.twig" with o_nav %}
+			</div>
+		{% endif %}
+
+		{% if c_icon %}
+			<div class="mega-menu__footer-copyright // {{ mega_menu_footer_copyright_outer_classes }} ">
+				{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
+				<small class="mega-menu__footer-copyright-text {{ mega_menu_footer_copyright_textclasses_classes }}">{{ mega_menu_footer_copyright_text }}</small>
+			</div>
+		{% endif %}
 	</div>
 </footer>
