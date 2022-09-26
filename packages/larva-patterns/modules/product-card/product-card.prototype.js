@@ -28,7 +28,7 @@ c_dek.c_dek_markup = 'NordicTrack went a similar route as Bowflex with their S22
 c_dek.c_dek_classes = 'lrv-u-order-100 lrv-u-margin-t-125 lrv-u-margin-t-2@mobile-max lrv-a-font-body-xxl lrv-u-margin-b-050';
 
 module.exports = {
-    ecom_product_card_wrapper_classes: 'lrv-u-padding-tb-125',
+    product_card_wrapper_classes: 'lrv-u-padding-tb-125',
 	c_lazy_image,
     c_figcaption,
     c_title,

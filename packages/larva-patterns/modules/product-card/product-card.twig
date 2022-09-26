@@ -1,6 +1,6 @@
-<div class="ecom-product-card // {{ ecom_product_card_classes }}">
-	<div class="{{ ecom_product_card_wrapper_classes }}">
-		<div class="{{ ecom_product_card_image_classes }}">
+<div class="product-card // {{ product_card_classes }}">
+	<div class="{{ product_card_wrapper_classes }}">
+		<div class="{{ product_card_image_classes }}">
 			{% if best_deal_icon %}
 				{% include "@larva/components/c-svg/c-svg.twig" with best_deal_icon %}
 			{% endif %}
@@ -13,7 +13,7 @@
 				{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
 			{% endif %}
 		</div>
-		<div class="{{ ecom_product_card_details_classes }}">
+		<div class="{{ product_card_details_classes }}">
 			{% if article_kicker %}
 				{% include "@larva/modules/article-kicker/article-kicker.twig" with article_kicker %}
 			{% endif %}
