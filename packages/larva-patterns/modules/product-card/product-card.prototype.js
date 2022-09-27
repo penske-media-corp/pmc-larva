@@ -19,9 +19,11 @@ c_tagline.c_tagline_text = 'Powerful, iFit ready, and priced right!';
 c_tagline.c_tagline_classes = 'lrv-a-font-body-xxl lrv-u-margin-t-125 lrv-u-margin-b-00';
 
 c_button.c_button_classes = 'lrv-u-margin-t-125 lrv-a-font-basic-m lrv-a-unstyle-link lrv-u-display-block';
-c_button.c_button_inner_classes = 'lrv-u-border-b-2 lrv-u-border-t-2 lrv-u-border-l-1 lrv-u-border-r-1 lrv-u-padding-tb-025 lrv-u-text-transform-uppercase lrv-a-icon lrv-a-icon-before lrv-u-align-items-start lrv-u-padding-lr-050 lrv-u-background-color-brand-primary:hover';
+c_button.c_button_inner_classes = 'lrv-u-border-b-2 lrv-u-border-t-2 lrv-u-border-l-1 lrv-u-border-r-1 lrv-u-padding-tb-050 lrv-u-text-transform-uppercase lrv-a-icon lrv-a-icon-before lrv-u-align-items-start lrv-u-padding-lr-050 lrv-u-background-color-brand-primary:hover';
 c_button.c_button_text = 'Subscribe $65.99';
 c_button.c_button_url = '#';
+
+const buy_now_buttons = [ c_button, c_button ];
 
 c_dek.c_dek_text = false;
 c_dek.c_dek_markup = 'NordicTrack went a similar route as Bowflex with their S22i cycle.Instead of the regular fixed position, the S22i can adjust for incline (up to 20%) and decline (down to -10%) for a more realistic ride and better muscle engagement. The kicker with this feature is that trainers can digitally adjust your bike’s incline/decline in real-time during a live class. The S22i’s construction is top-quality with a steel frame and a solid 32-pound flywheel. The bike also uses NordicTrack’s SMR Silent Magnetic Resistance system which improves fluidity while making the bike quieter as well. NordicTrack offers both live, studio-like classes as well as a library of on-demand sessions through their iFit membership. You also get off-bike exercises including strength training, meditation and mindfulness sessions with a swivel of the screen. This iFit service has somewhat of a leg up on other brands because you get a whole year free to test it out. The classes, along with a swath of exercise metrics, are shown on a large, crisp 22-inch display. Among these stats is heart rate, which the bike measures via hand pulse sensors or a separate Bluetooth-connected monitor.';
@@ -33,6 +35,6 @@ module.exports = {
     c_figcaption,
     c_title,
     c_tagline,
-    c_button,
+    buy_now_buttons,
     c_dek,
 };

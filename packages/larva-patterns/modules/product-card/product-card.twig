@@ -34,9 +34,13 @@
 				{% include "@larva/components/c-span/c-span.twig" with c_span %}
 			{% endif %}
 
-			{% if c_button %}
-				{% include "@larva/components/c-button/c-button.twig" with c_button %}
-			{% endif %}
+			<div class="buy-now-buttons {{ product_card_buy_now_buttons_classes }}">
+				{% if buy_now_buttons %}
+					{% for c_button in buy_now_buttons %}
+						{% include "@larva/components/c-button/c-button.twig" with c_button %}
+					{% endfor %}	
+				{% endif %}
+			</div>
 
 			{% if c_dek %}
 				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
