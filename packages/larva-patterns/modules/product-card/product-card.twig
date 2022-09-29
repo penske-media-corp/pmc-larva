@@ -26,17 +26,28 @@
 				{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
 			{% endif %}
 
-			{% if paragraph %}
-				{% include "@larva/modules/paragraph/paragraph.twig" with paragraph %}
-			{% endif %}
-
-			{% if c_span %}
-				{% include "@larva/components/c-span/c-span.twig" with c_span %}
-			{% endif %}
-
-			{% if c_button %}
-				{% include "@larva/components/c-button/c-button.twig" with c_button %}
-			{% endif %}
+			<div class="buy-now-buttons {{ product_card_buy_now_buttons_classes }}">
+				{% if buy_now_buttons %}
+					{% for c_button in buy_now_buttons %}
+						<div class="{{ product_card_buy_now_button_wrapper_classes }}">
+							{% if product_card_price_outside %}
+								<p class="{{ product_card_price_outside_classes }}">
+									{% if c_button['current_price'] %}
+										{% include "@larva/components/c-span/c-span.twig" with c_button['current_price'] %}
+									{% endif %}
+									{% if c_button['original_price'] %}
+										{% include "@larva/components/c-span/c-span.twig" with c_button['original_price'] %}
+									{% endif %}
+									{% if c_button['discount'] %}
+										{% include "@larva/components/c-span/c-span.twig" with c_button['discount'] %}
+									{% endif %}	
+								</p>
+							{% endif %}
+							{% include "@larva/components/c-button/c-button.twig" with c_button %}
+						</div>		
+					{% endfor %}
+				{% endif %}
+			</div>
 
 			{% if c_dek %}
 				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
