@@ -1,9 +1,15 @@
-<li class="mega-menu-item // mega-menu__parent-list-item {{ mega_menu_item_classes }} ">
+<li class="mega-menu-item // mega-menu__parent-list-item {{ mega_menu_item_classes }} " data-collapsible="collapsed" >
 	<div class="mega-menu__item-link // {{ mega_menu_item_link_classes }} ">
 		{% include "@larva/components/c-link/c-link.twig" with c_link %}
+
+		{% if c_icon %}
+			<button class="mega_menu__item-button // {{ mega_menu_item_button_classes }}" data-collapsible-toggle="always-show">
+				{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
+			</button>
+		{% endif %}
 	</div>
 
-	<ul class="mega-menu__child-list // {{ mega_menu_child_list_classes }} ">
+	<ul class="mega-menu__child-list // {{ mega_menu_child_list_classes }} " data-collapsible-panel="" data-collapsible-breakpoint="mobile-only">
 		{% for item in mega_menu_item_children %}
 			<li class="mega-menu__child-list-item ">
 				{% include "@larva/components/c-link/c-link.twig" with item %}
