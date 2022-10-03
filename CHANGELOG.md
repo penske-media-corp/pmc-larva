@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.33.0 09-29-2022
+* larva-patterns - New `product-card` module.
+* larva-css - Add new `lrv-u-text-decoration-line-through` utility class.
+* larva-patterns - Update `product-card` module and add support for multiple buy now buttons.
+
 ## 1.32.0 09-27-2022
 * larva-patterns - Update `mega-menu-footer` and `mega-menu-item` to include secondary footer and button respectively.
 
