@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-patterns - Add New `table-of-contents` module and add `c_nav_link_title_attr` and `c_nav_link_markup` properties to c-nav-link component.
 
 ## 1.34.0 10-03-2022
 * larva-patterns - New `c_tagline_terms` property for `footer-newsletter`, `mega-menu-footer`, and `newsletter` (widget) modules (for reCAPTCHA/newsletter compatibility)
