@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.34.0 10-03-2022
+* larva-patterns - New `c_tagline_terms` property for `footer-newsletter`, `mega-menu-footer`, and `newsletter` (widget) modules (for reCAPTCHA/newsletter compatibility)
+
 ## 1.33.0 09-29-2022
 * larva-patterns - New `product-card` module.
 * larva-css - Add new `lrv-u-text-decoration-line-through` utility class.
