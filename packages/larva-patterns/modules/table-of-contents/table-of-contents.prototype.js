@@ -22,7 +22,7 @@ const toc_list_items = [
 const toc_mobile_list_items = toc_list_items;
 
 module.exports = {
-	toc_classes: 'lrv-u-border-a-1 lrv-u-padding-a-1 lrv-u-margin-tb-1',
+	toc_classes: 'lrv-u-border-a-1 lrv-u-padding-a-1 lrv-u-margin-b-1',
 	toc_navigation_classes: 'lrv-js-MobileHeightToggle',
 	toc_heading_outer_classes: '',
 	toc_list_classes: 'lrv-js-MobileHeightToggle-target lrv-u-color-brand-secondary a-font-theme-secondary-medium-xs lrv-a-unstyle-list lrv-a-grid lrv-a-cols2@desktop u-grid-row-gap-0 u-grid-gap-1 lrv-u-padding-t-050',
