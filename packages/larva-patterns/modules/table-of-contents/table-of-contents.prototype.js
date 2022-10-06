@@ -6,7 +6,7 @@ const c_nav_link = clonedeep( require( '@penskemediacorp/larva-patterns/componen
 
 c_heading.c_heading_classes = 'lrv-a-font-primary-l u-font-size-25 lrv-u-padding-b-075 lrv-u-border-b-1';
 
-c_nav_link.c_nav_link_markup = '<i>Moon Landing on July 21,1968</i>';
+c_nav_link.c_nav_link_markup = 'Moon Landing on July 21,1968';
 c_nav_link.c_nav_link_title_attr = 'Moon Landing on July 21,1968';
 c_nav_link.c_nav_link_url = '#';
 c_nav_link.c_nav_link_text = false;
