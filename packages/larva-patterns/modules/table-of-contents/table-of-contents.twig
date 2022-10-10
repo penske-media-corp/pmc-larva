@@ -1,7 +1,9 @@
 <div class="toc // {{ toc_classes }}" >
-	<h4 class="toc-heading // {{ toc_heading_outer_classes }}" >
+
+	{% if c_heading %}
 		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
-	</h4>
+	{% endif %}
+
 	<nav class="toc-navigation // {{ toc_navigation_classes }}"
 		{% if nav_title_id_attr %}
 			aria-label="{{ nav_title_id_attr }}"
