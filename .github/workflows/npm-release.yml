@@ -43,8 +43,9 @@ jobs:
       - name: Determine release version
         #uses: ctrlaltdev/latest-release-json-action@v1.0.1
         run: |
-          export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
-          echo $VERSION
+          git describe --tags $(git rev-list --tags --max-count=1)
+        #export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
+        #echo $VERSION
         # git checkout -b release/{{$however_we_calculated_the_version_number??}}
 
 #   # SAMPLE - BOUNCE THIS
