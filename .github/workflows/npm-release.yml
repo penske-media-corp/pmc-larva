@@ -23,6 +23,7 @@ name: Release to npm
 # docs: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
 # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 on:
+  # For action testing!
   push:
     branches:
       - feature/automated-releases
@@ -41,12 +42,13 @@ jobs:
         with:
           ref: 'master'
       - name: Determine release version
-        #uses: ctrlaltdev/latest-release-json-action@v1.0.1
+        # Next: Figure out why this "describe" isn't working (https://github.com/penske-media-corp/pmc-larva/actions/runs/3229516766/jobs/5286909394)
         run: |
           git describe --tags $(git rev-list --tags --max-count=1)
         #export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
         #echo $VERSION
         # git checkout -b release/{{$however_we_calculated_the_version_number??}}
+
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
