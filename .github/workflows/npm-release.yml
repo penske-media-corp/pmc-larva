@@ -40,7 +40,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: 'master'
-          # token: Ehh?
+      - name: Determine release version
+        #uses: ctrlaltdev/latest-release-json-action@v1.0.1
+        run: |
+          export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo $VERSION
+        # git checkout -b release/{{$however_we_calculated_the_version_number??}}
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
