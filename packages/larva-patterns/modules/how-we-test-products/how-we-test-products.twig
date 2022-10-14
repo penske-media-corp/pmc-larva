@@ -1,0 +1,19 @@
+<div class="how-we-test-products // {{ how_we_test_products_classes }}">
+	<div class="how-we-test-products-outer // {{ how_we_test_products_outer_classes }}">
+		<div class="{{ how_we_test_products_banner_classes }}">
+			<div class="how-we-test-products-title {{ how_we_test_products_title_classes }}">
+				{% if c_title %}
+					{% include "@larva/components/c-title/c-title.twig" with c_title %}
+				{% endif %}
+				{% if c_dek %}
+					{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+				{% endif %}
+			</div>
+		</div>
+		<div class="how-we-test-product-items-outer // {{ how_we_test_products_items_classes }}">
+			{% for item in how_we_test_products_items %}
+				{% include "@larva/modules/story/story.twig" with item %}
+			{% endfor %}
+		</div>
+	</div>
+<div>
