@@ -50,7 +50,8 @@ jobs:
           export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
           echo $VERSION
           arrIN=(${VERSION//./ })
-          echo ${arrIN[1]} 
+          echo ${arrIN[1]}
+          export BRANCH_NAME = "release/${arrIN[0]}.${arrIN[1]}.${arrIN[2]}" 
           
         # git describe --always
         # git describe --debug --tags --abbrev=0
