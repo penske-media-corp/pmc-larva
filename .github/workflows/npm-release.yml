@@ -47,7 +47,11 @@ jobs:
           pwd
           git status
           git fetch --depth=500
-          git describe --tags $(git rev-list --tags --max-count=1)
+          export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo $VERSION
+          arrIN=(${VERSION//./ })
+          echo ${arrIN[1]} 
+          
         # git describe --always
         # git describe --debug --tags --abbrev=0
         #export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
