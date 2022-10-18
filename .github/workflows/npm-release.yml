@@ -51,9 +51,9 @@ jobs:
           echo $VERSION
           arrIN=(${VERSION//./ })
           echo ${arrIN[1]}
-          export MINOR=${arrIN[1]+1}
+          export MINOR=${(arrIN[1]+1)}
           echo $MINOR
-          export BRANCH_NAME="release/${arrIN[0]}.${MINOR}.${arrIN[2]}"
+          export BRANCH_NAME="release/1.${MINOR}.${arrIN[2]}"
           echo $BRANCH_NAME
           
         # git describe --always
