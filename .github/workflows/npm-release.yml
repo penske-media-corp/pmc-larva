@@ -37,25 +37,21 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout release branch
+      - name: Checkout master branch
         uses: actions/checkout@v3
         with:
           ref: 'master'
-      - name: Determine release version
+      - name: Checkout release branch
         run: |
-          pwd
-          git status
           git fetch --depth=500
+          # Get latest release tag name
           export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
-          echo $VERSION
+          # Parsing the latest release tag name into an array
           arrIN=(${VERSION//./ })
-          echo ${arrIN[1]}
+          # Bump minor version by 1
           export MINOR=$((arrIN[1]+1))
-          echo $MINOR
           export BRANCH_NAME="release/1.${MINOR}.${arrIN[2]}"
-          echo $BRANCH_NAME
           git checkout -b $BRANCH_NAME
-
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
