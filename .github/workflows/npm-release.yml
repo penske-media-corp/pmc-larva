@@ -45,6 +45,7 @@ jobs:
         # Next: Figure out why this "describe" isn't working (https://github.com/penske-media-corp/pmc-larva/actions/runs/3229516766/jobs/5286909394)
         run: |
           pwd
+          git status
           git describe --tags $(git rev-list --tags --max-count=1)
         #export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
         #echo $VERSION
