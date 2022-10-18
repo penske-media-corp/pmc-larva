@@ -46,7 +46,8 @@ jobs:
         run: |
           pwd
           git status
-          git describe --tags $(git rev-list --tags --max-count=1)
+          git describe --debug --tags --abbrev=0
+        #git describe --tags $(git rev-list --tags --max-count=1)
         #export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
         #echo $VERSION
         # git checkout -b release/{{$however_we_calculated_the_version_number??}}
