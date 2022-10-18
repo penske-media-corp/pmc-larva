@@ -42,7 +42,6 @@ jobs:
         with:
           ref: 'master'
       - name: Determine release version
-        # Next: Figure out why this "describe" isn't working (https://github.com/penske-media-corp/pmc-larva/actions/runs/3229516766/jobs/5286909394)
         run: |
           pwd
           git status
@@ -55,12 +54,7 @@ jobs:
           echo $MINOR
           export BRANCH_NAME="release/1.${MINOR}.${arrIN[2]}"
           echo $BRANCH_NAME
-          
-        # git describe --always
-        # git describe --debug --tags --abbrev=0
-        #export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
-        #echo $VERSION
-        # git checkout -b release/{{$however_we_calculated_the_version_number??}}
+          git checkout -b $BRANCH_NAME
 
 
 #   # SAMPLE - BOUNCE THIS
