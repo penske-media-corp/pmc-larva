@@ -23,7 +23,7 @@ name: Release to npm
 # docs: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
 # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 on:
-  # For action testing!
+  # For action testing! Will need to update this when merged to main for the button to trigger action.
   push:
     branches:
       - feature/automated-releases
@@ -44,6 +44,7 @@ jobs:
       - name: Determine release version
         # Next: Figure out why this "describe" isn't working (https://github.com/penske-media-corp/pmc-larva/actions/runs/3229516766/jobs/5286909394)
         run: |
+          pwd
           git describe --tags $(git rev-list --tags --max-count=1)
         #export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
         #echo $VERSION
