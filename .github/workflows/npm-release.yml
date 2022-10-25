@@ -55,7 +55,7 @@ jobs:
           git push --set-upstream origin $BRANCH_NAME
       - name: Publish to npm
         run: |
-          npx lerna publish
+          npx lerna publish minor --yes
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
