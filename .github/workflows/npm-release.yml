@@ -50,9 +50,9 @@ jobs:
           arrIN=(${VERSION//./ })
           # Bump minor version by 1
           export MINOR=$((arrIN[1]+1))
-          export BRANCH_NAME="release/1.${MINOR}.${arrIN[2]}"
+          export BRANCH_NAME="test-release/1.${MINOR}.${arrIN[2]}"
           git checkout -b $BRANCH_NAME
-          git push -u origin
+          git push --set-upstream origin $BRANCH_NAME
       - name: Publish to npm
         run: |
           npx lerna publish
