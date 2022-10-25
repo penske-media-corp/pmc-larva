@@ -52,6 +52,7 @@ jobs:
           export MINOR=$((arrIN[1]+1))
           export BRANCH_NAME="release/1.${MINOR}.${arrIN[2]}"
           git checkout -b $BRANCH_NAME
+          git push -u origin
       - name: Publish to npm
         run: |
           npx lerna publish
