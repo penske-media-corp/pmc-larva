@@ -43,7 +43,7 @@ jobs:
           ref: 'master'
       - name: Checkout release branch
         run: |
-          git fetch --depth=500
+          git fetch --tags --depth=500
           # Get latest release tag name
           export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
           # Parsing the latest release tag name into an array
