@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-patterns - Remove extra closing div from `faq` module.
 
 ## 1.37.0 10-25-2022
 * larva-patterns - Add New `pros-and-cons` module
