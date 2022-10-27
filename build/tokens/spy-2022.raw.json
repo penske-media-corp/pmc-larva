@@ -311,8 +311,8 @@
     "BACKGROUND_COLOR_GREY_LIGHTEST": {
       "category": "background-color",
       "type": "color",
-      "value": "rgb(239, 239, 239)",
-      "originalValue": "rgb(239, 239, 239)",
+      "value": "rgb(247, 247, 247)",
+      "originalValue": "rgb(247, 247, 247)",
       "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
@@ -4017,8 +4017,8 @@
     "COLOR_GREY_LIGHTEST": {
       "category": "text-color",
       "type": "color",
-      "value": "rgb(239, 239, 239)",
-      "originalValue": "rgb(239, 239, 239)",
+      "value": "rgb(247, 247, 247)",
+      "originalValue": "rgb(247, 247, 247)",
       "name": "COLOR_GREY_LIGHTEST"
     },
     "FONT_FAMILY_BODY_FANCY": {
