@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.37.1 10-27-2022
+* * larva-tokens - Update larva tokens for spy-2022.
+
 ## 1.37.0 10-25-2022
 * larva-patterns - Add New `pros-and-cons` module
 
