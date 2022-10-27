@@ -50,7 +50,7 @@
 		"BACKGROUND_COLOR_GREY_LIGHTEST": {
 			"category": "background-color",
 			"type": "color",
-			"value": "rgb(239, 239, 239)",
+			"value": "rgb(247, 247, 247)",
 			"originalValue": "{!GREY_96}",
 			"name": "BACKGROUND_COLOR_GREY_LIGHTEST"
 		},
@@ -148,7 +148,7 @@
 		"COLOR_GREY_LIGHTEST": {
 			"category": "text-color",
 			"type": "color",
-			"value": "rgb(239, 239, 239)",
+			"value": "rgb(247, 247, 247)",
 			"originalValue": "{!GREY_90}",
 			"name": "COLOR_GREY_LIGHTEST"
 		},
