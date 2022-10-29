@@ -30,7 +30,7 @@
 				{% if buy_now_buttons %}
 					{% for c_button in buy_now_buttons %}
 						<div class="{{ product_card_buy_now_button_wrapper_classes }}">
-							{% if product_card_price_outside %}
+							{% if c_button['product_card_price_outside'] %}
 								<p class="{{ product_card_price_outside_classes }}">
 									{% if c_button['current_price'] %}
 										{% include "@larva/components/c-span/c-span.twig" with c_button['current_price'] %}
