@@ -22,6 +22,7 @@ c_button.c_button_classes = 'lrv-u-margin-t-125 lrv-a-font-basic-m lrv-a-unstyle
 c_button.c_button_inner_classes = 'lrv-u-border-b-2 lrv-u-border-t-2 lrv-u-border-l-1 lrv-u-border-r-1 lrv-u-padding-tb-050 lrv-u-text-transform-uppercase lrv-a-icon lrv-a-icon-before lrv-u-align-items-start lrv-u-padding-lr-050 lrv-u-background-color-brand-primary:hover';
 c_button.c_button_text = 'Subscribe $65.99';
 c_button.c_button_url = '#';
+c_button.product_card_price_outside = false;
 
 const buy_now_buttons = [ c_button, c_button ];
 
