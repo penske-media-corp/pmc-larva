@@ -315,7 +315,7 @@
 		"PRIMARY_XL_FONT_SIZE_MOBILE": {
 			"category": "font-size",
 			"type": "number",
-			"value": "33px",
+			"value": "29px",
 			"originalValue": "37px",
 			"name": "PRIMARY_XL_FONT_SIZE_MOBILE"
 		},
@@ -355,7 +355,7 @@
 		"PRIMARY_XL_LINE_HEIGHT_MOBILE": {
 			"category": "line-height",
 			"type": "number",
-			"value": "33px",
+			"value": "30px",
 			"originalValue": "initial",
 			"name": "PRIMARY_XL_LINE_HEIGHT_MOBILE"
 		},
