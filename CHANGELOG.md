@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-patterns - Add wrapper class names for product card.
+* larva-tokens - Update larva tokens for spy-2022.
 
 ## 1.37.3 10-29-2022
 * larva-patterns - Make `product_card_price_outside` property applicable to individual buttons instead of common value.

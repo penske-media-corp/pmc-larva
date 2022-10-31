@@ -222,20 +222,20 @@
 		"BODY_M_LINE_HEIGHT_DESKTOP_XL": {
 			"category": "line-height",
 			"type": "number",
-			"value": "31px",
+			"value": "28px",
 			"name": "BODY_M_LINE_HEIGHT_DESKTOP_XL"
 		},
 		"BODY_M_LINE_HEIGHT_DESKTOP": {
 			"category": "line-height",
 			"type": "number",
-			"value": "31px",
+			"value": "28px",
 			"originalValue": "initial",
 			"name": "BODY_M_LINE_HEIGHT_DESKTOP"
 		},
 		"BODY_M_LINE_HEIGHT_MOBILE": {
 			"category": "line-height",
 			"type": "number",
-			"value": "31px",
+			"value": "28px",
 			"originalValue": "24px",
 			"name": "BODY_M_LINE_HEIGHT_MOBILE"
 		},
@@ -342,20 +342,20 @@
 		"PRIMARY_XL_LINE_HEIGHT_DESKTOP_XL": {
 			"category": "line-height",
 			"type": "number",
-			"value": "39px",
+			"value": "33px",
 			"name": "PRIMARY_XL_LINE_HEIGHT_DESKTOP_XL"
 		},
 		"PRIMARY_XL_LINE_HEIGHT_DESKTOP": {
 			"category": "line-height",
 			"type": "number",
-			"value": "39px",
+			"value": "33px",
 			"originalValue": "57px",
 			"name": "PRIMARY_XL_LINE_HEIGHT_DESKTOP"
 		},
 		"PRIMARY_XL_LINE_HEIGHT_MOBILE": {
 			"category": "line-height",
 			"type": "number",
-			"value": "39px",
+			"value": "33px",
 			"originalValue": "initial",
 			"name": "PRIMARY_XL_LINE_HEIGHT_MOBILE"
 		},
