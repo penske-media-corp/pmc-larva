@@ -3155,8 +3155,8 @@
     "BODY_M_LINE_HEIGHT_DESKTOP": {
       "category": "line-height",
       "type": "number",
-      "value": "31px",
-      "originalValue": "31px",
+      "value": "28px",
+      "originalValue": "28px",
       "name": "BODY_M_LINE_HEIGHT_DESKTOP"
     },
     "PRIMARY_M_LINE_HEIGHT_DESKTOP": {
@@ -3190,8 +3190,8 @@
     "PRIMARY_XL_LINE_HEIGHT_DESKTOP": {
       "category": "line-height",
       "type": "number",
-      "value": "39px",
-      "originalValue": "39px",
+      "value": "33px",
+      "originalValue": "33px",
       "name": "PRIMARY_XL_LINE_HEIGHT_DESKTOP"
     },
     "BODY_XL_LINE_HEIGHT_DESKTOP": {
@@ -3644,9 +3644,9 @@
     "PRIMARY_XL_LINE_HEIGHT_DESKTOP_XL": {
       "category": "line-height",
       "type": "number",
-      "value": "39px",
+      "value": "33px",
       "name": "PRIMARY_XL_LINE_HEIGHT_DESKTOP_XL",
-      "originalValue": "39px"
+      "originalValue": "33px"
     },
     "BODY_XXXL_LINE_HEIGHT_DESKTOP_XL": {
       "category": "line-height",
@@ -3686,9 +3686,9 @@
     "BODY_M_LINE_HEIGHT_DESKTOP_XL": {
       "category": "line-height",
       "type": "number",
-      "value": "31px",
+      "value": "28px",
       "name": "BODY_M_LINE_HEIGHT_DESKTOP_XL",
-      "originalValue": "31px"
+      "originalValue": "28px"
     },
     "ACCENT_REGULAR_XXS_LINE_HEIGHT_MOBILE": {
       "selector": "lrv-a-font",
@@ -3892,8 +3892,8 @@
     "PRIMARY_XL_LINE_HEIGHT_MOBILE": {
       "category": "line-height",
       "type": "number",
-      "value": "39px",
-      "originalValue": "39px",
+      "value": "33px",
+      "originalValue": "33px",
       "name": "PRIMARY_XL_LINE_HEIGHT_MOBILE"
     },
     "SECONDARY_XS_LINE_HEIGHT_DESKTOP_XL": {
@@ -3913,8 +3913,8 @@
     "BODY_M_LINE_HEIGHT_MOBILE": {
       "category": "line-height",
       "type": "number",
-      "value": "31px",
-      "originalValue": "31px",
+      "value": "28px",
+      "originalValue": "28px",
       "name": "BODY_M_LINE_HEIGHT_MOBILE"
     },
     "BASIC_XL_LINE_HEIGHT_DESKTOP_XL": {
