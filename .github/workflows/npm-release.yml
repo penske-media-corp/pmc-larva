@@ -50,7 +50,7 @@ jobs:
           arrIN=(${VERSION//./ })
           # Bump minor version by 1
           export MINOR=$((arrIN[1]+1))
-          export BRANCH_NAME="test-release/1.${MINOR}.${arrIN[2]}"
+          export BRANCH_NAME="test-release/1.${MINOR}.0"
           git checkout -b $BRANCH_NAME
           git push --set-upstream origin $BRANCH_NAME
       - name: Use Node 14
@@ -61,6 +61,7 @@ jobs:
         run: |
           git config user.name {{$GITHUB_ACTOR}}
           git config user.email "<>"
+          npm profile get
           npx lerna publish minor --no-verify-access --yes --tag-version-prefix='test-v'
 
 #   # SAMPLE - BOUNCE THIS
