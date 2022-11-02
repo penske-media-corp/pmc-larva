@@ -1,0 +1,14 @@
+<div class="multiple-products // {{ multiple_products_classes }}">
+	<div class="{{ multiple_products_wrapper_classes }}">
+		<div class="multiple-products-title {{ multiple_products_title_classes }}">
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
+		</div>
+		<div class="multiple-products-data-wrapper {{ multiple_products_data_wrapper_classes }}">
+			{% for item in multiple_products_items %}
+				{% include "@larva/objects/o-multiple-product-item/o-multiple-product-item.twig" with item %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
