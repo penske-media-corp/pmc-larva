@@ -11,7 +11,11 @@
 	{% endif %}
 
 	{% if c_title_url %}
-		<a href="{{ c_title_url }}" class="c-title__link {{ c_title_link_classes }}"  {{ c_title_link_data_attr }}>
+		<a href="{{ c_title_url }}" class="c-title__link {{ c_title_link_classes }}"
+		{% if c_title_url_target_blank %}
+			target="_blank" rel="noopener noreferrer"
+		{% endif %}
+		{{ c_title_link_data_attr }}>
 	{% endif %}
 
 		{% if c_title_before_text %}
