@@ -5,11 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.38.0 11-2-2022
 * larva-patterns - Add `c-title` link attr.
 
 ## 1.37.6 10-31-2022
 * larva-tokens - Update larva tokens for font primary on mobile.
-
 
 ## 1.37.5 10-31-2022
 * larva-tokens - Update larva tokens for spy-2022.
