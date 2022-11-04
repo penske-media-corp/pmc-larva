@@ -1,0 +1,25 @@
+<div class="o-multiple-products-item {{ modifier_class }} {{ o_multiple_products_item_classes }}">
+	<div class="o-multiple-products-item-title-wrapper">
+		{% if c_lazy_image %}
+			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		{% endif %}
+		{% if article_kicker %}
+			<div class="article_kicker_outer // {{ article_kicker_outer_classes }}">
+				{% include "@larva/modules/article-kicker/article-kicker.twig" with article_kicker %}
+			</div>
+		{% endif %}
+		{% if c_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		{% endif %}	
+	</div>
+	<div class="o-multiple-products-item-jump-to-link">
+		{% if c_link %}
+			{% include "@larva/components/c-link/c-link.twig" with c_link %}
+		{% endif %}
+	</div>
+	<div class="o-multiple-products-item-button-wrapper">
+		{% if c_button %}
+			{% include "@larva/components/c-button/c-button.twig" with c_button %}
+		{% endif %}
+	</div>
+</div>
