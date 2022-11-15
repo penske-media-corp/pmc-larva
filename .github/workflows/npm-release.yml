@@ -61,7 +61,7 @@ jobs:
         # https://dev.to/astagi/publish-to-npm-using-github-actions-23fn
         # Check dist.dev NPM user in LastPass?
         run: |
-          git config user.name @${{ github.actor }}
+          git config user.name ${{ github.actor }}
           git config user.email "<>"
           npm profile get
           npx lerna publish minor --no-verify-access --yes --tag-version-prefix='test-v'
