@@ -1,0 +1,64 @@
+<div class="o-product-card {{o_product_card_classes}}">
+	{% if o_product_card_link_url %}
+		<a tabindex="0" href="{{ o_product_card_link_url }}" class="o-product-card__link {{ o_product_card_link_classes }}">
+	{% endif %}
+
+		<div class="o-product-card__award {{o_product_card_header_classes}}">
+			{% if c_title_award %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title_award %}
+			{% endif %}
+		</div>
+
+		<div class="o-product-card__product-details {{o_product_card_details_classes}}">
+			{% if c_lazy_image %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+			{% endif %}
+
+			{% if c_title_brand %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title_brand %}
+			{% endif %}
+
+			{% if c_tagline_product %}
+				{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_product %}
+			{% endif %}
+
+			{% if c_button_buy %}
+				{% include "@larva/components/c-button/c-button.twig" with c_button_buy %}
+			{% endif %}
+		</div>
+
+		<div class="o-product-card__verdict best-of-verdict {{o_product_card_verdict_classes}}" >
+			<div class="o-product-card__header-verdict lrv-a-hidden@desktop lrv-a-font-secondary-m lrv-u-padding-a-075">
+				{{product_grid_header_verdict_text}}
+			</div>
+
+			{% if c_dek_verdict %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek_verdict %}
+			{% endif %}
+		</div>
+
+		<div class="o-product-card__pros best-of-pros {{o_product_card_pros_classes}}" >
+			<div class="o-product-card__header-pros lrv-a-hidden@desktop lrv-a-font-secondary-m lrv-u-padding-a-075">
+				{{product_grid_header_pros_text}}
+			</div>
+
+			{% if c_dek_pros %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek_pros %}
+			{% endif %}
+		</div>
+
+		<div class="o-product-card__cons best-of-cons {{o_product_card_cons_classes}}">
+			<div class="o-product-card__header-cons lrv-a-hidden@desktop lrv-a-font-secondary-m lrv-u-padding-a-075">
+				{{product_grid_header_cons_text}}
+			</div>
+
+			{% if c_dek_cons %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek_cons %}
+			{% endif %}
+		</div>
+
+	{% if o_product_card_link_url %}
+	</a>
+	{% endif %}
+
+</div>

@@ -1,0 +1,21 @@
+<div class="product-grid {{product_grid_classes}}">
+	<div class="product-grid__header lrv-a-children-border-vertical lrv-u-flex lrv-u-flex-direction-column lrv-a-hidden@desktop-max">
+		<div class="product-grid__header-details lrv-u-flex-grow-1">
+			{{product_grid_header_details_text}}
+		</div>
+		<div class="product-grid__header-verdict best-of-verdict lrv-u-padding-lr-1 lrv-u-padding-t-1 lrv-a-font-secondary-m">
+			{{product_grid_header_verdict_text}}
+		</div>
+		<div class="product-grid__header-pros best-of-pros lrv-u-padding-lr-1 lrv-u-padding-t-1 lrv-a-font-secondary-m">
+			{{product_grid_header_pros_text}}
+		</div>
+		<div class="product-grid__header-cons best-of-cons lrv-u-padding-lr-1 lrv-u-padding-t-1 lrv-a-font-secondary-m">
+			{{product_grid_header_cons_text}}
+		</div>
+	</div>
+	{% if product_grid_items %}
+		{% for item in product_grid_items %}
+			{% include "@larva/objects/o-product-card/o-product-card.twig" with item %}
+		{% endfor %}
+	{% endif %}
+</div>
