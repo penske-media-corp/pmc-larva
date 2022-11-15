@@ -65,6 +65,9 @@ jobs:
           git config user.email "<>"
           npm profile get
           npx lerna publish minor --no-verify-access --yes --tag-version-prefix='test-v'
+        # Uncomment when token is generated.
+        #env:
+          #NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
