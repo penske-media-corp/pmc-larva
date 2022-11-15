@@ -89,8 +89,8 @@
 	}
 }
 
-.lrv-u-border-a-1\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
+.lrv-u-border-a-1\@desktop {
+	@include pmc-breakpoint( desktop ) {
 		border-width: 1px;
 	}
 }
