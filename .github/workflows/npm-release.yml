@@ -61,9 +61,6 @@ jobs:
         # https://dev.to/astagi/publish-to-npm-using-github-actions-23fn
         # Check dist.dev NPM user in LastPass?
         run: |
-          echo ${NODE_AUTH_TOKEN}
-          echo NODE_AUTH_TOKEN
-          echo "${{ secrets.NPM_ACCESS_TOKEN }}"
           git config user.name pmc-machine-user
           git config user.email "<>"
           npx lerna publish minor --yes --tag-version-prefix='test-v'
