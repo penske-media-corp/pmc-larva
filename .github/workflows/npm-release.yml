@@ -66,11 +66,12 @@ jobs:
           echo "${{ secrets.NPM_ACCESS_TOKEN }}"
           git config user.name pmc-machine-user
           git config user.email "<>"
-          npx lerna publish minor --no-verify-access --yes --tag-version-prefix='test-v'
+          npx lerna publish minor --yes --tag-version-prefix='test-v'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
 
           #npm profile get (before npx lerna)
+          # also had --no-verify-access flag
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
