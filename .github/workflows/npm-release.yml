@@ -60,16 +60,17 @@ jobs:
       - name: Publish to npm
         # https://dev.to/astagi/publish-to-npm-using-github-actions-23fn
         # Check dist.dev NPM user in LastPass?
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
           echo ${NODE_AUTH_TOKEN}
           echo NODE_AUTH_TOKEN
           echo "${{ secrets.NPM_ACCESS_TOKEN }}"
           git config user.name pmc-machine-user
           git config user.email "<>"
-          npm profile get
           npx lerna publish minor --no-verify-access --yes --tag-version-prefix='test-v'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+
+          #npm profile get (before npx lerna)
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
