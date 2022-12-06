@@ -67,7 +67,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
 
-        # NEXT: Try npm login (or npm adduser) to avoid E401 during action!
+        # NEXT: Try npm login (or npm adduser) to avoid E401 during action
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
