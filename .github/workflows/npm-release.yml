@@ -63,7 +63,7 @@ jobs:
         run: |
           git config user.name pmc-machine-user
           git config user.email "<>"
-          npx lerna publish minor --yes --tag-version-prefix='test-v' --registry https://npmjs.org
+          npx lerna publish minor --yes --tag-version-prefix='test-v' --registry https://registry.npmjs.org
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
 
