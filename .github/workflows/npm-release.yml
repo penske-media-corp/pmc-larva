@@ -24,9 +24,9 @@ name: Release to npm
 # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 on:
   # For action testing! Will need to update this when merged to main for the button to trigger action.
-  push:
-    branches:
-      - feature/automated-releases
+  #push:
+    #branches:
+      #- feature/automated-releases
   workflow_dispatch:
   
 
@@ -64,11 +64,14 @@ jobs:
         run: |
           git config user.name pmc-machine-user
           git config user.email "<>"
+          # --tag-version-prefix is not creating a prefix release on npm.
           npx lerna publish minor --yes --tag-version-prefix='test-v'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
-
-        # NEXT: Try npm login (or npm adduser) to avoid E401 during action!
+        
+        # NEXT: make a PR to master. Probably an action.
+        # Engineer will then have to go into CHANGELOG.md to update the changelog
+        # NEXT STEPS: Clean up, push up to main branch, test that the workflow trigger will work.
 
 #   # SAMPLE - BOUNCE THIS
 #   # This workflow contains a single job called "build"
