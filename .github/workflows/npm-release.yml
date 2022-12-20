@@ -57,13 +57,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
          node-version: '14'
+         registry-url: 'https://registry.npmjs.org'
       - name: Publish to npm
         # https://dev.to/astagi/publish-to-npm-using-github-actions-23fn
         # Check dist.dev NPM user in LastPass?
         run: |
           git config user.name pmc-machine-user
           git config user.email "<>"
-          npx lerna publish minor --yes --tag-version-prefix='test-v' --registry https://npmjs.com
+          npx lerna publish minor --yes --tag-version-prefix='test-v'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
 
