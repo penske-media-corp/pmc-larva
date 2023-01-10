@@ -24,9 +24,9 @@ name: Release to npm
 # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 on:
   # For action testing! Will need to update this when merged to main for the button to trigger action.
-  #push:
-    #branches:
-      #- feature/automated-releases
+  push:
+    branches:
+      - feature/automated-releases
   workflow_dispatch:
   
 
