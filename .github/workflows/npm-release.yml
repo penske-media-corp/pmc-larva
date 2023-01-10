@@ -53,6 +53,9 @@ jobs:
           export BRANCH_NAME="test-release/1.${MINOR}.0"
           git checkout -b $BRANCH_NAME
           git push --set-upstream origin $BRANCH_NAME
+          
+          # Create github env variable
+          echo "GH_BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
       - name: Use Node 14
         uses: actions/setup-node@v3
         with:
@@ -74,7 +77,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4.2.3
         with: 
           # token: ${{ github.token }}
-          branch: $BRANCH_NAME
+          # NEXT STEP: branch name is not working - is
+          branch: ${{ env.GH_BRANCH_NAME }}
           title: Release v1.${MINOR}.0
           # body: probably autofills the PR template that already exists for larva?
     
