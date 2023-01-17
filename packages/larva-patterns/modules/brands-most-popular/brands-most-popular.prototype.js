@@ -33,6 +33,7 @@ o_card.c_span = false;
 o_card.c_svg = c_svg;
 o_card.c_title = c_title;
 o_card.c_timestamp = false;
+o_card.o_card_link_rel_attribute = 'nofollow';
 
 module.exports = {
 	brands_most_popular_classes: 'lrv-a-wrapper lrv-u-margin-b-150',
