@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.42.0 01-17-2023
 * larva-patterns - Add conditionally usable `rel` attribute to o-card object.
 
 ## 1.41.0 12-20-2022
