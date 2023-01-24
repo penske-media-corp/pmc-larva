@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-scss - Use `round` func when generating font size utility classes (via `@mixin u-font-size`) to prevent errors when converting rems to pixels for class name.
+* larva-patterns - Add `separator_thickness_class` to modules/separator pattern.
 
 ## 1.42.0 01-17-2023
 * larva-patterns - Add conditionally usable `rel` attribute to o-card object.
