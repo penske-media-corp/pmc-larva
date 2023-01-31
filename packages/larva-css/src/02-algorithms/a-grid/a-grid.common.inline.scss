@@ -47,16 +47,17 @@ $grids: (
 		breakpoint: tablet,
 	),
 	(
+		columns: 20,
+		spans: ( 4, 12, 14, 16, 18 ),
+		breakpoint: tablet,
+	),
+	(
 		columns: 3,
 		breakpoint: desktop,
 	),
 	(
 		columns: 2,
 		breakpoint: desktop,
-	),
-	(
-		columns: 2,
-		breakpoint: desktop-xl,
 	),
 	(
 		columns: 4,
@@ -69,13 +70,22 @@ $grids: (
 		breakpoint: desktop,
 	),
 	(
-		columns: 4,
-		spans: ( 3 ),
+		columns: 5,
+		breakpoint: desktop,
+	),
+	(
+		columns: 20,
+		spans: ( 4, 12, 14, 16, 18 ),
+		breakpoint: desktop,
+	),
+	(
+		columns: 2,
 		breakpoint: desktop-xl,
 	),
 	(
-		columns: 5,
-		breakpoint: desktop,
+		columns: 4,
+		spans: ( 3 ),
+		breakpoint: desktop-xl,
 	),
 );
 
