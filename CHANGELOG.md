@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.42.2 01-31-2023
 * larva-css - Add new `lrv-a-span` and `lrv-a-cols` utility classes.
 
 ## 1.42.1 01-24-2023
