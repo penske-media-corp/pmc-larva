@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
-* larva-css - Add `cols; 5, 7 ,10` and `span: 5, 6, 7, 8` for Desktop and Tablet
+* larva-css - Add `cols; 5, 7, 10` and `span: 5, 6, 7, 8, 9` for Desktop and Tablet
 ## 1.42.2 01-31-2023
 * larva-css - Add new `lrv-a-span` and `lrv-a-cols` utility classes.
 
