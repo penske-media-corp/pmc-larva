@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
-## 1.42.3 02-01-20213
+## 1.42.4 02-01-20213
 * larva-css - Add `cols; 5, 7, 10` and `span: 5, 6, 7, 8, 9` for Desktop and Tablet
 ## 1.42.2 01-31-2023
 * larva-css - Add new `lrv-a-span` and `lrv-a-cols` utility classes.
