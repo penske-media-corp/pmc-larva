@@ -38,9 +38,9 @@
 
 			@if (length($token) == 2) {
 				$at: \@;
-				$selector: ".#{$NAMESPACE}u-#{$property}-#{_strip-unit($value) * 16}#{$at}#{$breakpoint}";
+				$selector: ".#{$NAMESPACE}u-#{$property}-#{round(_strip-unit($value) * 16)}#{$at}#{$breakpoint}";
 			} @else {
-				$selector: ".#{$NAMESPACE}u-#{$property}-#{_strip-unit($value) * 16}";
+				$selector: ".#{$NAMESPACE}u-#{$property}-#{round(_strip-unit($value) * 16)}";
 			}
 
 		}
