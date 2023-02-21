@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.43.1 02-21-2023
+* Re-build larva JSON/versioning
+
 ## 1.43.0 02-21-2023
 * larva-css - Remove misc. extraneous lines (#763)
 * larva-css, larva-js, larva-patterns, larva - re-build with `prod`
