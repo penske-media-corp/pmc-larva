@@ -50,7 +50,7 @@ jobs:
           arrIN=(${VERSION//./ })
           # Bump minor version by 1
           export MINOR=$((arrIN[1]+1))
-          export BRANCH_NAME="test-release/1.${MINOR}.0"
+          export BRANCH_NAME="release/1.${MINOR}.0"
           git checkout -b $BRANCH_NAME
           git push --set-upstream origin $BRANCH_NAME
           
@@ -67,10 +67,9 @@ jobs:
         run: |
           git config user.name pmc-machine-user
           git config user.email "<>"
-          # --tag-version-prefix is not creating a prefix release on npm.
-          # npx lerna publish minor --yes --tag-version-prefix='test-v'
-          # Doing a canary release for testing purposes
-          npx lerna publish --canary --preid test --yes --tag-version-prefix='test-v'
+          # Canary release for testing purposes
+          # npx lerna publish --canary --preid test --yes --tag-version-prefix='test-v'
+          npx lerna publish minor --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
       - name: Create Pull Request
@@ -82,7 +81,6 @@ jobs:
           title: Release v1.${MINOR}.0
           # body: probably autofills the PR template that already exists for larva?
     
-        # NEXT: make a PR to master. Probably an action.
         # Engineer will then have to go into CHANGELOG.md to update the changelog
         # NEXT STEPS: Clean up, push up to main branch, test that the workflow trigger will work.
 
