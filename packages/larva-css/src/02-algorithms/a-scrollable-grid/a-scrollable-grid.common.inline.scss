@@ -39,7 +39,6 @@
 	@include pmc-breakpoint( desktop-max ) {
 		overflow-x: scroll;
 	}
-
 }
 
 .lrv-a-scrollable-grid\@desktop-max,
@@ -48,5 +47,4 @@
 	@include pmc-breakpoint( desktop-max ) {
 		@include _a-scrollable-grid;
 	}
-
 }
