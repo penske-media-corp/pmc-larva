@@ -35,7 +35,7 @@ jobs:
   deploy-release:
     name: Create and Deploy NPM Release
     runs-on: ubuntu-latest
-    permissions: read-all|write-all
+    permissions: write-all
     
     steps:        
       - name: Checkout master branch
