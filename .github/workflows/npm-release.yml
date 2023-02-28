@@ -70,7 +70,7 @@ jobs:
           git config user.name pmc-machine-user
           git config user.email "<>"
           # Canary release for testing purposes
-          npx lerna publish --canary --preid test --yes --tag-version-prefix='test-v'
+          npx lerna publish --canary --preid test --yes --tag-version-prefix='test-v' --no-git-reset
           git status
           # npx lerna publish minor --yes
         env:
