@@ -35,6 +35,7 @@ jobs:
   deploy-release:
     name: Create and Deploy NPM Release
     runs-on: ubuntu-latest
+    permissions: read-all|write-all
     
     steps:        
       - name: Checkout master branch
@@ -50,7 +51,8 @@ jobs:
           arrIN=(${VERSION//./ })
           # Bump minor version by 1
           export MINOR=$((arrIN[1]+1))
-          export BRANCH_NAME="release/1.${MINOR}.0"
+          export BRANCH_NAME="test-release/1.${MINOR}.0"
+          # export BRANCH_NAME="release/1.${MINOR}.0"
           git checkout -b $BRANCH_NAME
           git push --set-upstream origin $BRANCH_NAME
           
@@ -68,8 +70,9 @@ jobs:
           git config user.name pmc-machine-user
           git config user.email "<>"
           # Canary release for testing purposes
-          # npx lerna publish --canary --preid test --yes --tag-version-prefix='test-v'
-          npx lerna publish minor --yes
+          npx lerna publish --canary --preid test --yes --tag-version-prefix='test-v'
+          git status
+          # npx lerna publish minor --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
       - name: Create Pull Request
