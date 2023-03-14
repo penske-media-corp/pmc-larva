@@ -51,7 +51,10 @@ jobs:
           arrIN=(${VERSION//./ })
           # Bump minor version by 1
           export MINOR=$((arrIN[1]+1))
+          
+          # prefix the branch with test-release for testing purposes. 
           export BRANCH_NAME="test-release/1.${MINOR}.0"
+          
           # export BRANCH_NAME="release/1.${MINOR}.0"
           git checkout -b $BRANCH_NAME
           git push --set-upstream origin $BRANCH_NAME
@@ -69,9 +72,12 @@ jobs:
         run: |
           git config user.name pmc-machine-user
           git config user.email "<>"
-          # Canary release for testing purposes
-          npx lerna publish --canary --preid test --yes --tag-version-prefix='test-v' --no-git-reset
+          
+          # Canary release for testing purposes. --prefix release with another-test
+          npx lerna publish --canary --preid another-test --yes --tag-version-prefix='test-v' --no-git-reset
+          
           git status
+          
           # npx lerna publish minor --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
