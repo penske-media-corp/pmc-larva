@@ -18,7 +18,7 @@
 	}
 
 	@each $token in $tokens {
-		$value: _strip-unit(nth($token, 2));
+		$value: round(_strip-unit(nth($token, 2)));
 		$sides: nth($token, 1);
 
 		@if ($value < 1) {
