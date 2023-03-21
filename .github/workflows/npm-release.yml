@@ -87,7 +87,7 @@ jobs:
           # token: ${{ github.token }}
           branch: ${{ env.GH_BRANCH_NAME }}
           base: master
-          title: Release v1.${{ MINOR }}.0
+          title: Release v1.${{ env.MINOR }}.0
           # body: probably autofills the PR template that already exists for larva?
     
         # Engineer will then have to go into CHANGELOG.md to update the changelog
