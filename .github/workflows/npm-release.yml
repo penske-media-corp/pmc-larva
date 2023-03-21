@@ -74,7 +74,7 @@ jobs:
           git config user.email "<>"
           
           # Canary release for testing purposes. --prefix release with another-test
-          npx lerna publish --canary --preid another-test --yes --tag-version-prefix='test-v' --no-git-reset
+          npx lerna publish --canary --preid yet-another-test --yes --tag-version-prefix='test-v' --no-git-reset
           
           git status
           
@@ -87,7 +87,7 @@ jobs:
           # token: ${{ github.token }}
           branch: ${{ env.GH_BRANCH_NAME }}
           base: master
-          title: Release v1.${MINOR}.0
+          title: Release v1.${{ MINOR }}.0
           # body: probably autofills the PR template that already exists for larva?
     
         # Engineer will then have to go into CHANGELOG.md to update the changelog
