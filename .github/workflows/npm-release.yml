@@ -59,8 +59,12 @@ jobs:
           git checkout -b $BRANCH_NAME
           git push --set-upstream origin $BRANCH_NAME
           
-          # Create github env variable
+          # Save the current branch name into an env variable.
           echo "GH_BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          
+          # Save the minor version number into an env variable.
+          echo "GH_MINOR=$MINOR" >> $GITHUB_ENV 
+          
       - name: Use Node 14
         uses: actions/setup-node@v3
         with:
@@ -87,7 +91,7 @@ jobs:
           # token: ${{ github.token }}
           branch: ${{ env.GH_BRANCH_NAME }}
           base: master
-          title: Release v1.${{ env.MINOR }}.0
+          title: Release v1.${{ env.GH_MINOR }}.0
           # body: probably autofills the PR template that already exists for larva?
     
         # Engineer will then have to go into CHANGELOG.md to update the changelog
