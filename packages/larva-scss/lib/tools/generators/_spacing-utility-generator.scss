@@ -25,6 +25,8 @@
 			// Multiply by 100 to turn values less than 1 (e.g. 0.25)
 			// into non-decimals with a leading zero (e.g. 025).
 			$value: '0' + $value * 100;
+		} @else if (round($value) != $value) {
+			$value: $value * 100;
 		}
 
 		@if (length($token) == 3) {
