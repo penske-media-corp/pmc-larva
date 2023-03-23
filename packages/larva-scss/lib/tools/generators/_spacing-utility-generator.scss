@@ -26,6 +26,8 @@
 			// into non-decimals with a leading zero (e.g. 025).
 			$value: '0' + $value * 100;
 		} @else if (round($value) != $value) {
+			// If value is not a whole number (e.g. 1.5), multiply
+			// by 100 to make it so (e.g. 150).
 			$value: $value * 100;
 		}
 
