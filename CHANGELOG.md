@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-scss - Use `round` func when generating spacing utility classes to prevent errors when converting rems to pixels for class name.
 
 ## 1.43.1 02-21-2023
 * Re-build larva JSON/versioning
