@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-scss - Use `round` func when generating spacing utility classes to prevent errors when converting rems to pixels for class name.
+* larva-patterns - Adding a support of Connatix player in o-video-card.
+* larva-js - Updated VideoShowcase.js for adding a support of Connatix player.
 
 ## 1.43.1 02-21-2023
 * Re-build larva JSON/versioning

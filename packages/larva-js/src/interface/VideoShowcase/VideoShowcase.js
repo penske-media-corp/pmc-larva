@@ -88,6 +88,10 @@ export default class VideoShowcase {
 			social: el.querySelector(
 				'[data-video-showcase-player-social-share]'
 			),
+			connatixContainer: el.querySelector(
+				'[data-video-showcase-connatix]'
+			),
+			player: el.querySelector('[data-video-player-id]'),
 		};
 
 		this.init();
@@ -218,6 +222,10 @@ export default class VideoShowcase {
 		if ( 'twitch' === type ) {
 			return `https://player.twitch.tv/?video=${ id }`;
 		}
+
+		if ('connatix' === type) {
+			return id;
+		}
 	}
 
 	/**
@@ -231,6 +239,28 @@ export default class VideoShowcase {
 			'src',
 			`${ youtubeUrl }?rel=0&autoplay=1&showinfo=0&controls=2&rel=0&modestbranding=0`
 		);
+	}
+
+	/**
+	 * Remove hidden attribute from the iframe and set the src.
+	 *
+	 * @param {string} id       - A copnnatix media id.
+	 * @param {string} playerId - Id of player.
+	 */
+	playConnatix(id, playerId) {
+		this.playerUI.connatixContainer.removeAttribute('hidden');
+		const eleId = this.playerUI.connatixContainer.getAttribute('id');
+		// eslint-disable-next-line no-undef
+		new Image().src =
+			'https://capi.elements.video/tr/si?token=094029a3-814c-41d5-8a62-2c3adc647176&cid=1ffe63de-eb53-11e9-b4d2-06948452ae1a';
+		// eslint-disable-next-line no-undef
+		cnx.cmd.push(function () {
+			// eslint-disable-next-line no-undef
+			cnx({
+				playerId,
+				mediaId: id,
+			}).render(eleId);
+		});
 	}
 
 	/**
@@ -286,7 +316,6 @@ export default class VideoShowcase {
 		}
 
 		const previousVideoType = this.state.videoType;
-
 		this.state.videoType = el.dataset.videoShowcaseType;
 		this.state.videoID = el.dataset.videoShowcaseTrigger;
 
@@ -317,6 +346,11 @@ export default class VideoShowcase {
 
 		if ( 'twitch' === type ) {
 			this.playTwitch( url );
+		}
+
+		if ('connatix' === type) {
+			const playerId = this.playerUI.player.dataset.videoPlayerId;
+			this.playConnatix(url, playerId);
 		}
 	}
 
