@@ -1,6 +1,6 @@
 {
   "name": "designer-tools",
-  "version": "1.28.0",
+  "version": "1.45.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
