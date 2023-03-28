@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.44.0 03-28-2023
 * larva-scss - Use `round` func when generating spacing utility classes to prevent errors when converting rems to pixels for class name.
 * larva-patterns - Adding a support of Connatix player in o-video-card.
 * larva-js - Updated VideoShowcase.js for adding a support of Connatix player.

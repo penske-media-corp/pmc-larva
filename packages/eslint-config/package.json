@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
-  "gitHead": "c154a75edb02ee0aee489f7587b73b425020238f",
+  "gitHead": "74451bf7863125ecc10e619dccfd45f98be557f3",
   "dependencies": {
     "@wordpress/eslint-plugin": "^12.9.0"
   },
