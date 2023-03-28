@@ -80,7 +80,7 @@ jobs:
           # Canary release for testing purposes. --prefix release with another-test
           # npx lerna publish --canary --preid test-v3 --yes --tag-version-prefix='test-v' --no-git-reset
           
-          npx lerna publish minor --yes --no-git-reset
+          npx lerna publish minor --yes
           
           git status
         env:
