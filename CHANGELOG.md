@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.46.1 04-04-2023
+* Fix package/lerna versions from failed 1.46.0 release
+
 ## 1.46.0 04-04-2023
 * larva-js - Modified VideoShowcase JS.
 * larva-patterns - Added extra attributes in o-video-card.
