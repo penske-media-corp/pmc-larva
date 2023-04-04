@@ -24,9 +24,10 @@ name: Release to npm
 # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 on:
   # For action testing! Will need to update this when merged to main for the button to trigger action.
-  push:
-    branches:
-      - feature/automated-releases
+  #push:
+  # UN-COMMENT THESE OUT NEXT TIME
+    #branches:
+      #- feature/automated-releases
   workflow_dispatch:
   
 
@@ -45,7 +46,7 @@ jobs:
           fetch-depth: '0'
       - name: Checkout release branch
         run: |
-          git fetch --tags --depth=500
+          git fetch --depth=500 origin +refs/tags/*:refs/tags/*
           # Get latest release tag name
           export VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
           # Parsing the latest release tag name into an array
@@ -82,6 +83,16 @@ jobs:
           # npx lerna publish --canary --preid test-v3 --yes --tag-version-prefix='test-v' --no-git-reset
           
           npx lerna publish minor --yes --no-git-reset
+          
+          #
+          # REMEMBER TO UN-COMMENT THE ON-PUSH TRIGGER!
+          #
+          
+          git status
+          
+          git add -A
+          git commit -m 'Update package versioning'
+          git push
           
           git status
         env:
