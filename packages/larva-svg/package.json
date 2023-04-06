@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-svg",
-  "version": "1.28.0",
+  "version": "1.46.1",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva/tree/master/packages/larva-svg#readme",
@@ -19,5 +19,5 @@
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
-  "gitHead": "c154a75edb02ee0aee489f7587b73b425020238f"
+  "gitHead": "c23975e72a8d5d29a25621a51a1708cea77b77a0"
 }

@@ -6,6 +6,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.46.1 04-04-2023
+* Fix package/lerna versions from failed 1.46.0 release
+
+## 1.46.0 04-04-2023
+* larva-js - Modified VideoShowcase JS.
+* larva-patterns - Added extra attributes in o-video-card.
+* larva-scss - Removed blocking CSS.
+
+## 1.45.1 03-28-2023
+* Re-build larva JSON/versioning
+
+## 1.45.0 03-28-2023
+* larva-scss - Make all `_color` hex values lowercase for consistency.
+* Manually update lerna.json
+
+## 1.44.0 03-28-2023
+* larva-scss - Use `round` func when generating spacing utility classes to prevent errors when converting rems to pixels for class name.
+* larva-patterns - Adding a support of Connatix player in o-video-card.
+* larva-js - Updated VideoShowcase.js for adding a support of Connatix player.
+
 ## 1.43.1 02-21-2023
 * Re-build larva JSON/versioning
 

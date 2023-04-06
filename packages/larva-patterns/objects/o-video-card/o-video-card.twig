@@ -1,5 +1,5 @@
 <div tabindex="0"
-	class="o-video-card__link // {{ o_video_card_link_classes }}" data-video-showcase-trigger="{{ o_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ o_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ o_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ o_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ o_video_card_link_showcase_permalink_data_url }}" data-video-showcase-time="{{ o_video_card_link_showcase_time_data_attr }}">
+	class="o-video-card__link // {{ o_video_card_link_classes }}" data-video-showcase-trigger="{{ o_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ o_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ o_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ o_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ o_video_card_link_showcase_permalink_data_url }}" data-video-showcase-time="{{ o_video_card_link_showcase_time_data_attr }}" data-video-player-id="{{ o_video_card_player_id_attr }}" data-video-media-id="{{ o_video_card_media_id_attr }}">
 
 	<div class="o-video-card {{ modifier_class }} {{ o_video_card_classes }}" data-video-showcase-autoplay="{{ o_video_card_link_showcase_autoplay_data_attr }}" data-video-showcase-player>
 
@@ -21,6 +21,11 @@
 					<div hidden id="{{ o_video_card_id_attr }}" data-video-showcase-jwplayer></div>
 				{% else %}	
 					<div hidden id="jwplayerContainer" data-video-showcase-jwplayer></div>
+				{% endif %}
+				{% if o_video_card_connatix_id_attr %}
+					<div hidden id="{{ o_video_card_connatix_id_attr }}" data-video-showcase-connatix></div>
+				{% else %}
+					<div hidden id="connatixContainer" data-video-showcase-connatix></div>
 				{% endif %}
 
 				<div class="js-VideoShowcasePlayerOembed" hidden data-video-showcase-oembed></div>
