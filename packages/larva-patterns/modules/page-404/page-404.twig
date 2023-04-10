@@ -16,16 +16,16 @@
 			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
 		{% endif %}
 
-		{% if c_suggestion_heading %}
-			{% include "@larva/components/c-heading/c-heading.twig" with c_suggestion_heading %}
+		{% if c_suggestion_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_suggestion_title %}
 		{% endif %}
 
 		{% if suggested_link_items %}
 			{% include "@larva/modules/list/list.twig" with suggested_link_items %}
 		{% endif %}
 
-		{% if c_search_heading %}
-			{% include "@larva/components/c-heading/c-heading.twig" with c_search_heading %}
+		{% if c_search_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_search_title %}
 		{% endif %}
 
 		{% include "@larva/modules/search-form/search-form.twig" with search_form %}

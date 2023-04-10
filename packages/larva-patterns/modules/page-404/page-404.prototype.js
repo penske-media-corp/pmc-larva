@@ -8,8 +8,8 @@ const suggested_link_items_prototype = require( '@penskemediacorp/larva-patterns
 const search_form_prototype = require( '@penskemediacorp/larva-patterns/modules/search-form/search-form.prototype' );
 
 const c_heading = clonedeep( c_heading_prototype );
-const c_suggestion_heading = clonedeep( c_heading_prototype );
-const c_search_heading = clonedeep( c_heading_prototype );
+const c_suggestion_title = clonedeep( c_title_prototype );
+const c_search_title = clonedeep( c_title_prototype );
 const c_svg = clonedeep( c_svg_prototype );
 const c_title = clonedeep( c_title_prototype );
 const c_tagline = clonedeep( c_tagline_prototype );
@@ -27,8 +27,9 @@ c_title.c_title_text = 'OOPS! Something went wrong here!';
 c_title.c_title_classes = 'lrv-a-font-secondary-l lrv-u-text-transform-uppercase lrv-u-margin-b-125';
 c_title.c_title_url = false;
 
-c_suggestion_heading.c_heading_classes = 'lrv-u-text-align-left';
-c_suggestion_heading.c_heading_text = 'Here are some suggestions that might be the page you were looking for:';
+c_suggestion_title.c_title_classes = 'lrv-u-text-align-left';
+c_suggestion_title.c_title_text = 'Here are some suggestions that might be the page you were looking for:';
+c_suggestion_title.c_title_url = false;
 
 suggested_link_items.list_classes = 'lrv-u-text-align-left';
 suggested_link_items.list_items = [
@@ -36,8 +37,9 @@ suggested_link_items.list_items = [
 	{ list_markup: 'item_two' },
 ];
 
-c_search_heading.c_heading_classes = 'lrv-u-text-align-left';
-c_search_heading.c_heading_text = 'Or try searching for it here...';
+c_search_title.c_title_classes = 'lrv-u-text-align-left';
+c_search_title.c_title_text = 'Or try searching for it here...';
+c_search_title.c_title_url = false;
 
 search_form.search_form_classes = 'lrv-u-text-align-left lrv-u-margin-t-1';
 search_form.search_form_input_classes = 'lrv-u-border-a-1';
@@ -46,8 +48,8 @@ module.exports = {
 	button_outer_classes:
 		'lrv-u-flex lrv-u-justify-content-center lrv-u-align-items-center lrv-u-flex-direction-column@mobile-max',
 	c_heading,
-	c_suggestion_heading,
-	c_search_heading,
+	c_suggestion_title,
+	c_search_title,
 	c_svg,
 	c_tagline,
 	c_title,
