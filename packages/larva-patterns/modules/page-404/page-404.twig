@@ -28,7 +28,9 @@
 			{% include "@larva/components/c-title/c-title.twig" with c_search_title %}
 		{% endif %}
 
-		{% include "@larva/modules/search-form/search-form.twig" with search_form %}
+		{% if search_form %}
+			{% include "@larva/modules/search-form/search-form.twig" with search_form %}
+		{% endif %}
 
 	</div>
 </section>

@@ -27,11 +27,11 @@ c_title.c_title_text = 'OOPS! Something went wrong here!';
 c_title.c_title_classes = 'lrv-a-font-secondary-l lrv-u-text-transform-uppercase lrv-u-margin-b-125';
 c_title.c_title_url = false;
 
-c_suggestion_title.c_title_classes = 'lrv-u-text-align-left';
+c_suggestion_title.c_title_classes = 'lrv-u-text-align-left lrv-u-margin-b-075';
 c_suggestion_title.c_title_text = 'Here are some suggestions that might be the page you were looking for:';
 c_suggestion_title.c_title_url = false;
 
-suggested_link_items.list_classes = 'lrv-u-text-align-left';
+suggested_link_items.list_classes = 'lrv-u-text-align-left lrv-u-padding-b-1';
 suggested_link_items.list_items = [
 	{ list_markup: 'item_one' },
 	{ list_markup: 'item_two' },
@@ -41,8 +41,9 @@ c_search_title.c_title_classes = 'lrv-u-text-align-left';
 c_search_title.c_title_text = 'Or try searching for it here...';
 c_search_title.c_title_url = false;
 
-search_form.search_form_classes = 'lrv-u-text-align-left lrv-u-margin-t-1';
+search_form.search_form_classes = 'lrv-u-text-align-left lrv-u-margin-t-1 search-form-404';
 search_form.search_form_input_classes = 'lrv-u-border-a-1';
+search_form.search_form_action_url = '/?s=';
 
 module.exports = {
 	button_outer_classes:
