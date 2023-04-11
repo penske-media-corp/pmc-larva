@@ -42,7 +42,7 @@ c_search_title.c_title_text = 'Or try searching for it here...';
 c_search_title.c_title_url = false;
 
 search_form.search_form_classes = 'lrv-u-text-align-left lrv-u-margin-t-1 search-form-404';
-search_form.search_form_input_classes = 'lrv-u-border-a-1';
+search_form.search_form_input_classes = 'lrv-u-border-a-1 lrv-u-width-100p';
 search_form.search_form_action_url = '/?s=';
 
 module.exports = {
