@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.47.1 04-13-2023
+* Re-build larva JSON/versioning
+
 ## 1.47.0 04-13-2023
 * larva-patterns - Added suggested links and search form in page-404 module.
 
