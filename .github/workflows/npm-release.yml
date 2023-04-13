@@ -24,10 +24,10 @@ name: Release to npm
 # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 on:
   # For action testing! Will need to update this when merged to main for the button to trigger action.
-  push:
+  #push:
   # UN-COMMENT THESE OUT NEXT TIME
-    branches:
-      - feature/automated-releases
+    #branches:
+      #- feature/automated-releases
   workflow_dispatch:
   
 
@@ -95,6 +95,7 @@ jobs:
           git push
           
           git status
+          git diff
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
       - name: Create Pull Request
