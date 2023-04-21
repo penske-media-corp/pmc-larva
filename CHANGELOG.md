@@ -5,8 +5,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
-
-## 1.47.2 04-21-2023
 * Add Flipboard logomark SVG and brand color.
 
 ## 1.47.1 04-13-2023
