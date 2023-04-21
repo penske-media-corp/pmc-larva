@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.47.2 04-21-2023
+* Add Flipboard logomark SVG and brand color.
+
 ## 1.47.1 04-13-2023
 * Re-build larva JSON/versioning
 
