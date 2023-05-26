@@ -16,6 +16,18 @@
 			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
 		{% endif %}
 
+		<div class="buttons-outer {{ button_outer_classes }}">
+
+			{% if c_button_home %}
+				{% include "@larva/components/c-button/c-button.twig" with c_button_home %}
+			{% endif %}
+
+			{% if c_button_search %}
+				{% include "@larva/components/c-button/c-button.twig" with c_button_search %}
+			{% endif %}
+
+		</div>
+
 		{% if c_suggestion_title %}
 			{% include "@larva/components/c-title/c-title.twig" with c_suggestion_title %}
 		{% endif %}

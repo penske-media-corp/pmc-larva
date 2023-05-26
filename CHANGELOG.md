@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-svg - Updated Flipboard logomark with 2023 version.
+* larva-patterns - Add `smart` variant for `page-404` module.
 
 ## 1.48.1 04-25-2023
 * Re-build larva JSON/versioning
