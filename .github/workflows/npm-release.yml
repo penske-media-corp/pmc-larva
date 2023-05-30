@@ -24,10 +24,10 @@ name: Release to npm
 # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 on:
   # For action testing! Will need to update this when merged to main for the button to trigger action.
-  push:
+  #push:
   # UN-COMMENT THESE OUT NEXT TIME
-    branches:
-      - feature/automated-releases
+    #branches:
+      #- feature/automated-releases
   workflow_dispatch:
   
 
@@ -83,6 +83,10 @@ jobs:
           # npx lerna publish --canary --preid test-v3 --yes --tag-version-prefix='test-v' --no-git-reset
           
           npx lerna publish minor --yes --no-git-reset
+          
+          # THIS IS NOT TAGGING TO THE ACTUAL RELEASE BRANCH?? ^
+          # See notice here (automation): https://github.com/penske-media-corp/pmc-larva/commit/35ceb11b3f561ba35a0d81da313316930d644c11
+          # vs lack of notice when doing it manually: https://github.com/penske-media-corp/pmc-larva/commit/b3385249708181dc1f48b4530bd3c10a387c3778
           
           #
           # REMEMBER TO UN-COMMENT THE ON-PUSH TRIGGER!
