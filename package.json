@@ -80,7 +80,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-stylelint": "^13.0.0",
     "jest": "^24.8.0",
-    "lerna": "^3.22.1",
+    "lerna": "^6.6.1",
     "lodash.clonedeep": "^4.5.0",
     "marked": "^4.0.10",
     "node-sass": "^6.0.0",
