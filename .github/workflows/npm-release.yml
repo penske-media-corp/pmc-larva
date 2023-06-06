@@ -84,6 +84,10 @@ jobs:
           
           npx lerna publish minor --yes --no-git-reset
           
+          # Get the latest commits and declare latest commit into var
+          git fetch
+          export LATEST_HASH=$(git rev-list --tags --max-count=1)
+          
           # THIS IS NOT TAGGING TO THE ACTUAL RELEASE BRANCH?? ^
           # See notice here (automation): https://github.com/penske-media-corp/pmc-larva/commit/35ceb11b3f561ba35a0d81da313316930d644c11
           # vs lack of notice when doing it manually: https://github.com/penske-media-corp/pmc-larva/commit/b3385249708181dc1f48b4530bd3c10a387c3778
@@ -94,8 +98,14 @@ jobs:
           
           git status
           
+          # Get latest commit from release tag and add it to release branch.
+          git cherry-pick $LATEST_HASH
+          
+          git status
+          
           # git add -A
           git add .
+          
           git commit -m 'Update package versioning'
           git push
           
