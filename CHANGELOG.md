@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.49.1 06-13.2023
+* larva-patterns - Add `id` attribute for `paragraph` module.
+
 ## 1.49.0 05-30-2023
 * larva-svg - Updated Flipboard logomark with 2023 version.
 * larva-patterns - Add `smart` variant for `page-404` module.
