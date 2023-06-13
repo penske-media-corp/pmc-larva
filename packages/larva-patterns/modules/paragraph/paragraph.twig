@@ -1,3 +1,8 @@
-<p class="paragraph larva // {{ paragraph_classes }} {{ paragraph_animation_class }} {{ paragraph_typography_class }} {{ paragraph_text_align_class }} {{ paragraph_color_class }} {{ paragraph_background_color_class }}">
+<p
+	{% if paragraph_id_attr %}
+		id="{{ paragraph_id_attr }}"
+	{% endif %}
+	class="paragraph larva // {{ paragraph_classes }} {{ paragraph_animation_class }} {{ paragraph_typography_class }} {{ paragraph_text_align_class }} {{ paragraph_color_class }} {{ paragraph_background_color_class }}"
+>
 	{{ paragraph_markup|raw }}
 </p>
