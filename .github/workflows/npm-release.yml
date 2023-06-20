@@ -95,21 +95,21 @@ jobs:
           #
           # REMEMBER TO UN-COMMENT THE ON-PUSH TRIGGER!
           #
-          
-          git status
-          
-          # Get latest commit from release tag and add it to release branch.
-          git cherry-pick $LATEST_HASH
-          
+          echo '🤩🤩 ➡️ Finished lerna publish'
           git status
           
           # git add -A
           git add .
           
           git commit -m 'Update package versioning'
+          # Get latest commit from release tag and add it to release branch.
+          git status
+          echo '🤩🤩 ➡️ Finished committing'
           git push
-          
-          echo '🤩🤩 ➡️ Finished committing and pushing'
+          echo '🤩🤩 ➡️ Finish pushing first commit'
+          git cherry-pick $LATEST_HASH
+          echo '🤩🤩 ➡️ Finished cherry picking'
+          git push
           
           git status
           git diff
