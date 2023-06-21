@@ -67,7 +67,7 @@
     "cross-spawn": "^7.0.3",
     "eslint": "^8.21.0",
     "eslint-plugin-jest": "^26.7.0",
-    "exec-php": "0.0.5",
+    "exec-php": "0.0.6",
     "express": "^4.17.1",
     "flickity": "^2.2.1",
     "fs-extra": "^9.0.1",
