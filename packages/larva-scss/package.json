@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "sass-true": "^5.0.0",
-    "stylelint": "^13.6.1"
+    "stylelint": "^15.6.0"
   },
   "gitHead": "5b9c1e426e7de71a527364e2e03be928dd512d43"
 }
