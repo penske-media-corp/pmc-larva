@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-css",
-  "version": "1.50.0",
+  "version": "1.51.0",
   "description": "Larva CSS.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -22,8 +22,8 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
-    "@penskemediacorp/larva-scss": "^1.50.0",
-    "@penskemediacorp/larva-tokens": "^1.50.0",
+    "@penskemediacorp/larva-scss": "^1.51.0",
+    "@penskemediacorp/larva-tokens": "^1.51.0",
     "del": "^6.0.0",
     "fibers": "^5.0.1",
     "fs-extra": "^9.1.0",
@@ -33,5 +33,5 @@
     "gulp-stylelint": "^13.0.0",
     "sass": "^1.32.8"
   },
-  "gitHead": "c23975e72a8d5d29a25621a51a1708cea77b77a0"
+  "gitHead": "5b9c1e426e7de71a527364e2e03be928dd512d43"
 }
