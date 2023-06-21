@@ -73,7 +73,7 @@
     "gulp-ignore": "^3.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-stylelint": "^13.0.0",
     "lodash.clonedeep": "^4.5.0",
     "marked": "^4.0.10",
