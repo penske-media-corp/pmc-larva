@@ -83,7 +83,7 @@
     "lerna": "^3.22.1",
     "lodash.clonedeep": "^4.5.0",
     "marked": "^4.0.10",
-    "node-sass": "^6.0.0",
+    "node-sass": "^7.0.0",
     "node-sass-glob-importer": "^5.3.2",
     "nodemon": "^2.0.4",
     "prettier": "npm:wp-prettier@^2.6.2",
