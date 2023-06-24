@@ -20,7 +20,7 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "stylelint": "^10.1.0"
+    "stylelint": "^15.9.0"
   },
   "gitHead": "5b9c1e426e7de71a527364e2e03be928dd512d43"
 }
