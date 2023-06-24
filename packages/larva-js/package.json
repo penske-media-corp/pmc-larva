@@ -23,8 +23,8 @@
 	},
 	"dependencies": {
 		"flickity": "^2.2.1",
-		"webpack": "^4.43.0",
-		"webpack-cli": "^3.3.12"
+		"webpack": "^5.88.0",
+		"webpack-cli": "^5.1.4"
 	},
 	"gitHead": "5b9c1e426e7de71a527364e2e03be928dd512d43"
 }
