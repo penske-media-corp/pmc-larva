@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-tokens",
-  "version": "1.51.0",
+  "version": "1.52.0",
   "description": "Design tokens",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -34,5 +34,5 @@
     "plugin-error": "^1.0.1",
     "sass": "^1.54.0"
   },
-  "gitHead": "5b9c1e426e7de71a527364e2e03be928dd512d43"
+  "gitHead": "2bd2a40e3813ad13ab64c609ad7762e4b9ff1838"
 }
