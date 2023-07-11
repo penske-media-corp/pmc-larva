@@ -26,9 +26,9 @@ on:
   # For action testing! Will need to update this when merged to main for the button to trigger action.
   push:
   # UN-COMMENT THESE OUT NEXT TIME
-    branches:
-      - feature/automated-releases
-  workflow_dispatch:
+  #  branches:
+  #    - feature/automated-releases
+  # workflow_dispatch:
   
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -109,7 +109,11 @@ jobs:
           echo '🤩🤩 ➡️ Finish pushing first commit'
           git cherry-pick $LATEST_HASH
           echo '🤩🤩 ➡️ Finished cherry picking'
+          git add -A
+          git commit -m "Cherry pick last commit from lerna"
+          echo '🤩🤩 ➡️ Commit the cherry pick'
           git push
+          echo '🤩🤩 ➡️ Push the cherry pick'
           
           git status
           git diff
