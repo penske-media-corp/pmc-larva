@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished Changes
 * larva-patterns - Reorder css class names based on WP coding standards.
 
+## 1.51.0 06-20-2023 
+* no changes.
+
+## 1.50.0 06-13-2023 
+* larva-patterns - Add `id` attribute for `paragraph` module.
+
+## 1.49.0 05-30-2023
+* larva-svg - Updated Flipboard logomark with 2023 version.
+* larva-patterns - Add `smart` variant for `page-404` module.
+
+## 1.48.1 04-25-2023
+* Re-build larva JSON/versioning
+
+## 1.48.0 04-25-2023
+* larva-svg - Added Flipboard logomark.
+* larva-scss - Added Flipboard brand color.
+## 1.47.1 04-13-2023
+* Re-build larva JSON/versioning
+
+## 1.47.0 04-13-2023
+* larva-patterns - Added suggested links and search form in page-404 module.
+
 ## 1.46.1 04-04-2023
 * Fix package/lerna versions from failed 1.46.0 release
 
