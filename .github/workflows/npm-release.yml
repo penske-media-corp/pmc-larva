@@ -26,8 +26,8 @@ on:
   # For action testing! Will need to update this when merged to main for the button to trigger action.
   push:
   # UN-COMMENT THESE OUT NEXT TIME
-  #  branches:
-  #    - feature/automated-releases
+    branches:
+      - feature/automated-releases
   # workflow_dispatch:
   
 
@@ -108,6 +108,8 @@ jobs:
           git push
           echo '🤩🤩 ➡️ Finish pushing first commit'
           git cherry-pick $LATEST_HASH
+          git diff
+          git cherry-pick --continue
           echo '🤩🤩 ➡️ Finished cherry picking'
           git add -A
           git commit -m "Cherry pick last commit from lerna"
