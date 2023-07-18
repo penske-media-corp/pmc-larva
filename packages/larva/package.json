@@ -92,5 +92,5 @@
   "devDependencies": {
     "prettier": "npm:wp-prettier@^2.6.2"
   },
-  "gitHead": "2bd2a40e3813ad13ab64c609ad7762e4b9ff1838"
+  "gitHead": "06c014e26897e9bc5198c0bc036e9a51985198fb"
 }
