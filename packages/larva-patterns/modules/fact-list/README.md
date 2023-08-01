@@ -1,0 +1,1 @@
+Used in to display schema data in content associated with a taxonomy term. End markup should include schema.org data attributes for purposes of SEO. Usage is associated with `pmc/term-content` plugin.
