@@ -1,0 +1,1 @@
+Renders a description term and detail block. These blocks comprise the content of a `fact-list` module. Usage is associated with `pmc/term-content` plugin. A thumbnail variant is available to display a fact list item containing a tag list with images.
