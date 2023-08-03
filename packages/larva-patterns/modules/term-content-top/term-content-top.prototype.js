@@ -62,8 +62,6 @@ article_excerpt.article_excerpt_markup = 'We’ve spent hundreds of hours resear
 	+ 'our experts pick out the right appliances for all kinds of living situations, to '
 	+ 'help keep your chores short and sweet.';
 
-fact_list.fact_list_classes += ' lrv-a-term-content-grid__tertiary';
-
 module.exports = {
 	article_excerpt,
 	article_title,

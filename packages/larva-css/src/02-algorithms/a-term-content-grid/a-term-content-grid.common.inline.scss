@@ -2,7 +2,7 @@
 
 .lrv-a-term-content-grid {
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
     gap: 0 1em;
     grid-template-areas:
@@ -12,6 +12,7 @@
 
     @include pmc-breakpoint( desktop ) {
         gap: 0 2em;
+        grid-template-columns: 40% 1fr;
         grid-template-areas:
             'col1 col2'
             'full full';
