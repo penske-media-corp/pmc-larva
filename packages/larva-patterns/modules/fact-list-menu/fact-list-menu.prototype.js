@@ -30,7 +30,7 @@ module.exports = {
 		'lrv-u-display-inline-flex',
 		'lrv-u-flex-wrap-wrap',
 		'lrv-u-padding-tb-075',
-		'lrv-a-term-content__fact-list-menu',
+		'lrv-a-term-content-grid__fact-list-menu',
 	].join( ' ' ),
 	fact_list_menu_li_classes: [
 		'a-font-secondary',
