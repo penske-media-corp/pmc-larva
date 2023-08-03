@@ -33,7 +33,7 @@ c_tagline.c_tagline_classes = [
 article_title.c_tagline = c_tagline;
 
 // Begin configuring featured iamge.
-o_figure.o_figure_classes = 'lrv-u-font-family-secondary lrv-u-margin-b-00';
+o_figure.o_figure_classes = 'lrv-u-font-family-secondary lrv-u-margin-b-00 lrv-u-width-100p lrv-a-term-content-grid__primary';
 o_figure.c_lazy_image.c_lazy_image_placeholder_url = 'https://source.unsplash.com/random/500x500';
 
 // Configure featured image captions and credit.
@@ -62,11 +62,14 @@ article_excerpt.article_excerpt_markup = 'We’ve spent hundreds of hours resear
 	+ 'our experts pick out the right appliances for all kinds of living situations, to '
 	+ 'help keep your chores short and sweet.';
 
+fact_list.fact_list_classes += ' lrv-a-term-content-grid__tertiary';
+
 module.exports = {
 	article_excerpt,
 	article_title,
 	fact_list_menu,
 	fact_list,
 	o_figure,
-	term_content_top_classes: 'lrv-a-grid lrv-u-margin-t-1',
+	term_content_top_classes: 'lrv-u-margin-t-1 lrv-a-term-content-grid',
+	term_content_secondary_classes: 'lrv-a-term-content-grid__secondary',
 };

@@ -2,7 +2,7 @@
 	{% if o_figure %}
 		{% include "@larva/objects/o-figure/o-figure.twig" with o_figure %}
 	{% endif %}
-	<div class="term-content-detail">
+	<div class="term-content-detail // {{ term_content_secondary_classes }}">
 		{% if article_title %}
 			{% include "@larva/modules/article-title/article-title.twig" with article_title %}
 		{% endif %}

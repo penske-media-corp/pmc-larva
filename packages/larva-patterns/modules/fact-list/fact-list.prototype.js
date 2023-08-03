@@ -13,7 +13,7 @@ c_title.c_title_url = '';
 
 module.exports = {
 	c_title,
-	fact_list_classes: 'lrv-u-font-family-secondary lrv-u-margin-t-1',
+	fact_list_classes: 'lrv-u-font-family-secondary lrv-u-margin-t-1 lrv-a-term-content__fact-list',
 	fact_list_data_attributes: 'itemscope itemprop=Thing itemtype=http://schema.org/Thing',
 	fact_list_dl_classes: 'lrv-u-border-t-1 lrv-u-padding-t-1 lrv-u-margin-t-00',
 	fact_list_items: [ fact_list_item ],

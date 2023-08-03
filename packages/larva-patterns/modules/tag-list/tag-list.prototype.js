@@ -9,19 +9,9 @@ const c_span = clonedeep( require( '@penskemediacorp/larva-patterns/components/c
 const titles = [
 	'Music',
 	'Software Development',
-	'Machine Learning',
 	'Data Science',
-	'Modern Architecture',
-	'International Politics',
 	'Sustainable Agriculture',
-	'Quantum Computing',
 	'Art',
-	'Historical Fiction',
-	'Adventure Travel',
-	'Holistic Nutrition',
-	'Books',
-	'3D Printing Technologies',
-	'Renewable Energy Sources',
 	'Digital Marketing Strategies'
 ];
 
