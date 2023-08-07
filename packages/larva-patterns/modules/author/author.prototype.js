@@ -5,7 +5,7 @@ const c_tagline_prototype = require( '../../components/c-tagline/c-tagline.proto
 const c_timestamp_prototype = require( '../../components/c-timestamp/c-timestamp.prototype' );
 
 const c_timestamp = clonedeep( c_timestamp_prototype );
-c_timestamp.c_timestamp_classes = 'lrv-u-color-black lrv-u-margin-l-auto';
+c_timestamp.c_timestamp_classes = 'lrv-u-margin-l-auto lrv-u-color-black';
 c_timestamp.c_timestamp_text = 'September 3, 2019 7:51pm';
 c_timestamp.c_timestamp_datetime_attr = '2019-09-03';
 
@@ -20,7 +20,7 @@ c_link_author.c_link_url = '#';
 
 const c_tagline_multiple_authors = clonedeep( c_tagline_prototype );
 c_tagline_multiple_authors.c_tagline_classes =
-	'lrv-u-display-inline lrv-a-children-link-color-black lrv-a-children-link-color-brand-primary:hover lrv-a-children-link-decoration-underline:hover lrv-u-margin-r-050 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015 lrv-u-letter-spacing-012@mobile-max';
+	'lrv-u-display-inline lrv-u-margin-r-050 lrv-a-children-link-color-black lrv-a-children-link-color-brand-primary:hover lrv-a-children-link-decoration-underline:hover lrv-u-text-transform-uppercase lrv-u-letter-spacing-015 lrv-u-letter-spacing-012@mobile-max';
 c_tagline_multiple_authors.c_tagline_markup =
 	"<a href='#'>Link 1</a>, <a href='#'>Link 2</a>";
 c_tagline_multiple_authors.c_tagline_text = false;
@@ -40,7 +40,7 @@ module.exports = {
 	author_tagline_classes:
 		'lrv-u-margin-tb-00 lrv-u-text-transform-uppercase lrv-u-letter-spacing-015 lrv-u-letter-spacing-012@mobile-max',
 	author_button_classes:
-		'lrv-a-unstyle-button lrv-u-display-contents lrv-u-flex lrv-u-align-items-center js-PopOver',
+		'lrv-u-display-contents lrv-u-flex lrv-u-align-items-center lrv-a-unstyle-button js-PopOver',
 	author_detail_outer_classes:
 		'lrv-a-hidden@desktop-max lrv-a-glue lrv-a-glue--l-0 lrv-a-glue--t-100p js-PopOver-target',
 	is_multiple_author: false,
