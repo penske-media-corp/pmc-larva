@@ -6,20 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
-## 1.54.0 08-08-2023 
+## 1.54.0 08-08-2023
 * larva-patterns - Add new modules and variants: `fact-list-item`, `fact-list-menu`, `fact-list`, `tag-list` and `term-content-top`. Add `a-term-content-grid` layout algorithm.
 * larva-css - Add `a-term-content-grid` styles.
 
-## 1.53.0 07-18-2023 
+## 1.53.0 07-18-2023
 * larva-patterns - Reorder css class names based on WP coding standards.
 
-## 1.52.0 07-11-2023 
+## 1.52.0 07-11-2023
 * no changes.
 
-## 1.51.0 06-20-2023 
+## 1.51.0 06-20-2023
 * no changes.
 
-## 1.50.0 06-13-2023 
+## 1.50.0 06-13-2023
 * larva-patterns - Add `id` attribute for `paragraph` module.
 
 ## 1.49.0 05-30-2023
