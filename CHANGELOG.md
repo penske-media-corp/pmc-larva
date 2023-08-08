@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-patterns - Add new modules and variants: `fact-list-item`, `fact-list-menu`, `fact-list`, `tag-list` and `term-content-top`. Add `a-term-content-grid` layout algorithm.
+* larva-css - Add `a-term-content-grid` styles.
 
 ## 1.53.0 07-18-2023 
 * larva-patterns - Reorder css class names based on WP coding standards.
