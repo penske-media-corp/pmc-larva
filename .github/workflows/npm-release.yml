@@ -112,16 +112,19 @@ jobs:
           git push
           echo '🤩🤩 ➡️ Finish pushing first commit'
 
-          git cherry-pick $LATEST_HASH
+          git cherry-pick $LATEST_HASH --keep-redundant-commits
           echo '🤩🤩 ➡️ Cherry-picked $LATEST_HASH'
+
+          git --no-pager log -1 --pretty=format:"%h - %an, %ar : %s"
+          echo '🤩🤩 ➡️ Did git log after cherry-pick'
+
+          #git cherry-pick --continue
+          # git cherry-pick --skip
+          #echo '🤩🤩 ➡️ Finished cherry picking'
 
           git diff
           echo '🤩🤩 ➡️ Diffed after cherry-pick'
           
-          # git cherry-pick --continue
-          git cherry-pick --skip
-          echo '🤩🤩 ➡️ Finished cherry picking'
-
           git add -A
           echo '🤩🤩 ➡️ Added working changes post-cherry-pick'
           
