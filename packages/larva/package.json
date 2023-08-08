@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva",
-  "version": "1.54.0",
+  "version": "1.55.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
@@ -43,16 +43,16 @@
   "dependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
-    "@penskemediacorp/backstopjs-config": "^1.54.0",
-    "@penskemediacorp/eslint-config": "^1.54.0",
-    "@penskemediacorp/larva-css": "^1.54.0",
-    "@penskemediacorp/larva-js": "^1.54.0",
-    "@penskemediacorp/larva-patterns": "^1.54.0",
-    "@penskemediacorp/larva-scss": "^1.54.0",
-    "@penskemediacorp/larva-svg": "^1.54.0",
-    "@penskemediacorp/larva-tokens": "^1.54.0",
-    "@penskemediacorp/stylelint-config": "^1.54.0",
-    "@penskemediacorp/twig-to-php-parser": "^1.54.0",
+    "@penskemediacorp/backstopjs-config": "^1.55.0",
+    "@penskemediacorp/eslint-config": "^1.55.0",
+    "@penskemediacorp/larva-css": "^1.55.0",
+    "@penskemediacorp/larva-js": "^1.55.0",
+    "@penskemediacorp/larva-patterns": "^1.55.0",
+    "@penskemediacorp/larva-scss": "^1.55.0",
+    "@penskemediacorp/larva-svg": "^1.55.0",
+    "@penskemediacorp/larva-tokens": "^1.55.0",
+    "@penskemediacorp/stylelint-config": "^1.55.0",
+    "@penskemediacorp/twig-to-php-parser": "^1.55.0",
     "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
@@ -92,5 +92,5 @@
   "devDependencies": {
     "prettier": "npm:wp-prettier@^2.6.2"
   },
-  "gitHead": "bd3cf3a26bc5308802b872db3592b5dab40ce921"
+  "gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"
 }
