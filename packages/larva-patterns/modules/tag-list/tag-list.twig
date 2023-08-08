@@ -1,0 +1,16 @@
+{% if tag_list_terms %}
+	<ul class="tag-list-terms // {{ tag_list_classes }}">
+		{% for term_item in tag_list_terms %}
+		<li class="tag-list-term // {{ tag_list_term_classes }}">
+			<div class="tag-list-term-item // {{ tag_list_term_item_classes }}">
+				{% if term_item['o_figure'] %}
+					{% include "@larva/objects/o-figure/o-figure.twig" with term_item['o_figure'] %}
+				{% endif %}
+				{% if term_item['c_span'] %}
+					{% include "@larva/components/c-span/c-span.twig" with term_item['c_span'] %}
+				{% endif %}
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+{% endif %}
