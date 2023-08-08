@@ -100,20 +100,34 @@ jobs:
           
           # git add -A
           git add .
+          echo '🤩🤩 ➡️ Added working changes after lerna publish'
           
           git commit -m 'Update package versioning'
+          echo '🤩🤩 ➡️ Committed package versioning update'
+          
           # Get latest commit from release tag and add it to release branch.
           git status
           echo '🤩🤩 ➡️ Finished committing'
+
           git push
           echo '🤩🤩 ➡️ Finish pushing first commit'
+
           git cherry-pick $LATEST_HASH
+          echo '🤩🤩 ➡️ Cherry-picked $LATEST_HASH'
+
           git diff
-          git cherry-pick --continue
+          echo '🤩🤩 ➡️ Diffed after cherry-pick'
+          
+          # git cherry-pick --continue
+          git cherry-pick --skip
           echo '🤩🤩 ➡️ Finished cherry picking'
+
           git add -A
+          echo '🤩🤩 ➡️ Added working changes post-cherry-pick'
+          
           git commit -m "Cherry pick last commit from lerna"
           echo '🤩🤩 ➡️ Commit the cherry pick'
+
           git push
           echo '🤩🤩 ➡️ Push the cherry pick'
           
