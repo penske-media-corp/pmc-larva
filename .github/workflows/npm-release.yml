@@ -128,14 +128,17 @@ jobs:
           git add -A
           echo '🤩🤩 ➡️ Added working changes post-cherry-pick'
           
-          git commit -m "Cherry pick last commit from lerna"
+          # git commit -m "Cherry pick last commit from lerna"
+          git commit --allow-empty -m "Cherry pick last commit from lerna"
           echo '🤩🤩 ➡️ Commit the cherry pick'
 
           git push
           echo '🤩🤩 ➡️ Push the cherry pick'
           
           git status
+          echo '🤩🤩 ➡️ Status after the cherry pick push'
           git diff
+          echo '🤩🤩 ➡️ Diff after the cherry pick push'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
       - name: Create Pull Request
