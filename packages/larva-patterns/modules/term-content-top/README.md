@@ -1,0 +1,1 @@
+Renders a styled term content area. Usage is associated with `pmc/term-content` plugin. A `heading-tags` variable is available to render an alternate layout that features a tag list with thumbnails.

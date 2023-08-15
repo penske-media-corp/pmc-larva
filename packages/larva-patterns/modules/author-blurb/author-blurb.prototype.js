@@ -21,12 +21,12 @@ c_heading.c_heading_classes =
 c_heading.c_heading_text = 'Mike Fleming Jr';
 
 c_title.c_title_classes =
-	'lrv-u-font-family-primary lrv-u-font-weight-normal lrv-u-color-grey-dark lrv-u-font-size-14@mobile-max lrv-u-font-size-18 lrv-u-margin-b-1 lrv-u-text-transform-uppercase';
+	'lrv-u-margin-b-1 lrv-u-font-family-primary lrv-u-font-weight-normal lrv-u-color-grey-dark lrv-u-font-size-14@mobile-max lrv-u-font-size-18 lrv-u-text-transform-uppercase';
 c_title.c_title_text = 'Co-Editor-in-Chief, Film';
 c_title.c_title_url = false;
 
 c_tagline.c_tagline_classes +=
-	' lrv-u-font-size-14 lrv-u-font-weight-light lrv-u-font-size-16 lrv-u-font-size-18@desktop-xl lrv-u-margin-a-00 lrv-u-padding-t-1 ';
+	' lrv-u-margin-a-00 lrv-u-padding-t-1 lrv-u-font-size-14 lrv-u-font-weight-light lrv-u-font-size-16 lrv-u-font-size-18@desktop-xl ';
 c_tagline.c_tagline_text =
 	'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis risus sed vulputate odio ut enim blandit. Aliquam sem et tortor consequat id. Convallis aenean et tortor at risus viverra. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Id aliquet lectus proin nibh nisl. Id diam maecenas ultricies mi. Luctus venenatis lectus magna fringilla urna porttitor rhoncus.';
 
@@ -40,7 +40,7 @@ for ( let i = 0; i < social.length; i++ ) {
 
 	c_icon.c_icon_name = social[ i ];
 	c_icon.c_icon_link_classes +=
-		' lrv-u-display-block lrv-u-border-radius-50p lrv-u-color-grey lrv-u-padding-a-025 lrv-u-background-color-white lrv-u-color-grey-dark:hover  lrv-u-margin-r-1';
+		' lrv-u-display-block lrv-u-border-radius-50p lrv-u-padding-a-025 lrv-u-color-grey lrv-u-background-color-white lrv-u-color-grey-dark:hover lrv-u-margin-r-1';
 	c_icon.c_icon_url = '#';
 
 	o_social_list_icons.push( c_icon );

@@ -1,0 +1,1 @@
+Renders a list of `fact-list-item` modules. Module used to add schema data associated with a taxonomy term. Usage is associated with `pmc/term-content` plugin.

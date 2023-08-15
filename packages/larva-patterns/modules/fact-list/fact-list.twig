@@ -1,0 +1,14 @@
+{% if fact_list_items %}
+<div class="fact-list // {{ fact_list_classes }}">
+	{% if c_title %}
+		<div class="fact-list-title // {{ fact_list_title_classes }}">
+			{% include "@larva/components/c-title/c-title.twig" with c_title %}
+		</div>
+	{% endif %}
+	<dl class="fact-list-items // {{ fact_list_dl_classes }}" {{ fact_list_data_attributes }}>
+		{% for fact_list_item in fact_list_items %}
+			{% include "@larva/modules/fact-list-item/fact-list-item.twig" with fact_list_item %}
+		{% endfor %}
+	</dl>
+</div>
+{% endif %}
