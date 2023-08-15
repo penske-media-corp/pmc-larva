@@ -1,0 +1,1 @@
+Renders menu of links to be displayed in the `term-content-top` module. Usage is associated with `pmc/term-content` plugin.

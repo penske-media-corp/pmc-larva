@@ -1,0 +1,22 @@
+<div class="term-content-top // {{ term_content_top_classes }}">
+	{% if o_figure %}
+		{% include "@larva/objects/o-figure/o-figure.twig" with o_figure %}
+	{% endif %}
+	<div class="term-content-detail // {{ term_content_secondary_classes }}">
+		{% if article_title %}
+			{% include "@larva/modules/article-title/article-title.twig" with article_title %}
+		{% endif %}
+		{% if fact_list_menu %}
+			{% include "@larva/modules/fact-list-menu/fact-list-menu.twig" with fact_list_menu %}
+		{% endif %}
+		{% if article_excerpt %}
+			{% include "@larva/modules/article-excerpt/article-excerpt.twig" with article_excerpt %}
+		{% endif %}
+	</div>
+	{% if tag_list %}
+		{% include "@larva/modules/tag-list/tag-list.twig" with tag_list %}
+	{% endif %}
+	{% if fact_list %}
+		{% include "@larva/modules/fact-list/fact-list.twig" with fact_list %}
+	{% endif %}
+</div>
