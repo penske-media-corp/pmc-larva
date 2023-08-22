@@ -5,8 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
-* larva-patterns - Reorder css class names based on WP coding standards.
 
+## 1.56.0 08-15-2023
+* larva-patterns - Reorder css class names of modules starting with letter `a` based on WP coding standards.
+* 
 ## 1.55.0 08-08-2023
 * larva-patterns - Clean up some classname order in footer-tip module.
 
