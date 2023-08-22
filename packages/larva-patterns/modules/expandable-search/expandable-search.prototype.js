@@ -17,7 +17,7 @@ module.exports = {
 	expandable_search_classes:
 		'js-ExpandableSearch-target lrv-a-unstyle-button lrv-u-color-black js-fade js-fade-is-out',
 	expandable_search_inner_classes:
-		'lrv-u-height-auto lrv-a-glue lrv-a-glue--l-0 lrv-a-glue--t-50p lrv-u-flex lrv-u-transform-translateY-n50p',
+		'lrv-a-glue lrv-a-glue--l-0 lrv-a-glue--t-50p lrv-u-flex lrv-u-transform-translateY-n50p lrv-u-height-auto',
 	o_icon_button_search,
 	search_form,
 };
