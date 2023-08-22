@@ -1,0 +1,68 @@
+@import 'setup';
+
+.lrv-a-term-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0 1em;
+    grid-template-areas:
+        'col1'
+        'col2'
+        'full';
+
+    @include pmc-breakpoint( desktop ) {
+        gap: 0 2em;
+        grid-template-columns: 40% 1fr;
+        grid-template-areas:
+            'col1 col2'
+            'full full';
+    }
+}
+
+.lrv-a-term-content-grid__primary,
+.lrv-a-term-content-grid__secondary {
+    grid-area: col1;
+}
+
+.lrv-a-term-content-grid__primary + .lrv-a-term-content-grid__secondary {
+    grid-area: col2;
+}
+
+.lrv-a-term-content-grid__tertiary {
+    grid-area: full;
+}
+
+.lrv-a-term-content-grid__fact-list-menu {
+    grid-gap: 8px 1em;
+}
+
+.lrv-a-term-content-grid__fact-list-item {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 8px;
+
+    @include pmc-breakpoint( mobile-max ) {
+        grid-template-columns: 1fr;
+    }
+
+    @include pmc-breakpoint( tablet ) {
+        grid-gap: 1em;
+        grid-template-columns: 20% 1fr;
+    }
+}
+
+.lrv-a-term-content-grid__fact-list-item:last-child {
+    border-bottom: 0;
+}
+
+.lrv-a-term-content-grid__fact-list-dt {
+    @include pmc-breakpoint( tablet ) {
+        grid-column-start: 1;
+    }
+}
+
+.lrv-a-term-content-grid__fact-list-dd {
+    @include pmc-breakpoint( tablet ) {
+        grid-column-start: 2;
+    }
+}

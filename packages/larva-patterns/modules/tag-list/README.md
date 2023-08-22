@@ -1,0 +1,1 @@
+Renders a styled list of tags. Usage is associated with `pmc/term-content` plugin. A thumbnail variant is available to display tags with their corresponding thumbnails.

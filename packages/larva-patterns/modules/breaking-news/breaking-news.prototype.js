@@ -12,7 +12,7 @@ const c_icon = clonedeep(
 
 c_heading.c_heading_text = 'Breaking News';
 c_heading.c_heading_classes =
-	'lrv-a-font-secondary-bold-l lrv-u-margin-r-1 lrv-u-text-transform-uppercase lrv-u-margin-b-050@mobile-max';
+	'lrv-u-margin-b-050@mobile-max lrv-u-margin-r-1 lrv-a-font-secondary-bold-l lrv-u-text-transform-uppercase';
 
 c_title.c_title_text =
 	'US Stadiums Partnership, Inc. Files for Bankruptcy Amid Historic Cancellations';
@@ -21,7 +21,7 @@ c_title.c_title_classes =
 c_title.c_title_link_classes = 'lrv-a-unstyle-link ';
 
 c_icon.c_icon_link_classes =
-	'dismiss-news-banner lrv-u-color-white lrv-u-cursor-pointer lrv-u-width-16 lrv-u-height-16 lrv-u-color-white:hover lrv-u-margin-l-auto';
+	'dismiss-news-banner lrv-u-margin-l-auto lrv-u-width-16 lrv-u-height-16 lrv-u-color-white lrv-u-cursor-pointer lrv-u-color-white:hover';
 c_icon.c_icon_url = '#';
 c_icon.c_icon_target_attr = false;
 c_icon.c_icon_name = 'close';

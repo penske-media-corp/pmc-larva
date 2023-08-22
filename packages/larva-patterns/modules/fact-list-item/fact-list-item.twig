@@ -1,0 +1,17 @@
+<div class="fact-list-item // {{ fact_list_item_classes }}">
+	{% if fact_list_item_dt_text %}
+		<dt class="fact-list-item-dt // {{ fact_list_item_dt_classes }}">
+			{{ fact_list_item_dt_text }}
+		</dt>
+	{% endif %}
+	<dd class="fact-list-item-dd // {{ fact_list_item_dd_classes }}" {{ fact_list_item_dd_data_attributes }}>
+		{% if fact_list_item_dd_content %}
+			{% include "@larva/components/c-dek/c-dek.twig" with fact_list_item_dd_content %}
+		{% endif %}
+		{% if fact_list_item_tag_list %}
+		<div class="fact-list-item-tags // {{ fact_list_item_tag_list_classes }}">
+			{% include "@larva/modules/tag-list/tag-list.twig" with fact_list_item_tag_list %}
+		</div>
+		{% endif %}
+	</dd>
+</div>

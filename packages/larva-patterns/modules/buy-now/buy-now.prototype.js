@@ -17,7 +17,7 @@ const c_icon_button = clonedeep(
 c_icon_button.o_icon_button_url = true;
 c_icon_button.o_button_url = '#';
 c_icon_button.o_icon_button_classes +=
-	' lrv-a-buy-now__button lrv-u-font-size-14 lrv-u-font-weight-bold lrv-u-text-transform-uppercase lrv-u-border-t-3 lrv-u-border-r-1 lrv-u-border-b-3 lrv-u-border-l-1 lrv-u-padding-tb-050 lrv-u-padding-lr-1 lrv-u-background-color-white lrv-u-color-black lrv-u-border-color-currentColor';
+	' lrv-a-buy-now__button lrv-u-border-t-3 lrv-u-border-r-1 lrv-u-border-b-3 lrv-u-border-l-1 lrv-u-padding-tb-050 lrv-u-padding-lr-1 lrv-u-border-color-currentColor lrv-u-background-color-white lrv-u-color-black lrv-u-font-size-14 lrv-u-font-weight-bold lrv-u-text-transform-uppercase';
 c_icon_button.o_icon_button_target_attr = '_blank';
 c_icon_button.o_icon_button_rel_attr = 'nofollow';
 
