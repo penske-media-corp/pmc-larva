@@ -13,7 +13,7 @@ o_card.c_tagline = false;
 o_card.o_author = false;
 
 o_card.o_card_classes =
-	'lrv-u-display-inline-flex lrv-u-flex-shrink-0@mobile-max lrv-u-flex-basis-100p@desktop-xl lrv-u-flex-basis-100p@desktop lrv-u-padding-tb-00@mobile-max';
+	'lrv-u-display-inline-flex lrv-u-flex-basis-100p@desktop-xl lrv-u-flex-basis-100p@desktop lrv-u-flex-shrink-0@mobile-max lrv-u-padding-tb-00@mobile-max';
 o_card.o_card_link_classes = 'lrv-u-flex';
 o_card.o_card_link_url = '#';
 o_card.o_card_image_wrap_classes =
@@ -35,7 +35,7 @@ o_card.article_kicker.article_kicker_link_classes = 'lrv-u-color-black';
 content_showcase.content_showcase_classes =
 	'the-moth lrv-u-border-t-1 lrv-u-font-family-body lrv-a-glue-parent';
 content_showcase.content_showcase_items_classes =
-	'the-moth-items lrv-u-overflow-auto@mobile-max lrv-u-flex-shrink-0@mobile-max lrv-u-flex lrv-u-margin-t-025 lrv-u-border-b-1 lrv-u-border-t-1 lrv-u-padding-tb-150 lrv-u-padding-r-2@mobile-max lrv-u-padding-lr-125@mobile-max lrv-u-width-100p';
+	'the-moth-items lrv-u-overflow-auto@mobile-max lrv-u-flex-shrink-0@mobile-max lrv-u-flex lrv-u-margin-t-025 lrv-u-border-t-1 lrv-u-border-b-1 lrv-u-padding-tb-150 lrv-u-padding-r-2@mobile-max lrv-u-padding-lr-125@mobile-max lrv-u-width-100p';
 
 content_showcase.content_showcase_items = [ o_card, o_card, o_card, o_card ];
 
