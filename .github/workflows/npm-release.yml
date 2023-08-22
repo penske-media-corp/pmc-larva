@@ -118,19 +118,19 @@ jobs:
           git --no-pager log -1 --pretty=format:"%h - %an, %ar : %s"
           echo '🤩🤩 ➡️ Did git log after cherry-pick'
 
-          #git cherry-pick --continue
+          # git cherry-pick --continue
           # git cherry-pick --skip
-          #echo '🤩🤩 ➡️ Finished cherry picking'
+          # echo '🤩🤩 ➡️ Finished cherry picking'
 
           git diff
           echo '🤩🤩 ➡️ Diffed after cherry-pick'
           
-          git add -A
-          echo '🤩🤩 ➡️ Added working changes post-cherry-pick'
+          # git add -A
+          # echo '🤩🤩 ➡️ Added working changes post-cherry-pick'
           
           # git commit -m "Cherry pick last commit from lerna"
-          git commit --allow-empty -m "Cherry pick last commit from lerna"
-          echo '🤩🤩 ➡️ Commit the cherry pick'
+          # git commit --allow-empty -m "Cherry pick last commit from lerna"
+          # echo '🤩🤩 ➡️ Commit the cherry pick'
 
           git push
           echo '🤩🤩 ➡️ Push the cherry pick'
