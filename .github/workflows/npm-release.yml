@@ -140,6 +140,8 @@ jobs:
           git diff
           echo '🤩🤩 ➡️ Diff after the cherry pick push'
         env:
+          # testing a fake secret to see if anything changes.
+          TEST_VAR: ${{ secrets.FAKE_FAKE }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4.2.3
