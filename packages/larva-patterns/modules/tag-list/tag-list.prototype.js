@@ -23,7 +23,7 @@ const tag_list_terms = Array.from( titles, ( title, index ) => ( {
 	c_span: {
 		...c_span,
 		c_span_classes: '',
-		c_span_link_classes: 'lrv-u-color-black',
+		c_span_link_classes: 'lrv-u-font-weight-bold lrv-u-color-black lrv-u-color-brand-primary:hover lrv-a-hover-effect',
 		c_span_text: `${title}${index === titles.length - 1 ? '' : ','}`,
 		c_span_url: `#test-link-${ index + 1 }`,
 	}
