@@ -74,7 +74,7 @@ jobs:
          registry-url: 'https://registry.npmjs.org'
       - name: Lerna checks
         run: |
-          npm install
+          npm ci
           npm run lint:scss 
           npx lerna --version
       - name: Publish to npm
