@@ -72,6 +72,9 @@ jobs:
         with:
          node-version: '14'
          registry-url: 'https://registry.npmjs.org'
+      - name: Lerna checks
+        run: |
+          npx lerna --version
       - name: Publish to npm
         # https://dev.to/astagi/publish-to-npm-using-github-actions-23fn
         # Check dist.dev NPM user in LastPass?
