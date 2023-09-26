@@ -74,6 +74,7 @@ jobs:
          registry-url: 'https://registry.npmjs.org'
       - name: Lerna checks
         run: |
+          npm run lint:scss 
           npx lerna --version
       - name: Publish to npm
         # https://dev.to/astagi/publish-to-npm-using-github-actions-23fn
