@@ -1,0 +1,20 @@
+name: Vercel
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-nova:
+    name: Deploy
+    uses: penske-media-corp/github-workflows-wordpress/.github/workflows/vercel.yml@main
+    secrets:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    with:
+      VERCEL_ORG_SlUG: 'penske-media-corp'
+      VERCEL_PROJECT_ID: 'QmNsDWT7v4xm3WZ9LoUbwfoMkedvu9Lv6fQe6BtcUGYYG2'
+      VERCEL_PROJECT_NAME: 'pmc-larva'
+      WORKING_DIRECTORY: './'
