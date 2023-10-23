@@ -20,19 +20,19 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
-    "del": "^6.0.0",
-    "fs-extra": "^9.1.0",
-    "gulp": "^4.0.2",
-    "gulp-theo": "^2.0.1",
-    "lodash.template": ">=4.5.0",
-    "theo": "^8.1.5"
+    "del": "^7.0.0",
+    "fs-extra": "^11.0.0",
+    "gulp": "^4.0.0",
+    "gulp-theo": "^2.0.0",
+    "lodash.template": "^4.0.0",
+    "theo": "^8.0.0"
   },
   "dependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^4.0.0",
     "gulp-if": "^3.0.0",
-    "gulp-sass": "^5.1.0",
-    "plugin-error": "^1.0.1",
-    "sass": "^1.54.0"
+    "gulp-sass": "^5.0.0",
+    "plugin-error": "^2.0.0",
+    "sass": "^1.0.0"
   },
   "gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"
 }
