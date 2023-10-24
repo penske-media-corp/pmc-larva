@@ -1,4 +1,4 @@
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { Route, Routes, useMatch } from 'react-router-dom';
 
 import React, { useState, useEffect } from 'react';
 import { TokenForm } from './TokenForm';
@@ -9,7 +9,7 @@ import {
 } from '../utils/coreColorTokens';
 
 export const TokensView = () => {
-	const match = useRouteMatch();
+	const match = useMatch();
 
 	const TOKENS_FETCH_URL =
 		'https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/';
@@ -196,7 +196,7 @@ export const TokensView = () => {
 	};
 
 	return (
-		<Switch>
+		<Routes>
 			<Route path={ `${ match.url }/:action` }>
 				<TokenForm
 					tokens={ tokens }
@@ -220,6 +220,6 @@ export const TokensView = () => {
 					appActions={ appActions }
 				/>
 			</Route>
-		</Switch>
+		</Routes>
 	);
 };
