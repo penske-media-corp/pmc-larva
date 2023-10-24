@@ -23,8 +23,8 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "exec-php": "0.0.5"
+    "chalk": "^5.0.0",
+    "exec-php": "^0.0.6"
   },
   "gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"
 }
