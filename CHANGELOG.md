@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * larva-patterns - Add brand primary link styles to tag list module.
 * larva-patterns - Reorder css class names of modules starting with letter `c` based on WP coding standards.
 
+## 1.57.1 10-25-2023
+* eslint-config - Update @wordpress/eslint-plugin dependency to v17.
+
 ## 1.56.0 08-15-2023
 * larva-patterns - Reorder css class names of modules starting with letter `a` based on WP coding standards.
 
