@@ -25,7 +25,7 @@
   },
   "gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc",
   "dependencies": {
-    "@wordpress/eslint-plugin": "^12.9.0"
+    "@wordpress/eslint-plugin": "^17"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",
