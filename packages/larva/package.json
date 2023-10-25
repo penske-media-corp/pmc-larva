@@ -90,7 +90,7 @@
     "webpack-cli": "^5"
   },
   "devDependencies": {
-    "prettier": "npm:wp-prettier@^2.6.2"
+    "prettier": "npm:wp-prettier@^3"
   },
   "overrides": {
     "@wordpress/eslint-plugin": "^17"
