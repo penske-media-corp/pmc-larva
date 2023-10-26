@@ -6,7 +6,6 @@ const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
 const gulpStylelint = require( 'gulp-stylelint' );
 
-const Fibers = require( 'fibers' );
 const globImporter = require( 'node-sass-glob-importer' );
 const { mkdirpSync } = require( 'fs-extra' );
 const path = require( 'path' );
@@ -24,7 +23,6 @@ const cssDest = './build/css/';
 sass.compiler = require( 'sass' );
 
 const sassOpts = {
-	fiber: Fibers,
 	includePaths: [
 		path.resolve( './node_modules' ),
 		path.resolve( './src/scss' ),
