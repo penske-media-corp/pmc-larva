@@ -10,7 +10,7 @@ const globImporter = require( 'node-sass-glob-importer' );
 const { mkdirpSync } = require( 'fs-extra' );
 const path = require( 'path' );
 const postCss = require( 'postcss' );
-const sass = require( 'gulp-sass' );
+const sass = require( 'gulp-sass' )(require('sass'));
 
 const stylelintConfig = require( './stylelint.config' );
 
