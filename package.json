@@ -71,7 +71,7 @@
     "express": "^4",
     "flickity": "^3",
     "fs-extra": "^11",
-    "globby": "^13",
+    "globby": "^11",
     "gulp": "^4",
     "gulp-clean": "^0",
     "gulp-cli": "^2",
