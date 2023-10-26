@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished Changes
 * larva-patterns - Add brand primary link styles to tag list module.
 * larva-patterns - Reorder css class names of modules starting with letter `c` based on WP coding standards.
+* larva-patterns - Add `id` attribute for `heading` module.
 
 ## 1.56.0 08-15-2023
 * larva-patterns - Reorder css class names of modules starting with letter `a` based on WP coding standards.
