@@ -21,10 +21,11 @@
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
+  "//": "DEPENDENCIES NOTES: Do not upgrade 'del' past 6 unless migrating entire app to module 'type'",
   "devDependencies": {
     "@penskemediacorp/larva-scss": "^1.57.0",
     "@penskemediacorp/larva-tokens": "^1.57.0",
-    "del": "^7",
+    "del": "^6",
     "fs-extra": "^11",
     "gulp": "^4",
     "gulp-concat": "^2",
