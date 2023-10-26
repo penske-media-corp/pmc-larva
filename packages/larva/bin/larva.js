@@ -15,6 +15,7 @@ const hasScriptFile = fs.existsSync(
 );
 
 if ( hasScriptFile ) {
+	console.log( `Running '${ scriptName }' script\n` );
 	spawn.sync(
 		'node',
 		[ path.join( __dirname, `../scripts/${ scriptName }.js` ), ...cliArgs ],
