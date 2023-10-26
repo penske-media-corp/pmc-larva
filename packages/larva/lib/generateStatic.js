@@ -1,7 +1,7 @@
 const path = require( 'path' );
 const mkdirp = require( 'mkdirp' );
 const fs = require( 'fs-extra' );
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 const axios = require( 'axios' );
 
 const getAppConfiguration = require( './utils/getAppConfiguration' );

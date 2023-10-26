@@ -1,6 +1,6 @@
 const execPhp = require( 'exec-php' );
 const path = require( 'path' );
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 const getAppConfiguration = require( './lib/getConfig' );
 const config = getAppConfiguration( 'parser' );
 

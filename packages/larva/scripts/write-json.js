@@ -1,4 +1,4 @@
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 
 const getAppConfiguration = require( '../lib/utils/getAppConfiguration' );
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );

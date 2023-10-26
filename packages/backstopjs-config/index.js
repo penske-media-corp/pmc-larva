@@ -1,6 +1,6 @@
 const { merge } = require( 'webpack-merge' );
 const path = require( 'path' );
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 const backstopUtils = require( './lib/utils' );
 const getScenarios = require( './lib/getScenarios' );
 

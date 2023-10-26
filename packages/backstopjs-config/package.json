@@ -24,7 +24,7 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "dependencies": {
-    "chalk": "^5",
+    "chalk": "^4",
     "webpack-merge": "^5"
   },
   "gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"

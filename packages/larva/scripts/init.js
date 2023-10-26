@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 const { copySync } = require( 'fs-extra' );
 
 const copyFrom = path.join( __dirname, 'larva' );

@@ -1,4 +1,4 @@
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 const path = require( 'path' );
 
 /**

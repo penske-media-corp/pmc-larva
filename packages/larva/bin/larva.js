@@ -4,7 +4,7 @@
 const fs = require( 'fs' );
 const path = require( 'path' );
 const spawn = require( 'cross-spawn' );
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 
 const getArgsFromCli = require( '../lib/utils/getArgsFromCli' );
 const cliArgs = getArgsFromCli();

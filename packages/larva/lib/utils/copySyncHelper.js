@@ -1,6 +1,6 @@
 const path = require( 'path' );
 const fs = require( 'fs-extra' );
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 
 /**
  * copySync Helper

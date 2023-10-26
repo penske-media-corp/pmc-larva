@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const chalk = import( 'chalk' );
+const chalk = require( 'chalk' );
 const fs = require( 'fs' );
 
 const getPatternData = require( './utils/getPatternData' );

@@ -56,7 +56,7 @@
     "@penskemediacorp/twig-to-php-parser": "^1.57.0",
     "axios": "^1",
     "babel-loader": "^9",
-    "chalk": "^5",
+    "chalk": "^4",
     "clean-webpack-plugin": "^4",
     "concurrently": "^8",
     "cross-spawn": "^7",
