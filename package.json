@@ -46,6 +46,7 @@
     "public",
     "larva.config.js"
   ],
+  "//": "DEPENDENCIES NOTES: Do not upgrade globby past 11 unless migrating entire app to module 'type'",
   "dependencies": {
     "@babel/core": "^7",
     "@babel/preset-env": "^7",
