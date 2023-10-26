@@ -63,7 +63,7 @@
     "eslint": "^8",
     "eslint-webpack-plugin": "^4",
     "express": "^4",
-    "flickity": "^3",
+    "flickity": "^2",
     "fs-extra": "^11",
     "globby": "^11",
     "gulp": "^4",
