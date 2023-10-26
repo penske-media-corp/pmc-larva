@@ -1,5 +1,5 @@
-const chalk = require( 'chalk' );
 const path = require( 'path' );
+
 /**
  * Get Pattern Data
  *
