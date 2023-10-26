@@ -20,7 +20,7 @@
  * @return {Array} - An array of string routes e.g. [ '/components/c-link/', '/components/c-link/sponsored' ]
  */
 
-const chalk = require( 'chalk' );
+const chalk = import( 'chalk' );
 
 module.exports = function getPatternRoutes( patterns ) {
 	let patternRoutes = [];
