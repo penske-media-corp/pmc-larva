@@ -10,7 +10,7 @@
 
 const gulp = require( 'gulp' );
 const path = require( 'path' );
-const sass = require( 'gulp-sass' )(require('sass'));
+const sass = require( 'gulp-sass' )( require( 'sass' ) );
 const concat = require( 'gulp-concat' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const del = require( 'del' );
