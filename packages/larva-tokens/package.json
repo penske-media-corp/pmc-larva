@@ -20,7 +20,7 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
-    "del": "^7",
+    "del": "^6",
     "fs-extra": "^11",
     "gulp": "^4",
     "gulp-theo": "^2",
