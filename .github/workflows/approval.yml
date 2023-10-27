@@ -4,7 +4,7 @@ on: [workflow_dispatch]
 
 jobs:
   build:
-
+    name: Update Visual Regression Tests
     runs-on: ubuntu-latest
     strategy:
       matrix:

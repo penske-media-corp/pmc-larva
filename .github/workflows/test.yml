@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-
+    name: Test and Lint
     runs-on: ubuntu-latest
 
     strategy:
