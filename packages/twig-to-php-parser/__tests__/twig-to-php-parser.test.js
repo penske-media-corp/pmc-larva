@@ -55,6 +55,28 @@ describe( 'twig to php parser', function () {
 		done();
 	} );
 
+	afterEach( () => {
+		exec( 'rm -r ' + appConfiguration.phpDir, ( err ) => {
+			if ( err ) {
+				console.error( err );
+			}
+		} );
+	} );
+} );
+
+describe( 'twig to php parser: parsing', function () {
+	beforeEach( ( done ) => {
+		exec( 'mkdir ' + appConfiguration.phpDir, ( err ) => {
+			if ( err ) {
+				console.error( err );
+			}
+		} );
+
+		twigToPhpParser( appConfiguration )
+			.catch( ( e ) => console.log( e ) )
+			.then( ( result ) => done() ); // Catch PHP errors.
+	} );
+
 	it( 'parses patterns as expected', ( done ) => {
 		patternShortPaths.forEach( ( shortpath ) => {
 			const expectedContents = fs
