@@ -30,7 +30,7 @@ describe( 'twig to php parser', function () {
 			}
 		} );
 
-		return twigToPhpParser( appConfiguration )
+		twigToPhpParser( appConfiguration )
 			.catch( ( e ) => console.log( e ) )
 			.then( ( result ) => done() ); // Catch PHP errors.
 	} );

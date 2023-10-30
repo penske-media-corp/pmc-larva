@@ -167,7 +167,7 @@ describe( 'generateStatic', () => {
 	} );
 } );
 
-afterAll( async ( done ) => {
+afterAll( ( done ) => {
 	const server = app.listen();
 	server.close();
 	done();
