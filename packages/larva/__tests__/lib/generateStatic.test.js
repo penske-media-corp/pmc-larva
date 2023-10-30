@@ -10,13 +10,15 @@ const generateStatic = require( '../../lib/generateStatic' );
 const fixture = path.join( __dirname, '../fixtures' );
 const buildPath = path.join( fixture, './build/html/project' );
 
-beforeAll( ( done ) => {
-	app.listen( port, () => {
-		done();
-	} );
-} );
+let server;
 
 describe( 'generateStatic', () => {
+	beforeAll( ( done ) => {
+		server = app.listen( port, () => {
+			done();
+		} );
+	} );
+
 	beforeEach( ( done ) => {
 		exec( 'mkdir -p ' + buildPath, ( err ) => {
 			if ( err ) {
@@ -165,10 +167,9 @@ describe( 'generateStatic', () => {
 			done();
 		} );
 	} );
-} );
 
-afterAll( ( done ) => {
-	const server = app.listen();
-	server.close();
-	done();
+	afterAll( ( done ) => {
+		server.close();
+		done();
+	} );
 } );
