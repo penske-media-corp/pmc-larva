@@ -6,7 +6,7 @@
     "node": "^18.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/jest --forceExit --runInBand --detectOpenHandles",
+    "test": "./node_modules/.bin/jest --forceExit",
     "larva": "packages/larva/bin/larva.js server --watch ./ -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
     "prod": "npm run prod:scss && npm run prod:js && npm run build-icons && npm run build-tokens && npm run sync-build",
