@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* Updated Backstop reference images to 1.58.0 release.
 
 ## 1.58.0 11-01-2023
 * Update Node to 18 and fix incompatible dependencies, scripts, and GitHub actions
