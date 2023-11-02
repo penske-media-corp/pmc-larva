@@ -41,6 +41,8 @@ function twigToPhpParser( config = {} ) {
 		phpDir = config.phpDir;
 	}
 
+	console.log( 'JIMBO IN PARSER', twigDir, phpDir );
+
 	return new Promise( ( resolve, reject ) => {
 		execPhp(
 			path.resolve( __dirname, './lib/twig-to-php-parser.php' ),

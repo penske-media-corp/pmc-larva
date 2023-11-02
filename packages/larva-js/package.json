@@ -22,9 +22,9 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"flickity": "^2.2.1",
-		"webpack": "^4.43.0",
-		"webpack-cli": "^3.3.12"
+		"flickity": "^2",
+		"webpack": "^5",
+		"webpack-cli": "^5"
 	},
 	"gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"
 }

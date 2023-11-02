@@ -4,16 +4,16 @@ on: [workflow_dispatch]
 
 jobs:
   build:
-
+    name: Update Visual Regression Tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -21,7 +21,6 @@ jobs:
       run: |
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
-        ./node_modules/.bin/lerna bootstrap
     - name: Generate new reference screenshots
       run: |
         nohup npm run larva > /dev/null 2>&1 &
