@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.58.0 11-01-2023
 * Update Node to 18 and fix incompatible dependencies, scripts, and GitHub actions
 * larva-patterns - Add brand primary link styles to tag list module.
 * larva-patterns - Reorder css class names of modules starting with letter `c` based on WP coding standards.
