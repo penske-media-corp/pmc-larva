@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * Updated Backstop reference images to 1.58.0 release.
+* Bugfix: Remove ` ` (space) and `,` encoding from `inline-svg`'s `url-encode()` to fix misc base64 SVG inlining.
 
 ## 1.58.0 11-01-2023
 * Update Node to 18 and fix incompatible dependencies, scripts, and GitHub actions
