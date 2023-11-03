@@ -38,7 +38,7 @@ const rules = {
 		include: SRC_DIR,
 		exclude: /(node_modules|nobundle|vendor)/,
 		loader: 'babel-loader',
-		query: {
+		options: {
 			presets: [ '@babel/preset-env' ],
 		},
 	},
