@@ -29,7 +29,6 @@ const rules = {
 	 * JS Loaders
 	 */
 	pre: {
-		enforce: 'pre',
 		test: /\.js$/,
 		exclude: /(node_modules|nobundle|vendor)/,
 	},
