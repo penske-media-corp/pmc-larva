@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* Switch Webpack config "query" JS rule that's throwing warnings and build errors out for "options"
 * Updated Backstop reference images to 1.58.0 release.
 * Bugfix: Remove ` ` (space) and `,` encoding from `inline-svg`'s `url-encode()` to fix misc base64 SVG inlining.
 

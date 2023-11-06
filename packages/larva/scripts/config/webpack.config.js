@@ -29,7 +29,6 @@ const rules = {
 	 * JS Loaders
 	 */
 	pre: {
-		enforce: 'pre',
 		test: /\.js$/,
 		exclude: /(node_modules|nobundle|vendor)/,
 	},
@@ -38,7 +37,7 @@ const rules = {
 		include: SRC_DIR,
 		exclude: /(node_modules|nobundle|vendor)/,
 		loader: 'babel-loader',
-		query: {
+		options: {
 			presets: [ '@babel/preset-env' ],
 		},
 	},
