@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * Removed `console.log()` from `twig-to-php-parser` that was added for testing.
+* Re-enabled space character encoding in `url-encode()` SCSS function (WordPress CSS minification compat).
+* Fixed `str-replace()` SCSS function "freezing".
 
 ## 1.58.1 11-06-2023
 * Updated Backstop reference images to 1.58.0 release.
