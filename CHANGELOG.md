@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.58.2 11-13-2023
 * Removed `console.log()` from `twig-to-php-parser` that was added for testing.
 * Re-enabled space character encoding in `url-encode()` SCSS function (WordPress CSS minification compat).
 * Fixed `str-replace()` SCSS function "freezing".
