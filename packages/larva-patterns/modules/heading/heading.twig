@@ -1,3 +1,10 @@
 {% if heading_markup %}
-	<h{{ heading_level_text }} class="heading larva // {{ heading_classes }} {{ heading_animation_class }} {{ heading_typography_class }} {{ heading_color_class }} {{ heading_background_color_class }} {{ heading_text_align_class }}">{{ heading_markup }}</h{{ heading_level_text }}>
+	<h{{ heading_level_text }}
+		{% if heading_id_attr %}
+		id="{{ heading_id_attr }}"
+		{% endif %}
+		class="heading larva // {{ heading_classes }} {{ heading_animation_class }} {{ heading_typography_class }} {{ heading_color_class }} {{ heading_background_color_class }} {{ heading_text_align_class }}"
+	>
+		{{ heading_markup }}
+	</h{{ heading_level_text }}>
 {% endif %}
