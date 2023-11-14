@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/pmc-larva",
-  "version": "1.42.3",
+  "version": "1.58.3",
   "engines": {
     "npm": "^9.0.0",
     "node": "^18.0.0"
