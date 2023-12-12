@@ -17,21 +17,17 @@
 			</div>
 	</div>
 
-	{% if c_span %}
-		<div class="author-bio-primary-grid // {{ author_grid_secondary_classes }}">
-			<div class="autor-description-wrapper // {{ author_description_wrapper }}">
-				{% if c_dek %}
-					{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
-				{% endif %}
+	<div class="author-bio-secondary-grid // {{ author_grid_secondary_classes }}">
+		<div class="author-description-wrapper // {{ author_desc_wrapper_classes }}">
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
 
-				{% if c_link %}
-					<div class="author-link // {{ c_link_bottom_wrapper_classes }}">
-						{% if c_link %}
-							{% include "@larva/components/c-link/c-link.twig" with c_link %}
-						{% endif %}
-					</div>
-				{% endif %}
-			</div>
+			{% if c_link %}
+				<div class="author-link // {{ c_link_bottom_wrapper_classes }}">
+					{% include "@larva/components/c-link/c-link.twig" with c_link %}
+				</div>
+			{% endif %}
 		</div>
-	{% endif %}
+	</div>
 </div>
