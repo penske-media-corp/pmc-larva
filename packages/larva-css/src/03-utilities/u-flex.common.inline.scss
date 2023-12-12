@@ -140,6 +140,12 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex-basis-75p\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		flex-basis: 75%;
+	}
+}
+
 .lrv-u-flex-shrink-0\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		flex-shrink: 0;
