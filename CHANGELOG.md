@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished Changes
 * Add Author Bio and Author Bio Item Modules.
 * Add styles for grid and flex.
+* Use Generic node version 18 in package.json and Remove NPM requirement.
 
 ## 1.58.3 11-14-2023
 * Adds id attribute support for the `heading.twig` component.
