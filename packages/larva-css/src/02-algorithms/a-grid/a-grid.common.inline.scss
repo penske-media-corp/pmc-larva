@@ -109,6 +109,21 @@ $grids: (
 		spans: ( 3 ),
 		breakpoint: desktop-xl,
 	),
+	(
+		columns: 4,
+		spans: ( 3 ),
+		breakpoint: mobile-max,
+	),
+	(
+		columns: 5,
+		spans: ( 4 ),
+		breakpoint: mobile-max
+	),
+	(
+		columns: 6,
+		spans: ( 5 ),
+		breakpoint: mobile-max
+	),
 );
 
 @include a-grid( $grids, $NAMESPACE: 'lrv-' );

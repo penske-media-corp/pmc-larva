@@ -1,0 +1,5 @@
+<div class="authors-bio-wrapper // {{ authors_bio_wrapper_classes }}">
+	{% for item in author_items %}
+		{% include "@larva/modules/authors-bio-item/authors-bio-item.twig" with item %}
+	{% endfor %}
+</div>
