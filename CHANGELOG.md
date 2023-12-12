@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* Add Author Bio and Author Bio Item Modules.
+* Add styles for grid and flex.
 
 ## 1.58.3 11-14-2023
 * Adds id attribute support for the `heading.twig` component.
