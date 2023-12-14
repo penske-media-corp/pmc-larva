@@ -57,8 +57,7 @@ if ( cliArgs.includes( '--help' ) ) {
 
 // Parse the --version flag. Defaults to 'latest'.
 const getVersionArg = () => {
-
-    // Loop through our args, looking for `--version=`.
+	// Loop through our args, looking for `--version=`.
 	const versionFlag = cliArgs.find( ( cliArg ) => {
 		if ( ! cliArg.includes( '--version=' ) ) {
 			return false;
@@ -66,34 +65,31 @@ const getVersionArg = () => {
 		return true;
 	} );
 
-    // Did not find it.
+	// Did not find it.
 	if ( ! versionFlag ) {
 		return 'latest';
 	}
 
-    // Trip the value down to just the version.
+	// Trip the value down to just the version.
 	const version = versionFlag.replace( '--version=', '' );
 	return version ? version : 'latest';
 };
 
 // Update Larva version installed.
-console.log( `Installing Larva@${getVersionArg()}\n\n` );
-shell.exec( `npm install @penskemediacorp/larva@${getVersionArg()}` );
+console.log( `Installing Larva@${ getVersionArg() }\n\n` );
+shell.exec( `npm install @penskemediacorp/larva@${ getVersionArg() }` );
 
 // Build CSS.
 if (
-	! cliArgs.includes( '--skip-css' )
-	|| cliArgs.includes( '--skip-build' )
+	! cliArgs.includes( '--skip-css' ) ||
+	cliArgs.includes( '--skip-build' )
 ) {
 	console.log( 'Building CSS assets\n\n' );
-	shell.exec( `${binPath} prod-scss` );
+	shell.exec( `${ binPath } prod-scss` );
 }
 
 // Build JavaScript.
-if (
-	! cliArgs.includes( '--skip-js' )
-	|| cliArgs.includes( '--skip-build' )
-) {
+if ( ! cliArgs.includes( '--skip-js' ) || cliArgs.includes( '--skip-build' ) ) {
 	console.log( 'Building JavaScript assets\n\n' );
-	shell.exec( `${binPath} prod-js` );
+	shell.exec( `${ binPath } prod-js` );
 }

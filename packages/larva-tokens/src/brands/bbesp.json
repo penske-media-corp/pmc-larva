@@ -1,0 +1,221 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#009EDA",
+			"originalValue": "#009DDB",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#009EDA",
+			"originalValue": "#009DDB",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#009EDA",
+			"originalValue": "#009DDB",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "#1276B5",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "#1276B5",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "#1276B5",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_ORANGE": {
+			"value": "#EF841A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_ORANGE": {
+			"value": "#EF841A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_ORANGE": {
+			"value": "#EF841A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_LIGHT_ORANGE": {
+			"value": "#F8C99A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_LIGHT_ORANGE": {
+			"value": "#F8C99A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_LIGHT_ORANGE": {
+			"value": "#F8C99A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_GREEN": {
+			"value": "#00DDA1",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_GREEN": {
+			"value": "#00DDA1",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_GREEN": {
+			"value": "#00DDA1",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "#EDEBEB",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "#EDEBEB",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "#EDEBEB",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHT": {
+			"value": "#D5D5D5",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "#D5D5D5",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "#D5D5D5",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY": {
+			"value": "#8289A1",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY": {
+			"value": "#8289A1",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY": {
+			"value": "#8289A1",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "#4C5167",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "#4C5167",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "#4C5167",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARKEST": {
+			"value": "#2B2E3C",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARKEST": {
+			"value": "#2B2E3C",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"value": "#2B2E3C",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_BLACK": {
+			"value": "#101119",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_BLACK": {
+			"value": "#101119",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_BLACK": {
+			"value": "#101119",
+			"type": "color",
+			"category": "background-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'neue-haas-grotesk-display', 'Arial Narrow', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The webfont for font-family-primary."
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "'Arial Narrow', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback font for font-family-primary."
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "'acumin-pro-condensed'",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The accent webfont, loaded async"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "'Arial Narrow', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the accent font"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "Helvetica, Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "Helvetica, Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'neue-haas-grotesk-display'",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The webfont for font-family-secondary."
+		  },
+		  "FONT_FAMILY_SECONDARY": {
+			"value": "Arial, serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from font-family-secondary"
+		  }
+	}
+}

@@ -18,7 +18,6 @@
  */
 
 export default class Tooltip {
-
 	/**
 	 * Class constructor
 	 *

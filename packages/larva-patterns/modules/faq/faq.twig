@@ -1,0 +1,17 @@
+<div class="faq // {{ faq_classes }}">
+	<div class="{{ faq_banner_classes }}">
+		<div class="faq-title {{ faq_title_classes }}">
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
+		</div>
+	</div>
+	<div class="{{ faq_items_classes }}">
+		{% for item in faq_items %}
+			{% include "@larva/objects/o-faq-item/o-faq-item.twig" with item %}
+		{% endfor %}
+	</div>
+</div>

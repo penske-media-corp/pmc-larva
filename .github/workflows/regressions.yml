@@ -4,23 +4,23 @@ on: [push]
 
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+        cache: 'npm'
     - name: Install Dependencies
       run: |
         npm install -g backstopjs --unsafe-perm=true --allow-root
         npm ci
-        ./node_modules/.bin/lerna bootstrap
     - name: Run Tests
       run: |
         nohup npm run larva > /dev/null 2>&1 &
@@ -29,25 +29,26 @@ jobs:
       env:
         CI: true
     - name: Archive Backstop results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: always()
       with:
         name: backstop-results
         path: backstop_data
     - id: find-pull-request
       uses: jwalton/gh-find-current-pr@v1
+      if: always()
       with:
         state: open
     - name: Comment Regression test results on PR
       uses: peter-evans/create-or-update-comment@v2
-      if: ${{ failure() }}
+      if: failure()
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         repository: ${{ github.repository }}
-        issue-number: ${{ steps.find-pull-request.outputs.number }}
+        issue-number: ${{ steps.find-pull-request.outputs.pr }}
         comment-author: 'github-actions[bot]'
         body: |
-            ### 🚨 Backstop Visual Regression Tests Failed: [View the results](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
+            ### 🚨 Backstop Visual Regression Tests Failed: [View the results for ${{ github.sha }}](https://github.com/penske-media-corp/pmc-larva/actions/runs/${{ github.run_id }}).
             <details>
 
               <summary><strong>How to view and update regression tests</strong></summary>

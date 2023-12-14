@@ -931,4 +931,4 @@ module.exports = {
 		</section>
 	</section>
 </section>`,
-}
+};

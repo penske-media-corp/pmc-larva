@@ -20,7 +20,6 @@ const path = require( 'path' );
  */
 
 module.exports = function getAppConfiguration( key ) {
-
 	try {
 		let appRoot = process.cwd();
 
@@ -28,15 +27,22 @@ module.exports = function getAppConfiguration( key ) {
 			appRoot = path.join( __dirname, '../__tests__/fixtures' );
 		}
 
-		let config = require( `${appRoot}/larva.config.js` )[ key ];
+		const config = require( `${ appRoot }/larva.config.js` )[ key ];
 
 		if ( undefined === config ) {
-			throw new Error( `Configuration for \`${key}\` is required in larva.config.js. \nPlease refer to the Larva's docs for adding configuration: https://github.com/penske-media-corp/pmc-larva` );
+			throw new Error(
+				`Configuration for \`${ key }\` is required in larva.config.js. \nPlease refer to the Larva's docs for adding configuration: https://github.com/penske-media-corp/pmc-larva`
+			);
 		}
 
 		return config;
-
 	} catch ( error ) {
-		console.error( chalk.red( chalk.bold( 'There is no larva.config.js in this directory.\n' ) + error ) );
+		console.error(
+			chalk.red(
+				chalk.bold(
+					'There is no larva.config.js in this directory.\n'
+				) + error
+			)
+		);
 	}
 };

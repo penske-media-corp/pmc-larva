@@ -6,12 +6,11 @@ const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
 const gulpStylelint = require( 'gulp-stylelint' );
 
-const Fibers = require( 'fibers' );
 const globImporter = require( 'node-sass-glob-importer' );
 const { mkdirpSync } = require( 'fs-extra' );
 const path = require( 'path' );
 const postCss = require( 'postcss' );
-const sass = require( 'gulp-sass' );
+const sass = require( 'gulp-sass' )( require( 'sass' ) );
 
 const stylelintConfig = require( './stylelint.config' );
 
@@ -24,7 +23,6 @@ const cssDest = './build/css/';
 sass.compiler = require( 'sass' );
 
 const sassOpts = {
-	fiber: Fibers,
 	includePaths: [
 		path.resolve( './node_modules' ),
 		path.resolve( './src/scss' ),
@@ -65,7 +63,6 @@ const buildScss = (
 	minify = false,
 	generateImportantVariants = false
 ) => {
-
 	if ( minify ) {
 		sassOpts.outputStyle = 'compressed';
 	}

@@ -18,64 +18,66 @@ const path = require( 'path' );
  */
 
 const defaultConfig = {
-
 	eslint: {
-		configFile: path.join( __dirname, '../../scripts/config/.eslintrc.json' ),
+		configFile: path.join(
+			__dirname,
+			'../../scripts/config/.eslintrc.json'
+		),
 	},
 
 	webpack: {
 		aliases: {
 			'@js': path.resolve( './src/js' ),
 			'@npm': path.resolve( './node_modules' ),
-			'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
+			'@larva-js': path.resolve(
+				'./node_modules/@penskemediacorp/larva-js/src'
+			),
 		},
 		entries: {
 			'larva-ui': path.resolve( './entries/larva-ui.entry.js' ),
-			common: path.resolve( './entries/common.entry.js' )
-		}
+			common: path.resolve( './entries/common.entry.js' ),
+		},
 	},
 
 	patterns: {
-		larvaPatternsDir: path.resolve( './node_modules/@penskemediacorp/larva-patterns' ),
+		larvaPatternsDir: path.resolve(
+			'./node_modules/@penskemediacorp/larva-patterns'
+		),
 		projectPatternsDir: path.resolve( './src/patterns' ),
 	},
 
 	assets: {
 		path: ( () => {
-
 			// Fragile way to detect existing Larva sites
 			if ( fs.existsSync( path.resolve( './build/css' ) ) ) {
 				return path.resolve( './' );
 			}
 
 			return path.resolve( './node_modules/@penskemediacorp/larva' );
-		})(),
+		} )(),
 	},
 
 	themeAssets: {},
 };
 
 module.exports = function getAppConfiguration( key, usePackageDefault = true ) {
-
 	try {
-
 		let appRoot = process.cwd();
 
 		if ( 'test' === process.env.NODE_ENV ) {
 			appRoot = path.join( __dirname, '../../__tests__/fixtures/' );
 		}
 
-		let config = require( `${appRoot}/larva.config.js` );
+		const config = require( `${ appRoot }/larva.config.js` );
 
 		// If config not found in approot, fallback to package default in root
-		if ( undefined === config[key] && usePackageDefault ) {
+		if ( undefined === config[ key ] && usePackageDefault ) {
 			return defaultConfig[ key ];
 		}
 
-		return config[key];
-
+		return config[ key ];
 	} catch ( error ) {
-		console.warn( 'Using default configuration. ');
+		console.warn( 'Using default configuration. ' );
 
 		return defaultConfig[ key ];
 	}

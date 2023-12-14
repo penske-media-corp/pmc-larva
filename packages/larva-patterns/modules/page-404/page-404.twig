@@ -28,5 +28,21 @@
 
 		</div>
 
+		{% if c_suggestion_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_suggestion_title %}
+		{% endif %}
+
+		{% if suggested_link_items %}
+			{% include "@larva/modules/list/list.twig" with suggested_link_items %}
+		{% endif %}
+
+		{% if c_search_title %}
+			{% include "@larva/components/c-title/c-title.twig" with c_search_title %}
+		{% endif %}
+
+		{% if search_form %}
+			{% include "@larva/modules/search-form/search-form.twig" with search_form %}
+		{% endif %}
+
 	</div>
 </section>

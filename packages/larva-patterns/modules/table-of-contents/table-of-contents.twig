@@ -1,0 +1,44 @@
+<div class="toc // {{ toc_classes }}" >
+
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	<nav class="toc-navigation // {{ toc_navigation_classes }}"
+		{% if nav_title_id_attr %}
+			aria-label="{{ nav_title_id_attr }}"
+		{% endif %}
+		{% if nav_list_labelledby_attr %}
+			aria-labelledby="{{ nav_list_labelledby_attr }}"
+		{% endif %}
+	>
+
+		<ul class="toc-list // {{ toc_list_classes }}">
+			{% for item in toc_list_items %}
+				<li class="toc-list-item // {{ toc_list_item_outer_classes }}">
+					{% include "@larva/components/c-nav-link/c-nav-link.twig" with item %}
+				</li>
+			{% endfor %}
+		</ul>
+
+		{% if toc_mobile_list_items %}
+			<ul class="toc-list-mobile // {{ toc_mobile_list_classes }}">
+				{% for item in toc_mobile_list_items %}
+					<li class="toc-list-item // {{ toc_mobile_list_item_outer_classes }}">
+						{% include "@larva/components/c-nav-link/c-nav-link.twig" with item %}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+		{% if nav_title_text %}
+			{% if nav_title_outer_classes %}
+				<div class="nav__title-outer {{ nav_title_outer_classes }}">
+			{% endif %}
+					<h4 id="{{ nav_title_id_attr }}" class="nav__title {{ nav_title_classes }}">{{ nav_title_text }}</h4>
+			{% if nav_title_outer_classes %}
+				</div>
+			{% endif %}
+		{% endif %}
+	</nav>
+</div>

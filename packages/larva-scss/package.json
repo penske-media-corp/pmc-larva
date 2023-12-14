@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-scss",
-  "version": "1.1.2",
+  "version": "1.59.0",
   "description": "Larva SCSS authoring tools.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -20,7 +20,8 @@
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "devDependencies": {
-    "sass-true": "^5.0.0",
-    "stylelint": "^13.6.1"
-  }
+    "sass-true": "^5",
+    "stylelint": "^13"
+  },
+  "gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"
 }

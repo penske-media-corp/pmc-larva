@@ -11,6 +11,8 @@ module.exports = {
 	mega_menu_content,
 	mega_menu_classes: '',
 	mega_menu_outer_classes: 'lrv-a-wrapper',
-	mega_menu_inner_classes: 'lrv-u-background-color-white lrv-u-flex lrv-u-flex-direction-column lrv-u-border-b-2 lrv-u-border-r-2 lrv-u-border-l-2',
-	mega_menu_content_outer_classes: 'lrv-u-background-color-white lrv-u-padding-a-150 lrv-u-width-100p',
+	mega_menu_inner_classes:
+		'lrv-u-background-color-white lrv-u-flex lrv-u-flex-direction-column lrv-u-border-b-2 lrv-u-border-r-2 lrv-u-border-l-2',
+	mega_menu_content_outer_classes:
+		'lrv-u-background-color-white lrv-u-padding-a-150 lrv-u-width-100p',
 };

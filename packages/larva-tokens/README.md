@@ -24,7 +24,7 @@ Given that tokens are strictly controlled, contributions should be relatively in
 
 1. Clone this repository, and follow the setup instructions in the root README.
 2. Make changes to packages/larva-tokens/src, e.g. adding a new {brand}.json tokens file, or updating a value in an existing brand.
-5. From the root of this repo, run `npm run build-tokens`.
+5. From the root of this repo, run `npm run build`.
 6. Record changed in CHANGELOG.md, and open a pull request with your changes.
 7. Once the PR is merged and the release published, update the larva npm package in a consuming project.
 

@@ -1,0 +1,57 @@
+<div class="product-card // {{ product_card_classes }}">
+	<div class="product-card-inner-wrapper // {{ product_card_wrapper_classes }}">
+		<div class="product-card-image-wrapper // {{ product_card_image_classes }}">
+			{% if best_deal_icon %}
+				{% include "@larva/components/c-svg/c-svg.twig" with best_deal_icon %}
+			{% endif %}
+
+			{% if c_lazy_image %}
+				{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+			{% endif %}
+
+			{% if c_figcaption %}
+				{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
+			{% endif %}
+		</div>
+		<div class="product-card-content-wrapper // {{ product_card_details_classes }}">
+			{% if article_kicker %}
+				{% include "@larva/modules/article-kicker/article-kicker.twig" with article_kicker %}
+			{% endif %}
+
+			{% if c_title %}
+				{% include "@larva/components/c-title/c-title.twig" with c_title %}
+			{% endif %}
+
+			{% if c_tagline %}
+				{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+			{% endif %}
+
+			<div class="buy-now-buttons {{ product_card_buy_now_buttons_classes }}">
+				{% if buy_now_buttons %}
+					{% for c_button in buy_now_buttons %}
+						<div class="{{ product_card_buy_now_button_wrapper_classes }}">
+							{% if c_button['product_card_price_outside'] %}
+								<p class="{{ product_card_price_outside_classes }}">
+									{% if c_button['current_price'] %}
+										{% include "@larva/components/c-span/c-span.twig" with c_button['current_price'] %}
+									{% endif %}
+									{% if c_button['original_price'] %}
+										{% include "@larva/components/c-span/c-span.twig" with c_button['original_price'] %}
+									{% endif %}
+									{% if c_button['discount'] %}
+										{% include "@larva/components/c-span/c-span.twig" with c_button['discount'] %}
+									{% endif %}	
+								</p>
+							{% endif %}
+							{% include "@larva/components/c-button/c-button.twig" with c_button %}
+						</div>		
+					{% endfor %}
+				{% endif %}
+			</div>
+
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -5,7 +5,11 @@
 {% endif %}
 
 	{% if o_card_link_url %}
-		<a tabindex="0" href="{{ o_card_link_url }}" class="{{ o_card_link_classes }}">
+		<a tabindex="0" href="{{ o_card_link_url }}" class="{{ o_card_link_classes }}"
+			{% if o_card_link_rel_attribute %}
+				rel="{{ o_card_link_rel_attribute }}"
+			{% endif %}
+		>
 	{% endif %}
 
 	{% if o_card_image_wrap_classes %}
@@ -14,6 +18,10 @@
 
 		{% if c_lazy_image %}
 			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		{% endif %}
+
+		{% if c_figcaption %}
+			{% include "@larva/components/c-figcaption/c-figcaption.twig" with c_figcaption %}
 		{% endif %}
 
 		{% if o_indicator %}

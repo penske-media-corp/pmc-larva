@@ -1,0 +1,21 @@
+<div class="linked-gallery // {{ linked_gallery_classes }}">
+	<div class="{{ linked_gallery_container_classes }}">
+		<a href="{{ linked_gallery_url }}" class="linked-gallery-thumbnails // {{ linked_gallery_thumbnails_classes }} ">
+			{% for item in linked_gallery_items %}
+				<div class="linked-gallery-thumbnail // {{ item['linked_gallery_thumbnail_classes'] }}">		
+					{% if item['c_lazy_image'] %}
+						{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with item['c_lazy_image'] %}
+					{% endif %}
+
+					{% if item['c_svg'] %}
+						{% include "@larva/components/c-svg/c-svg.twig" with item['c_svg'] %}
+					{% endif %}
+				</div>
+			{% endfor %}
+		</a>
+		{% if article_kicker %}
+			{% include "@larva/modules/article-kicker/article-kicker.twig" with article_kicker %}
+		{% endif %}		
+		{% include "@larva/components/c-title/c-title.twig" with c_title %}
+	</div>
+</div>

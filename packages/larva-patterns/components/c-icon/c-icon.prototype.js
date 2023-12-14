@@ -8,5 +8,5 @@ module.exports = {
 	c_icon_rel_name: 'noopener noreferrer',
 	c_icon_screen_reader_tag_text: '',
 	c_icon_screen_reader_text: 'Plus Icon',
-	c_icon_screen_reader_title_attr: 'Plus Icon'
+	c_icon_screen_reader_title_attr: 'Plus Icon',
 };

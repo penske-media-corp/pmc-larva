@@ -1,7 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import { TokensView } from "./TokensView";
+import { TokensView } from './TokensView';
 
 export const App = () => (
 	<Router>
@@ -28,7 +28,7 @@ export const App = () => (
 					</ul>
 				</nav>
 			</header>
-			<Switch>
+			<Routes>
 				<Route path="/tokens">
 					<TokensView />
 				</Route>
@@ -40,7 +40,7 @@ export const App = () => (
 						component library.
 					</p>
 				</Route>
-			</Switch>
+			</Routes>
 		</div>
 	</Router>
 );

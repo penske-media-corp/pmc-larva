@@ -59,5 +59,7 @@
   "BACKGROUND_COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
   "BORDER_COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
   "COLOR_GREY_LIGHTEST": "rgb(239, 239, 239)",
-  "COLOR_BRAND_ACCENT": "rgb(16, 16, 16)"
+  "FONT_FAMILY_ACCENT": "Helvetica, sans-serif",
+  "COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
+  "FONT_FAMILY_ACCENT_FANCY": "'Brunel Deck', Helvetica, sans-serif"
 }

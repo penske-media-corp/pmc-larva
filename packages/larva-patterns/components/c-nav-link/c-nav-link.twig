@@ -2,8 +2,14 @@
 	{% if c_nav_link_aria_current_attr %}
 		aria-current="{{ c_nav_link_aria_current_attr }}"
 	{% endif %}
+	{% if c_nav_link_title_attr %}
+		title="{{ c_nav_link_title_attr }}"
+	{% endif %}
 >
 	{{ c_nav_link_text }}
+	{% if c_nav_link_markup %}
+		{{ c_nav_link_markup }}
+	{% endif %}
 	{% if c_nav_link_screen_reader_text %}
 	<span class="lrv-a-screen-reader-only">{{ c_nav_link_screen_reader_text }}</span>
 	{% endif %}

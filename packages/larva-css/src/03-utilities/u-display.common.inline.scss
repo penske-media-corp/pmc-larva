@@ -30,6 +30,10 @@
 
 @include pmc-breakpoint( desktop ) {
 
+	.lrv-u-display-table\@desktop {
+		display: table;
+	}
+
 	.lrv-u-display-block\@desktop {
 		display: block;
 	}
@@ -56,11 +60,11 @@
 }
 
 @include pmc-breakpoint( desktop-xl ) {
-	
+
 	.lrv-u-display-none\@desktop-xl {
 		display: none;
 	}
-	
+
 	.lrv-u-display-block\@desktop-xl {
 		display: block;
 	}

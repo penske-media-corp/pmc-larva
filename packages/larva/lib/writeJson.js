@@ -9,30 +9,46 @@ const writeJsonToFile = require( './utils/writeJsonToFile' );
 
 // The fromLarva flag can come from CLI argument
 module.exports = function writeJson( patternConfig, fromLarva = false ) {
-
-	const sourceDirectory = ( true === fromLarva ) ? patternConfig.larvaPatternsDir : patternConfig.projectPatternsDir;
-	const ignoredModules  = patternConfig.ignoredModules ? patternConfig.ignoredModules : [];
-	const modulesArr      = getModuleNamesFromDirectory( sourceDirectory, ignoredModules );
+	const sourceDirectory =
+		true === fromLarva
+			? patternConfig.larvaPatternsDir
+			: patternConfig.projectPatternsDir;
+	const ignoredModules = patternConfig.ignoredModules
+		? patternConfig.ignoredModules
+		: [];
+	const modulesArr = getModuleNamesFromDirectory(
+		sourceDirectory,
+		ignoredModules
+	);
 
 	modulesArr.forEach( ( moduleName ) => {
-
 		const startPath = sourceDirectory + '/modules/' + moduleName;
 		const variants = getPatternVariants( startPath );
 
 		variants.forEach( ( variant ) => {
-
 			const moduleData = getPatternData( sourceDirectory, {
 				type: 'modules',
 				name: moduleName,
-				variant: variant
+				variant,
 			} );
 
-			const jsonDestPath = path.resolve( patternConfig.projectPatternsDir, '../../build/json/modules/' + moduleName + '.' + variant + '.json' );
+			const jsonDestPath = path.resolve(
+				patternConfig.projectPatternsDir,
+				'../../build/json/modules/' +
+					moduleName +
+					'.' +
+					variant +
+					'.json'
+			);
 
 			// If JSON data and module prototype are the same, pass, otherwise write the data to file
 			let hasChanged = true;
 			try {
-				if ( fs.existsSync( jsonDestPath ) && JSON.stringify( require( jsonDestPath ) ) === JSON.stringify( moduleData ) ) {
+				if (
+					fs.existsSync( jsonDestPath ) &&
+					JSON.stringify( require( jsonDestPath ) ) ===
+						JSON.stringify( moduleData )
+				) {
 					hasChanged = false;
 				}
 			} catch ( error ) {
@@ -41,13 +57,16 @@ module.exports = function writeJson( patternConfig, fromLarva = false ) {
 
 			if ( hasChanged ) {
 				writeJsonToFile( jsonDestPath, moduleData );
-				console.log( chalk.green.bold( `Wrote JSON for ${moduleName}.${variant}` ) );
+				console.log(
+					chalk.green.bold(
+						`Wrote JSON for ${ moduleName }.${ variant }`
+					)
+				);
 			} else {
-				console.log( chalk.grey( `No updates in ${moduleName}.${variant}` ) );
+				console.log(
+					chalk.grey( `No updates in ${ moduleName }.${ variant }` )
+				);
 			}
-		}
-
-		);
-
+		} );
 	} );
 };

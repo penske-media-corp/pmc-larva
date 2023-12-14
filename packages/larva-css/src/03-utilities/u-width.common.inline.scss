@@ -15,6 +15,7 @@ $widths_map: (
 	'width-245': pmc-rem(245),
 	'width-300': pmc-rem(300),
 	'width-20p': 20%,
+	'width-25p': 25%,
 	'width-22p': 22%,
 	'width-30p': 30%,
 	'width-50p': 50%,
@@ -39,6 +40,7 @@ $widths_map: (
 	width-300,
 	width-20p,
 	width-22p,
+	width-25p,
 	width-30p,
 	width-50p,
 	width-70p,
@@ -67,6 +69,12 @@ $widths_map: (
 .lrv-u-width-150\@desktop {
 	@include pmc-breakpoint( desktop ) {
 		width: pmc-rem(150);
+	}
+}
+
+.lrv-u-width-38p\@desktop {
+	@include pmc-breakpoint( desktop ) {
+		width: 38%;
 	}
 }
 
@@ -130,6 +138,13 @@ $widths_map: (
 	}
 }
 
+.lrv-u-width-25p\@tablet {
+
+	@include pmc-breakpoint(tablet) {
+		width: 25%;
+	}
+}
+
 .lrv-u-width-52p\@tablet {
 
 	@include pmc-breakpoint(tablet) {
@@ -160,6 +175,13 @@ $widths_map: (
 
 	@include pmc-breakpoint(tablet) {
 		width: 35%;
+	}
+}
+
+.lrv-u-width-75p\@tablet {
+
+	@include pmc-breakpoint(tablet) {
+		width: 75%;
 	}
 }
 

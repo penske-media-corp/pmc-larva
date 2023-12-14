@@ -4,6 +4,10 @@
 	max-width: 100%;
 }
 
+.lrv-u-max-width-80p {
+	max-width: 80%;
+}
+
 .lrv-u-max-width-100vw {
 	max-width: 100vw;
 }
@@ -22,4 +26,10 @@
 
 .lrv-u-max-width-1000 {
 	max-width: pmc-rem(1000);
+}
+
+.lrv-u-max-width-66p\@desktop {
+	@include pmc-breakpoint(desktop) {
+		max-width: 66%;
+	}
 }

@@ -25,12 +25,12 @@ const cliArgs = getArgsFromCli();
 
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
-    shell.exec( `npx @penskemediacorp/larva help start` );
-    return;
+	shell.exec( `npx @penskemediacorp/larva help start` );
+	return;
 }
 
 // Construct some paths to point our scripts at.
 const binPath = path.resolve( __dirname, '../bin/larva.js' ); // For sibling scripts.
 const patternsPath = path.resolve( process.cwd(), './src/patterns' ); // Relative path to the patterns.
 
-shell.exec( `${binPath} server --watch ${patternsPath} -e twig,html,js` );
+shell.exec( `${ binPath } server --watch ${ patternsPath } -e twig,html,js` );

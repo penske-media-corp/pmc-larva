@@ -1,70 +1,76 @@
-const getScenarios = require('../../lib/getScenarios');
+const getScenarios = require( '../../lib/getScenarios' );
 const assert = require( 'assert' );
 
-let stub = {
-	paths: ['/modules/footer', '/modules/header'],
+const stub = {
+	paths: [ '/modules/footer', '/modules/header' ],
 	urlBase: 'http://localhost:3000',
 	selectors: [ '.footer', '.header' ],
-	scenarioOverride: {}
+	scenarioOverride: {},
 };
 
-const expectation = [{
+const expectation = [
+	{
 		label: '/modules/footer',
 		url: 'http://localhost:3000/modules/footer',
 		hideSelectors: [],
 		removeSelectors: [],
-		selectors: ['.footer'],
+		selectors: [ '.footer' ],
 		delay: 500,
 		misMatchThreshold: 0.1,
 		onBeforeScript: 'puppet/onBefore.js',
-		onReadyScript: 'puppet/onReady.js'
+		onReadyScript: 'puppet/onReady.js',
 	},
 	{
 		label: '/modules/header',
 		url: 'http://localhost:3000/modules/header',
 		hideSelectors: [],
 		removeSelectors: [],
-		selectors: ['.header'],
+		selectors: [ '.header' ],
 		delay: 500,
 		misMatchThreshold: 0.1,
 		onBeforeScript: 'puppet/onBefore.js',
-		onReadyScript: 'puppet/onReady.js'
-	}
+		onReadyScript: 'puppet/onReady.js',
+	},
 ];
 
-describe('getScenarios', () => {
-
-	it('outputs backstop scenario objects', () => {
-
-		let testScenarios = getScenarios(
-			stub.urlBase, stub.paths, stub.selectors, stub.scenarioOverride
+describe( 'getScenarios', () => {
+	it( 'outputs backstop scenario objects', () => {
+		const testScenarios = getScenarios(
+			stub.urlBase,
+			stub.paths,
+			stub.selectors,
+			stub.scenarioOverride
 		);
 
 		assert.deepEqual( testScenarios, expectation );
+	} );
 
-	});
-
-	it('supports document for selector', () => {
-
+	it( 'supports document for selector', () => {
 		stub.selectors = [ 'document' ];
 
-		let testScenarios = getScenarios(
-			stub.urlBase, stub.paths, stub.selectors, stub.scenarioOverride
+		const testScenarios = getScenarios(
+			stub.urlBase,
+			stub.paths,
+			stub.selectors,
+			stub.scenarioOverride
 		);
 
-		assert.deepEqual( testScenarios[0].selectors, stub.selectors );
-
-	});
+		assert.deepEqual( testScenarios[ 0 ].selectors, stub.selectors );
+	} );
 
 	it( 'overrides scenario config', () => {
-
 		stub.scenarioOverride.delay = 1000;
 
-		let testScenario = getScenarios(
-			stub.urlBase, stub.paths, stub.selectors, stub.scenarioOverride
+		const testScenario = getScenarios(
+			stub.urlBase,
+			stub.paths,
+			stub.selectors,
+			stub.scenarioOverride
 		);
 
-		assert.deepEqual( testScenario[0].delay, stub.scenarioOverride.delay );
-
-	});
-})
+		assert.deepEqual(
+			testScenario[ 0 ].delay,
+			stub.scenarioOverride.delay
+		);
+	} );
+} );

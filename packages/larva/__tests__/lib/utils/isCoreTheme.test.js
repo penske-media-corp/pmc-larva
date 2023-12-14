@@ -1,6 +1,8 @@
 const assert = require( 'assert' );
 const isCoreTheme = require( '../../../lib/utils/isCoreTheme' );
-const appConfiguration = require( '../../../lib/utils/getAppConfiguration' )('patterns');
+const appConfiguration = require( '../../../lib/utils/getAppConfiguration' )(
+	'patterns'
+);
 
 describe( 'isCoreTheme', () => {
 	// TODO:
@@ -8,5 +10,5 @@ describe( 'isCoreTheme', () => {
 	// and if it is necessary other than in the parser.
 	it( 'is the core theme if there is no configuration for themePatternsDir', () => {
 		assert.equal( isCoreTheme( appConfiguration ), true );
-	});
-});
+	} );
+} );

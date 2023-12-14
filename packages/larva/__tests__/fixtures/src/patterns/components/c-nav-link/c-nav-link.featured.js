@@ -1,3 +1,3 @@
 module.exports = {
-	modifier_class: 'featured'
+	modifier_class: 'featured',
 };

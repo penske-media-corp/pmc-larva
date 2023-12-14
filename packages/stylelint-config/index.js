@@ -1,5 +1,5 @@
 module.exports = {
-	'rules': {
+	rules: {
 		'block-opening-brace-space-before': 'always',
 		'declaration-block-no-shorthand-property-overrides': true,
 		'declaration-block-trailing-semicolon': 'always',
@@ -26,7 +26,7 @@ module.exports = {
 		'declaration-property-unit-disallowed-list': {
 			'font-size': [ 'em', 'px', 'pt' ],
 			'/^animation/': [ 's' ],
-			'/^transition/': [ 's' ]
+			'/^transition/': [ 's' ],
 		},
 		'declaration-block-single-line-max-declarations': 1,
 		'selector-max-attribute': 3,
@@ -47,39 +47,50 @@ module.exports = {
 		'declaration-colon-space-before': 'never',
 		'declaration-block-semicolon-newline-after': 'always',
 		'block-closing-brace-newline-after': [
-			'always', {
-				'ignoreAtRules': [ 'if', 'else' ]
-			}
+			'always',
+			{
+				ignoreAtRules: [ 'if', 'else' ],
+			},
 		],
 		'declaration-block-trailing-semicolon': 'always',
 		'block-opening-brace-newline-after': 'always-multi-line',
 		'selector-list-comma-newline-after': 'always',
 		'selector-combinator-space-after': 'always',
 		'selector-list-comma-space-after': 'always-single-line',
-		"selector-no-qualifying-type": true,
+		'selector-no-qualifying-type': true,
 		'comment-no-empty': true,
 		'at-rule-empty-line-before': [
-			'always', {
-				'ignore': [ 'after-comment', 'first-nested', 'blockless-after-blockless' ],
-				'ignoreAtRules': [ 'else', 'import' ]
-			}
+			'always',
+			{
+				ignore: [
+					'after-comment',
+					'first-nested',
+					'blockless-after-blockless',
+				],
+				ignoreAtRules: [ 'else', 'import' ],
+			},
 		],
 		'rule-empty-line-before': [
-			'always-multi-line', {
-				'ignore': [ 'first-nested', 'after-comment' ]
-			}
+			'always-multi-line',
+			{
+				ignore: [ 'first-nested', 'after-comment' ],
+			},
 		],
 		'unit-disallowed-list': [
-			'px', {
-				'ignoreProperties': {
-					'px': [ 'box-shadow', '/^border/', 'transform', 'clip' ]
-				}
-			}
+			'px',
+			{
+				ignoreProperties: {
+					px: [ 'box-shadow', '/^border/', 'transform', 'clip' ],
+				},
+			},
 		],
-		'max-nesting-depth': [ 2, {
-			'ignore': [ 'pseudo-classes' ],
-			'ignoreAtRules': [ 'media', 'include' ]
-		} ],
+		'max-nesting-depth': [
+			2,
+			{
+				ignore: [ 'pseudo-classes' ],
+				ignoreAtRules: [ 'media', 'include' ],
+			},
+		],
 		'selector-nested-pattern': '^(?!&__|&--).*', // Disallow BEM concatenation - https://regex101.com/r/yZWeYK/3
-	}
+	},
 };

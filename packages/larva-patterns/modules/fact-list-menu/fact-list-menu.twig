@@ -1,0 +1,11 @@
+{% if fact_list_menu_items %}
+<div class="fact-list-menu // {{ fact_list_menu_classes }}">
+	<ul class="fact-list-menu-items // {{ fact_list_menu_ul_classes }}">
+		{% for item in fact_list_menu_items %}
+			<li class="fact-list-menu-item // {{ fact_list_menu_li_classes }}">
+				{% include "@larva/components/c-link/c-link.twig" with item %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endif %}

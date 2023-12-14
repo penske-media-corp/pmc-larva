@@ -1,3 +1,3 @@
 module.exports = {
-	modifier_class: ''
+	modifier_class: '',
 };

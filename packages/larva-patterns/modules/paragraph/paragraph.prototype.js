@@ -4,5 +4,6 @@ module.exports = {
 	paragraph_text_align_class: '',
 	paragraph_color_class: '',
 	paragraph_background_color_class: '',
+	paragraph_animation_class: '',
 	paragraph_markup: 'Paragraph Text.',
 };

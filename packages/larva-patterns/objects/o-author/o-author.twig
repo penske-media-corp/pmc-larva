@@ -6,6 +6,10 @@
 		{% include "@larva/components/c-span/c-span.twig" with c_span %}
 	{% endif %}
 
+	{% if c_tagline_author %}
+		{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_author %}
+	{% endif %}
+
 	{% if c_timestamp %}
 		{% include "@larva/components/c-timestamp/c-timestamp.twig" with c_timestamp %}
 	{% endif %}

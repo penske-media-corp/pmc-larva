@@ -9,13 +9,11 @@
  * Use a counter to ensure this script only runs one time.
  **/
 
-
 import removeDesktopXlClasses from '../../utils/removeDesktopXlClasses';
 
 // TODO: Should refactor to follow our exporting classes pattern, and
 // include the conditions from index.js in the class
 export default function reflowForSideSkinAd() {
-
 	if ( undefined === window.pmc_side_skin_classes_removed ) {
 		document.documentElement.classList.add( 'has-side-skins' );
 		removeDesktopXlClasses();

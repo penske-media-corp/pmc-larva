@@ -29,11 +29,15 @@
 }
 
 .lrv-u-align-items-end {
-	align-items: flex-start;
+	align-items: flex-end;
 }
 
 .lrv-u-align-items-stretch {
 	align-items: stretch;
+}
+
+.lrv-u-align-items-normal {
+	align-items: normal;
 }
 
 @include pmc-breakpoint( desktop ) {

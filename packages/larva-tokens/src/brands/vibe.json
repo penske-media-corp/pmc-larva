@@ -126,6 +126,18 @@
 			"value": "{!HELVETICA}",
 			"type": "font-family",
 			"category": "font-family"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "Helvetica, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the accent font"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "'Brunel Deck', Helvetica, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The accent webfont, loaded async"
 		}
 	}
 }

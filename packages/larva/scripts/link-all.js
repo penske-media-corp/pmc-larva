@@ -26,8 +26,8 @@ const cliArgs = getArgsFromCli();
 
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
-    shell.exec( `npx @penskemediacorp/larva help link-all` );
-    return;
+	shell.exec( `npx @penskemediacorp/larva help link-all` );
+	return;
 }
 
 shell.exec( 'npm link @penskemediacorp/larva' );

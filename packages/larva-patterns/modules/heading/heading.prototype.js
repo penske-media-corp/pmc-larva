@@ -5,5 +5,5 @@ module.exports = {
 	heading_text_align_class: '',
 	heading_typography_class: 'lrv-a-font-primary-m',
 	heading_background_color_class: '',
-	heading_markup: 'Heading Text'
+	heading_markup: 'Heading Text',
 };

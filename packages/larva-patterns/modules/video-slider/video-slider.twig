@@ -1,0 +1,9 @@
+<div class="video-slider {{video_slider_classes}}">
+	{% for item in o_video_card_items %}
+		<div class="js-Flickity-cell" data-video-showcase>
+			<div class="video-sider__slide-inner {{video_slider_slide_inner_classes}}">
+				{% include "@larva/objects/o-video-card/o-video-card.twig" with item %}
+			</div>
+		</div>
+	{% endfor %}
+</div>

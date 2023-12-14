@@ -20,7 +20,6 @@ $aspect-ratios: (
 
 .lrv-a-crop-1x1\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
-	 
 		position: relative;
 		padding-bottom: 100%;
 
@@ -30,44 +29,11 @@ $aspect-ratios: (
 			height: 100%;
 			object-fit: cover;
 		}
-		 
-	}
-}
-
-.lrv-a-crop-1x1\@tablet {
-	@include pmc-breakpoint( tablet ) {
-	 
-		position: relative;
-		padding-bottom: 100%;
-
-		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-		 
-	}
-}
-
-.lrv-a-crop-1x1\@desktop-xl-max {
-	@include pmc-breakpoint( desktop-xl-max ) {
-	 
-		position: relative;
-		padding-bottom: 100%;
-
-		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		} 
 	}
 }
 
 .lrv-a-crop-3x2\@desktop-xl {
 	@include pmc-breakpoint( desktop-xl ) {
-	 
 		position: relative;
 		padding-bottom: calc( ( 2 / 3 ) * 100% );
 
@@ -76,14 +42,40 @@ $aspect-ratios: (
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-		} 
+		}
 	}
 }
 
+.lrv-a-crop-1x1\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		position: relative;
+		padding-bottom: 100%;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.lrv-a-crop-1x1\@desktop-xl-max {
+	@include pmc-breakpoint( desktop-xl-max ) {
+		position: relative;
+		padding-bottom: 100%;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
 
 .lrv-a-crop-3x2\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
-	 
 		position: relative;
 		padding-bottom: calc( ( 2 / 3 ) * 100% );
 
@@ -92,6 +84,6 @@ $aspect-ratios: (
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-		} 
+		}
 	}
 }

@@ -10,4 +10,4 @@ module.exports = function clonePatternData( slug ) {
 	} catch {
 		return clonedeep( require( path.join( larvaPatternsDir, slug ) ) );
 	}
-}
+};

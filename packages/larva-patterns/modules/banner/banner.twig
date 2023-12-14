@@ -1,10 +1,18 @@
 <div class="banner // {{ banner_classes }}">
-	<div class="banner__img">
+
 	{% if c_lazy_image %}
-		{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		<div class="banner__img // {{ banner_img_outer_classes }}">
+			{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+		</div>
 	{% endif %}
-	</div>
+
+	{% if c_tagline %}
+		<div class="banner__text // {{ banner_text_outer_classes }}">
+			{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
+		</div>
+	{% endif %}
+
 	{% if screen_reader_text %}
-		<h1 class="lrv-a-screen-reader-only">{{ screen_reader_text }}</h1>
+		<span class="lrv-a-screen-reader-only">{{ screen_reader_text }}</span>
 	{% endif %}
 </div>

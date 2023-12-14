@@ -4,6 +4,14 @@
 	overflow: auto;
 }
 
+.lrv-u-overflow-x-auto {
+	overflow-x: auto;
+}
+
+.lrv-u-overflow-y-auto {
+	overflow-y: auto;
+}
+
 .lrv-u-overflow-hidden {
 	overflow: hidden;
 }
@@ -12,4 +20,8 @@
 	@include pmc-breakpoint( mobile-max ) {
 		overflow: auto;
 	}
+}
+
+.lrv-u-overflow-wrap-break-word {
+	overflow-wrap: break-word;
 }

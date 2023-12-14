@@ -21,24 +21,29 @@ c_svg.c_svg_name = 'logo-404';
 c_svg.c_svg_classes = 'lrv-u-max-width-100p';
 
 c_title.c_title_text = 'OOPS! Something went wrong here!';
-c_title.c_title_classes = 'lrv-a-font-secondary-l lrv-u-text-transform-uppercase lrv-u-margin-b-125';
+c_title.c_title_classes =
+	'lrv-a-font-secondary-l lrv-u-text-transform-uppercase lrv-u-margin-b-125';
 c_title.c_title_url = false;
 
 c_button_home.c_button_text = 'Back To Homepage';
 c_button_home.c_button_url = '/';
-c_button_home.c_button_classes += ' lrv-u-background-color-black lrv-u-margin-lr-075 lrv-u-text-transform-uppercase lrv-u-font-weight-bold u-background-color-brand-primary-dark:hover lrv-u-color-white lrv-u-color-white:hover lrv-u-padding-tb-050 lrv-u-padding-lr-1';
+c_button_home.c_button_classes +=
+	' lrv-u-background-color-black lrv-u-margin-lr-075 lrv-u-text-transform-uppercase lrv-u-font-weight-bold u-background-color-brand-primary-dark:hover lrv-u-color-white lrv-u-color-white:hover lrv-u-padding-tb-050 lrv-u-padding-lr-1';
 
 c_button_search.c_button_text = 'Head To Search';
 c_button_search.c_button_url = '#';
-c_button_search.c_button_classes += ' lrv-u-background-color-black lrv-u-margin-lr-075 lrv-u-text-transform-uppercase lrv-u-font-weight-bold u-background-color-brand-primary-dark:hover lrv-u-color-white lrv-u-color-white:hover lrv-u-padding-tb-050 lrv-u-padding-lr-1 lrv-u-margin-t-050@mobile-max';
+c_button_search.c_button_classes +=
+	' lrv-u-background-color-black lrv-u-margin-lr-075 lrv-u-text-transform-uppercase lrv-u-font-weight-bold u-background-color-brand-primary-dark:hover lrv-u-color-white lrv-u-color-white:hover lrv-u-padding-tb-050 lrv-u-padding-lr-1 lrv-u-margin-t-050@mobile-max';
 
 module.exports = {
 	c_heading,
-	c_title: c_title,
+	c_title,
 	c_button_home,
 	c_button_search,
 	c_svg,
-	wrapper_classes: 'lrv-u-text-align-center lrv-u-padding-t-1 lrv-u-padding-b-2 lrv-u-margin-b-2 lrv-u-max-width-830 lrv-u-margin-lr-auto',
+	wrapper_classes:
+		'lrv-u-text-align-center lrv-u-padding-t-1 lrv-u-padding-b-2 lrv-u-margin-b-2 lrv-u-max-width-830 lrv-u-margin-lr-auto',
 	page_404_inner_classes: 'lrv-u-margin-lr-auto lrv-u-padding-lr-1',
-	button_outer_classes: 'lrv-u-flex lrv-u-justify-content-center lrv-u-align-items-center lrv-u-flex-direction-column@mobile-max',
+	button_outer_classes:
+		'lrv-u-flex lrv-u-justify-content-center lrv-u-align-items-center lrv-u-flex-direction-column@mobile-max',
 };

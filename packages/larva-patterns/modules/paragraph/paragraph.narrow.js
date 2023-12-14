@@ -1,4 +1,4 @@
-const clonedeep = require('lodash.clonedeep');
+const clonedeep = require( 'lodash.clonedeep' );
 
 const paragraph_prototype = require( './paragraph.prototype' );
 const paragraph_narrow = clonedeep( paragraph_prototype );

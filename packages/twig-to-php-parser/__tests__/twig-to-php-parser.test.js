@@ -5,7 +5,7 @@ const twigToPhpParser = require( '../index' ).twigToPhpParser;
 const exec = require( 'child_process' ).exec;
 
 const fixture = path.join( __dirname, 'fixtures' );
-const expectedDir = `${fixture}/template-parts-expected/patterns/`;
+const expectedDir = `${ fixture }/template-parts-expected/patterns/`;
 
 const getAppConfiguration = require( '../lib/getConfig' );
 const appConfiguration = getAppConfiguration( 'parser' );
@@ -22,44 +22,59 @@ const patternShortPaths = [
 	'modules/html-tag-interpolation.php',
 ];
 
-describe( 'twig to php parser', function() {
-
-	beforeEach( ( done ) => {
-
-		exec( 'mkdir ' + appConfiguration.phpDir, ( err  ) => {
+describe( 'twig to php parser', function () {
+	beforeAll( ( done ) => {
+		exec( 'mkdir ' + appConfiguration.phpDir, ( err ) => {
 			if ( err ) {
 				console.error( err );
 			}
-		});
+		} );
 
-		return twigToPhpParser( appConfiguration )
-		.catch( ( e ) => console.log( e ) )
-		.then( ( result ) => done() ); // Catch PHP errors.
-	});
+		twigToPhpParser( appConfiguration )
+			.catch( ( e ) => console.log( e ) )
+			.then( ( result ) => done() ); // Catch PHP errors.
+	} );
 
 	it( 'creates new files and directories for objects, components, and modules', ( done ) => {
-		assert.equal( fs.existsSync( appConfiguration.phpDir + 'objects/o-nav.php' ), true );
-		assert.equal( fs.existsSync( appConfiguration.phpDir + 'components/c-nav-link.php' ), true );
-		assert.equal( fs.existsSync( appConfiguration.phpDir + 'modules/breadcrumbs.php' ), true );
+		assert.equal(
+			fs.existsSync( appConfiguration.phpDir + 'objects/o-nav.php' ),
+			true
+		);
+		assert.equal(
+			fs.existsSync(
+				appConfiguration.phpDir + 'components/c-nav-link.php'
+			),
+			true
+		);
+		assert.equal(
+			fs.existsSync(
+				appConfiguration.phpDir + 'modules/breadcrumbs.php'
+			),
+			true
+		);
 		done();
-	});
+	} );
 
 	it( 'parses patterns as expected', ( done ) => {
 		patternShortPaths.forEach( ( shortpath ) => {
-			let expectedContents = fs.readFileSync( expectedDir + shortpath ).toString();
-			let actualContents = fs.readFileSync( appConfiguration.phpDir + shortpath ).toString();
+			const expectedContents = fs
+				.readFileSync( expectedDir + shortpath )
+				.toString();
+			const actualContents = fs
+				.readFileSync( appConfiguration.phpDir + shortpath )
+				.toString();
 
 			assert.equal( actualContents, expectedContents );
-		});
+		} );
 		done();
-	});
+	} );
 
-	afterEach( () => {
+	afterAll( ( done ) => {
 		exec( 'rm -r ' + appConfiguration.phpDir, ( err ) => {
 			if ( err ) {
 				console.error( err );
 			}
-		});
-	});
-
-});
+		} );
+		done();
+	} );
+} );

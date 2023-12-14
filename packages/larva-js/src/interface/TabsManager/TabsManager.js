@@ -4,10 +4,9 @@
  * @todo Add hover support
  * @see https://bitbucket.org/penskemediacorp/pmc-indiewire-2016/src/master/assets/src/js/modules/TabsManager/TabsManager.js
  *
-*/
+ */
 
 export default class TabsManager {
-
 	/**
 	 * Initialize
 	 *
@@ -17,17 +16,20 @@ export default class TabsManager {
 		this.el = el;
 		this.customInteraction = 'click';
 		this.toggleEl = this.el.querySelectorAll( '.js-TabsToggle' );
-		this.panels = [ ... this.el.querySelectorAll( '.js-TabsPanel' ) ];
+		this.panels = [ ...this.el.querySelectorAll( '.js-TabsPanel' ) ];
 
 		this.onClick = this.onClick.bind( this );
 		this.toggle = this.toggle.bind( this );
 		this.deactivatePanels = this.deactivatePanels.bind( this );
 
-		this.toggleEl.forEach( toggle => toggle.addEventListener( 'click', this.onClick ) );
+		this.toggleEl.forEach( ( toggle ) =>
+			toggle.addEventListener( 'click', this.onClick )
+		);
 	}
 
 	/**
 	 * Trigger Toggle event
+	 *
 	 * @param {event} event Triggered event
 	 */
 	onClick( event ) {
@@ -42,6 +44,7 @@ export default class TabsManager {
 
 	/**
 	 * Find and activate desired tab panel
+	 *
 	 * @param {event} event Previously triggered event
 	 */
 	toggle( event ) {
@@ -73,12 +76,14 @@ export default class TabsManager {
 	 * Remove active status from all items
 	 */
 	deactivatePanels() {
-		const toggles = this.el.querySelectorAll( '.js-TabsToggle.is-active, .js-TabsPanel.is-active' );
+		const toggles = this.el.querySelectorAll(
+			'.js-TabsToggle.is-active, .js-TabsPanel.is-active'
+		);
 
 		if ( ! toggles || 0 === toggles.length ) {
 			return;
 		}
 
-		toggles.forEach( item => item.classList.remove( 'is-active' ) );
+		toggles.forEach( ( item ) => item.classList.remove( 'is-active' ) );
 	}
 }

@@ -1,6 +1,4 @@
-const stylelint = require( "stylelint" );
-const chalk = require( "chalk" );
-const path = require( "path" );
+const stylelint = require( 'stylelint' );
 const { rule, name, messages } = require( './lib/rule' );
 
 module.exports = stylelint.createPlugin( name, rule );

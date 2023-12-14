@@ -1,0 +1,76 @@
+<div tabindex="0"
+	class="o-video-card__link // {{ o_video_card_link_classes }}" data-video-showcase-trigger="{{ o_video_card_link_showcase_trigger_data_attr }}" data-video-showcase-type="{{ o_video_card_link_showcase_type_data_attr }}" data-video-showcase-dek="{{ o_video_card_link_showcase_dek_data_attr }}" data-video-showcase-title="{{ o_video_card_link_showcase_title_data_attr }}" data-video-showcase-permalink="{{ o_video_card_link_showcase_permalink_data_url }}" data-video-showcase-time="{{ o_video_card_link_showcase_time_data_attr }}" data-video-player-id="{{ o_video_card_player_id_attr }}" data-video-media-id="{{ o_video_card_media_id_attr }}">
+
+	<div class="o-video-card {{ modifier_class }} {{ o_video_card_classes }}" data-video-showcase-autoplay="{{ o_video_card_link_showcase_autoplay_data_attr }}" data-video-showcase-player>
+
+		{% if o_video_card_crop_class %}
+		<div class="{{ o_video_card_crop_class }}" data-video-showcase-active-text="{{ o_video_card_crop_data_attr }}">
+			{% endif %}
+
+			{% if o_video_card_permalink_url %}
+			<a href="{{ o_video_card_permalink_url }}" class="{{ o_video_card_permalink_classes }}">
+				{% endif %}
+				<img class="o-video-card__image {{ o_video_card_image_classes }}" data-lazy-src="{{ o_video_card_image_url }}" src="{{ o_video_card_lazy_image_url }}" alt="{{ o_video_card_alt_attr }}">
+				{% if o_video_card_permalink_url %}
+			</a>
+			{% endif %}
+
+			{% if o_video_card_is_player %}
+				<iframe class="js-VideoShowcasePlayerIframe" title="video" hidden frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" data-video-showcase-iframe></iframe>
+				{% if o_video_card_id_attr %}
+					<div hidden id="{{ o_video_card_id_attr }}" data-video-showcase-jwplayer></div>
+				{% else %}	
+					<div hidden id="jwplayerContainer" data-video-showcase-jwplayer></div>
+				{% endif %}
+				{% if o_video_card_connatix_id_attr %}
+					<div hidden id="{{ o_video_card_connatix_id_attr }}" data-video-showcase-connatix></div>
+				{% else %}
+					<div hidden id="connatixContainer" data-video-showcase-connatix></div>
+				{% endif %}
+
+				<div class="js-VideoShowcasePlayerOembed" hidden data-video-showcase-oembed></div>
+			{% endif %}
+
+			{% if c_play_icon %}
+				{% if o_video_card_permalink_url %}
+					<a href="{{ o_video_card_permalink_url }}">
+				{% endif %}
+				{% include "@larva/components/c-play-badge/c-play-badge.twig" with c_play_icon %}
+				{% if o_video_card_permalink_url %}
+					</a>
+				{% endif %}
+			{% endif %}
+
+			{% if o_video_card_crop_class %}
+		</div>
+		{% endif %}
+
+		<div class="o-video-card__meta // {{ o_video_card_meta_classes }}">
+			{% if o_indicator %}
+				{% include "@larva/objects/o-indicator/o-indicator.twig" with o_indicator %}
+			{% endif %}
+
+			{% if o_category_link %}
+				{% include "@larva/objects/o-category-link/o-category-link.twig" with o_category_link %}
+			{% endif %}
+
+			{% if c_heading %}
+				{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+			{% endif %}
+
+			{% if c_title %}
+				{% include "@larva/components/c-heading/c-heading.twig" with c_title %}
+			{% endif %}
+
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
+
+			{% if c_span %}
+				{% include "@larva/components/c-span/c-span.twig" with c_span %}
+			{% endif %}
+		</div>
+
+	</div>
+
+</div>

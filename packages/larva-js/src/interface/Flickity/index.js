@@ -1,16 +1,21 @@
 import Flickity from '@npm/flickity';
 
 export default function initFlickity() {
-	const carousels = [ ... document.querySelectorAll( '.js-Flickity' ) ];
+	const carousels = [ ...document.querySelectorAll( '.js-Flickity' ) ];
 
 	carousels.forEach( ( el ) => {
-		let isContained = el.classList.contains( 'js-Flickity--isContained' );
-		let isFreeScroll = el.classList.contains( 'js-Flickity--isFreeScroll' );
-		let isWrapAround = el.classList.contains( 'js-Flickity--isWrapAround' );
+		const isContained = el.classList.contains( 'js-Flickity--isContained' );
+		const isFreeScroll = el.classList.contains(
+			'js-Flickity--isFreeScroll'
+		);
+		const isWrapAround = el.classList.contains(
+			'js-Flickity--isWrapAround'
+		);
+		const hasPageDots = el.classList.contains( 'js-Flickity--pageDots' );
 
-		let slider = new Flickity( el, {
+		const slider = new Flickity( el, {
 			cellSelector: '.js-Flickity-cell',
-			pageDots: false,
+			pageDots: hasPageDots,
 			imagesLoaded: true,
 			groupCells: true,
 			contain: isContained,
@@ -18,13 +23,14 @@ export default function initFlickity() {
 			freeScroll: isFreeScroll,
 			arrowShape: {
 				x0: 10,
-				x1: 60, y1: 50,
-				x2: 65, y2: 45,
-				x3: 20
-			}
+				x1: 60,
+				y1: 50,
+				x2: 65,
+				y2: 45,
+				x3: 20,
+			},
 		} );
 
 		return slider;
 	} );
-
 }

@@ -6,5 +6,5 @@ module.exports = {
 	c_heading_link_classes: '',
 	c_heading_outer: false,
 	c_heading_outer_classes: '',
-	c_heading_is_primary_heading: false
-}
+	c_heading_is_primary_heading: false,
+};

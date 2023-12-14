@@ -5,5 +5,8 @@
 	{% endif %}
 	>
 	{{ c_timestamp_text }}
+	{% if c_timestamp_markup %}
+		{{ c_timestamp_markup|raw }}
+	{% endif %}
 
 </time>

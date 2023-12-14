@@ -21,18 +21,21 @@ import initCollapsibles from '../Collapsible';
  */
 
 export default class VideoShowcase {
-
 	constructor( el ) {
 		this.el = el;
 
 		// All triggers that contain video IDs to be played on click.
-		this.triggers = [ ... el.querySelectorAll( '[data-video-showcase-trigger]' ) ];
+		this.triggers = [
+			...el.querySelectorAll( '[data-video-showcase-trigger]' ),
+		];
 
 		// The main player that also, optionally may be a trigger. It should contain an iframe and #jwplayerContainer.
 		this.player = el.querySelector( '[data-video-showcase-player]' );
 
 		// Elements within the player that will be hidden after the first play.
-		this.elementsToHide = [ ... this.el.querySelectorAll( '.is-to-be-hidden' ) ];
+		this.elementsToHide = [
+			...this.el.querySelectorAll( '.is-to-be-hidden' ),
+		];
 
 		// Attributes that will be removed from the player once it is initialized. Only relevant for players that are
 		// also triggers.
@@ -42,13 +45,13 @@ export default class VideoShowcase {
 			'data-video-showcase-dek',
 			'data-video-showcase-permalink',
 			'data-video-showcase-type',
-			'href'
+			'href',
 		];
 
 		/**
 		 * State.
 		 *
-		 * @type {object}
+		 * @type {Object}
 		 * @property {boolean} isPlayerSetup - Whether or not the player has been setup or played. Set in onFirstTimePlay()
 		 * @property {string} videoID - A Youtube or JWPlayer ID extracted from a `data-video-showcase-trigger` e.g. f1FX5wvC3DA
 		 * @property {string} videoType - "youtube" or "jwplayer" from `data-video-showcase-type`
@@ -56,8 +59,9 @@ export default class VideoShowcase {
 		this.state = {
 			isPlayerSetup: false,
 			hasSocialShare: false,
+			playerID: '',
 			videoID: '',
-			videoType: ''
+			videoType: '',
 		};
 
 		/**
@@ -65,7 +69,7 @@ export default class VideoShowcase {
 		 *
 		 * Note: the title and dek are using class selectors so they can be added to existing patterns.
 		 *
-		 * @type {object}
+		 * @type {Object}
 		 * @property {element} title - A anchor element that will receive both a permalink and heading text.
 		 * @property {element} dek - An element containing a direct child paragraph that will support the dek text.
 		 * @property {element} iframe - The iframe that will recieve an src when a trigger with the Youtube video type is clicked.
@@ -74,16 +78,34 @@ export default class VideoShowcase {
 		 */
 		this.playerUI = {
 			title: el.querySelector( '.js-VideoShowcase-title' ),
-			sponsoredBadge: el.querySelector( '.js-video-showcase-sponsored-badge' ),
+			sponsoredBadge: el.querySelector(
+				'.js-video-showcase-sponsored-badge'
+			),
 			dek: el.querySelector( '.js-VideoShowcase-dek' ),
 			iframe: el.querySelector( '[data-video-showcase-iframe]' ),
-			jwplayerContainer: el.querySelector( '#jwplayerContainer' ),
-			social: el.querySelector( '[data-video-showcase-player-social-share]' )
+			jwplayerContainer: el.querySelector(
+				'[data-video-showcase-jwplayer], #jwplayerContainer'
+			),
+			social: el.querySelector(
+				'[data-video-showcase-player-social-share]'
+			),
+			connatixContainer: el.querySelector(
+				'[data-video-showcase-connatix]'
+			),
+			player: el.querySelector( '[data-video-player-id]' ),
 		};
 
 		this.init();
-
-		delegateEvent( this.el, 'click', '[data-video-showcase-trigger]', this.handleTriggerClick.bind( this ) );
+		if ( this.player.dataset.videoShowcaseAutoplay ) {
+			this.handleTriggerClick( null, this.triggers[ 0 ] );
+		} else {
+			delegateEvent(
+				this.el,
+				'click',
+				'[data-video-showcase-trigger]',
+				this.handleTriggerClick.bind( this )
+			);
+		}
 	}
 
 	/**
@@ -106,17 +128,23 @@ export default class VideoShowcase {
 	 * to the main player card. These are all strings from data attributes except the
 	 * social share, which replaces an entire block of HTML.
 	 *
-	 * @param {element} el - A trigger.
+	 * @param {element} type - Video type.
+	 * @param {element} el   - A trigger.
 	 *
-	 * @return {object} - An object containing the data needed to update the player.
+	 * @return {Object} - An object containing the data needed to update the player.
 	 * @property {string} title - Title text from the `data-video-showcase-title`
 	 * @property {string} dek - Dek text from the `data-video-showcase-dek`
 	 * @property {string} permalink - Link from `data-video-showcase-permalink`
 	 * @property {string} socialString - HTML string returned from wp.template.
 	 */
 
-	getPlayerCardData( el ) {
-		const triggerID = el.dataset.videoShowcaseTrigger;
+	getPlayerCardData( type, el ) {
+		let triggerID = '';
+		if ( 'connatix' === type ) {
+			triggerID = el.dataset.videoMediaId;
+		} else {
+			triggerID = el.dataset.videoShowcaseTrigger;
+		}
 		const hasSocialShare = this.state.hasSocialShare;
 
 		return {
@@ -124,12 +152,14 @@ export default class VideoShowcase {
 			sponsored: el.dataset.videoShowcaseSponsored,
 			dek: el.dataset.videoShowcaseDek,
 			permalink: el.dataset.videoShowcasePermalink,
-			socialString: ( function( data ) {
+			socialString: ( function ( data ) {
 				if ( window.wp && hasSocialShare ) {
-					let template = wp.template( `trigger-social-share-${triggerID}` );
+					const template = wp.template(
+						`trigger-social-share-${ triggerID }`
+					);
 					return template( data );
 				}
-			}() )
+			} )(),
 		};
 	}
 
@@ -138,15 +168,15 @@ export default class VideoShowcase {
 	 *
 	 * Apply the assembled data to the UI.
 	 *
-	 * @param {element} el - A trigger.
-	 * @param {object} data - An object of data from getPlayerCardData.
+	 * @param {element} el  - A trigger.
+	 * @param {Object}  data - An object of data from getPlayerCardData.
 	 */
 
 	updatePlayerCardData( el, data ) {
 		if ( this.playerUI.title && data.title ) {
 			this.playerUI.title.innerText = data.title;
 		}
-		
+
 		if ( this.playerUI.title && data.permalink ) {
 			this.playerUI.title.setAttribute( 'href', data.permalink );
 		}
@@ -169,7 +199,9 @@ export default class VideoShowcase {
 	}
 
 	updateCardSocialShare( html ) {
-		this.playerUI.social.removeChild( this.playerUI.social.querySelector( 'ul' ) );
+		this.playerUI.social.removeChild(
+			this.playerUI.social.querySelector( 'ul' )
+		);
 
 		// NOTE: html comes from JS template with escaped data.
 		this.playerUI.social.insertAdjacentHTML( 'beforeend', html );
@@ -182,17 +214,24 @@ export default class VideoShowcase {
 	 *
 	 * Return an embed URL with the video ID based on the type of video.
 	 *
-	 * @param {string} id - ID of the video e.g. f1FX5wvC3DA
-	 * @param {string} type - "youtube" or "jwplayer"
+	 * @param {string} id   - ID of the video e.g. f1FX5wvC3DA
+	 * @param {string} type - Video type.
 	 */
 	returnUrl( id, type ) {
-
 		if ( 'youtube' === type ) {
-			return `https://www.youtube.com/embed/${id}`;
+			return `https://www.youtube.com/embed/${ id }`;
 		}
 
 		if ( 'jwplayer' === type ) {
-			return `https://content.jwplatform.com/feeds/${id}.json`;
+			return `https://content.jwplatform.com/feeds/${ id }.json`;
+		}
+
+		if ( 'twitch' === type ) {
+			return `https://player.twitch.tv/?video=${ id }`;
+		}
+
+		if ( 'connatix' === type ) {
+			return id;
 		}
 	}
 
@@ -203,7 +242,45 @@ export default class VideoShowcase {
 	 */
 	playYoutube( youtubeUrl ) {
 		this.playerUI.iframe.removeAttribute( 'hidden' );
-		this.playerUI.iframe.setAttribute( 'src', `${youtubeUrl}?rel=0&autoplay=1&showinfo=0&controls=2&rel=0&modestbranding=0` );
+		this.playerUI.iframe.setAttribute(
+			'src',
+			`${ youtubeUrl }?rel=0&autoplay=1&showinfo=0&controls=2&rel=0&modestbranding=0`
+		);
+	}
+
+	/**
+	 * Remove hidden attribute from the iframe and set the src.
+	 *
+	 * @param {string} mediaId  - Connatix media id.
+	 * @param {string} playerId - Connatix player id.
+	 */
+	playConnatix( mediaId, playerId ) {
+		this.playerUI.connatixContainer.removeAttribute('hidden');
+		const eleId = this.playerUI.connatixContainer.getAttribute('id');
+		// eslint-disable-next-line no-undef
+		new Image().src =
+			'https://capi.elements.video/tr/si?token=094029a3-814c-41d5-8a62-2c3adc647176&cid=1ffe63de-eb53-11e9-b4d2-06948452ae1a';
+		// eslint-disable-next-line no-undef
+		cnx.cmd.push(function () {
+			// eslint-disable-next-line no-undef
+			cnx({
+				playerId,
+				mediaId,
+			}).render(eleId);
+		});
+	}
+
+	/**
+	 * Remove hidden attribute from the iframe and set the src.
+	 *
+	 * @param {string} twitchUrl - A Twitch embed URL from returnUrl.
+	 */
+	playTwitch( twitchUrl ) {
+		this.playerUI.iframe.removeAttribute( 'hidden' );
+		this.playerUI.iframe.setAttribute(
+			'src',
+			`${ twitchUrl }&autoplay=true&parent=${ window.location.hostname }`
+		);
 	}
 
 	/**
@@ -215,21 +292,21 @@ export default class VideoShowcase {
 	 * getPlaylist() first to retrieve an individual video, then play it, but this was working.
 	 *
 	 * @link https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#playlist
-	 *
+	 * @param playlistUrl
 	 * @param {string} jwplayerUrl - A Youtube embed URL from returnUrl.
 	 */
 	playJW( playlistUrl ) {
-
 		this.playerUI.jwplayerContainer.removeAttribute( 'hidden' );
 
 		if ( window.pmc_jwplayer ) {
-			window.pmc_jwplayer( this.playerUI.jwplayerContainer ).setup({
-				'playlist': playlistUrl,
-				'aspectratio': '16:9'
-			}).play();
-
+			window
+				.pmc_jwplayer( this.playerUI.jwplayerContainer.id )
+				.setup( {
+					playlist: playlistUrl,
+					aspectratio: '16:9',
+				} )
+				.play();
 		}
-
 	}
 
 	/**
@@ -241,16 +318,25 @@ export default class VideoShowcase {
 	 * @param {element} el - Clicked trigger element.
 	 */
 	handleTriggerClick( e, el ) {
-		e.preventDefault();
+		if ( e ) {
+			e.preventDefault();
+		}
 
-		let previousVideoType = this.state.videoType;
+		if ( 'object' !== typeof el ) {
+			return false;
+		}
 
-		this.state.videoType = el.dataset.videoShowcaseType;
-		this.state.videoID = el.dataset.videoShowcaseTrigger;
-
+		const previousVideoType = this.state.videoType;
 		this.resetPlayer( previousVideoType );
-		this.playVideo( this.state.videoID, this.state.videoType );
-		this.updatePlayerUI( this.state.videoID );
+		this.state.videoType = el.dataset.videoShowcaseType;
+		if ( 'connatix' === el.dataset.videoShowcaseType ) {
+			this.state.videoID = el.dataset.videoMediaId;
+			this.state.playerID = el.dataset.videoPlayerId;
+		} else {
+			this.state.videoID = el.dataset.videoShowcaseTrigger;
+		}
+		this.playVideo( this.state );
+		this.updatePlayerUI( this.state );
 		this.onFirstTimePlay();
 	}
 
@@ -259,26 +345,40 @@ export default class VideoShowcase {
 	 *
 	 * A wrapper function to conditonally play videos according to their type.
 	 *
-	 * @param {string} id - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
-	 * @param {string} type - "youtube" or "jwplayer"
+	 * @param {Object} state - Includes Video ID, Player ID and Video type.
 	 */
-	playVideo( id, type ) {
-		let url = this.returnUrl( id, type );
+	playVideo( state ) {
+		const url = this.returnUrl( state.videoID, state.videoType );
 
-		if ( 'youtube' === type ) {
+		if ( 'youtube' === state.videoType ) {
 			this.playYoutube( url );
 		}
 
-		if ( 'jwplayer' === type ) {
+		if ( 'jwplayer' === state.videoType ) {
 			this.playJW( url );
+		}
+
+		if ( 'twitch' === state.videoType ) {
+			this.playTwitch( url );
+		}
+
+		if ( 'connatix' === state.videoType ) {
+			const playerId = this.playerUI.player.dataset.videoPlayerId;
+			this.playConnatix( url, playerId );
 		}
 	}
 
 	// Remove any trigger-related data attributes and hide any elements that are not relevant for the player.
 	onFirstTimePlay() {
 		if ( false === this.state.isPlayerSetup ) {
-			this.elementsToHide.forEach( e => e.setAttribute( 'hidden', '' ) );
-			this.attributesToRemoveFromPlayer.forEach( attr => this.player.parentNode.removeAttribute( attr ) );
+			this.el.dispatchEvent( new CustomEvent( 'firstVideoPlay' ) );
+
+			this.elementsToHide.forEach( ( e ) =>
+				e.setAttribute( 'hidden', '' )
+			);
+			this.attributesToRemoveFromPlayer.forEach( ( attr ) =>
+				this.player.parentNode.removeAttribute( attr )
+			);
 			this.state.isPlayerSetup = true;
 		}
 	}
@@ -288,13 +388,22 @@ export default class VideoShowcase {
 	 *
 	 * Replace the title and dek elements and mark the active trigger.
 	 *
-	 * @param {string} id - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
+	 * @param {string} state - Includes Video ID, Player ID and Video type.
 	 */
-	updatePlayerUI( id ) {
-		const clickedTrigger = this.el.querySelector( `[data-video-showcase-trigger="${id}"]` );
-		const data = this.getPlayerCardData( clickedTrigger );
+	updatePlayerUI( state ) {
+		let clickedTrigger = '';
+		if ( 'connatix' === state.videoType ) {
+			clickedTrigger = this.el.querySelector(
+				`[data-video-media-id="${ state.videoID }"]`
+			);
+		} else {
+			clickedTrigger = this.el.querySelector(
+				`[data-video-showcase-trigger="${ state.videoID }"]`
+			);
+		}
+		const data = this.getPlayerCardData( state.videoType, clickedTrigger );
 
-		this.setActiveTrigger( id );
+		this.setActiveTrigger( state.videoType, state.videoID );
 		this.updatePlayerCardData( clickedTrigger, data );
 	}
 
@@ -310,7 +419,6 @@ export default class VideoShowcase {
 	 * @param {string} pastType - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
 	 */
 	resetPlayer( pastType ) {
-
 		if ( 'jwplayer' === pastType && window.pmc_jwplayer ) {
 			window.pmc_jwplayer( 'jwplayerContainer' ).remove();
 			this.playerUI.jwplayerContainer.setAttribute( 'hidden', '' );
@@ -320,20 +428,38 @@ export default class VideoShowcase {
 			this.playerUI.iframe.setAttribute( 'src', '' );
 			this.playerUI.iframe.setAttribute( 'hidden', '' );
 		}
+
+		if ( 'connatix' === pastType ) {
+			const elements =
+				document.getElementsByClassName( 'cnx-main-container' );
+			while (elements.length > 0) {
+				elements[0].parentNode.removeChild( elements[0] );
+			}
+		}
 	}
 
 	// Remove `is-playing` class from all triggers.
 	resetAllTriggers() {
-		this.triggers.forEach( el => el.classList.remove( 'is-playing' ) );
+		this.triggers.forEach( ( el ) => el.classList.remove( 'is-playing' ) );
 	}
 
 	/**
 	 * Reset triggers and mark the current active trigger.
 	 *
-	 * @param {string} id - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
+	 * @param {string} type - Type of Video.
+	 * @param {string} id   - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
 	 */
-	setActiveTrigger( id ) {
-		let trigger = this.el.querySelector( `[data-video-showcase-trigger="${id}"]` );
+	setActiveTrigger( type, id ) {
+		let trigger = '';
+		if( 'connatix' === type ) {
+			trigger = this.el.querySelector(
+				`.related-videos [data-video-media-id="${ id }"]`
+			);
+		} else {
+			trigger = this.el.querySelector(
+				`[data-video-showcase-trigger="${ id }"]`
+			);
+		}
 
 		this.resetAllTriggers();
 
@@ -341,5 +467,4 @@ export default class VideoShowcase {
 			trigger.classList.add( 'is-playing' );
 		}
 	}
-
 }

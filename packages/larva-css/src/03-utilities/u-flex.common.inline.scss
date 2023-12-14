@@ -61,6 +61,13 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex\@desktop-max {
+
+	@include pmc-breakpoint( desktop-max ) {
+		display: flex;
+	}
+}
+
 .lrv-u-flex\@desktop-xl-max {
 	@include pmc-breakpoint( desktop-xl-max ) {
 		display: flex;
@@ -70,6 +77,16 @@ $breakpoints: (
 .lrv-u-flex-direction-row-reverse\@desktop-xl-max {
 	@include pmc-breakpoint( desktop-xl-max ) {
 		flex-direction: row-reverse;
+	}
+}
+
+.lrv-u-flex-direction-row-reverse {
+	flex-direction: row-reverse;
+}
+
+.lrv-u-flex-direction-row\@desktop-xl {
+	@include pmc-breakpoint( desktop-xl ) {
+		flex-direction: row;
 	}
 }
 
@@ -83,6 +100,12 @@ $breakpoints: (
 .lrv-u-flex-direction-column\@mobile-max {
 
 	@include pmc-breakpoint( mobile-max ) {
+		flex-direction: column;
+	}
+}
+
+.lrv-u-flex-direction-column\@desktop-max {
+	@include pmc-breakpoint(desktop-max) {
 		flex-direction: column;
 	}
 }
@@ -117,6 +140,12 @@ $breakpoints: (
 	}
 }
 
+.lrv-u-flex-basis-75p\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		flex-basis: 75%;
+	}
+}
+
 .lrv-u-flex-shrink-0\@mobile-max {
 	@include pmc-breakpoint( mobile-max ) {
 		flex-shrink: 0;
@@ -127,7 +156,7 @@ $breakpoints: (
 
 	@each $size in $flex_basis {
 		$per : #{$size}#{'%'};
-		
+
 		@if '' == $breakpoint {
 			// No breakpoint
 			.lrv-u-flex-basis-#{$size}p {
@@ -142,5 +171,5 @@ $breakpoints: (
 		}
 
 	} // end flex loop
-	
+
 } // end breakpoints loop

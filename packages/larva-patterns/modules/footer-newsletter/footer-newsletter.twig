@@ -2,4 +2,7 @@
 	{% include "@larva/components/c-title/c-title.twig" with c_title %}
 	{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline %}
 	{% include "@larva/objects/o-email-capture-form/o-email-capture-form.twig" with o_email_capture_form %}
+	{% if c_tagline_terms %}
+		{% include "@larva/components/c-tagline/c-tagline.twig" with c_tagline_terms %}
+	{% endif %}
 </section>

@@ -50,8 +50,8 @@ const cliArgs = getArgsFromCli();
 
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
-    shell.exec( `npx @penskemediacorp/larva help lint` );
-    return;
+	shell.exec( `npx @penskemediacorp/larva help lint` );
+	return;
 }
 
 // Trigger linting when a specific flag is present, or when neither flag is
@@ -64,10 +64,10 @@ const fix = cliArgs.includes( '--fix' ) ? ' fix' : '';
 
 if ( lintCSS ) {
 	console.log( 'Linting CSS assets\n\n\n' );
-	shell.exec( `${binPath} lint-scss${fix}` );
+	shell.exec( `${ binPath } lint-scss${ fix }` );
 }
 
 if ( lintJS ) {
 	console.log( 'Linting JavaScript assets\n\n\n' );
-	shell.exec( `${binPath} lint-js ${workingDirectory}${fix}` );
+	shell.exec( `${ binPath } lint-js ${ workingDirectory }${ fix }` );
 }

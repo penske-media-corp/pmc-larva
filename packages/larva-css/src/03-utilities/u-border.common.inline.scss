@@ -79,14 +79,18 @@
 	border-left-width: pmc-rem(2);
 }
 
+.lrv-u-border-collapse {
+	border-collapse: collapse;
+}
+
 .lrv-u-border-l-00\@mobile-max {
 	@include pmc-breakpoint(mobile-max) {
 		border-left-width: 0;
 	}
 }
 
-.lrv-u-border-a-1\@mobile-max {
-	@include pmc-breakpoint( mobile-max ) {
+.lrv-u-border-a-1\@desktop {
+	@include pmc-breakpoint( desktop ) {
 		border-width: 1px;
 	}
 }
@@ -133,7 +137,7 @@
 	.lrv-u-border-a-0\@desktop {
 		border-width: 0;
 	}
-	
+
 	.lrv-u-border-t-3\@desktop {
 		border-top-width: 3px;
 	}
@@ -213,4 +217,14 @@
 	@include pmc-breakpoint( desktop-xl ) {
 		border-top-width: pmc-rem(1);
 	}
+}
+
+.lrv-u-border-b-1\@tablet {
+	@include pmc-breakpoint( tablet ) {
+		border-bottom-width: pmc-rem(1);
+	}
+}
+
+.lrv-u-border-t-20 {
+	border-top-width: pmc-rem(20);
 }

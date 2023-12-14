@@ -1,72 +1,72 @@
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Route, Routes, useMatch } from 'react-router-dom';
 
-import React, { useState, useEffect } from "react";
-import { TokenForm } from "./TokenForm";
-import { InitialForm } from "./InitialForm";
+import React, { useState, useEffect } from 'react';
+import { TokenForm } from './TokenForm';
+import { InitialForm } from './InitialForm';
 import {
 	getCoreColorsFromTokens,
 	getUpdatedTokensWithCoreColors,
-} from "../utils/coreColorTokens";
+} from '../utils/coreColorTokens';
 
 export const TokensView = () => {
-	let match = useRouteMatch();
+	const match = useMatch();
 
 	const TOKENS_FETCH_URL =
-		"https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/";
+		'https://raw.githubusercontent.com/penske-media-corp/pmc-larva/master/packages/larva-tokens/build/';
 
 	const appActions = {
-		create: "create",
-		update: "update",
+		create: 'create',
+		update: 'update',
 	};
 
-	const [selectedBrand, setSelectedBrand] = useState({
-		action: "",
-		brand: "",
-	});
+	const [ selectedBrand, setSelectedBrand ] = useState( {
+		action: '',
+		brand: '',
+	} );
 
 	const supportsshowSaveFilePicker = () =>
 		undefined !== window.showSaveFilePicker;
 
-	const [tokens, setTokens] = useState({});
-	const [defaultTokens, setDefaultTokens] = useState({});
-	const [copied, setCopied] = useState(false);
-	const [copyText, setCopyText] = useState("");
-	const [canSaveFile] = useState(supportsshowSaveFilePicker);
-	const [coreColorTokens, setCoreColorTokens] = useState({});
+	const [ tokens, setTokens ] = useState( {} );
+	const [ defaultTokens, setDefaultTokens ] = useState( {} );
+	const [ copied, setCopied ] = useState( false );
+	const [ copyText, setCopyText ] = useState( '' );
+	const [ canSaveFile ] = useState( supportsshowSaveFilePicker );
+	const [ coreColorTokens, setCoreColorTokens ] = useState( {} );
 
 	// Handle the updates that are side effects of the
 	// check for browser support
-	useEffect(() => {
+	useEffect( () => {
 		const beforeText = canSaveFile
-			? "Save JSON to File"
-			: "Copy JSON to Clipboard";
-		const afterText = canSaveFile ? "Saved!" : "Copied!";
+			? 'Save JSON to File'
+			: 'Copy JSON to Clipboard';
+		const afterText = canSaveFile ? 'Saved!' : 'Copied!';
 
-		if (copied) {
-			setCopyText(afterText);
+		if ( copied ) {
+			setCopyText( afterText );
 		} else {
-			setCopyText(beforeText);
+			setCopyText( beforeText );
 		}
-	}, [copied, copyText, canSaveFile]);
+	}, [ copied, copyText, canSaveFile ] );
 
-	const handleUpdateBrand = (brand, action) => {
-		setSelectedBrand({
+	const handleUpdateBrand = ( brand, action ) => {
+		setSelectedBrand( {
 			brand,
 			action,
-		});
+		} );
 	};
 
-	const updateTokenValue = (tokenData, newValue) => {
-		const updateValueHelper = (tokensObj, updateStateFn) => {
-			tokensObj[tokenData.name].value = newValue;
+	const updateTokenValue = ( tokenData, newValue ) => {
+		const updateValueHelper = ( tokensObj, updateStateFn ) => {
+			tokensObj[ tokenData.name ].value = newValue;
 
-			updateStateFn(tokensObj);
+			updateStateFn( tokensObj );
 		};
 
-		if (tokenData.category !== "core-color") {
-			updateValueHelper(tokens, setTokens);
+		if ( tokenData.category !== 'core-color' ) {
+			updateValueHelper( tokens, setTokens );
 		} else {
-			updateValueHelper(coreColorTokens, setCoreColorTokens);
+			updateValueHelper( coreColorTokens, setCoreColorTokens );
 		}
 	};
 
@@ -75,58 +75,60 @@ export const TokensView = () => {
 			tokens,
 			coreColorTokens
 		);
-		setTokens(newTokens);
+		setTokens( newTokens );
 	};
 
 	const updateCoreColors = () => {
-		const newCoreColors = getCoreColorsFromTokens(tokens);
+		const newCoreColors = getCoreColorsFromTokens( tokens );
 
-		setCoreColorTokens(newCoreColors);
+		setCoreColorTokens( newCoreColors );
 	};
 
-	const fetchAndSetTokens = async (e) => {
+	const fetchAndSetTokens = async ( e ) => {
 		const brand =
 			appActions.create === selectedBrand.action
-				? "default"
+				? 'default'
 				: selectedBrand.brand;
 
-		let url = TOKENS_FETCH_URL + brand + ".raw.json";
-		let response = await fetch(url);
-		let json = await response.json();
-		let tokens = await json.props;
-		let sortedKeys = await Object.keys(tokens).sort();
-		let sortedTokens = sortedKeys.reduce((tokensObj, key) => {
-			tokensObj[key] = tokens[key];
+		const url = TOKENS_FETCH_URL + brand + '.raw.json';
+		const response = await fetch( url );
+		const json = await response.json();
+		const tokens = await json.props;
+		const sortedKeys = await Object.keys( tokens ).sort();
+		const sortedTokens = sortedKeys.reduce( ( tokensObj, key ) => {
+			tokensObj[ key ] = tokens[ key ];
 			return tokensObj;
-		}, {});
+		}, {} );
 
-		let reducedColorTokens = await getCoreColorsFromTokens(tokens);
-		let sortedColorKeys = Object.keys(reducedColorTokens).sort();
-		let sortedColorTokens = sortedColorKeys.reduce((sortedColors, key) => {
-			sortedColors[key] = reducedColorTokens[key];
-			return sortedColors;
-		}, {});
+		const reducedColorTokens = await getCoreColorsFromTokens( tokens );
+		const sortedColorKeys = Object.keys( reducedColorTokens ).sort();
+		const sortedColorTokens = sortedColorKeys.reduce(
+			( sortedColors, key ) => {
+				sortedColors[ key ] = reducedColorTokens[ key ];
+				return sortedColors;
+			},
+			{}
+		);
 
-		setCoreColorTokens(sortedColorTokens);
-		setTokens(sortedTokens);
+		setCoreColorTokens( sortedColorTokens );
+		setTokens( sortedTokens );
 
-		const initialDefaultTokens = (async (e) => {
-			if ("default" === brand) {
+		const initialDefaultTokens = ( async ( e ) => {
+			if ( 'default' === brand ) {
 				// Deep clone the object since we are checking equivalence later.
-				return JSON.parse(JSON.stringify(sortedTokens));
-			} else {
-				let url = TOKENS_FETCH_URL + "/default.raw.json";
-				let response = await fetch(url);
-				let json = await response.json();
-				let tokens = await json.props;
-
-				return tokens;
+				return JSON.parse( JSON.stringify( sortedTokens ) );
 			}
-		})();
+			const url = TOKENS_FETCH_URL + '/default.raw.json';
+			const response = await fetch( url );
+			const json = await response.json();
+			const tokens = await json.props;
+
+			return tokens;
+		} )();
 
 		// Save unchanged tokens so we can tell what is
 		// different from the original
-		setDefaultTokens(await initialDefaultTokens);
+		setDefaultTokens( await initialDefaultTokens );
 	};
 
 	/**
@@ -136,88 +138,88 @@ export const TokensView = () => {
 	 * @see https://developer.mozilla.org/en-US/docs/Web/API/window/showSaveFilePicker
 	 */
 	const saveJsonToFile = async () => {
-		const diffedTokens = ((changed, reference) => {
-			const updatedTokenKeys = Object.keys(changed).filter((key) => {
+		const diffedTokens = ( ( changed, reference ) => {
+			const updatedTokenKeys = Object.keys( changed ).filter( ( key ) => {
 				// If changed key is not present in the reference, then it
 				// is a custom token, and we should keep it
-				if (undefined === reference[key]) {
+				if ( undefined === reference[ key ] ) {
 					return true;
 				}
 
-				return changed[key].value !== reference[key].value;
-			});
+				return changed[ key ].value !== reference[ key ].value;
+			} );
 
-			return updatedTokenKeys.reduce((acc, curr) => {
-				acc[curr] = { ...changed[curr] };
+			return updatedTokenKeys.reduce( ( acc, curr ) => {
+				acc[ curr ] = { ...changed[ curr ] };
 				return acc;
-			}, {});
-		})(tokens, defaultTokens);
+			}, {} );
+		} )( tokens, defaultTokens );
 
 		const tokensOutput = {
-			imports: ["../base/all.json", "../base/typography.json"],
+			imports: [ '../base/all.json', '../base/typography.json' ],
 			props: { ...diffedTokens },
 		};
 
-		if (canSaveFile) {
+		if ( canSaveFile ) {
 			const tokensBlob = new Blob(
-				[JSON.stringify(tokensOutput, null, 2)],
+				[ JSON.stringify( tokensOutput, null, 2 ) ],
 				{
-					type: "application/json",
+					type: 'application/json',
 				}
 			);
 
 			// create a new handle
-			const newHandle = await window.showSaveFilePicker({
+			const newHandle = await window.showSaveFilePicker( {
 				types: [
 					{
 						name: selectedBrand.brand,
-						accept: { "text/json": [".json"] },
+						accept: { 'text/json': [ '.json' ] },
 					},
 				],
-			});
+			} );
 
 			// create a FileSystemWritableFileStream to write to
 			const writableStream = await newHandle.createWritable();
 
 			// write our file
-			await writableStream.write(tokensBlob);
+			await writableStream.write( tokensBlob );
 
 			// close the file and write the contents to disk.
 			await writableStream.close();
 		} else {
 			await navigator.clipboard.writeText(
-				JSON.stringify(tokensOutput, null, 2)
+				JSON.stringify( tokensOutput, null, 2 )
 			);
 		}
 
-		setCopied(true);
+		setCopied( true );
 	};
 
 	return (
-		<Switch>
-			<Route path={`${match.url}/:action`}>
+		<Routes>
+			<Route path={ `${ match.url }/:action` }>
 				<TokenForm
-					tokens={tokens}
-					updateTokenValue={updateTokenValue}
-					updateTokensWithCoreColors={updateTokensWithCoreColors}
-					updateCoreColors={updateCoreColors}
-					brandName={selectedBrand.brand}
-					action={selectedBrand.action}
-					saveJsonToFile={saveJsonToFile}
-					copyText={copyText}
-					coreColorTokens={coreColorTokens}
-					copied={copied}
-					appActions={appActions}
+					tokens={ tokens }
+					updateTokenValue={ updateTokenValue }
+					updateTokensWithCoreColors={ updateTokensWithCoreColors }
+					updateCoreColors={ updateCoreColors }
+					brandName={ selectedBrand.brand }
+					action={ selectedBrand.action }
+					saveJsonToFile={ saveJsonToFile }
+					copyText={ copyText }
+					coreColorTokens={ coreColorTokens }
+					copied={ copied }
+					appActions={ appActions }
 				/>
 			</Route>
-			<Route path={`${match.url}`}>
+			<Route path={ `${ match.url }` }>
 				<InitialForm
-					fetchAndSetTokens={fetchAndSetTokens}
-					handleUpdateBrand={handleUpdateBrand}
-					selectedBrand={selectedBrand}
-					appActions={appActions}
+					fetchAndSetTokens={ fetchAndSetTokens }
+					handleUpdateBrand={ handleUpdateBrand }
+					selectedBrand={ selectedBrand }
+					appActions={ appActions }
 				/>
 			</Route>
-		</Switch>
+		</Routes>
 	);
 };

@@ -7,5 +7,6 @@
 		"rules": {
 			"import/no-unresolved": "off"
 		}
-	} ]
+	} ],
+	"root": true
 }

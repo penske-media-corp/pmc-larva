@@ -1,0 +1,33 @@
+<div class="authors-bio // {{ authors_bio_classes }}">
+	<div class="author-bio-primary-grid // {{ author_grid_primary_classes }}">
+			<div class="author-image-wrapper // {{ author_image_wrapper_classes }}">
+				{% if c_lazy_image %}
+					{% include "@larva/components/c-lazy-image/c-lazy-image.twig" with c_lazy_image %}
+				{% endif %}
+			</div>
+
+			<div class="author-title-wrapper // {{ author_title_wrapper_classes }}">
+				{% if c_title %}
+					{% include "@larva/components/c-title/c-title.twig" with c_title %}
+				{% endif %}
+
+				{% if c_span %}
+					{% include "@larva/components/c-span/c-span.twig" with c_span %}
+				{% endif %}
+			</div>
+	</div>
+
+	<div class="author-bio-secondary-grid // {{ author_grid_secondary_classes }}">
+		<div class="author-description-wrapper // {{ author_desc_wrapper_classes }}">
+			{% if c_dek %}
+				{% include "@larva/components/c-dek/c-dek.twig" with c_dek %}
+			{% endif %}
+
+			{% if c_link %}
+				<div class="author-link // {{ c_link_bottom_wrapper_classes }}">
+					{% include "@larva/components/c-link/c-link.twig" with c_link %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

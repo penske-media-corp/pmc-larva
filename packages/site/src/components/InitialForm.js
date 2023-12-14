@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import React, { Fragment } from "react";
-import { brands } from "../data";
+import React, { Fragment } from 'react';
+import { brands } from '../data';
 
-export const InitialForm = ({
+export const InitialForm = ( {
 	fetchAndSetTokens,
 	handleUpdateBrand,
 	selectedBrand,
 	appActions,
-}) => {
+} ) => {
 	return (
 		<Fragment>
 			<p className="lrv-u-font-size-18">
@@ -25,28 +25,28 @@ export const InitialForm = ({
 					<select
 						className="lrv-u-display-block lrv-u-padding-a-050 lrv-u-margin-b-2 lrv-u-border-a-1 lrv-u-border-radius-5"
 						name="select"
-						onChange={(e) => {
+						onChange={ ( e ) => {
 							handleUpdateBrand(
 								e.target.value,
 								appActions.update
 							);
-						}}
+						} }
 					>
 						<option key="select">Select</option>
-						{brands.map((brand) => (
-							<option key={brand} value={brand}>
-								{brand}
+						{ brands.map( ( brand ) => (
+							<option key={ brand } value={ brand }>
+								{ brand }
 							</option>
-						))}
+						) ) }
 					</select>
 
-					<Link to={`/tokens/update`}>
+					<Link to={ `/tokens/update` }>
 						<button
 							className="ui primary button lrv-u-display-inline-block"
 							type="submit"
-							onClick={fetchAndSetTokens}
+							onClick={ fetchAndSetTokens }
 							disabled={
-								!(appActions.update === selectedBrand.action)
+								! ( appActions.update === selectedBrand.action )
 							}
 						>
 							Continue to Update Tokens
@@ -65,12 +65,12 @@ export const InitialForm = ({
 						<input
 							type="text"
 							placeholder="artnews"
-							onChange={(e) => {
+							onChange={ ( e ) => {
 								handleUpdateBrand(
 									e.target.value,
 									appActions.create
 								);
-							}}
+							} }
 						/>
 					</div>
 
@@ -85,12 +85,12 @@ export const InitialForm = ({
 								className="ui primary button lrv-u-display-inline-block"
 								type="submit"
 								disabled={
-									!(
+									! (
 										appActions.create ===
 										selectedBrand.action
 									)
 								}
-								onClick={fetchAndSetTokens}
+								onClick={ fetchAndSetTokens }
 							>
 								Continue to Create Tokens
 							</button>

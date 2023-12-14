@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/stylelint-config",
-  "version": "1.0.0",
+  "version": "1.59.0",
   "description": "Stylelint base config and customizations.",
   "keywords": [
     "stylelint",
@@ -22,5 +22,6 @@
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
-  }
+  },
+  "gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"
 }

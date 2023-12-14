@@ -1,11 +1,10 @@
-
 export default class MegaMenu {
 	constructor( el ) {
 		this.el = el;
-		this.inputs = [ ... this.el.querySelectorAll( 'input' ) ];
+		this.inputs = [ ...this.el.querySelectorAll( 'input' ) ];
 		this.container = document.documentElement;
 
-		this.inputs.forEach( input => {
+		this.inputs.forEach( ( input ) => {
 			input.addEventListener( 'focus', () => this.handleFocus( input ) );
 		} );
 
@@ -24,7 +23,6 @@ export default class MegaMenu {
 	 * @return {void}
 	 */
 	trapFocus( modal ) {
-
 		/**
 		 * .js-MegaMenu class has been added twice in the template, we may remove this check after removing
 		 * this other class from div.mega-menu__main from all themes.
@@ -33,11 +31,14 @@ export default class MegaMenu {
 			return;
 		}
 
-		const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+		const focusableElements =
+			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
-		const firstFocusableElement = modal.querySelectorAll( focusableElements )[ 0 ];
+		const firstFocusableElement =
+			modal.querySelectorAll( focusableElements )[ 0 ];
 		const focusableContent = modal.querySelectorAll( focusableElements );
-		const lastFocusableElement = focusableContent[ focusableContent.length - 1 ];
+		const lastFocusableElement =
+			focusableContent[ focusableContent.length - 1 ];
 
 		/**
 		 * Handle keydown event.
@@ -47,24 +48,32 @@ export default class MegaMenu {
 		 * @return {void}
 		 */
 		const handleKeyDown = ( event ) => {
-			let isTabPressed = event.key === 'Tab' || event.keyCode === 9;
+			const isTabPressed = event.key === 'Tab' || event.keyCode === 9;
 
 			if ( ! isTabPressed ) {
 				return;
 			}
 
-			if ( event.shiftKey ) { // shift + tab combination
-				if ( document.activeElement === firstFocusableElement && lastFocusableElement ) {
+			if ( event.shiftKey ) {
+				// shift + tab combination
+				if (
+					document.activeElement === firstFocusableElement &&
+					lastFocusableElement
+				) {
 					lastFocusableElement.focus();
 					event.preventDefault();
 				}
-			} else { // tab key
-				if ( document.activeElement === lastFocusableElement && firstFocusableElement ) {
+			} else {
+				// tab key
+				if (
+					document.activeElement === lastFocusableElement &&
+					firstFocusableElement
+				) {
 					firstFocusableElement.focus();
 					event.preventDefault();
 				}
 			}
-		}
+		};
 
 		document.addEventListener( 'keydown', handleKeyDown );
 	}

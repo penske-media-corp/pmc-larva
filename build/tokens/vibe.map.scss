@@ -73,5 +73,9 @@ $vibe-map: (
   'background-color-brand-accent': (rgb(16, 16, 16)),
   'border-color-brand-accent': (rgb(16, 16, 16)),
   'color-grey-lightest': (rgb(239, 239, 239)),
+  /* The fallback for the accent font */
+  'font-family-accent': (Helvetica, sans-serif),
   'color-brand-accent': (rgb(16, 16, 16)),
+  /* The accent webfont, loaded async */
+  'font-family-accent-fancy': ('Brunel Deck', Helvetica, sans-serif),
 );

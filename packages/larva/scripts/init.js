@@ -8,7 +8,9 @@ const copyTo = process.cwd();
 copySync( copyFrom, copyTo );
 
 console.log(
-	chalk.green( 'Copied folder structure. Now, add the following scripts to package.json:' )
+	chalk.green(
+		'Copied folder structure. Now, add the following scripts to package.json:'
+	)
 );
 
 console.log( `

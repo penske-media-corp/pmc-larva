@@ -1,0 +1,6 @@
+const clonedeep = require( 'lodash.clonedeep' );
+const pullquote = clonedeep( require( './pullquote.prototype' ) );
+
+pullquote.pullquote_classes += ' featured-pullquote';
+
+module.exports = pullquote;

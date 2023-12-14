@@ -16,7 +16,7 @@
  */
 
 // Dependencies.
-const fs = require('fs');
+const fs = require( 'fs' );
 const path = require( 'path' );
 const shell = require( 'shelljs' );
 
@@ -36,19 +36,21 @@ const allowedCommands = [
 // Display a generic help description.
 if ( 2 !== cliArgs.length ) {
 	console.log( 'Usage: npx @penskemediacorp/larval <command> [--help]\n' );
-	console.log( `Where <command> is one of ${allowedCommands.join( ', ' )}.\n` );
+	console.log(
+		`Where <command> is one of ${ allowedCommands.join( ', ' ) }.\n`
+	);
 	return;
 }
 
 // Check for invalid commands.
-const command = cliArgs[1];
+const command = cliArgs[ 1 ];
 if ( ! allowedCommands.includes( command ) ) {
-	console.log( `Invalid command '${command}'.\n` );
+	console.log( `Invalid command '${ command }'.\n` );
 	return;
 }
 
 // Display the docblock for a given command.
-const pathToFile = path.resolve( __dirname, `${command}.js` );
+const pathToFile = path.resolve( __dirname, `${ command }.js` );
 try {
 	if ( fs.existsSync( pathToFile ) ) {
 		fs.readFile( pathToFile, 'utf8', ( error, data ) => {
@@ -57,9 +59,9 @@ try {
 				return;
 			}
 			const fileParts = data.split( '*/', 1 );
-			console.log( fileParts[0] + '*/' );
+			console.log( fileParts[ 0 ] + '*/' );
 		} );
 	}
-} catch( error ) {
+} catch ( error ) {
 	console.error( error );
 }

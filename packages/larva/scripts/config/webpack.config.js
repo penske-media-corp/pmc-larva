@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require( 'eslint-webpack-plugin' );
 
 const getConfig = require( '../../index' ).getConfig;
 
@@ -11,28 +11,26 @@ const entries = getConfig( 'webpack' ).entries;
 const aliases = {
 	'@larva-js': path.resolve( './node_modules/@penskemediacorp/larva-js/src' ),
 	'@npm': path.resolve( './node_modules/' ),
-	... getConfig( 'webpack' ).aliases
+	...getConfig( 'webpack' ).aliases,
 };
 
 const externals = getConfig( 'webpack' ).externals ?? {};
 
 const eslintConfig = getConfig( 'eslint', true );
-const eslintConfigFile = undefined !== eslintConfig ? eslintConfig.configFile : null;
+const eslintConfigFile =
+	undefined !== eslintConfig ? eslintConfig.configFile : null;
 
 // Tools
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
-
 
 //=========================================================
 //  Rules
 //---------------------------------------------------------
 const rules = {
-
 	/**
 	 * JS Loaders
 	 */
 	pre: {
-		enforce: 'pre',
 		test: /\.js$/,
 		exclude: /(node_modules|nobundle|vendor)/,
 	},
@@ -41,17 +39,17 @@ const rules = {
 		include: SRC_DIR,
 		exclude: /(node_modules|nobundle|vendor)/,
 		loader: 'babel-loader',
-		query: {
-			presets: [ '@babel/preset-env' ]
-		}
-	}
+		options: {
+			presets: [ '@babel/preset-env' ],
+		},
+	},
 };
 
 const plugins = {
 	cleanup: new CleanWebpackPlugin(),
-	eslint: new ESLintPlugin({
-		overrideConfigFile: eslintConfigFile
-	})
+	eslint: new ESLintPlugin( {
+		overrideConfigFile: eslintConfigFile,
+	} ),
 };
 
 //=========================================================
@@ -61,36 +59,39 @@ const config = {
 	entry: entries,
 	output: {
 		path: BUILD_DIR,
-		filename: '[name].js'
+		filename: '[name].js',
 	},
 	module: {
-		rules: [ rules.js ]
+		rules: [ rules.js ],
 	},
 	watch: false,
 	watchOptions: {
-		ignored: /node_modules/
+		ignored: /node_modules/,
 	},
 	resolve: {
-		alias: aliases
+		alias: aliases,
 	},
 	externals,
 	optimization: {
-		minimize: true
-	}
+		minimize: true,
+	},
 };
 
 module.exports = ( env, argv ) => {
-
 	if ( 'development' === argv.mode ) {
 		config.devtool = 'source-map';
-		config.module.rules = ( config.module.rules || [] ).concat( [ rules.pre ] );
+		config.module.rules = ( config.module.rules || [] ).concat( [
+			rules.pre,
+		] );
 		config.plugins = [ plugins.eslint ];
 	}
 
 	if ( 'production' === argv.mode ) {
 		console.log( 'Building Prod JS..' );
 
-		config.module.rules = ( config.module.rules || [] ).concat( [ rules.pre ] );
+		config.module.rules = ( config.module.rules || [] ).concat( [
+			rules.pre,
+		] );
 		config.plugins = [ plugins.eslint, plugins.cleanup ];
 	}
 
