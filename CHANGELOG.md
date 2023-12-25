@@ -5,6 +5,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+
+## 1.59.0 12-12-2023
+* Add Author Bio and Author Bio Item Modules.
+* Add styles for grid and flex.
+* Use Generic node version 18 in package.json and Remove NPM requirement.
+
+## 1.58.3 11-14-2023
+* Adds id attribute support for the `heading.twig` component.
+
+## 1.58.2 11-13-2023
+* Removed `console.log()` from `twig-to-php-parser` that was added for testing.
+* Re-enabled space character encoding in `url-encode()` SCSS function (WordPress CSS minification compat).
+* Fixed `str-replace()` SCSS function "freezing".
+
+## 1.58.1 11-06-2023
+* Updated Backstop reference images to 1.58.0 release.
+* Switch Webpack config "query" JS rule that's throwing warnings and build errors out for "options"
+* Bugfix: Remove ` ` (space) and `,` encoding from `inline-svg`'s `url-encode()` to fix misc base64 SVG inlining.
+
+## 1.58.0 11-01-2023
+* Update Node to 18 and fix incompatible dependencies, scripts, and GitHub actions
 * larva-patterns - Add brand primary link styles to tag list module.
 * larva-patterns - Reorder css class names of modules starting with letter `c` based on WP coding standards.
 

@@ -1,6 +1,6 @@
 {
 	"name": "@penskemediacorp/larva-js",
-	"version": "1.57.0",
+	"version": "1.59.0",
 	"description": "Larva JS patterns.",
 	"author": "laras126 <laras126@gmail.com>",
 	"homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -22,9 +22,9 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"flickity": "^2.2.1",
-		"webpack": "^4.43.0",
-		"webpack-cli": "^3.3.12"
+		"flickity": "^2",
+		"webpack": "^5",
+		"webpack-cli": "^5"
 	},
 	"gitHead": "a0ba45ec5dcc37b859cb08ffd694582c3d10bcdc"
 }

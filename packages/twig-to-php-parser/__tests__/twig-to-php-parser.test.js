@@ -23,14 +23,14 @@ const patternShortPaths = [
 ];
 
 describe( 'twig to php parser', function () {
-	beforeEach( ( done ) => {
+	beforeAll( ( done ) => {
 		exec( 'mkdir ' + appConfiguration.phpDir, ( err ) => {
 			if ( err ) {
 				console.error( err );
 			}
 		} );
 
-		return twigToPhpParser( appConfiguration )
+		twigToPhpParser( appConfiguration )
 			.catch( ( e ) => console.log( e ) )
 			.then( ( result ) => done() ); // Catch PHP errors.
 	} );
@@ -69,11 +69,12 @@ describe( 'twig to php parser', function () {
 		done();
 	} );
 
-	afterEach( () => {
+	afterAll( ( done ) => {
 		exec( 'rm -r ' + appConfiguration.phpDir, ( err ) => {
 			if ( err ) {
 				console.error( err );
 			}
 		} );
+		done();
 	} );
 } );
