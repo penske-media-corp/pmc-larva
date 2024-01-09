@@ -81,7 +81,7 @@
     "gulp-stylelint": "^13",
     "jest": "^29",
     "jsdom": "^22",
-    "lerna": "^7",
+    "lerna": "^8",
     "lodash.clonedeep": "^4",
     "marked": "^9",
     "node-sass": "^9",
