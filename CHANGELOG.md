@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* Update Lerna to V8 (does not appear to fix any publishing issues)
 
 ## 1.60.0 01-02-2024
 * Adds the pullquote.memo prototype that is referenced by some brands.
