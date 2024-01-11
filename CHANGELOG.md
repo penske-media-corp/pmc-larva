@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * Update Lerna to V8 (does not appear to fix any publishing issues)
+* larva-patterns - New `Accordion` module.
 
 ## 1.60.0 01-02-2024
 * Adds the pullquote.memo prototype that is referenced by some brands.
