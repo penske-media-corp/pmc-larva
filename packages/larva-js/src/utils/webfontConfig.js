@@ -35,7 +35,7 @@ const webFontConfig = {
 							1,
 							7 * 24 * 60 * 60,
 							'',
-							'C0002' // Require functional cookie consent.
+							'C0003' // Require functional cookie consent.
 						);
 					}
 					console.log( 'fonts loaded ' + type );
