@@ -3,15 +3,10 @@ const clonedeep = require( 'lodash.clonedeep' );
 const c_icon = clonedeep(
 	require( '../../components/c-icon/c-icon.prototype' )
 );
-const social_share_primary_items = [
-	'facebook',
-	'twitter',
-	'pinterest',
-	'tumblr',
-	'reddit',
-	'linkedin',
-	'print',
-];
+
+const socialPlatforms = require( '../../utils/getSocialPlatforms' )( [
+	'facebook', 'twitter', 'pinit', 'tumblr', 'reddit', 'linkedin', 'print'
+] );
 
 const social_share_primary = [];
 const social_share_secondary = [];
@@ -22,11 +17,13 @@ c_icon_struct.c_icon_link_classes =
 c_icon_struct.c_icon_url = '#';
 c_icon_struct.c_icon_classes = 'lrv-u-width-16 lrv-u-height-16';
 
-for ( let i = 0; i < social_share_primary_items.length; i++ ) {
+for ( let i = 0; i < socialPlatforms.length; i++ ) {
 	const c_icon_social = clonedeep( c_icon_struct );
 
-	c_icon_social.c_icon_rel_name = social_share_primary_items[ i ];
-	c_icon_social.c_icon_name = social_share_primary_items[ i ];
+	c_icon_social.c_icon_rel_name = socialPlatforms[ i ].name;
+	c_icon_social.c_icon_name = socialPlatforms[ i ].name;
+	c_icon_social.c_icon_screen_reader_text = socialPlatforms[ i ].label;
+	c_icon_social.c_icon_screen_reader_title_attr = socialPlatforms[ i ].label;
 
 	if ( 3 < i ) {
 		social_share_primary.push( c_icon_social );

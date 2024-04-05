@@ -21,22 +21,24 @@ c_tagline.c_tagline_classes =
 c_tagline.c_tagline_text =
 	'Get our latest stories in the feed of your favorite networks';
 
-const social = [ 'instagram', 'pinit', 'twitter', 'facebook', 'youtube' ];
+const socialPlatforms = require( '../../utils/getSocialPlatforms' )();
 
 // Clear existing icons, update classes
 o_social_list.o_social_list_icons = [];
 o_social_list.o_social_list_classes =
 	'lrv-a-unstyle-list lrv-u-flex lrv-u-align-items-center lrv-u-justify-content-center';
 
-for ( let i = 0; i < social.length; i++ ) {
+socialPlatforms.forEach( ( { name, label } ) => {
 	const c_icon = clonedeep( c_icon_prototype );
 	c_icon.c_icon_url = '#';
-	c_icon.c_icon_name = social[ i ];
+	c_icon.c_icon_name = name;
 	c_icon.c_icon_link_classes +=
 		' lrv-u-display-block lrv-u-border-radius-50p lrv-u-color-grey lrv-u-margin-lr-050 lrv-u-padding-a-050 lrv-u-background-color-white lrv-u-color-grey-dark:hover';
+	c_icon.c_icon_screen_reader_text = label;
+	c_icon.c_icon_screen_reader_title_attr = label;
 
 	o_social_list.o_social_list_icons.push( c_icon );
-}
+} );
 
 module.exports = {
 	footer_social_classes:

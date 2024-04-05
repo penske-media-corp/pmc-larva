@@ -15,18 +15,22 @@ read_next.c_title.c_title_link_classes =
 	'lrv-a-unstyle-link lrv-u-whitespace-nowrap lrv-a-font-body-m';
 
 const o_social_list = clonedeep( o_social_list_prototype );
-const social_icons = [ 'facebook-rs', 'twitter', 'email' ];
+
+const socialPlatforms = require( '../../utils/getSocialPlatforms' )( [ 'facebook', 'twitter', 'email' ] );
+
 const social_list_icons = [];
 o_social_list.o_social_list_icons = [];
-for ( let i = 0; i < social_icons.length; i++ ) {
+socialPlatforms.forEach( ( { name, label } ) => {
 	const c_icon = clonedeep( c_icon_prototype );
-	c_icon.c_icon_name = social_icons[ i ];
+	c_icon.c_icon_name = name;
 	c_icon.c_icon_url = '#';
 	c_icon.c_icon_link_classes +=
 		'lrv-u-background-color-white lrv-u-border-radius-50p lrv-u-color-black lrv-u-color-brand-primary:hover lrv-u-display-block';
 	c_icon.c_icon_rel_name = 'noopener noreferrer';
+	c_icon.c_icon_screen_reader_text = label;
+	c_icon.c_icon_screen_reader_title_attr = label;
 	social_list_icons.push( c_icon );
-}
+} );
 o_social_list.o_social_list_icons = social_list_icons;
 
 const header_sticky = clonedeep( header_sticky_prototype );
