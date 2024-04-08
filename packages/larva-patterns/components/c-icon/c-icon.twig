@@ -10,8 +10,10 @@
 			title="{{ c_icon_screen_reader_title_attr }}"
 		{% endif %}
 	>
-		{% if c_icon_link_screen_reader_text and not c_icon_screen_reader_text %}
-			<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
+		{% if c_icon_link_screen_reader_text %}
+			{% if c_icon_screen_reader_text == '' %}
+				<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
+			{% endif %}
 		{% endif %}
 {% endif %}
 
