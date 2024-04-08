@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unpublished Changes
 * Updated Tumblr and Pinterest social icons to use version with viewBox attribute
 * Update Lerna to V8 (does not appear to fix any publishing issues)
+* Refactored social icons to have separate ("machine") names vs labels
+* Moved several social platform icons over from Rolling Stone
+* Optimized several SVGs to remove unneeded data attributes, groups, ID attributes, etc
 
 ## 1.60.0 01-02-2024
 * Adds the pullquote.memo prototype that is referenced by some brands.
