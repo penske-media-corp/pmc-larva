@@ -8,6 +8,14 @@
 		"label": "Facebook"
 	},
 	{
+		"name": "facebook-circle",
+		"label": "Facebook"
+	},
+	{
+		"name": "flipboard",
+		"label": "Fliboard"
+	},
+	{
 		"name": "instagram",
 		"label": "Instagram"
 	},
@@ -49,7 +57,7 @@
 	},
 	{
 		"name": "twitter",
-		"label": "X (Formerly Twitter)"
+		"label": "X"
 	},
 	{
 		"name": "youtube",
