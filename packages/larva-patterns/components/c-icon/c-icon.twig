@@ -11,14 +11,14 @@
 		{% endif %}
 	>
 
-	<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
+	<span class="lrv-a-screen-reader-only" data-label="c_icon_link_screen_reader_text">{{ c_icon_link_screen_reader_text }}</span>
 {% endif %}
 
 {% if c_icon_screen_reader_text %}
 	{% if c_icon_screen_reader_tag_text %}
-		<{{ c_icon_screen_reader_tag_text }} class="lrv-a-screen-reader-only">{{ c_icon_screen_reader_text }}</{{ c_icon_screen_reader_tag_text }}>
+		<{{ c_icon_screen_reader_tag_text }} class="lrv-a-screen-reader-only" data-label="c_icon_screen_reader_text">{{ c_icon_screen_reader_text }}</{{ c_icon_screen_reader_tag_text }}>
 	{% else %}
-		<span class="lrv-a-screen-reader-only">{{ c_icon_screen_reader_text }}</span>
+		<span class="lrv-a-screen-reader-only" data-label="c_icon_screen_reader_text">{{ c_icon_screen_reader_text }}</span>
 	{% endif %}
 {% endif %}
 
