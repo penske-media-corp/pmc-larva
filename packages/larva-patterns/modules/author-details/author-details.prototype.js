@@ -47,15 +47,17 @@ c_icon_twitter.c_icon_name = 'twitter';
 c_icon_twitter.c_icon_classes =
 	'lrv-u-width-16 lrv-u-height-16 lrv-u-color-black';
 c_icon_twitter.c_icon_url = '#';
-c_icon_twitter.c_icon_screen_reader_text = 'Twitter Icon';
-c_icon_twitter.c_icon_screen_reader_title_attr = 'Twitter Icon';
+c_icon_twitter.c_icon_link_screen_reader_text = 'X Icon';
+c_icon_twitter.c_icon_screen_reader_text = false;
+c_icon_twitter.c_icon_screen_reader_title_attr = 'X Icon';
 c_icon_twitter.c_icon_link_classes = 'lrv-u-flex';
 
 c_icon_mail.c_icon_name = 'envelope';
 c_icon_mail.c_icon_classes =
 	'lrv-u-margin-l-075 lrv-u-width-16 lrv-u-height-16 lrv-u-color-black';
 c_icon_mail.c_icon_url = '#';
-c_icon_mail.c_icon_screen_reader_text = 'Email Icon';
+c_icon_mail.c_icon_link_screen_reader_text = 'Email Icon';
+c_icon_mail.c_icon_screen_reader_text = false;
 c_icon_mail.c_icon_screen_reader_title_attr = 'Email Icon';
 c_icon_mail.c_icon_link_classes = 'lrv-u-flex';
 
