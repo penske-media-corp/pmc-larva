@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
-* Updated Tumblr and Pinterest social icons to use version with viewBox attribute
+* Updated Tumblr and Pinterest social and plus icons to use version with viewBox attribute
 * Update Lerna to V8 (does not appear to fix any publishing issues)
 * Refactored social icons to have separate ("machine") names vs labels
 * Moved several social platform icons over from Rolling Stone
