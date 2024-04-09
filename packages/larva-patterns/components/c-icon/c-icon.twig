@@ -1,20 +1,24 @@
 {% if c_icon_url %}
-<a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}"
-	{% if c_icon_rel_name %}
-		rel="{{ c_icon_rel_name }}"
-	{% endif %}
-	{% if c_icon_target_attr %}
-		target="{{ c_icon_target_attr }}"
-	{% endif %}
->
-	<span class="lrv-a-screen-reader-only">{{ c_icon_link_screen_reader_text }}</span>
+	<a class="{{ c_icon_link_classes }}" href="{{ c_icon_url }}"
+		{% if c_icon_rel_name %}
+			rel="{{ c_icon_rel_name }}"
+		{% endif %}
+		{% if c_icon_target_attr %}
+			target="{{ c_icon_target_attr }}"
+		{% endif %}
+		{% if c_icon_screen_reader_title_attr %}
+			title="{{ c_icon_screen_reader_title_attr }}"
+		{% endif %}
+	>
+
+	<span class="lrv-a-screen-reader-only" data-label="c_icon_link_screen_reader_text">{{ c_icon_link_screen_reader_text }}</span>
 {% endif %}
 
 {% if c_icon_screen_reader_text %}
 	{% if c_icon_screen_reader_tag_text %}
-	<{{ c_icon_screen_reader_tag_text }} class="lrv-a-screen-reader-only" title="{{ c_icon_screen_reader_title_attr }}">{{ c_icon_screen_reader_text }}</{{ c_icon_screen_reader_tag_text }}>
+		<{{ c_icon_screen_reader_tag_text }} class="lrv-a-screen-reader-only" data-label="c_icon_screen_reader_text">{{ c_icon_screen_reader_text }}</{{ c_icon_screen_reader_tag_text }}>
 	{% else %}
-	<span class="lrv-a-screen-reader-only" title="{{ c_icon_screen_reader_title_attr }}">{{ c_icon_screen_reader_text }}</span>
+		<span class="lrv-a-screen-reader-only" data-label="c_icon_screen_reader_text">{{ c_icon_screen_reader_text }}</span>
 	{% endif %}
 {% endif %}
 
@@ -30,5 +34,5 @@
 </svg>
 
 {% if c_icon_url %}
-</a>
+	</a>
 {% endif %}

@@ -1,0 +1,66 @@
+[
+	{
+		"name": "email",
+		"label": "Email"
+	},
+	{
+		"name": "facebook",
+		"label": "Facebook"
+	},
+	{
+		"name": "facebook-circle",
+		"label": "Facebook"
+	},
+	{
+		"name": "flipboard",
+		"label": "Fliboard"
+	},
+	{
+		"name": "instagram",
+		"label": "Instagram"
+	},
+	{
+		"name": "linkedin",
+		"label": "LinkedIn"
+	},
+	{
+		"name": "mastodon",
+		"label": "Mastodon"
+	},
+	{
+		"name": "pinit",
+		"label": "Pinterest"
+	},
+	{
+		"name": "print",
+		"label": "Print"
+	},
+	{
+		"name": "reddit",
+		"label": "Reddit"
+	},
+	{
+		"name": "threads",
+		"label": "Threads"
+	},
+	{
+		"name": "tiktok",
+		"label": "Tiktok"
+	},
+	{
+		"name": "tumblr",
+		"label": "Tumblr"
+	},
+	{
+		"name": "twitch",
+		"label": "Twitch"
+	},
+	{
+		"name": "twitter",
+		"label": "X"
+	},
+	{
+		"name": "youtube",
+		"label": "YouTube"
+	}
+]
