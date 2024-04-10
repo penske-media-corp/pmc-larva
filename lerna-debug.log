@@ -1,0 +1,12 @@
+106 error Error: Command failed with exit code 1: npm install --package-lock-only --ignore-scripts
+106 error npm ERR! code ETARGET
+106 error npm ERR! notarget No matching version found for @penskemediacorp/twig-to-php-parser@^1.62.0.
+106 error npm ERR! notarget In most cases you or one of your dependencies are requesting
+106 error npm ERR! notarget a package version that doesn't exist.
+106 error
+106 error npm ERR! A complete log of this run can be found in: /Users/jpakrosnis/.npm/_logs/2024-04-10T20_55_06_598Z-debug-0.log
+106 error     at makeError (/Users/jpakrosnis/pmc/pmc-larva/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
+106 error     at handlePromise (/Users/jpakrosnis/pmc/pmc-larva/node_modules/lerna/node_modules/execa/index.js:114:26)
+106 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+106 error     at async VersionCommand.updatePackageVersions (/Users/jpakrosnis/pmc/pmc-larva/node_modules/lerna/dist/index.js:8458:13)
+106 error     at async Promise.all (index 0)
