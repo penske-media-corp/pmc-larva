@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* Remove sus `clipPathUnits` attribute from `facebook-circle` SVG
 
 ## 1.61.0 04-09-2024
 * Updated Tumblr and Pinterest social and plus icons to use version with viewBox attribute
