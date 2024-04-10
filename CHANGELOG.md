@@ -6,7 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
-
 ## 1.62.0 04-10-2024
 * Remove sus `clipPathUnits` attribute from `facebook-circle` SVG
 
