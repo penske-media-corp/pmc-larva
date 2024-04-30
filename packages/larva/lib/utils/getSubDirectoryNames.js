@@ -7,7 +7,7 @@ const fs = require( 'fs' );
  * @return {Array} array of strings representing names of subdirectories.
  *
  * @link: https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs
- **/
+ */
 
 module.exports = function getSubDirectoryNames( path ) {
 	try {

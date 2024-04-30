@@ -3,7 +3,7 @@
  * containing the responseText.
  *
  * @param {string} buildPath
- * @param iconPath
+ * @param          iconPath
  */
 export default function ( iconPath ) {
 	const ajax = new XMLHttpRequest();

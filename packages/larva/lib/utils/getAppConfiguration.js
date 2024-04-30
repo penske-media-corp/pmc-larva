@@ -11,7 +11,7 @@ const path = require( 'path' );
  * For test env, the CWD is overridden to the local directory for fixtures.
  * (this is a problem for writing project-level tests, but for a later time.)
  *
- * @param {string} key string that indicates a specific configuration property, e.g. patterns.
+ * @param {string}  key               string that indicates a specific configuration property, e.g. patterns.
  * @param {boolean} usePackageDefault fall back to package default if not defined in app
  *
  * @return value of the specified key.

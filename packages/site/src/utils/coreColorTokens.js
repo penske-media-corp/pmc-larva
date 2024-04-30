@@ -76,7 +76,7 @@ export const getCoreColorsFromTokens = ( tokens ) => {
  * uses on of the core colors, update the value to the core color.
  *
  * @param {Object} tokensToUpdate The raw.json tokens state object
- * @param {Object} coreColors The core colors tokens state object
+ * @param {Object} coreColors     The core colors tokens state object
  *
  * @return The full tokens object.
  */

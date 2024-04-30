@@ -4,7 +4,7 @@ const path = require( 'path' );
  * Get Pattern Data
  *
  * @param {string} patternsPath
- * @param {Object} params Object containing name of pattern
+ * @param {Object} params       Object containing name of pattern
  */
 function getPatternData( patternsPath, params ) {
 	const variant = params.variant || 'prototype';

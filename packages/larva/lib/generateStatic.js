@@ -18,12 +18,12 @@ const themeAssetsConfig = getAppConfiguration( 'themeAssets' );
  * of each route, and write the content to directory structure that
  * mirrors the pattern routes.
  *
- * @param {Array} routesArr  An array of routes in a pattern server, excluding the pattern source (i.e. larva or project).
- *                           This is the result of getPatternRoutes.
- * @param {string} buildPath A directory where the HTML files should be written.
- * @param {Function} done    A callback function to run when the site generation completes.
- * @param {string} urlBase   The base URL for the pattern library e.g. 'http://localhost:3001/larva'.
- *                           Pattern routes will be appended to this. Should not end in slash.
+ * @param {Array}    routesArr An array of routes in a pattern server, excluding the pattern source (i.e. larva or project).
+ *                             This is the result of getPatternRoutes.
+ * @param {string}   buildPath A directory where the HTML files should be written.
+ * @param {Function} done      A callback function to run when the site generation completes.
+ * @param {string}   urlBase   The base URL for the pattern library e.g. 'http://localhost:3001/larva'.
+ *                             Pattern routes will be appended to this. Should not end in slash.
  *
  * @see {@link getPatternRoutes}.
  */
