@@ -1,5 +1,14 @@
 module.exports = {
-	extends: [ 'plugin:@wordpress/eslint-plugin/recommended' ],
+	// env: {
+	// 	jest: true
+	// },
+	// plugins: [
+	// 	'jest',
+	// ],
+	extends: [ 
+		'plugin:@wordpress/eslint-plugin/recommended',
+		'plugin:@wordpress/eslint-plugin/test-unit',
+	 ],
 	parser: '@babel/eslint-parser',
 	overrides: [
 		{
