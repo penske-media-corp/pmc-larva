@@ -70,11 +70,11 @@ export default class VideoShowcase {
 		 * Note: the title and dek are using class selectors so they can be added to existing patterns.
 		 *
 		 * @type {Object}
-		 * @property {element} title             - A anchor element that will receive both a permalink and heading text.
-		 * @property {element} dek               - An element containing a direct child paragraph that will support the dek text.
-		 * @property {element} iframe            - The iframe that will recieve an src when a trigger with the Youtube video type is clicked.
-		 * @property {element} jwplayerContainer - The placeholder element where JWPlayer will be applied.
-		 * @property {element} social            - The main social share container that will be replaced with social share from triggers.
+		 * @property {HTMLElement} title             - A anchor element that will receive both a permalink and heading text.
+		 * @property {HTMLElement} dek               - An element containing a direct child paragraph that will support the dek text.
+		 * @property {HTMLElement} iframe            - The iframe that will recieve an src when a trigger with the Youtube video type is clicked.
+		 * @property {HTMLElement} jwplayerContainer - The placeholder element where JWPlayer will be applied.
+		 * @property {HTMLElement} social            - The main social share container that will be replaced with social share from triggers.
 		 */
 		this.playerUI = {
 			title: el.querySelector( '.js-VideoShowcase-title' ),
@@ -128,14 +128,14 @@ export default class VideoShowcase {
 	 * to the main player card. These are all strings from data attributes except the
 	 * social share, which replaces an entire block of HTML.
 	 *
-	 * @param    {element} type         - Video type.
-	 * @param    {element} el           - A trigger.
+	 * @param    {HTMLElement} type         - Video type.
+	 * @param    {HTMLElement} el           - A trigger.
 	 *
-	 * @return {Object} - An object containing the data needed to update the player.
-	 * @property {string}  title        - Title text from the `data-video-showcase-title`
-	 * @property {string}  dek          - Dek text from the `data-video-showcase-dek`
-	 * @property {string}  permalink    - Link from `data-video-showcase-permalink`
-	 * @property {string}  socialString - HTML string returned from wp.template.
+	 * @return   {Object}               - An object containing the data needed to update the player.
+	 * @property {string}      title        - Title text from the `data-video-showcase-title`
+	 * @property {string}      dek          - Dek text from the `data-video-showcase-dek`
+	 * @property {string}      permalink    - Link from `data-video-showcase-permalink`
+	 * @property {string}      socialString - HTML string returned from wp.template.
 	 */
 
 	getPlayerCardData( type, el ) {
@@ -168,8 +168,8 @@ export default class VideoShowcase {
 	 *
 	 * Apply the assembled data to the UI.
 	 *
-	 * @param {element} el   - A trigger.
-	 * @param {Object}  data - An object of data from getPlayerCardData.
+	 * @param {HTMLElement} el   - A trigger.
+	 * @param {Object}      data - An object of data from getPlayerCardData.
 	 */
 
 	updatePlayerCardData( el, data ) {
@@ -291,9 +291,8 @@ export default class VideoShowcase {
 	 * If there is something amiss, this is a good place to trouble shoot - it's possible we need to
 	 * getPlaylist() first to retrieve an individual video, then play it, but this was working.
 	 *
-	 * @link https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#playlist
-	 * @param          playlistUrl
-	 * @param {string} jwplayerUrl - A Youtube embed URL from returnUrl.
+	 * @see https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#playlist
+	 * @param {string} playlistUrl - YouTube playlist URL.
 	 */
 	playJW( playlistUrl ) {
 		this.playerUI.jwplayerContainer.removeAttribute( 'hidden' );
@@ -314,8 +313,8 @@ export default class VideoShowcase {
 	 *
 	 * Reset player from previous state, update state and player UI, play the video.
 	 *
-	 * @param {event}   e
-	 * @param {element} el - Clicked trigger element.
+	 * @param {Event}       e
+	 * @param {HTMLElement} el - Clicked trigger element.
 	 */
 	handleTriggerClick( e, el ) {
 		if ( e ) {
@@ -413,7 +412,7 @@ export default class VideoShowcase {
 	 * Hide both players and either remove JWPlayer or reset the src for the iframe according
 	 * to the previous type of video played.
 	 *
-	 * @TODO: this could check for the current type and only run if the current type is not the
+	 * @todo this could check for the current type and only run if the current type is not the
 	 * same as the past type.
 	 *
 	 * @param {string} pastType - Youtube or JWplayer ID, should be from this.state.videoID, e.g. f1FX5wvC3DA
