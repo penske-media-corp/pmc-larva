@@ -5,10 +5,10 @@ module.exports = {
 	// plugins: [
 	// 	'jest',
 	// ],
-	extends: [ 
+	extends: [
 		'plugin:@wordpress/eslint-plugin/recommended',
 		'plugin:@wordpress/eslint-plugin/test-unit',
-	 ],
+	],
 	parser: '@babel/eslint-parser',
 	overrides: [
 		{
