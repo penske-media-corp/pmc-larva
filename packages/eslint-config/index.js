@@ -16,7 +16,6 @@ module.exports = {
 			rules: {
 				'jsdoc/require-returns-description': 'off',
 				'jsdoc/check-line-alignment': 1,
-				'@wordpress/no-global-event-listener': 'off',
 			},
 		},
 	],
