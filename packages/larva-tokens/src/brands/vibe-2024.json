@@ -1,0 +1,158 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#1B939D",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#1B939D",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#1B939D",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "#1B939D",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "#1B939D",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "#1B939D",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK_6}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK_6}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "{!BLACK_6}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_94}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_94}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "{!GREY_94}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHT": {
+			"value": "{!GREY_86}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "{!GREY_86}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "{!GREY_86}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "{!GREY_36}",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "{!GREY_36}",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "{!GREY_36}",
+			"type": "color",
+			"category": "background-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+            "category": "font-family",
+			"value": "'DM Serif Text', Georgia, serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "'DM Serif Text', Georgia, serif",
+			"name": "FONT_FAMILY_PRIMARY_FANCY"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"category": "font-family",
+			"value": "'DM Serif Text', Georgia, serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "'DM Serif Text', Georgia, serif",
+			"name": "FONT_FAMILY_PRIMARY"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"category": "font-family",
+			"value": "Roboto, 'Helvetica Regular', serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "Roboto, 'Helvetica Regular', serif",
+			"name": "FONT_FAMILY_SECONDARY_FANCY"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"category": "font-family",
+			"value": "Roboto, 'Helvetica bold', serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "Roboto, 'Helvetica bold', serif",
+			"name": "FONT_FAMILY_SECONDARY"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"category": "font-family",
+			"value": "Roboto, 'Helvetica bold', serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "Roboto, 'Helvetica bold', serif",
+			"name": "FONT_FAMILY_BASIC"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"category": "font-family",
+			"value": "Roboto, 'Helvetica bold', serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "Roboto, 'Helvetica bold', serif",
+			"name": "FONT_FAMILY_ACCENT"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"category": "font-family",
+			"value": "Roboto, 'Helvetica bold', serif",
+			"type": "font",
+			"comment": "The webfont, loaded async",
+			"originalValue": "Roboto, 'Helvetica bold', serif",
+			"name": "FONT_FAMILY_ACCENT_FANCY"
+		}
+	}
+}
