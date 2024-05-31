@@ -42,12 +42,12 @@ $vibe-2024-map: (
   /* The webfont, loaded async */
   'font-family-primary': ('DM Serif Text', Georgia, serif),
   /* The webfont, loaded async */
-  'font-family-secondary-fancy': (Roboto, 'Helvetica Regular', serif),
+  'font-family-secondary-fancy': ('roboto', Helvetica, sans-serif),
   /* The webfont, loaded async */
-  'font-family-secondary': (Roboto, 'Helvetica bold', serif),
+  'font-family-secondary': ('roboto', Helvetica, sans-serif),
   'font-family-body': (Georgia, serif),
   /* The webfont, loaded async */
-  'font-family-basic': (Roboto, 'Helvetica bold', serif),
+  'font-family-basic': ('roboto', Helvetica, sans-serif),
   'font-weight-light': (300),
   'font-weight-normal': (400),
   'font-weight-bold': (700),
@@ -75,8 +75,8 @@ $vibe-2024-map: (
   'border-color-brand-accent': (rgb(16, 16, 16)),
   'color-grey-lightest': (rgb(239, 239, 239)),
   /* The webfont, loaded async */
-  'font-family-accent': (Roboto, 'Helvetica bold', serif),
+  'font-family-accent': (Roboto, Helvetica, sans-serif),
   'color-brand-accent': (rgb(16, 16, 16)),
   /* The webfont, loaded async */
-  'font-family-accent-fancy': (Roboto, 'Helvetica bold', serif),
+  'font-family-accent-fancy': ('roboto', Helvetica, sans-serif),
 );
