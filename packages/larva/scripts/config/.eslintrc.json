@@ -1,3 +1,4 @@
+// This config applies only to Larva's lint:js command but not other projects that use @penskemediacorp/eslint-config, such as Nova.
 {
 	"extends": "@penskemediacorp/eslint-config",
 	"overrides": [ {

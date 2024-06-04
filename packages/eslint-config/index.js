@@ -1,3 +1,5 @@
+// This is used PMC-wide in other projects such as pmc-plugins, nova, larva, and other misc places where we want WordPress' eslint but with adjustments.
+
 module.exports = {
 	// env: {
 	// 	jest: true
