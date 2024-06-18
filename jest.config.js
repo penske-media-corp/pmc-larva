@@ -1,5 +1,5 @@
 module.exports = {
-	testEnvironment: 'node',
+	testEnvironment: 'jsdom',
 	testPathIgnorePatterns: [
 		'/fixtures/',
 		'/larva/src/patterns/',
