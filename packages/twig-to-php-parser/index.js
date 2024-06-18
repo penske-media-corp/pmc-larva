@@ -48,7 +48,7 @@ function twigToPhpParser( thisConfig = {} ) {
 		execPhp(
 			path.resolve( __dirname, './lib/twig-to-php-parser.php' ),
 			thisConfig.phpBinaryPath,
-			function ( error, php, output ) {
+			function ( error, php ) {
 				if ( error ) {
 					reject( error );
 				}
@@ -57,9 +57,9 @@ function twigToPhpParser( thisConfig = {} ) {
 					twigDir,
 					phpDir,
 					isUsingPlugin,
-					function ( error, result, output, printed ) {
-						if ( error ) {
-							reject( error );
+					function ( thisError, result ) {
+						if ( thisError ) {
+							reject( thisError );
 						}
 
 						resolve( result );
@@ -80,7 +80,7 @@ function parseIncludePath(
 		execPhp(
 			path.resolve( __dirname, './lib/twig-to-php-parser.php' ),
 			config.phpBinaryPath,
-			function ( error, php, output ) {
+			function ( error, php ) {
 				if ( error ) {
 					reject( error );
 				}
@@ -90,9 +90,9 @@ function parseIncludePath(
 					patternName,
 					dataName,
 					isUsingPlugin,
-					function ( error, result, output, printed ) {
-						if ( error ) {
-							reject( error );
+					function ( thisError, result ) {
+						if ( thisError ) {
+							reject( thisError );
 						}
 
 						resolve( result );
@@ -108,7 +108,7 @@ function parseSvgPath( twigSvgIncludeStr, svgName, isUsingPlugin = false ) {
 		execPhp(
 			path.resolve( __dirname, './lib/twig-to-php-parser.php' ),
 			config.phpBinaryPath,
-			function ( error, php, output ) {
+			function ( error, php ) {
 				if ( error ) {
 					reject( error );
 				}
@@ -117,9 +117,9 @@ function parseSvgPath( twigSvgIncludeStr, svgName, isUsingPlugin = false ) {
 					twigSvgIncludeStr,
 					svgName,
 					isUsingPlugin,
-					function ( error, result, output, printed ) {
-						if ( error ) {
-							reject( error );
+					function ( thisError, result ) {
+						if ( thisError ) {
+							reject( thisError );
 						}
 
 						resolve( result );
@@ -135,16 +135,16 @@ function parseWpAction( twigMarkup ) {
 		execPhp(
 			path.resolve( __dirname, './lib/twig-to-php-parser.php' ),
 			config.phpBinaryPath,
-			function ( error, php, output ) {
+			function ( error, php ) {
 				if ( error ) {
 					reject( error );
 				}
 
 				php.parse_wp_action(
 					twigMarkup,
-					function ( error, result, output, printed ) {
-						if ( error ) {
-							reject( error );
+					function ( thisError, result ) {
+						if ( thisError ) {
+							reject( thisError );
 						}
 
 						resolve( result );
@@ -164,12 +164,15 @@ module.exports = {
 	},
 	run: () => {
 		twigToPhpParser( config )
+			// eslint-disable-next-line no-console
 			.catch( ( e ) => console.log( e ) ) // PHP errors
-			.then( ( result ) =>
+			.then( () =>
+				// eslint-disable-next-line no-console
 				console.log(
 					chalk.green( 'Completed parsing Twig templates to PHP.' )
 				)
 			)
+			// eslint-disable-next-line no-console
 			.catch( ( e ) => console.log( e ) );
 	},
 };
