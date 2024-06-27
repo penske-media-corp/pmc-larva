@@ -5,7 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
-
+* larva-tokens adding new colors for Deadline tokens.
+  
 ## 1.63.0 05-20-2024
 * Fix `plus` SVG icon `viewbox` (replace with Nova icon)
 
