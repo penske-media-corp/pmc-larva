@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/eslint-config",
-  "version": "1.63.0",
+  "version": "1.64.0",
   "description": "Eslint base config and customizations.",
   "keywords": [
     "eslint",

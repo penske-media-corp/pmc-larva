@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * larva-tokens adding new colors for Deadline tokens.
-  
+* Update Vibe token values
+
+## 1.64.0 05-30-2024
+* Add Vibe tokens for refresh
+
 ## 1.63.0 05-20-2024
 * Fix `plus` SVG icon `viewbox` (replace with Nova icon)
 
