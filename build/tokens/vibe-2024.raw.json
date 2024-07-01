@@ -495,18 +495,18 @@
     },
     "FONT_FAMILY_SECONDARY_FANCY": {
       "category": "font-family",
-      "value": "Roboto, 'Helvetica Regular', serif",
+      "value": "'roboto', Helvetica, sans-serif",
       "type": "font",
       "comment": "The webfont, loaded async",
-      "originalValue": "Roboto, 'Helvetica Regular', serif",
+      "originalValue": "'roboto', Helvetica, sans-serif",
       "name": "FONT_FAMILY_SECONDARY_FANCY"
     },
     "FONT_FAMILY_SECONDARY": {
       "category": "font-family",
-      "value": "Roboto, 'Helvetica bold', serif",
+      "value": "'roboto', Helvetica, sans-serif",
       "type": "font",
       "comment": "The webfont, loaded async",
-      "originalValue": "Roboto, 'Helvetica bold', serif",
+      "originalValue": "'roboto', Helvetica, sans-serif",
       "name": "FONT_FAMILY_SECONDARY"
     },
     "FONT_FAMILY_BODY": {
@@ -518,10 +518,10 @@
     },
     "FONT_FAMILY_BASIC": {
       "category": "font-family",
-      "value": "Roboto, 'Helvetica bold', serif",
+      "value": "'roboto', Helvetica, sans-serif",
       "type": "font",
       "comment": "The webfont, loaded async",
-      "originalValue": "Roboto, 'Helvetica bold', serif",
+      "originalValue": "'roboto', Helvetica, sans-serif",
       "name": "FONT_FAMILY_BASIC"
     },
     "FONT_WEIGHT_LIGHT": {
@@ -660,10 +660,10 @@
     },
     "FONT_FAMILY_ACCENT": {
       "category": "font-family",
-      "value": "Roboto, 'Helvetica bold', serif",
+      "value": "Roboto, Helvetica, sans-serif",
       "type": "font",
       "comment": "The webfont, loaded async",
-      "originalValue": "Roboto, 'Helvetica bold', serif",
+      "originalValue": "Roboto, Helvetica, sans-serif",
       "name": "FONT_FAMILY_ACCENT"
     },
     "COLOR_BRAND_ACCENT": {
@@ -675,10 +675,10 @@
     },
     "FONT_FAMILY_ACCENT_FANCY": {
       "category": "font-family",
-      "value": "Roboto, 'Helvetica bold', serif",
+      "value": "'roboto', Helvetica, sans-serif",
       "type": "font",
       "comment": "The webfont, loaded async",
-      "originalValue": "Roboto, 'Helvetica bold', serif",
+      "originalValue": "'roboto', Helvetica, sans-serif",
       "name": "FONT_FAMILY_ACCENT_FANCY"
     }
   }

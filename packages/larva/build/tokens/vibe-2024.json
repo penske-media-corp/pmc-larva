@@ -37,10 +37,10 @@
   "COLOR_GREY": "rgb(140, 140, 140)",
   "FONT_FAMILY_PRIMARY_FANCY": "'DM Serif Text', Georgia, serif",
   "FONT_FAMILY_PRIMARY": "'DM Serif Text', Georgia, serif",
-  "FONT_FAMILY_SECONDARY_FANCY": "Roboto, 'Helvetica Regular', serif",
-  "FONT_FAMILY_SECONDARY": "Roboto, 'Helvetica bold', serif",
+  "FONT_FAMILY_SECONDARY_FANCY": "'roboto', Helvetica, sans-serif",
+  "FONT_FAMILY_SECONDARY": "'roboto', Helvetica, sans-serif",
   "FONT_FAMILY_BODY": "Georgia, serif",
-  "FONT_FAMILY_BASIC": "Roboto, 'Helvetica bold', serif",
+  "FONT_FAMILY_BASIC": "'roboto', Helvetica, sans-serif",
   "FONT_WEIGHT_LIGHT": "300",
   "FONT_WEIGHT_NORMAL": "400",
   "FONT_WEIGHT_BOLD": "700",
@@ -59,7 +59,7 @@
   "BACKGROUND_COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
   "BORDER_COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
   "COLOR_GREY_LIGHTEST": "rgb(239, 239, 239)",
-  "FONT_FAMILY_ACCENT": "Roboto, 'Helvetica bold', serif",
+  "FONT_FAMILY_ACCENT": "Roboto, Helvetica, sans-serif",
   "COLOR_BRAND_ACCENT": "rgb(16, 16, 16)",
-  "FONT_FAMILY_ACCENT_FANCY": "Roboto, 'Helvetica bold', serif"
+  "FONT_FAMILY_ACCENT_FANCY": "'roboto', Helvetica, sans-serif"
 }
