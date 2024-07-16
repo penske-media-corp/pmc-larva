@@ -187,6 +187,34 @@
 			"originalValue": "#616161",
 			"name": "COLOR_GREY_DARK"
 		},
+		"COLOR_LIGHT_BLUE": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(241, 248, 252)",
+			"originalValue": "#F1F8FC",
+			"name": "COLOR_LIGHT_BLUE"
+		},
+		"COLOR_LIGHT_GREY": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(247, 247, 247)",
+			"originalValue": "#F7F7F7",
+			"name": "COLOR_LIGHT_GREY"
+		},
+		"COLOR_LIGHT_PINK": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(245, 223, 221)",
+			"originalValue": "#F5DFDD",
+			"name": "COLOR_LIGHT_PINK"
+		},
+		"COLOR_LIGHT_BEIGE": {
+			"category": "text-color",
+			"type": "color",
+			"value": "rgb(239, 235, 220)",
+			"originalValue": "#EFEBDC",
+			"name": "COLOR_LIGHT_BEIGE"
+		},
 		"FONT_FAMILY_BODY": {
 			"category": "font-family",
 			"value": "Georgia, serif",
