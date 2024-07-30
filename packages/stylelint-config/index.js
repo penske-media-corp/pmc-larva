@@ -40,10 +40,8 @@ module.exports = {
 		'function-url-quotes': 'always',
 		'number-leading-zero': 'always',
 		'string-quotes': 'single',
-		'value-list-comma-space-after': 'always-single-line',
 		'property-case': 'lower',
 		'declaration-bang-space-before': 'always',
-		'declaration-colon-space-after': 'always',
 		'declaration-colon-space-before': 'never',
 		'declaration-block-semicolon-newline-after': 'always',
 		'block-closing-brace-newline-after': [
@@ -52,7 +50,6 @@ module.exports = {
 				ignoreAtRules: [ 'if', 'else' ],
 			},
 		],
-		'declaration-block-trailing-semicolon': 'always',
 		'block-opening-brace-newline-after': 'always-multi-line',
 		'selector-list-comma-newline-after': 'always',
 		'selector-combinator-space-after': 'always',
