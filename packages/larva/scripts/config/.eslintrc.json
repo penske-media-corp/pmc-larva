@@ -9,6 +9,11 @@
 			"import/no-unresolved": "off",
 			"import/no-extraneous-dependencies": "off",
 			"camelcase": "off"
+		},
+		"parserOptions": {
+			"babelOptions": {
+				"presets": ["@babel/preset-react"]
+			}
 		}
 	} ],
 	"root": true
