@@ -1,93 +1,132 @@
 module.exports = {
 	rules: {
-		'block-opening-brace-space-before': 'always',
-		'declaration-block-no-shorthand-property-overrides': true,
-		'declaration-block-trailing-semicolon': 'always',
-		'declaration-colon-space-after': 'always',
-		'declaration-no-important': true,
-		'font-family-no-missing-generic-family-keyword': true,
-		'function-calc-no-unspaced-operator': true,
-		'max-empty-lines': 2,
-		'property-no-unknown': true,
-		'selector-max-specificity': '0,3,1',
-		'selector-pseudo-element-colon-notation': 'double',
-		'unit-no-unknown': true,
-		'value-list-comma-space-after': 'always-single-line',
-		'no-descending-specificity': true,
-		'no-duplicate-at-import-rules': true,
-		'no-duplicate-selectors': true,
-		'function-disallowed-list': [ 'hsla', 'hsl' ],
-		'function-url-scheme-disallowed-list': [ '/^http/', 'ftp' ],
-		'function-url-no-scheme-relative': true,
-		'number-max-precision': 3,
-		'shorthand-property-no-redundant-values': true,
-		'property-no-vendor-prefix': true,
-		'property-disallowed-list': [ 'background', 'font', 'animation' ],
-		'declaration-property-unit-disallowed-list': {
-			'font-size': [ 'em', 'px', 'pt' ],
-			'/^animation/': [ 's' ],
-			'/^transition/': [ 's' ],
-		},
-		'declaration-block-single-line-max-declarations': 1,
-		'selector-max-attribute': 3,
-		'selector-max-combinators': 3,
-		'selector-max-class': 2,
-		'selector-max-compound-selectors': 2,
-		'at-rule-disallowed-list': [ 'extend' ],
-		'no-unknown-animations': true,
-		'font-family-name-quotes': 'always-where-recommended',
-		'function-name-case': 'lower',
-		'function-url-quotes': 'always',
-		'number-leading-zero': 'always',
-		'string-quotes': 'single',
-		'property-case': 'lower',
-		'declaration-bang-space-before': 'always',
-		'declaration-colon-space-before': 'never',
-		'declaration-block-semicolon-newline-after': 'always',
-		'block-closing-brace-newline-after': [
-			'always',
-			{
-				ignoreAtRules: [ 'if', 'else' ],
-			},
+		"at-rule-disallowed-list": [
+			"extend"
 		],
-		'block-opening-brace-newline-after': 'always-multi-line',
-		'selector-list-comma-newline-after': 'always',
-		'selector-combinator-space-after': 'always',
-		'selector-list-comma-space-after': 'always-single-line',
-		'selector-no-qualifying-type': true,
-		'comment-no-empty': true,
-		'at-rule-empty-line-before': [
-			'always',
+		"at-rule-empty-line-before": [
+			"always",
 			{
 				ignore: [
-					'after-comment',
-					'first-nested',
-					'blockless-after-blockless',
+					"after-comment",
+					"first-nested",
+					"blockless-after-blockless"
 				],
-				ignoreAtRules: [ 'else', 'import' ],
-			},
+				ignoreAtRules: [
+					"else",
+					"import"
+				]
+			}
 		],
-		'rule-empty-line-before': [
-			'always-multi-line',
+		"block-closing-brace-newline-after": [
+			"always",
 			{
-				ignore: [ 'first-nested', 'after-comment' ],
-			},
+				ignoreAtRules: [
+					"if",
+					"else"
+				]
+			}
 		],
-		'unit-disallowed-list': [
-			'px',
-			{
-				ignoreProperties: {
-					px: [ 'box-shadow', '/^border/', 'transform', 'clip' ],
-				},
-			},
+		"block-opening-brace-newline-after": "always-multi-line",
+		"block-opening-brace-space-before": "always",
+		"comment-no-empty": true,
+		"declaration-bang-space-before": "always",
+		"declaration-block-no-shorthand-property-overrides": true,
+		"declaration-block-semicolon-newline-after": "always",
+		"declaration-block-single-line-max-declarations": 1,
+		"declaration-block-trailing-semicolon": "always",
+		"declaration-colon-space-after": "always",
+		"declaration-colon-space-before": "never",
+		"declaration-no-important": true,
+		"declaration-property-unit-disallowed-list": {
+			"/^animation/": [
+				"s"
+			],
+			"/^transition/": [
+				"s"
+			],
+			"font-size": [
+				"em",
+				"px",
+				"pt"
+			]
+		},
+		"font-family-name-quotes": "always-where-recommended",
+		"font-family-no-missing-generic-family-keyword": true,
+		"function-calc-no-unspaced-operator": true,
+		"function-disallowed-list": [
+			"hsla",
+			"hsl"
 		],
-		'max-nesting-depth': [
+		"function-name-case": "lower",
+		"function-url-no-scheme-relative": true,
+		"function-url-quotes": "always",
+		"function-url-scheme-disallowed-list": [
+			"/^http/",
+			"ftp"
+		],
+		"max-empty-lines": 2,
+		"max-nesting-depth": [
 			2,
 			{
-				ignore: [ 'pseudo-classes' ],
-				ignoreAtRules: [ 'media', 'include' ],
-			},
+				ignore: [
+					"pseudo-classes"
+				],
+				ignoreAtRules: [
+					"media",
+					"include"
+				]
+			}
 		],
-		'selector-nested-pattern': '^(?!&__|&--).*', // Disallow BEM concatenation - https://regex101.com/r/yZWeYK/3
+		"no-descending-specificity": true,
+		"no-duplicate-at-import-rules": true,
+		"no-duplicate-selectors": true,
+		"no-unknown-animations": true,
+		"number-leading-zero": "always",
+		"number-max-precision": 3,
+		"property-case": "lower",
+		"property-disallowed-list": [
+			"background",
+			"font",
+			"animation"
+		],
+		"property-no-unknown": true,
+		"property-no-vendor-prefix": true,
+		"rule-empty-line-before": [
+			"always-multi-line",
+			{
+				ignore: [
+					"first-nested",
+					"after-comment"
+				]
+			}
+		],
+		"selector-combinator-space-after": "always",
+		"selector-list-comma-newline-after": "always",
+		"selector-list-comma-space-after": "always-single-line",
+		"selector-max-attribute": 3,
+		"selector-max-class": 2,
+		"selector-max-combinators": 3,
+		"selector-max-compound-selectors": 2,
+		"selector-max-specificity": "0,3,1",
+		"selector-nested-pattern": "^(?!&__|&--).*",
+		"selector-no-qualifying-type": true,
+		"selector-pseudo-element-colon-notation": "double",
+		"shorthand-property-no-redundant-values": true,
+		"string-quotes": "single",
+		"unit-disallowed-list": [
+			"px",
+			{
+				ignoreProperties: {
+					px: [
+						"box-shadow",
+						"/^border/",
+						"transform",
+						"clip"
+					]
+				}
+			}
+		],
+		"unit-no-unknown": true,
+		"value-list-comma-space-after": "always-single-line"
 	},
 };
