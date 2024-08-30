@@ -4199,6 +4199,34 @@
       "category": "font-family",
       "originalValue": "Verdana, sans-serif",
       "name": "FONT_FAMILY_ACCENT_FANCY"
+    },
+    "COLOR_LIGHT_GREY": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(247, 247, 247)",
+      "originalValue": "rgb(247, 247, 247)",
+      "name": "COLOR_LIGHT_GREY"
+    },
+    "COLOR_LIGHT_PINK": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(245, 223, 221)",
+      "originalValue": "rgb(245, 223, 221)",
+      "name": "COLOR_LIGHT_PINK"
+    },
+    "COLOR_LIGHT_BEIGE": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(239, 235, 220)",
+      "originalValue": "rgb(239, 235, 220)",
+      "name": "COLOR_LIGHT_BEIGE"
+    },
+    "COLOR_LIGHT_BLUE": {
+      "category": "text-color",
+      "type": "color",
+      "value": "rgb(241, 248, 252)",
+      "originalValue": "rgb(241, 248, 252)",
+      "name": "COLOR_LIGHT_BLUE"
     }
   }
 }

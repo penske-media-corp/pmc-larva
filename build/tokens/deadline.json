@@ -513,5 +513,9 @@
   "PRIMARY_L_LINE_HEIGHT_MOBILE": "34px",
   "BODY_L_LINE_HEIGHT_MOBILE": "initial",
   "FONT_FAMILY_ACCENT": "Verdana, serif",
-  "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif"
+  "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif",
+  "COLOR_LIGHT_GREY": "rgb(247, 247, 247)",
+  "COLOR_LIGHT_PINK": "rgb(245, 223, 221)",
+  "COLOR_LIGHT_BEIGE": "rgb(239, 235, 220)",
+  "COLOR_LIGHT_BLUE": "rgb(241, 248, 252)"
 }
