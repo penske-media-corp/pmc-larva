@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* Update Connatix script tag to use pmcCnx
+* Update out sync package-lock.json
 
 ## 1.65.0 07-01-2024
 * larva-tokens adding new colors for Deadline tokens.
