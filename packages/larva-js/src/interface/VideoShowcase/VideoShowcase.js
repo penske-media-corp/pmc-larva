@@ -261,13 +261,13 @@ export default class VideoShowcase {
 		new Image().src =
 			'https://capi.elements.video/tr/si?token=094029a3-814c-41d5-8a62-2c3adc647176&cid=1ffe63de-eb53-11e9-b4d2-06948452ae1a';
 		// eslint-disable-next-line no-undef
-		cnx.cmd.push( function () {
+		pmcCnx.cmd.push(function () {
 			// eslint-disable-next-line no-undef
-			cnx( {
+			pmcCnx({
 				playerId,
 				mediaId,
-			} ).render( eleId );
-		} );
+			}).render(eleId).play();
+		});
 	}
 
 	/**
