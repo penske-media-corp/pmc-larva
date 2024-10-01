@@ -230,9 +230,10 @@ export default class VideoShowcase {
 			return `https://player.twitch.tv/?video=${ id }`;
 		}
 
-		if ( 'connatix' === type ) {
+		if ( 'connatix' === type || 'iframe' === type ) {
 			return id;
 		}
+		
 	}
 
 	/**
@@ -281,6 +282,16 @@ export default class VideoShowcase {
 			'src',
 			`${ twitchUrl }&autoplay=true&parent=${ window.location.hostname }`
 		);
+	}
+
+	/**
+	 * Remove hidden attribute from the iframe and set the src.
+	 *
+	 * @param {string} IframeUrl - Iframe embed URL from returnUrl.
+	 */
+	playIframeUrl( IframeUrl ) {
+		this.playerUI.iframe.removeAttribute( 'hidden' );
+		this.playerUI.iframe.setAttribute( 'src', IframeUrl );
 	}
 
 	/**
@@ -364,6 +375,10 @@ export default class VideoShowcase {
 		if ( 'connatix' === state.videoType ) {
 			const playerId = this.playerUI.player.dataset.videoPlayerId;
 			this.playConnatix( url, playerId );
+		}
+
+		if ( 'iframe' === state.videoType ) {
+			this.playIframeUrl( url );
 		}
 	}
 

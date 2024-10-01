@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.66.1 09-11-2024
+* Add support to play generic iframe video
+
 ## 1.66.0 09-03-2024
 * Update Connatix script tag to use pmcCnx
 * Update out sync package-lock.json
