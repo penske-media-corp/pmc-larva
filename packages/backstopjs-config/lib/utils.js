@@ -10,7 +10,7 @@ module.exports = {
 	/**
 	 * Prepare Test Paths
 	 *
-	 * @param modules array of module names e.g. [ 'footer', 'header', 'author' ]
+	 * @param modules  array of module names e.g. [ 'footer', 'header', 'author' ]
 	 * @param pmcPaths array of test paths e.g. [ '/', '/blog ]
 	 */
 	prepareTestPaths: ( modules, pmcPaths ) => {
