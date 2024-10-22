@@ -6,5 +6,4 @@ module.exports = {
 		'/larva-patterns/',
 	],
 	setupFiles: [ './jest-setup.js' ],
-	preset: '@wordpress/jest-preset-default',
 };
