@@ -841,8 +841,8 @@
     "SECONDARY_S_FONT_SIZE_MOBILE": {
       "category": "font-size",
       "type": "number",
-      "value": "24px",
-      "originalValue": "24px",
+      "value": "22px",
+      "originalValue": "22px",
       "name": "SECONDARY_S_FONT_SIZE_MOBILE"
     },
     "SECONDARY_XXS_FONT_SIZE_MOBILE": {
@@ -3293,8 +3293,8 @@
     "SECONDARY_S_LINE_HEIGHT_MOBILE": {
       "category": "line-height",
       "type": "number",
-      "value": "24px",
-      "originalValue": "24px",
+      "value": "26px",
+      "originalValue": "26px",
       "name": "SECONDARY_S_LINE_HEIGHT_MOBILE"
     },
     "SECONDARY_XXS_LINE_HEIGHT_MOBILE": {

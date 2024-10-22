@@ -2010,7 +2010,7 @@
 		"SECONDARY_S_FONT_SIZE_MOBILE": {
 			"category": "font-size",
 			"type": "number",
-			"value": "24px",
+			"value": "22px",
 			"originalValue": "11px",
 			"name": "SECONDARY_S_FONT_SIZE_MOBILE"
 		},
@@ -2052,7 +2052,7 @@
 		"SECONDARY_S_LINE_HEIGHT_MOBILE": {
 			"category": "line-height",
 			"type": "number",
-			"value": "24px",
+			"value": "26px",
 			"originalValue": "14px",
 			"name": "SECONDARY_S_LINE_HEIGHT_MOBILE"
 		},
