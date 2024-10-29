@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.66.2 10-28-2024
+* Update RollingStone style guide, fonts, tokens for Re Skin
+
 ## 1.66.1 09-11-2024
 * Add support to play generic iframe video
 
