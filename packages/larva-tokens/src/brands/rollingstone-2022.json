@@ -224,16 +224,16 @@
 		},
 		"FONT_FAMILY_BODY": {
 			"category": "font-family",
-			"value": "'Feature Flat Text', Helvetica, serif",
+			"value": "'Feature Flat Text', serif",
 			"type": "font",
-			"originalValue": "'Feature Flat Text', Helvetica, serif",
+			"originalValue": "'Feature Flat Text', serif",
 			"name": "FONT_FAMILY_BODY"
 		},
 		"FONT_FAMILY_BODY_FANCY": {
 			"category": "font-family",
-			"value": "'Feature Flat Text', Helvetica, serif",
+			"value": "'Feature Flat Text', serif",
 			"type": "font",
-			"originalValue": "'Feature Flat Text', Helvetica, serif",
+			"originalValue": "'Feature Flat Text', serif",
 			"name": "FONT_FAMILY_BODY_FANCY"
 		},
 		"FONT_FAMILY_PRIMARY": {

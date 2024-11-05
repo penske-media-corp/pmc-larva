@@ -39,7 +39,7 @@
   "FONT_FAMILY_PRIMARY": "serif",
   "FONT_FAMILY_SECONDARY_FANCY": "'Feature Flat Deck', serif",
   "FONT_FAMILY_SECONDARY": "serif",
-  "FONT_FAMILY_BODY": "'Feature Flat Text', Helvetica, serif",
+  "FONT_FAMILY_BODY": "'Feature Flat Text', serif",
   "FONT_FAMILY_BASIC": "serif",
   "FONT_WEIGHT_LIGHT": "300",
   "FONT_WEIGHT_NORMAL": "400",
@@ -515,5 +515,5 @@
   "FONT_FAMILY_ACCENT": "Verdana, serif",
   "FONT_FAMILY_ACCENT_FANCY": "Verdana, sans-serif",
   "FONT_FAMILY_BASIC_FANCY": "'Feature Flat Text', serif",
-  "FONT_FAMILY_BODY_FANCY": "'Feature Flat Text', Helvetica, serif"
+  "FONT_FAMILY_BODY_FANCY": "'Feature Flat Text', serif"
 }
