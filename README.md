@@ -15,6 +15,7 @@ important information.
 Clone this repository then, from the root, run the following commands:
 
 ```
+nvm use
 sh scripts/install-dependencies.sh
 ```
 
