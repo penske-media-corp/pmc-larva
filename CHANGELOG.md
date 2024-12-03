@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.67.0 11-19-2024
+* larva-patterns - Adds new kicker image support to the article kicker module.
+
+## 1.66.4 11-05-2024
+* Remove Helvetica Fallback Fonts from body font in Rollingstone 2022
+
+## 1.66.3 10-31-2024
+* Update Fallback Fonts from sans-serif to serif in Rollingstone 2022
+
 ## 1.66.2 10-28-2024
 * Update RollingStone style guide, fonts, tokens for Re Skin
 

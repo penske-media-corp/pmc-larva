@@ -210,30 +210,30 @@
 		},
 		"FONT_FAMILY_BASIC": {
 			"category": "font-family",
-			"value": "sans-serif",
+			"value": "serif",
 			"type": "font-family",
-			"originalValue": "sans-serif",
+			"originalValue": "serif",
 			"name": "FONT_FAMILY_BASIC"
 		},
 		"FONT_FAMILY_BASIC_FANCY": {
 			"category": "font-family",
-			"value": "'Feature Flat Text', sans-serif",
+			"value": "'Feature Flat Text', serif",
 			"type": "font-family",
-			"originalValue": "'Feature Flat Text', sans-serif",
+			"originalValue": "'Feature Flat Text', serif",
 			"name": "FONT_FAMILY_BASIC_FANCY"
 		},
 		"FONT_FAMILY_BODY": {
 			"category": "font-family",
-			"value": "'Feature Flat Text', Helvetica, sans-serif",
+			"value": "'Feature Flat Text', serif",
 			"type": "font",
-			"originalValue": "'Feature Flat Text', Helvetica, sans-serif",
+			"originalValue": "'Feature Flat Text', serif",
 			"name": "FONT_FAMILY_BODY"
 		},
 		"FONT_FAMILY_BODY_FANCY": {
 			"category": "font-family",
-			"value": "'Feature Flat Text', Helvetica, sans-serif",
+			"value": "'Feature Flat Text', serif",
 			"type": "font",
-			"originalValue": "'Feature Flat Text', Helvetica, sans-serif",
+			"originalValue": "'Feature Flat Text', serif",
 			"name": "FONT_FAMILY_BODY_FANCY"
 		},
 		"FONT_FAMILY_PRIMARY": {

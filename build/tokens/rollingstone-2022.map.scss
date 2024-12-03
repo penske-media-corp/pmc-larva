@@ -46,8 +46,8 @@ $rollingstone-2022-map: (
   'font-family-secondary-fancy': ('Feature Flat Deck', serif),
   /* Fallback for secondary-fancy */
   'font-family-secondary': (serif),
-  'font-family-body': ('Feature Flat Text', Helvetica, sans-serif),
-  'font-family-basic': (sans-serif),
+  'font-family-body': ('Feature Flat Text', serif),
+  'font-family-basic': (serif),
   'font-weight-light': (300),
   'font-weight-normal': (400),
   'font-weight-bold': (700),
@@ -529,6 +529,6 @@ $rollingstone-2022-map: (
   'body-l-line-height-mobile': (31px),
   'font-family-accent': (Verdana, serif),
   'font-family-accent-fancy': (Verdana, sans-serif),
-  'font-family-basic-fancy': ('Feature Flat Text', sans-serif),
-  'font-family-body-fancy': ('Feature Flat Text', Helvetica, sans-serif),
+  'font-family-basic-fancy': ('Feature Flat Text', serif),
+  'font-family-body-fancy': ('Feature Flat Text', serif),
 );
