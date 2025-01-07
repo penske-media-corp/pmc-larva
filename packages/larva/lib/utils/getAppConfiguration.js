@@ -77,6 +77,7 @@ module.exports = function getAppConfiguration( key, usePackageDefault = true ) {
 
 		return config[ key ];
 	} catch ( error ) {
+		// eslint-disable-next-line no-console
 		console.warn( 'Using default configuration. ' );
 
 		return defaultConfig[ key ];
