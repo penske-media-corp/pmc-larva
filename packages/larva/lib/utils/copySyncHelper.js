@@ -18,13 +18,16 @@ module.exports = function copySyncHelper( src, dest ) {
 	try {
 		fs.copySync( src, dest );
 
+		// eslint-disable-next-line no-console
 		console.log( `Copied '${ name }'.` );
 	} catch ( e ) {
 		if ( 'ENOENT' === e.code ) {
+			// eslint-disable-next-line no-console
 			console.log(
 				chalk.grey( `Can't find '${ name }' to copy, skipping.` )
 			);
 		} else {
+			// eslint-disable-next-line no-console
 			console.error( e );
 		}
 	}

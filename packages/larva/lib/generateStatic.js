@@ -40,6 +40,7 @@ module.exports = function generateStatic(
 
 	// Copy assets from assets/build and assets/public
 	// to the static site build directory.
+	// eslint-disable-next-line no-console
 	console.log( '\nCopying assets...\n' );
 
 	// assets/public dir contains fonts and non-built things.
@@ -78,6 +79,7 @@ module.exports = function generateStatic(
 	// Build the site.
 	// Cycle through the list of routes and write the response
 	// to files.
+	// eslint-disable-next-line no-console
 	console.log( '\nBuilding site...\n' );
 
 	try {
@@ -94,6 +96,7 @@ module.exports = function generateStatic(
 							`${ dir }/index.html`,
 							response.data
 						);
+						// eslint-disable-next-line no-console
 						console.log( `Built ${ route }.` );
 					}
 				} )
@@ -104,6 +107,7 @@ module.exports = function generateStatic(
 						mkdirp.sync( dir );
 						fs.writeFileSync( `${ dir }/index.html`, e.message );
 
+						// eslint-disable-next-line no-console
 						console.log(
 							chalk.yellow(
 								`Error writing ${ route }: ${ e.message }.`
@@ -117,6 +121,7 @@ module.exports = function generateStatic(
 			.all( promises )
 			.then( () => {
 				if ( errors.length > 0 ) {
+					// eslint-disable-next-line no-console
 					console.log( errors );
 				}
 
@@ -132,6 +137,7 @@ module.exports = function generateStatic(
 				done( chalk.bold.red( e ) );
 			} );
 	} catch ( e ) {
+		// eslint-disable-next-line no-console
 		console.error( e );
 	}
 };
