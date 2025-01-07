@@ -24,8 +24,6 @@ const themeAssetsConfig = getAppConfiguration( 'themeAssets' );
  * @param {Function} done      A callback function to run when the site generation completes.
  * @param {string}   urlBase   The base URL for the pattern library e.g. 'http://localhost:3001/larva'.
  *                             Pattern routes will be appended to this. Should not end in slash.
- *
- * @see {@link getPatternRoutes}.
  */
 
 module.exports = function generateStatic(
