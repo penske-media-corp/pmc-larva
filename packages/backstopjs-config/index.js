@@ -41,6 +41,7 @@ if ( 0 === paths.length ) {
 }
 
 // Exit if no URL from config or CLI.
+// eslint-disable-next-line no-undef
 if ( undefined === appConfiguration.testBaseUrl && false === urlFromCli ) {
 	// eslint-disable-next-line no-console
 	console.error(
