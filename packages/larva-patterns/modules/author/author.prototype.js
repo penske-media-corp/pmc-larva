@@ -12,7 +12,7 @@ c_timestamp.c_timestamp_datetime_attr = '2019-09-03';
 const author_details_prototype = require( '../author-details/author-details.prototype' );
 const author_details = clonedeep( author_details_prototype );
 
-c_link_author = clonedeep( c_link_prototype );
+const c_link_author = clonedeep( c_link_prototype );
 c_link_author.c_link_text = 'David Robb';
 c_link_author.c_link_classes =
 	'lrv-u-color-black lrv-u-color-brand-primary:hover lrv-u-text-decoration-underline:hover';

@@ -4,13 +4,11 @@ const c_heading_prototype = require( '../../components/c-heading/c-heading.proto
 const o_card_prototype = require( '../../objects/o-card/o-card.prototype' );
 const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
 const c_svg_prototype = require( '../../components/c-svg/c-svg.prototype' );
-const c_span_prototype = require( '../../components/c-span/c-span.prototype' );
 
 const c_heading = clonedeep( c_heading_prototype );
 const o_card = clonedeep( o_card_prototype );
 const c_title = clonedeep( c_title_prototype );
 const c_svg = clonedeep( c_svg_prototype );
-const c_span = clonedeep( c_span_prototype );
 
 c_heading.c_heading_text = 'Most Popular';
 
