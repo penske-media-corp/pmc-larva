@@ -43,8 +43,6 @@ story_card.c_lazy_image.c_lazy_image_img_classes = '';
 story_card.c_lazy_image.c_lazy_image_placeholder_url =
 	'https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg';
 
-how_we_test_products_items = [ story_card, story_card, story_card, story_card ];
-
 module.exports = {
 	how_we_test_products_classes:
 		'lrv-u-text-align-center lrv-u-background-color-grey-lightest lrv-u-margin-tb-2',
@@ -54,7 +52,12 @@ module.exports = {
 	how_we_test_products_title_classes: '',
 	how_we_test_products_items_classes:
 		'lrv-u-flex lrv-u-flex-wrap-wrap@mobile-max',
-	how_we_test_products_items,
+	how_we_test_products_items: [
+		story_card,
+		story_card,
+		story_card,
+		story_card,
+	],
 	c_title,
 	c_dek,
 };
