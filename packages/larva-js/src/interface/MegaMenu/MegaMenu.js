@@ -1,3 +1,7 @@
+// no-global-active-element not needed for non-React context.
+// https://wordpress.stackexchange.com/a/387511
+/* eslint-disable @wordpress/no-global-active-element */
+
 export default class MegaMenu {
 	constructor( el ) {
 		this.el = el;
@@ -63,15 +67,14 @@ export default class MegaMenu {
 					lastFocusableElement.focus();
 					event.preventDefault();
 				}
-			} else {
+
 				// tab key
-				if (
-					document.activeElement === lastFocusableElement &&
-					firstFocusableElement
-				) {
-					firstFocusableElement.focus();
-					event.preventDefault();
-				}
+			} else if (
+				document.activeElement === lastFocusableElement &&
+				firstFocusableElement
+			) {
+				firstFocusableElement.focus();
+				event.preventDefault();
 			}
 		};
 

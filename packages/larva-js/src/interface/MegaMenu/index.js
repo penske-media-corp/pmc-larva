@@ -1,3 +1,7 @@
+// no-global-active-element not needed for non-React context.
+// https://wordpress.stackexchange.com/a/387511
+/* eslint-disable @wordpress/no-global-active-element */
+
 import MegaMenu from './MegaMenu.js';
 
 export default function initMegaMenu() {
