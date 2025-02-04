@@ -26,7 +26,7 @@ const cliArgs = getArgsFromCli();
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
 	shell.exec( `npx @penskemediacorp/larva help start` );
-	return;
+	process.exit( 0 );
 }
 
 // Construct some paths to point our scripts at.

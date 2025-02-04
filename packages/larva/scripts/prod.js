@@ -59,7 +59,7 @@ const cliArgs = getArgsFromCli();
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
 	shell.exec( `npx @penskemediacorp/larva help prod` );
-	return;
+	process.exit( 0 );
 }
 
 // Run the Twig-to-PHP parser.

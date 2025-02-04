@@ -52,9 +52,8 @@ const cliArgs = getArgsFromCli();
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
 	shell.exec( `npx @penskemediacorp/larva help upgrade` );
-	return;
+	process.exit( 0 );
 }
-
 // Parse the --version flag. Defaults to 'latest'.
 const getVersionArg = () => {
 	// Loop through our args, looking for `--version=`.

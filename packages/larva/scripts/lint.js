@@ -51,7 +51,7 @@ const cliArgs = getArgsFromCli();
 // Handle help command.
 if ( cliArgs.includes( '--help' ) ) {
 	shell.exec( `npx @penskemediacorp/larva help lint` );
-	return;
+	process.exit( 0 );
 }
 
 // Trigger linting when a specific flag is present, or when neither flag is
