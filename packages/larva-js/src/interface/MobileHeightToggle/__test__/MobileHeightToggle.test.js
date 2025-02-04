@@ -1,7 +1,7 @@
 const assert = require( 'assert' );
 
-import MobileHeightToggle from './MobileHeightToggle';
-import initMobileHeightToggles from './index';
+import MobileHeightToggle from '../MobileHeightToggle';
+import initMobileHeightToggles from '../index';
 
 const TABLET = 768;
 
