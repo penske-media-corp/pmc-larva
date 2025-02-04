@@ -30,14 +30,14 @@ c_icon.c_icon_url = 'https://pmc.com';
 c_icon.c_icon_rel_name = 'noopener noreferrer';
 
 data.brands.forEach( ( brand ) => {
-	const c_link = clonedeep( c_link_prototype );
+	const brand_c_link = clonedeep( c_link_prototype );
 
-	c_link.c_link_text = brand.name;
-	c_link.c_link_url = brand.url;
-	c_link.c_link_classes +=
+	brand_c_link.c_link_text = brand.name;
+	brand_c_link.c_link_url = brand.url;
+	brand_c_link.c_link_classes +=
 		' lrv-u-display-block lrv-u-background-color-brand-primary:hover lrv-u-color-white:hover lrv-u-font-weight-bold lrv-u-padding-lr-1 lrv-u-padding-tb-050';
 
-	o_nav.o_nav_list_items.push( c_link );
+	o_nav.o_nav_list_items.push( brand_c_link );
 } );
 
 o_nav.o_nav_title_id_attr = 'pmc-footer';
