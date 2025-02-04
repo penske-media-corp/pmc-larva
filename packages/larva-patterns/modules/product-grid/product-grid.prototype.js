@@ -1,9 +1,5 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_title = clonedeep(
-	require( '@penskemediacorp/larva-patterns/components/c-title/c-title.prototype.js' )
-);
-
 const o_product_card = clonedeep(
 	require( '../../objects/o-product-card/o-product-card.prototype' )
 );
