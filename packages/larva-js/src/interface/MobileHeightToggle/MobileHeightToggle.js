@@ -25,7 +25,7 @@ export default class MobileHeightToggle {
 		delete this.el.pmcMobileHeightToggle;
 	}
 
-	onBlur( e ) {
+	onBlur() {
 		document.removeEventListener( 'keydown', this.keyDown );
 	}
 
@@ -35,7 +35,7 @@ export default class MobileHeightToggle {
 		}
 	}
 
-	onFocus( e ) {
+	onFocus() {
 		document.addEventListener( 'keydown', this.keyDown );
 	}
 
