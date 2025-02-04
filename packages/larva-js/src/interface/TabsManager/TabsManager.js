@@ -9,7 +9,7 @@ export default class TabsManager {
 	/**
 	 * Initialize
 	 *
-	 * @param {node} el Tabs container
+	 * @param {HTMLElement} el Tabs container
 	 */
 	constructor( el ) {
 		this.el = el;
