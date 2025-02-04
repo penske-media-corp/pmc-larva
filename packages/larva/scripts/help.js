@@ -50,7 +50,8 @@ const command = cliArgs[ 1 ];
 if ( ! allowedCommands.includes( command ) ) {
 	process.stderr.write( `Invalid command '${ command }'.\n` );
 	process.exit( 0 );
-}// Display the docblock for a given command.
+}
+// Display the docblock for a given command.
 const pathToFile = path.resolve( __dirname, `${ command }.js` );
 try {
 	if ( fs.existsSync( pathToFile ) ) {

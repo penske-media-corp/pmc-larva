@@ -75,7 +75,7 @@ const getVersionArg = () => {
 };
 
 // Update Larva version installed.
-console.log( `Installing Larva@${ getVersionArg() }\n\n` );
+shell.echo( `Installing Larva@${ getVersionArg() }\n\n` );
 shell.exec( `npm install @penskemediacorp/larva@${ getVersionArg() }` );
 
 // Build CSS.
@@ -83,12 +83,11 @@ if (
 	! cliArgs.includes( '--skip-css' ) ||
 	cliArgs.includes( '--skip-build' )
 ) {
-	console.log( 'Building CSS assets\n\n' );
+	shell.echo( 'Building CSS assets\n\n' );
 	shell.exec( `${ binPath } prod-scss` );
 }
-
 // Build JavaScript.
 if ( ! cliArgs.includes( '--skip-js' ) || cliArgs.includes( '--skip-build' ) ) {
-	console.log( 'Building JavaScript assets\n\n' );
+	shell.echo( 'Building JavaScript assets\n\n' );
 	shell.exec( `${ binPath } prod-js` );
 }

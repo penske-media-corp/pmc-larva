@@ -63,11 +63,11 @@ const lintJS = cliArgs.includes( '--js' ) || ! cliArgs.includes( '--css' );
 const fix = cliArgs.includes( '--fix' ) ? ' fix' : '';
 
 if ( lintCSS ) {
-	console.log( 'Linting CSS assets\n\n\n' );
+	process.stdout.write( 'Linting CSS assets\n\n\n' );
 	shell.exec( `${ binPath } lint-scss${ fix }` );
 }
 
 if ( lintJS ) {
-	console.log( 'Linting JavaScript assets\n\n\n' );
+	process.stdout.write( 'Linting JavaScript assets\n\n\n' );
 	shell.exec( `${ binPath } lint-js ${ workingDirectory }${ fix }` );
 }

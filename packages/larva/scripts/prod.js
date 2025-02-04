@@ -68,49 +68,47 @@ if (
 	cliArgs.includes( '--parser' ) ||
 	cliArgs.includes( '--parse' )
 ) {
-	console.log( 'Parsing Twig templates\n\n' );
+	process.stdout.write( 'Parsing Twig templates\n\n' );
 	shell.exec( `npx @penskemediacorp/twig-to-php-parser` );
 } else {
-	console.log( 'Skipping Twig templates\n' );
+	process.stdout.write( 'Skipping Twig templates\n' );
 }
-
 // Run the write-json script.
 if (
 	1 === cliArgs.length ||
 	cliArgs.includes( '--json' ) ||
 	cliArgs.includes( '--write-json' )
 ) {
-	console.log( 'Building JSON assets\n\n' );
+	process.stdout.write( 'Building JSON assets\n\n' );
 	shell.exec( `${ binPath } write-json` );
 } else {
-	console.log( 'Skipping write-json\n' );
+	process.stdout.write( 'Skipping write-json\n' );
 }
-
 // Build CSS/SCSS.
 if (
 	1 === cliArgs.length ||
 	cliArgs.includes( '--css' ) ||
 	cliArgs.includes( '--scss' )
 ) {
-	console.log( 'Building CSS assets\n\n' );
+	process.stdout.write( 'Building CSS assets\n\n' );
 	shell.exec( `${ binPath } prod-scss` );
 } else {
-	console.log( 'Skipping building CSS\n' );
+	process.stdout.write( 'Skipping building CSS\n' );
 }
 
 // Build JS.
 if ( 1 === cliArgs.length || cliArgs.includes( '--js' ) ) {
-	console.log( 'Building JavaScript assets\n\n' );
+	process.stdout.write( 'Building JavaScript assets\n\n' );
 	shell.exec( `${ binPath } prod-js` );
 } else {
-	console.log( 'Skipping building JavaScript\n' );
+	process.stdout.write( 'Skipping building JavaScript\n' );
 }
 
 // Build SVG.
 if ( 1 === cliArgs.length || cliArgs.includes( '--svg' ) ) {
-	console.log( 'Building SVG assets\n\n' );
+	process.stdout.write( 'Building SVG assets\n\n' );
 	shell.exec( `${ binPath } build-icons` );
 	shell.exec( 'npx svgo -f src/svg -o build/svg' );
 } else {
-	console.log( 'Skipping building the SVGs\n' );
+	process.stdout.write( 'Skipping building the SVGs\n' );
 }
