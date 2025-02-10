@@ -1,0 +1,158 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#D92128",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#D92128",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#D92128",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "#E0D7C2",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "#E0D7C2",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "#E0D7C2",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "#EFEFEF",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHT": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "#DCDCDC",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY": {
+			"value": "#8C8C8C",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY": {
+			"value": "#8C8C8C",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY": {
+			"value": "#8C8C8C",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "#483D32",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "#483D32",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "#483D32",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARKEST": {
+			"value": "#323232",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARKEST": {
+			"value": "#323232",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"value": "#323232",
+			"type": "color",
+			"category": "background-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'Ivar Headline', Times New Roman, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The webfont for font-family-primary."
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "'Times New Roman', serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback font for font-family-primary."
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'Libre Franklin', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "Arial, serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from secondary-fancy"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "'EngraversGothic Regular', Helvetica, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Available via Typekit."
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "'EngraversGothic Bold', Helvetica, serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Fallback from secondary-fancy"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "'Ivar Text Regular', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		}
+	}
+}
