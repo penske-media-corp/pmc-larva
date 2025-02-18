@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/stylelint-config",
-  "version": "1.66.4",
+  "version": "1.68.0",
   "description": "Stylelint base config and customizations.",
   "keywords": [
     "stylelint",
