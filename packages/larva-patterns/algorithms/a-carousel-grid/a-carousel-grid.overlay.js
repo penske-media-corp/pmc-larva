@@ -7,6 +7,7 @@ module.exports = {
 	carousel_grid_overlay_img_class:
 		'lrv-a-carousel-grid__overlay--primary-img',
 
+	// eslint-disable-next-line no-dupe-keys
 	carousel_grid_overlay_content_class:
 		'lrv-a-carousel-grid__overlay--primary-content',
 

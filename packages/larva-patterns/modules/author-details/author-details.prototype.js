@@ -61,7 +61,7 @@ c_icon_mail.c_icon_screen_reader_text = false;
 c_icon_mail.c_icon_screen_reader_title_attr = 'Email Icon';
 c_icon_mail.c_icon_link_classes = 'lrv-u-flex';
 
-c_link_view_all = clonedeep( c_link_prototype );
+const c_link_view_all = clonedeep( c_link_prototype );
 c_link_view_all.c_link_classes =
 	'lrv-u-font-size-10 lrv-u-text-transform-uppercase lrv-a-unstyle-link';
 c_link_view_all.c_link_text = 'View All Stories ▶';

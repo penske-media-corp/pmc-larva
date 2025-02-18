@@ -1,3 +1,5 @@
+/* global pmc, pmc_common_urls, WebFont */
+
 // TODO:
 // post launch task from GUT-67 is to pull the
 // IW related values into configuration
@@ -15,10 +17,6 @@ const webFontConfig = {
 	},
 
 	load: function load( type ) {
-		const currentThemeUrl = this.getThemeUrl();
-
-		const loadcount = this.loadcount++;
-
 		WebFont.load( {
 			google: {
 				families: [ 'PT Sans:400,700', 'Teko:300,400' ],
@@ -29,13 +27,15 @@ const webFontConfig = {
 
 			active: function webfontsLoaderActive() {
 				try {
-					if ( 'load' == type ) {
+					if ( 'load' === type ) {
 						pmc.cookie.set(
 							'iw_fonts_loaded',
 							1,
 							7 * 24 * 60 * 60
 						);
 					}
+
+					// eslint-disable-next-line no-console
 					console.log( 'fonts loaded ' + type );
 				} catch ( e ) {}
 			},

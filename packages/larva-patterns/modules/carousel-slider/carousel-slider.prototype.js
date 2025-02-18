@@ -1,12 +1,6 @@
 const clonedeep = require( 'lodash.clonedeep' );
 const { __experimentalCloneWithFallback } = require( '@penskemediacorp/larva' );
 
-const c_heading_prototype = require( '../../components/c-heading/c-heading.prototype' );
-const c_heading = clonedeep( c_heading_prototype );
-
-const c_icon_prototype = require( '../../components/c-icon/c-icon.prototype' );
-const c_icon = clonedeep( c_icon_prototype );
-
 const o_card_prototype = require( '../../objects/o-card/o-card.prototype' );
 const o_card = clonedeep( o_card_prototype );
 

@@ -18,6 +18,7 @@
 // Dependencies.
 const fs = require( 'fs' );
 const path = require( 'path' );
+// eslint-disable-next-line no-unused-vars
 const shell = require( 'shelljs' );
 
 // CLI arguments.
@@ -35,33 +36,34 @@ const allowedCommands = [
 
 // Display a generic help description.
 if ( 2 !== cliArgs.length ) {
-	console.log( 'Usage: npx @penskemediacorp/larval <command> [--help]\n' );
-	console.log(
+	process.stdout.write(
+		'Usage: npx @penskemediacorp/larval <command> [--help]\n'
+	);
+	process.stdout.write(
 		`Where <command> is one of ${ allowedCommands.join( ', ' ) }.\n`
 	);
-	return;
+	process.exit( 0 );
 }
-
-// Check for invalid commands.
+// Check for invalid commands.const command = cliArgs[ 1 ];
 const command = cliArgs[ 1 ];
-if ( ! allowedCommands.includes( command ) ) {
-	console.log( `Invalid command '${ command }'.\n` );
-	return;
-}
 
+if ( ! allowedCommands.includes( command ) ) {
+	process.stderr.write( `Invalid command '${ command }'.\n` );
+	process.exit( 0 );
+}
 // Display the docblock for a given command.
 const pathToFile = path.resolve( __dirname, `${ command }.js` );
 try {
 	if ( fs.existsSync( pathToFile ) ) {
 		fs.readFile( pathToFile, 'utf8', ( error, data ) => {
 			if ( error ) {
-				console.error( error );
+				process.stderr.write( error );
 				return;
 			}
 			const fileParts = data.split( '*/', 1 );
-			console.log( fileParts[ 0 ] + '*/' );
+			process.stdout.write( fileParts[ 0 ] + '*/' );
 		} );
 	}
 } catch ( error ) {
-	console.error( error );
+	process.stderr.write( error );
 }

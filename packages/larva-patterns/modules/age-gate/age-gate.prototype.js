@@ -23,15 +23,15 @@ c_heading.c_heading_classes += ' lrv-a-font-primary-l lrv-u-margin-b-2';
 c_heading.c_heading_text = 'You must be 21 to enter.';
 
 o_input_group.o_input_group_class = 'lrv-u-margin-b-2';
-o_input_group_item = clonedeep( o_input_group.o_input_group_items[ 0 ] );
+const o_input_group_item = clonedeep( o_input_group.o_input_group_items[ 0 ] );
 o_input_group_item.c_input_class =
 	'lrv-a-font-primary-m lrv-u-color-white lrv-u-background-color-grey-darkest lrv-u-padding-lr-050 lrv-u-padding-tb-150 lrv-u-width-100 lrv-u-text-align-center';
 o_input_group_item.c_input_size_attr = 2;
 o_input_group_item.c_input_maxlength_attr = 4;
 
-o_input_day_item = clonedeep( o_input_group_item );
-o_input_month_item = clonedeep( o_input_group_item );
-o_input_year_item = clonedeep( o_input_group_item );
+const o_input_day_item = clonedeep( o_input_group_item );
+const o_input_month_item = clonedeep( o_input_group_item );
+const o_input_year_item = clonedeep( o_input_group_item );
 
 o_input_month_item.c_input_placeholder_attr = 'MM';
 o_input_month_item.c_input_id_attr = 'pmc-age-gate-month';

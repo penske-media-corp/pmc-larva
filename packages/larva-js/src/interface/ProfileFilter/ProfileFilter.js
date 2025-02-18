@@ -86,6 +86,7 @@ export default class ProfileFilter {
 	setQueryObjectFromCheckboxes( els ) {
 		const obj = {};
 
+		// eslint-disable-next-line array-callback-return
 		els.map( ( el ) => {
 			// If the key doesn't exist, create it
 			const key = el.getAttribute( 'name' );
