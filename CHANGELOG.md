@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * Resolve ESLint warnings/errors
+* Add new FN tokens to WWD for migration.
 
 ## 1.67.0 11-19-2024
 * larva-patterns - Adds new kicker image support to the article kicker module.
