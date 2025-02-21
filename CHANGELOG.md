@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * Add aria-label attribute for c-button component
+* Add Billboard 2025 refresh tokens.
 
 ## 1.68.0 02-18-2025
 * Resolve ESLint warnings/errors

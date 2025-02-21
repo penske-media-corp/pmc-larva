@@ -1,0 +1,329 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_DARK": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY_DARK": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_DARK": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY_DARK": {
+			"value": "#003FFA",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_RED": {
+			"value": "#CB001C",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_RED": {
+			"value": "#CB001C",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_RED": {
+			"value": "#CB001C",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_GREEN": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_GREEN": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_GREEN": {
+			"value": "#00FF9A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_BLUE": {
+			"value": "#003FFA  ",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_BLUE": {
+			"value": "#003FFA  ",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_BLUE": {
+			"value": "#003FFA  ",
+			"type": "color",
+			"category": "text-color"
+		},
+		"COLOR_GREY_LIGHTEST": {
+			"value": "#EDECEC",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHTEST": {
+			"value": "#EDECEC",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHTEST": {
+			"value": "#EDECEC",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_LIGHT": {
+			"value": "#EDECEC",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_LIGHT": {
+			"value": "#EDECEC",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_LIGHT": {
+			"value": "#EDECEC",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY": {
+			"value": "#6B6B6B",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY": {
+			"value": "#6B6B6B",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY": {
+			"value": "#6B6B6B",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARK": {
+			"value": "#4A4A4A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARK": {
+			"value": "#4A4A4A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARK": {
+			"value": "#4A4A4A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_GREY_DARKEST": {
+			"value": "#4A4A4A",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_GREY_DARKEST": {
+			"value": "#4A4A4A",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_GREY_DARKEST": {
+			"value": "#4A4A4A",
+			"type": "color",
+			"category": "background-color"
+		},
+		"COLOR_BLACK": {
+			"value": "#000000",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BORDER_COLOR_BLACK": {
+			"value": "#000000",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"BACKGROUND_COLOR_BLACK": {
+			"value": "#000000",
+			"type": "color",
+			"category": "background-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'Crystal Ultra Condensed Black', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "'Crystal Ultra Condensed Bold', serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'Crystal Condensed Semibold', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "'Crystal Book', Arial, serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC_FANCY": {
+			"value": "'Crystal Medium', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "'Crystal Extra Bold', Arial, serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "'Crystal Expanded Extra Black', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "'azeret-mono', Times New Roman, serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "Georgia, Times New Roman, serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"LINE_HEIGHT_COPY": {
+			"value": "1.6",
+			"type": "number",
+			"category": "line-height"
+		},
+		"FONT_WEIGHT_HEADING": {
+			"selector": "lrv-a-font",
+			"category": "font-weight",
+			"type": "number",
+			"value": "700",
+			"originalValue": "700",
+			"name": "FONT_WEIGHT_HEADING"
+		},
+		"FONT_WEIGHT_SUBHEADING": {
+			"selector": "lrv-a-font",
+			"category": "font-weight",
+			"type": "number",
+			"value": "900",
+			"originalValue": "900",
+			"name": "FONT_WEIGHT_SUBHEADING"
+		},
+		"FONT_WEIGHT_TITLE": {
+			"selector": "lrv-a-font",
+			"category": "font-weight",
+			"type": "number",
+			"value": "500",
+			"originalValue": "500",
+			"name": "FONT_WEIGHT_TITLE"
+		},
+		"FONT_WEIGHT_TITLE_BOLD": {
+			"selector": "lrv-a-font",
+			"category": "font-weight",
+			"type": "number",
+			"value": "600",
+			"originalValue": "600",
+			"name": "FONT_WEIGHT_TITLE_BOLD"
+		}
+	}
+}
