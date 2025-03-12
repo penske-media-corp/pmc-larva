@@ -223,7 +223,7 @@ function twig_to_php_parser( $patterns_dir_path, $template_dir_path, $is_using_p
 		$twig_markup_replace_main     = parse_wp_action( $twig_markup_replace_main );
 		$twig_markup_replace_complete = str_replace( array_keys( (array) $general_replacers ), array_values( $general_replacers ), $twig_markup_replace_main );
 
-		$php_markup  = "<?php\n/**\n * Generated file.\n *\n * Refer to the relevant Twig file for adjusting this markup.\n */\n\n?>\n\n";
+		$php_markup  = "<?php\n/**\n * Generated file.\n *\n * Refer to the relevant Twig file for adjusting this markup.\n */\n\ndeclare( strict_types = 1 );\n\n?>\n\n";
 		$php_markup .= $twig_markup_replace_complete;
 
 		if ( ! file_exists( $template_dir ) ) {
