@@ -71,7 +71,11 @@ $billboard-2025-map: (
   'color-brand-accent-green': (rgb(0, 255, 154)),
   'font-weight-title-bold': (600),
   'border-color-brand-accent-red': (rgb(203, 0, 28)),
+  /* Legacy font for hubs pages. */
+  'font-family-primary-fancy-legacy': ('neue-haas-grotesk-display', Times New Roman, sans-serif),
   'border-color-brand-accent-blue': (rgb(0, 63, 250)),
+  /* Legacy font for hubs pages. */
+  'font-family-accent-fancy-legacy': ('acumin-pro-condensed', Arial, sans-serif),
   'background-color-brand-accent-blue': (rgb(0, 63, 250)),
   'font-weight-heading': (700),
   'color-grey-darkest': (rgb(74, 74, 74)),

@@ -324,6 +324,18 @@
 			"value": "600",
 			"originalValue": "600",
 			"name": "FONT_WEIGHT_TITLE_BOLD"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY_LEGACY": {
+			"value": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Legacy font for hubs pages."
+		},
+		"FONT_FAMILY_ACCENT_FANCY_LEGACY": {
+			"value": "'acumin-pro-condensed', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Legacy font for hubs pages."
 		}
 	}
 }
