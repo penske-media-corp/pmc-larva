@@ -632,6 +632,14 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
+    "FONT_FAMILY_LEGACY_PRIMARY_FANCY": {
+      "value": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "Legacy font for hubs pages.",
+      "originalValue": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
+      "name": "FONT_FAMILY_LEGACY_PRIMARY_FANCY"
+    },
     "BACKGROUND_COLOR_BRAND_ACCENT_RED": {
       "value": "rgb(203, 0, 28)",
       "type": "color",
@@ -669,28 +677,12 @@
       "originalValue": "#CB001C",
       "name": "BORDER_COLOR_BRAND_ACCENT_RED"
     },
-    "FONT_FAMILY_PRIMARY_FANCY_LEGACY": {
-      "value": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "Legacy font for hubs pages.",
-      "originalValue": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
-      "name": "FONT_FAMILY_PRIMARY_FANCY_LEGACY"
-    },
     "BORDER_COLOR_BRAND_ACCENT_BLUE": {
       "value": "rgb(0, 63, 250)",
       "type": "color",
       "category": "hr-color",
       "originalValue": "#003FFA  ",
       "name": "BORDER_COLOR_BRAND_ACCENT_BLUE"
-    },
-    "FONT_FAMILY_ACCENT_FANCY_LEGACY": {
-      "value": "'acumin-pro-condensed', Arial, sans-serif",
-      "type": "font-family",
-      "category": "font-family",
-      "comment": "Legacy font for hubs pages.",
-      "originalValue": "'acumin-pro-condensed', Arial, sans-serif",
-      "name": "FONT_FAMILY_ACCENT_FANCY_LEGACY"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT_BLUE": {
       "value": "rgb(0, 63, 250)",
@@ -798,6 +790,14 @@
       "category": "text-color",
       "originalValue": "#00FF9A",
       "name": "COLOR_BRAND_ACCENT"
+    },
+    "FONT_FAMILY_LEGACY_ACCENT_FANCY": {
+      "value": "'acumin-pro-condensed', Arial, sans-serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "Legacy font for hubs pages.",
+      "originalValue": "'acumin-pro-condensed', Arial, sans-serif",
+      "name": "FONT_FAMILY_LEGACY_ACCENT_FANCY"
     },
     "BORDER_COLOR_GREY_DARKEST": {
       "value": "rgb(74, 74, 74)",

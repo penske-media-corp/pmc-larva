@@ -66,16 +66,14 @@ $bbpro-2025-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
+  /* Legacy font for hubs pages. */
+  'font-family-legacy-primary-fancy': ('Fletcha S', Georgia, sans-serif),
   'background-color-brand-accent-red': (rgb(203, 0, 28)),
   'font-weight-title': (500),
   'color-brand-accent-green': (rgb(0, 255, 154)),
   'font-weight-title-bold': (600),
   'border-color-brand-accent-red': (rgb(203, 0, 28)),
-  /* Legacy font for hubs pages. */
-  'font-family-primary-fancy-legacy': ('Fletcha S', Georgia, sans-serif),
   'border-color-brand-accent-blue': (rgb(0, 63, 250)),
-  /* Legacy font for hubs pages. */
-  'font-family-accent-fancy-legacy': ('acumin-pro-condensed', Arial, sans-serif),
   'background-color-brand-accent-blue': (rgb(0, 63, 250)),
   'font-weight-heading': (700),
   'color-grey-darkest': (rgb(54, 59, 66)),
@@ -85,14 +83,16 @@ $bbpro-2025-map: (
   'color-brand-accent-red': (rgb(203, 0, 28)),
   'border-color-brand-accent': (rgb(0, 255, 154)),
   'background-color-brand-accent-green': (rgb(0, 255, 154)),
+  /* Legacy font for hubs pages. */
+  'font-family-legacy-secondary-fancy': ('neue-haas-grotesk-display', Arial, serif),
   'color-grey-lightest': (rgb(233, 233, 233)),
   'border-color-brand-accent-green': (rgb(0, 255, 154)),
   'font-family-accent': ('azeret-mono', Times New Roman, serif),
-  /* Legacy font for hubs pages. */
-  'font-family-secondary-fancy-legacy': ('neue-haas-grotesk-display', Arial, serif),
   'font-weight-subheading': (900),
   'color-brand-accent-blue': (rgb(0, 63, 250)),
   'color-brand-accent': (rgb(0, 255, 154)),
+  /* Legacy font for hubs pages. */
+  'font-family-legacy-accent-fancy': ('acumin-pro-condensed', Arial, sans-serif),
   'border-color-grey-darkest': (rgb(54, 59, 66)),
   'font-family-accent-fancy': ('Crystal Expanded Extra Black', Arial, sans-serif),
 );

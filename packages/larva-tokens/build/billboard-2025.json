@@ -56,14 +56,13 @@
   "SPACING_125": "1.25rem",
   "SPACING_150": "1.5rem",
   "SPACING_2": "2rem",
+  "FONT_FAMILY_LEGACY_PRIMARY_FANCY": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
   "BACKGROUND_COLOR_BRAND_ACCENT_RED": "rgb(203, 0, 28)",
   "FONT_WEIGHT_TITLE": "500",
   "COLOR_BRAND_ACCENT_GREEN": "rgb(0, 255, 154)",
   "FONT_WEIGHT_TITLE_BOLD": "600",
   "BORDER_COLOR_BRAND_ACCENT_RED": "rgb(203, 0, 28)",
-  "FONT_FAMILY_PRIMARY_FANCY_LEGACY": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
   "BORDER_COLOR_BRAND_ACCENT_BLUE": "rgb(0, 63, 250)",
-  "FONT_FAMILY_ACCENT_FANCY_LEGACY": "'acumin-pro-condensed', Arial, sans-serif",
   "BACKGROUND_COLOR_BRAND_ACCENT_BLUE": "rgb(0, 63, 250)",
   "FONT_WEIGHT_HEADING": "700",
   "COLOR_GREY_DARKEST": "rgb(74, 74, 74)",
@@ -79,6 +78,7 @@
   "FONT_WEIGHT_SUBHEADING": "900",
   "COLOR_BRAND_ACCENT_BLUE": "rgb(0, 63, 250)",
   "COLOR_BRAND_ACCENT": "rgb(0, 255, 154)",
+  "FONT_FAMILY_LEGACY_ACCENT_FANCY": "'acumin-pro-condensed', Arial, sans-serif",
   "BORDER_COLOR_GREY_DARKEST": "rgb(74, 74, 74)",
   "FONT_FAMILY_ACCENT_FANCY": "'Crystal Expanded Extra Black', Arial, sans-serif"
 }
