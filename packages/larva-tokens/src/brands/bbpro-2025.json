@@ -49,47 +49,47 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY_DARK": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY_DARK": {
-			"value": "#003FFA",
+			"value": "#6B6B6B",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -154,77 +154,77 @@
 			"category": "text-color"
 		},
 		"COLOR_GREY_LIGHTEST": {
-			"value": "#EDECEC",
+			"value": "#E9E9E9",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_LIGHTEST": {
-			"value": "#EDECEC",
+			"value": "#E9E9E9",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_LIGHTEST": {
-			"value": "#EDECEC",
+			"value": "#E9E9E9",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY_LIGHT": {
-			"value": "#EDECEC",
+			"value": "#8B94A1",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_LIGHT": {
-			"value": "#EDECEC",
+			"value": "#8B94A1",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_LIGHT": {
-			"value": "#EDECEC",
+			"value": "#8B94A1",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY": {
-			"value": "#6B6B6B",
+			"value": "#5B616B",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY": {
-			"value": "#6B6B6B",
+			"value": "#5B616B",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY": {
-			"value": "#6B6B6B",
+			"value": "#5B616B",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY_DARK": {
-			"value": "#4A4A4A",
+			"value": "#363B42",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_DARK": {
-			"value": "#4A4A4A",
+			"value": "#363B42",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_DARK": {
-			"value": "#4A4A4A",
+			"value": "#363B42",
 			"type": "color",
 			"category": "background-color"
 		},
 		"COLOR_GREY_DARKEST": {
-			"value": "#4A4A4A",
+			"value": "#363B42",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BORDER_COLOR_GREY_DARKEST": {
-			"value": "#4A4A4A",
+			"value": "#363B42",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"BACKGROUND_COLOR_GREY_DARKEST": {
-			"value": "#4A4A4A",
+			"value": "#363B42",
 			"type": "color",
 			"category": "background-color"
 		},
@@ -264,7 +264,7 @@
 			"category": "font-family"
 		},
 		"FONT_FAMILY_BASIC_FANCY": {
-			"value": "'Crystal Medium', Arial, sans-serif",
+			"value": "'Crystal Extra Bold', Arial, serif",
 			"type": "font-family",
 			"category": "font-family"
 		},
@@ -326,13 +326,19 @@
 			"name": "FONT_WEIGHT_TITLE_BOLD"
 		},
 		"FONT_FAMILY_LEGACY_PRIMARY_FANCY": {
-			"value": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
+			"value": "'Fletcha S', Georgia, sans-serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Legacy font for hubs pages."
 		},
 		"FONT_FAMILY_LEGACY_ACCENT_FANCY": {
 			"value": "'acumin-pro-condensed', Arial, sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "Legacy font for hubs pages."
+		},
+		"FONT_FAMILY_LEGACY_SECONDARY_FANCY": {
+			"value": "'neue-haas-grotesk-display', Arial, serif",
 			"type": "font-family",
 			"category": "font-family",
 			"comment": "Legacy font for hubs pages."

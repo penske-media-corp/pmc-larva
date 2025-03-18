@@ -225,52 +225,52 @@
   },
   "props": {
     "BORDER_COLOR_GREY_LIGHTEST": {
-      "value": "rgb(237, 236, 236)",
+      "value": "rgb(233, 233, 233)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#EDECEC",
+      "originalValue": "#E9E9E9",
       "name": "BORDER_COLOR_GREY_LIGHTEST"
     },
     "BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
-      "value": "rgb(0, 63, 250)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#003FFA",
-      "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
-    },
-    "BORDER_COLOR_GREY_LIGHT": {
-      "value": "rgb(237, 236, 236)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#EDECEC",
-      "name": "BORDER_COLOR_GREY_LIGHT"
-    },
-    "BORDER_COLOR_GREY_DARK": {
-      "value": "rgb(74, 74, 74)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#4A4A4A",
-      "name": "BORDER_COLOR_GREY_DARK"
-    },
-    "BORDER_COLOR_BRAND_SECONDARY_DARK": {
-      "value": "rgb(0, 63, 250)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#003FFA",
-      "name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
-    },
-    "BORDER_COLOR_BRAND_SECONDARY": {
-      "value": "rgb(0, 63, 250)",
-      "type": "color",
-      "category": "hr-color",
-      "originalValue": "#003FFA",
-      "name": "BORDER_COLOR_BRAND_SECONDARY"
-    },
-    "BORDER_COLOR_GREY": {
       "value": "rgb(107, 107, 107)",
       "type": "color",
       "category": "hr-color",
       "originalValue": "#6B6B6B",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "BORDER_COLOR_GREY_LIGHT": {
+      "value": "rgb(139, 148, 161)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#8B94A1",
+      "name": "BORDER_COLOR_GREY_LIGHT"
+    },
+    "BORDER_COLOR_GREY_DARK": {
+      "value": "rgb(54, 59, 66)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#363B42",
+      "name": "BORDER_COLOR_GREY_DARK"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY_DARK": {
+      "value": "rgb(107, 107, 107)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#6B6B6B",
+      "name": "BORDER_COLOR_BRAND_SECONDARY_DARK"
+    },
+    "BORDER_COLOR_BRAND_SECONDARY": {
+      "value": "rgb(107, 107, 107)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#6B6B6B",
+      "name": "BORDER_COLOR_BRAND_SECONDARY"
+    },
+    "BORDER_COLOR_GREY": {
+      "value": "rgb(91, 97, 107)",
+      "type": "color",
+      "category": "hr-color",
+      "originalValue": "#5B616B",
       "name": "BORDER_COLOR_GREY"
     },
     "BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
@@ -302,45 +302,45 @@
       "name": "BORDER_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_LIGHT": {
-      "value": "rgb(237, 236, 236)",
+      "value": "rgb(139, 148, 161)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#EDECEC",
+      "originalValue": "#8B94A1",
       "name": "BACKGROUND_COLOR_GREY_LIGHT"
     },
     "BACKGROUND_COLOR_GREY_LIGHTEST": {
-      "value": "rgb(237, 236, 236)",
+      "value": "rgb(233, 233, 233)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#EDECEC",
+      "originalValue": "#E9E9E9",
       "name": "BACKGROUND_COLOR_GREY_LIGHTEST"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
-      "value": "rgb(0, 63, 250)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "#003FFA",
-      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_DARK"
-    },
-    "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
-      "value": "rgb(0, 63, 250)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "#003FFA",
-      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
-    },
-    "BACKGROUND_COLOR_GREY_DARK": {
-      "value": "rgb(74, 74, 74)",
-      "type": "color",
-      "category": "background-color",
-      "originalValue": "#4A4A4A",
-      "name": "BACKGROUND_COLOR_GREY_DARK"
-    },
-    "BACKGROUND_COLOR_GREY": {
       "value": "rgb(107, 107, 107)",
       "type": "color",
       "category": "background-color",
       "originalValue": "#6B6B6B",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_DARK"
+    },
+    "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+      "value": "rgb(107, 107, 107)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "#6B6B6B",
+      "name": "BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "BACKGROUND_COLOR_GREY_DARK": {
+      "value": "rgb(54, 59, 66)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "#363B42",
+      "name": "BACKGROUND_COLOR_GREY_DARK"
+    },
+    "BACKGROUND_COLOR_GREY": {
+      "value": "rgb(91, 97, 107)",
+      "type": "color",
+      "category": "background-color",
+      "originalValue": "#5B616B",
       "name": "BACKGROUND_COLOR_GREY"
     },
     "BACKGROUND_COLOR_BODY": {
@@ -352,10 +352,10 @@
       "name": "BACKGROUND_COLOR_BODY"
     },
     "BACKGROUND_COLOR_BRAND_SECONDARY": {
-      "value": "rgb(0, 63, 250)",
+      "value": "rgb(107, 107, 107)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#003FFA",
+      "originalValue": "#6B6B6B",
       "name": "BACKGROUND_COLOR_BRAND_SECONDARY"
     },
     "BACKGROUND_COLOR_BLACK": {
@@ -394,17 +394,17 @@
       "name": "BACKGROUND_COLOR_BRAND_PRIMARY"
     },
     "BACKGROUND_COLOR_GREY_DARKEST": {
-      "value": "rgb(74, 74, 74)",
+      "value": "rgb(54, 59, 66)",
       "type": "color",
       "category": "background-color",
-      "originalValue": "#4A4A4A",
+      "originalValue": "#363B42",
       "name": "BACKGROUND_COLOR_GREY_DARKEST"
     },
     "COLOR_BRAND_SECONDARY": {
-      "value": "rgb(0, 63, 250)",
+      "value": "rgb(107, 107, 107)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#003FFA",
+      "originalValue": "#6B6B6B",
       "name": "COLOR_BRAND_SECONDARY"
     },
     "COLOR_BLACK": {
@@ -443,38 +443,38 @@
       "name": "COLOR_BRAND_PRIMARY"
     },
     "COLOR_GREY_LIGHT": {
-      "value": "rgb(237, 236, 236)",
+      "value": "rgb(139, 148, 161)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#EDECEC",
+      "originalValue": "#8B94A1",
       "name": "COLOR_GREY_LIGHT"
     },
     "COLOR_BRAND_SECONDARY_DARK": {
-      "value": "rgb(0, 63, 250)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "#003FFA",
-      "name": "COLOR_BRAND_SECONDARY_DARK"
-    },
-    "COLOR_BRAND_SECONDARY_LIGHT": {
-      "value": "rgb(0, 63, 250)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "#003FFA",
-      "name": "COLOR_BRAND_SECONDARY_LIGHT"
-    },
-    "COLOR_GREY_DARK": {
-      "value": "rgb(74, 74, 74)",
-      "type": "color",
-      "category": "text-color",
-      "originalValue": "#4A4A4A",
-      "name": "COLOR_GREY_DARK"
-    },
-    "COLOR_GREY": {
       "value": "rgb(107, 107, 107)",
       "type": "color",
       "category": "text-color",
       "originalValue": "#6B6B6B",
+      "name": "COLOR_BRAND_SECONDARY_DARK"
+    },
+    "COLOR_BRAND_SECONDARY_LIGHT": {
+      "value": "rgb(107, 107, 107)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "#6B6B6B",
+      "name": "COLOR_BRAND_SECONDARY_LIGHT"
+    },
+    "COLOR_GREY_DARK": {
+      "value": "rgb(54, 59, 66)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "#363B42",
+      "name": "COLOR_GREY_DARK"
+    },
+    "COLOR_GREY": {
+      "value": "rgb(91, 97, 107)",
+      "type": "color",
+      "category": "text-color",
+      "originalValue": "#5B616B",
       "name": "COLOR_GREY"
     },
     "FONT_FAMILY_PRIMARY_FANCY": {
@@ -633,11 +633,11 @@
       "name": "SPACING_2"
     },
     "FONT_FAMILY_LEGACY_PRIMARY_FANCY": {
-      "value": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
+      "value": "'Fletcha S', Georgia, sans-serif",
       "type": "font-family",
       "category": "font-family",
       "comment": "Legacy font for hubs pages.",
-      "originalValue": "'neue-haas-grotesk-display', Times New Roman, sans-serif",
+      "originalValue": "'Fletcha S', Georgia, sans-serif",
       "name": "FONT_FAMILY_LEGACY_PRIMARY_FANCY"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT_RED": {
@@ -700,17 +700,17 @@
       "name": "FONT_WEIGHT_HEADING"
     },
     "COLOR_GREY_DARKEST": {
-      "value": "rgb(74, 74, 74)",
+      "value": "rgb(54, 59, 66)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#4A4A4A",
+      "originalValue": "#363B42",
       "name": "COLOR_GREY_DARKEST"
     },
     "FONT_FAMILY_BASIC_FANCY": {
-      "value": "'Crystal Medium', Arial, sans-serif",
+      "value": "'Crystal Extra Bold', Arial, serif",
       "type": "font-family",
       "category": "font-family",
-      "originalValue": "'Crystal Medium', Arial, sans-serif",
+      "originalValue": "'Crystal Extra Bold', Arial, serif",
       "name": "FONT_FAMILY_BASIC_FANCY"
     },
     "BACKGROUND_COLOR_BRAND_ACCENT": {
@@ -748,11 +748,19 @@
       "originalValue": "#00FF9A",
       "name": "BACKGROUND_COLOR_BRAND_ACCENT_GREEN"
     },
+    "FONT_FAMILY_LEGACY_SECONDARY_FANCY": {
+      "value": "'neue-haas-grotesk-display', Arial, serif",
+      "type": "font-family",
+      "category": "font-family",
+      "comment": "Legacy font for hubs pages.",
+      "originalValue": "'neue-haas-grotesk-display', Arial, serif",
+      "name": "FONT_FAMILY_LEGACY_SECONDARY_FANCY"
+    },
     "COLOR_GREY_LIGHTEST": {
-      "value": "rgb(237, 236, 236)",
+      "value": "rgb(233, 233, 233)",
       "type": "color",
       "category": "text-color",
-      "originalValue": "#EDECEC",
+      "originalValue": "#E9E9E9",
       "name": "COLOR_GREY_LIGHTEST"
     },
     "BORDER_COLOR_BRAND_ACCENT_GREEN": {
@@ -800,10 +808,10 @@
       "name": "FONT_FAMILY_LEGACY_ACCENT_FANCY"
     },
     "BORDER_COLOR_GREY_DARKEST": {
-      "value": "rgb(74, 74, 74)",
+      "value": "rgb(54, 59, 66)",
       "type": "color",
       "category": "hr-color",
-      "originalValue": "#4A4A4A",
+      "originalValue": "#363B42",
       "name": "BORDER_COLOR_GREY_DARKEST"
     },
     "FONT_FAMILY_ACCENT_FANCY": {

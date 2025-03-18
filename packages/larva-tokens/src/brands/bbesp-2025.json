@@ -4,107 +4,107 @@
 	],
 	"props": {
 		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY_LIGHT": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_PRIMARY": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_PRIMARY_DARK": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_PRIMARY_DARK": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_PRIMARY_DARK": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY_LIGHT": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY_DARK": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY_DARK": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY_DARK": {
-			"value": "#003FFA",
+			"value": "#3E526A",
 			"type": "color",
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "text-color"
 		},
@@ -124,17 +124,17 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_ACCENT_GREEN": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_ACCENT_GREEN": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_ACCENT_GREEN": {
-			"value": "#00FF9A",
+			"value": "#00FFDE",
 			"type": "color",
 			"category": "text-color"
 		},
