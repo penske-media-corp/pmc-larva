@@ -1,10 +1,12 @@
+@use "sass:math";
+
 @import "../mixins/pmc-breakpoint";
 
 @mixin _grid( $columns ) {
 	--cols: #{$columns};
 
 	> * {
-		flex-basis: ( ( 1 / $columns ) * 100% );
+		flex-basis: ( math.div( 1, $columns ) * 100% );
 	}
 
 }
@@ -30,7 +32,7 @@
 }
 
 @mixin _grid-column-fallback( $columns, $span ) {
-	flex-basis: ( $span / $columns * 100% );
+	flex-basis: math.div( $span, $columns ) * 100%;
 }
 
 @mixin _grid-span-selector( $columns, $span: 1, $breakpoint: false, $NAMESPACE: '' ) {

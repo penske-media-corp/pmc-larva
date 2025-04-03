@@ -1,9 +1,11 @@
+@use "sass:math";
+
 // Rem Converter
 // @note: Ideally this is removed. Everything should be in rems and in a token.
 // Example: font-size: pmc-rem(12);
 
 @function pmc-rem($value) {
 	$int: _strip-unit($value);
-	$rems: #{$int / 16};
+	$rems: math.div($int, 16);
 	@return $rems + rem;
 }
