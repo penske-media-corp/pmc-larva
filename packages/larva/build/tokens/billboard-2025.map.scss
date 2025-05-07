@@ -66,6 +66,8 @@ $billboard-2025-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
+  /* Legacy font for hubs pages. */
+  'font-family-legacy-primary-fancy': ('neue-haas-grotesk-display', Times New Roman, sans-serif),
   'background-color-brand-accent-red': (rgb(203, 0, 28)),
   'font-weight-title': (500),
   'color-brand-accent-green': (rgb(0, 255, 154)),
@@ -87,6 +89,8 @@ $billboard-2025-map: (
   'font-weight-subheading': (900),
   'color-brand-accent-blue': (rgb(0, 63, 250)),
   'color-brand-accent': (rgb(0, 255, 154)),
+  /* Legacy font for hubs pages. */
+  'font-family-legacy-accent-fancy': ('acumin-pro-condensed', Arial, sans-serif),
   'border-color-grey-darkest': (rgb(74, 74, 74)),
   'font-family-accent-fancy': ('Crystal Expanded Extra Black', Arial, sans-serif),
 );
