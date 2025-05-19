@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 * Adds built BBpro 2025 & BBesp 2025 tokens.
+* Adds xxs font tokens to Billboard.
 
 ## 1.70.0 03-18-2025
 * Add BBpro 2025 refresh tokens.
