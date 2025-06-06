@@ -315,6 +315,7 @@ export default class VideoShowcase {
 				.setup( {
 					playlist: playlistUrl,
 					aspectratio: '16:9',
+					mute: true,
 				} )
 				.play();
 		}
