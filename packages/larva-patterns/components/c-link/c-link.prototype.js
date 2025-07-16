@@ -5,5 +5,6 @@ module.exports = {
 	c_link_url: '#',
 	c_link_rel_attr: false,
 	c_link_aria_label_attr: false,
+	c_link_role: false,
 	c_link_target_attr: false,
 };

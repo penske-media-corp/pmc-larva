@@ -13,16 +13,22 @@ c_welcome_span.c_span_url = '#';
 
 const c_account_link = clonedeep( c_link_prototype );
 c_account_link.c_link_text = 'Account';
+c_account_link.c_link_aria_label_attr = 'Account';
+c_account_link.c_link_role = 'menuitem';
 c_account_link.c_link_classes =
 	'subscriber-account-link lrv-u-font-family-body lrv-u-font-size-12 lrv-u-font-size-8@mobile-max lrv-a-icon-after lrv-a-icon-arrow-down lrv-a-unstyle-link lrv-u-border-b-1 lrv-u-border-color-brand-primary:hover lrv-u-border-color-white lrv-u-color-brand-primary:hover lrv-u-text-transform-uppercase';
 
 const c_manage_account = clonedeep( c_link_prototype );
 c_manage_account.c_link_text = 'Manage Account';
+c_manage_account.c_link_aria_label_attr = 'Manage Account';
+c_manage_account.c_link_role = 'menuitem';
 c_manage_account.c_link_classes =
 	'subscriber-self-care-link lrv-u-text-transform-uppercase lrv-a-font-secondary lrv-u-color-black lrv-u-font-size-12 lrv-u-width-100 lrv-u-text-align-center lrv-u-color-brand-primary:hover';
 
 const c_log_out = clonedeep( c_link_prototype );
 c_log_out.c_link_text = 'Sign Out';
+c_log_out.c_link_aria_label_attr = 'Sign Out';
+c_log_out.c_link_role = 'menuitem';
 c_log_out.c_link_classes =
 	'subscriber-logout-link lrv-a-font-secondary lrv-u-color-black lrv-u-color-brand-primary:hover lrv-u-font-size-12 lrv-u-text-transform-uppercase';
 
