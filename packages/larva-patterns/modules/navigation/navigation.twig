@@ -1,0 +1,14 @@
+<div class="navigation-menu // lrv-js-MobileHeightToggle {{ navigation_classes }}">
+
+	{% if c_heading %}
+		{% include "@larva/components/c-heading/c-heading.twig" with c_heading %}
+	{% endif %}
+
+	<ul class="navigation-content // {{ nav_content_classes }}">
+
+		{% for item in navigation_items %}
+			{% include "@project/modules//navigation-item/navigation-item.twig" with item %}
+		{% endfor %}
+
+	</ul>
+</div>

@@ -1,0 +1,25 @@
+<li class="navigaiton-item // navigaiton__parent-list-item {{ parent_list_item_classes }}">
+	<h3 id="{{ navigation_item_heading_id_attr }}" class="navigaiton-item-heading {{ parent_list_item_heading_classes }}">
+		{% include "@larva/components/c-link/c-link.twig" with c_link %}
+
+		<button class="{{ toggle_button_classes }}">
+			<span class="lrv-a-icon-after lrv-a-icon-arrow-down a-icon-down-arrow-color-wild-strawberry">
+				<span class="lrv-a-screen-reader-only">
+					{{navigation_item_toggle_screen_reader_text}}
+				</span>
+			</span>
+		</button>
+	</h3>
+
+	<ul class="navigaiton__child-list // {{ navigation_child_list_classes }}"
+		{% if navigation_aria_labelledby_attr %}
+			aria-labelledby="{{ navigation_aria_labelledby_attr }}"
+		{% endif %}
+	>
+		{% for item in navigation_item_children %}
+			<li class="navigaiton__child-list-item // lrv-u-margin-tb-025">
+				{% include "@larva/components/c-link/c-link.twig" with item %}
+			</li>
+		{% endfor %}
+	</ul>
+</li>
