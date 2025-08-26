@@ -1,0 +1,8 @@
+<div class="accordion // {{ accordion_classes }}" data-collapsible="{{ accordion_collapsible_data_attr }}">
+	<div class="{{ accordion_heading_classes }} {{ accordion_text_align_class }}" data-collapsible-toggle="{{ accordion_collapsible_toggle_data_attr }}" style="color:{{ accordion_color_class }}">
+		{% include "@larva/components/c-heading/c-heading.twig" with accordion_heading %}
+	</div>
+	<div class="{{ accordion_markup_classes }}" data-collapsible-panel="">
+		{{ accordion_markup|raw }}
+	</div>
+</div>
