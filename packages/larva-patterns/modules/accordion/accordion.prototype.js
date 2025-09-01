@@ -1,9 +1,12 @@
 const clonedeep = require( 'lodash.clonedeep' );
 
-const c_heading = clonedeep( require( '@penskemediacorp/larva-patterns/components/c-heading/c-heading.prototype' ) );
+const c_heading = clonedeep(
+	require( '@penskemediacorp/larva-patterns/components/c-heading/c-heading.prototype' )
+);
 
 c_heading.c_heading_text = 'Read more';
-c_heading.c_heading_classes = 'lrv-u-text-transform-uppercase lrv-u-font-size-12 a-font-accent-bold-s';
+c_heading.c_heading_classes =
+	'lrv-u-text-transform-uppercase lrv-u-font-size-12 a-font-accent-bold-s';
 
 module.exports = {
 	accordion_classes: '',
