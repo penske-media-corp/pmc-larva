@@ -5,8 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
-* Add navigation and navigation-item modules from theme hubs work.
 
+## 1.73.1 08-11-2025
+* Update path in twig for navigation module.
+
+## 1.73.0 08-11-2025
+* Add navigation and navigation-item modules from theme hubs work.
 
 ## 1.72.0 06-06-2025
 * larva-js - Play JWPlayer with muted audio by default.
