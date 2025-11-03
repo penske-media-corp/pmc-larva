@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.74.0 10-22-2025
+* larva-svg - Add google icon.
+
 ## 1.73.1 08-11-2025
 * Update path in twig for navigation module.
 
