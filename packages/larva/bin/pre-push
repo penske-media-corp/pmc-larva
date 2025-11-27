@@ -1,0 +1,174 @@
+#!/usr/bin/env node
+
+/**
+ * Pre-Push Git Hook - Larva Version Checker
+ *
+ * Automatically checks if @penskemediacorp/larva is up-to-date before allowing git push.
+ * Blocks push if update is available, unless --force flag is used.
+ *
+ * Installation: Auto-installed via npm postinstall script
+ * Override: Use --force, -f, or --no-verify flags
+ */
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+// ANSI color codes
+const colors = {
+  reset: '\x1b[0m',
+  red: '\x1b[31m',
+  yellow: '\x1b[33m',
+  green: '\x1b[32m',
+  cyan: '\x1b[36m',
+  bold: '\x1b[1m'
+};
+
+function log(message, color = 'reset') {
+  console.log(`${colors[color]}${message}${colors.reset}`);
+}
+
+function getCurrentLarvaVersion() {
+  try {
+	// Get git root directory
+	const gitRoot = execSync('git rev-parse --show-toplevel', {
+	  encoding: 'utf8'
+	}).trim();
+
+	// Look for package.json in assets folder
+	const packageJsonPath = path.join(gitRoot, 'assets', 'package.json');
+
+	if (!fs.existsSync(packageJsonPath)) {
+	  return null;
+	}
+
+	const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+	const larvaVersion = packageJson.dependencies?.['@penskemediacorp/larva'] ||
+						packageJson.devDependencies?.['@penskemediacorp/larva'];
+
+	if (!larvaVersion) {
+	  return null;
+	}
+
+	// Remove semver operators (^, ~, etc.)
+	return larvaVersion.replace(/^[\^~>=<]/, '');
+  } catch (error) {
+	log(`Error reading package.json: ${error.message}`, 'red');
+	return null;
+  }
+}
+
+function getLatestLarvaVersion() {
+  try {
+	const result = execSync('npm view @penskemediacorp/larva version', {
+	  encoding: 'utf8',
+	  stdio: ['pipe', 'pipe', 'pipe']
+	});
+	return result.trim();
+  } catch (error) {
+	log('Warning: Could not fetch latest @penskemediacorp/larva version from npm', 'yellow');
+	return null;
+  }
+}
+
+function compareVersions(current, latest) {
+  const currentParts = current.split('.').map(Number);
+  const latestParts = latest.split('.').map(Number);
+
+  for (let i = 0; i < Math.max(currentParts.length, latestParts.length); i++) {
+	const curr = currentParts[i] || 0;
+	const lat = latestParts[i] || 0;
+
+	if (lat > curr) return 1;  // Update available
+	if (lat < curr) return -1; // Current is newer
+  }
+
+  return 0; // Same version
+}
+
+function checkForceFlag() {
+  // Check command line arguments
+  const args = process.argv.slice(2);
+  if (args.includes('--force') || args.includes('-f')) {
+	return true;
+  }
+
+  // Check environment variable
+  if (process.env.GIT_PUSH_OPTION_FORCE === 'true') {
+	return true;
+  }
+
+  // Check the actual git push command from shell
+  try {
+	// Get the parent process command (the actual git push command)
+	const psCommand = process.platform === 'win32'
+	  ? 'wmic process where ProcessId=%PPID% get CommandLine'
+	  : `ps -o command= -p ${process.ppid}`;
+
+	const parentCommand = execSync(psCommand, {
+	  encoding: 'utf8',
+	  stdio: ['pipe', 'pipe', 'pipe']
+	}).trim();
+
+	// Check if the git push command contains --force or -f
+	if (parentCommand.includes('--force') || parentCommand.match(/\s-[a-z]*f[a-z]*\s/)) {
+	  return true;
+	}
+  } catch (error) {
+	// If we can't check parent process, continue without force flag
+  }
+
+  return false;
+}
+
+function main() {
+  log('\n🔍 Checking @penskemediacorp/larva version...', 'cyan');
+
+  const currentVersion = getCurrentLarvaVersion();
+
+  if (!currentVersion) {
+	log('✓ No @penskemediacorp/larva dependency found in this project', 'green');
+	process.exit(0);
+  }
+
+  log(`Current version: ${currentVersion}`, 'cyan');
+
+  const latestVersion = getLatestLarvaVersion();
+
+  if (!latestVersion) {
+	log('⚠ Could not verify latest version, proceeding with push...', 'yellow');
+	process.exit(0);
+  }
+
+  log(`Latest version: ${latestVersion}`, 'cyan');
+
+  const comparison = compareVersions(currentVersion, latestVersion);
+
+  if (comparison > 0) {
+	// Update available (latest is greater than current)
+	const forceFlag = checkForceFlag();
+
+	log('\n' + '='.repeat(60), 'yellow');
+	log('⚠️  UPDATE AVAILABLE FOR @penskemediacorp/larva', 'yellow');
+	log('='.repeat(60), 'yellow');
+	log(`Current: ${currentVersion}`, 'red');
+	log(`Latest:  ${latestVersion}`, 'green');
+	log('\nPlease update @penskemediacorp/larva before pushing:', 'yellow');
+	log('  npm install @penskemediacorp/larva@latest', 'cyan');
+	log('='.repeat(60) + '\n', 'yellow');
+
+	if (forceFlag) {
+	  log('⚠️  Force flag detected - allowing push with outdated version', 'yellow');
+	  log('Please update @penskemediacorp/larva as soon as possible!\n', 'yellow');
+	  process.exit(0);
+	} else {
+	  log('❌ Push blocked. Update @penskemediacorp/larva or use --force to override.\n', 'red');
+	  process.exit(1);
+	}
+  } else {
+	log('✓ @penskemediacorp/larva is up to date!\n', 'green');
+	process.exit(0);
+  }
+}
+
+main();
