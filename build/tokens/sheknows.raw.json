@@ -636,6 +636,13 @@
       "originalValue": "2rem",
       "name": "SPACING_2"
     },
+    "BODY_M_LINE_HEIGHT_DESKTOP": {
+      "category": "line-height",
+      "type": "number",
+      "value": "26px",
+      "originalValue": "26px",
+      "name": "BODY_M_LINE_HEIGHT_DESKTOP"
+    },
     "BACKGROUND_COLOR_BRAND_ACCENT_SECONDARY": {
       "value": "rgb(250, 220, 171)",
       "type": "color",
@@ -699,12 +706,26 @@
       "originalValue": "#CFE3F9",
       "name": "BORDER_COLOR_BRAND_ACCENT"
     },
+    "BODY_M_LINE_HEIGHT_DESKTOP_XL": {
+      "category": "line-height",
+      "type": "number",
+      "value": "26px",
+      "originalValue": "26px",
+      "name": "BODY_M_LINE_HEIGHT_DESKTOP_XL"
+    },
     "COLOR_BRAND_ACCENT_SECONDARY": {
       "value": "rgb(250, 220, 171)",
       "type": "color",
       "category": "text-color",
       "originalValue": "#FADCAB",
       "name": "COLOR_BRAND_ACCENT_SECONDARY"
+    },
+    "BODY_M_FONT_SIZE_DESKTOP_XL": {
+      "category": "font-size",
+      "type": "number",
+      "value": "18px",
+      "originalValue": "18px",
+      "name": "BODY_M_FONT_SIZE_DESKTOP_XL"
     },
     "COLOR_BRAND_ACCENT_LIGHT": {
       "value": "rgb(249, 250, 251)",
@@ -748,6 +769,27 @@
       "category": "text-color",
       "originalValue": "#CFE3F9",
       "name": "COLOR_BRAND_ACCENT"
+    },
+    "BODY_M_LINE_HEIGHT_MOBILE": {
+      "category": "line-height",
+      "type": "number",
+      "value": "24px",
+      "originalValue": "24px",
+      "name": "BODY_M_LINE_HEIGHT_MOBILE"
+    },
+    "BODY_M_FONT_SIZE_DESKTOP": {
+      "category": "font-size",
+      "type": "number",
+      "value": "18px",
+      "originalValue": "18px",
+      "name": "BODY_M_FONT_SIZE_DESKTOP"
+    },
+    "BODY_M_FONT_SIZE_MOBILE": {
+      "category": "font-size",
+      "type": "number",
+      "value": "15px",
+      "originalValue": "15px",
+      "name": "BODY_M_FONT_SIZE_MOBILE"
     },
     "FONT_FAMILY_ACCENT_FANCY": {
       "value": "Lust, serif",
