@@ -189,6 +189,48 @@
 			"value": "'Helvetica Neue', sans-serif",
 			"type": "font-family",
 			"category": "font-family"
+		},
+		"BODY_M_FONT_SIZE_DESKTOP_XL": {
+			"category": "font-size",
+			"type": "number",
+			"value": "18px",
+			"originalValue": "18px",
+			"name": "BODY_M_FONT_SIZE_DESKTOP_XL"
+		},
+		"BODY_M_FONT_SIZE_DESKTOP": {
+			"category": "font-size",
+			"type": "number",
+			"value": "18px",
+			"originalValue": "18px",
+			"name": "BODY_M_FONT_SIZE_DESKTOP"
+		},
+		"BODY_M_FONT_SIZE_MOBILE": {
+			"category": "font-size",
+			"type": "number",
+			"value": "15px",
+			"originalValue": "18px",
+			"name": "BODY_M_FONT_SIZE_MOBILE"
+		},
+		"BODY_M_LINE_HEIGHT_DESKTOP_XL": {
+			"category": "line-height",
+			"type": "number",
+			"value": "26px",
+			"originalValue": "24px",
+			"name": "BODY_M_LINE_HEIGHT_DESKTOP_XL"
+		},
+		"BODY_M_LINE_HEIGHT_DESKTOP": {
+			"category": "line-height",
+			"type": "number",
+			"value": "26px",
+			"originalValue": "24px",
+			"name": "BODY_M_LINE_HEIGHT_DESKTOP"
+		},
+		"BODY_M_LINE_HEIGHT_MOBILE": {
+			"category": "line-height",
+			"type": "number",
+			"value": "24px",
+			"originalValue": "24px",
+			"name": "BODY_M_LINE_HEIGHT_MOBILE"
 		}
 	}
 }

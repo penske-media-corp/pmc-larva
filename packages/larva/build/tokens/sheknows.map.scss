@@ -70,6 +70,7 @@ $sheknows-map: (
   'spacing-150': (1.5rem),
   /* Used for margins and padding only. */
   'spacing-2': (2rem),
+  'body-m-line-height-desktop': (26px),
   'background-color-brand-accent-secondary': (rgb(250, 220, 171)),
   'border-color-brand-accent-dark': (rgb(23, 51, 81)),
   'border-color-brand-accent-secondary': (rgb(250, 220, 171)),
@@ -79,7 +80,9 @@ $sheknows-map: (
   'color-brand-accent-secondary-light': (rgb(254, 249, 228)),
   'background-color-brand-accent': (rgb(207, 227, 249)),
   'border-color-brand-accent': (rgb(207, 227, 249)),
+  'body-m-line-height-desktop-xl': (26px),
   'color-brand-accent-secondary': (rgb(250, 220, 171)),
+  'body-m-font-size-desktop-xl': (18px),
   'color-brand-accent-light': (rgb(249, 250, 251)),
   /* The fallback for the accent font */
   'font-family-accent': (Georgia, serif),
@@ -87,6 +90,9 @@ $sheknows-map: (
   'background-color-brand-accent-secondary-light': (rgb(254, 249, 228)),
   'border-color-brand-accent-secondary-light': (rgb(254, 249, 228)),
   'color-brand-accent': (rgb(207, 227, 249)),
+  'body-m-line-height-mobile': (24px),
+  'body-m-font-size-desktop': (18px),
+  'body-m-font-size-mobile': (15px),
   /* The accent webfont, loaded async */
   'font-family-accent-fancy': (Lust, serif),
 );
