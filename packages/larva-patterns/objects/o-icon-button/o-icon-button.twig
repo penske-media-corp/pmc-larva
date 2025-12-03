@@ -1,5 +1,5 @@
 {% if o_icon_button_url %}
-	<a href="{{ o_button_url }}" class="{{ o_icon_button_classes }}" target="{{ o_icon_button_target_attr }}" rel="{{ o_icon_button_rel_attr }}" data-pmc-sp-product="{{ o_icon_button_guid_attr }}" data-category-name="{{ o_icon_button_category_attr }}" {{ wp_action( 'pmc_do_render_custom_ga_tracking_attr', o_icon_button_ga_tracking ) }}>
+	<a href="{{ o_button_url }}" class="{{ o_icon_button_classes }}" target="{{ o_icon_button_target_attr }}" rel="{{ o_icon_button_rel_attr }}" data-pmc-sp-product="{{ o_icon_button_guid_attr }}" data-category-name="{{ o_icon_button_category_attr }}"{% if o_icon_button_ga_tracking %} {{ wp_action( 'pmc_do_render_custom_ga_tracking_attr', o_icon_button_ga_tracking ) }}{% endif %}>
 {% else %}
 	{% if o_icon_use_span %}
 		<span class="o-icon-button {{ o_icon_button_classes }}">
