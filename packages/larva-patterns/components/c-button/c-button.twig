@@ -1,5 +1,5 @@
 {% if c_button_url %}
-	<a class="c-button larva {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}" target="{{ c_button_target_attr }}" rel="{{ c_button_rel_attr }}" {{ wp_action( 'pmc_do_render_custom_ga_tracking_attr', c_button_ga_tracking ) }}
+	<a class="c-button larva {{ modifier_class }} {{ c_button_classes }}" href="{{ c_button_url }}" target="{{ c_button_target_attr }}" rel="{{ c_button_rel_attr }}"{% if c_button_ga_tracking %} {{ wp_action( 'pmc_do_render_custom_ga_tracking_attr', c_button_ga_tracking ) }}{% endif %}
 		{% if c_button_aria_label_attr %}
 			aria-label="{{ c_button_aria_label_attr }}"
 		{% endif %}
