@@ -14,7 +14,6 @@
     "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "update-larva-latest": "npm install --save @penskemediacorp/larva-scss@latest @penskemediacorp/larva-css@latest @penskemediacorp/larva-patterns@latest @penskemediacorp/larva-svg@latest @penskemediacorp/twig-to-php-parser@latest @penskemediacorp/larva-tokens@latest @penskemediacorp/larva-js@latest && npm run prod",
     "larva": "bin/larva.js server --watch ../larva-patterns --watch src -e twig,js,html",
     "backstop": "backstop --config=node_modules/@penskemediacorp/backstopjs-config",
@@ -32,7 +31,9 @@
     "lint-fix:js": "bin/larva.js lint-js --fix",
     "write-json": "bin/larva.js write-json larva && bin/larva.js write-json",
     "build-icons": "bin/larva.js build-icons",
-    "build-html": "bin/larva.js build-html larva && bin/larva.js build-html project"
+    "build-html": "bin/larva.js build-html larva && bin/larva.js build-html project",
+	"install-hooks": "node bin/install-hooks.js",
+	"postinstall": "node bin/install-hooks.js || exit 0"
   },
   "publishConfig": {
     "access": "public"
