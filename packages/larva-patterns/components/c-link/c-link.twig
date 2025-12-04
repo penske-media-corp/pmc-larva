@@ -7,6 +7,12 @@
 	{% endif %}
 	{% if c_link_aria_label_attr %}
 		aria-label="{{ c_link_aria_label_attr }}"
+	{% endif %}	
+	{% if c_link_role %}
+		aria-role="{{ c_link_role }}"
+	{% endif %}
+	{% if c_link_aria_haspopup_attr %}
+		aria-haspopup="{{ c_link_aria_haspopup_attr }}"
 	{% endif %}
 >
 	{{ c_link_text }}

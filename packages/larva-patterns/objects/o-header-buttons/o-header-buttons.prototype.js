@@ -5,26 +5,32 @@ const o_account_menu_prototype = require( '../../objects/o-account-menu/o-accoun
 
 const c_login_link = clonedeep( c_link_prototype );
 c_login_link.c_link_text = 'Log In';
+c_login_link.c_link_aria_haspopup_attr = 'menu';
 c_login_link.c_link_classes =
 	' lrv-a-unstyle-link lrv-u-text-transform-uppercase lrv-u-font-family-body lrv-u-font-size-12 lrv-u-font-size-8@mobile-max  lrv-u-color-brand-primary:hover lrv-u-border-b-1 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover';
 
 const c_subscribe_link = clonedeep( c_link_prototype );
 c_subscribe_link.c_link_text = 'Subscribe';
+c_subscribe_link.c_link_aria_haspopup_attr = 'menu';
 c_subscribe_link.c_link_classes =
 	'lrv-a-unstyle-button lrv-a-unstyle-link lrv-u-text-transform-uppercase lrv-u-font-family-body lrv-u-font-size-12 lrv-u-font-size-8@mobile-max  lrv-u-color-brand-primary:hover lrv-u-border-b-1 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover';
 
 const c_account_link = clonedeep( c_link_prototype );
 c_account_link.c_link_text = 'Account';
+c_account_link.c_link_aria_haspopup_attr = 'menu';
 c_account_link.c_link_classes =
 	'lrv-u-text-transform-uppercase lrv-u-font-family-body lrv-u-font-size-12 lrv-u-font-size-8@mobile-max  lrv-u-color-brand-primary:hover lrv-u-border-color-white lrv-u-border-color-brand-primary:hover';
+c_account_link.c_link_aria_haspopup_attr = 'menu';
 
 const c_got_a_tip = clonedeep( c_link_prototype );
 c_got_a_tip.c_link_text = 'Got A Tip?';
+c_got_a_tip.c_link_aria_haspopup_attr = 'menu';
 c_got_a_tip.c_link_classes =
 	'lrv-a-unstyle-link lrv-u-text-transform-uppercase lrv-u-font-family-body lrv-u-font-size-12 lrv-u-font-size-8@mobile-max  lrv-u-color-brand-primary:hover lrv-u-border-b-1 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover';
 
 const o_account_menu = clonedeep( o_account_menu_prototype );
 
+o_account_menu.c_account_link.c_link_aria_haspopup_attr = 'menu';
 o_account_menu.c_account_link.c_link_classes =
 	' lrv-a-unstyle-link lrv-u-text-transform-uppercase lrv-u-font-family-body lrv-u-font-size-12 lrv-u-font-size-8@mobile-max  lrv-u-color-brand-primary:hover lrv-u-border-b-1 lrv-u-border-color-white lrv-u-border-color-brand-primary:hover lrv-u-margin-tb-025';
 

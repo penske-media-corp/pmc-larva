@@ -48,6 +48,14 @@ export default class Tooltip {
 			}
 		} ); // hide all tooltips when escape key is pressed
 
+		this.el.addEventListener( 'focusout', ( e ) => {
+			if ( e.relatedTarget && e.relatedTarget.closest( '.js-Tooltip' ) ) {
+				return;
+			}
+
+			this.hideAll();
+		} ); // hide tooltip when focus is moved away from trigger
+
 		this.el.addEventListener( 'mouseover', ( e ) => {
 			this.show( e );
 		} ); // show tooltip on hover
@@ -64,9 +72,9 @@ export default class Tooltip {
 			this.show( e );
 		} ); // show tooltip when trigger is clicked
 
-		const tooltip = [ ...document.querySelectorAll( '.js-Tooltip' ) ];
+		this.tooltip = [ ...this.el.querySelectorAll( '.js-Tooltip' ) ];
 
-		tooltip.forEach( ( el ) => {
+		this.tooltip.forEach( ( el ) => {
 			el.addEventListener( 'click', ( e ) => {
 				this.stopPropagation( e );
 			} );
@@ -101,7 +109,9 @@ export default class Tooltip {
 		}
 
 		this.el.classList.add( 'is-Tooltip-open' );
-
+		this.tooltip.forEach( ( el ) => {
+			el.setAttribute( 'aria-hidden', 'false' );
+		} );
 		this.stopPropagation( e ); // we don't want this event handled further by anything else
 	}
 
@@ -112,6 +122,9 @@ export default class Tooltip {
 	 */
 	hideAll() {
 		this.el.classList.remove( 'is-Tooltip-open' );
+		this.tooltip.forEach( ( el ) => {
+			el.setAttribute( 'aria-hidden', 'true' );
+		} );
 	}
 }
 
