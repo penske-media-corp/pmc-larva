@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* Add pre-push hook to force larva update on each theme
 *  Add conditional check for GA tracking in c-button component
 *  Update unvalid main entry point in larva-patterns/package.json to index.js
 *  larva-tokens - Added font tokens in sheknows.
