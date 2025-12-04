@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
-## 1.75.0 12-03-2025
+## 1.75.0 12-04-2025
 *  Add conditional check for GA tracking in c-button component
 *  Update unvalid main entry point in larva-patterns/package.json to index.js
 *  larva-tokens - Added font tokens in sheknows.
