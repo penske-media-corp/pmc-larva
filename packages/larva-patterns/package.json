@@ -5,7 +5,7 @@
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/patterns#readme",
   "license": "ISC",
-  "main": "lib/patterns.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Penske-Media-Corp/pmc-larva.git"
