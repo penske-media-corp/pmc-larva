@@ -10,9 +10,14 @@
  * Override: Use --force, -f, or --no-verify flags
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync } = require( 'child_process' );
+const fs = require( 'fs' );
+const path = require( 'path' );
+const os = require( 'os' );
+
+// Cache configuration
+const CACHE_FILE = path.join(os.tmpdir(), 'larva-version-cache.json');
+const CACHE_DURATION = 1000 * 60 * 60; // 1 hour
 
 // ANSI color codes
 const colors = {
@@ -50,8 +55,8 @@ function getCurrentLarvaVersion() {
 	  return null;
 	}
 
-	// Remove semver operators (^, ~, etc.)
-	return larvaVersion.replace(/^[\^~>=<]/, '');
+	// Remove all semver operators and pre-release tags
+	return larvaVersion.replace(/^[\^~>=<]+/, '').split('-')[0].split('+')[0];
   } catch (error) {
 	log(`Error reading package.json: ${error.message}`, 'red');
 	return null;
@@ -59,14 +64,49 @@ function getCurrentLarvaVersion() {
 }
 
 function getLatestLarvaVersion() {
+
+	// Check cache first
+	if ( fs.existsSync( CACHE_FILE ) ) {
+		try {
+			const cache = JSON.parse( fs.readFileSync( CACHE_FILE, 'utf8' ) );
+			const now = Date.now();
+
+			// Return cached version if still valid
+			if ( cache.timestamp && cache.version && ( now - cache.timestamp ) < CACHE_DURATION ) {
+				return cache.version;
+			}
+		} catch ( error ) {
+			// Invalid cache file, continue to fetch
+		}
+	}
+
   try {
 	const result = execSync('npm view @penskemediacorp/larva version', {
 	  encoding: 'utf8',
-	  stdio: ['pipe', 'pipe', 'pipe']
+	  stdio: ['pipe', 'pipe', 'pipe'],
+	  timeout: 5000  // 5 second timeout
 	});
-	return result.trim();
+
+	const version = result.trim();
+
+	// Save to cache
+	try {
+		fs.writeFileSync( CACHE_FILE, JSON.stringify( {
+		version: version,
+		timestamp: Date.now()
+		} ), 'utf8' );
+	} catch ( error ) {
+		// Cache write failure is non-critical, ignore
+	}
+
+	return version;
   } catch (error) {
-	log('Warning: Could not fetch latest @penskemediacorp/larva version from npm', 'yellow');
+	// Check if it's a timeout error.
+	if ( error.killed ) {
+		log( 'Warning: npm registry request timed out', 'yellow' );
+	} else {
+		log( 'Warning: Could not fetch latest @penskemediacorp/larva version from npm', 'yellow' );
+	}
 	return null;
   }
 }
@@ -87,38 +127,9 @@ function compareVersions(current, latest) {
 }
 
 function checkForceFlag() {
-  // Check command line arguments
-  const args = process.argv.slice(2);
-  if (args.includes('--force') || args.includes('-f')) {
-	return true;
-  }
-
-  // Check environment variable
-  if (process.env.GIT_PUSH_OPTION_FORCE === 'true') {
-	return true;
-  }
-
-  // Check the actual git push command from shell
-  try {
-	// Get the parent process command (the actual git push command)
-	const psCommand = process.platform === 'win32'
-	  ? 'wmic process where ProcessId=%PPID% get CommandLine'
-	  : `ps -o command= -p ${process.ppid}`;
-
-	const parentCommand = execSync(psCommand, {
-	  encoding: 'utf8',
-	  stdio: ['pipe', 'pipe', 'pipe']
-	}).trim();
-
-	// Check if the git push command contains --force or -f
-	if (parentCommand.includes('--force') || parentCommand.match(/\s-[a-z]*f[a-z]*\s/)) {
-	  return true;
-	}
-  } catch (error) {
-	// If we can't check parent process, continue without force flag
-  }
-
-  return false;
+	// Only reliable method: check process.argv
+	const args = process.argv.slice( 2 );
+	return args.includes( '--force' ) || args.includes( '-f' );
 }
 
 function main() {
