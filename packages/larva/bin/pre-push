@@ -127,9 +127,36 @@ function compareVersions(current, latest) {
 }
 
 function checkForceFlag() {
-	// Only reliable method: check process.argv
-	const args = process.argv.slice( 2 );
-	return args.includes( '--force' ) || args.includes( '-f' );
+	const args = process.argv.slice(2);
+	if (args.includes('--force') || args.includes('-f')) {
+		return true;
+	}
+
+	try {
+		let psCommand;
+
+		if (process.platform === 'win32') {
+			// Try PowerShell first (works on Windows 10/11)
+			psCommand = `powershell -Command "Get-WmiObject Win32_Process -Filter \\"ProcessId=${process.ppid}\\" | Select-Object -ExpandProperty CommandLine"`;
+		} else {
+			// Unix-like systems
+			psCommand = `ps -o command= -p ${process.ppid}`;
+		}
+
+		const parentCommand = execSync(psCommand, {
+			encoding: 'utf8',
+			stdio: ['pipe', 'pipe', 'pipe'],
+			timeout: 2000 // Add timeout
+		}).trim();
+
+		if (parentCommand.includes('--force') || parentCommand.match(/\s-[a-z]*f[a-z]*\s/)) {
+			return true;
+		}
+	} catch (error) {
+		// Silently fail - parent process inspection failed
+	}
+
+	return false;
 }
 
 function main() {
@@ -173,13 +200,16 @@ function main() {
 	  log('Please update @penskemediacorp/larva as soon as possible!\n', 'yellow');
 	  process.exit(0);
 	} else {
-	  log('❌ Push blocked. Update @penskemediacorp/larva or use --force to override.\n', 'red');
-	  process.exit(1);
+		log('❌ Push blocked. Please update @penskemediacorp/larva before pushing.\n', 'red');
+		log('To override this check:', 'yellow');
+		log('  git push --force           # Try force push', 'cyan');
+		log('  git push --no-verify       # Skip hook entirely\n', 'cyan');
+		process.exit(1);
 	}
   } else {
 	log('✓ @penskemediacorp/larva is up to date!\n', 'green');
 	process.exit(0);
-  }
+}
 }
 
 main();
