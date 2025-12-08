@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-css",
-  "version": "1.75.0",
+  "version": "1.75.1",
   "description": "Larva CSS.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -23,8 +23,8 @@
   },
   "//": "DEPENDENCIES NOTES: Do not upgrade 'del' past 6 unless migrating entire app to module 'type'",
   "devDependencies": {
-    "@penskemediacorp/larva-scss": "^1.75.0",
-    "@penskemediacorp/larva-tokens": "^1.75.0",
+    "@penskemediacorp/larva-scss": "^1.75.1",
+    "@penskemediacorp/larva-tokens": "^1.75.1",
     "del": "^6",
     "fs-extra": "^11",
     "gulp": "^4",
