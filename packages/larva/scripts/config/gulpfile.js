@@ -5,6 +5,7 @@ const gulpIgnore = require( 'gulp-ignore' );
 const gulpPostCss = require( 'gulp-postcss' );
 const gulpRename = require( 'gulp-rename' );
 const gulpStylelint = require( 'gulp-stylelint' );
+const through2 = require( 'through2' );
 
 const globImporter = require( 'node-sass-glob-importer' );
 const { mkdirpSync } = require( 'fs-extra' );
@@ -46,6 +47,25 @@ Functions
 **************/
 
 /**
+ * Strip UTF-8 BOM from CSS files.
+ * Prevents junk characters in production when CSS is concatenated.
+ *
+ * @return {Stream} Gulp stream transformer.
+ */
+const stripBom = () => {
+	return through2.obj( function ( file, enc, cb ) {
+		if ( file.isBuffer() ) {
+			// Remove UTF-8 BOM (0xEF 0xBB 0xBF) if present
+			const bom = Buffer.from( [ 0xef, 0xbb, 0xbf ] );
+			if ( file.contents.slice( 0, 3 ).equals( bom ) ) {
+				file.contents = file.contents.slice( 3 );
+			}
+		}
+		cb( null, file );
+	} );
+};
+
+/**
  * Build CSS.
  *
  * Used for both prod and dev commands.
@@ -70,6 +90,7 @@ const buildScss = (
 	gulp.src( './entries/*.scss' )
 		.pipe( gulpStylelint( stylelintOpts ) )
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
+		.pipe( stripBom() ) // Remove UTF-8 BOM added by Sass compiler
 		.pipe( gulp.dest( cssDest ) )
 		.pipe( gulpIgnore.exclude( 'larva-ui.css' ) )
 		.pipe(
