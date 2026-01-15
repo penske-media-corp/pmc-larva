@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva",
-  "version": "1.75.1",
+  "version": "1.76.0",
   "description": "> TODO: description",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/Penske-Media-Corp/pmc-larva/tree/master/packages/larva#readme",
@@ -45,16 +45,16 @@
   "dependencies": {
     "@babel/core": "^7",
     "@babel/preset-env": "^7",
-    "@penskemediacorp/backstopjs-config": "^1.75.1",
-    "@penskemediacorp/eslint-config": "^1.75.1",
-    "@penskemediacorp/larva-css": "^1.75.1",
-    "@penskemediacorp/larva-js": "^1.75.1",
-    "@penskemediacorp/larva-patterns": "^1.75.1",
-    "@penskemediacorp/larva-scss": "^1.75.1",
-    "@penskemediacorp/larva-svg": "^1.75.1",
-    "@penskemediacorp/larva-tokens": "^1.75.1",
-    "@penskemediacorp/stylelint-config": "^1.75.1",
-    "@penskemediacorp/twig-to-php-parser": "^1.75.1",
+    "@penskemediacorp/backstopjs-config": "^1.76.0",
+    "@penskemediacorp/eslint-config": "^1.76.0",
+    "@penskemediacorp/larva-css": "^1.76.0",
+    "@penskemediacorp/larva-js": "^1.76.0",
+    "@penskemediacorp/larva-patterns": "^1.76.0",
+    "@penskemediacorp/larva-scss": "^1.76.0",
+    "@penskemediacorp/larva-svg": "^1.76.0",
+    "@penskemediacorp/larva-tokens": "^1.76.0",
+    "@penskemediacorp/stylelint-config": "^1.76.0",
+    "@penskemediacorp/twig-to-php-parser": "^1.76.0",
     "axios": "^1",
     "babel-loader": "^9",
     "chalk": "^4",
@@ -96,5 +96,5 @@
   "overrides": {
     "@wordpress/eslint-plugin": "^17"
   },
-  "gitHead": "5a74ff5117d08e28d919d934e40c08abbb9e907b"
+  "gitHead": "927afe9655d3ff61c3376e68a7a9dee503b8ff26"
 }
