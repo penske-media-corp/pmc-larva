@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unpublished Changes
+* larva-js:  Adding aria-hidden attribute to tooltips. Closing tooltips on focusout.
+* larva-patterns: Adding aria attributes to c-link and o-account-menu.
 
 ## 1.76.0 01-15-2026
 * larva - Update larva/scripts/config/gulpfile.js to add BOM stripping method during build.
