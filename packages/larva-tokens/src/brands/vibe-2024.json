@@ -19,17 +19,17 @@
 			"category": "text-color"
 		},
 		"BACKGROUND_COLOR_BRAND_SECONDARY": {
-			"value": "#ED1C24",
+			"value": "#1B939D",
 			"type": "color",
 			"category": "background-color"
 		},
 		"BORDER_COLOR_BRAND_SECONDARY": {
-			"value": "#ED1C24",
+			"value": "#1B939D",
 			"type": "color",
 			"category": "hr-color"
 		},
 		"COLOR_BRAND_SECONDARY": {
-			"value": "#ED1C24",
+			"value": "#1B939D",
 			"type": "color",
 			"category": "text-color"
 		},
