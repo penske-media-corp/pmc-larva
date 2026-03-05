@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.77.0 03-05-2026
+* larva-tokens - Update Vibe's brand tokens. 
+
 ## 1.76.0 01-15-2026
 * larva - Update larva/scripts/config/gulpfile.js to add BOM stripping method during build.
 
