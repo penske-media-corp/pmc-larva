@@ -111,6 +111,22 @@ function getLatestLarvaVersion() {
   }
 }
 
+function getLocallyInstalledLarvaVersion() {
+  try {
+    const gitRoot = execSync('git rev-parse --show-toplevel', { encoding: 'utf8' }).trim();
+    const installedPkgPath = path.join(gitRoot, 'assets', 'node_modules', '@penskemediacorp', 'larva', 'package.json');
+
+    if (!fs.existsSync(installedPkgPath)) {
+      return null;
+    }
+
+    const pkg = JSON.parse(fs.readFileSync(installedPkgPath, 'utf8'));
+    return pkg.version || null;
+  } catch (error) {
+    return null;
+  }
+}
+
 function compareVersions(current, latest) {
   const currentParts = current.split('.').map(Number);
   const latestParts = latest.split('.').map(Number);
@@ -180,9 +196,16 @@ function main() {
 
   log(`Latest version: ${latestVersion}`, 'cyan');
 
-  const comparison = compareVersions(currentVersion, latestVersion);
+  const installedVersion = getLocallyInstalledLarvaVersion();
 
-  if (comparison > 0) {
+  if (!installedVersion) {
+    log('⚠ Could not verify locally installed version', 'yellow');
+  }
+
+  const declaredOutdated = compareVersions(currentVersion, latestVersion) > 0;
+  const installedOutdated = installedVersion && compareVersions(installedVersion, latestVersion) > 0;
+
+  if (declaredOutdated || installedOutdated) {
 	// Update available (latest is greater than current)
 	const forceFlag = checkForceFlag();
 
@@ -192,7 +215,7 @@ function main() {
 	log(`Current: ${currentVersion}`, 'red');
 	log(`Latest:  ${latestVersion}`, 'green');
 	log('\nPlease update @penskemediacorp/larva before pushing:', 'yellow');
-	log('  npm install @penskemediacorp/larva@latest', 'cyan');
+	log('  npm run update-larva', 'cyan');
 	log('='.repeat(60) + '\n', 'yellow');
 
 	if (forceFlag) {
@@ -200,10 +223,7 @@ function main() {
 	  log('Please update @penskemediacorp/larva as soon as possible!\n', 'yellow');
 	  process.exit(0);
 	} else {
-		log('❌ Push blocked. Please update @penskemediacorp/larva before pushing.\n', 'red');
-		log('To override this check:', 'yellow');
-		log('  git push --force           # Try force push', 'cyan');
-		log('  git push --no-verify       # Skip hook entirely\n', 'cyan');
+		log('❌ Push blocked. Update @penskemediacorp/larva or use --force to override.\n', 'red');
 		process.exit(1);
 	}
   } else {
