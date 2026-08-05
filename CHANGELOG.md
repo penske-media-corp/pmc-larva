@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.77.1 08-05-2026
+* PUB-783: Update pre-push git hook to validate locally installed Larva version.
+
 ## 1.77.0 03-05-2026
 * larva-tokens - Update Vibe's brand tokens. 
 
