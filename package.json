@@ -2,7 +2,7 @@
   "name": "@penskemediacorp/pmc-larva",
   "version": "1.77.1",
   "engines": {
-    "node": "24.x"
+    "node": "^18"
   },
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
