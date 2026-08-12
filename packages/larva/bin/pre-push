@@ -33,12 +33,13 @@ function log(message, color = 'reset') {
   console.log(`${colors[color]}${message}${colors.reset}`);
 }
 
+function getGitRoot() {
+  return execSync('git rev-parse --show-toplevel', { encoding: 'utf8' }).trim();
+}
+
 function getCurrentLarvaVersion() {
   try {
-	// Get git root directory
-	const gitRoot = execSync('git rev-parse --show-toplevel', {
-	  encoding: 'utf8'
-	}).trim();
+	const gitRoot = getGitRoot();
 
 	// Look for package.json in assets folder
 	const packageJsonPath = path.join(gitRoot, 'assets', 'package.json');
@@ -59,6 +60,24 @@ function getCurrentLarvaVersion() {
 	return larvaVersion.replace(/^[\^~>=<]+/, '').split('-')[0].split('+')[0];
   } catch (error) {
 	log(`Error reading package.json: ${error.message}`, 'red');
+	return null;
+  }
+}
+
+function getLocalInstalledLarvaVersion() {
+  try {
+	const gitRoot = getGitRoot();
+	const installedPackageJsonPath = path.join(
+	  gitRoot, 'assets', 'node_modules', '@penskemediacorp', 'larva', 'package.json'
+	);
+
+	if (!fs.existsSync(installedPackageJsonPath)) {
+	  return null;
+	}
+
+	const packageJson = JSON.parse(fs.readFileSync(installedPackageJsonPath, 'utf8'));
+	return packageJson.version || null;
+  } catch (error) {
 	return null;
   }
 }
@@ -159,6 +178,23 @@ function checkForceFlag() {
 	return false;
 }
 
+function blockPush(reason) {
+  const forceFlag = checkForceFlag();
+
+  log('\n⚠️  ' + reason, 'yellow');
+  log('\nPlease update @penskemediacorp/larva before pushing:', 'yellow');
+  log('  npm run update-larva', 'cyan');
+
+  if (forceFlag) {
+	log('\n⚠️  Force flag detected - allowing push with outdated version', 'yellow');
+	log('Please update @penskemediacorp/larva as soon as possible!\n', 'yellow');
+	process.exit(0);
+  } else {
+	log('\n❌ Push blocked. Update @penskemediacorp/larva or use --force to override.\n', 'red');
+	process.exit(1);
+  }
+}
+
 function main() {
   log('\n🔍 Checking @penskemediacorp/larva version...', 'cyan');
 
@@ -169,8 +205,6 @@ function main() {
 	process.exit(0);
   }
 
-  log(`Current version: ${currentVersion}`, 'cyan');
-
   const latestVersion = getLatestLarvaVersion();
 
   if (!latestVersion) {
@@ -178,38 +212,27 @@ function main() {
 	process.exit(0);
   }
 
-  log(`Latest version: ${latestVersion}`, 'cyan');
+  log(`Declared version:  ${currentVersion}`, 'cyan');
+  log(`Latest version:    ${latestVersion}`, 'cyan');
 
-  const comparison = compareVersions(currentVersion, latestVersion);
+  if (compareVersions(currentVersion, latestVersion) > 0) {
+	blockPush('Declared @penskemediacorp/larva is outdated.');
+	return;
+  }
 
-  if (comparison > 0) {
-	// Update available (latest is greater than current)
-	const forceFlag = checkForceFlag();
+  const localVersion = getLocalInstalledLarvaVersion();
 
-	log('\n' + '='.repeat(60), 'yellow');
-	log('⚠️  UPDATE AVAILABLE FOR @penskemediacorp/larva', 'yellow');
-	log('='.repeat(60), 'yellow');
-	log(`Current: ${currentVersion}`, 'red');
-	log(`Latest:  ${latestVersion}`, 'green');
-	log('\nPlease update @penskemediacorp/larva before pushing:', 'yellow');
-	log('  npm install @penskemediacorp/larva@latest', 'cyan');
-	log('='.repeat(60) + '\n', 'yellow');
+  if (localVersion) {
+	log(`Local installed:   ${localVersion}`, 'cyan');
 
-	if (forceFlag) {
-	  log('⚠️  Force flag detected - allowing push with outdated version', 'yellow');
-	  log('Please update @penskemediacorp/larva as soon as possible!\n', 'yellow');
-	  process.exit(0);
-	} else {
-		log('❌ Push blocked. Please update @penskemediacorp/larva before pushing.\n', 'red');
-		log('To override this check:', 'yellow');
-		log('  git push --force           # Try force push', 'cyan');
-		log('  git push --no-verify       # Skip hook entirely\n', 'cyan');
-		process.exit(1);
+	if (compareVersions(localVersion, latestVersion) > 0) {
+	  blockPush('Local @penskemediacorp/larva is outdated.');
+	  return;
 	}
-  } else {
-	log('✓ @penskemediacorp/larva is up to date!\n', 'green');
-	process.exit(0);
-}
+  }
+
+  log('✓ @penskemediacorp/larva is up to date!\n', 'green');
+  process.exit(0);
 }
 
 main();
