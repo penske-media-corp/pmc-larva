@@ -1,0 +1,9 @@
+<a href="{{ o_google_preferred_button_url }}" class="o-google-preferred-button {{ o_google_preferred_button_classes }}" target="{{ o_google_preferred_button_target_attr }}" rel="{{ o_google_preferred_button_rel_attr }}" aria-label="{{ o_google_preferred_button_aria_label }}" data-track="{{ o_google_preferred_button_data_track }}" data-track-category="{{ o_google_preferred_button_data_track_category }}" data-track-action="{{ o_google_preferred_button_data_track_action }}" data-track-label="{{ o_google_preferred_button_data_track_label }}">
+	{% if o_google_preferred_button_icon_url %}
+		<img src="{{ o_google_preferred_button_icon_url }}" alt="" aria-hidden="true" class="o-google-preferred-button__icon {{ o_google_preferred_button_icon_classes }}">
+	{% else %}
+		{% include "@larva/components/c-icon/c-icon.twig" with c_icon %}
+	{% endif %}
+
+	{% include "@larva/components/c-span/c-span.twig" with c_span %}
+</a>
