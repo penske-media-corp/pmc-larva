@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
-## 1.77.2 08-25-2026
+## 1.78.0 08-25-2026
 * larva-patterns - Add google-preferred-button module.
 
 ## 1.77.1 08-12-2026
