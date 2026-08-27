@@ -78,7 +78,7 @@
     "gulp-stylelint": "^13",
     "lodash.clonedeep": "^4",
     "marked": "^9",
-    "node-sass-glob-importer": "^5",
+    "gulp-sass-glob": "^3",
     "nodemon": "^3",
     "postcss": "^8",
     "sass": "^1",

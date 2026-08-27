@@ -2,7 +2,7 @@
   "name": "@penskemediacorp/pmc-larva",
   "version": "1.77.1",
   "engines": {
-    "node": "^18"
+    "node": "^24"
   },
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
@@ -84,8 +84,7 @@
     "lerna": "^8",
     "lodash.clonedeep": "^4",
     "marked": "^9",
-    "node-sass": "^9",
-    "node-sass-glob-importer": "^5",
+    "gulp-sass-glob": "^3",
     "nodemon": "^3",
     "prettier": "npm:wp-prettier@^3",
     "sass-true": "^7",
