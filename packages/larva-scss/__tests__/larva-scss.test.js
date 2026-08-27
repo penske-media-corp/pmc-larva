@@ -12,6 +12,6 @@ describe( '@penskemediacorp/larva-scss', () => {
 
 	// Run True on every file found with the describe and it methods provided.
 	sassTestFiles.forEach( ( file ) =>
-		sassTrue.runSass( { file }, { describe, it } )
+		sassTrue.runSass( { describe, it }, file )
 	);
 } );

@@ -78,7 +78,7 @@
     "gulp-stylelint": "^13",
     "lodash.clonedeep": "^4",
     "marked": "^9",
-    "gulp-sass-glob": "^3",
+    "gulp-sass-glob": "^1",
     "nodemon": "^3",
     "postcss": "^8",
     "sass": "^1",
@@ -86,7 +86,7 @@
     "stylelint": "^13",
     "svg-sprite": "^2",
     "svgo": "^3",
-    "twing": "^5",
+    "twing": "^7",
     "webpack": "^5",
     "webpack-cli": "^5"
   },

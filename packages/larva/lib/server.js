@@ -5,10 +5,10 @@ const fs = require( 'fs' );
 const globby = require( 'globby' );
 
 const {
-	TwingEnvironment,
-	TwingLoaderFilesystem,
-	TwingFilter,
-	TwingFunction,
+	createEnvironment,
+	createFilesystemLoader,
+	createFilter,
+	createFunction,
 } = require( 'twing' );
 
 const fontData = require( '../../larva-tokens/lib/font-data' );
@@ -26,10 +26,18 @@ const assetsConfig = getAppConfiguration( 'assets' );
 const themeAssetsConfig = getAppConfiguration( 'themeAssets' );
 const twigPaths = getPatternPathsToLoad( patternConfig );
 
-const loader = new TwingLoaderFilesystem( twigPaths );
+const loader = createFilesystemLoader( fs );
+twigPaths.forEach( ( p ) => loader.addPath( p ) );
+loader.addPath( patternConfig.larvaPatternsDir, 'larva' );
+
+if ( fs.existsSync( patternConfig.projectPatternsDir ) ) {
+	loader.addPath( patternConfig.projectPatternsDir, 'project' );
+}
+
+const twing = createEnvironment( loader, { debug: true } );
 
 // Add markdown filter
-const markdownFilter = new TwingFilter( 'markdown', ( string ) => {
+twing.addFilter( createFilter( 'markdown', ( string ) => {
 	if ( string ) {
 		return Promise.resolve( marked( string ) );
 	}
@@ -37,15 +45,15 @@ const markdownFilter = new TwingFilter( 'markdown', ( string ) => {
 		"**This needs docs!** <br>Create a README.md in the pattern's directory and add details about using this pattern in markdown.";
 
 	return Promise.resolve( marked( noDocsMessage ) );
-} );
+} ) );
 
 // Support `{{ item|markup }}` syntax for outputting escaped content within loops.
-const markupFilter = new TwingFilter(
+twing.addFilter( createFilter(
 	'markup',
 	( string ) => Promise.resolve( string ),
-	{},
+	[],
 	{ is_safe: [ 'html' ] }
-);
+) );
 
 const kebabify = ( name ) => {
 	const kebabCase = [];
@@ -64,26 +72,11 @@ const kebabify = ( name ) => {
 	} );
 };
 
-// TODO: Could be an array/iterator if the namespace can be extracted from the key, the larva.config API could
-// change to `patterns: { larva: /larva/path/here/, project: /project/path/here }`
-loader.addPath( patternConfig.larvaPatternsDir, 'larva' );
-
-if ( fs.existsSync( patternConfig.projectPatternsDir ) ) {
-	loader.addPath( patternConfig.projectPatternsDir, 'project' );
-}
-
-const twing = new TwingEnvironment( loader, { debug: true } );
-
-twing.addFilter( markdownFilter );
-twing.addFilter( markupFilter );
-
 // Add custom function support for doing wp action: {{ wp_action( ... ) }}
-twing.addFunction(
-	new TwingFunction( 'wp_action', () => {
-		// We're relying on twig-to-php-parser for translation, so just return empty string for now
-		return Promise.resolve( '' );
-	} )
-);
+twing.addFunction( createFunction( 'wp_action', () => {
+	// We're relying on twig-to-php-parser for translation, so just return empty string for now
+	return Promise.resolve( '' );
+} ) );
 
 const patterns = {
 	larva: getAllPatternsObj( patternConfig.larvaPatternsDir ),
