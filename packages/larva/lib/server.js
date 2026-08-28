@@ -28,16 +28,18 @@ const twigPaths = getPatternPathsToLoad( patternConfig );
 
 const loader = createFilesystemLoader( fs );
 twigPaths.forEach( ( p ) => loader.addPath( p ) );
-loader.addPath( patternConfig.larvaPatternsDir, 'larva' );
+loader.addPath( process.cwd() );
+loader.addPath( patternConfig.larvaPatternsDir, '@larva' );
 
 if ( fs.existsSync( patternConfig.projectPatternsDir ) ) {
-	loader.addPath( patternConfig.projectPatternsDir, 'project' );
+	loader.addPath( patternConfig.projectPatternsDir, '@project' );
 }
 
 const twing = createEnvironment( loader, { debug: true } );
 
 // Add markdown filter
-twing.addFilter( createFilter( 'markdown', ( string ) => {
+// twing@7 filter callables receive (runtimeState, value, ...extraArgs)
+twing.addFilter( createFilter( 'markdown', ( _state, string ) => {
 	if ( string ) {
 		return Promise.resolve( marked( string ) );
 	}
@@ -45,12 +47,12 @@ twing.addFilter( createFilter( 'markdown', ( string ) => {
 		"**This needs docs!** <br>Create a README.md in the pattern's directory and add details about using this pattern in markdown.";
 
 	return Promise.resolve( marked( noDocsMessage ) );
-} ) );
+}, [] ) );
 
 // Support `{{ item|markup }}` syntax for outputting escaped content within loops.
 twing.addFilter( createFilter(
 	'markup',
-	( string ) => Promise.resolve( string ),
+	( _state, string ) => Promise.resolve( string ),
 	[],
 	{ is_safe: [ 'html' ] }
 ) );
@@ -76,7 +78,7 @@ const kebabify = ( name ) => {
 twing.addFunction( createFunction( 'wp_action', () => {
 	// We're relying on twig-to-php-parser for translation, so just return empty string for now
 	return Promise.resolve( '' );
-} ) );
+}, [] ) );
 
 const patterns = {
 	larva: getAllPatternsObj( patternConfig.larvaPatternsDir ),
@@ -210,7 +212,7 @@ app.get( '/:source/:type/:name/:variant?', function ( req, res ) {
 			: null;
 	req.params.brand = req.query.tokens ? req.query.tokens : brandConfig;
 	req.params.variants =
-		patterns[ req.params.source ][ req.params.type ][ req.params.name ];
+		patterns[ req.params.source ]?.[ req.params.type ]?.[ req.params.name ];
 
 	if ( 'algorithms' !== req.params.type ) {
 		req.params.json_pretty = JSON.stringify( req.params.data, null, '\t' );
