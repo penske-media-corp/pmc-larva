@@ -78,7 +78,7 @@ const kebabify = ( name ) => {
 twing.addFunction( createFunction( 'wp_action', () => {
 	// We're relying on twig-to-php-parser for translation, so just return empty string for now
 	return Promise.resolve( '' );
-}, [] ) );
+}, [ { name: 'action' }, { name: 'args', defaultValue: null } ] ) );
 
 const patterns = {
 	larva: getAllPatternsObj( patternConfig.larvaPatternsDir ),
