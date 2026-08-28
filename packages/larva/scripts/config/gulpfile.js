@@ -7,7 +7,7 @@ const gulpRename = require( 'gulp-rename' );
 const gulpStylelint = require( 'gulp-stylelint' );
 const through2 = require( 'through2' );
 
-const globImporter = require( 'node-sass-glob-importer' );
+const sassGlob = require( 'gulp-sass-glob' );
 const { mkdirpSync } = require( 'fs-extra' );
 const path = require( 'path' );
 const postCss = require( 'postcss' );
@@ -21,14 +21,11 @@ Config
 
 const cssDest = './build/css/';
 
-sass.compiler = require( 'sass' );
-
 const sassOpts = {
 	includePaths: [
 		path.resolve( './node_modules' ),
 		path.resolve( './src/scss' ),
 	],
-	importer: globImporter(),
 };
 
 const stylelintOpts = {
@@ -89,6 +86,7 @@ const buildScss = (
 
 	gulp.src( './entries/*.scss' )
 		.pipe( gulpStylelint( stylelintOpts ) )
+		.pipe( sassGlob() )
 		.pipe( sass( sassOpts ).on( 'error', sass.logError ) )
 		.pipe( stripBom() ) // Remove UTF-8 BOM added by Sass compiler
 		.pipe( gulp.dest( cssDest ) )

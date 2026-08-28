@@ -2,7 +2,7 @@
   "name": "@penskemediacorp/pmc-larva",
   "version": "1.78.0",
   "engines": {
-    "node": "^18"
+    "node": "^24"
   },
   "scripts": {
     "test": "./node_modules/.bin/jest --forceExit",
@@ -84,8 +84,7 @@
     "lerna": "^8",
     "lodash.clonedeep": "^4",
     "marked": "^9",
-    "node-sass": "^9",
-    "node-sass-glob-importer": "^5",
+    "gulp-sass-glob": "^1",
     "nodemon": "^3",
     "prettier": "npm:wp-prettier@^3",
     "sass-true": "^7",
@@ -93,7 +92,7 @@
     "svg-sprite": "^2",
     "svgo": "^3",
     "through2": "^4",
-    "twing": "^5",
+    "twing": "^7",
     "webpack": "^5",
     "webpack-cli": "^5"
   },

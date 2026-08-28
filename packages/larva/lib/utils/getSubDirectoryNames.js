@@ -12,10 +12,10 @@ const fs = require( 'fs' );
 module.exports = function getSubDirectoryNames( path ) {
 	try {
 		return fs.readdirSync( path ).filter( function ( file ) {
-			if ( 'node_modules' !== file && 'fixtures' !== file ) {
-				return fs.statSync( path + '/' + file ).isDirectory();
+			if ( 'node_modules' === file || 'fixtures' === file ) {
+				return false;
 			}
-			return true;
+			return fs.statSync( path + '/' + file ).isDirectory();
 		} );
 	} catch {
 		// eslint-disable-next-line no-console
