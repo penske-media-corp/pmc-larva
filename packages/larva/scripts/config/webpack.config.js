@@ -14,6 +14,8 @@ const aliases = {
 	...getConfig( 'webpack' ).aliases,
 };
 
+const externals = getConfig( 'webpack' ).externals ?? {};
+
 const eslintConfig = getConfig( 'eslint', true );
 const eslintConfigFile =
 	undefined !== eslintConfig ? eslintConfig.configFile : null;
@@ -69,6 +71,7 @@ const config = {
 	resolve: {
 		alias: aliases,
 	},
+	externals,
 	optimization: {
 		minimize: true,
 	},
