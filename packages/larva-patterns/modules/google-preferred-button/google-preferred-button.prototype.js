@@ -20,7 +20,6 @@ c_span.c_span_text = 'Add us as a Google Preferred Source';
 c_span.c_span_url = false;
 
 module.exports = {
-	google_preferred_button_url: 'https://www.google.com/preferences/source?q=',
 	google_preferred_button_classes: 'lrv-u-flex lrv-u-align-items-center',
 	google_preferred_button_icon_url: '',
 	google_preferred_button_icon_classes: '',
