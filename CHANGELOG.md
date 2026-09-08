@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unpublished Changes
 
+## 1.79.0 09-08-2026
+* larva-patterns - Update google-preferred-button module. Use <button> instead of <a> tags.
+
 ## 1.78.0 08-25-2026
 * larva-patterns - Add google-preferred-button module.
 
