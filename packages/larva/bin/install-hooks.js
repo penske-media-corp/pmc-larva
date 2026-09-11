@@ -22,6 +22,7 @@ const colors = {
 };
 
 function log( message, color = 'reset' ) {
+	// eslint-disable-next-line no-console
 	console.log( `${ colors[ color ] }${ message }${ colors.reset }` );
 }
 
@@ -50,7 +51,9 @@ function findGitRoot() {
 			const parts = currentDir.split( path.sep );
 			const nodeModulesIndex = parts.lastIndexOf( 'node_modules' );
 			if ( nodeModulesIndex > 0 ) {
-				const projectRoot = parts.slice( 0, nodeModulesIndex ).join( path.sep );
+				const projectRoot = parts
+					.slice( 0, nodeModulesIndex )
+					.join( path.sep );
 				const gitDir = path.join( projectRoot, '.git' );
 				if ( fs.existsSync( gitDir ) ) {
 					return projectRoot;
@@ -79,9 +82,14 @@ function installHooks() {
 
 		// Source hook is in bin folder (same directory as this script)
 		const sourceHookPath = path.join( __dirname, 'pre-push' );
-		const targetHookPath = path.join( gitRoot, '.git', 'hooks', 'pre-push' );
+		const targetHookPath = path.join(
+			gitRoot,
+			'.git',
+			'hooks',
+			'pre-push'
+		);
 
-		if (!fs.existsSync(sourceHookPath)) {
+		if ( ! fs.existsSync( sourceHookPath ) ) {
 			log( '⚠️  Larva pre-push hook not found', 'yellow' );
 			log( `Looking in: ${ sourceHookPath }`, 'yellow' );
 			return false;
