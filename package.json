@@ -86,8 +86,6 @@
     "jsdom": "^22",
     "lodash.clonedeep": "^4",
     "marked": "^9",
-    "node-sass": "^9",
-    "node-sass-glob-importer": "^5",
     "nodemon": "^3",
     "prettier": "npm:wp-prettier@^3",
     "sass-true": "^7",
