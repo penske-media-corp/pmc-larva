@@ -14,9 +14,9 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "../../node_modules/.bin/jest",
-    "build": "./node_modules/.bin/gulp",
-    "dev": "./node_modules/.bin/gulp watch"
+    "test": "jest",
+    "build": "gulp",
+    "dev": "gulp watch"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"

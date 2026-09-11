@@ -6,7 +6,6 @@ expected_node_version="v$(cat .nvmrc)"
 # Note: this could return true
 if [[ $actual_node_version == *$expected_node_version* ]] ;then
 		npm install
-		npx lerna exec npm install
 	else
 		echo "**********";
 		echo "Unable to install dependencies!\n";
