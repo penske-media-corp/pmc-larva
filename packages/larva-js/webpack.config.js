@@ -1,7 +1,7 @@
 const path = require( 'path' );
 
 const aliases = {
-	'@npm': path.resolve( './node_modules/' ),
+	'@npm': path.resolve( __dirname, '../../node_modules' ),
 };
 
 module.exports = ( env, argv ) => {

@@ -50,7 +50,7 @@ Functions
  * Strip UTF-8 BOM from CSS files.
  * Prevents junk characters in production when CSS is concatenated.
  *
- * @return {Stream} Gulp stream transformer.
+ * @return {Object} Gulp stream transformer.
  */
 const stripBom = () => {
 	return through2.obj( function ( file, enc, cb ) {

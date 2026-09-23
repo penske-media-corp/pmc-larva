@@ -1,4 +1,4 @@
-const sass = require( 'node-sass' );
+const sass = require( 'sass' );
 const path = require( 'path' );
 
 module.exports = function renderSass( sassData ) {
