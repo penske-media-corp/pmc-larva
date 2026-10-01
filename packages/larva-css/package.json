@@ -1,6 +1,6 @@
 {
   "name": "@penskemediacorp/larva-css",
-  "version": "1.77.0",
+  "version": "1.79.0",
   "description": "Larva CSS.",
   "author": "laras126 <laras126@gmail.com>",
   "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
@@ -14,17 +14,17 @@
     "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
   },
   "scripts": {
-    "test": "../../node_modules/.bin/jest",
-    "build": "./node_modules/.bin/gulp",
-    "dev": "./node_modules/.bin/gulp watch"
+    "test": "jest",
+    "build": "gulp",
+    "dev": "gulp watch"
   },
   "bugs": {
     "url": "https://github.com/penske-media-corp/pmc-larva/issues"
   },
   "//": "DEPENDENCIES NOTES: Do not upgrade 'del' past 6 unless migrating entire app to module 'type'",
   "devDependencies": {
-    "@penskemediacorp/larva-scss": "^1.77.0",
-    "@penskemediacorp/larva-tokens": "^1.77.0",
+    "@penskemediacorp/larva-scss": "^1.79.0",
+    "@penskemediacorp/larva-tokens": "^1.79.0",
     "del": "^6",
     "fs-extra": "^11",
     "gulp": "^4",
@@ -33,5 +33,5 @@
     "gulp-stylelint": "^13",
     "sass": "^1"
   },
-  "gitHead": "6d7e42895d9831966a6e5dcb690e225a358de2e2"
+  "gitHead": "8aea0f1ca34f2a7a1ec04b82467dc2ae150ae4bc"
 }

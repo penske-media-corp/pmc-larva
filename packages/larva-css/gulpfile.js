@@ -21,7 +21,11 @@ const { generateAFontScss } = require( './lib/generators' );
 sass.compiler = require( 'sass' );
 
 const sassOpts = {
-	includePaths: [ path.resolve( './node_modules' ), path.resolve( './src' ) ],
+	includePaths: [
+		path.resolve( './node_modules' ),
+		path.resolve( '../../node_modules' ),
+		path.resolve( './src' ),
+	],
 	outputStyle: 'compressed',
 };
 
