@@ -1,30 +1,30 @@
 {
-	"name": "@penskemediacorp/larva-js",
-	"version": "1.79.0",
-	"description": "Larva JS patterns.",
-	"author": "laras126 <laras126@gmail.com>",
-	"homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
-	"license": "ISC",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/penske-media-corp/pmc-larva.git"
-	},
-	"scripts": {
-		"dev": "webpack",
-		"build": "webpack --mode=production",
-		"test": "../../node_modules/.bin/jest"
-	},
-	"bugs": {
-		"url": "https://github.com/penske-media-corp/pmc-larva/issues"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"dependencies": {
-		"flickity": "^2",
-		"webpack": "^5",
-		"webpack-cli": "^5"
-	},
-	"gitHead": "8aea0f1ca34f2a7a1ec04b82467dc2ae150ae4bc"
+  "name": "@penskemediacorp/larva-js",
+  "version": "1.80.0",
+  "description": "Larva JS patterns.",
+  "author": "laras126 <laras126@gmail.com>",
+  "homepage": "https://github.com/penske-media-corp/pmc-larva#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penske-media-corp/pmc-larva.git"
+  },
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --mode=production",
+    "test": "../../node_modules/.bin/jest"
+  },
+  "bugs": {
+    "url": "https://github.com/penske-media-corp/pmc-larva/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "flickity": "^2",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  },
+  "gitHead": "8aea0f1ca34f2a7a1ec04b82467dc2ae150ae4bc"
 }
