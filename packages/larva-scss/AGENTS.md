@@ -16,7 +16,7 @@ npm run prod:scss                    # from the root, after changing a mixin: re
 - `dist/` is not build output. It is hand-written and `@import`s from `lib/`; edit it when the public surface changes.
 - Implementation lives in `lib/` partials (`_name.scss`): `lib/tokens/`, `lib/tools/functions/`, `lib/tools/mixins/`, `lib/tools/generators/`.
 - Private generator mixins are `_`-prefixed. Their public wrappers live in `dist/_generators.scss` (`lib/tools/generators/README.md`).
-- Breakpoint names: `mobile-max`, `tablet`, `desktop`, `desktop-xl`.
+- Breakpoint names (complete list in `lib/tools/mixins/_pmc-breakpoint.scss`): `mobile-max`, `tablet`, `desktop`, `desktop-max`, `desktop-xl`, `desktop-xl-max`.
 
 ## Conventions
 

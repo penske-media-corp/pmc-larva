@@ -12,10 +12,12 @@ npm run dev                          # in this package: webpack in watch mode
 
 ## Interface modules
 
-Each behavior is a pair in `src/interface/<Name>/` (see `src/interface/Collapsible/`):
+The default for a new behavior is a pair in `src/interface/<Name>/` (see `src/interface/Collapsible/`):
 
 - `<Name>.js`: `export default class <Name> { constructor( el ) { … } }`
 - `index.js`: `import <Name> from './<Name>';` plus `export default function init<Name>() { [ ...document.querySelectorAll( '<hook>' ) ].forEach( ( el ) => … new <Name>( el ) ); }`
+
+Existing exceptions: `Flickity` (index.js only, wraps the third-party constructor) and `SideSkinAd` (function export, and `initSideSkinAd` is a `message` event handler). Do not copy them.
 
 Preferred default for new modules: the selector hook `.js-<Name>` (8 of 14 modules; the rest use `.lrv-js-<Name>`, a `data-` attribute or no hook) and a named `init<Name>` default export (13 of 14).
 

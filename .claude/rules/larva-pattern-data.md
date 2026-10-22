@@ -32,7 +32,7 @@ const c_title = clonedeep( c_title_prototype );
 - Never mutate a required prototype in place. Node caches modules, so the change would leak into every pattern and page that requires the same prototype.
 - Variants start from their own prototype: `const button = clonedeep( require( './button.prototype' ) );`
 - Append classes with `+=` and a leading space (`o_card.o_card_classes += ' lrv-u-flex';`). Use plain assignment only to replace.
-- Set a child to `false` to suppress it (`c_tagline_terms.c_tagline_text = false;`). The Twig `{% if %}` guard then skips it.
+- Set a child's data key to `false` to suppress the whole child (`o_tease.c_tagline = false;` in `o-story-arc-item.prototype.js`). The parent's `{% if %}` guard then skips the include. Setting one field to `false` (`c_tagline_text = false`) only skips the branch guarded by that field.
 - Placeholder content only: dummy text and `#` URLs. These files are demo and default data, and themes replace the values.
 
 Preferred default: inside `packages/larva-patterns/`, use a relative `require( '../../<type>/<name>/<name>.prototype' )` + `clonedeep` (94 files vs 34 using the package path). In a consuming project's `src/patterns/`, require larva data by package path (`@penskemediacorp/larva-patterns/…`), because the relative layout does not exist there.
@@ -42,7 +42,7 @@ Preferred default: inside `packages/larva-patterns/`, use a relative `require( '
 
 - `const c_title = require( '../../components/c-title/c-title.prototype' ); c_title.c_title_text = 'X';` mutates the shared module.
 - `c_button_classes = 'lrv-u-…'` when the intent was to add to the defaults (drops the base classes).
-- A file named `newsletter-form.js` or `newsletter.form.data.js`: the server never loads it as a variant.
+- A file named `newsletter-form.js`: the server never loads it as a variant (variants are `<name>.<variant>.js`).
 
 ## New data file workflow
 

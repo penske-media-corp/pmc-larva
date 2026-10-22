@@ -38,7 +38,7 @@ Preferred default for new modules: the root element opens with `class="<name> //
 Avoid:
 
 - `modules/foo/foo.js` or `modules/foo/data.js`: the server only loads `foo.prototype.js` and `foo.<variant>.js`.
-- Prefixing a module with `m-` or omitting `c-` on a component: the generated PHP lands in the wrong directory.
+- Omitting `c-` on a component or `o-` on an object: the PHP parser routes generated include calls by name prefix, so the include points at `modules/`. Module names are unprefixed by convention.
 - Using `{% set %}` or `{% elseif %}` in a PHP-bound `.twig` pattern.
 
 ## Adding a pattern

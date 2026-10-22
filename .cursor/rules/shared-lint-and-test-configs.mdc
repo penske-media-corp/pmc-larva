@@ -23,15 +23,15 @@ These packages are installed by other repositories, so a change here can fail li
 ## Conventions
 
 - Keep changes backward compatible. A new or stricter rule needs the blast radius called out in the PR, a `CHANGELOG.md` line naming the package, and an `UPGRADING.md` note when consumers must act.
-- Larva-repo-only lint adjustments go in `packages/larva/scripts/config/.eslintrc.json` or `stylelint.config.js`, never in these shared packages.
+- Three layers: `packages/eslint-config` / `packages/stylelint-config` are PMC-wide bases (pmc-plugins, Nova, themes); `packages/larva/scripts/config/.eslintrc.json` and `stylelint.config.js` are the defaults the `larva lint-js` / `lint-scss` commands apply in every consuming theme (stylelint's path is hardcoded in `scripts/lint-scss.js`), so edits there also reach consumers; an ESLint override for this repo alone would need an `eslint.configFile` key in the root `larva.config.js` (none exists today). Stylelint has no repo-only hook.
 - The `backstop` keys in `larva.config.js` (`testBaseUrl`, `larvaModules`, `testPaths`, `testScenario`, `backstopConfig`) are a public API. Do not rename keys or change scenario defaults (`delay: 500`, `misMatchThreshold: 0.1` in `packages/backstopjs-config/lib/getScenarios.js`) casually.
-- Each package is a small CommonJS module (`index.js` + `lib/`) with tests in `__tests__/` run by root jest. Test with `npm test -- packages/<name>` from the root; the package-level `npm test` is a stub that exits 1.
+- Each package is a small CommonJS module (`index.js`, plus `lib/` where present). `stylelint-css-algorithms` and `backstopjs-config` have tests in `__tests__/` run by root jest (`npm test -- packages/<name>` from the root). `eslint-config` and `stylelint-config` have no dedicated tests, so verify them with root `npm run lint` and the full `npm test`. Every package-level `npm test` is a stub that exits 1.
 - `stylelint-css-algorithms` tests depend on the global `testRule` helper in root `jest-setup.js`.
 - Never copy the basic-auth example URLs from `packages/backstopjs-config/README.md` or its test fixtures into docs, examples or config.
 
 ## Counter-examples
 
-- Adding `camelcase: off` to `packages/eslint-config` to quiet Larva pattern data files (it belongs in `packages/larva/scripts/config/.eslintrc.json`, which already has it).
+- Adding `camelcase: off` to `packages/eslint-config` to quiet Larva pattern data files (it belongs in the Larva command defaults, `packages/larva/scripts/config/.eslintrc.json`, which already has it, because consumer pattern data needs it too).
 - Running package-local `npm test`.
 
 ## Workflow

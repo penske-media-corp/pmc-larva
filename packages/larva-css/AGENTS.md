@@ -26,7 +26,7 @@ Preferred default for new files: `.common.inline.scss`, unless the rules are bel
 ## Layout and conventions
 
 - `src/01-generic/` resets and elements; `src/02-algorithms/a-<name>/` one directory per algorithm (optional `README.md` and `.html` demo); `src/03-utilities/u-<property>.common.*.scss`; `src/04-js/js-<Component>.common.*.scss` (+ `partials/`); `src/larva-ui/` pattern-library UI only.
-- Utility and algorithm selectors carry the `lrv-` namespace (`.lrv-u-…`, `.lrv-a-…`). The exceptions are `04-js` hooks (`.js-<Component>`) and `is-*` state classes. Responsive variants use the `\@desktop`, `\@desktop-xl`, `\@tablet` and `\@mobile-max` suffixes via `pmc-breakpoint()`.
+- Utility and algorithm selectors carry the `lrv-` namespace (`.lrv-u-…`, `.lrv-a-…`). The exceptions are `04-js` hooks (`.js-<Component>`) and `is-*` state classes. Responsive variants use the `\@mobile-max`, `\@tablet`, `\@desktop`, `\@desktop-max`, `\@desktop-xl` and `\@desktop-xl-max` suffixes, all via `pmc-breakpoint()`.
 - Add `@import 'setup';` when the file uses tokens, generators or mixins (66 of 90 chunk files do; simple static files such as `a-unstyle-link` skip it).
 - Prefer generating utilities from `$TOKENS-MAP`/token maps over hard-coding values. Token values belong in `packages/larva-tokens`.
 - Lint rules: `stylelint.config.js` (extends `packages/stylelint-config`, adds the `plugin/css-algorithms` allowlists). Build-time stylelint never fails the build, and root `npm run lint:scss` covers only root `src/scss`, so read the console output of the build.

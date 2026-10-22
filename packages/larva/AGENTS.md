@@ -17,7 +17,7 @@ npm run prod && npm run lint         # after build-script or server changes
 - `bin/larva.js <cmd>` runs `scripts/<cmd>.js`. A new CLI command is a new `scripts/<command>.js`; the binary discovers it by file name. An unknown command only prints an error.
 - Wrapped tools (gulp, webpack, eslint, stylelint, nodemon, svg-sprite) run through `spawnScript( './node_modules/.bin/<tool>', args )`. Paths resolve from the consuming project's cwd.
 - Exit codes are discarded (`bin/larva.js:20-24`, `lib/utils/spawnScript.js:17-21`), so wrapped tools never fail the npm script. When changing a script, check its output, not just the exit code.
-- Default consumer configs live in `scripts/config/` (`gulpfile.js`, `webpack.config.js`, `.eslintrc.json`, `stylelint.config.js`, `svgo-config.json`). Larva-only lint overrides go in `scripts/config/.eslintrc.json`, not in `packages/eslint-config`. Build-time stylelint uses `failAfterError: false`.
+- Default consumer configs live in `scripts/config/` (`gulpfile.js`, `webpack.config.js`, `.eslintrc.json`, `stylelint.config.js`, `svgo-config.json`). `scripts/config/.eslintrc.json` and `stylelint.config.js` are the lint defaults for every theme that runs `larva lint-*`, so changes there reach consumers. Overrides that apply only to Larva commands go here, not in the PMC-wide `packages/eslint-config`. Build-time stylelint uses `failAfterError: false`.
 - Configuration is read through `getAppConfiguration( key )` (`lib/utils/getAppConfiguration.js`), which loads `larva.config.js` from `process.cwd()` with per-key defaults. Add new keys to `defaultConfig` instead of reading `larva.config.js` directly.
 - Under `NODE_ENV=test` (jest), config comes from `__tests__/fixtures/larva.config.js`, not the root `larva.config.js`.
 - `lib/server.js` is the Express + Twing pattern server (`@larva`/`@project` namespaces, `markdown` and `markup` filters, `wp_action` stub).
@@ -39,7 +39,7 @@ npm run prod && npm run lint         # after build-script or server changes
 Avoid:
 
 - Hard-coding repo-relative paths (e.g. `packages/larva-patterns`) in `scripts/`: consumers run from their `assets/` directory, where only `node_modules/@penskemediacorp/*` exists. The server's relative `require( '../../larva-tokens/lib/font-data' )` is an inherited exception, not a pattern to copy.
-- Adding lint rules for Larva itself to `packages/eslint-config`.
+- Adding Larva-command lint rules to the PMC-wide `packages/eslint-config`.
 - Assuming tests read the root `larva.config.js`.
 
 ## Adding a command
