@@ -65,7 +65,7 @@ Instruction files are part of the code: a change that makes one wrong, or leaves
   - a directory with its own commands, runtime, or footguns gets a nested `AGENTS.md`;
   - a convention that spans directories gets a `.agents/rules/<topic>.md` with `globs:`;
   - only repo-wide facts go in this file, kept short.
-  List every new file in "Path-scoped rules" (each rule with its glob and "read before editing matching files"; Codex finds rules only through that list) or, for a nested `AGENTS.md`, in the "Repo map".
+  List every new file in "Path-scoped rules" (each rule with its glob and "read before editing matching files"; Codex finds rules only through that list and pointers in nested `AGENTS.md` files) or, for a nested `AGENTS.md`, in the "Repo map".
 - After creating or changing a rule, run `npx @open-agent-toolkit/cli sync --scope project` and commit the rule, the generated views, `.codex/config.toml` and `.oat/sync/manifest.json` together.
 - Record durable facts an agent would otherwise get wrong; leave out task notes and guesses.
 - In the PR description, list the instruction files you created or updated, or write "No instruction changes needed".
