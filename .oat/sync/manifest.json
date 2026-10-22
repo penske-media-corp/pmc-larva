@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "oatVersion": "0.3.22",
+  "entries": [
+    {
+      "canonicalPath": ".agents/rules/committed-build-output.md",
+      "providerPath": ".claude/rules/committed-build-output.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "8ebf3272e6fa6df50cf75b1235af56fb236e3e18c767fed4ff10a4b3af6915d7",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.448Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-pattern-data.md",
+      "providerPath": ".claude/rules/larva-pattern-data.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "cf576febb875586bcc01119589444fe70a7887184b0ac485b444e1d87453f462",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.448Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-twig-templates.md",
+      "providerPath": ".claude/rules/larva-twig-templates.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "93829e6e094089fd6078374cd78df49d8ec92ced66fb85cfb00134593cd959bf",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.448Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/shared-lint-and-test-configs.md",
+      "providerPath": ".claude/rules/shared-lint-and-test-configs.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "2b029b162a2ae0d26a4aeaba4a5c3c4c8979305e3801d6dc60880a330bae892e",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.449Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/committed-build-output.md",
+      "providerPath": ".cursor/rules/committed-build-output.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "33fa87c8caa3fa59f491707b7fa23cbea402fe3a37c56155224c778dcde698d1",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.449Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-pattern-data.md",
+      "providerPath": ".cursor/rules/larva-pattern-data.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "4d0b0b42cf0f2e35ab72850bc81e31bdcddba3f41c1073af1b8e5b0edff0702b",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.449Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-twig-templates.md",
+      "providerPath": ".cursor/rules/larva-twig-templates.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "f3edec86e0beadb288e6a064f2132b32012c52b5d0280343b5e939ef5d056801",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.450Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/shared-lint-and-test-configs.md",
+      "providerPath": ".cursor/rules/shared-lint-and-test-configs.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "2e21705015243abbf16fc7417d478a732458f219775a87143b0a2b21c34511c9",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.450Z",
+      "strategy": "copy"
+    }
+  ],
+  "collections": [],
+  "lastUpdated": "2026-10-22T01:38:02.450Z"
+}

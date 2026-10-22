@@ -1,0 +1,54 @@
+---
+description: 'Larva Twig templates: escaping keywords and the Twig subset twig-to-php-parser supports'
+activation: glob
+globs:
+  - 'packages/larva-patterns/**/*.twig'
+  - 'src/patterns/**/*.twig'
+---
+
+# Larva Twig templates
+
+Pattern `.twig` files are rendered by Twing in the preview server and converted to WordPress PHP by `twig-to-php-parser`, which is regex-based and supports only a small Twig subset (`packages/twig-to-php-parser/README.md`; parser internals: `packages/twig-to-php-parser/AGENTS.md`).
+
+## Every output needs an escaping keyword
+
+Every `{{ }}` output names its escaping through a suffix in the variable name:
+
+| Suffix in name | Generated PHP |
+| --- | --- |
+| `_url` | `esc_url()` |
+| `_class` / `_classes`, `_name`, `_attr`, `_attributes` | `esc_attr()` |
+| `_text` | `esc_html()` |
+| `_markup`, or the `\|markup` filter | `wp_kses_post()` |
+| `_wp_action` | `do_action( '<name>' )` |
+
+- If a name contains several keywords, the last one in the order url → attr → text → markup → wp_action wins. For example, `story_quote_markup_classes` becomes `wp_kses_post`, not `esc_attr`. Pick names with one keyword.
+- Generated PHP outputs every variable as `$name ?? ''`, and `if` becomes `! empty( $name )`, so truthiness follows PHP `empty()`.
+- `|raw` on `_markup` outputs is optional (both forms generate identical PHP).
+
+## Supported Twig
+
+- Only `if`/`else`/`endif` (one variable or `var['key']` per condition), `for … in`/`endfor`, `include … with`, and `{# #}` comments.
+- No `elseif`, `set`, boolean operators, comparisons, macros, or filters other than `|raw`/`|markup`.
+- Includes: double-quoted `"@larva/<type>/<name>/<name>.twig"`, always followed by ` with <data_var> %}`. The data variable is usually the child's snake_case name (`c_title`, `o_email_capture_form`).
+- Guard optional children: `{% if c_title %}{% include "@larva/components/c-title/c-title.twig" with c_title %}{% endif %}`.
+- Loops: `{% for item in items %}`, accessing fields as `item['field_text']`.
+- SVG includes: `{% include '../../build/svg/' ~ <var> ~ '.svg' %}`.
+- WordPress actions: `{{ wp_action( 'hook_name', arg ) }}`. New Twig functions need changes in both `packages/larva/lib/server.js` and the parser.
+
+Preferred default for module roots: `<div class="<name> // {{ <name>_classes }} …">`.
+
+## Counter-examples
+
+- `{{ title }}` or `{{ c_heading }}`: no keyword, so no escaping replacement, and later replacements in the file are misaligned.
+- `<a href="{{ link }}">`: use `{{ c_link_url }}` so the output gets `esc_url`.
+- `{% if a and b %}` or `{% elseif %}`: the parser's regexes do not match these, so the PHP is broken.
+- `{% include 'components/c-title/c-title.twig' %}` (single quotes, no `@larva`, no `with`): the include regex does not match.
+
+## New template workflow
+
+1. Name every variable with an escaping suffix that matches its content (URL, attribute, plain text, trusted markup).
+2. Add the same keys to `<name>.prototype.js` (see `.agents/rules/larva-pattern-data.md`).
+3. Preview with `npm run larva`. If the Twig touches parser edge cases, add a fixture under `packages/twig-to-php-parser/__tests__/fixtures/` and run `npm test -- packages/twig-to-php-parser`.
+
+Twig authoring guide: https://confluence.pmcdev.io/x/JoGJAg
