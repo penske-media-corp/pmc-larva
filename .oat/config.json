@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "localPaths": [
+    ".oat/**/analysis",
+    ".oat/**/pr",
+    ".oat/**/reviews/archived"
+  ],
+  "git": {
+    "defaultBranch": "master"
+  }
+}
