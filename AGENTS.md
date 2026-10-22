@@ -44,6 +44,7 @@ npm run build-tokens                  # tokens + prod:scss + sync (scripts/token
 - Add a line under `## Unpublished Changes` in `CHANGELOG.md`, prefixed with the package (`* larva-patterns - …`).
 - New pattern: the PR includes a screenshot and the Vercel preview link.
 - Visual changes: the "Visual Regression Tests" check passes, or references are updated through `approval.yml`.
+- Agent instructions are still true: if this change adds, renames, or removes a command, directory, convention, workflow, version pin, or known footgun, the instruction files covering it are created or updated in the same PR (see "Keeping instructions current").
 
 ## Path-scoped rules
 
@@ -53,6 +54,21 @@ Canonical rules live in `.agents/rules/`. Read the rule before editing files tha
 - `packages/larva-patterns/{components,objects,modules,algorithms,__tests__}/**/*.js`, `src/patterns/**/*.js` → read `.agents/rules/larva-pattern-data.md` before editing matching files.
 - `build/**`, `packages/larva/{build,public}/**`, `packages/larva-css/{build,src/_generated}/**`, `packages/larva-js/build/**`, `packages/larva-tokens/{build,style-guides,src/base/generated}/**` → read `.agents/rules/committed-build-output.md` before editing matching files.
 - `packages/{eslint-config,stylelint-config,stylelint-css-algorithms,backstopjs-config}/**` → read `.agents/rules/shared-lint-and-test-configs.md` before editing matching files.
+
+## Keeping instructions current
+
+Instruction files are part of the code: a change that makes one wrong, or leaves new behavior undocumented, is not done until it's fixed.
+
+- Check what covers the paths you changed: this file, the `AGENTS.md` in each changed directory and its parents, and every `.agents/rules/*.md` whose `globs:` match a changed file.
+- Fix or delete any line your change made false (commands, paths, versions, flags, workflow names, owners). Find leftovers of renamed or removed names with `git grep -n '<old-name>' -- '*AGENTS.md' '.agents/rules/'`.
+- Create new instruction files when warranted; you don't need to be asked:
+  - a directory with its own commands, runtime, or footguns gets a nested `AGENTS.md`;
+  - a convention that spans directories gets a `.agents/rules/<topic>.md` with `globs:`;
+  - only repo-wide facts go in this file, kept short.
+  List every new file in "Path-scoped rules" (each rule with its glob and "read before editing matching files"; Codex finds rules only through that list) or, for a nested `AGENTS.md`, in the "Repo map".
+- After creating or changing a rule, run `npx @open-agent-toolkit/cli sync --scope project` and commit the rule, the generated views, `.codex/config.toml` and `.oat/sync/manifest.json` together.
+- Record durable facts an agent would otherwise get wrong; leave out task notes and guesses.
+- In the PR description, list the instruction files you created or updated, or write "No instruction changes needed".
 
 ## Repo map
 
@@ -100,8 +116,6 @@ SVG: add a sprite icon in `packages/larva-svg/src/svg/` and run `npm run prod` (
 
 - `AGENTS.md` files (root and per package) are hand-written. Claude Code, Codex and Cursor read them directly.
 - Path-scoped rules are written once in `.agents/rules/*.md` (frontmatter: `description`, `activation: glob`, `globs`).
-- Regenerate provider views with `oat sync --scope project`. This writes `.claude/rules/` and `.cursor/rules/`, `.codex/config.toml`, and updates `.oat/sync/manifest.json`.
-- Codex gets no generated rule view. It reaches the rules only through the "Path-scoped rules" list above, so add every new canonical rule there with its glob and "read before editing matching files".
+- Sync writes `.claude/rules/` and `.cursor/rules/`, `.codex/config.toml`, and updates `.oat/sync/manifest.json`. Codex gets no generated rule view.
 - Never hand-edit generated files under `.claude/rules/` or `.cursor/rules/`. Change the canonical rule and re-sync.
-- Commit canonical rules, generated views, `.codex/config.toml` and `.oat/sync/manifest.json` together.
-- `oat sync --scope project --dry-run` shows drift. It should report no changes before you push.
+- `npx @open-agent-toolkit/cli sync --scope project --dry-run` shows drift. It should report no changes before you push.
