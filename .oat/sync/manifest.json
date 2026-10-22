@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "oatVersion": "0.3.22",
+  "entries": [
+    {
+      "canonicalPath": ".agents/rules/committed-build-output.md",
+      "providerPath": ".claude/rules/committed-build-output.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "8ebf3272e6fa6df50cf75b1235af56fb236e3e18c767fed4ff10a4b3af6915d7",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.448Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-twig-templates.md",
+      "providerPath": ".claude/rules/larva-twig-templates.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "93829e6e094089fd6078374cd78df49d8ec92ced66fb85cfb00134593cd959bf",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.448Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/committed-build-output.md",
+      "providerPath": ".cursor/rules/committed-build-output.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "33fa87c8caa3fa59f491707b7fa23cbea402fe3a37c56155224c778dcde698d1",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.449Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-twig-templates.md",
+      "providerPath": ".cursor/rules/larva-twig-templates.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "f3edec86e0beadb288e6a064f2132b32012c52b5d0280343b5e939ef5d056801",
+      "isFile": true,
+      "lastSynced": "2026-10-22T01:38:02.450Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-pattern-data.md",
+      "providerPath": ".claude/rules/larva-pattern-data.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "66de1a35cbf0cf6285dd1448378ad88ff54e34d24614172461847deeb552887f",
+      "isFile": true,
+      "lastSynced": "2026-10-22T02:12:17.424Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/shared-lint-and-test-configs.md",
+      "providerPath": ".claude/rules/shared-lint-and-test-configs.md",
+      "provider": "claude",
+      "contentType": "rule",
+      "contentHash": "5b766b44e4ad6444d3090d981e22202fa4cb7a881434789a759f9f03158b66db",
+      "isFile": true,
+      "lastSynced": "2026-10-22T02:12:17.425Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/larva-pattern-data.md",
+      "providerPath": ".cursor/rules/larva-pattern-data.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "b026f761356362a8464659ebe6a34c827a115fff3fe0073101fde8b81312077a",
+      "isFile": true,
+      "lastSynced": "2026-10-22T02:12:17.425Z",
+      "strategy": "copy"
+    },
+    {
+      "canonicalPath": ".agents/rules/shared-lint-and-test-configs.md",
+      "providerPath": ".cursor/rules/shared-lint-and-test-configs.mdc",
+      "provider": "cursor",
+      "contentType": "rule",
+      "contentHash": "2c544fb9794f5bf058c676f4f1310399594f57d4d82c6e405d0dab7fa80e6ed2",
+      "isFile": true,
+      "lastSynced": "2026-10-22T02:12:17.425Z",
+      "strategy": "copy"
+    }
+  ],
+  "collections": [],
+  "lastUpdated": "2026-10-22T02:12:17.425Z"
+}

@@ -1,0 +1,42 @@
+---
+description: 'Committed generated build output: never hand-edit; regenerate with npm run prod and commit with the source'
+activation: glob
+globs:
+  - 'build/**'
+  - 'packages/larva/build/**'
+  - 'packages/larva/public/**'
+  - 'packages/larva-css/build/**'
+  - 'packages/larva-css/src/_generated/**'
+  - 'packages/larva-js/build/**'
+  - 'packages/larva-tokens/build/**'
+  - 'packages/larva-tokens/style-guides/**'
+  - 'packages/larva-tokens/src/base/generated/**'
+---
+
+# Committed build output
+
+These trees are generated and committed, and the published packages ship them to consumers. Never edit them by hand: change the source and regenerate.
+
+## Source → output
+
+- `packages/larva-css/src/**` → `packages/larva-css/build/css/*` → `build/css/larva*.css` → `packages/larva/build/css/`
+- `packages/larva-js/src/**` + root `entries/*.js` → `packages/larva-js/build/` + `build/js/` → `packages/larva/build/js/`
+- `packages/larva-svg/src/svg/*.svg` (+ a project's `src/svg/icons/`) → `npm run build-icons` (part of `prod`) → `build/svg/defs/` → `packages/larva/build/svg/defs/`
+- Root `src/svg/*.svg` (standalone logos) → `npm run build-svg` (svgo; not part of `prod`) → `build/svg/*.svg`, then `npm run sync-build` → `packages/larva/build/svg/`
+- `packages/larva-tokens/src/**` → `packages/larva-tokens/{build,style-guides,src/base/generated}` → `build/tokens/` → `packages/larva/build/tokens/`
+- `packages/larva-tokens/lib/font-data.js` → `packages/larva-css/src/_generated/_a-font.scss`
+- Root `public/` → `packages/larva/public/`
+
+## Regenerating
+
+- From the repo root, run `npm run prod`, or the narrower `npm run prod:scss`, `npm run prod:js` or `npm run build-tokens`. Commit the source and every regenerated file in the same PR.
+- `build/` and `packages/larva/build/` must stay in step; `npm run sync-build` copies one to the other.
+- Reordered larva-css algorithm partials after `npm run prod` are known noise (LRVA-1885, `PULL_REQUEST_TEMPLATE.md`). Commit regenerated files as the build produced them, never hand-trimmed, and mention the noise in the PR.
+- The `larva` build wrappers exit 0 even when gulp, webpack or stylelint report errors. Read the build output before committing.
+- Resolve merge conflicts in generated files by regenerating, not by hand-merging.
+
+## Counter-examples
+
+- Patching `build/css/larva.css` to fix a style.
+- Updating `build/` without `packages/larva/build/` (or the reverse).
+- Committing the source change without the regenerated output (consumers install the stale build).
