@@ -1,6 +1,8 @@
+@use "sass:math";
+
 // Strip Unit
 // @param number with or without units
 // @return integer
 @function _strip-unit($num) {
-	@return $num / ($num * 0 + 1);
+	@return math.div($num, ($num * 0 + 1));
 }
