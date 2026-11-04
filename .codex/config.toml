@@ -1,0 +1,5 @@
+[features]
+multi_agent = true
+
+[agents]
+max_depth = 3

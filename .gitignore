@@ -29,3 +29,19 @@ pnpm-lock.yaml
 # Test
 backstop_data/bitmaps_test
 backstop_data/html_report
+
+# OAT core
+.oat/config.local.json
+.oat/state.md
+.oat/projects/local/**
+.oat/projects/archived/**
+.oat/projects/synced/*/
+!.oat/projects/local/.gitkeep
+!.oat/projects/archived/.gitkeep
+# END OAT core
+
+# OAT local paths
+.oat/**/analysis/
+.oat/**/pr/
+.oat/**/reviews/archived/
+# END OAT local paths

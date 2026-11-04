@@ -1,0 +1,59 @@
+---
+description: 'Larva pattern data files (*.prototype.js and variants): naming,
+  cloning, composition'
+alwaysApply: false
+globs:
+  - packages/larva-patterns/components/**/*.js
+  - packages/larva-patterns/objects/**/*.js
+  - packages/larva-patterns/modules/**/*.js
+  - packages/larva-patterns/algorithms/**/*.js
+  - packages/larva-patterns/__tests__/**/*.js
+  - src/patterns/**/*.js
+---
+
+# Larva pattern data
+
+Pattern data files supply the default (`<name>.prototype.js`) and variant (`<name>.<variant>.js`) data that the pattern server renders and that consuming projects export as JSON.
+
+## Naming and loading
+
+- The server loads `<type>/<name>/<name>.<variant>.js`, with the variant defaulting to `prototype` (`packages/larva/lib/utils/getPatternData.js`). Every `<name>.<variant>.js` in a pattern directory becomes a variant. Any other file name is never loaded.
+- CommonJS only. `module.exports = { … }` exports a plain object; variants export the mutated clone (`module.exports = button;`).
+- Keys mirror the Twig variables and carry the same escaping suffixes (`newsletter_classes`, `c_tagline_text`, `c_link_url`; see `.agents/rules/larva-twig-templates.md`). Child data sits under the child's snake_case name (`c_title`, `o_email_capture_form`).
+
+## Clone before mutating
+
+Require child data and clone it right away:
+
+```js
+const clonedeep = require( 'lodash.clonedeep' );
+
+const c_title_prototype = require( '../../components/c-title/c-title.prototype' );
+const c_title = clonedeep( c_title_prototype );
+```
+
+- Never mutate a required prototype in place. Node caches modules, so the change would leak into every pattern and page that requires the same prototype.
+- Variants start from their own prototype: `const button = clonedeep( require( './button.prototype' ) );`
+- Append classes with `+=` and a leading space (`o_card.o_card_classes += ' lrv-u-flex';`). Use plain assignment only to replace.
+- Set a child's data key to `false` to suppress the whole child (`o_tease.c_tagline = false;` in `o-story-arc-item.prototype.js`). The parent's `{% if %}` guard then skips the include. Setting one field to `false` (`c_tagline_text = false`) only skips the branch guarded by that field.
+- Placeholder content only: dummy text and `#` URLs. These files are demo and default data, and themes replace the values.
+
+Preferred default: inside `packages/larva-patterns/`, use a relative `require( '../../<type>/<name>/<name>.prototype' )` + `clonedeep` (94 files vs 34 using the package path). In a consuming project's `src/patterns/`, require larva data by package path (`@penskemediacorp/larva-patterns/…`), because the relative layout does not exist there.
+`__experimentalCloneWithFallback` (`packages/larva/lib/utils/clonePatternData.js`) lets consuming projects override larva data with their own `src/patterns/` files. Inside larva-patterns, plain `clonedeep( require( … ) )` is the norm.
+
+## Counter-examples
+
+- `const c_title = require( '../../components/c-title/c-title.prototype' ); c_title.c_title_text = 'X';` mutates the shared module.
+- `c_button_classes = 'lrv-u-…'` when the intent was to add to the defaults (drops the base classes).
+- A file named `newsletter-form.js`: the server never loads it as a variant (variants are `<name>.<variant>.js`).
+
+## New data file workflow
+
+1. Create `<name>.prototype.js` exporting every key the Twig template reads.
+2. For each child, require its prototype and `clonedeep` it before changing fields.
+3. For a variant, create `<name>.<variant>.js` that clones `./<name>.prototype` and overrides only what differs.
+4. Check with `npm run larva` at `/larva/<type>/<name>/<variant>`.
+
+Example: `packages/larva-patterns/modules/newsletter/newsletter.prototype.js`.
+
+<!-- OAT-managed: do not edit directly. Source: .agents/rules/larva-pattern-data.md -->

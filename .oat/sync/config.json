@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "defaultStrategy": "auto",
+  "knownStrays": [],
+  "providers": {
+    "claude": {
+      "enabled": true
+    },
+    "cursor": {
+      "enabled": true
+    },
+    "codex": {
+      "enabled": true
+    },
+    "copilot": {
+      "enabled": false
+    },
+    "gemini": {
+      "enabled": false
+    }
+  }
+}
