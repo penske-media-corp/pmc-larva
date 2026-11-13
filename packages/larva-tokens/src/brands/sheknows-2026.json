@@ -1,0 +1,236 @@
+{
+	"imports": [
+		"../base/all.json"
+	],
+	"props": {
+		"BACKGROUND_COLOR_BODY": {
+			"value": "#FFF8F1",
+			"type": "color",
+			"category": "background-color",
+			"comment": "The background color of the main body of the site."
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY": {
+			"value": "#5114EC",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY": {
+			"value": "#5114EC",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY": {
+			"value": "#5114EC",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "#CA4F58",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "#CA4F58",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_PRIMARY_LIGHT": {
+			"value": "#CA4F58",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY": {
+			"value": "#EE5055",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY": {
+			"value": "#EE5055",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY": {
+			"value": "#EE5055",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#F6A197",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#F6A197",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_SECONDARY_LIGHT": {
+			"value": "#F6A197",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_DARK": {
+			"value": "#173351",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_DARK": {
+			"value": "#173351",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_DARK": {
+			"value": "#173351",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT": {
+			"value": "#CFE3F9",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT": {
+			"value": "#CFE3F9",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT": {
+			"value": "#CFE3F9",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_LIGHT": {
+			"value": "#F9FAFB",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_LIGHT": {
+			"value": "#F9FAFB",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_LIGHT": {
+			"value": "#F9FAFB",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_SECONDARY": {
+			"value": "#FADCAB",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_SECONDARY": {
+			"value": "#FADCAB",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_SECONDARY": {
+			"value": "#FADCAB",
+			"type": "color",
+			"category": "text-color"
+		},
+		"BACKGROUND_COLOR_BRAND_ACCENT_SECONDARY_LIGHT": {
+			"value": "#FEF9E4",
+			"type": "color",
+			"category": "background-color"
+		},
+		"BORDER_COLOR_BRAND_ACCENT_SECONDARY_LIGHT": {
+			"value": "#FEF9E4",
+			"type": "color",
+			"category": "hr-color"
+		},
+		"COLOR_BRAND_ACCENT_SECONDARY_LIGHT": {
+			"value": "#FEF9E4",
+			"type": "color",
+			"category": "text-color"
+		},
+		"FONT_FAMILY_PRIMARY_FANCY": {
+			"value": "'Comic Sans MS', cursive",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The primary webfont, loaded async"
+		},
+		"FONT_FAMILY_PRIMARY": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the primary font"
+		},
+		"FONT_FAMILY_SECONDARY_FANCY": {
+			"value": "'sofia-pro', sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The secondary webfont, loaded async"
+		},
+		"FONT_FAMILY_SECONDARY": {
+			"value": "'Helvetica Neue', sans-serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the secondary font"
+		},
+		"FONT_FAMILY_ACCENT_FANCY": {
+			"value": "Lust, serif",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The accent webfont, loaded async"
+		},
+		"FONT_FAMILY_ACCENT": {
+			"value": "{!GEORGIA}",
+			"type": "font-family",
+			"category": "font-family",
+			"comment": "The fallback for the accent font"
+		},
+		"FONT_FAMILY_BODY": {
+			"value": "'Helvetica Neue', sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"FONT_FAMILY_BASIC": {
+			"value": "'Helvetica Neue', sans-serif",
+			"type": "font-family",
+			"category": "font-family"
+		},
+		"BODY_M_FONT_SIZE_DESKTOP_XL": {
+			"category": "font-size",
+			"type": "number",
+			"value": "18px",
+			"originalValue": "18px",
+			"name": "BODY_M_FONT_SIZE_DESKTOP_XL"
+		},
+		"BODY_M_FONT_SIZE_DESKTOP": {
+			"category": "font-size",
+			"type": "number",
+			"value": "18px",
+			"originalValue": "18px",
+			"name": "BODY_M_FONT_SIZE_DESKTOP"
+		},
+		"BODY_M_FONT_SIZE_MOBILE": {
+			"category": "font-size",
+			"type": "number",
+			"value": "15px",
+			"originalValue": "18px",
+			"name": "BODY_M_FONT_SIZE_MOBILE"
+		},
+		"BODY_M_LINE_HEIGHT_DESKTOP_XL": {
+			"category": "line-height",
+			"type": "number",
+			"value": "26px",
+			"originalValue": "24px",
+			"name": "BODY_M_LINE_HEIGHT_DESKTOP_XL"
+		},
+		"BODY_M_LINE_HEIGHT_DESKTOP": {
+			"category": "line-height",
+			"type": "number",
+			"value": "26px",
+			"originalValue": "24px",
+			"name": "BODY_M_LINE_HEIGHT_DESKTOP"
+		},
+		"BODY_M_LINE_HEIGHT_MOBILE": {
+			"category": "line-height",
+			"type": "number",
+			"value": "24px",
+			"originalValue": "24px",
+			"name": "BODY_M_LINE_HEIGHT_MOBILE"
+		}
+	}
+}
