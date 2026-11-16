@@ -23,6 +23,9 @@ nbproject/
 node_modules
 npm-debug.log
 
+# npm workspaces install from the root package-lock.json only; per-package lockfiles are unused
+packages/*/package-lock.json
+
 # For the package preview tool
 pnpm-lock.yaml
 
